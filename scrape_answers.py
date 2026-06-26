@@ -21,9 +21,8 @@ from urllib.parse import urlencode
 
 from sumo import API_BASE, SumoBrowser
 
-# Question `content` can exceed Python's default CSV field limit (128 KB) when we
-# read the questions file, so raise it generously.
-csv.field_size_limit(10_000_000)
+# Importing sumo raises csv.field_size_limit to the platform maximum, so reading
+# questions files with very large `content` fields works.
 
 # Output columns, in order, matching the Ruby original.
 COLUMNS = [

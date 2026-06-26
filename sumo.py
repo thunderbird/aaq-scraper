@@ -7,10 +7,26 @@ browser's authenticated context. Proven in Bucket 0 (poc.py) to work both
 headed and headless.
 """
 
+import csv
 import sys
 import time
 
 from playwright.sync_api import sync_playwright
+
+
+def _max_csv_field_size():
+    """Always allow maximum-size CSV fields (question/answer content can be very
+    large). Set here so every module that imports sumo inherits it."""
+    limit = sys.maxsize
+    while True:
+        try:
+            csv.field_size_limit(limit)
+            return
+        except OverflowError:
+            limit //= 10
+
+
+_max_csv_field_size()
 
 HOME_URL = "https://support.mozilla.org/"
 API_BASE = "https://support.mozilla.org/api/2/"
