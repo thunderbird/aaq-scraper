@@ -1,0 +1,91 @@
+{
+  "answer_top_level": [
+    "content",
+    "created",
+    "creator",
+    "id",
+    "is_spam",
+    "num_helpful_votes",
+    "num_unhelpful_votes",
+    "question",
+    "updated",
+    "updated_by"
+  ],
+  "question_metadata": {
+    "thunderbird": [
+      "ff_version",
+      "kb_visits_prior",
+      "os",
+      "solver_id",
+      "tb_version",
+      "useragent"
+    ],
+    "thunderbird-android": [
+      "kb_visits_prior",
+      "os",
+      "solver_id",
+      "tb_version",
+      "useragent"
+    ]
+  },
+  "question_top_level": {
+    "thunderbird": [
+      "answers",
+      "content",
+      "created",
+      "creator",
+      "id",
+      "involved",
+      "is_archived",
+      "is_locked",
+      "is_solved",
+      "is_spam",
+      "is_taken",
+      "last_answer",
+      "locale",
+      "metadata",
+      "num_answers",
+      "num_votes",
+      "num_votes_past_week",
+      "product",
+      "solution",
+      "solved_by",
+      "tags",
+      "taken_by",
+      "taken_until",
+      "title",
+      "topic",
+      "updated",
+      "updated_by"
+    ],
+    "thunderbird-android": [
+      "answers",
+      "content",
+      "created",
+      "creator",
+      "id",
+      "involved",
+      "is_archived",
+      "is_locked",
+      "is_solved",
+      "is_spam",
+      "is_taken",
+      "last_answer",
+      "locale",
+      "metadata",
+      "num_answers",
+      "num_votes",
+      "num_votes_past_week",
+      "product",
+      "solution",
+      "solved_by",
+      "tags",
+      "taken_by",
+      "taken_until",
+      "title",
+      "topic",
+      "updated",
+      "updated_by"
+    ]
+  }
+}

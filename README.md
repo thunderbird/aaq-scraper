@@ -50,5 +50,21 @@ num_unhelpful`.
 The `2026/` directory holds committed fixtures from a verification run against
 2026-06-10 (a pre-challenge day), reconciled against the public website.
 
+## Schema drift check
+
+`check_schema.py` samples the live API and compares its JSON fields against the
+committed baseline `schema/expected-fields.json`:
+
+```sh
+uv run python check_schema.py --headless                  # exit 1 on drift
+uv run python check_schema.py --headless --update-baseline  # manual bump
+```
+
+A daily workflow (`.github/workflows/schema-check.yml`) runs the check and opens
+(or comments on) a `schema-change` issue when fields are added or removed. The
+baseline is **only** updated manually: when the API legitimately changes, review
+the drift, re-run with `--update-baseline`, and commit — and if a field was
+*removed*, update the scrapers so the affected CSV columns don't silently blank.
+
 * We require all those who participate in this repo to agree and adhere to the [Mozilla Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/)
 

@@ -1,0 +1,64 @@
+name: API schema check
+
+on:
+  schedule:
+    - cron: "30 6 * * *" # daily at 06:30 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: schema-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.2.0
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Install Chromium
+        run: uv run playwright install --with-deps chromium
+
+      - name: Check schema
+        id: check
+        run: |
+          set +e
+          uv run python check_schema.py --headless 1>report.md 2>check.log
+          echo "exit=$?" >> "$GITHUB_OUTPUT"
+          echo "----- report -----"; cat report.md
+          echo "----- log -----"; cat check.log
+
+      - name: Open or update issue on drift
+        if: steps.check.outputs.exit != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh label create schema-change --color FBCA04 \
+            --description "SUMO API JSON schema drift" 2>/dev/null || true
+          BODY="$(cat report.md)"
+          EXISTING="$(gh issue list --label schema-change --state open \
+            --json number --jq '.[0].number')"
+          if [ -n "$EXISTING" ]; then
+            echo "Commenting on existing issue #$EXISTING"
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            echo "Opening a new schema-change issue"
+            gh issue create --title "API schema drift detected" \
+              --label schema-change --body "$BODY"
+          fi
+
+      - name: Fail the job if drift was detected
+        if: steps.check.outputs.exit != '0'
+        run: |
+          echo "Schema drift detected — see the schema-change issue."
+          exit 1
