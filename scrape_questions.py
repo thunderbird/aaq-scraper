@@ -16,6 +16,7 @@ pass the same date twice:
 
 import argparse
 import csv
+import os
 import random
 import sys
 import time
@@ -23,6 +24,9 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
 from sumo import API_BASE, SumoBrowser
+
+# API product slug -> human label used in output filenames.
+PRODUCT_LABELS = {"thunderbird": "thunderbird-desktop"}
 
 # Original leading column order (parity with the Ruby script).
 LEADING_KEYS = [
@@ -120,6 +124,15 @@ def parse_dt(s):
     return datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
+def default_output_path(kind, product, start_dt, end_dt):
+    """<start-year>/<kind>-<product-label>-<dates>.csv"""
+    label = PRODUCT_LABELS.get(product, product)
+    s = start_dt.strftime("%Y-%m-%d")
+    e = end_dt.strftime("%Y-%m-%d")
+    dates = s if s == e else f"{s}_{e}"
+    return os.path.join(start_dt.strftime("%Y"), f"{kind}-{label}-{dates}.csv")
+
+
 def main():
     p = argparse.ArgumentParser(description="Scrape SUMO questions to CSV")
     p.add_argument("sy", type=int); p.add_argument("sm", type=int)
@@ -128,7 +141,8 @@ def main():
     p.add_argument("--product", default="thunderbird")
     p.add_argument("--ordering", default="created",
                    help="API ordering; 'created' is ascending (default)")
-    p.add_argument("--out", default="questions.csv")
+    p.add_argument("--out", default=None,
+                   help="output CSV path (default: <year>/questions-<product>-<dates>.csv)")
     p.add_argument("--headless", action="store_true")
     p.add_argument("--sleep", type=float, default=2.0,
                    help="fixed delay (s) between API calls (default 2)")
@@ -143,6 +157,9 @@ def main():
     greater_than = start_dt - timedelta(seconds=1)      # start day inclusive
     less_than = end_dt + timedelta(days=1)              # end day inclusive (23:59:59)
     ascending = not args.ordering.startswith("-")
+
+    out = args.out or default_output_path("questions", args.product, start_dt, end_dt)
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
 
     def delay():
         return random.uniform(args.min_delay, args.max_delay) if args.random_delay \
@@ -189,13 +206,13 @@ def main():
     rows = [flatten_question(q) for q in collected]
     rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
     fieldnames = build_fieldnames(rows)
-    with open(args.out, "w", newline="", encoding="utf-8") as f:
+    with open(out, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, restval="",
                                 extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"Wrote {len(rows)} questions to {args.out} ({len(fieldnames)} columns)",
+    print(f"Wrote {len(rows)} questions to {out} ({len(fieldnames)} columns)",
           file=sys.stderr)
 
 

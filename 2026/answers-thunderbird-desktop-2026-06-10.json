@@ -1,0 +1,1174 @@
+[
+  {
+    "id": 1824320,
+    "question": 1586561,
+    "content": "<p>Try adding exclusions in Windows Defender for the TB Profiles folder:\n</p><pre>- in Windows, click Start and type: virus\n</pre>\n<pre>- click Virus &amp; threat protection System settings &gt; Virus &amp; threat protection settings &gt; Manage settings\n</pre>\n<pre>- scroll down to Exclusions &gt; click 'Add an exclusion' &gt; Folder\n</pre>\n<pre>- navigate to and select the Thunderbird Profiles folder (all profiles - usually at C:\\Users\\&lt;username&gt;\\AppData\\Roaming\\Thunderbird\\Profiles) &gt; click 'Select Folder'\n</pre>\n<pre>   - to locate the Profiles folder:\n</pre>\n<pre>     - TB menu &gt; Help &gt; Troubleshooting Information \n</pre>\n<pre>     - Application Basics section &gt; scroll down to 'Profile folder &gt; click the 'Open Folder' button\n</pre>\n<pre>     - navigate up two levels \n</pre>\n<pre>IMPORTANT: also go to TB menu &gt; Settings &gt; Privacy &amp; Security &gt; Security &gt; Antivirus and enable 'Allow antivirus clients to quarantine individual incoming messages'.\n</pre>",
+    "created": "2026-06-10T07:05:05.424398Z",
+    "creator": {
+      "username": "siffemoz",
+      "display_name": "Ed",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/s"
+    },
+    "updated": "2026-06-10T07:05:05.424404Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824416,
+    "question": 1586601,
+    "content": "<p>Did you activate the \"Quick Filter\" and then accidentally hit one of the buttons in the Quick Filter tool bar?\n</p>",
+    "created": "2026-06-10T14:37:22.638242Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T14:37:22.638251Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824417,
+    "question": 1586601,
+    "content": "<p>Thank you for your reply. I did not touch the \"Quick Filter\".\n</p>",
+    "created": "2026-06-10T14:43:54.637684Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T14:43:54.637692Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824420,
+    "question": 1586579,
+    "content": "<p>if you post screenshot of error message and also screenshot of SMTP server settings pane, someone may  have ideas. click to the 'account settings' pane, highlight account name in left sidebar, and look to lower right and click the 'edit SMTP' button. I attached a sample screenshot of where to find it.\n</p>",
+    "created": "2026-06-10T14:48:58.900491Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-10T14:48:58.900500Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824426,
+    "question": 1586601,
+    "content": "<p>Is this a POP or an IMAP account?\nR-click on the Inbox folder &gt; Properties &gt; General:\nwhich is the number of messages and which is the size on disk?\n</p>",
+    "created": "2026-06-10T15:50:00.421657Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T15:50:00.421670Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824428,
+    "question": 1586601,
+    "content": "<p>Thank you for your reply. It is an IMAP account.\n</p><p>The size of the Inbox is 3.1 MB. Should I click on \"Repair Folder\"?\n</p>",
+    "created": "2026-06-10T15:54:09.428947Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T15:54:09.428952Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824429,
+    "question": 1586601,
+    "content": "<p>Yes, sometimes the folder index file gets damaged.\n</p>",
+    "created": "2026-06-10T15:58:13.878897Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T15:58:13.878902Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824432,
+    "question": 1586601,
+    "content": "<p>I right clicked on \"Repair Folder\". This has had no result.\n</p>",
+    "created": "2026-06-10T16:02:15.386919Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T16:02:15.386929Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824434,
+    "question": 1586601,
+    "content": "<p>If you <strong>right</strong>-clicked on \"Repair Folder\" button nothing will happen!\nYou have to <strong>left</strong>-click on it...\n</p>",
+    "created": "2026-06-10T16:04:56.904618Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T16:04:56.904624Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824437,
+    "question": 1586601,
+    "content": "<p>I left clicked on the \"Repair Folder\" button.\n</p>",
+    "created": "2026-06-10T16:14:10.478799Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T16:14:10.478805Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824445,
+    "question": 1586634,
+    "content": "<p>maybe your account is <a href=\"mailto:info@projectsandservices.com\" rel=\"nofollow\">info@projectsandservices.com</a>?  Please post all error messages, plus screenshot of server settings pane. You can get to that by clicking 'account settings' and then highlight the 'server settings' link in left side bar for that account. thank you\n</p>",
+    "created": "2026-06-10T16:28:51.944009Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-10T16:28:51.944015Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824446,
+    "question": 1586565,
+    "content": "<p>it  may help to post complete text of error messages and screenshot of the SMTP server settings pane. thank you\n</p>",
+    "created": "2026-06-10T16:31:34.225093Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-10T16:31:34.225101Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824452,
+    "question": 1586601,
+    "content": "<p>Open a navigator like Firefox or some other, log in to the imap account on the webmail of your email address provider and verify if the Inbox folder is empty, too.\n</p>",
+    "created": "2026-06-10T16:46:21.381048Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T16:46:21.381053Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824455,
+    "question": 1586601,
+    "content": "<p>Thanks for your suggestion. I just did so. the Inbox of my e-mail provider is alas just as empty as that of my Thunderbird.\n</p>",
+    "created": "2026-06-10T16:53:25.200001Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T16:53:25.200007Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824456,
+    "question": 1586601,
+    "content": "<p>So I think that you mast have accidentally deleted your Inbox messages.\nDid you open the Trash folder of your account to verify if the messages are still there?\n</p>",
+    "created": "2026-06-10T17:02:23.181396Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T17:02:23.181401Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824479,
+    "question": 1586601,
+    "content": "<p>Yes, I opened the Trash folder. The messages were not there.\n</p>",
+    "created": "2026-06-10T18:40:36.955141Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T18:40:36.955148Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824480,
+    "question": 1586680,
+    "content": "<p>The message says \"The certificate for <a href=\"http://imap.bell.net\" rel=\"nofollow\">imap.bell.net</a> does not come from a trusted source.\"\n</p>",
+    "created": "2026-06-10T18:40:40.939699Z",
+    "creator": {
+      "username": "lugh83",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/l"
+    },
+    "updated": "2026-06-10T18:40:40.939705Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824485,
+    "question": 1586667,
+    "content": "<p>What is your operating system?\n</p><p>Please quote all error messages you see, complete and verbatim, or post screen shots of them.\n</p><p>Have you read both these articles about the transition?\n</p><p>Upgrade your <a href=\"http://comcast.net\" rel=\"nofollow\">comcast.net</a> email experience to Yahoo Mail\n<a href=\"https://www.xfinity.com/support/articles/yahoo-email-migration-overview\" rel=\"nofollow\">https://www.xfinity.com/support/articles/yahoo-email-migration-overview</a>\n</p><p>Information for Xfinity <a href=\"http://Comcast.net\" rel=\"nofollow\">Comcast.net</a> email accounts moving to Yahoo Mail\n<a href=\"https://help.yahoo.com/kb/new-yahoo-mail/SLN36803.html\" rel=\"nofollow\">https://help.yahoo.com/kb/new-yahoo-mail/SLN36803.html</a>\n</p><p>Do you have multiple Yahoo accounts in Thunderbird?\n</p><p>By the way, the transition from Comast to Yahoo turned out to be voluntary, despite what they implied early on. But if you have gone through the migration procedure, you can't go back now.\n</p>\n<h6>===</h6>\n<p>To sort out the three installations... did you install all of them from installers downloaded directly from <a href=\"http://thunderbird.net\" rel=\"nofollow\">thunderbird.net</a> , or did you install them from the Microsoft or other \"store\"?\n</p>",
+    "created": "2026-06-10T18:51:30.476603Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-10T18:51:30.476607Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824486,
+    "question": 1586565,
+    "content": "<p>Error-Message SMTP1:\nSenden der Nachricht fehlgeschlagen.\nDie Nachricht konnte nicht gesendet werden, weil der Verbindungsaufbau mit dem SMTP-Server <a href=\"http://bsmpt.a1.net\" rel=\"nofollow\">bsmpt.a1.net</a> fehlgeschlagen ist. Der Server ist entweder nicht verfügbar oder lehnt SMTP-Verbindungen ab. Bitte kontrollieren Sie die SMTP-Server-Einstellungen und versuchen Sie es nochmals.\n</p><p>Failed to send the message.\nThe message could not be sent because the connection to the SMTP server <a href=\"http://bsmpt.a1.net\" rel=\"nofollow\">bsmpt.a1.net</a> failed. The server is either unavailable or does not accept SMTP connections. Please check your SMTP server settings and try again.\n</p>",
+    "created": "2026-06-10T18:52:18.696421Z",
+    "creator": {
+      "username": "andreas233",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-10T18:52:18.696432Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824487,
+    "question": 1586565,
+    "content": "<p>Error Message SMTP2:\nSenden der Nachricht fehlgeschlagen.\nDie Nachricht konnte nicht gesendet werden, weil der Verbindungsaufbau mit dem SMTP-Server <a href=\"http://securemail.a1.net\" rel=\"nofollow\">securemail.a1.net</a> fehlgeschlagen ist. Der Server ist entweder nicht verfügbar oder lehnt SMTP-Verbindungen ab. Bitte kontrollieren Sie die SMTP-Server-Einstellungen und versuchen Sie es nochmals.\n</p>",
+    "created": "2026-06-10T18:57:18.662087Z",
+    "creator": {
+      "username": "andreas233",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-10T18:57:18.662093Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824488,
+    "question": 1586565,
+    "content": "<p>The Server is working, the password to receive and to send is the same, I can receive my mails, but cannot send. There is maybe some security setting, which prevent the connection to the SMTP\n</p>",
+    "created": "2026-06-10T18:59:04.906400Z",
+    "creator": {
+      "username": "andreas233",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-10T18:59:04.906405Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824489,
+    "question": 1586675,
+    "content": "<p>It may help to post screenshots of your server settings pane and your SMTP server settings pane and screenshots of error messages, If error message occurs during setup, that may prove helpful. thank you\n</p>",
+    "created": "2026-06-10T18:59:44.891549Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-10T18:59:44.891554Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824490,
+    "question": 1586673,
+    "content": "<p>This afternoon my husband's email retrieval appears to be working.\n</p>",
+    "created": "2026-06-10T19:22:11.216774Z",
+    "creator": {
+      "username": "kimmcwilliams",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/k"
+    },
+    "updated": "2026-06-10T19:22:11.216779Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824510,
+    "question": 1586601,
+    "content": "<p>For the time being <strong>do not compact</strong> folders, even if Thunderbird prompts you to do.\nThere still might be an opportunity to recover your deleted messages:\ndownload and install the Thunderbird add-on \"Undelete\" from the authors' home page <a href=\"https://www.ggbs.de/extensions/Undelete.html\" rel=\"nofollow\">https://www.ggbs.de/extensions/Undelete.html</a>\nThen proceed as I explained in this thread in the MozillaZine forum <a href=\"https://forums.mozillazine.org/viewtopic.php?p=15020650#p15020650\" rel=\"nofollow\">https://forums.mozillazine.org/viewtopic.php?p=15020650#p15020650</a>\n</p>",
+    "created": "2026-06-10T20:12:53.921259Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T20:12:53.921269Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824515,
+    "question": 1586695,
+    "content": "<p>You haven't provided any details.\n</p><p>What is your operating system?\n</p><p>What version of Thunderbird?\n</p><p>Is Yahoo your email provider?\n</p><p>Is this an IMAP or POP3 account?\n</p><p>What error messages do you see? Please quote them in full, verbatim, or post screen shots of them.\n</p>",
+    "created": "2026-06-10T20:30:54.013340Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-10T20:30:54.013349Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824520,
+    "question": 1586601,
+    "content": "<p>The problem is that the instruction to not compact folders comes too late. Today I was prompted to do so. I did so.\n</p><p>I downloaded <a href=\"https://www.ggbs.de/extensions/Undelete.html\" rel=\"nofollow\">https://www.ggbs.de/extensions/Undelete.html</a> with Chrome as Firefox had blocked it. Then I double clicked the file. I got the prompt \"How do you want to open this file?\". My computer could not find any suitable software. I reckon that I will have to download and install something.\n</p>",
+    "created": "2026-06-10T21:20:43.554377Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-10T21:20:43.554386Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824528,
+    "question": 1586715,
+    "content": "<p>You're right that using the Global Search feature, there's no way to select multiple messages for deletion. This is the only search that will look in all accounts and folders (except by default Trash and Junk.) But check out the Search Messages feature (Edit | Find | Search Messages, or Ctrl+Shift+F). You can search individual folders or one entire account, just not multiple accounts. It can also save the search results as a Virtual Folder, so you can check out the messages closer and then decide which ones to delete or not.\n</p>",
+    "created": "2026-06-10T21:56:28.612921Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-10T21:56:28.612926Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824529,
+    "question": 1586601,
+    "content": "<p>Since you have already compacted your folders it's too late now and the add-on \"Undelete\" is of no use.\nHaving downloaded the \"Undelete-current.xpi\" install file you would have to open Thunderbird's Add-on Manager, click on the cogwheel symbol and choose \" Install Add-on From File ...\"\n</p>",
+    "created": "2026-06-10T21:58:56.339057Z",
+    "creator": {
+      "username": "Mapenzi",
+      "display_name": "Mapenzi",
+      "avatar": "https://firefoxusercontent.com/cf1dc1320d8b99b945b166bd83018b0b"
+    },
+    "updated": "2026-06-10T21:58:56.339066Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824538,
+    "question": 1586715,
+    "content": "<em><p>Lin <a href=\"#answer-1824528\" rel=\"nofollow\">said</a></p></em>\n<blockquote>You're right that using the Global Search feature, there's no way to select multiple messages for deletion. This is the only search that will look in all accounts and folders (except by default Trash and Junk.) But check out the Search Messages feature (Edit | Find | Search Messages, or Ctrl+Shift+F). You can search individual folders or one entire account, just not multiple accounts. It can also save the search results as a Virtual Folder, so you can check out the messages closer and then decide which ones to delete or not.\n</blockquote>\n<p>OK , Thank you for the reply  , so if I \"Search\" and select my Inbox , and then I can select (for example) Newegg , within that folder , and just delete all of those ?? , or does the entire contents of the Inbox have to be deleted  ? (I don't want that to happen)\n</p>",
+    "created": "2026-06-10T23:05:56.164009Z",
+    "creator": {
+      "username": "JimDirt",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+    },
+    "updated": "2026-06-10T23:05:56.164014Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824539,
+    "question": 1586601,
+    "content": "<p>genie, do you have a back-up copy of your messages?\n</p>",
+    "created": "2026-06-10T23:23:05.172590Z",
+    "creator": {
+      "username": "mozilla98",
+      "display_name": "Rick",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/m"
+    },
+    "updated": "2026-06-10T23:23:05.172598Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824559,
+    "question": 1586715,
+    "content": "<p>Yes. You can even build complex searches involving From, Subject, Date, etc. if you want. When you select messages from the results you can delete, move, view them right from there. See the attached animation.\n</p><p>If it makes you nervous, just delete a few at a time at first and confirm that they go into Trash as you expect. Then, when you're sure it's doing what you want, you can Delete many all or at once.\n</p>",
+    "created": "2026-06-11T00:57:01.957072Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-11T00:59:13.418926Z",
+    "updated_by": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824563,
+    "question": 1586715,
+    "content": "<em><p>Lin <a href=\"#answer-1824559\" rel=\"nofollow\">said</a></p></em>\n<blockquote>Yes. You can even build complex searches involving From, Subject, Date, etc. if you want. When you select messages from the results you can delete, move, view them right from there. See the attached animation.\n\nIf it makes you nervous, just delete a few at a time at first and confirm that they go into Trash as you expect. Then, when you're sure it's doing what you want, you can Delete many all or at once.\n</blockquote>\n<p>Thank you  ... One question , How are you selecting them ALL  ?? , I have over 300 to delete of just the Newegg one's , I tried Control and Left Click , but it doesn't select them all\n</p>",
+    "created": "2026-06-11T01:24:38.458388Z",
+    "creator": {
+      "username": "JimDirt",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+    },
+    "updated": "2026-06-11T01:24:38.458396Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824567,
+    "question": 1586715,
+    "content": "<p>To select them all, select just one, then hit &lt;Ctrl+a&gt; to select All. You can also select non-contiguous ones by holding Ctrl while selecting each one. You can also select a range by selecting one, then, while holding &lt;Shift&gt;, select another one - both those and all the ones between them will be selected. These are standard Windows (and most other GUI) keyboard shortcuts.\n</p>",
+    "created": "2026-06-11T01:35:06.213012Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-11T01:35:06.213018Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824589,
+    "question": 1586686,
+    "content": "<p>No, it's not supposed to work that way. Try restarting Thunderbird in Troubleshooting Mode (see &lt;Help | Troubleshooting Mode&gt;). This will run Thunderbird with all add-ons disabled, in case one of them is misbehaving. Does the button work now?\n</p><p>I seem to recall having a similar problem once, and to fix it I right-clicked on the toolbar and chose \"Customize...\", and removed to flaky button, saved the customization, then went back and added the button again. It worked then.\n</p>",
+    "created": "2026-06-11T03:52:51.878050Z",
+    "creator": {
+      "username": "rednoise",
+      "display_name": "Lin",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/L"
+    },
+    "updated": "2026-06-11T03:52:51.878057Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824611,
+    "question": 1586647,
+    "content": "<p>Normalmente quando si fa l'importazione del profilo vengono importate tutte le cartelle, anche quelle sotto Cartelle locali.\nChe procedura hai seguito esattamente?\n</p>",
+    "created": "2026-06-11T06:50:16.407632Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T06:50:16.407639Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824612,
+    "question": 1586646,
+    "content": "<p>Con alcuni provider email sono stati segnalati problemi simili.\nVerifica anzitutto di avere spazio libero sia localmente che sul server.\nInoltre, Per poter inquadrare il problema prova a fornire queste informazioni:\n</p>\n<ol><li> Versione di Thunderbird\n</li><li> Versione del sistema operativo\n</li><li> Provider delle caselle email (Gmail, Libero, Hotmail, etc.)\n</li><li> Tipologia di account (POP3, IMAP)\n</li><li> Estensioni installate\n</li><li> Messaggi di errore che vengono visualizzati durante l'utilizzo di Thunderbird\n</li><li> Software di sicurezza eventualmente presenti (Antivirus e simili)\n</li><li> Screenshot del problema (se utile a chiarire il contesto)\n</li></ol>",
+    "created": "2026-06-11T06:51:41.623640Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T06:51:41.623651Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824615,
+    "question": 1586598,
+    "content": "<p>Hai lo stesso problema in Modalità risoluzione dei problemi?\n<a href=\"https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird\" rel=\"nofollow\">https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird</a>\n</p><p>Inoltre, Per poter inquadrare il problema prova a fornire queste informazioni:\n</p>\n<ol><li> Versione di Thunderbird\n</li><li> Versione del sistema operativo\n</li><li> Provider delle caselle email (Gmail, Libero, Hotmail, etc.)\n</li><li> Tipologia di account (POP3, IMAP)\n</li><li> Estensioni installate\n</li><li> Messaggi di errore che vengono visualizzati durante l'utilizzo di Thunderbird\n</li><li> Software di sicurezza eventualmente presenti (Antivirus e simili)\n</li><li> Screenshot del problema (se utile a chiarire il contesto)\n</li></ol>",
+    "created": "2026-06-11T06:56:24.548882Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T06:56:24.548890Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824618,
+    "question": 1586568,
+    "content": "<p>Anzitutto è consigliabile fare un backup del profilo Thunderbird come spiegato qui:\n<a href=\"https://support.mozilla.org/it/kb/profili-thunderbird#w_effettuare-una-copia-di-sicurezza-del-profilo\" rel=\"nofollow\">https://support.mozilla.org/it/kb/profili-thunderbird#w_effettuare-una-copia-di-sicurezza-del-profilo</a>\n</p><p>Per il resto, quando provi a far partire Thunderbird cosa succede di preciso?\nAppaiono messaggio di errore?\n</p><p>In Modalità risoluzione dei problemi riesci ad avviare?\n<a href=\"https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird\" rel=\"nofollow\">https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird</a>\n</p>",
+    "created": "2026-06-11T07:02:03.500447Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T07:02:03.500453Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824620,
+    "question": 1586647,
+    "content": "<p>ho installato l'app e fatto l'esportazione da pc, ma mi trovo solo le cartelle IMAP\n</p>",
+    "created": "2026-06-11T07:04:35.435354Z",
+    "creator": {
+      "username": "contenitore21",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/c"
+    },
+    "updated": "2026-06-11T07:04:35.435364Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824624,
+    "question": 1586647,
+    "content": "<p>Ma stai parlando di Android?\nIn quel caso, non si possono importare le cartelle dal PC.\n</p>",
+    "created": "2026-06-11T07:06:04.614112Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T07:06:04.614119Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824636,
+    "question": 1586601,
+    "content": "<p>Thanks for your replies.\n</p><p>I do not have any back-up copy of my messages. Or rather I have one which is many months old. \n</p><p>I am confused on what I should do next.\n</p>",
+    "created": "2026-06-11T07:46:02.618384Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-11T07:46:02.618395Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824644,
+    "question": 1586579,
+    "content": "<p>Thank you for your reply. I don't know how to make a screenshot so I just wrote the SMTP server information.\n</p><pre>                                     SMTP server\n          settings\n</pre>\n<p>Description:  <a href=\"mailto:boblore@t-online.de\" rel=\"nofollow\">boblore@t-online.de</a>\nServer Name: <a href=\"http://smtp.t-online.de\" rel=\"nofollow\">smtp.t-online.de</a>\nPort: 465   Default: 465\n</p><pre>          Security and Authentication\n</pre>\n<p>Connection Security: SSL/TLS\nAuthentication Method: Normal Password\nUser Name: <a href=\"mailto:boblore@t-online.de\" rel=\"nofollow\">boblore@t-online.de</a>\n</p>",
+    "created": "2026-06-11T08:23:39.669789Z",
+    "creator": {
+      "username": "boblore",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/b"
+    },
+    "updated": "2026-06-11T08:23:39.669800Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824653,
+    "question": 1586646,
+    "content": "<p>Buongiorno.\nRiporto qui sotto le domande e le risposte,\nVersione di Thunderbird versione:  151.0.1\nVersione del sistema operativo:  Windows 10 PRO vers 22H2\nProvider delle caselle email (Gmail, Libero, Hotmail, etc.): Libero \nTipologia di account (POP3, IMAP): IMAP\nEstensioni installate: Nessuna\nMessaggi di errore che vengono visualizzati durante l'utilizzo di Thunderbird: Non mi sembra sia stato generato alcun errore. Dove posso vedere gli errori generati?\nSoftware di sicurezza eventualmente presenti (Antivirus e simili): Nessuno\nScreenshot del problema (se utile a chiarire il contesto): Non essendoci un errore non saprei cosa riportare\n</p>",
+    "created": "2026-06-11T09:12:07.142746Z",
+    "creator": {
+      "username": "alenzo",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-11T09:12:07.142757Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824661,
+    "question": 1586646,
+    "content": "<p>Quindi hai verificato la questione dello spazio libero?\n</p>",
+    "created": "2026-06-11T09:34:09.260460Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T09:34:09.260467Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824668,
+    "question": 1586646,
+    "content": "<p>Sì,\nil 22 maggio la email occupava sul servere 951MB su 1,2GB. Oggi siamo 904MB.\n</p>",
+    "created": "2026-06-11T09:55:23.431969Z",
+    "creator": {
+      "username": "alenzo",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-11T09:55:23.431976Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824683,
+    "question": 1586565,
+    "content": "<p>The recommended setup from Thunderbird is to set to STARTTLS, not SSL/TLS and port 587, not 465. That's the best I can do, since I am not familiar with that domain.\n</p>",
+    "created": "2026-06-11T11:38:57.478537Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T11:38:57.478543Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824685,
+    "question": 1586579,
+    "content": "<p>The default setup from thunderbird is attached. try that\n</p>",
+    "created": "2026-06-11T11:43:52.335924Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T11:43:52.335932Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824692,
+    "question": 1586646,
+    "content": "<p>Con Libero sei molto a limite, se non sbaglio il limite è proprio 1,2 GB (1 GB più il 20% che regalarono qualche anno fa).\n</p>",
+    "created": "2026-06-11T11:59:19.521809Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T11:59:19.521816Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824698,
+    "question": 1586630,
+    "content": "<p>please post screenshot of the 'server settings' pane of the account that may help.\n</p>",
+    "created": "2026-06-11T12:13:28.889553Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T12:13:28.889560Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824710,
+    "question": 1586601,
+    "content": "<em><p>genie <a href=\"#answer-1824636\" rel=\"nofollow\">said</a></p></em>\n<blockquote>Thanks for your replies.\n\nI do not have any back-up copy of my messages. Or rather I have one which is many months old. \n\nI am confused on what I should do next.\n</blockquote>\n<p>It seems that the messages are gone and cannot be recovered from anywhere, so you cannot do anything to bring them back.\n</p><p>Bur first, I would double-check: Are you sure that the account is an IMAP account? If you are not, check account settings &gt; server settings.\n</p><p>Do you access this account from any other device?\n</p><p>A folder with 3.1 megabytes of data is not empty. Check the size of the inbox again by right clicking on it &gt; select \n\"Properties\" &gt; look at the right side of the \"general information\" section (tab). What is the size on disk? How many messages are reported in the folder?\n</p><p>I wonder what happened to your messages. Searches should certainly not delete messages. I can imagine that you intentionally or accidentally selected the messages in the results of the search that you did and accidentally pressed the &lt;delete&gt; key and that you have a preference set to delete messages immediately instead of moving them to the trash folder. That combination of accidents and settings seems improbable.\n</p><p>In your place, I would make back-up copies more regularly. (I do almost every day.) And check your setting in account settings &gt; server settings to ensure that messages are moved to the trash folder when you \"delete\" them.\n</p>",
+    "created": "2026-06-11T13:11:30.428900Z",
+    "creator": {
+      "username": "mozilla98",
+      "display_name": "Rick",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/m"
+    },
+    "updated": "2026-06-11T13:11:30.428931Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824714,
+    "question": 1586686,
+    "content": "<p>I don't have any addons\nUnfortunately, it won't let me remove the button, only move it to the toolbar.\n</p>",
+    "created": "2026-06-11T13:22:51.230323Z",
+    "creator": {
+      "username": "dgord798",
+      "display_name": "David Gordon",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/D"
+    },
+    "updated": "2026-06-11T13:22:51.230328Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824716,
+    "question": 1586646,
+    "content": "<p>Grazie per la risposta.\nQuindi ritieni che quasi 300MB su 1200MB siano pochi? Parliano di 25% di spazio ancora disponibile.\n</p>",
+    "created": "2026-06-11T13:26:18.288039Z",
+    "creator": {
+      "username": "alenzo",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-11T13:26:18.288049Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824718,
+    "question": 1586565,
+    "content": "<p>Hello David\nThank's a lot, \nI've tried this also with the system admin from my provider, he is not so familiar with the Ubuntu System. Online, in the Internet browser access to my mailbox everything is working, \nThunderbird has a problem with some SMPT servers, I've read, that Thunderbird 120.7.0 is maybe working, I'm not the only one with this problem.\n</p>",
+    "created": "2026-06-11T13:34:31.184100Z",
+    "creator": {
+      "username": "andreas233",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-11T13:34:31.184108Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 1,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824724,
+    "question": 1586565,
+    "content": "<p>Thunderbird does not have problems that I am aware of, and I've seen no others with that issue from that server. If many have that problem, I suggest contacting the email provider, as I can offer nothing more. Good luck.\n</p>",
+    "created": "2026-06-11T13:52:28.523982Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T13:52:28.523989Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824732,
+    "question": 1586565,
+    "content": "<p>Thank you!\nInteresting, that you cannot find such Problems....\n<a href=\"https://askubuntu.com/questions/1521736/new-install-24-04-thunderbird-cannot-send-emails\" rel=\"nofollow\">https://askubuntu.com/questions/1521736/new-install-24-04-thunderbird-cannot-send-emails</a>\n<a href=\"https://www.thunderbird-mail.de/forum/thread/97191-smtp-server-ist-nicht-mehr-erreichbar-ging-aber-vor-wenigen-stunden-noch/\" rel=\"nofollow\">https://www.thunderbird-mail.de/forum/thread/97191-smtp-server-ist-nicht-mehr-erreichbar-ging-aber-vor-wenigen-stunden-noch/</a>\n<a href=\"https://askubuntu.com/questions/1564354/thunderbird-fails-to-send-email-using-an-smtp-server-claims-an-authentication-e\" rel=\"nofollow\">https://askubuntu.com/questions/1564354/thunderbird-fails-to-send-email-using-an-smtp-server-claims-an-authentication-e</a>\nand much more.....\n</p>",
+    "created": "2026-06-11T14:11:26.131594Z",
+    "creator": {
+      "username": "andreas233",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-11T14:11:26.131601Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824750,
+    "question": 1586565,
+    "content": "<p>Like others here, I am a volunteer. I do not spend my free time searching all thunderbird forums. Good luck.\n</p>",
+    "created": "2026-06-11T14:41:00.967073Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T14:41:00.967080Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824756,
+    "question": 1586646,
+    "content": "<p>No, certo che non sono pochi.\nPerò non so quali dati veda Thunderbird sul server.\nAd esempio non so se basti eliminare le mail o se occorra anche svuotare il cestino di Libero.\nO se l'aggiornamento della spazio disponibile richieda qualche ora per essere aggiornato tramite IMAP.\n</p><p>Mi pare solo strano che il problema si sia presentato all'esaurimento delle spazio.\n</p><p>Giusto per fare qualche altra prova:\nSe invii una mail dalla webmail di Libero viene poi scaricata anche nella Posta Inviata di Thunderbird?\n</p>",
+    "created": "2026-06-11T14:50:59.136502Z",
+    "creator": {
+      "username": "@next",
+      "display_name": "next",
+      "avatar": "https://firefoxusercontent.com/087aa6840d6b13774b464f2b88a7d23b"
+    },
+    "updated": "2026-06-11T14:50:59.136510Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824760,
+    "question": 1586579,
+    "content": "<p>I went to account settings.\nClicked   server settings\nit was a match\n</p><p>Then down to outgoing server\nserver name was: <a href=\"http://smtp.t-online.de\" rel=\"nofollow\">smtp.t-online.de</a>\nnot what you showed me: <a href=\"http://securesmtp.t-online.de\" rel=\"nofollow\">securesmtp.t-online.de</a>\nWhere do I go to change server name?\n</p>",
+    "created": "2026-06-11T14:59:04.995994Z",
+    "creator": {
+      "username": "boblore",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/b"
+    },
+    "updated": "2026-06-11T14:59:04.996003Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824762,
+    "question": 1586579,
+    "content": "<p>change it in the pane itself. I included a screenshot to show location\n</p>",
+    "created": "2026-06-11T15:13:03.701894Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T15:13:03.701900Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824778,
+    "question": 1586601,
+    "content": "<p>Thank you for your reply.\n</p><p>I intentionally created an IMAP account with Swissmail as I was having problems with the POP account. \n</p><p>When travelling I access my account with my tablet. But I have not done that for the past few weeks.\n</p><p>Now the Inbox has 12. MB and 78 messages. But all the messages are new, since I lost all the other ones. I have not found the one that I had before yesterday. As for the folder which I created and moved messages on to the other day, only to have them disappear the next day, it now has 5 messages and 609 kB. But these are messages that have been copied from elsewhere just to test it. \n</p><p>Do I need to save all my e-mails daily? How do I do that? Do I have to go to Settings - Account Settings and then what?\n</p>",
+    "created": "2026-06-11T16:05:30.536882Z",
+    "creator": {
+      "username": "genie2",
+      "display_name": "genie",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/g"
+    },
+    "updated": "2026-06-11T16:05:30.536893Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824784,
+    "question": 1586579,
+    "content": "<p>David I thank you. It works. If you are going to be in Las Vegas between 13 Aug and 27 Sep, I'll take you out for dinner and drinks.\nThanks again\nBob Church\n</p>",
+    "created": "2026-06-11T16:31:11.654073Z",
+    "creator": {
+      "username": "boblore",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/b"
+    },
+    "updated": "2026-06-11T16:31:11.654079Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824786,
+    "question": 1586710,
+    "content": "<p>Because you are using a Google Workspace account you need to point Thunderbird to Google's servers.\n</p><p>Check your Account Settings\n</p><p><strong>Incoming (IMAP)</strong>\nProtocol\tIMAP\nServer Name\t<a href=\"http://imap.gmail.com\" rel=\"nofollow\">imap.gmail.com</a>\nPort\t993\nConnection Security\tSSL/TLS\nAuthentication Method\tOAuth2\nUsername\tYour full email (e.g., <a href=\"mailto:info@chase-design.net\" rel=\"nofollow\">info@chase-design.net</a>)\n</p><p><strong>Outgoing (SMTP)</strong>\nProtocol\tSMTP\nServer Name\t<a href=\"http://smtp.gmail.com\" rel=\"nofollow\">smtp.gmail.com</a>\nPort\t465 \nConnection Security\tSSL/TLS \nAuthentication Method\tOAuth2\nUsername Your full email (e.g., <a href=\"mailto:info@chase-design.net\" rel=\"nofollow\">info@chase-design.net</a>)\n</p>",
+    "created": "2026-06-11T16:39:04.675241Z",
+    "creator": {
+      "username": "norhorn",
+      "display_name": "George Kitsoukakis",
+      "avatar": "https://firefoxusercontent.com/a52ac2a354b6ea9fe7574bf932bc887b"
+    },
+    "updated": "2026-06-11T16:39:04.675250Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824788,
+    "question": 1586579,
+    "content": "<p>Dang! I'll miss out. :) Anyway, you're welcome. A tip: If you need to do this in the future, try the Thunderbird default before using what others say to use. The default is usually the right one. Regards and don't lose all your money in Las Vegas.\n</p>",
+    "created": "2026-06-11T16:40:20.996566Z",
+    "creator": {
+      "username": "davidsk",
+      "display_name": "david",
+      "avatar": "https://firefoxusercontent.com/5eed5ecf74d9e1ec85435ea262bc016e"
+    },
+    "updated": "2026-06-11T16:40:20.996592Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824792,
+    "question": 1586601,
+    "content": "<em><p>genie <a href=\"#answer-1824778\" rel=\"nofollow\">said</a></p></em>\n<blockquote>Do I need to save all my e-mails daily? How do I do that? Do I have to go to Settings - Account Settings and then what?\n</blockquote>\n<p>You should not have to back up your messages every day, but strange things happen, equipment fails, we make mistakes, applications have bugs, so the more often you back up, the more protected you are. Everyone has to pick a frequency that they are comfortable with.\n</p><p>You have options.\n</p><p>The best thing to do is to back up your whole drive regularly. Windows and Macintosh have tools for that.\n</p><p>You could also back up your Thunderbird profile regularly. There are at least two ways to do that. If your profile is less than two GB in size, you can use Thunderbird's export command under the \"Tools\" menu. That creates a zip file that Thunderbird can use to import later if it is needed. Or you could get the add-on ImportExportToolsNG and use it to back up your profile uncompressed.\n</p><p>There are probably other ways too.\n</p>",
+    "created": "2026-06-11T17:01:52.205283Z",
+    "creator": {
+      "username": "mozilla98",
+      "display_name": "Rick",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/m"
+    },
+    "updated": "2026-06-11T17:01:52.205290Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 1,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824844,
+    "question": 1586647,
+    "content": "<p>ok grazie\n</p>",
+    "created": "2026-06-12T05:11:14.128096Z",
+    "creator": {
+      "username": "contenitore21",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/c"
+    },
+    "updated": "2026-06-12T05:11:14.128103Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825018,
+    "question": 1586646,
+    "content": "<p>Se invio una email dalla webmail di Libero me la ritrovo nella posta inviata.\nLo stesso accade con Mozilla. E' stata solo una volta ( o almeno me ne sono reso conto solo una volta) che la email è effettivamente partita da Thunderbird e non me la sono più ritrovata né bella posta inviata di Thunderbird né tantomeno nella posta inviata sulla webmail di Libero.\n</p>",
+    "created": "2026-06-12T17:49:42.198077Z",
+    "creator": {
+      "username": "alenzo",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/a"
+    },
+    "updated": "2026-06-12T17:49:42.198087Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825047,
+    "question": 1586565,
+    "content": "<p>Andreas223:\nI’ve spent hours and hours trying to find solution to not being able to send emails.  I worked my way through Google’s AI.  This worked. I can send emails now.  I hope it does for you.\n</p><p>If clearing the password history did not stop the error, it means Thunderbird is still linked to a misconfigured or corrupted SMTP server profile, or your main email identity is mapped to the wrong outgoing slot.When you delete passwords but Thunderbird fails to send without popping up a fresh password request, it implies it isn't even attempting a handshake anymore because the internal profile is broken.\nPerform this complete physical reset of the Outgoing Server profile to clear the backend loop:\n</p><p>1. Completely Re-create the SMTP Server EntryEditing an existing profile can sometimes fail if the file data inside Thunderbird becomes corrupted. You must delete the entry entirely and build a fresh one.\n</p><p>Open Thunderbird and select ≡ (menu) &gt; Account Settings.\nScroll to the bottom of the left column and click Outgoing Server (SMTP).\nSelect your <a href=\"http://mail.shaw.ca\" rel=\"nofollow\">mail.shaw.ca</a> profile from the list.\nClick Remove. (\n.Click Add... and type everything manually:\nDescription: YOUR ISP Fresh MailServer  Name: mail.YOUR <a href=\"http://ISP.ca\" rel=\"nofollow\">ISP.ca</a> Port: 587 Connection Security: STARTTLS Authentication Method: Normal password User Name: Your YOUR ISP username WITHOUT @YOUR <a href=\"http://ISP.ca\" rel=\"nofollow\">ISP.ca</a> (e.g., if your email is test@YOUR <a href=\"http://ISP.ca\" rel=\"nofollow\">ISP.ca</a>, type test).Click OK.\n</p><p>2. Formally Map Your Email Account to the New Server Building the server entry is not enough; you must explicitly link your specific @YOUR <a href=\"http://ISP.ca\" rel=\"nofollow\">ISP.ca</a> email address to the newly created profile.Stay inside the Account Settings window.\nScroll back up the left column and click directly on your primary @YOUR <a href=\"http://ISP.ca\" rel=\"nofollow\">ISP.ca</a> account name (at the very top of the list).\nLook at the bottom-right side of that panel for the Outgoing Server (SMTP): dropdown box.\nClick the dropdown menu and select the YOUR ISP Fresh Mail profile you just built in Step 1.\nClose the Account Settings tab.\n</p><p>3. Clear and Force the New Session Handshake  \nClose Thunderbird completely.Wait 10 seconds, then reopen Thunderbird.\nCompose a short test email to yourself and click Send.\nThunderbird will now force a direct connection using the fresh profile path and will prompt you to enter your YOUR ISP webmail password.\nType it in carefully, check the box to \"Use Password Manager to remember this password\", and hit enter.\n</p>",
+    "created": "2026-06-12T21:15:37.412698Z",
+    "creator": {
+      "username": "moehogue",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/m"
+    },
+    "updated": "2026-06-12T22:09:44.477702Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825098,
+    "question": 1586661,
+    "content": "<p>right click the folder entry and select properties.  What does it say there about total messages and size on disk.\n</p><p>Double click the status bar,  What does the activity manager say about that account?  Note that errors are list first in the activity manager.\n</p>",
+    "created": "2026-06-13T00:43:28.766378Z",
+    "creator": {
+      "username": "MattAuSupport",
+      "display_name": "Matt",
+      "avatar": "https://firefoxusercontent.com/79e0e1373e33440d6ce85c47aefeda62"
+    },
+    "updated": "2026-06-13T00:43:28.766384Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825100,
+    "question": 1586669,
+    "content": "<p>what antivirus do you use?\n</p>",
+    "created": "2026-06-13T00:44:23.178591Z",
+    "creator": {
+      "username": "MattAuSupport",
+      "display_name": "Matt",
+      "avatar": "https://firefoxusercontent.com/79e0e1373e33440d6ce85c47aefeda62"
+    },
+    "updated": "2026-06-13T00:44:23.178601Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825101,
+    "question": 1586603,
+    "content": "<em><p> <a href=\"#question-1586603\" rel=\"nofollow\">said</a></p></em>\n<blockquote>Is this a problem with Thunderbird or Charter (Spectrum)   \n</blockquote>\n<p>I would guess neither based on the limited information available and instead point to an antivirus product scanning emails.  Norton get lots of mentions, but most of them rely on self signed (untrusted)  certificates to perform this mostly useless function.\n</p>",
+    "created": "2026-06-13T00:46:38.973957Z",
+    "creator": {
+      "username": "MattAuSupport",
+      "display_name": "Matt",
+      "avatar": "https://firefoxusercontent.com/79e0e1373e33440d6ce85c47aefeda62"
+    },
+    "updated": "2026-06-13T00:46:38.973966Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825116,
+    "question": 1586661,
+    "content": "<p>Thx for your response.\n</p><p>Apparently I'm not understanding what you are seeking because I find no \"folder\" endry and therefore no \"properties.\"\n</p><p>Double clicking the status bar in Thunderbird show NOTHING related to Yahoo.\n</p>",
+    "created": "2026-06-13T01:22:37.025171Z",
+    "creator": {
+      "username": "ibbwhobu",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/i"
+    },
+    "updated": "2026-06-13T01:22:37.025177Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1826341,
+    "question": 1586561,
+    "content": "<p>Did these settings. Mails that have to be deleted are getting deleted normally. But when deleting from Trash Folder (or Empty Trash), that is still taking too much of time. There are just 6 emails in trash folder\n</p>",
+    "created": "2026-06-18T07:55:04.002118Z",
+    "creator": {
+      "username": "vspunn",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/v"
+    },
+    "updated": "2026-06-18T07:55:04.002126Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1826360,
+    "question": 1586561,
+    "content": "<em><p>vspunn <a href=\"#answer-1826341\" rel=\"nofollow\">said</a></p></em>\n<blockquote>Did these settings. Mails that have to be deleted are getting deleted normally. But when deleting from Trash Folder (or Empty Trash), that is still taking too much of time. There are just 6 emails in trash folder\n</blockquote>\n<p>Try R. click Trash &gt; Properties &gt; click 'Repair folder' button, then R. click Trash &gt; Compact.\n</p>",
+    "created": "2026-06-18T08:58:14.906963Z",
+    "creator": {
+      "username": "siffemoz",
+      "display_name": "Ed",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/s"
+    },
+    "updated": "2026-06-18T08:58:14.906968Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  }
+]
