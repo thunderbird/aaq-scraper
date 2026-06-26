@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1821362,1584053,2026-05-27T13:13:35.752219Z,2026-05-27T13:13:58.781365Z,"<p>Hi Edward </p><p>You can enable the push service which will deliver new emails immediately from desired folders. See guide: <a href=""https://support.mozilla.org/en-US/kb/configure-push-email-thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/configure-push-email-thunderbird-android</a> </p>",platform34,False,1,0
+1821367,1584053,2026-05-27T13:23:02.907568Z,2026-05-27T13:23:02.907577Z,<p>Thank you so much! I thought I could figure this out on my own but just seemes. To have missed this one particular setting. Thanks again </p>,buttermaned,False,0,0

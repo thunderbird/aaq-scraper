@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1819986,1582938,2026-05-21T14:06:52.961787Z,2026-05-21T14:06:52.961796Z,"<p>Hi Christine </p><p>See the below microsoft link. </p><p><a href=""https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth"" rel=""nofollow"">https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth</a> </p>",platform34,False,0,0
+1819993,1582938,2026-05-21T14:44:45.281466Z,2026-05-21T14:44:45.281471Z,<p>the issue was resolved by the admin by providing the right application-id for Thunderbird Android to the Outlook settings. </p>,christine26,False,1,0
