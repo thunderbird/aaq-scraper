@@ -1,0 +1,20 @@
+{
+  "verification_date_utc": "2026-06-10",
+  "product": "thunderbird-android",
+  "method": "Scraper count cross-checked against the public website Android question list and against the old Ruby tbandroid CSVs.",
+  "api_count": 4,
+  "api_ids": [
+    "1586580",
+    "1586597",
+    "1586655",
+    "1586670"
+  ],
+  "website_en_US_ids": [
+    "1586580",
+    "1586597",
+    "1586655",
+    "1586670"
+  ],
+  "website_match": true,
+  "old_ruby_note": "Old Ruby tbandroid CSVs (7-hour timezone bug) captured only 3 of these: 1586580 & 1586655 in the 2026-06-10 file, 1586670 shifted into the 2026-06-11 file, and 1586597 missing entirely."
+}

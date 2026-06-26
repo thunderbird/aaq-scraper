@@ -1,0 +1,300 @@
+[
+  {
+    "answers": [
+      1824361
+    ],
+    "content": "<p>I can view emails for each of my email accounts individually but how to i display the unified inbox?\n</p>",
+    "created": "2026-06-10T09:30:46.979009Z",
+    "creator": {
+      "username": "john405",
+      "display_name": "JP",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+    },
+    "id": 1586580,
+    "involved": [
+      {
+        "username": "john405",
+        "display_name": "JP",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+      }
+    ],
+    "is_archived": false,
+    "is_locked": false,
+    "is_solved": true,
+    "is_spam": false,
+    "is_taken": false,
+    "last_answer": 1824361,
+    "locale": "en-US",
+    "metadata": [
+      {
+        "name": "useragent",
+        "value": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36"
+      },
+      {
+        "name": "tb_version",
+        "value": "19.2"
+      },
+      {
+        "name": "os",
+        "value": "Android"
+      },
+      {
+        "name": "solver_id",
+        "value": "2809745"
+      }
+    ],
+    "tags": [
+      {
+        "name": "android",
+        "slug": "android"
+      },
+      {
+        "name": "thunderbird-android",
+        "slug": "thunderbird-android"
+      },
+      {
+        "name": "send-and-receive-email",
+        "slug": "send-and-receive-email"
+      }
+    ],
+    "num_answers": 1,
+    "num_votes_past_week": 0,
+    "num_votes": 0,
+    "product": "thunderbird-android",
+    "solution": 1824361,
+    "solved_by": {
+      "username": "john405",
+      "display_name": "JP",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+    },
+    "taken_until": null,
+    "taken_by": null,
+    "title": "How to display unified inbox",
+    "topic": "send-and-receive-email",
+    "updated_by": null,
+    "updated": "2026-06-10T09:43:30.078638Z"
+  },
+  {
+    "answers": [
+      1825179,
+      1825192,
+      1825219
+    ],
+    "content": "<p>I'm using a Galaxy22 and have T/b for Android installed and ready to go.  I've followed all the directions to import everything from my T/b on my desktop, which is the latest as I do automatic updates.  But when I open T/b for Android, I see something called \"unified inbox\" with absolutely nothing in it, just a blank screen and a \"compose message\" icon on the bottom right.  Where's my stuff?  Please help!  I can't handle Samsung email anymore, it won't send out any messages.\n</p><p>Jennifer\n</p>",
+    "created": "2026-06-10T11:35:40.822918Z",
+    "creator": {
+      "username": "boggett2001",
+      "display_name": "Jenfo",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/j"
+    },
+    "id": 1586597,
+    "involved": [
+      {
+        "username": "boggett2001",
+        "display_name": "Jenfo",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/j"
+      },
+      {
+        "username": "platform34",
+        "display_name": "Platform34",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+      }
+    ],
+    "is_archived": false,
+    "is_locked": false,
+    "is_solved": false,
+    "is_spam": false,
+    "is_taken": false,
+    "last_answer": 1825219,
+    "locale": "en-US",
+    "metadata": [
+      {
+        "name": "useragent",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0"
+      },
+      {
+        "name": "tb_version",
+        "value": "19.2 for Android"
+      },
+      {
+        "name": "os",
+        "value": "Windows 11"
+      },
+      {
+        "name": "kb_visits_prior",
+        "value": "[\"/en-US/kb/thunderbird-android-import\"]"
+      }
+    ],
+    "tags": [
+      {
+        "name": "accessibility",
+        "slug": "accessibility"
+      },
+      {
+        "name": "Windows 11",
+        "slug": "windows-11"
+      },
+      {
+        "name": "thunderbird-android",
+        "slug": "thunderbird-android"
+      }
+    ],
+    "num_answers": 3,
+    "num_votes_past_week": 0,
+    "num_votes": 0,
+    "product": "thunderbird-android",
+    "solution": null,
+    "solved_by": null,
+    "taken_until": null,
+    "taken_by": null,
+    "title": "After importing to T/b for Android, there is only one folder and there's a lot of blank screen",
+    "topic": "accessibility",
+    "updated_by": null,
+    "updated": "2026-06-13T17:37:46.504813Z"
+  },
+  {
+    "answers": [
+      1824550,
+      1824571
+    ],
+    "content": "<p>I keep getting a certification alert on my android mobile app for my email addresses. This prevents me from getting any emails on my Samsung phone.\n</p>",
+    "created": "2026-06-10T16:28:00.473771Z",
+    "creator": {
+      "username": "sboda",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/s"
+    },
+    "id": 1586655,
+    "involved": [
+      {
+        "username": "sboda",
+        "display_name": "",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/s"
+      },
+      {
+        "username": "platform34",
+        "display_name": "Platform34",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+      }
+    ],
+    "is_archived": false,
+    "is_locked": false,
+    "is_solved": false,
+    "is_spam": false,
+    "is_taken": false,
+    "last_answer": 1824571,
+    "locale": "en-US",
+    "metadata": [
+      {
+        "name": "useragent",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0"
+      },
+      {
+        "name": "tb_version",
+        "value": "Version 19.2"
+      },
+      {
+        "name": "os",
+        "value": "Windows 11"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Windows 11",
+        "slug": "windows-11"
+      },
+      {
+        "name": "thunderbird-android",
+        "slug": "thunderbird-android"
+      },
+      {
+        "name": "encryption",
+        "slug": "encryption"
+      }
+    ],
+    "num_answers": 2,
+    "num_votes_past_week": 0,
+    "num_votes": 0,
+    "product": "thunderbird-android",
+    "solution": null,
+    "solved_by": null,
+    "taken_until": null,
+    "taken_by": null,
+    "title": "I keep getting a certification alert on my android mobile app for my email addresses. This prevents me from getting any emails on my Samsung phone.",
+    "topic": "encryption",
+    "updated_by": null,
+    "updated": "2026-06-11T01:46:50.636990Z"
+  },
+  {
+    "answers": [
+      1824545
+    ],
+    "content": "<p>Hello, I’m having the following problem: When I try to add my Outlook email address to Thunderbird for Android, I get the error \"Authentication unsuccessful: SmtpClientAuthentication is disabled for the Mailbox.\" This points to a help article that only describes a procedure using PowerShell—requiring domain admin privileges, which I don't have. Setting up the IMAP incoming server seems to work fine, but the outgoing server refuses to connect. This is just a personal account. The configuration is: \nServer: <a href=\"http://smtp.office365.com\" rel=\"nofollow\">smtp.office365.com</a>; \nSecurity: StartTLS; \nPort: 587; \nAuthentication: OAuth 2.0; \nUsername: <a href=\"mailto:mymail@outlook.de\" rel=\"nofollow\">mymail@outlook.de</a>; \nClient certificate: None. \nI also tried the configuration using the server <a href=\"http://smtp-mail.outlook.com\" rel=\"nofollow\">smtp-mail.outlook.com</a> (with otherwise identical settings), but I get the same error. Does anyone have any advice?\n</p>",
+    "created": "2026-06-10T17:57:57.877162Z",
+    "creator": {
+      "username": "tomspitta",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/t"
+    },
+    "id": 1586670,
+    "involved": [
+      {
+        "username": "tomspitta",
+        "display_name": "",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/t"
+      },
+      {
+        "username": "platform34",
+        "display_name": "Platform34",
+        "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+      }
+    ],
+    "is_archived": false,
+    "is_locked": false,
+    "is_solved": false,
+    "is_spam": false,
+    "is_taken": false,
+    "last_answer": 1824545,
+    "locale": "en-US",
+    "metadata": [
+      {
+        "name": "useragent",
+        "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 Firefox/151.0"
+      },
+      {
+        "name": "tb_version",
+        "value": "19.2"
+      },
+      {
+        "name": "os",
+        "value": "Android 16"
+      },
+      {
+        "name": "kb_visits_prior",
+        "value": "[\"/en-US/kb/gmail-thunderbird-android\", \"/en-US/kb/thunderbird-android-import\"]"
+      }
+    ],
+    "tags": [
+      {
+        "name": "thunderbird-android",
+        "slug": "thunderbird-android"
+      },
+      {
+        "name": "send-and-receive-email",
+        "slug": "send-and-receive-email"
+      }
+    ],
+    "num_answers": 1,
+    "num_votes_past_week": 0,
+    "num_votes": 0,
+    "product": "thunderbird-android",
+    "solution": null,
+    "solved_by": null,
+    "taken_until": null,
+    "taken_by": null,
+    "title": "Unable to send emails via Thunderbird",
+    "topic": "send-and-receive-email",
+    "updated_by": null,
+    "updated": "2026-06-10T23:44:47.134524Z"
+  }
+]

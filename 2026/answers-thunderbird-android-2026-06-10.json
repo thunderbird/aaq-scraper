@@ -1,0 +1,118 @@
+[
+  {
+    "id": 1824361,
+    "question": 1586580,
+    "content": "<p>Ok, I worked it out. You need to re-start Thunderbird app to get the 'Unified Account' displayed above your email accounts.\n</p>",
+    "created": "2026-06-10T09:43:30.053256Z",
+    "creator": {
+      "username": "john405",
+      "display_name": "JP",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/J"
+    },
+    "updated": "2026-06-10T09:43:30.053262Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 1,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824545,
+    "question": 1586670,
+    "content": "<p>Hi @tomspitta\n</p><p>An issue report is open for this problem on github. \n</p><p><a href=\"https://github.com/thunderbird/thunderbird-android/issues/10787\" rel=\"nofollow\">https://github.com/thunderbird/thunderbird-android/issues/10787</a>\n</p><p>It seems to present itself with new <a href=\"http://outlook.com\" rel=\"nofollow\">outlook.com</a> emails addresses, but not other microsoft accounts such as hotmail.\n</p>",
+    "created": "2026-06-10T23:44:46.993208Z",
+    "creator": {
+      "username": "platform34",
+      "display_name": "Platform34",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+    },
+    "updated": "2026-06-10T23:44:46.993214Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824550,
+    "question": 1586655,
+    "content": "<p>Do you have a missing or expired root certificate in Androids certificate store. These are used to verify the chain of trust &amp; validity of the certificate your email provider is issuing.\n</p><p>Who is your email provider?\nWho issued their certificate?\nWhat version of Android are you using?\n</p>",
+    "created": "2026-06-11T00:02:57.044660Z",
+    "creator": {
+      "username": "platform34",
+      "display_name": "Platform34",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+    },
+    "updated": "2026-06-11T00:02:57.044665Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1824571,
+    "question": 1586655,
+    "content": "<p>Email provider is Spectrum/Charter and the version is G970U1UEU91XE1. The problem seemed to self correct in the fact that when it came to the certification alert it let me complete the issue rather than getting to my setup info and going no further, if that makes any sense. Not sure what happened but the issue has gone away. Thanks for your reply though.\n</p>",
+    "created": "2026-06-11T01:46:50.622071Z",
+    "creator": {
+      "username": "sboda",
+      "display_name": "",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/s"
+    },
+    "updated": "2026-06-11T01:46:50.622077Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825179,
+    "question": 1586597,
+    "content": "<p>Hi @Jenfo\n</p><p>Did you manage to resolve your issue?\n</p><p>Unified inbox provides a combined view of emails from multiple accounts.\n</p><p>To select a specific email account ... \n</p>\n<ol><li> Press the top left menu button to open the side bar.\n</li><li> Press the down arrow (on the right of \"Unified account\") \n</li><li> Select your account.\n</li></ol>\n<p>If emails are unavilable, check what protocol each account is using on Thunderbird desktop (imap or pop3)\n</p><p><strong>Pop3.</strong>\nOnly emails present on your providers server (such as newly arrived emails) will download to the mobile app. Other emails in Thunderbird desktop are stored locally on your desktop PC. Pop3 typically deletes them from the server once they've been downloaded.\n</p><p><strong>Imap.</strong>\nEmails are stored on your email providers server and will automatically download to the mobile app.\n</p>",
+    "created": "2026-06-13T13:26:14.660458Z",
+    "creator": {
+      "username": "platform34",
+      "display_name": "Platform34",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+    },
+    "updated": "2026-06-13T13:26:14.660468Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825192,
+    "question": 1586597,
+    "content": "<p>I don't know how, but this morning upon opening Tb on my phone, all the emails showed up.  I did notice that the folders do not match my desktop Tb.  Is there a way to make sure all the folders on the desktop can be also found on the phone?\n</p><p>In maneuvering a couple days ago and trying to get this going, I created 3 email accounts.  I can't figure out now how to get rid of those other (2) repetitive accounts.  Should I ask a separate question or  is that something you can answer in this thread?\n</p>",
+    "created": "2026-06-13T14:20:10.271414Z",
+    "creator": {
+      "username": "boggett2001",
+      "display_name": "Jenfo",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/j"
+    },
+    "updated": "2026-06-13T14:22:07.374245Z",
+    "updated_by": {
+      "username": "boggett2001",
+      "display_name": "Jenfo",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/j"
+    },
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  },
+  {
+    "id": 1825219,
+    "question": 1586597,
+    "content": "<p>Hi,\n</p><p>Yes, follow up questions related to your initial post should be made within the same thread (as you've done), which helps keep all the details together.\n</p><p>To remove a duplicate account, navigate to ...\nSettings &gt; account name &gt; three dot menu (top right) &gt; remove account.\n</p><p>The mobile app synchronises only folders available on the server, via imap.\nTry logging into your webmail and check all folders there match your TB desktop.\n</p><p>You can also try refreshing the mobile apps folder list.\n</p>\n<ul><li> Open the side menu with your account folders visible\n</li><li> Tap manage folders (bottom of list)\n</li><li> Tap the three dot menu\n</li><li> Tap refresh folder list\n</li></ul>\n<p>I'm assuming both desktop and mobile apps are using an imap connection. Pop3 doesn't support folder synchronisation.\n</p>",
+    "created": "2026-06-13T17:37:46.334844Z",
+    "creator": {
+      "username": "platform34",
+      "display_name": "Platform34",
+      "avatar": "https://profile.accounts.firefox.com/v1/avatar/P"
+    },
+    "updated": "2026-06-13T17:37:46.334851Z",
+    "updated_by": null,
+    "is_spam": false,
+    "num_helpful_votes": 0,
+    "num_unhelpful_votes": 0
+  }
+]

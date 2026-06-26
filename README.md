@@ -30,6 +30,10 @@ uv run python scrape_questions.py 2026 6 10 2026 6 10 --headless
 # Answers for those questions (defaults to the matching answers-... filename).
 uv run python scrape_answers.py \
     --questions 2026/questions-thunderbird-desktop-2026-06-10.csv --headless
+
+# Thunderbird for Android: same tools, --product thunderbird-android.
+uv run python scrape_questions.py 2026 6 10 2026 6 10 \
+    --product thunderbird-android --headless
 ```
 
 Output is written to `<year>/<questions|answers>-<product>-<dates>.csv`, e.g.
