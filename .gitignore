@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+*.csv
+poc-output.txt
+poc-sample.json
