@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+*.csv
+poc-output.txt
+poc-sample.json
+
+# Keep the June-10-2026 scrape + website verification as Bucket 1 fixtures
+!questions-2026-06-10.csv
+!questions-2026-06-10.json
+!website-verification-2026-06-10.json

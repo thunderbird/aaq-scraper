@@ -1,0 +1,8 @@
+[project]
+name = "aaq-scraper"
+version = "0.1.0"
+description = "Scrape the SUMO (support.mozilla.org) AAQ API by driving a real browser past its JavaScript challenge."
+requires-python = ">=3.10"
+dependencies = [
+    "playwright==1.49.1",
+]
