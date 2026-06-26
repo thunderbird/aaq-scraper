@@ -7,8 +7,8 @@ browser's authenticated context. Proven in Bucket 0 (poc.py) to work both
 headed and headless.
 """
 
-import json
-from contextlib import contextmanager
+import sys
+import time
 
 from playwright.sync_api import sync_playwright
 
@@ -34,9 +34,12 @@ class SumoBrowser:
                 ...
     """
 
-    def __init__(self, headless=False, settle_ms=6000):
+    def __init__(self, headless=False, settle_ms=6000,
+                 max_attempts=5, backoff_base=2.0):
         self.headless = headless
         self.settle_ms = settle_ms
+        self.max_attempts = max_attempts
+        self.backoff_base = backoff_base
         self._pw = None
         self._browser = None
         self._page = None
@@ -62,13 +65,9 @@ class SumoBrowser:
             self._pw.stop()
         return False
 
-    def fetch_json(self, url):
-        """Fetch `url` via an in-page fetch() so cookies/origin are reused.
-
-        Returns the parsed JSON. Raises RuntimeError if the response was not
-        JSON (e.g. the challenge HTML came back instead).
-        """
-        result = self._page.evaluate(
+    def _raw_fetch(self, url):
+        """Do one in-page fetch(); return {status, json, snippet, retry_after}."""
+        return self._page.evaluate(
             """async (url) => {
                 const res = await fetch(url, {
                     headers: { 'Accept': 'application/json' },
@@ -77,17 +76,61 @@ class SumoBrowser:
                 const text = await res.text();
                 let json = null;
                 try { json = JSON.parse(text); } catch (e) {}
-                return { status: res.status, json, snippet: text.slice(0, 300) };
+                return {
+                    status: res.status,
+                    json,
+                    snippet: text.slice(0, 300),
+                    retry_after: res.headers.get('retry-after'),
+                };
             }""",
             url,
         )
-        if result["json"] is None:
-            raise RuntimeError(
-                f"Non-JSON response (status {result['status']}) for {url}\n"
-                f"First 300 chars: {result['snippet']!r}\n"
-                "The browser may not have passed the challenge."
-            )
-        return result["json"]
+
+    def fetch_json(self, url):
+        """Fetch `url` via an in-page fetch(), retrying transient failures.
+
+        Reuses the page's cookies/origin so the JS challenge stays satisfied.
+        Retries with exponential backoff on HTTP 429 and 5xx (honouring
+        Retry-After for 429). A 200 that isn't JSON is treated as a challenge
+        hiccup and retried too. Other 4xx fail immediately. Raises RuntimeError
+        once attempts are exhausted.
+        """
+        last = None
+        for attempt in range(1, self.max_attempts + 1):
+            result = self._raw_fetch(url)
+            status = result["status"]
+            last = result
+
+            if status == 200 and result["json"] is not None:
+                return result["json"]
+
+            transient = status == 429 or status >= 500 or status == 200
+            if not transient:
+                raise RuntimeError(
+                    f"HTTP {status} (non-retryable) for {url}\n"
+                    f"First 300 chars: {result['snippet']!r}"
+                )
+            if attempt == self.max_attempts:
+                break
+
+            wait = self.backoff_base * (2 ** (attempt - 1))
+            if status == 429 and result.get("retry_after"):
+                try:
+                    wait = max(wait, float(result["retry_after"]))
+                except (TypeError, ValueError):
+                    pass
+            reason = (f"HTTP {status}" if status != 200
+                      else "200 but non-JSON (challenge?)")
+            print(f"  retry {attempt}/{self.max_attempts - 1} after {wait:.0f}s "
+                  f"({reason}) for {url}", file=sys.stderr)
+            time.sleep(wait)
+
+        raise RuntimeError(
+            f"Gave up after {self.max_attempts} attempts; last status "
+            f"{last['status']} for {url}\nFirst 300 chars: {last['snippet']!r}\n"
+            "If this is a 200 with HTML, the browser may not have passed the "
+            "challenge."
+        )
 
     def paginate(self, first_url, on_page=None):
         """Yield each result list across paginated pages, following `next`.

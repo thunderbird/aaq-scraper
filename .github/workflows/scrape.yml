@@ -1,0 +1,72 @@
+name: Scrape SUMO AAQ
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC (scrapes the previous UTC day)
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: "Start date YYYY-MM-DD (UTC). Default: yesterday"
+        required: false
+      end_date:
+        description: "End date YYYY-MM-DD (UTC). Default: same as start"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Sync dependencies
+        run: uv sync
+
+      - name: Install Chromium
+        run: uv run playwright install --with-deps chromium
+
+      - name: Compute date window
+        id: dates
+        run: |
+          START="${{ github.event.inputs.start_date }}"
+          END="${{ github.event.inputs.end_date }}"
+          [ -z "$START" ] && START=$(date -u -d 'yesterday' +%F)
+          [ -z "$END" ] && END="$START"
+          echo "start=$START" >> "$GITHUB_OUTPUT"
+          echo "end=$END" >> "$GITHUB_OUTPUT"
+          echo "Window: $START .. $END (UTC)"
+
+      - name: Scrape questions and answers
+        run: |
+          set -euo pipefail
+          read -r SY SM SD <<< "$(date -u -d '${{ steps.dates.outputs.start }}' '+%Y %m %d')"
+          read -r EY EM ED <<< "$(date -u -d '${{ steps.dates.outputs.end }}' '+%Y %m %d')"
+          for PRODUCT in thunderbird thunderbird-android; do
+            uv run python scrape_questions.py "$SY" "$SM" "$SD" "$EY" "$EM" "$ED" \
+              --product "$PRODUCT" --headless --random-delay
+          done
+          for Q in 20*/questions-*-"${{ steps.dates.outputs.start }}"*.csv; do
+            [ -e "$Q" ] || continue
+            uv run python scrape_answers.py --questions "$Q" --headless --random-delay
+          done
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 20*/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Scheduled scrape ${{ steps.dates.outputs.start }}..${{ steps.dates.outputs.end }}"
+            git push
+          fi
