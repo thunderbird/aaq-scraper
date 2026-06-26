@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1823420,1585727,2026-06-05T17:28:12.709650Z,2026-06-05T17:28:12.709657Z,<p>Hi Stixman </p><p>Thunderbird for Android can only download emails that are available on the server. Emails stored only within local folders on TB desktop (no copy on the server) cannot be viewed in the mobile app. </p>,platform34,False,1,0
+1824150,1585727,2026-06-09T14:28:36.834167Z,2026-06-09T14:28:36.834177Z,"<p>Hi Platform 34. </p><p>Thank you for the information and your time. </p><p>Best Regards, </p><p>Stixman. </p>",stixman,False,0,0

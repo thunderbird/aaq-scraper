@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1826275,1588089,2026-06-18T02:58:04.129692Z,2026-06-18T02:58:04.129702Z,<p>I think you have to change it from your original email provider's webmail interface. </p>,wxie2016,False,0,0
+1826315,1588089,2026-06-18T05:09:22.923756Z,2026-06-18T05:09:22.923761Z,<p>thanks </p>,knelso9,False,0,0
+1826475,1588199,2026-06-18T16:18:17.668556Z,2026-06-18T16:18:17.668561Z,"<p>Hi Jochen </p><p>You can check under settings &gt; account name &gt; fetching mail &gt; incoming server. </p><p>Recovery of a password depends upon the authentication type being used. For example, no password is stored or used for oAuth 2.0 authentication. </p>",platform34,False,0,0

@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1824008,1586173,2026-06-08T18:56:42.593856Z,2026-06-08T18:56:42.593865Z,"<p>If Thunderbird is not working, I need a bit more information to diagnose the issue. </p><p>Please tell me: </p><p>What exactly happens? Can't send emails? Can't receive emails? Won't open? Keeps asking for password? Shows an error message? What email server are you using? </p>",latifosacur993,False,0,0
