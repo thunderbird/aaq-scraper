@@ -187,6 +187,7 @@ def main():
                 time.sleep(delay())
 
     rows = [flatten_question(q) for q in collected]
+    rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
     fieldnames = build_fieldnames(rows)
     with open(args.out, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, restval="",
