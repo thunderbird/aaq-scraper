@@ -47,6 +47,12 @@ jobs:
       # cache each run (keys are immutable, so the run id makes a new entry that
       # restore-keys picks up next time). Absent on first run -> run_refresh.py
       # falls back to its lookback window.
+      #
+      # `.refresh-hwm` lives in GitHub's cache storage (not the repo/runner).
+      # Cache = best-effort: 10 GB/repo, LRU, evicted after 7 days idle; the
+      # hourly cron keeps it warm and the 26h lookback makes any miss self-heal.
+      # Scoped to main (where the cron runs), so each run reads the prior one.
+      # Inspect: `gh cache list`. See CLAUDE.md "Automation" for details.
       - name: Restore refresh high-water mark
         if: ${{ !github.event.inputs.start_date }}
         uses: actions/cache/restore@v4

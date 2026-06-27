@@ -107,6 +107,21 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   `run_refresh.py` falls back to its `--lookback-hours` window (default 26h).
   `workflow_dispatch` can pass an explicit `start_date`/`end_date` (whole-day
   range, bypasses state).
+  - **Where the high-water mark lives:** GitHub-managed **cache storage** (not in
+    the repo/git, not on the runner after the job). During a run `.refresh-hwm`
+    sits in the workspace; `actions/cache/save` uploads it, `actions/cache/restore`
+    fetches it next run. Inspect with `gh cache list --repo thunderbird/aaq-scraper`
+    (or repo → Actions → Management → Caches).
+  - **Eviction:** 10 GB/repo, LRU, and any entry **untouched for 7 days is
+    deleted**. The hourly cron keeps our (few-byte) entry warm; if it's ever
+    evicted the 26h-lookback fallback makes the miss self-healing — no data lost.
+  - **Branch scoping:** caches are readable by the creating branch, its child
+    PRs, and the **default branch is readable by all**. The cron runs on `main`,
+    so once merged each hourly run reads the prior run's cache cleanly.
+  - The cache is **best-effort, not a durable datastore**; that's acceptable here
+    only because of the lookback fallback. To make the mark guaranteed-durable
+    instead, commit it to the repo (cost: a tiny state-file change every active
+    run).
 - `.github/workflows/schema-check.yml` — daily 06:30 UTC; runs `check_schema.py`
   and opens/comments a labelled `schema-change` issue on drift (de-duped by
   label). Baseline `schema/expected-fields.json` is **only** updated manually via
