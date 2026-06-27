@@ -39,6 +39,23 @@ context.
   the en-US page (the rest are other locales). Cross-check against
   `/<locale>/questions/<product>` when reconciling.
 - **Answers** are fetched per question via `/api/2/answer/?question=<id>`.
+- **`updated`-based refresh** (`find_updated_days.py` + `run_refresh.py`): the
+  `created`-based scrape never re-fetches past days, so edits / new answers /
+  solved-flips on old questions are lost. The refresh queries the `updated`
+  window to find what *changed*, maps each back to its `created` day, and re-runs
+  the **existing, unchanged** scrapers for just those `(product, created-day)`
+  pairs (deterministic rebuilds → only real changes show in git). **Two passes,
+  unioned:** (1) `question/?updated__*` per product; (2) `answer/?updated__*`
+  mapped via each answer's parent question (detail-fetched for product+created).
+  **Pass 2 is mandatory: a question's `updated` does NOT bump when a new answer
+  is posted** (verified live — ~60% of changed answers had a parent question
+  absent from the question-`updated` set). **Age cutoff:** never refresh a
+  created day older than 1 year (`DEFAULT_MAX_AGE_DAYS=365`, `--max-age-days 0`
+  disables). Default window is yesterday..today UTC (2-day overlap for the
+  midnight boundary). **API filter gotcha:** the API *silently ignores* unknown
+  query params (`id__in`, a `product` filter on answers, etc. are dropped and you
+  get the unfiltered list) — only whitelisted fields filter, so verify filters
+  empirically.
 
 ## CSV columns
 
@@ -65,6 +82,9 @@ uv run python scrape_questions.py 2026 6 10 2026 6 10 --headless
 uv run python scrape_answers.py --questions 2026/questions-thunderbird-desktop-2026-06-10.csv --headless
 # Backfill a range, one day at a time, random 2-10 min between days
 uv run python run_backfill.py 2026-06-01 2026-06-24
+# Refresh only the day-CSVs that CHANGED (default window: yesterday..today UTC)
+uv run python find_updated_days.py --headless          # list (product, created-day) pairs
+uv run python run_refresh.py                           # discover + re-scrape those days
 # Schema drift check (manual-bump baseline)
 uv run python check_schema.py --headless                 # exit 1 on drift
 uv run python check_schema.py --headless --update-baseline
@@ -96,5 +116,6 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
 
 ## License & contribution
 
-MPL-2.0 (new source files should carry the header). Participants must follow the
+MPL-2.0. **All source files carry the MPL header by default** (Python after the
+shebang, YAML at the top); add it to every new file. Participants must follow the
 [Mozilla Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/).
