@@ -77,6 +77,9 @@ context.
   digit) are untouched, so normal output stays byte-identical. **Note:** the
   escaping only applies when a day is (re)scraped, so pre-existing CSVs aren't
   retroactively normalised until their day next changes (or a full re-backfill).
+  `normalize_csv_escaping.py` back-fills the same transform onto committed CSVs
+  in place (API-free, idempotent); the one-time normalization is audited in
+  `docs/escaped-cells.md` (171 cells, all `@`-prefixed usernames).
 
 ## Commands
 
