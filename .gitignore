@@ -10,3 +10,6 @@ poc-sample.json
 /questions*.csv
 /answers*.csv
 /*.json
+
+# Incremental-refresh high-water mark (persisted via Actions cache, not git)
+/.refresh-hwm
