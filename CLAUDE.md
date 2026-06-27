@@ -69,6 +69,14 @@ context.
 - **Answers** (`scrape_answers.py`): `id, question_id (<-question), created,
   updated, content, creator (username), is_spam, num_helpful
   (<-num_helpful_votes), num_unhelpful (<-num_unhelpful_votes)`.
+- **Formula-injection escaping** (`escape_formula` in both scrapers): SUMO
+  content is untrusted user input, so any string cell starting with `= + - @`
+  (or tab/CR) gets a leading `'` so spreadsheets treat it as text, not a formula.
+  `csv` quoting already prevents field/row breakout; this guards the
+  open-in-Excel/Sheets case. Benign values (incl. ISO dates, which start with a
+  digit) are untouched, so normal output stays byte-identical. **Note:** the
+  escaping only applies when a day is (re)scraped, so pre-existing CSVs aren't
+  retroactively normalised until their day next changes (or a full re-backfill).
 
 ## Commands
 

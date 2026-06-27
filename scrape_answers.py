@@ -38,6 +38,18 @@ def username_of(obj):
     return obj.get("username", "") if isinstance(obj, dict) else ""
 
 
+# Leading chars a spreadsheet may treat as the start of a formula. SUMO content
+# is untrusted user input, so prefix any such string with ' (CSV/Excel
+# formula-injection mitigation) before writing it out.
+FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
+
+
+def escape_formula(value):
+    if isinstance(value, str) and value[:1] in FORMULA_PREFIXES:
+        return "'" + value
+    return value
+
+
 def flatten_answer(a):
     """Map one API answer into the original CSV column set."""
     content = a.get("content") or ""
@@ -48,8 +60,8 @@ def flatten_answer(a):
         "question_id": a.get("question"),
         "created": a.get("created"),
         "updated": a.get("updated"),
-        "content": content,
-        "creator": username_of(a.get("creator")),
+        "content": escape_formula(content),
+        "creator": escape_formula(username_of(a.get("creator"))),
         "is_spam": a.get("is_spam"),
         # API exposes *_votes; the original CSV columns drop the suffix.
         "num_helpful": a.get("num_helpful_votes"),
