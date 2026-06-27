@@ -22,6 +22,7 @@ import sys
 import time
 from urllib.parse import urlencode
 
+from csv_safety import escape_formula
 from sumo import API_BASE, SumoBrowser
 
 # Importing sumo raises csv.field_size_limit to the platform maximum, so reading
@@ -36,18 +37,6 @@ COLUMNS = [
 
 def username_of(obj):
     return obj.get("username", "") if isinstance(obj, dict) else ""
-
-
-# Leading chars a spreadsheet may treat as the start of a formula. SUMO content
-# is untrusted user input, so prefix any such string with ' (CSV/Excel
-# formula-injection mitigation) before writing it out.
-FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
-
-
-def escape_formula(value):
-    if isinstance(value, str) and value[:1] in FORMULA_PREFIXES:
-        return "'" + value
-    return value
 
 
 def flatten_answer(a):
