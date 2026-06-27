@@ -26,6 +26,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
+from csv_safety import escape_formula
 from sumo import API_BASE, SumoBrowser
 
 # API product slug -> human label used in output filenames.
@@ -55,18 +56,6 @@ def username_of(obj):
     if isinstance(obj, dict):
         return obj.get("username", "")
     return ""
-
-
-# Leading chars a spreadsheet may treat as the start of a formula. SUMO content
-# is untrusted user input, so prefix any such string with ' (CSV/Excel
-# formula-injection mitigation) before writing it out.
-FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
-
-
-def escape_formula(value):
-    if isinstance(value, str) and value[:1] in FORMULA_PREFIXES:
-        return "'" + value
-    return value
 
 
 def flatten_question(q):
