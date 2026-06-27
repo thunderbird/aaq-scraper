@@ -57,6 +57,18 @@ def username_of(obj):
     return ""
 
 
+# Leading chars a spreadsheet may treat as the start of a formula. SUMO content
+# is untrusted user input, so prefix any such string with ' (CSV/Excel
+# formula-injection mitigation) before writing it out.
+FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
+
+
+def escape_formula(value):
+    if isinstance(value, str) and value[:1] in FORMULA_PREFIXES:
+        return "'" + value
+    return value
+
+
 def flatten_question(q):
     """Flatten one question into a CSV-ready dict (original rules + new cols)."""
     row = dict(q)
@@ -99,12 +111,14 @@ def flatten_question(q):
     if isinstance(row.get("content"), str):
         row["content"] = row["content"].replace("\n", " ").replace("\r", " ")
 
-    # Any remaining non-scalar value -> str, to keep the CSV clean.
+    # Any remaining non-scalar value -> str, to keep the CSV clean; then guard
+    # against spreadsheet formula injection on every string cell.
     for k, v in list(row.items()):
         if isinstance(v, (dict, list)):
-            row[k] = str(v)
+            v = str(v)
         elif v is None:
-            row[k] = ""
+            v = ""
+        row[k] = escape_formula(v)
     return row
 
 
