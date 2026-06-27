@@ -82,9 +82,10 @@ uv run python scrape_questions.py 2026 6 10 2026 6 10 --headless
 uv run python scrape_answers.py --questions 2026/questions-thunderbird-desktop-2026-06-10.csv --headless
 # Backfill a range, one day at a time, random 2-10 min between days
 uv run python run_backfill.py 2026-06-01 2026-06-24
-# Refresh only the day-CSVs that CHANGED (default window: yesterday..today UTC)
-uv run python find_updated_days.py --headless          # list (product, created-day) pairs
-uv run python run_refresh.py                           # discover + re-scrape those days
+# Refresh only the day-CSVs that CHANGED
+uv run python find_updated_days.py --headless          # list (product, created-day) pairs (yesterday..today)
+uv run python run_refresh.py                           # incremental: changes since last run (high-water mark)
+uv run python run_refresh.py 2026-06-01 2026-06-26     # explicit whole-day range (manual; ignores state)
 # Schema drift check (manual-bump baseline)
 uv run python check_schema.py --headless                 # exit 1 on drift
 uv run python check_schema.py --headless --update-baseline
@@ -95,9 +96,17 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
 
 ## Automation (GitHub Actions)
 
-- `.github/workflows/scrape.yml` — daily 06:00 UTC + manual; scrapes desktop +
-  Android questions/answers headless for a window (default: yesterday UTC) and
-  commits new CSVs under `<year>/`.
+- `.github/workflows/scrape.yml` — **hourly** (`0 * * * *`) + manual; runs
+  `run_refresh.py` in **incremental** mode and commits changed CSVs under
+  `<year>/` (message `Hourly refresh <ts>`). The `updated`-driven refresh also
+  covers newly-created questions (their `updated` >= creation), so it **replaces**
+  the old daily created-based scrape; `run_backfill.py` + the per-day scrapers
+  remain for manual backfills. The high-water-mark state file `.refresh-hwm` is
+  **gitignored** and persisted between runs via the **Actions cache** (rolling
+  key `refresh-hwm-<run_id>` + `restore-keys: refresh-hwm-`); on a cache miss
+  `run_refresh.py` falls back to its `--lookback-hours` window (default 26h).
+  `workflow_dispatch` can pass an explicit `start_date`/`end_date` (whole-day
+  range, bypasses state).
 - `.github/workflows/schema-check.yml` — daily 06:30 UTC; runs `check_schema.py`
   and opens/comments a labelled `schema-change` issue on drift (de-duped by
   label). Baseline `schema/expected-fields.json` is **only** updated manually via

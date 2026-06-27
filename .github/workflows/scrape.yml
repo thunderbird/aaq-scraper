@@ -1,18 +1,24 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
-name: Scrape SUMO AAQ
+name: Refresh SUMO AAQ
+
+# Hourly incremental refresh: re-scrape only the day-CSVs whose questions or
+# answers changed since the last run (run_refresh.py, high-water-mark mode).
+# This also covers newly-created questions (their `updated` >= creation), so it
+# replaces the old daily created-based scrape. Manual runs may pass an explicit
+# date range. run_backfill.py + the per-day scrapers remain for bulk backfills.
 
 on:
   schedule:
-    - cron: "0 6 * * *" # daily at 06:00 UTC (scrapes the previous UTC day)
+    - cron: "0 * * * *" # hourly, on the hour (UTC)
   workflow_dispatch:
     inputs:
       start_date:
-        description: "Start date YYYY-MM-DD (UTC). Default: yesterday"
+        description: "Explicit refresh start YYYY-MM-DD (UTC). Blank = incremental."
         required: false
       end_date:
-        description: "End date YYYY-MM-DD (UTC). Default: same as start"
+        description: "Explicit refresh end YYYY-MM-DD (UTC). Default: same as start."
         required: false
 
 permissions:
@@ -23,7 +29,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  scrape:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -37,30 +43,36 @@ jobs:
       - name: Install Chromium
         run: uv run playwright install --with-deps chromium
 
-      - name: Compute date window
-        id: dates
-        run: |
-          START="${{ github.event.inputs.start_date }}"
-          END="${{ github.event.inputs.end_date }}"
-          [ -z "$START" ] && START=$(date -u -d 'yesterday' +%F)
-          [ -z "$END" ] && END="$START"
-          echo "start=$START" >> "$GITHUB_OUTPUT"
-          echo "end=$END" >> "$GITHUB_OUTPUT"
-          echo "Window: $START .. $END (UTC)"
+      # Rolling state: restore the most recent high-water mark, save a fresh
+      # cache each run (keys are immutable, so the run id makes a new entry that
+      # restore-keys picks up next time). Absent on first run -> run_refresh.py
+      # falls back to its lookback window.
+      - name: Restore refresh high-water mark
+        if: ${{ !github.event.inputs.start_date }}
+        uses: actions/cache/restore@v4
+        with:
+          path: .refresh-hwm
+          key: refresh-hwm-${{ github.run_id }}
+          restore-keys: |
+            refresh-hwm-
 
-      - name: Scrape questions and answers
+      - name: Refresh changed days
         run: |
           set -euo pipefail
-          read -r SY SM SD <<< "$(date -u -d '${{ steps.dates.outputs.start }}' '+%Y %m %d')"
-          read -r EY EM ED <<< "$(date -u -d '${{ steps.dates.outputs.end }}' '+%Y %m %d')"
-          for PRODUCT in thunderbird thunderbird-android; do
-            uv run python scrape_questions.py "$SY" "$SM" "$SD" "$EY" "$EM" "$ED" \
-              --product "$PRODUCT" --headless --random-delay
-          done
-          for Q in 20*/questions-*-"${{ steps.dates.outputs.start }}"*.csv; do
-            [ -e "$Q" ] || continue
-            uv run python scrape_answers.py --questions "$Q" --headless --random-delay
-          done
+          START="${{ github.event.inputs.start_date }}"
+          END="${{ github.event.inputs.end_date }}"
+          if [ -n "$START" ]; then
+            uv run python run_refresh.py "$START" ${END:+"$END"}
+          else
+            uv run python run_refresh.py
+          fi
+
+      - name: Save refresh high-water mark
+        if: ${{ success() && !github.event.inputs.start_date }}
+        uses: actions/cache/save@v4
+        with:
+          path: .refresh-hwm
+          key: refresh-hwm-${{ github.run_id }}
 
       - name: Commit results
         run: |
@@ -70,6 +82,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Scheduled scrape ${{ steps.dates.outputs.start }}..${{ steps.dates.outputs.end }}"
+            git commit -m "Hourly refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git push
           fi

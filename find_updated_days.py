@@ -40,14 +40,14 @@ def parse_dt(s):
     return datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
-def _window_strs(start_dt, end_dt):
-    """(greater_than, less_than) datetimes + their API strings, matching
-    scrape_questions.py: start day minus 1s .. end day plus 1 day (inclusive)."""
-    greater_than = start_dt - timedelta(seconds=1)
-    less_than = end_dt + timedelta(days=1)
-    return (greater_than, less_than,
-            greater_than.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            less_than.strftime("%Y-%m-%dT%H:%M:%SZ"))
+def day_bounds(start_dt, end_dt):
+    """Inclusive whole-day window (greater_than, less_than), matching
+    scrape_questions.py: start day minus 1s .. end day plus 1 day."""
+    return (start_dt - timedelta(seconds=1), end_dt + timedelta(days=1))
+
+
+def _api_str(dt):
+    return dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _questions_updated(sumo, slug, gt_str, lt_str, less_than, delay, seen,
@@ -159,12 +159,16 @@ def _resolve_question(sumo, qid, slugs):
     return (slug, created.strftime("%Y-%m-%d"))
 
 
-def find_updated_days(sumo, start_dt, end_dt, products=PRODUCTS, delay=lambda: 2.0,
-                      include_answers=True, min_day=None):
+def find_updated_days(sumo, greater_than, less_than, products=PRODUCTS,
+                      delay=lambda: 2.0, include_answers=True, min_day=None):
     """Query the `updated` window on an already-open SumoBrowser (caller owns it).
 
     Returns a sorted list of (slug, 'YYYY-MM-DD') pairs, where the day is each
     modified question's `created` date (UTC) -- i.e. which day-CSV to rebuild.
+
+    `greater_than`/`less_than` are the raw tz-aware UTC window bounds
+    (updated__gt / updated__lt). For whole-day windows use day_bounds(); the
+    incremental refresh passes sub-day bounds (last run minus overlap .. now).
 
     Two passes (their union):
       1. Questions of each product updated in the window (catches question edits,
@@ -176,12 +180,9 @@ def find_updated_days(sumo, start_dt, end_dt, products=PRODUCTS, delay=lambda: 2
 
     `min_day` ('YYYY-MM-DD' or None) drops pairs whose created day is older --
     we don't refresh questions/answers created before it (default cutoff: 1 year,
-    set by the callers). start_dt/end_dt are tz-aware UTC datetimes; only their
-    date matters. The window matches scrape_questions.py: start day 00:00:00 minus
-    1s .. end day plus 1 day (both days inclusive). include_answers=False -> pass 1
-    only.
+    set by the callers). include_answers=False -> pass 1 only.
     """
-    greater_than, less_than, gt_str, lt_str = _window_strs(start_dt, end_dt)
+    gt_str, lt_str = _api_str(greater_than), _api_str(less_than)
     slugs = {slug for slug, _ in products}
 
     print(f"Window: {greater_than.isoformat()} < updated < {less_than.isoformat()}",
@@ -221,8 +222,9 @@ def find_updated_days(sumo, start_dt, end_dt, products=PRODUCTS, delay=lambda: 2
 def find_updated_days_standalone(start_dt, end_dt, products=PRODUCTS,
                                  headless=True, delay=lambda: 2.0,
                                  include_answers=True, min_day=None):
+    greater_than, less_than = day_bounds(start_dt, end_dt)
     with SumoBrowser(headless=headless) as sumo:
-        return find_updated_days(sumo, start_dt, end_dt, products, delay,
+        return find_updated_days(sumo, greater_than, less_than, products, delay,
                                  include_answers, min_day)
 
 
