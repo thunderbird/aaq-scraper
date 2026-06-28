@@ -1,2 +1,4 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1828704,1590023,2026-06-28T08:51:41.339236Z,2026-06-28T08:51:41.339242Z,"<p>See <a href=""https://support.mozilla.org/en-US/questions/1589965"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1589965</a> </p>",christ1,False,0,0
+1828748,1590040,2026-06-28T12:40:49.174296Z,2026-06-28T12:40:49.174303Z,"<p>Looks like you opened a ton of messages, each in a new tab. Right-click the most left tab - Close Other Tabs </p>",christ1,False,1,0
+1828756,1590040,2026-06-28T13:03:04.174040Z,2026-06-28T13:03:04.174048Z,"<p>I didn't think they were messages as clicking them just showed a blank   </p><p>Thanks for the ""fix"" </p>",dblevins1,False,0,0
