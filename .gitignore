@@ -13,3 +13,6 @@ poc-sample.json
 
 # Incremental-refresh high-water mark (persisted via Actions cache, not git)
 /.refresh-hwm
+
+# Month-backfill failure log (local record of dates to redo)
+/backfill-failures.txt
