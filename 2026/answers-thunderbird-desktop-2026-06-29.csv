@@ -10,3 +10,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1829007,1590214,2026-06-29T14:02:51.864306Z,2026-06-29T14:02:51.864314Z,<p>Quale messaggio esattamente? </p>,'@next,False,0,0
 1829008,1590214,2026-06-29T14:07:47.001752Z,2026-06-29T14:07:47.001764Z,<p>allego messaggio di errore grazie </p>,denise18,False,0,0
 1829009,1590214,2026-06-29T14:32:31.884373Z,2026-06-29T14:32:31.884384Z,<p>Assicurati di avere spazio libero a sufficienza sul server e anche sul drive locale in cui salvai la posta di Thunderbird. Dall'errore sembrerebbe che tu abbia finito lo spazio disponibile. </p>,'@next,False,0,0
+1829032,1590229,2026-06-29T16:58:34.884132Z,2026-06-29T16:58:34.884176Z,"<p>If people cannot help here, you might ask in the Android forum: <a href=""https://support.mozilla.org/en-US/questions/thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/thunderbird-android</a> </p>",mozilla98,False,0,0
