@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1828956,1590176,2026-06-29T09:38:36.650827Z,2026-06-29T09:38:36.650838Z,"<p>The mbox files have no extension, such as inbox and sent, which you already located. To determine which IMAP folder is for which account, click the server settings pane for an account and look in lower right for the local directory. </p>",davidsk,False,0,0
