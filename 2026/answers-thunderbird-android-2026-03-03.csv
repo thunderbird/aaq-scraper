@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1803725,1568847,2026-03-04T07:24:23.427970Z,2026-03-04T07:24:23.427976Z,"<p>You can find steps to configure an alias in Thunderbird desktop linked below. </p><p><a href=""https://support.mozilla.org/en-US/kb/configuring-email-aliases"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/configuring-email-aliases</a> </p><p>In the Android app, navigate to settings &gt; account &gt; sending mail &gt; manage identities. </p>",platform34,False,0,0
