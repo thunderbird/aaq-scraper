@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1810269,1574739,2026-04-05T11:37:27.670376Z,2026-04-05T11:37:27.670380Z,"<p>As a first step, you should exclude the app from any Android battery optimisations and enable the app to run in the background. </p><p>The setting are typically available by long pressing the TB launcher icon &gt; app info &gt; battery. The options and menu location can vary by Android version and phone manufacturer. </p>",platform34,False,0,0
