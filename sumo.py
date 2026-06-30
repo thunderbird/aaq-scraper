@@ -11,6 +11,7 @@ headed and headless.
 """
 
 import csv
+import random
 import sys
 import time
 
@@ -54,11 +55,16 @@ class SumoBrowser:
     """
 
     def __init__(self, headless=False, settle_ms=6000,
-                 max_attempts=5, backoff_base=2.0):
+                 max_attempts=5, backoff_base=2.0,
+                 retry_jitter_min_s=60, retry_jitter_max_s=300):
         self.headless = headless
         self.settle_ms = settle_ms
         self.max_attempts = max_attempts
         self.backoff_base = backoff_base
+        # Extra random pause added on top of a 429 wait (default 1-5 min) so we
+        # always retry strictly AFTER SUMO's Retry-After window and desync retries.
+        self.retry_jitter_min_s = retry_jitter_min_s
+        self.retry_jitter_max_s = retry_jitter_max_s
         self._pw = None
         self._browser = None
         self._page = None
@@ -133,11 +139,17 @@ class SumoBrowser:
                 break
 
             wait = self.backoff_base * (2 ** (attempt - 1))
-            if status == 429 and result.get("retry_after"):
-                try:
-                    wait = max(wait, float(result["retry_after"]))
-                except (TypeError, ValueError):
-                    pass
+            if status == 429:
+                # Honour SUMO's Retry-After in full (it can be ~600s), then add
+                # a random 1-5 min on top so we always retry after the server's
+                # window and don't synchronise retries across calls.
+                if result.get("retry_after"):
+                    try:
+                        wait = max(wait, float(result["retry_after"]))
+                    except (TypeError, ValueError):
+                        pass
+                wait += random.uniform(self.retry_jitter_min_s,
+                                       self.retry_jitter_max_s)
             reason = (f"HTTP {status}" if status != 200
                       else "200 but non-JSON (challenge?)")
             print(f"  retry {attempt}/{self.max_attempts - 1} after {wait:.0f}s "

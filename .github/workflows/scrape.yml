@@ -37,10 +37,11 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     # Cap the run so SUMO rate-limiting (429 retry-backoff) can't hang a refresh
-    # for GitHub's 6h default and block the `scrape` concurrency queue behind it.
-    # A healthy incremental refresh finishes in minutes; failing fast lets the
-    # next hourly run (with a fresh rate-limit budget) self-heal.
-    timeout-minutes: 30
+    # for GitHub's 6h default and block subsequent runs. A healthy incremental
+    # refresh finishes in minutes; under throttling this gives a run room to ride
+    # out a few Retry-After waits, and failing past it lets the next hourly run
+    # (with a fresh rate-limit budget) self-heal.
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v5
 
