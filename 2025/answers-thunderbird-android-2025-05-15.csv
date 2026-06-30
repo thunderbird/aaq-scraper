@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1733591,1512038,2025-05-16T22:02:50.786740Z,2025-05-16T22:02:50.786746Z,"<p>Hi John </p><p>Yes, you should be able to. </p> <ol><li> In the Inbox view in Thunderbird for Android, long press on the spam email to select it. </li><li> Select the three dot icon in the top right corner. </li><li> Select ""Spam"". </li></ol> <p>I hope that this helps. </p>",plwt,False,1,6
