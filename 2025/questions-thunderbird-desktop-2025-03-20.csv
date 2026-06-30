@@ -1,0 +1,1257 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1500475,2025-03-20T00:22:58.014253Z,2025-03-20T12:03:03.775773Z,en-US,thunderbird,Upgrading from Win10 to Win11,False,,,False,1719744,1719744;,install,thunderbird;install;,scottnell,"<p>Hello, </p><p>I run Thunderbird 128.8.1 POP. I'm upgrading my Win10 computer to Win11. </p><p>Can I leave Thunderbird as-is and just upgrade to Win11 or do I have to uninstall it, upgrade to Win11, and then download a Thunderbird Win11 installer and re-install it.  </p><p>Please tell me the steps to follow and provide any links to installers, etc.. </p><p>Thank you so much, Scott </p>",scottnell;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/en-US/kb/moving-thunderbird-data-to-a-new-computer""]",1,0,0,,,,,
+1500476,2025-03-20T00:26:10.431231Z,2025-03-29T23:37:18.876935Z,en-US,thunderbird,Passwords/Logins not stored when using network drive,True,1722021,jamestibiriuskirk,False,1722021,1722021;,save-passwords,linux;thunderbird;debian;seg-linux-debian;save-passwords;,jamestibiriuskirk,"<p>Hi @ all, </p><p>When using TB as a LDAP-User, logins.json and key4.db are NOT created on the (mounted) home directory. </p><p>here's my setup: Debian 12 with a local user as well as remote users, administrated via LDAP. PAM-login for local and ldap users has been setup and is working. Automounting of network drives is working. Each LDAP user has their home directory stored on a Fileserver and mounted upon login. All applications are working as intended except thunderbird. </p><p>So far I've tried to run gnupg locally instead of having it start a session from the (mounted) home directory, assuming that gnupg is the corresponding means of de/encryption. I've copied the profile of the local user to be used as the profile of the LDAP user, logins.json is completely ignored by TB. </p><p>Upon starting of TB, passwords are asked for and are remembered in the session. But passwords/logins are not stored and available for the next session. </p><p>Any ideas? </p>",jamestibiriuskirk;,True,False,False,;solver_id:6575050;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1500490,2025-03-20T02:11:47.014293Z,2025-03-20T02:11:47.014298Z,en-US,thunderbird,V115.18.0 How to get date and time search to work?,False,,,False,,,search,thunderbird;search;,firefox.com.yes.really,"<p>I have messages which the message list shows as Date 2024-07-01, 18:00. </p><p>But Search Messages with ""Date is 2024-07-01, 18:00"" fails to find any messages. </p><p>Is this a known bug? Any workaround? </p>",firefox.com.yes.really;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",0,0,0,,,,,
+1500506,2025-03-20T04:37:17.085407Z,2025-03-20T04:37:17.085412Z,en-US,thunderbird,Password not accepted,False,,,False,,,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,BigBob_201227,"<p>Trying to set up a Thunderbird account on a surface book 3 and it refused to accept the password. I did a manual configuration and all the settings are copied from my desktop app so the server settings should all be correct. Now it does all the right things when I click the get messages button i.e. it says 'connected to <a href=""http://mail.xxxx.net.au"" rel=""nofollow"">mail.xxxx.net.au</a>' but that's it. Nothing is sent or received. </p>",BigBob_201227;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/en-US/kb/troubleshoot-mode-thunderbird""]",0,0,0,,,,,
+1500525,2025-03-20T07:38:10.095159Z,2025-03-21T14:49:04.532514Z,it,thunderbird,Reinstallazione Thunderbird,False,,,False,1720074,1719790;1719838;1720058;1720074;,update,thunderbird;update;,avanzino,"<p>Non riuscendo più ad aprire il programma in quanto mi viene chiesto in loop il riavvio del pc per completare un aggiornamento di Thunderbird, leggendo i vari post a riguardo ho provato a procedere alla disinstallazione del programma per poi reinstallarlo, ma anche se seguo le procedure di disinstallazione mi esce sempre la richiesta di riavvio, idem se provo a installare l'aggiornamento del programma senza disinstallare il precedente </p>",avanzino;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/it/kb/profili-thunderbird"", ""/it/kb/disinstallare-thunderbird"", ""/it/kb/aggiornamento-di-thunderbird""]",4,0,0,,,,,
+1500530,2025-03-20T07:49:59.941410Z,2025-05-24T05:24:11.378107Z,en-US,thunderbird,thunderbird 客户端占用本地硬盘过大,False,,,False,1735909,1719758;1735632;1735693;1735909;,crashing-and-slow-performance,thunderbird;email-and-messaging;crashing-and-slow-performance;,hsy906,"<p>我的邮件客户端为128.7.1，用的时IMAP协议。在客户端界面显示收件箱（包括收件箱下级文件夹）总共大小为78GB,但是在%appdata%中的thunderbird文件夹却有恐怖的795GB！！！我尝试压缩收件箱但显示只压缩了7.5GB。。有人知道这是什么问题吗？我应该怎样减小%appdata%中的thunderbird文件夹的大小？谢谢。 </p>",hsy906;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",4,0,0,,,,,
+1500534,2025-03-20T08:14:21.061104Z,2025-03-20T08:14:21.061109Z,en-US,thunderbird,thunderbird 128.7.1esr (64-bit) does not open message attachments except of pdf,False,,,False,,,attachments,thunderbird;attachments;,jiri.rohlicek,"<p>Thunderbird email client 128.7.1esr (64-bit) running on Fedora 41 does not open email attachments except of pdf. The attachments are shown, context menu appears, but click on Open does nothing (except of PDF files, those are opened and shown). All other types of attachment I have to save somewhere and open from there. How to repair it? Thanks, Jiri Rohlicek </p>",jiri.rohlicek;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0,0,0,0,,,,,
+1500535,2025-03-20T08:15:30.121983Z,2025-03-20T09:09:55.024621Z,it,thunderbird,Problema ultimo aggiornamento,False,,,False,1719723,1719723;,events,thunderbird;events;,frizzi0303,"<p>Buongiorno, dopo l'ultimo aggiornamento di ieri 13/03/2025, Thunderbird non si sincronizza più con i calendari (es. Google Caldendar) e non è possibile inserire aventi se non dal calendario ""Predefinito"". Grazie e saluti </p>",frizzi0303;gm44;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,0,,,,,
+1500538,2025-03-20T09:27:42.780911Z,2025-03-20T15:08:05.095185Z,en-US,thunderbird,Thunderbird desktop mail storage,False,,,False,1719787,1719738;1719751;1719755;1719776;1719787;,import-and-export-email,thunderbird;email-and-messaging;import-and-export-email;,stilgar379,<p>I had all my emails and folders visible within Thunderbird desktop windows version I changed hosting providers and adjusted server settings I can now only see emails per the new host and not all the ones I had before I thought they were downloaded? How do I download a local copy of all my emails? Thanks R </p>,stilgar379;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0 (Edition ms_store)",5,0,0,,,,,
+1500541,2025-03-20T09:45:13.772055Z,2025-03-20T09:45:13.772062Z,it,thunderbird,Richiesta continua di inserimento password,False,,,False,,,connectivity,thunderbird;connectivity;,emainformatica,"<p>Da un po' di tempo Thunderbird, per un account <a href=""http://tiscali.it"" rel=""nofollow"">tiscali.it</a>, mi chiede continuamente di inserire la password che sono certo sia corretta. Ho controllato anche in gestione password ed ho verificato la correttezza. Versione utilizzata 128.8.1esr (64 bit) </p>",emainformatica;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",0,0,0,,,,,
+1500546,2025-03-20T10:04:01.167075Z,2025-03-20T15:18:21.720682Z,it,thunderbird,calendari di google in thunderbird (provider per google calendar) non vengono aggiornati,False,,,False,1719793,1719793;,events,thunderbird;events;,aurelio.ghilardi,"<p>i calendari di google in TB non vengono aggiornati; se io voglio inserire un nuovo appuntamento o modificarne uno esistente non posso farlo; gli avvisi degli appuntamenti scaduti dal 18/3 ad oggi non possono essere eliminati. Io penso che sia dovuto agli aggiornamenti di provider google calendar di questi ultimi giorni, voi cosa dite? Ho aperto la console degli errori, ci sono diversi messaggi simili a questo:  <em>Calendar: [calGoogleCalendar] Modifying item ACLI failed:2147500033: Item type not supported gdataCalendar.sys.mjs:582:13 </em> </p><pre>   modifyItem resource://gdata-provider/legacy/modules/gdataCalendar.sys.mjs?version=128.5.1:582    doModifyItem resource:///modules/CalCachedCalendar.sys.mjs:860<em> </em> </pre> <p>Grazie per ogni aiuto Aurelio </p>",aurelio.ghilardi;@next;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1500554,2025-03-20T10:25:27.320840Z,2025-07-18T01:04:49.867051Z,en-US,thunderbird,Thunderbird (local) calendar notifications for events are partly not working,False,,,False,1749913,1724162;1730599;1730608;1732638;1738075;1747067;1749820;1749913;,events,thunderbird;events;,T-M-,"<p>I got a new PC with Windows 11. I installed Thunderbird 136.0.1 , activated the private calendar, and entered events there. For events with a reminder that have a specific duration (e.g., Wednesday from 10 AM to 11 AM), I receive notifications. However, when I create a full-day event and want to be reminded, for example, 1 day before, I don't receive any notification. Additionally, events with a reminder are not shown in bold in the calendar overview (whether they have a specific duration or are all-day events). Can you please help me? </p>",T-M-;wsmwk;fharris;jbachman1190;jim.chaney;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,8,0,10,,,T-M-,,
+1500557,2025-03-20T10:36:01.982384Z,2025-03-20T15:19:11.857775Z,it,thunderbird,email spariscono,False,,,False,1719794,1719794;,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;app-crash;,avv.a.bencini,<p>Ogni volta che elimino o sposto una email da una cartella all'altra in Thunderbird tutte le mail presenti nelle cartella spariscono e devo ogni volta uscire e rientrare in Thunderbird per visualizzarle nuovamente. Veramente fastidioso! Come posso risolvere? Grazie </p>,avv.a.bencini;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,1,,,,,
+1500558,2025-03-20T10:45:35.793779Z,2025-03-20T15:19:53.958790Z,it,thunderbird,Aggiornamento componente aggiuntivo Provider per Google Calendar Versione 128.5.2,False,,,False,1719795,1719795;,extensions,thunderbird;extensions;events;,gilberto.crupi,"<p>Dopo l'aggiornamento del 20.03.2025 del componente aggiuntivo Provider per Gogle Calendar alla versione 128.5.2 non riesco più a creare un evento sul mio calendario GOOGLE, mi fa selezionare solo il predefinito Cosa devo fare? </p>",gilberto.crupi;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,1,,,,,
+1500565,2025-03-20T11:00:19.253704Z,2025-03-20T11:00:19.253710Z,en-US,thunderbird,V115.18.0 How to search for time?,False,,,False,,,search,thunderbird;search;,firefox.com.yes.really,"<p>How can I search messages' Date field for a time? e.g. to find all messages at a certain time in any day. </p><p>""Date is 18:51"" fails to match. </p><p>If I create a custom field ""Date"" which apparently presents the field as plain text, ""Date contains 18:51"" matches e.g. Date: Sun, 5 Nov 2017 18:51:34 +0000 but I believe fails to recognise time offset. </p><p>Thanks. </p>",firefox.com.yes.really;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",0,0,0,,,,,
+1500570,2025-03-20T11:02:51.066000Z,2025-03-24T13:45:01.579210Z,en-US,thunderbird,Calendar is locked - I cannot add or delete items,True,1720760,wsmwk,False,1720763,1719772;1720759;1720760;1720763;,events,thunderbird;events;,Carradice,"<p>Hello, Yesterday the Google calendar tab opened with a message and stupidly I didn't read it - I just closed the tab and thought I'd check it later. Then I realised I could neither dismiss TB calendar notifications or snooze them. Next I realised I could no longer add to the TB calendar or delete any items that were already in there.  I'm not sure if there has been a recent update which may have brought this about but any help would be very much appreciated. Thank you. </p>",Carradice;wsmwk;,True,False,False,";solver_id:6576132;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",4,0,0,,,Carradice,,
+1500571,2025-03-20T11:11:23.122116Z,2025-03-20T11:11:23.122121Z,sl,thunderbird,Zagon Thunderbirda,False,,,False,,,send-and-receive-email,thunderbird;connectivity;send-and-receive-email;,klun91,"<p>Na OS Windows 11 se Thunderbird zažene, vendar se prispela pošta ne naloži v predal Prejeto. Program moram zagnati 10 do 15 x da se pošta naloži. </p>",klun91;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,0,0,0,,,,,
+1500572,2025-03-20T11:11:57.230394Z,2025-03-20T15:20:19.213606Z,it,thunderbird,NON RICEVO EMAIL IN NESSUNA DELLE CASELLE ATTIVE,False,,,False,1719796,1719796;,send-and-receive-email,thunderbird;needsinfo;send-and-receive-email;,protocollo1,"<p>BUONGIORNO,  </p><p>NON RIESCO A VISUALIZZARE DAL MIO PC LE EMAIL CHE PERVENGONO SUGLI INDIRIZZI DI POSTA ATTIVI. </p>",protocollo1;@next;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,1,,,,,
+1500580,2025-03-20T12:45:07.027937Z,2025-03-20T15:05:12.778563Z,en-US,thunderbird,Unable to enter tasks after autoupdate to 128.8.1esr (64-bit),True,1719773,wsmwk,False,1719784,1719756;1719773;1719784;,events,thunderbird;events;,steve669,"<p>I came into my home office this morning and started my Windows 10 machine from scratch (cold boot).  I loaded Thunderbird and read and deleted some email.  Then I went to enter a Task in the same calendar I always install Tasks in and it won't let me enter a new Task at all.  The input field tells me to select a calendar that supports tasks.  Well, I have!  I open the Events and Messages menu option and the Enter Task command is grayed out.  What the heck is going on?  How can I get the ability to enter Tasks back? </p><p>I'm getting a little tired of dealing with all the issues in Thunderbird.  I have spent hours trying to debug this with no success. </p>",steve669;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0;kb_visits_prior:[""/en-US/kb/updating-thunderbird"", ""/en-US/kb/thunderbird-software-update-failed""];solver_id:6420413",3,0,0,,,,,
+1500582,2025-03-20T12:49:08.912382Z,2025-03-20T14:27:07.202413Z,en-US,thunderbird,Open Message In Conversation - Nothing is making it work properly,False,,,False,1719775,1719775;,search,thunderbird;customization;search;,lee119,"<p>Hi folks, having a nightmare with Open Message In Conversation. Its partly not working, or when it does, it doesn't include everything that it should be. </p><p>I have tried all of the listed previous suggestions (re-doing the global index etc...) on this forum. </p><p>Can you help?  </p><p>When in my inbox: Open Message In Conversation is completely greyed out and does nothing.  </p><p>When in my outbox: It opens the conversation up to the date of that email, but doesn't include any mails that are more recent anymore (ie. the full conversation).  When clicking on the most recent sent mail, it only shows my own replies, and the received mail is no longer included in the conversation.  </p><p>This is a recent thing to happen, and incredibly frustrating as it's killing my work flow.  </p><p>If you have any suggestions, I will try them all to bring it back to how it was! </p><p>Cheers,  Lee </p>",lee119;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/rebuilding-global-database""]",1,0,1,,,,,
+1500585,2025-03-20T12:59:21.851488Z,2025-03-23T12:42:04.841595Z,en-US,thunderbird,"unable to create a password for the inital,first time re-start of Window if on old machine,",False,,,False,1720494,1719764;1719786;1719789;1719969;1720115;1720232;1720319;1720324;1720326;1720333;1720341;1720390;1720437;1720494;,security,thunderbird;needsinfo;security;,clackey3,"<p>Thunderbird will not start because the first visible startup action is the popup window: ""Please enter your Primary Password"".  Unable to create a password for the initial,first time re-start of Window if on old machine, option was to avoid this. How to fix? ...so I can set and set and use it. </p>",clackey3;davidsk;Toad-Hall;MattAuSupport;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,14,0,3,,,,,
+1500590,2025-03-20T13:24:56.863244Z,2025-03-20T13:24:56.863252Z,en-US,thunderbird,Notifications,False,,,False,,,events,thunderbird;events;,gkijaselte,"<p>Hello, I cant disable/postpone reminders from mozilla thunderbird. Buttons marked on the attached picture doesnt work. I use version 128.8.0esr (64 bity). </p>",gkijaselte;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",0,0,0,,,,,
+1500593,2025-03-20T13:52:55.881028Z,2025-03-20T15:23:23.882996Z,it,thunderbird,thunderbird,False,,,False,1719798,1719798;,crashing-and-slow-performance,thunderbird;needsinfo;crashing-and-slow-performance;,giuseppe.cominardi,"<p>Hello, thunderbird doesn't work anymore. I think to delete old mails to recover space. But I can't do it for days because it always tells me to wait for the end of the account configuration. I await instructions, thanks. Giuseppe Cominardi </p>",giuseppe.cominardi;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,0,,,,,
+1500597,2025-03-20T14:22:06.838707Z,2025-03-20T17:49:06.110954Z,en-US,thunderbird,Windows 7 115.18.0 Anyone else got CTRL+SHIFT+F to work?,False,,,False,1719844,1719844;,search,thunderbird;search;,firefox.com.yes.really,"<p>Not me. CTRL+SHIFT+F should execute Search Messages as per the Edit &gt; Find menu shortcut. Here on Inbox (which is empty), it does nothing. On a local folder, it jumps to Inbox! </p><p>CTRL+N works fine. </p><p>Thanks. </p>",firefox.com.yes.really;Toad-Hall;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",1,0,0,,,,,
+1500600,2025-03-20T14:28:19.587236Z,2025-03-20T14:49:23.156029Z,en-US,thunderbird,"Send Message Error: ""authentication required but not provided""",False,,,False,1719782,1719782;,send-and-receive-email,thunderbird;send-and-receive-email;,elko_dude,"<p>I have uninstalled and reinstalled Thunderbird several times on this computer to no avail. This suddenly started a few days ago. Outgoing messages only, any email to anyone. </p>",elko_dude;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,2,,,,,
+1500614,2025-03-20T15:42:44.691948Z,2025-03-21T15:57:00.283149Z,en-US,thunderbird,Reading emails from Comcast/xfinity,False,,,False,1720097,1719826;1719847;1719870;1720035;1720048;1720097;,send-and-receive-email,thunderbird;send-and-receive-email;,samorner,"<p>I am having issues with Thunderbird accessing emails from <a href=""http://Comcast.net"" rel=""nofollow"">Comcast.net</a>.  This issue started over the past weekend.  Nothing has changed with our Comcast setup or our Thunderbird setup.  Please advise. </p><p>Thanks. Sam Orner </p>",samorner;Toad-Hall;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/faq-changing-imap-pop""]",6,0,1,,,wsmwk,,
+1500623,2025-03-20T16:18:33.815271Z,2025-03-20T18:25:00.385563Z,en-US,thunderbird,Mot de passe,False,,,False,1719854,1719854;,reset-passwords,thunderbird;reset-passwords;,tessa97,"<p>Hi J'ai perdu mon mot de passe pour envoyer les messages. Merci de votre aide, bye </p>",tessa97;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",1,0,0,,,,,
+1500627,2025-03-20T16:29:04.088443Z,2025-03-24T00:12:43.596212Z,en-US,thunderbird,Can't send or receive AOL after update 128.8.1esr,True,1720614,oldtimer2,False,1720614,1720297;1720368;1720370;1720376;1720614;,send-and-receive-email,thunderbird;send-and-receive-email;,oldtimer2,"<p>After Update 128.8.1esr installed on 3/19.2025, I cannot receive or send messages.  Worked fine in the morning on 3/19 and after update I get nothing.  I have an AOL account for my email.  I can get my email by going through the AOL internet site, but nothing through Thunderbird.  The previous update was 128.8.0esr installed on 3/7/2025, and that worked fine. </p>",oldtimer2;christ1;wsmwk;,True,False,False,;solver_id:181052;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,5,0,1,,,wsmwk,,
+1500633,2025-03-20T16:52:13.238245Z,2025-03-21T06:39:48.542111Z,nl,thunderbird,Wachtwoord vergeten,False,,,False,1719988,1719988;,reset-passwords,thunderbird;reset-passwords;,sipke1,"<p>Hallo, Een goede vriend van mij, de heer Wim Smits, heeft een Windows crash gehad en moet opnieuw Thunderbird installeren. Hij weet alleen zijn wachtwoord niet. Hoe moeten we zijn wachtwoord resetten voor een nieuw wachtwoord. Betreft zijn account: <i>ivm privacy verwijderd</i> We hebben een rest poging gedaan, maar dan wordt er een code naar het genoemde e-mailadres gestuurd waar hij niet bij kan. Hoor graag van u welke stappen wij moeten ondernemen. Alvast onze dank. </p><p>Met vriendelijke groet,  Sipke Wagenaar.  </p><p><i>ivm privacy verwijderd</i> </p>",sipke1;markh2;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15",1,0,1,,,markh2,,
+1500637,2025-03-20T17:07:22.037373Z,2025-03-20T18:30:31.969737Z,en-US,thunderbird,Odczytywanie wiadomości,False,,,False,1719857,1719857;,send-and-receive-email,thunderbird;send-and-receive-email;,gosia.stepien,"<p>Dzień dobry, Poszukuję pomocy w rozwiązaniu mojego problemu. Posiadam adresy mailowe (obsługujemy je w programie thunderbird) do których dostęp ma kilka osób. Jak ktoś odczyta u siebie na komputerze odczytuje sie na wszystkich stanowiskach. Da się tego uniknąć? Bo nie ukrywam to trochę kłopotliwe bo wiele rzeczy przegapiamy. Z góry dzięki za pomoc! :) </p><p>Pozdrawiam Gosia </p>",gosia.stepien;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0;kb_visits_prior:[""/pl/kb/thunderbird-uzywanie-wielu-profili"", ""/pl/kb/menedzer-profili-thunderbirda""]",1,0,0,,,,,
+1500639,2025-03-20T17:12:50.841598Z,2025-03-21T12:53:27.281265Z,en-US,thunderbird,My calendar isn't working any more.,False,,,False,1720051,1720051;,events,thunderbird;events;,w.lange,"<p>Dear community, some days ago my Thunderbird calendar stopped working. It's all greyed out and I cannot add or delete events or tasks. Any help is much appreciated. Best, Wolfram </p>",w.lange;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,3,,,,,
+1500650,2025-03-20T17:45:30.257901Z,2025-03-20T18:14:16.886763Z,it,thunderbird,imap tiscali,False,,,False,1719849,1719849;,send-and-receive-email,thunderbird;send-and-receive-email;,alcor.luwis,"<p>Thunderbirg windows 11 pro ho 4 indirizzi di posta di cui uno: <a href=""mailto:alcor.luwis@tiscali.it"" rel=""nofollow"">alcor.luwis@tiscali.it</a>. continua a darmi il messaggio di errore ,come da immagine   perchè ho questo messaggio imap tiscali </p>",alcor.luwis;@next;,True,True,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0",1,0,0,,,,,
+1500651,2025-03-20T17:48:28.477826Z,2025-03-21T22:35:12.825335Z,en-US,thunderbird,I can't get my e-mail messages,False,,,False,1720215,1720215;,connectivity,thunderbird;connectivity;,sharrib,<p>When I try to open my e-mail it won't connect. I keep getting messages that server is down or network disconnected. </p>,sharrib;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/cannot-receive-messages""]",1,0,1,,,,,
+1500653,2025-03-20T17:49:53.599302Z,2025-03-22T05:18:05.500854Z,es,thunderbird,Donación para compra de correo.,False,,,False,1720271,1720271;,undefined,thunderbird;undefined;,sistemas20,"<p>Buen día,  Tengo la siguiente duda, en la compañía para la que actualmente trabajo desean hacer la compra del programa thunderbird para la utilización de nuestros correos corporativos. La duda como se calcula la donación si es por usuarios y si al hacer la donación en el programa ya no sale el anuncio de la donación o siempre saldrá aunque se realice la donación. </p>",sistemas20;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,0,,,,,
+1500655,2025-03-20T18:12:27.835698Z,2025-03-20T18:12:27.835703Z,en-US,thunderbird,thunderbird,False,,,False,,,connectivity,thunderbird;connectivity;,harveytaylor1952,"<p>I am trying to add a gmail account to thunderbird. I have the following three configurations. They all have thunderbird 136.0.1. </p><p>desktop windows 10 laptop windows 11 update 2025-03 23H2 desktop windows 11 update 2025-03 24H2 </p><p>The desktop windows 11 version fails, and the other two work without any problem. I enter the account name/password, and thunderbird identifies the gmail server info. I enter 'done' and a gmail window opens. It says to allow thunderbird to connect to gmail, enter 'done'. After that, there is a google window that says 'Error 400', and it dies. </p><p>Note that the windows 11 version that works is older than the one that fails. </p><p>Any help would be appreciated. </p>",harveytaylor1952;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,0,0,0,,,,,
+1500657,2025-03-20T18:19:48.442784Z,2025-03-20T18:19:48.442789Z,en-US,thunderbird,Why do I not receive E mails?,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,snyewn,"<p>I am not receiving E mails, </p>",snyewn;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Thunderbird/128.8.1,0,0,0,,,,,
+1500658,2025-03-20T18:33:57.530535Z,2025-03-20T18:47:33.720403Z,en-US,thunderbird,Message preview problem,True,1719859,davidsk,False,1719861,1719859;1719861;,customization,thunderbird;customization;,Nasshorn,"<p>I just reinstalled Windows and then Thunderbird.  I'm getting the list of messages but no message preview pane as I'm accustomed to.  I found out I can hit the F8 and turn it on/off, but it appears to the side.  I like it underneath the message list.  I see instructions to click on the ""View"" to set it up, but I cannot find where this alleged ""View"" menu item is.  I've tried to find it in Settings with no success.  Please help me get my message preview pane back as it was in the bottom portion of the screen. </p><p>Thanks </p>",Nasshorn;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;solver_id:327903",2,0,1,,,,,
+1500660,2025-03-20T18:46:29.496926Z,2025-03-20T18:46:29.496932Z,en-US,thunderbird,Different Microsoft exchange server,False,,,False,,,account-management,thunderbird;account-management;,mangoon,"<p>For my work email, my microsoft exchange uses a different server address besides the default microsoft exchange.  When I put that in in the server address, it does not work.  When leaving the default, the account also will not get any messages.  Are there different settings that I need to change that I am unaware of?  Thank you. </p>",mangoon;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",0,0,0,,,,,
+1500664,2025-03-20T19:06:23.521519Z,2025-03-20T22:30:44.826088Z,en-US,thunderbird,message from Mozilla about loss of account,False,,,False,1719928,1719871;1719928;,account-management,thunderbird;account-management;,lora.r.smith,"<p>Hi, Mozilla. I got an email from you (or someone pretending to be you) about losing access to browsing products like Firefox sync, Mozilla Monitor, Firefox Relay, and MDN. </p><p>I am wondering is this a real message or spam?  </p><p>I have been a Mozilla customer since your offices were in the Landmark buildings in Mountain View (now part of Google). I do on occasion use Firefox as a browser, but am not asked for a password, so I assume I'm automatically signed in. However, I use Thunderbird nearly daily as my main email account. I also don't sign in to that because it doesn't ask me to, and this must be how the account is set up (sorry I don't remember exactly; that was a while ago).  </p><p>So if this message is really from you, am I at risk of losing my Thunderbird account? If so, I have a lot of work to do transferring to something else.  </p><p>Thanks for your answer. </p><p>Lora R. Smith </p>",lora.r.smith;jscher2000;James;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",2,0,0,,,,,
+1500668,2025-03-20T19:28:15.625154Z,2025-03-21T17:13:07.341576Z,en-US,thunderbird,"Checks account several times, checks accounts it is not asked to check",False,,,False,1720119,1720119;,send-and-receive-email,thunderbird;send-and-receive-email;,jandi,"<p>I have the latest Thunderbird (128.8.1) on my win 10 pc. I have 3 email accounts On start up it is set to check for emails - it checks account 1, 3 times, accounts 2 &amp; 3 twice each. If i select file - get new messages for.... and choose an account, it will check all accounts when account 1 is selected, some of them multiple times, it will check accounts 1 and 2 when account 2 is selected, and it will check account 3 twice whe account 3 is selected. It successfully retirieves al emails from ll accounts. It has been working correctly (just checks all 3 accounts at startup once each) for years, but just recently, it has assumed this behaviour. Not sure if it is related to a recent update. Any ideas ? thank you </p>",jandi;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/en-US/kb/using-multiple-profiles""]",1,0,0,,,,,
+1500671,2025-03-20T19:39:28.032120Z,2025-03-21T11:43:27.757997Z,en-US,thunderbird,advocacy emails,False,,,False,1720037,1720037;,encryption,thunderbird;encryption;,ztem,"<p>I have noticed for about two weeks that emails from known non-profit sites requesting advocacy responses/comments are becoming increasingly slow to connect or not connecting at all and that they are being flagged as insecure in Thunderbird. Is this new? Is it, in fact caused by Mozilla, as a matter of security? Are there bad actors mucking about? The slow/no response thing is frustrating since I don't have a lot of time to engage in this activity. My internet connection is via GreenLight.  Thanks for any enlightenment. Emily Metz </p>",ztem;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1500686,2025-03-20T20:34:17.415981Z,2025-03-20T20:34:17.415986Z,en-US,thunderbird,lightning calendar,False,,,False,,,events,thunderbird;events;,danardpearce,<p>Lightening calendar will not allow me to create or delete any event. This is a recently started problem as it worked fone before. Should I reinstall thunderbird? </p>,danardpearce;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",0,0,0,,,,,
+1500687,2025-03-20T20:35:27.461879Z,2025-04-19T15:50:56.381587Z,en-US,thunderbird,external input to mail program,True,1726803,hrsweet3,False,1726803,1726803;,send-and-receive-email,thunderbird;send-and-receive-email;,hrsweet3,"<p>I am only able to send an email by opening Thunderbird and selecting write.  </p><p>If I try to attach a file by starting with the file &gt; send to &gt; mail recipient    or try to trigger Thunderbird with an email address in a browser       or start with a distribution list in the address book, all fail. </p><p>All produce the following diagnostic: ""Sending of the message failed. The message could not be sent because connecting to Outgoing server (SMTP) localhost failed. The server may be unavailable or is refusing SMTP connections.  Please verify that your outgoing server (SMTP) settings are correct and try again."" </p>",hrsweet3;,True,False,False,;solver_id:626381;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1500690,2025-03-20T21:02:45.891643Z,2025-04-10T10:53:09.548956Z,en-US,thunderbird,IS there an available download compatible for an  iMac High Sierra Version 10.13.6,False,,,False,1724748,1719915;1719934;1724748;,install,thunderbird;install;,artstar,<p>My TBird of many years has gone haywire. Nothing I do or suggestions from the forum folks solves my issues. I'd like to download a replacement for my Mac High Sierra Version 10.13.6. IS there one available? </p>,artstar;James;wsmwk;,True,True,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0;ff_version:115.21.0esr (64-bit);os:High Sierra Version 10.13.6;troubleshooting:""osVersion"": ""Darwin 17.7.0 Darwin Kernel Version 17.7.0: Fri Oct 30 13:34:27 PDT 2020; root:xnu-4570.71.82.8~1/RELEASE_X86_64"",
+    ""version"": ""115.21.0esr"",
+    ""buildID"": ""20250224130054"",
+    ""distributionID"": ""mozilla-mac-eol-esr115"",
+    ""userAgent"": ""Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0"",
+    ""safeMode"": false,
+    ""memorySizeBytes"": 12884901888,
+    ""diskAvailableBytes"": 941594546176,
+    ""updateChannel"": ""esr"",
+    ""supportURL"": ""https://support.mozilla.org/1/firefox/115.21.0/Darwin/en-US/"",
+    ""osTheme"": """",
+    ""rosetta"": false,
+    ""numTotalWindows"": 3,
+    ""numFissionWindows"": 3,
+    ""numRemoteWindows"": 3,
+    ""fissionAutoStart"": true,
+    ""fissionDecisionStatus"": ""enabledByDefault"",
+    ""remoteAutoStart"": true,
+    ""policiesStatus"": 0,
+    ""keyLocationServiceGoogleFound"": true,
+    ""keySafebrowsingGoogleFound"": true,
+    ""keyMozillaFound"": true
+  },
+  ""securitySoftware"": {
+    ""registeredAntiVirus"": """",
+    ""registeredAntiSpyware"": """",
+    ""registeredFirewall"": """"
+  },
+  ""environmentVariables"": {
+    ""MOZ_CRASHREPORTER_EVENTS_DIRECTORY"": ""/Users/rob/Library/Application Support/Firefox/Profiles/v7i4y6wl.default-release-1741283253913/crashes/events"",
+    ""MOZ_CRASHREPORTER_RESTART_ARG_1"": """",
+    ""MOZ_CRASHREPORTER_DATA_DIRECTORY"": ""/Users/rob/Library/Application Support/Firefox/Crash Reports"",
+    ""MOZ_CRASHREPORTER_PING_DIRECTORY"": ""/Users/rob/Library/Application Support/Firefox/Pending Pings"",
+    ""MOZ_CRASHREPORTER_STRINGS_OVERRIDE"": ""/Applications/Firefox.app/Contents/Resources/browser/crashreporter-override.ini"",
+    ""MOZ_LAUNCHED_CHILD"": """",
+    ""MOZ_APP_SILENT_START"": """",
+    ""XRE_PROFILE_PATH"": """",
+    ""XRE_PROFILE_LOCAL_PATH"": """",
+    ""XRE_START_OFFLINE"": """",
+    ""XRE_BINARY_PATH"": """",
+    ""XRE_RESTARTED_BY_PROFILE_MANAGER"": """"
+  },
+  ""lockedPreferences"": {
+    ""fission.autostart.session"": true
+  },
+  ""media"": {
+    ""currentAudioBackend"": ""audiounit-rust"",
+    ""currentMaxAudioChannels"": 2,
+    ""currentPreferredSampleRate"": 44100,
+    ""audioOutputDevices"": [
+      {
+        ""name"": ""Internal Speakers"",
+        ""groupId"": ""builtin-internal-mic|spk"",
+        ""vendor"": ""Apple Inc."",
+        ""type"": 2,
+        ""state"": 2,
+        ""preferred"": 15,
+        ""supportedFormat"": 12336,
+        ""defaultFormat"": 4096,
+        ""maxChannels"": 2,
+        ""defaultRate"": 44100,
+        ""maxRate"": 96000,
+        ""minRate"": 44100,
+        ""maxLatency"": 4119,
+        ""minLatency"": 37
+      }
+    ],
+    ""audioInputDevices"": [
+      {
+        ""name"": ""Internal Microphone"",
+        ""groupId"": ""builtin-internal-mic|spk"",
+        ""vendor"": ""Apple Inc."",
+        ""type"": 1,
+        ""state"": 2,
+        ""preferred"": 15,
+        ""supportedFormat"": 12336,
+        ""defaultFormat"": 4096,
+        ""maxChannels"": 2,
+        ""defaultRate"": 44100,
+        ""maxRate"": 96000,
+        ""minRate"": 8000,
+        ""maxLatency"": 2314,
+        ""minLatency"": 24
+      },
+      {
+        ""name"": ""Line In"",
+        ""groupId"": ""AppleHDA:79"",
+        ""vendor"": ""Apple Inc."",
+        ""type"": 1,
+        ""state"": 2,
+        ""preferred"": 0,
+        ""supportedFormat"": 12336,
+        ""defaultFormat"": 4096,
+        ""maxChannels"": 2,
+        ""defaultRate"": 44100,
+        ""maxRate"": 96000,
+        ""minRate"": 8000,
+        ""maxLatency"": 2314,
+        ""minLatency"": 24
+      }
+    ],
+    ""codecSupportInfo"": """"
+  },
+  ""accessibility"": {
+    ""isActive"": false,
+    ""forceDisabled"": 0,
+    ""instantiator"": """"
+  },
+  ""startupCache"": {
+    ""DiskCachePath"": ""/Users/rob/Library/Caches/Firefox/Profiles/v7i4y6wl.default-release-1741283253913/startupCache/startupCache.8.little"",
+    ""IgnoreDiskCache"": false,
+    ""FoundDiskCacheOnInit"": true,
+    ""WroteToDiskCache"": false
+  },
+  ""libraryVersions"": {
+    ""NSPR"": {
+      ""minVersion"": ""4.35"",
+      ""version"": ""4.35""
+    },
+    ""NSS"": {
+      ""minVersion"": ""3.90.3"",
+      ""version"": ""3.90.3""
+    },
+    ""NSSUTIL"": {
+      ""minVersion"": ""3.90.3"",
+      ""version"": ""3.90.3""
+    },
+    ""NSSSSL"": {
+      ""minVersion"": ""3.90.3"",
+      ""version"": ""3.90.3""
+    },
+    ""NSSSMIME"": {
+      ""minVersion"": ""3.90.3"",
+      ""version"": ""3.90.3""
+    }
+  },
+  ""userJS"": {
+    ""exists"": false
+  },
+  ""intl"": {
+    ""localeService"": {
+      ""requested"": [
+        ""en-US""
+      ],
+      ""available"": [
+        ""en-US""
+      ],
+      ""supported"": [
+        ""en-US""
+      ],
+      ""regionalPrefs"": [
+        ""en-US""
+      ],
+      ""defaultLocale"": ""en-US""
+    },
+    ""osPrefs"": {
+      ""systemLocales"": [
+        ""en-US""
+      ],
+      ""regionalPrefsLocales"": [
+        ""en-US""
+      ]
+    }
+  },
+  ""sandbox"": {
+    ""contentSandboxLevel"": 3,
+    ""effectiveContentSandboxLevel"": 3,
+    ""contentWin32kLockdownState"": ""Win32k Lockdown disabled -- Operating system not supported"",
+    ""supportSandboxGpuLevel"": 0
+  },
+  ""remoteAgent"": {
+    ""running"": false,
+    ""url"": """"
+  },
+  ""experimentalFeatures"": [
+    [
+      ""experimental-features-abouthome-startup-cache"",
+      ""browser.startup.homepage.abouthome_cache.enabled"",
+      true
+    ],
+    [
+      ""experimental-features-cookie-samesite-none-requires-secure2"",
+      ""network.cookie.sameSite.noneRequiresSecure"",
+      false
+    ],
+    [
+      ""experimental-features-css-masonry2"",
+      ""layout.css.grid-template-masonry-value.enabled"",
+      false
+    ],
+    [
+      ""experimental-features-devtools-compatibility-panel"",
+      ""devtools.inspector.compatibility.enabled"",
+      true
+    ],
+    [
+      ""experimental-features-devtools-serviceworker-debugger-support"",
+      ""devtools.debugger.features.windowless-service-workers"",
+      false
+    ],
+    [
+      ""experimental-features-media-jxl"",
+      ""image.jxl.enabled"",
+      false
+    ],
+    [
+      ""experimental-features-ime-search"",
+      ""browser.urlbar.keepPanelOpenDuringImeComposition"",
+      false
+    ],
+    [
+      ""experimental-features-web-gpu2"",
+      ""dom.webgpu.enabled"",
+      false
+    ],
+    [
+      ""experimental-features-webrtc-global-mute-toggles"",
+      ""privacy.webrtc.globalMuteToggles"",
+      false
+    ]
+  ],
+  ""graphics"": {
+    ""desktopEnvironment"": """",
+    ""numTotalWindows"": 3,
+    ""numAcceleratedWindows"": 3,
+    ""windowLayerManagerType"": ""WebRender"",
+    ""windowLayerManagerRemote"": true,
+    ""graphicsDevicePixelRatios"": [
+      1,
+      1,
+      1
+    ],
+    ""adapterDescription"": """",
+    ""adapterVendorID"": ""0x1002"",
+    ""adapterDeviceID"": ""0x9488"",
+    ""adapterRAM"": 0,
+    ""adapterDrivers"": """",
+    ""driverVendor"": """",
+    ""driverVersion"": """",
+    ""driverDate"": """",
+    ""targetFrameRate"": 60,
+    ""webgl1Renderer"": ""ATI Technologies Inc. -- ATI Radeon HD 4670 OpenGL Engine"",
+    ""webgl1Version"": ""3.3 ATI-10.4.14"",
+    ""webgl1DriverExtensions"": ""GL_ARB_blend_func_extended GL_ARB_draw_buffers_blend GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_occlusion_query2 GL_ARB_sampler_objects GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shading_language_include GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_vertex_type_2_10_10_10_rev GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB_decode GL_APPLE_client_storage GL_APPLE_container_object_shareable GL_APPLE_flush_render GL_APPLE_object_purgeable GL_APPLE_rgb_422 GL_APPLE_row_bytes GL_APPLE_texture_range GL_ATI_texture_mirror_once GL_NV_texture_barrier"",
+    ""webgl1Extensions"": ""ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context WEBGL_provoking_vertex"",
+    ""webgl1WSIInfo"": ""CGL\nIsWebglOutOfProcessEnabled: 1"",
+    ""webgl2Renderer"": ""WebGL creation failed: \n* WebGL 2 requires support for the following features: \n  transform_feedback2 (FEATURE_FAILURE_WEBGL2_OCCL)"",
+    ""webgl2Version"": ""-"",
+    ""webgl2DriverExtensions"": ""-"",
+    ""webgl2Extensions"": ""-"",
+    ""webgl2WSIInfo"": ""-"",
+    ""info"": {
+      ""AzureFallbackCanvasBackend"": ""skia"",
+      ""AzureCanvasBackend"": ""skia"",
+      ""AzureContentBackend"": ""skia"",
+      ""ApzWheelInput"": 1,
+      ""ApzDragInput"": 1,
+      ""ApzKeyboardInput"": 1,
+      ""ApzAutoscrollInput"": 1,
+      ""ApzZoomingInput"": 1,
+      ""CMSOutputProfile"": ""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"",
+      ""DisplayCount"": 1,
+      ""Display0"": ""2560x1440@0Hz scales:1.000000|1.000000""
+    },
+    ""featureLog"": {
+      ""features"": [
+        {
+          ""name"": ""HW_COMPOSITING"",
+          ""description"": ""Compositing"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""OPENGL_COMPOSITING"",
+          ""description"": ""OpenGL Compositing"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER"",
+          ""description"": ""WebRender"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_COMPOSITOR"",
+          ""description"": ""WebRender native compositor"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_PARTIAL"",
+          ""description"": ""WebRender partial present"",
+          ""status"": ""disabled"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""disabled"",
+              ""failureId"": ""FEATURE_FAILURE_DISABLED"",
+              ""message"": ""User disabled via pref""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_SHADER_CACHE"",
+          ""description"": ""WebRender shader disk cache"",
+          ""status"": ""disabled"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""disabled"",
+              ""failureId"": ""FEATURE_FAILURE_DISABLED"",
+              ""message"": ""Disabled by default""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_OPTIMIZED_SHADERS"",
+          ""description"": ""WebRender optimized shaders"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_ANGLE"",
+          ""description"": ""WebRender ANGLE"",
+          ""status"": ""unavailable"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            },
+            {
+              ""type"": ""env"",
+              ""status"": ""unavailable"",
+              ""failureId"": ""FEATURE_FAILURE_OS_NOT_SUPPORTED"",
+              ""message"": ""OS not supported""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_DCOMP_PRESENT"",
+          ""description"": ""WebRender DirectComposition"",
+          ""status"": ""unavailable"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            },
+            {
+              ""type"": ""user"",
+              ""status"": ""disabled"",
+              ""failureId"": ""FEATURE_FAILURE_DCOMP_PREF_DISABLED"",
+              ""message"": ""User disabled via pref""
+            },
+            {
+              ""type"": ""env"",
+              ""status"": ""unavailable"",
+              ""failureId"": ""FEATURE_FAILURE_NO_GPU_PROCESS"",
+              ""message"": ""Requires GPU process""
+            },
+            {
+              ""type"": ""runtime"",
+              ""status"": ""unavailable"",
+              ""failureId"": ""FEATURE_FAILURE_DCOMP_NOT_ANGLE"",
+              ""message"": ""Requires ANGLE""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBRENDER_SCISSORED_CACHE_CLEARS"",
+          ""description"": ""WebRender scissored cache clears"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""WEBGPU"",
+          ""description"": ""WebGPU"",
+          ""status"": ""blocked"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            },
+            {
+              ""type"": ""env"",
+              ""status"": ""blocklisted"",
+              ""failureId"": ""FEATURE_FAILURE_MAC_WGPU_NO_METAL_BOUNDS_CHECKS"",
+              ""message"": ""#BLOCKLIST_FEATURE_FAILURE_MAC_WGPU_NO_METAL_BOUNDS_CHECKS""
+            },
+            {
+              ""type"": ""runtime"",
+              ""status"": ""blocked"",
+              ""failureId"": ""WEBGPU_DISABLE_RELEASE_OR_BETA"",
+              ""message"": ""WebGPU cannot be enabled in release or beta""
+            }
+          ]
+        },
+        {
+          ""name"": ""VP8_HW_DECODE"",
+          ""description"": ""VP8 hardware decoding"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""VP9_HW_DECODE"",
+          ""description"": ""VP9 hardware decoding"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""BACKDROP_FILTER"",
+          ""description"": ""Backdrop filter"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""CANVAS_RENDERER_THREAD"",
+          ""description"": ""canvas renderer thread"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        },
+        {
+          ""name"": ""ACCELERATED_CANVAS2D"",
+          ""description"": ""Accelerated Canvas2D"",
+          ""status"": ""available"",
+          ""log"": [
+            {
+              ""type"": ""default"",
+              ""status"": ""available""
+            }
+          ]
+        }
+      ],
+      ""fallbacks"": []
+    },
+    ""crashGuards"": [],
+    ""webgpuDefaultAdapter"": {
+      ""navigator.gpu"": null
+    },
+    ""webgpuFallbackAdapter"": {
+      ""navigator.gpu"": null
+    }
+  },
+  ""addons"": [
+    {
+      ""name"": ""AdBlocker Ultimate"",
+      ""type"": ""extension"",
+      ""version"": ""3.8.32"",
+      ""isActive"": true,
+      ""id"": ""adblockultimate@adblockultimate.net""
+    },
+    {
+      ""name"": ""Add-ons Search Detection"",
+      ""type"": ""extension"",
+      ""version"": ""2.0.0"",
+      ""isActive"": true,
+      ""id"": ""addons-search-detection@mozilla.com""
+    },
+    {
+      ""name"": ""Amazon.com"",
+      ""type"": ""extension"",
+      ""version"": ""1.6"",
+      ""isActive"": true,
+      ""id"": ""amazondotcom@search.mozilla.org""
+    },
+    {
+      ""name"": ""Bing"",
+      ""type"": ""extension"",
+      ""version"": ""1.5"",
+      ""isActive"": true,
+      ""id"": ""bing@search.mozilla.org""
+    },
+    {
+      ""name"": ""Bitwarden Password Manager"",
+      ""type"": ""extension"",
+      ""version"": ""2025.2.0"",
+      ""isActive"": true,
+      ""id"": ""{446900e4-71c2-419f-a6a7-df9c091e268b}""
+    },
+    {
+      ""name"": ""Don't track me Google"",
+      ""type"": ""extension"",
+      ""version"": ""4.28"",
+      ""isActive"": true,
+      ""id"": ""dont-track-me-google@robwu.nl""
+    },
+    {
+      ""name"": ""DuckDuckGo"",
+      ""type"": ""extension"",
+      ""version"": ""1.4"",
+      ""isActive"": true,
+      ""id"": ""ddg@search.mozilla.org""
+    },
+    {
+      ""name"": ""DuckDuckGo Privacy Essentials"",
+      ""type"": ""extension"",
+      ""version"": ""2025.2.20"",
+      ""isActive"": true,
+      ""id"": ""jid1-ZAdIEUB7XOzOJw@jetpack""
+    },
+    {
+      ""name"": ""eBay"",
+      ""type"": ""extension"",
+      ""version"": ""1.4"",
+      ""isActive"": true,
+      ""id"": ""ebay@search.mozilla.org""
+    },
+    {
+      ""name"": ""Google"",
+      ""type"": ""extension"",
+      ""version"": ""1.4"",
+      ""isActive"": true,
+      ""id"": ""google@search.mozilla.org""
+    },
+    {
+      ""name"": ""Honey"",
+      ""type"": ""extension"",
+      ""version"": ""12.8.4"",
+      ""isActive"": true,
+      ""id"": ""jid1-93CWPmRbVPjRQA@jetpack""
+    },
+    {
+      ""name"": ""uBlock Origin"",
+      ""type"": ""extension"",
+      ""version"": ""1.63.0"",
+      ""isActive"": true,
+      ""id"": ""uBlock0@raymondhill.net""
+    },
+    {
+      ""name"": ""Video DownloadHelper"",
+      ""type"": ""extension"",
+      ""version"": ""9.3.0.1"",
+      ""isActive"": true,
+      ""id"": ""{b9db16a4-6edc-47ec-a1f4-b86292ed211d}""
+    },
+    {
+      ""name"": ""Wikipedia (en)"",
+      ""type"": ""extension"",
+      ""version"": ""1.3"",
+      ""isActive"": true,
+      ""id"": ""wikipedia@search.mozilla.org""
+    },
+    {
+      ""name"": ""Yahoo Toolbar and New Tab"",
+      ""type"": ""extension"",
+      ""version"": ""5.1.5"",
+      ""isActive"": true,
+      ""id"": ""{635abd67-4fe9-1b23-4f01-e679fa7484c1}""
+    },
+    {
+      ""name"": ""Enhancer for YouTube™"",
+      ""type"": ""extension"",
+      ""version"": ""2.0.130.1"",
+      ""isActive"": false,
+      ""id"": ""enhancerforyoutube@maximerf.addons.mozilla.org""
+    },
+    {
+      ""name"": ""Firefox Relay"",
+      ""type"": ""extension"",
+      ""version"": ""2.8.1"",
+      ""isActive"": false,
+      ""id"": ""private-relay@firefox.com""
+    },
+    {
+      ""name"": ""Search and New Tab by Yahoo"",
+      ""type"": ""extension"",
+      ""version"": ""2.2.1"",
+      ""isActive"": false,
+      ""id"": ""jid1-16aeif9OQIRKxA@jetpack""
+    }
+  ],
+  ""features"": [
+    {
+      ""name"": ""Firefox Screenshots"",
+      ""version"": ""39.0.1"",
+      ""id"": ""screenshots@mozilla.org""
+    },
+    {
+      ""name"": ""Form Autofill"",
+      ""version"": ""1.0.1"",
+      ""id"": ""formautofill@mozilla.org""
+    },
+    {
+      ""name"": ""Picture-In-Picture"",
+      ""version"": ""1.0.0"",
+      ""id"": ""pictureinpicture@mozilla.org""
+    },
+    {
+      ""name"": ""Web Compatibility Interventions"",
+      ""version"": ""115.3.0"",
+      ""id"": ""webcompat@mozilla.org""
+    },
+    {
+      ""name"": ""WebCompat Reporter"",
+      ""version"": ""1.5.1"",
+      ""id"": ""webcompat-reporter@mozilla.org""
+    }
+  ],
+  ""processes"": {
+    ""remoteTypes"": {
+      ""prealloc"": 3,
+      ""socket"": 1,
+      ""privilegedmozilla"": 1,
+      ""extension"": 1,
+      ""webIsolated"": 3,
+      ""privilegedabout"": 1
+    },
+    ""maxWebContentProcesses"": 8
+  },
+  ""normandy"": {
+    ""addonStudies"": [],
+    ""prefRollouts"": [],
+    ""prefStudies"": [],
+    ""nimbusExperiments"": [],
+    ""nimbusRollouts"": [
+      {
+        ""slug"": ""account-spotlight-modal-english-rollout-esr-v2"",
+        ""branch"": {
+          ""slug"": ""rollout"",
+          ""ratio"": 1,
+          ""feature"": {
+            ""value"": {},
+            ""enabled"": false,
+            ""featureId"": ""this-is-included-for-desktop-pre-95-support""
+          },
+          ""features"": [
+            {
+              ""value"": {
+                ""id"": ""DEVICE_MIGRATION_BACKUP_AND_SYNC_SPOTLIGHT"",
+                ""groups"": [
+                  ""eco""
+                ],
+                ""content"": {
+                  ""id"": ""DEVICE_MIGRATION_BACKUP_AND_SYNC_SPOTLIGHT"",
+                  ""modal"": ""tab"",
+                  ""screens"": [
+                    {
+                      ""id"": ""DEVICE_MIGRATION_BACKUP_AND_SYNC_SPOTLIGHT_SYNC"",
+                      ""content"": {
+                        ""logo"": {
+                          ""height"": ""185px"",
+                          ""imageURL"": ""https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/ms-images/2f2e0abe-5fb7-4fcd-bf9e-2a7f24b2af0d.png""
+                        },
+                        ""title"": {
+                          ""raw"": ""Browse without missing a beat"",
+                          ""fontSize"": ""24px"",
+                          ""fontWeight"": 590,
+                          ""paddingBlock"": ""4px 0"",
+                          ""letterSpacing"": 0,
+                          ""paddingInline"": ""24px""
+                        },
+                        ""subtitle"": {
+                          ""raw"": ""Sync all your important info with encryption – like bookmarks and passwords. You can pull everything up anywhere you use Firefox."",
+                          ""fontSize"": ""15px"",
+                          ""lineHeight"": ""1.4"",
+                          ""marginBlock"": ""8px 16px"",
+                          ""letterSpacing"": 0,
+                          ""paddingInline"": ""24px""
+                        },
+                        ""dismiss_button"": {
+                          ""action"": {
+                            ""navigate"": true
+                          }
+                        },
+                        ""primary_button"": {
+                          ""label"": {
+                            ""raw"": ""Get started"",
+                            ""marginBlock"": ""4px 0"",
+                            ""paddingBlock"": ""0"",
+                            ""paddingInline"": ""16px""
+                          },
+                          ""action"": {
+                            ""data"": {
+                              ""entrypoint"": ""device-migration-spotlight-rollout-v3"",
+                              ""extraParams"": {
+                                ""utm_medium"": ""firefox-desktop"",
+                                ""utm_source"": ""spotlight-sync-and-backup-esr"",
+                                ""utm_content"": ""sync"",
+                                ""utm_campaign"": ""migration""
+                              }
+                            },
+                            ""type"": ""FXA_SIGNIN_FLOW"",
+                            ""navigate"": true
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  ""backdrop"": ""transparent"",
+                  ""template"": ""multistage"",
+                  ""transitions"": true
+                },
+                ""trigger"": {
+                  ""id"": ""defaultBrowserCheck""
+                },
+                ""template"": ""spotlight"",
+                ""frequency"": {
+                  ""lifetime"": 1
+                },
+                ""targeting"": ""source == 'newtab' && !usesFirefoxSync && !hasActiveEnterprisePolicies""
+              },
+              ""enabled"": true,
+              ""featureId"": ""spotlight""
+            }
+          ],
+          ""firefoxLabsTitle"": null
+        },
+        ""active"": true,
+        ""enrollmentId"": ""0792acf3-aa1f-4057-9419-e6162b3836dd"",
+        ""experimentType"": ""rollout"",
+        ""source"": ""rs-loader"",
+        ""userFacingName"": ""Account spotlight modal - English rollout - ESR V2"",
+        ""userFacingDescription"": ""Prompt to remind users to sync their data to a Mozilla account"",
+        ""lastSeen"": ""2025-03-06T17:48:58.747Z"",
+        ""featureIds"": [
+          ""spotlight""
+        ],
+        ""prefs"": [],
+        ""isRollout"": true
+      },
+      {
+        ""slug"": ""upgrade-spotlight-rollout"",
+        ""branch"": {
+          ""slug"": ""treatment"",
+          ""ratio"": 1,
+          ""feature"": {
+            ""value"": {},
+            ""enabled"": false,
+            ""featureId"": ""this-is-included-for-desktop-pre-95-support""
+          },
+          ""features"": [
+            {
+              ""value"": {
+                ""enabled"": false
+              },
+              ""enabled"": true,
+              ""featureId"": ""upgradeDialog""
+            }
+          ]
+        },
+        ""active"": true,
+        ""enrollmentId"": ""c8c7f4f2-eed7-4566-bd54-e497ac25ad1c"",
+        ""experimentType"": ""rollout"",
+        ""source"": ""rs-loader"",
+        ""userFacingName"": ""Upgrade Spotlight Rollout"",
+        ""userFacingDescription"": ""Experimenting on onboarding content when you upgrade Firefox."",
+        ""lastSeen"": ""2025-03-06T17:48:59.676Z"",
+        ""featureIds"": [
+          ""upgradeDialog""
+        ],
+        ""prefs"": [],
+        ""isRollout"": true
+      }
+    ]
+  },
+  ""places"": [
+    {
+      ""efficiencyPerc"": 23.3,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_schema"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 65.3,
+      ""pages"": 9,
+      ""sizeBytes"": 294912,
+      ""sizePerc"": 0.5,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_origins"",
+      ""count"": 4656
+    },
+    {
+      ""efficiencyPerc"": 72.5,
+      ""pages"": 7,
+      ""sizeBytes"": 229376,
+      ""sizePerc"": 0.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_origins_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 74.4,
+      ""pages"": 1163,
+      ""sizeBytes"": 38109184,
+      ""sizePerc"": 60,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places"",
+      ""count"": 75252
+    },
+    {
+      ""efficiencyPerc"": 83.4,
+      ""pages"": 144,
+      ""sizeBytes"": 4718592,
+      ""sizePerc"": 7.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_historyvisits"",
+      ""count"": 141740
+    },
+    {
+      ""efficiencyPerc"": 8.8,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_inputhistory"",
+      ""count"": 103
+    },
+    {
+      ""efficiencyPerc"": 6.3,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_inputhistory_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 53.8,
+      ""pages"": 4,
+      ""sizeBytes"": 131072,
+      ""sizePerc"": 0.2,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks"",
+      ""count"": 730
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_deleted"",
+      ""count"": 0
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_bookmarks_deleted_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0.1,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_keywords"",
+      ""count"": 1
+    },
+    {
+      ""efficiencyPerc"": 0.1,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_keywords_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0.1,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_sequence"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0.2,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_anno_attributes"",
+      ""count"": 2
+    },
+    {
+      ""efficiencyPerc"": 0.2,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_anno_attributes_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 45,
+      ""pages"": 3,
+      ""sizeBytes"": 98304,
+      ""sizePerc"": 0.2,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_annos"",
+      ""count"": 426
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_items_annos"",
+      ""count"": 0
+    },
+    {
+      ""efficiencyPerc"": 0.8,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_meta"",
+      ""count"": 7
+    },
+    {
+      ""efficiencyPerc"": 3.6,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_stat1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_metadata"",
+      ""count"": 0
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_metadata_search_queries"",
+      ""count"": 0
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""sqlite_autoindex_moz_places_metadata_search_queries_1"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_previews_tombstones"",
+      ""count"": 0
+    },
+    {
+      ""efficiencyPerc"": 86.7,
+      ""pages"": 39,
+      ""sizeBytes"": 1277952,
+      ""sizePerc"": 2,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_url_hashindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 92.4,
+      ""pages"": 66,
+      ""sizeBytes"": 2162688,
+      ""sizePerc"": 3.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_hostindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 72.8,
+      ""pages"": 28,
+      ""sizeBytes"": 917504,
+      ""sizePerc"": 1.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_visitcount"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 85.8,
+      ""pages"": 26,
+      ""sizeBytes"": 851968,
+      ""sizePerc"": 1.3,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_frecencyindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 68.2,
+      ""pages"": 56,
+      ""sizeBytes"": 1835008,
+      ""sizePerc"": 2.9,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_lastvisitdateindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 86.5,
+      ""pages"": 55,
+      ""sizeBytes"": 1802240,
+      ""sizePerc"": 2.8,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_guid_uniqueindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 84.9,
+      ""pages"": 28,
+      ""sizeBytes"": 917504,
+      ""sizePerc"": 1.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_originidindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 84.9,
+      ""pages"": 104,
+      ""sizeBytes"": 3407872,
+      ""sizePerc"": 5.4,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_historyvisits_placedateindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 82.4,
+      ""pages"": 59,
+      ""sizeBytes"": 1933312,
+      ""sizePerc"": 3,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_historyvisits_fromindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 78.4,
+      ""pages"": 93,
+      ""sizeBytes"": 3047424,
+      ""sizePerc"": 4.8,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_historyvisits_dateindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 26.2,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_itemindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 25.7,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_parentindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 44,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_itemlastmodifiedindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 35.3,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_dateaddedindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 44.2,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_bookmarks_guid_uniqueindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0.1,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_keywords_placepostdata_uniqueindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 16.1,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_annos_placeattributeindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_items_annos_itemattributeindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_metadata_placecreated_uniqueindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 0,
+      ""pages"": 1,
+      ""sizeBytes"": 32768,
+      ""sizePerc"": 0.1,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_metadata_referrerindex"",
+      ""count"": ""-""
+    },
+    {
+      ""efficiencyPerc"": 76.9,
+      ""pages"": 26,
+      ""sizeBytes"": 851968,
+      ""sizePerc"": 1.3,
+      ""sequentialityPerc"": 31.9,
+      ""entity"": ""moz_places_altfrecencyindex"",
+      ""count"": ""-""
+    }
+  ]
+}",3,0,0,,,,High Sierra Version 10.13.6,
+1500691,2025-03-20T21:03:19.222199Z,2025-03-21T12:08:38.257989Z,en-US,thunderbird,New computer reinstall,False,,,False,1720046,1720046;,reset-passwords,thunderbird;reset-passwords;contacts;,ffroeber,"<p>Have new computer and trying to reinstall thunderbird , has been so long can't find my password , can access my email on web mail  but have no contacts list </p>",ffroeber;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36",1,0,0,,,,,
+1500692,2025-03-20T21:03:41.766092Z,2025-03-23T12:57:48.916349Z,en-US,thunderbird,can not sign in to xfinity    firefox or  thunderbird,False,,,False,1720497,1720042;1720187;1720188;1720189;1720190;1720214;1720219;1720220;1720221;1720312;1720313;1720497;,reset-passwords,thunderbird;reset-passwords;,marytheknees,"<p>I some  how lost  or can not get into my  email account On Thunderbird or   xfinity using <a href=""mailto:mdm54@comcast.net"" rel=""nofollow"">mdm54@comcast.net</a>. I somehow messed up my computer and can not sign in  say  i need to follow and get  permission from my primary  which  i  have but can not sign in.Every time  i try to sign in to any thing  i get  either noting or forget the passwords   am  truely upset and missing my mail please see what you  can do if aything I have no idea what to do thanks </p>",marytheknees;davidsk;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/en-US/kb/protect-your-thunderbird-passwords-primary-password""]",12,0,1,,,wsmwk,,
+1500693,2025-03-20T21:07:03.222818Z,2025-03-22T23:40:55.219934Z,es,thunderbird,no puedo enviar mensajer,False,,,False,1720431,1720268;1720275;1720431;,send-and-receive-email,thunderbird;needsinfo;send-and-receive-email;,trabajopacomanuel72,<p>me da un error y no se como corregirlo </p>,trabajopacomanuel72;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/es/kb/perfiles-de-thunderbird""]",3,0,1,,,,,
+1500694,2025-03-20T21:08:47.676382Z,2025-03-22T23:40:02.101096Z,es,thunderbird,no me deja enviar mensajes,False,,,False,1720430,1720430;,send-and-receive-email,thunderbird;send-and-receive-email;,trabajopacomanuel72,<p>no puedo enviar pero si recibir eme da erro smpt </p>,trabajopacomanuel72;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/es/kb/perfiles-de-thunderbird""]",1,0,1,,,,,
+1500698,2025-03-20T21:12:38.865105Z,2025-03-20T22:31:34.943621Z,en-US,thunderbird,Received No Emails,False,,,False,1719927,1719923;1719927;,send-and-receive-email,thunderbird;send-and-receive-email;,dwbnew,"<p>Why have I not received any emails since January 31, 2025, that's almost 2 months of No Emails WHY??? </p>",dwbnew;Googlethunderbird.;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",2,0,0,,,,,
+1500701,2025-03-20T21:18:08.743487Z,2025-03-23T17:19:45.659924Z,en-US,thunderbird,Not receiving messages with 128.6.1 (win10),True,1720545,Toad-Hall,False,1720545,1720036;1720210;1720545;,send-and-receive-email,thunderbird;needsinfo;send-and-receive-email;,wmbanks07,<p>My Thunderbird client has stopped receiving more messages.  The size of the inbox is 4.5.  Is there a limit on the inbox size?  If so can it be increased? </p><p>Thanks </p><p>William </p>,wmbanks07;wsmwk;Toad-Hall;,True,False,False,";solver_id:6577491;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",3,0,0,,,wsmwk,,
+1500703,2025-03-20T21:23:11.544855Z,2025-03-21T19:03:48.771660Z,en-US,thunderbird,email,False,,,False,1720146,1719921;1720146;,send-and-receive-email,thunderbird;send-and-receive-email;,lmccarroll1,<p>Can't send email on my desktop. I get SMTP error. </p>,lmccarroll1;Googlethunderbird.;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",2,0,0,,,,,
+1500706,2025-03-20T21:43:31.408630Z,2025-03-21T11:00:03.297901Z,en-US,thunderbird,Mot de passe perdu pour envoi email,False,,,False,1720030,1720030;,reset-passwords,thunderbird;reset-passwords;,tessa97,"<p>Merci pour la réponse qui me dit que je dois réinitialiser mon mot de passe en contactant mon fournisseur de messagerie. Mais qui est mon fournisseur de messagerie : thunderbird ou Orange (fournisseur de réseau) Merci d avance, </p>",tessa97;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Mobile Safari/537.36",1,0,0,,,,,
+1500718,2025-03-20T23:26:06.999641Z,2025-03-23T20:33:16.412118Z,en-US,thunderbird,Thunderbird Stuck,True,1720116,Toad-Hall,False,1720575,1720116;1720575;,app-crash,thunderbird;app-crash;,did656709,"<p>I accidentally selected ""view"" instead of ""delete""  for ~300 messages. On restart T-bird crashes before displaying the Inbox. I cannot now view any old messages. Is there a way to  stop T-bird from trying to view the ~300 messages? Thanks.  </p><p>Thunderbird generated a crash report but did not send it. I got ""There was a problem submitting your report"" </p>",did656709;Toad-Hall;,True,False,False,;solver_id:6577665;useragent:Mozilla/5.0 (Windows NT 6.1; rv:109.0) Gecko/20100101 Firefox/115.0,2,0,0,,,,,

@@ -1,0 +1,583 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1500941,2025-03-22T00:08:28.373051Z,2025-03-22T02:56:20.297261Z,en-US,thunderbird,I get the popup Enter your password for xxxxxxxxx on imap.comcast.net,False,,,False,,,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,f.schuh,"<p>When I want to start Thundebird, I get the popup Enter your password for xxxxxxxxx on <a href=""http://imap.comcast.net"" rel=""nofollow"">imap.comcast.net</a> </p>",f.schuh;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/en-US/kb/thunderbird-accessibility-features""]",0,0,0,,,wsmwk,,
+1500942,2025-03-22T00:09:48.072389Z,2025-03-23T03:23:13.959278Z,en-US,thunderbird,Not receiving comcast emails effective 3/20/2025,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,margoclark,<p>My email is no longer working.  Is this a Comcast. net problem or a Thunderbird problem?  You have me in your database per my original set-up which is still correct.   Can the issue be due to ne update requirements? </p>,margoclark;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,0,0,0,,,wsmwk,,
+1500949,2025-03-22T01:32:20.446867Z,2025-04-10T10:52:59.739808Z,en-US,thunderbird,I have a corrupted TBird. Can it be repaired or replaced without lost of saved message folders.,False,,,False,1724747,1720303;1724747;,import-and-export-email,thunderbird;import-and-export-email;,artstar,"<p>Hello I have already reports these issues but did not receive constructive how to correct them. I'll try to be more precise this round. </p><p>Thunderbird Issues Summary:  </p> <ul><li>  Received new messages in the inbox repeat in list multiples (not consistent)  </li><li>  Messages deleted to trash repeat back into the inbox (sometimes also in multiples rounds) </li><li>  Notifications in settings non-functional (disappeared)/ Incoming email alerts popup and remain on my screen.  </li></ul> <pre>  (I have to manually close them one by one.) </pre> <ul><li> Mutliple unwanted sub-folders appear and reappear even after multiple attempts to delete them. </li></ul> <p>There are more issues but not as prominent as the above. </p><p>I use an old iMac. (See image)Us there  there is an older TB I can download which is compatible with my system? IF it comes to that,  HOW do I safeguard all my saved messages to move into the new version? Please advise. Thank you Rob </p>",artstar;davidsk;wsmwk;,True,True,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0,2,0,0,,,,,
+1500951,2025-03-22T01:48:12.163255Z,2025-03-28T18:01:26.009388Z,en-US,thunderbird,Imap folders,True,1721706,davidsk,False,1721796,1720318;1720562;1720572;1721628;1721706;1721790;1721796;,email-and-messaging,thunderbird;email-and-messaging;,dmischel1,"<p>When Tbird first began it was easy to see which folders were Imap and which were local. That distinction disappeared a while back and I still had all my imap folders but no indication of which were which. When I want to access them the popup menu did show ""gmail"" (since that is my email domain) and the imap folders there. But when I go to create a new folder it does not show up in the imap list even though I want it to be an imap folder. </p><p>How do I create/manage an imap folder in the current Tbird? </p>",dmischel1;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;solver_id:6580440",7,0,0,,,,,
+1500967,2025-03-22T04:52:09.068583Z,2025-03-22T04:55:58.614938Z,en-US,thunderbird,Thunderbird stopped asking for confirmation after I used shift -Delete to permanently delete  messages.,True,1720261,sfhowes,False,1720261,1720261;,customization,thunderbird;customization;,seagull117,"<p>I updated, then I un-installed, then re-installed Ver 136, but still no confirmation request. after shift -delete. Highlighted Messages were immediately deleted with no confirm message displayed.  What do I do to reinstate the ""confirmation required""  prompt? </p>",seagull117;sfhowes;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0;solver_id:6580683",1,0,3,,,,,
+1500988,2025-03-22T09:44:40.599177Z,2025-03-22T17:50:33.303817Z,it,thunderbird,nuovo account,True,1720347,'@next,False,1720389,1720347;1720377;1720389;,account-management,thunderbird;account-management;,sator3012,"<p>Buongiorno. Utilizzo TB portable versione 136.0.1, volevo inserire un altro account ma vedo che e' sparita l apposita opzione. Ho rilevato invece una novita nella sezione strumenti: la voce </p><p>Centro account Sperimentale Crea account nel nuovo Centro account </p><p>Quindi, come posso creare un nuovo account? Grazie </p>",sator3012;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0;solver_id:6581127",3,0,0,,,,,
+1500992,2025-03-22T10:42:57.472808Z,2025-03-24T07:04:26.977459Z,nl,thunderbird,openen postvak in,False,,,False,1720659,1720659;,send-and-receive-email,thunderbird;connectivity;send-and-receive-email;,sfissers90,"<p>ik krijg mijn postvak in niet open en er verschijnt volgende melding: ""UID FETCH failed""? Hoe krijg ik dit opgelost? Het is verschenen nadat windows een update heeft doorgevoerd. </p>",sfissers90;markh2;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",1,0,0,,,,,
+1500994,2025-03-22T11:05:51.987228Z,2025-03-22T11:59:50.257056Z,en-US,thunderbird,Thunderbird Appearance,False,,,False,1720306,1720306;,customization,thunderbird;customization;,mjw5,"<p>I have changed my Windows 11 font and want the look and feel of Thunderbird to be the same as this. I have tried all the suggestions I can find, but none seem to work. How can I do this? </p>",mjw5;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/userchromecss-js-usercontent-unsupported""]",1,0,0,,,,,
+1500998,2025-03-22T11:37:43.256554Z,2025-03-22T11:55:01.964503Z,en-US,thunderbird,My Tbird screen layout has reverted to an earlier format.,False,,,False,1720304,1720304;,customization,thunderbird;customization;,BS6600,<p>I have lost  the New Message and Fetch mail icons. Version 128.1esr - up to date according to help.  Windows 10 I didn't fiddle with Settings just did a restart/auto update of Tbird </p>,BS6600;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/updating-thunderbird""]",1,0,0,,,,,
+1500999,2025-03-22T11:41:19.901913Z,2025-03-22T11:41:19.901921Z,en-US,thunderbird,A calendar item with reminders will not delete,False,,,False,,,events,thunderbird;events;,ian238,"<p>A calendar item with reminders will not edit or delete.  This repeatedly pops up reminders days after the event. No, the ""Read Only"" box in Calendar Settings is not checked (refers to a similar fault reported by someone 9 years ago!).  The calendar is tied to my Google calendar, and it is NOT present there, having been deleted. </p>",ian238;,True,False,False,";useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",0,0,0,,,,,
+1501006,2025-03-22T12:04:33.997492Z,2025-03-22T12:39:19.224748Z,en-US,thunderbird,lost  info for  thuderbird,False,,,False,1720316,1720316;,reset-passwords,thunderbird;reset-passwords;,marytheknees,<p>i did what microsoft said to do ran DISM and   jhad to   do my computer all over again losing all my passwords and sites  i can not  sign in to  thunderbird or Xfinity and can not get a hold of anyone  lost passwords to allimportant sites Please help with thunderbird if possible </p>,marytheknees;davidsk;,True,True,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1501013,2025-03-22T12:58:27.402800Z,2025-03-23T17:03:28.634043Z,it,thunderbird,Pagina iniziale Thunderbird,True,1720539,nico.loschiavo,False,1720539,1720345;1720462;1720467;1720476;1720533;1720537;1720539;,customization,thunderbird;customization;,nico.loschiavo,"<p>Buonasera ! Sono assolutamente profano in materia. Fatta questa premessa, uso Thunderbird per la posta elettronica. Come faccio a fare in modo che all'apertura vada su posta in arrivo e NON su quella di configurazione ? La versione in uso è 128.8.1esr (64 bit) </p>",nico.loschiavo;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;kb_visits_prior:[""/it/kb/personalizzare-pagina-iniziale-thunderbird"", ""/it/kb/thunderbird-messaggi-raggruppati-discussione""];solver_id:6581455",7,0,0,,,,,
+1501022,2025-03-22T13:53:47.328141Z,2025-03-22T16:57:39.656952Z,en-US,thunderbird,Anmeldung unter T.online schlägt fehl.,False,,,False,1720374,1720374;,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,manfred.kroehnert,"<p>Hallo, bekomme immer bei Anmeldung für T-online hochgeladene Meldung </p>",manfred.kroehnert;sfhowes;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1501028,2025-03-22T14:58:07.916076Z,2025-06-04T11:52:16.655983Z,en-US,thunderbird,My godaddy email says it's signed in and ready but doesn't work,False,,,False,1739239,1720343;1739239;,send-and-receive-email,thunderbird;send-and-receive-email;,jdflaming,<p>I've installed my GoDaddy email several times and Thunderbird says it's ready to use but it doesn't send or receive. </p>,jdflaming;MattAuSupport;helpemailtales1;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0;kb_visits_prior:[""/en-US/kb/cannot-receive-messages"", ""/en-US/kb/imap-synchronization""]",2,0,0,,,,,
+1501034,2025-03-22T15:52:04.431542Z,2025-03-29T17:48:29.192540Z,en-US,thunderbird,Unable to display messages,False,,,False,1721962,1720383;1721202;1721892;1721962;,email-and-messaging,thunderbird;email-and-messaging;,mickelcsn,"<p>I recently add and <a href=""http://embarqmail.com"" rel=""nofollow"">embarqmail.com</a> account. incoming ""<a href=""http://mail.centurylink.net"" rel=""nofollow"">mail.centurylink.net</a>"" outgoing ""<a href=""http://smtp.centurylink.net"" rel=""nofollow"">smtp.centurylink.net</a>"" It downloads fine but when i single click no message is displayed or double click new window opens but message not displayed. Have had this same problem when installing thunderbird on new computers and just would up using another program. I also have two gmail accounts that work fine. Any suggestions? Thank you </p>",mickelcsn;christ1;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,4,0,3,,,,,
+1501038,2025-03-22T16:08:47.688283Z,2025-03-22T17:00:44.924049Z,en-US,thunderbird,Thunderbird,False,,,False,1720375,1720371;1720375;,customization,thunderbird;customization;,jmr66,"<p>Go to the settings, general, fonts and colors and see text is black and background is white.  Yet when I return to inbox text is white and background is black.  Why is that the case? </p>",jmr66;MattAuSupport;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,2,0,2,,,,,
+1501048,2025-03-22T17:12:13.271745Z,2025-03-22T17:28:40.731780Z,en-US,thunderbird,Won't send E-mail,False,,,False,1720381,1720381;,send-and-receive-email,thunderbird;send-and-receive-email;,mmckenna2101,"<p>I set up Thunderbird using the settings supplied to me from Spectrum for third party E-mail clients. </p><p>Incoming and outgoing </p><p>DSN: <a href=""http://mail.twc.com"" rel=""nofollow"">mail.twc.com</a> port: 993 </p><p>outgoing: </p><p>DSN: <a href=""http://mail.twc.com"" rel=""nofollow"">mail.twc.com</a> port: 587 </p><p>Incoming mail works fine, outgoing times out trying to log in to server. </p><p>Same server for in and out. In works, out doesn't </p>",mmckenna2101;christ1;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0;kb_visits_prior:[""/en-US/kb/faq-changing-imap-pop""]",1,0,2,,,,,
+1501058,2025-03-22T18:39:49.937144Z,2025-03-22T18:39:49.937152Z,en-US,thunderbird,Deleting email causes strange effects,False,,,False,,,accessibility,thunderbird;accessibility;seg-not-firefox;firefox-1360;firefox-13601;,cranleighboy,"<p>On deleting an email the pane which lists all emails (?message list?, top right) is cleared and the only way to restore it that I have found is to close Thunderbird &amp; reload. Strangely this process  a) says that Thunderbird is still running;  b) creates a new extra drafts folder (Drafts-1) with the same content as the original Drafts folder; and  c) creates a new folder named Drafts.msf-X.compact-backup. I have tried reverting to an old version; and have installed the latest (136.0.1) to no avail. This occurred a week or so ago if my memory is correct. </p>",cranleighboy;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;ff_version:136.0.1;os:Windows 10 (up to date);troubleshooting:Troubleshooting Information
+This page contains technical information that might be useful when you’re trying to solve a problem. If you are looking for answers to common questions about Thunderbird, check out our support website.
+Include account names (possibly identifying information)
+Diagnose issues
+Try clearing the startup cache
+Application Basics
+Name 	Thunderbird
+Version 	136.0.1
+Build ID 	20250317195841
+Distribution ID 	
+Update Folder 	
+C:\ProgramData\Mozilla-1de4eec8-1241-4177-a864-e594e8d1fb38\updates\8216C80C92C4E828
+Update History 	
+Update Channel 	release
+User Agent 	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Thunderbird/136.0.1
+OS 	Windows_NT 10.0 19045
+Application Binary 	C:\Program Files (x86)\Mozilla Thunderbird\thunderbird.exe
+Profile Folder 	
+(Local drive)
+Build Configuration 	about:buildconfig
+Memory Use 	about:memory
+Cache Use 	about:cache
+Performance 	about:processes
+Registered Service Workers 	about:serviceworkers
+Third-party Modules 	about:third-party
+Launcher Process 	Enabled
+Multiprocess Windows 	0/0
+Fission Windows 	0/0 Enabled by default
+Remote Processes 	4
+Enterprise Policies 	Inactive
+Google Location Service Key 	Missing
+Google Safebrowsing Key 	Missing
+Mozilla Location Service Key 	Missing
+Safe Mode 	false
+Memory Size (RAM) 	23.9 GB
+Disk Space Available 	177 GB
+Profiles 	about:profiles
+Telemetry Data 	about:telemetry
+Glean Data 	about:glean
+Mail and News Accounts
+ID 	Incoming server 	Outgoing servers
+Name 	Connection security 	Authentication method 	Name 	Connection security 	Authentication method 	Default?
+account2	(none) Local Folders	None	Normal password
+account4	(pop3) imap.btinternet.com:995	SSL/TLS	Normal password	mail.btinternet.com:587	STARTTLS	Normal password	true
+account5	(pop3) outlook.office365.com:995	SSL/TLS	OAuth2	mail.btinternet.com:587	STARTTLS	Normal password	true
+Libraries
+Library 	Status 	Expected minimum version 	Version in use 	Path RNP (OpenPGP) 	OK 	0.17.1 	0.17.1.MZLA.136.0.1.botan 	C:\Program Files (x86)\Mozilla Thunderbird\rnp.dll
+OTR 	Failed to load. OTR chat encryption will not work. 	- 	- 	-
+Calendar Settings
+Home 	Name 	Value Name
+Type 	storage
+Disabled 	
+Username
+URI
+Refresh Interval 	
+Read-only 	
+Suppress Alarms 	
+Cache Enabled 	
+iMIP Identity 	id3
+iMIP Disabled 	
+iMIP Account 	
+Organizer Id
+Force Email Scheduling 	
+Popup Alarms Supported 	
+Alarms on Invitation Supported 	
+Max Alarms Per Event 	
+Attachment Supported 	
+Max Categories 	
+Privacy State Supported 	
+Priority Supported 	true
+Event Supported 	
+Task Supported 	
+Local Time Supported 	
+UTC/GMT Supported 	
+Auto-Scheduling Supported 	
+Chat Accounts
+ID 	Protocol 	Actions
+Crash Reports for the Last 3 Days
+Report ID 	Submitted
+
+All Crash Reports
+Remote Processes
+Type 	Count
+GPU	1
+Extension	1
+RDD	1
+Isolated Web Content	1
+Add-ons
+Name 	Type 	Version 	Enabled 	ID
+British English Dictionary (Marco Pinto)	dictionary	4.0.0	true	marcoagpinto@mail.telepac.pt
+Amazon.co.uk	extension	1.1	true	amazon@search.mozilla.org
+Bing	extension	1.0	true	bing@search.mozilla.org
+Chambers (UK)	extension	1.0	true	chambers-en-GB@search.mozilla.org
+DuckDuckGo	extension	1.0	true	ddg@search.mozilla.org
+FileLink Provider for Dropbox	extension	7	true	dropbox-cloudfile@darktrojan.net
+Google	extension	1.0	true	google@search.mozilla.org
+Wikipedia (en)	extension	1.0	true	wikipedia@search.mozilla.org
+System theme — auto	theme	1.4.1	true	default-theme@mozilla.org
+ImportExportTools NG	extension	14.1.5	false	ImportExportToolsNG@cleidigh.kokkini.net
+Profile Switcher	extension	3.6	false	pswitcher2@dillinger
+Remove Duplicate Messages	extension	0.6.0	false	{a300a000-5e21-4ee0-a115-9ec8f4eaa92b}
+SPAMfighter	extension	7.6.180	false	tbtoolbar@spamfighter.com
+Web Translate	extension	5.9	false	admin@fastaddons.com_WebTranslate
+Language: English (GB)	locale	136.0.20250227.143050	false	langpack-en-GB@thunderbird.mozilla.org
+Language: English (US)	locale	136.0.20250227.143050	false	langpack-en-US@thunderbird.mozilla.org
+Dark	theme	1.3	false	thunderbird-compact-dark@mozilla.org
+Light	theme	1.3	false	thunderbird-compact-light@mozilla.org
+Security Software
+Type 	Name
+Antivirus 	Microsoft Defender Antivirus
+Antispyware 	
+Firewall 	Windows Firewall
+Legacy User Stylesheets
+Active 	false
+Stylesheets 	No stylesheets found
+Graphics
+Features
+Compositing	WebRender
+Font Visibility Debug Info	Windows Platform
+Asynchronous Pan/Zoom	wheel input enabled; scrollbar drag enabled; keyboard enabled; autoscroll enabled; smooth pinch-zoom enabled
+WebGL 1 Driver WSI Info	outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync 
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control 
+WebGL 1 Driver Renderer	Google Inc. (Intel) -- ANGLE (Intel, Intel(R) HD Graphics 4600 Direct3D11 vs_5_0 ps_5_0, D3D11-20.19.15.4835)
+WebGL 1 Driver Version	OpenGL ES 3.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+WebGL 1 Driver Extensions	GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture 
+WebGL 1 Extensions	ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context WEBGL_provoking_vertex
+WebGL 2 Driver WSI Info	outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync 
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control 
+WebGL 2 Driver Renderer	Google Inc. (Intel) -- ANGLE (Intel, Intel(R) HD Graphics 4600 Direct3D11 vs_5_0 ps_5_0, D3D11-20.19.15.4835)
+WebGL 2 Driver Version	OpenGL ES 3.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+WebGL 2 Driver Extensions	GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture 
+WebGL 2 Extensions	EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context WEBGL_provoking_vertex
+Target Frame Rate	60
+DirectWrite	true (10.0.19041.5438)
+GPU #1
+Active	Yes
+Description	Intel(R) HD Graphics 4600
+Vendor ID	0x8086
+Device ID	0x0412
+Driver Version	20.19.15.4835
+Driver Date	10-16-2017
+Drivers	igdumdim64 igd10iumd64 igd10iumd64 igd12umd64 igdumdim32 igd10iumd32 igd10iumd32 igd12umd32
+Subsys ID	05a41028
+RAM	0
+GPU #2
+Active	No
+RAM	0
+Diagnostics
+AzureCanvasBackend	skia
+AzureCanvasBackend (UI Process)	skia
+AzureContentBackend	skia
+AzureContentBackend (UI Process)	skia
+AzureFallbackCanvasBackend (UI Process)	skia
+CMSOutputProfile	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
+Display0	1280x1024@60Hz scales:1.000000|1.000000
+DisplayCount	1
+HardwareStretching	both=0 window-only=0 full-screen-only=0 none=1 error=0
+OverlaySupport	NV12=None YUV2=None BGRA8=Software RGB10A2=None VpSR=Not Supported VpAutoHDR=Not Supported
+SwapChainTearingSupport	Supported
+GPUProcessPid	15624
+Window Device Pixel Ratios	1
+ClearType Parameters	Gamma: 2.2 Pixel Structure: RGB ClearType Level: 50 Enhanced Contrast: 400 
+Font Visibility Debug Info	Windows Platform
+WebGPU Default Adapter	[object Object]
+WebGPU Fallback Adapter	[object Object]
+Decision Log
+HW_COMPOSITING	
+available by default
+D3D11_COMPOSITING	
+available by default
+DIRECT2D	
+disabled by default: Disabled by default
+D3D11_HW_ANGLE	
+available by default
+GPU_PROCESS	
+available by default
+WEBRENDER	
+available by default
+WEBRENDER_COMPOSITOR	
+available by default
+WEBRENDER_PARTIAL	
+available by default
+WEBRENDER_SHADER_CACHE	
+available by default
+WEBRENDER_OPTIMIZED_SHADERS	
+available by default
+WEBRENDER_ANGLE	
+available by default
+WEBRENDER_DCOMP_PRESENT	
+available by default
+WEBRENDER_SCISSORED_CACHE_CLEARS	
+available by default
+blocklisted by env: Blocklisted by gfxInfo
+WEBGPU	
+available by default
+blocked by runtime: WebGPU cannot be enabled in release or beta
+WINDOW_OCCLUSION	
+available by default
+VIDEO_HARDWARE_OVERLAY	
+available by default
+VIDEO_SOFTWARE_OVERLAY	
+available by default
+HW_DECODED_VIDEO_ZERO_COPY	
+available by default
+VP8_HW_DECODE	
+available by default
+VP9_HW_DECODE	
+available by default
+REUSE_DECODER_DEVICE	
+available by default
+BACKDROP_FILTER	
+available by default
+CANVAS_RENDERER_THREAD	
+available by default
+ACCELERATED_CANVAS2D	
+available by default
+REMOTE_CANVAS	
+available by default
+blocked by runtime: Disabled without Direct2D
+Media
+Audio Backend	wasapi
+Max Channels	2
+Preferred Sample Rate	48000
+Roundtrip latency (standard deviation)	NaNms (NaN)
+Output Devices
+Name 	Group 	Vendor 	State 	Preferred 	Format 	Channels 	Rate 	Latency
+Speakers / Headphones (Realtek High Definition Audio)	HDAUDIO\FUNC_01&VEN_10EC&DEV_0280&SUBSYS_102805A4&REV_1000\4&51c6720&0&0001		Enabled	All	default: F32LE, support: S16LE F32LE	2	default: 48000, support: 48000 - 48000	144 - 480
+Input Devices
+Name 	Group 	Vendor 	State 	Preferred 	Format 	Channels 	Rate 	Latency
+Line In (Realtek High Definition Audio)	HDAUDIO\FUNC_01&VEN_10EC&DEV_0280&SUBSYS_102805A4&REV_1000\4&51c6720&0&0001		Unplugged	None	default: F32LE, support: S16LE F32LE	2	default: 48000, support: 48000 - 48000	0 - 0
+Microphone (Realtek High Definition Audio)	HDAUDIO\FUNC_01&VEN_10EC&DEV_0280&SUBSYS_102805A4&REV_1000\4&51c6720&0&0001		Unplugged	None	default: F32LE, support: S16LE F32LE	2	default: 48000, support: 48000 - 48000	0 - 0
+Digital Audio Interface (Cam Link 4K)	USB\VID_0FD9&PID_0067&MI_03\6&2a33de8e&0&0003		Enabled	All	default: F32LE, support: S16LE F32LE	2	default: 48000, support: 48000 - 48000	144 - 480
+Stereo Mix (Realtek High Definition Audio)	HDAUDIO\FUNC_01&VEN_10EC&DEV_0280&SUBSYS_102805A4&REV_1000\4&51c6720&0&0001		Disabled	None	default: F32LE, support: S16LE F32LE	2	default: 48000, support: 48000 - 48000	0 - 0
+Environment Variables
+	Name 	Value MOZ_CRASHREPORTER_DATA_DIRECTORY	C:\Users\Chris\AppData\Roaming\thunderbird\Crash Reports
+MOZ_CRASHREPORTER_EVENTS_DIRECTORY	C:\Users\Chris\AppData\Roaming\thunderbird\Profiles\9r0iv2ys.default-release\crashes\events
+MOZ_CRASHREPORTER_PING_DIRECTORY	C:\Users\Chris\AppData\Roaming\thunderbird\Pending Pings
+MOZ_CRASHREPORTER_STRINGS_OVERRIDE	C:\Program Files (x86)\Mozilla Thunderbird\crashreporter-override.ini
+MOZ_LAUNCHER_PROCESS	1
+Important Modified Preferences
+	Name 	Value accessibility.lastLoadDate	1516837760
+accessibility.typeaheadfind.flashBar	0
+browser.cache.disk.amount_written	856844
+browser.cache.disk.capacity	1048576
+browser.cache.disk.filesystem_reported	1
+browser.cache.disk.smart_size_cached_value	358400
+browser.cache.disk.smart_size.first_run	false
+browser.cache.disk.smart_size.use_old_max	false
+browser.display.document_color_use	2
+browser.display.use_system_colors	false
+browser.search.region	GB
+extensions.lastAppVersion	136.0.1
+font.internaluseonly.changed	false
+font.minimum-size.x-western	12
+general.autoScroll	false
+gfx.crash-guard.d3d11layers.appVersion	115.3.2
+gfx.crash-guard.d3d11layers.deviceID	0x0412
+gfx.crash-guard.d3d11layers.driverVersion	20.19.15.4835
+gfx.crash-guard.d3d11layers.feature-d2d	true
+gfx.crash-guard.d3d11layers.feature-d3d11	true
+gfx.crash-guard.status.d3d11layers	2
+gfx.crash-guard.status.wmfvpxvideo	2
+gfx.crash-guard.wmfvpxvideo.appVersion	91.13.1
+gfx.crash-guard.wmfvpxvideo.deviceID	0x0412
+gfx.crash-guard.wmfvpxvideo.driverVersion	20.19.15.4835
+idle.lastDailyNotification	1742639951
+layers.mlgpu.sanity-test-failed	false
+media.gmp.storage.version.observed	1
+media.hardware-video-decoding.failed	false
+network.cookie.cookieBehavior	2
+network.predictor.cleaned-up	true
+network.trr.blocklist_cleanup_done	true
+places.database.lastMaintenance	1742143476
+places.history.expiration.transient_current_max_pages	46480
+privacy.bounceTrackingProtection.hasMigratedUserActivationData	true
+privacy.donottrackheader.enabled	true
+privacy.globalprivacycontrol.enabled	true
+privacy.purge_trackers.date_in_cookie_database	0
+security.osreauthenticator.password_last_changed_hi	803127
+security.osreauthenticator.password_last_changed_lo	1235284296
+security.remote_settings.crlite_filters.checked	1634978533
+security.remote_settings.intermediates.checked	1634978533
+security.sandbox.content.tempDirSuffix	{00cdc807-9c56-4e53-ab02-c82490574b5c}
+security.sandbox.plugin.tempDirSuffix	{b7a45969-6493-4f05-a898-06ce419ebb74}
+signon.importedFromSqlite	true
+storage.vacuum.last.content-prefs.sqlite	1740768736
+storage.vacuum.last.index	2
+storage.vacuum.last.places.sqlite	1742323292
+ui.osk.debug.keyboardDisplayReason	IKPOS: Touch screen not found.
+Important Locked Preferences
+	Name 	Value fission.autostart.session	true
+Places Database
+Integrity 	
+Accessibility
+Activated 	false
+Prevent Accessibility 	0
+Accessible Handler Used 	
+Accessibility Instantiator 	
+Library Versions
+	Expected minimum version	Version in use
+NSPR	4.36	4.36
+NSS	3.108	3.108
+NSSSMIME	3.108	3.108
+NSSSSL	3.108	3.108
+NSSUTIL	3.108	3.108
+Sandbox
+Content Process Sandbox Level	0
+Effective Content Process Sandbox Level	1
+Win32k Lockdown State for Content Process	Win32k Lockdown enabled -- default value is true
+GPU Process Sandbox Level	1
+Startup Cache
+Disk Cache Path 	C:\Users\Chris\AppData\Local\thunderbird\Profiles\9r0iv2ys.default-release\startupCache\startupCache.8.little
+Ignore Disk Cache 	false
+Found Disk Cache on Init 	true
+Wrote to Disk Cache 	false
+Internationalization & Localization
+Application Settings
+Requested Locales 	[""en-US""]
+Available Locales 	[""en-US""]
+App Locales 	[""en-US""]
+Regional Preferences 	[""en-GB""]
+Default Locale 	""en-US""
+Operating System
+System Locales 	[""en-GB""]
+Regional Preferences 	[""en-GB""]
+Remote Debugging (Chromium Protocol)
+Accepting Connections 	
+URL 	
+Printing
+Troubleshooting 	
+Modified print settings
+	Name 	Value print_printer	CutePDF Writer
+print.more-settings.open	true
+print.printer_Bullzip_PDF_Printer.print_bgcolor	false
+print.printer_Bullzip_PDF_Printer.print_bgimages	false
+print.printer_Bullzip_PDF_Printer.print_duplex	0
+print.printer_Bullzip_PDF_Printer.print_edge_bottom	0
+print.printer_Bullzip_PDF_Printer.print_edge_left	0
+print.printer_Bullzip_PDF_Printer.print_edge_right	0
+print.printer_Bullzip_PDF_Printer.print_edge_top	0
+print.printer_Bullzip_PDF_Printer.print_evenpages	true
+print.printer_Bullzip_PDF_Printer.print_footercenter	
+print.printer_Bullzip_PDF_Printer.print_footerleft	&PT
+print.printer_Bullzip_PDF_Printer.print_footerright	&D
+print.printer_Bullzip_PDF_Printer.print_headercenter	
+print.printer_Bullzip_PDF_Printer.print_headerleft	&T
+print.printer_Bullzip_PDF_Printer.print_headerright	&U
+print.printer_Bullzip_PDF_Printer.print_in_color	true
+print.printer_Bullzip_PDF_Printer.print_margin_bottom	0.196527779102325
+print.printer_Bullzip_PDF_Printer.print_margin_left	0.5
+print.printer_Bullzip_PDF_Printer.print_margin_right	0.5
+print.printer_Bullzip_PDF_Printer.print_margin_top	0.196527779102325
+print.printer_Bullzip_PDF_Printer.print_oddpages	true
+print.printer_Bullzip_PDF_Printer.print_orientation	0
+print.printer_Bullzip_PDF_Printer.print_page_delay	50
+print.printer_Bullzip_PDF_Printer.print_paper_data	9
+print.printer_Bullzip_PDF_Printer.print_paper_height	-1.00
+print.printer_Bullzip_PDF_Printer.print_paper_name	
+print.printer_Bullzip_PDF_Printer.print_paper_size_unit	1
+print.printer_Bullzip_PDF_Printer.print_paper_width	-1.00
+print.printer_Bullzip_PDF_Printer.print_resolution	300
+print.printer_Bullzip_PDF_Printer.print_reversed	false
+print.printer_Bullzip_PDF_Printer.print_scaling	1.00
+print.printer_Bullzip_PDF_Printer.print_shrink_to_fit	false
+print.printer_Bullzip_PDF_Printer.print_to_file	false
+print.printer_Bullzip_PDF_Printer.print_unwriteable_margin_bottom	0
+print.printer_Bullzip_PDF_Printer.print_unwriteable_margin_left	0
+print.printer_Bullzip_PDF_Printer.print_unwriteable_margin_right	0
+print.printer_Bullzip_PDF_Printer.print_unwriteable_margin_top	0
+print.printer_ColourLaserjet.print_bgcolor	false
+print.printer_ColourLaserjet.print_bgimages	false
+print.printer_ColourLaserjet.print_duplex	0
+print.printer_ColourLaserjet.print_edge_bottom	0
+print.printer_ColourLaserjet.print_edge_left	0
+print.printer_ColourLaserjet.print_edge_right	0
+print.printer_ColourLaserjet.print_edge_top	0
+print.printer_ColourLaserjet.print_evenpages	true
+print.printer_ColourLaserjet.print_footercenter	
+print.printer_ColourLaserjet.print_footerleft	&PT
+print.printer_ColourLaserjet.print_footerright	&D
+print.printer_ColourLaserjet.print_headercenter	
+print.printer_ColourLaserjet.print_headerleft	&T
+print.printer_ColourLaserjet.print_headerright	&U
+print.printer_ColourLaserjet.print_in_color	true
+print.printer_ColourLaserjet.print_margin_bottom	0.5
+print.printer_ColourLaserjet.print_margin_left	0.5
+print.printer_ColourLaserjet.print_margin_right	0.5
+print.printer_ColourLaserjet.print_margin_top	0.5
+print.printer_ColourLaserjet.print_oddpages	true
+print.printer_ColourLaserjet.print_orientation	0
+print.printer_ColourLaserjet.print_page_delay	50
+print.printer_ColourLaserjet.print_paper_data	9
+print.printer_ColourLaserjet.print_paper_height	-1.00
+print.printer_ColourLaserjet.print_paper_name	
+print.printer_ColourLaserjet.print_paper_size_unit	1
+print.printer_ColourLaserjet.print_paper_width	-1.00
+print.printer_ColourLaserjet.print_resolution	600
+print.printer_ColourLaserjet.print_reversed	false
+print.printer_ColourLaserjet.print_scaling	1.00
+print.printer_ColourLaserjet.print_shrink_to_fit	true
+print.printer_ColourLaserjet.print_to_file	false
+print.printer_ColourLaserjet.print_unwriteable_margin_bottom	17
+print.printer_ColourLaserjet.print_unwriteable_margin_left	24
+print.printer_ColourLaserjet.print_unwriteable_margin_right	24
+print.printer_ColourLaserjet.print_unwriteable_margin_top	17
+print.printer_CutePDF_Writer.print_bgcolor	false
+print.printer_CutePDF_Writer.print_bgimages	false
+print.printer_CutePDF_Writer.print_duplex	0
+print.printer_CutePDF_Writer.print_edge_bottom	0
+print.printer_CutePDF_Writer.print_edge_left	0
+print.printer_CutePDF_Writer.print_edge_right	0
+print.printer_CutePDF_Writer.print_edge_top	0
+print.printer_CutePDF_Writer.print_evenpages	true
+print.printer_CutePDF_Writer.print_footercenter	
+print.printer_CutePDF_Writer.print_footerleft	&PT
+print.printer_CutePDF_Writer.print_footerright	&D
+print.printer_CutePDF_Writer.print_headercenter	
+print.printer_CutePDF_Writer.print_headerleft	&T
+print.printer_CutePDF_Writer.print_headerright	&U
+print.printer_CutePDF_Writer.print_in_color	true
+print.printer_CutePDF_Writer.print_margin_bottom	0.196527779102325
+print.printer_CutePDF_Writer.print_margin_left	0.5
+print.printer_CutePDF_Writer.print_margin_right	0.5
+print.printer_CutePDF_Writer.print_margin_top	0.196527779102325
+print.printer_CutePDF_Writer.print_oddpages	true
+print.printer_CutePDF_Writer.print_orientation	0
+print.printer_CutePDF_Writer.print_page_delay	50
+print.printer_CutePDF_Writer.print_paper_data	9
+print.printer_CutePDF_Writer.print_paper_height	297
+print.printer_CutePDF_Writer.print_paper_id	9
+print.printer_CutePDF_Writer.print_paper_name	
+print.printer_CutePDF_Writer.print_paper_size_unit	1
+print.printer_CutePDF_Writer.print_paper_width	209.9
+print.printer_CutePDF_Writer.print_resolution	600
+print.printer_CutePDF_Writer.print_reversed	false
+print.printer_CutePDF_Writer.print_scaling	1
+print.printer_CutePDF_Writer.print_shrink_to_fit	false
+print.printer_CutePDF_Writer.print_to_file	false
+print.printer_CutePDF_Writer.print_unwriteable_margin_bottom	0
+print.printer_CutePDF_Writer.print_unwriteable_margin_left	0
+print.printer_CutePDF_Writer.print_unwriteable_margin_right	0
+print.printer_CutePDF_Writer.print_unwriteable_margin_top	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_bgcolor	false
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_bgimages	false
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_duplex	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_edge_bottom	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_edge_left	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_edge_right	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_edge_top	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_evenpages	true
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_footercenter	
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_footerleft	&PT
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_footerright	&D
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_headercenter	
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_headerleft	&T
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_headerright	&U
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_in_color	true
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_margin_bottom	0.5
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_margin_left	0.5
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_margin_right	0.5
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_margin_top	0.5
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_oddpages	true
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_orientation	0
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_page_delay	50
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_paper_data	9
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_paper_height	-1.00
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_paper_name	
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_paper_size_unit	1
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_paper_width	-1.00
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_resolution	600
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_reversed	false
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_scaling	0.70
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_shrink_to_fit	false
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_to_file	false
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_unwriteable_margin_bottom	17
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_unwriteable_margin_left	17
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_unwriteable_margin_right	17
+print.printer_HP_Color_LaserJet_CP2020_Series_PCL_6.print_unwriteable_margin_top	17
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_bgcolor	false
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_bgimages	false
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_duplex	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_edge_bottom	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_edge_left	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_edge_right	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_edge_top	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_evenpages	true
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_footercenter	
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_footerleft	&PT
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_footerright	&D
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_headercenter	
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_headerleft	&T
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_headerright	&U
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_in_color	true
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_margin_bottom	0.196527779102325
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_margin_left	0.5
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_margin_right	0.5
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_margin_top	0.196527779102325
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_oddpages	true
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_orientation	0
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_page_delay	50
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_data	9
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_height	297
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_id	9
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_name	
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_size_unit	1
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_paper_width	209.9
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_resolution	600
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_reversed	false
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_scaling	0.9
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_shrink_to_fit	false
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_to_file	false
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_unwriteable_margin_bottom	17
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_unwriteable_margin_left	17
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_unwriteable_margin_right	17
+print.printer_HP_Color_LaserJet_CP2025n_UPD_PS.print_unwriteable_margin_top	17
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_bgcolor	false
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_bgimages	false
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_duplex	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_edge_bottom	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_edge_left	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_edge_right	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_edge_top	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_evenpages	true
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_footercenter	
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_footerleft	&PT
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_footerright	&D
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_headercenter	
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_headerleft	&T
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_headerright	&U
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_in_color	true
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_margin_bottom	0.5
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_margin_left	0.5
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_margin_right	0.5
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_margin_top	0.5
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_oddpages	true
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_orientation	0
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_page_delay	50
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_paper_data	9
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_paper_height	-1.00
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_paper_name	
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_paper_size_unit	1
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_paper_width	-1.00
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_resolution	600
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_reversed	false
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_scaling	1.00
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_shrink_to_fit	true
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_to_file	false
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_unwriteable_margin_bottom	20
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_unwriteable_margin_left	17
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_unwriteable_margin_right	17
+print.printer_NPI0F75EE_(HP_Color_LaserJet_CP2025n).print_unwriteable_margin_top	20",0,0,0,,,,Windows 10 (up to date),
+1501061,2025-03-22T18:51:25.758096Z,2025-03-24T07:06:38.570224Z,nl,thunderbird,E-mailadressen koppelen,False,,,False,1720661,1720661;,import-and-export-settings,thunderbird;import-and-export-settings;,adri.huijgens,"<p>Beste Thunderbird-gebruiker,  Hoe kan ik adressen die ik al heel lang gebruik met Thunderbird op mijn pc overzetten naar de opnieuw geïnstalleerde laptop? Alle e-mailberichten - zowel binnengekomen als verzonden e-mailberichten zijn wel gekoppeld.  Dus, hoe kan ik al de door mij al jaren bij Thunderbird in gebruik zijnde e-mailadressen overzetten op Thunderbird op mijn laptop? </p>",adri.huijgens;markh2;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 CCleaner/133.0.0.0",1,0,0,,,,,
+1501064,2025-03-22T19:13:37.745467Z,2025-05-05T12:10:10.636219Z,en-US,thunderbird,printer problem,False,,,False,1730215,1720409;1730215;,connectivity,thunderbird;needsinfo;customization;connectivity;,huskinf1,"<p>I have an hp printer. I use windows 11.   When i go to print on Thunderbird it sends me to ""documents"" . I checked that the printer is working and it is.  I do not know what to do when it shows ""documents""  Help </p>",huskinf1;davidsk;printertales;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0",2,0,1,,,,,
+1501068,2025-03-22T19:44:31.393388Z,2025-03-22T21:41:48.328242Z,en-US,thunderbird,Items going to junk in error -- even though I have corrected them for several months,False,,,False,1720414,1720414;,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,jrlott,<p>Why do emails from Rumble keep going into junk folder?  I have been correcting these individually for several months but they still go into junk mail.  Hope this isn't a political issue.  R. Malott </p>,jrlott;sfhowes;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,0,,,,,
+1501083,2025-03-22T21:57:52.667344Z,2025-03-23T16:46:13.172664Z,en-US,thunderbird,Suddenly can't send or receive gmail emails,True,1720535,nancyrtague,False,1720535,1720416;1720448;1720535;,send-and-receive-email,thunderbird;send-and-receive-email;,nancyrtague,<p>Yesterday afternoon emails suddenly stopped going out. I sent an email successfully at 2:18 p.m. At 2:57  p.m. I couldn't get anything to send. Today the problem persists. </p><p>I have not changed anything. My roommate also uses Thunderbird and has not had any problem. I've compared my settings to hers and they seem to be the same. I have closed and reopened Thunderbird with no improvement. </p><p>I'm using Thunderbird 128.8.1esr (64 bit). I'm including images of the error message and the server settings. </p><p>Thanks for any help. Nancy </p>,nancyrtague;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36;solver_id:6582419",3,0,0,,,wsmwk,,
+1501091,2025-03-22T23:39:33.477367Z,2025-03-23T10:39:42.411650Z,en-US,thunderbird,not getting my emails to xxx@ultrameche.com,False,,,False,1720481,1720481;,email-and-messaging,thunderbird;email-and-messaging;,ann37clark,"<p>I am not getting my emails to <a href=""mailto:xxx@ultrameche.com"" rel=""nofollow"">xxx@ultrameche.com</a> </p>",ann37clark;christ1;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0,1,0,8,,,wsmwk,,
+1501092,2025-03-22T23:41:27.006456Z,2025-04-01T11:41:43.858979Z,en-US,thunderbird,subfolders are not fetched,True,1721001,Toad-Hall,False,1722526,1720456;1720499;1720501;1720509;1720517;1720554;1720573;1720585;1720697;1720738;1720868;1720923;1720940;1720968;1721001;1721957;1722022;1722024;1722025;1722028;1722029;1722031;1722033;1722035;1722069;1722086;1722130;1722526;,send-and-receive-email,thunderbird;send-and-receive-email;,BjornEnemark,"<p>To my new computer Thunderbird has just fetched the INBOX-mails from the IMAP-server, not my many subfolders, not the SENT-folder, not the SPAM-folder.  This has previously worked when I changed to a new computer.  How do I get Thunderbird to transfer these mails. </p>",BjornEnemark;siffemoz;davidsk;robert.funnell;dreamworksresume;mozilla98;Toad-Hall;,True,False,False,";solver_id:444603;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0;kb_visits_prior:[""/da/kb/profiler-i-thunderbird""]",27,0,0,,,,,

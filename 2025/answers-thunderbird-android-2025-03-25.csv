@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1721221,1501645,2025-03-26T14:36:28.728438Z,2025-03-26T14:36:28.728446Z,"<p>I am not sure what you mean. Do you mean that after you delete or move a message, you want message pane to show the next message automatically? If that is the case, then the following steps might be helpful: ""Settings"" &gt; ""General settings"" &gt; ""Interaction"" &gt; ""After deleting or moving a message"" &gt; choose ""Show next message"". </p>",Yu5tiqX9og,False,0,0
