@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1690798,1476372,2024-11-29T13:27:38.885337Z,2024-11-29T13:27:38.885343Z,"<p>I think now,  it's a Problem of GMX. </p>",3yabeeyabeeyabee,False,0,0
+1691701,1476372,2024-12-03T05:55:08.295379Z,2024-12-03T05:55:08.295385Z,"<p>Check GMX webmail, re-add the GMX account in Thunderbird, and verify IMAP/SMTP settings. </p>",graceava466,False,0,0
+1693858,1476372,2024-12-12T05:36:16.730757Z,2024-12-12T05:36:16.730762Z,"<p>If your TBMobile mailboxes on GMX are inaccessible, ensure your account is active and credentials are correct. Check GMX's IMAP/SMTP settings in your email client and verify no server outages. Reconnect or reconfigure the account if needed. </p>",graceava466,False,0,0

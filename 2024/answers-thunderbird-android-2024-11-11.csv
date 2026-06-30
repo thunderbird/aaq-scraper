@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1687295,1473860,2024-11-11T15:42:18.402627Z,2024-11-11T15:42:18.402632Z,<p>why my vpn failed? </p>,oh3mjq,False,0,0
+1687672,1473699,2024-11-13T18:10:26.202834Z,2024-11-13T18:10:26.202841Z,"<p>Long press message to select it, click on 3 dots in upper right, select ""spam"" </p>",bug67,False,1,13
+1705798,1473699,2025-01-22T21:58:23.368946Z,2025-02-19T16:09:28.774376Z,"<p>Apparently, marking messages as spam in TforA doesn't ""learn"" I keep getting barraged daily. </p>",bug67,False,0,0
+1728986,1473699,2025-04-29T15:47:44.339373Z,2025-04-29T15:47:44.339379Z,"<em><p>bug67 <a href=""#answer-1687672"" rel=""nofollow"">said</a></p></em> <blockquote>Long press message to select it, click on 3 dots in upper right, select ""spam"" </blockquote> <p>Spam doesn't seem to be an option, there. </p>",NormanRT,False,1,0

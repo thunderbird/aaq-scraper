@@ -1,0 +1,591 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1474282,2024-11-14T00:09:42.206723Z,2024-11-14T10:02:35.069036Z,en-US,thunderbird,Thunderbird,False,,,False,1687780,1687780;,accounts,thunderbird;accounts;,harvey.burian,"<p>I use Thunderbird client on both my PC (Windows 11 64-bit) and have Thunderbird 128.4.3 esr (64-bit) installed. I have a number of GMail accounts, one of which is a former TELUS email account which was transferred to a corporate GMail account several years ago.  When the account was first transferred I was able to add it to the Thunderbird client on both my PC and my MacBook Pro with no difficulty.  It continues to easily added and to work on the TB client on my MacBook Pro but I have been unable to add it to the more recent versions of Thunderbird on my PC using exactly the same settings.  I have tried allowing TB to fill in the settings and to do a manual install.  In both cases the error message is the same ... that either the <strong>account name or password is incorrect</strong>, neither of which is the case, since I have tried numerous times. </p><p>Am I missing something such as an extra step that now needs to be done on the PC version that doesn’t on the Mac version?  Could there a reason the TELUS/GMail account in question could be added on older versions of Thunderbird but not on more recent versions?   Regular GMail accounts can be added with no difficulty. Thanks for any assistance you may provide.  For the moment I have set my GMail account for the TELUS email to be forwarded to one of my regular GMail accounts (which add with no difficulty) on Thunderbird on my PC so I am able to receive the mail but I’m sure there must be a way to have the TB client be able to add the TELUS/GMail account directly. </p>",harvey.burian;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,0,,,wsmwk,,
+1474288,2024-11-14T01:04:16.153190Z,2024-11-14T01:44:22.233587Z,en-US,thunderbird,Email message created and sent to my Thunderbird er.,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,gaburton,"<p>I send and receive messages from Thunderbird using port 465 no problem, when PowerShell sends me a message using port 587 it fails with error message ""need to authenticate"" and I have no idea how to fix it. </p>",gaburton;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",0,0,0,,,gaburton,,
+1474289,2024-11-14T01:05:42.579729Z,2024-11-14T01:05:42.579735Z,en-US,thunderbird,we are having problems with sending and receiving emails under sales@phywe.com.au with our Laptop,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,sales454,"<p>we are having problems with sending and receiving emails under <a href=""mailto:sales@phywe.com.au"" rel=""nofollow"">sales@phywe.com.au</a> with our Laptop we can only see the emails on our mobile </p>",sales454;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",0,0,0,,,,,
+1474294,2024-11-14T01:45:14.634856Z,2024-11-14T01:45:14.634861Z,en-US,thunderbird,Get new messages not working.,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,rous.jimmy,<p>When I open or try and get new messages nothing happens. I can send messages no problem all the server info is correct. It just does nothing. </p>,rous.jimmy;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",0,0,0,,,,,
+1474296,2024-11-14T02:58:38.593158Z,2024-11-14T02:58:38.593165Z,en-US,thunderbird,Thunderbird does not check online accounts per the schedule,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,rd4web,"<p>Hi, I'm running Thunderbird 128.4.3esr on Windows 10. It does not consistently automatically check my yahoo and gmail accounts at the configured intervals, every 10 minutes. I'll have e-mails I see on my phone from 6 hours ago that are not in Thunderbird unless I either restart or click on the little cloud Get Messages icon for that account. I never had this problem with Thunderbird on my old Windows 8.1 machine, which I only recently stopped using. </p><p>Any suggestions? </p><p>Thanks, Ross </p>",rd4web;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474299,2024-11-14T03:44:57.111978Z,2024-11-14T03:44:57.111982Z,en-US,thunderbird,We can not send or receive emails for sales@phywe.com.au,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,sales454,"<p>We can not send or receive emails for <a href=""mailto:sales@phywe.com.au"" rel=""nofollow"">sales@phywe.com.au</a> </p>",sales454;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",0,0,0,,,,,
+1474300,2024-11-14T03:46:22.383750Z,2024-11-14T05:02:29.288802Z,en-US,thunderbird,Autocomplete not working,True,1687761,wsmwk,False,1687761,1687761;,email-and-messaging,thunderbird;email-and-messaging;,norman.oslik,"<p>Recently my To line autocomplete stopped working. When I disabled cardbook, autocomplete works. Re-enabling cardbook causes it to fail. Rebooting doesn't solve it either.  I'm running TB 128.4.3 on Win 11, Cardbook  97.1. Any suggestions welcome. Norman </p>",norman.oslik;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0;solver_id:6281144,1,0,1,,,,,
+1474311,2024-11-14T07:31:26.908846Z,2024-11-16T19:32:59.720124Z,en-US,thunderbird,Je n'arrive pas à envoyer des mails,False,,,False,1688289,1688289;,email-and-messaging,thunderbird;email-and-messaging;,angel.garcia10432,<p>Je n'arrive pas à envoyer des mails et mon courrier entrant va directement dans la corbeille </p>,angel.garcia10432;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,0,,,,,
+1474313,2024-11-14T07:48:37.217001Z,2024-11-18T19:09:53.854289Z,es,thunderbird,Iconos duplicados en la barra vertical herramientas de espacios Thunderbord Nebula 128.4.3,False,,,False,1688743,1688368;1688594;1688743;,settings,thunderbird;settings;,kin.bcn,"<p>Hola buenos días. </p><p>Desde hace unos días, los iconos de addons instalados en Thunderbird Nebula, aparecen en la barra vertical de herramientas de espacios, duplicados (ver imagen 1) </p><p>He desinstalado esos addons, reiniciado el Thunderbird y al volverlos a instalar, vuelven a salir duplicados. </p><p>¿Alguien sabe cómo gestionar estos iconos? </p><p>Mi SO es Windows 11 Pro de 64 bits y la versión del Thunderbird es la 128.4.3 esr 64 bits (imagen 2) </p><p>Gracias. </p>",kin.bcn;pcp04;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,3,0,0,,,,,
+1474314,2024-11-14T07:51:54.549660Z,2024-11-16T23:38:40.702920Z,es,thunderbird,No me deja enviar correos,False,,,False,1688361,1688361;,email-and-messaging,thunderbird;needsinfo;email-and-messaging;,adeainhoasanchis,"<p>Me pide una contraseña, cuando la pongo no me la reconoce y me pide que cree otra contraseña. No me deja enviar correos pero si recibirlos. </p>",adeainhoasanchis;pcp04;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474315,2024-11-14T07:52:58.889474Z,2024-11-14T07:56:28.244805Z,it,thunderbird,Problemi con Posta in entrata,False,,,False,1687772,1687772;,email-and-messaging,thunderbird;needsinfo;email-and-messaging;,corrado6,"<p>Buongiorno Ho rivevuto un'email dove il cliente mi specificava alcune cose importanti evidenziate, purtroppo la dicitura dell'email non aveva nessun evidenziatore, mentre quella del mio collega accanto si. Come posso risolvere il problema? Grazie Corrado </p>",corrado6;@next;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474316,2024-11-14T08:05:38.790637Z,2024-11-16T19:36:03.053823Z,en-US,thunderbird,perdu mot de passe thuberdid,False,,,False,1688293,1688293;,email-and-messaging,thunderbird;email-and-messaging;,leverriermuriel9,<p>perdu messagerie thunberdib </p>,leverriermuriel9;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",1,0,0,,,,,
+1474318,2024-11-14T08:32:24.287561Z,2024-11-16T19:40:19.574409Z,en-US,thunderbird,Anfrage,False,,,False,1688297,1687847;1688297;,installation-and-updates,thunderbird;installation-and-updates;,ubs-penny,<p>Habe vor ein paar tagen Thunderbird gekauft. Warum kommt immer noch die Spenden-Seite? </p>,ubs-penny;christ1;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",2,0,0,,,,,
+1474320,2024-11-14T08:56:28.594420Z,2024-11-16T15:23:10.480328Z,it,thunderbird,Mail cancellate non vanno nel cestino,False,,,False,1688211,1687938;1688173;1688211;,settings,thunderbird;settings;,giulianoangelettitaggia,"<p>Buongiorno, </p><p>ho programmato diverse caselle di posta  come es.:   <a href=""mailto:nome@oragroup.it"" rel=""nofollow"">nome@oragroup.it</a>  sul programmaThunderbird, </p><p>ora quando cancello le mail queste non vanno a finire nel cestino. </p><p>domande:  </p><p>- Sono recuperabili ? </p><p>- c'è modo di averle nel cestino  </p><p>- E' un problema di configurazione di Aruba mail o di Thunderbird ? </p><p>Grazie mille </p>",giulianoangelettitaggia;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",3,0,1,,,,,
+1474321,2024-11-14T09:02:05.771272Z,2024-11-16T17:31:20.457111Z,en-US,thunderbird,Problem to open Thunderbird,True,1688218,mud.fischer1,False,1688243,1687789;1687813;1687816;1687820;1687824;1688218;1688221;1688239;1688243;,installation-and-updates,thunderbird;installation-and-updates;,mud.fischer1,"<p>Dear Sir or Madam, </p><p>I need your help. </p><p>My Thunderbird shortcut no longer opens. The shortcut C:/Online/Thunderbird is empty. The folder no longer exists and my Thunderbird can no longer be found after an update on November 1. </p><p>I can still find Thunderbird version 128.4.0 260MB from 1.11.24 and my old profile from 7.11. under Windows Programe. </p><p>What can I do to get my Thunderbird back? Reinstall Thunderbird and integrate the profile? </p><p>I haven't actively deleted the program and can't remember updating it. </p><p>I was just able to save the profile to a USB stick. </p><p><br> Many thanks in advance for your efforts </p><p><br> German Kann die Verknüpfung von Thunderbird nicht mehr öffnen. Diese ist nicht mehr auffindbar.. Mein Thunderbird ist wohl nach einem Update am 1.11. nicht mehr auffindbar. Finde unter Programe Thunderbird Version 128.4.0 260MB vom 1.11.24 und mein alten Profil vom 7.11. noch. Was kann ich tun um mein Thunderbird wieder zu erhalten? Neu installieren und das Profil einbinden? Habe aktiv das das Programm nicht gelöscht und kann mich an ein Update auch nicht erinnern.. Konnte das Profil gerade auf einen USB-Stick sichern </p>",mud.fischer1;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0;solver_id:6280448,9,0,0,,,,,
+1474324,2024-11-14T09:28:58.947613Z,2024-11-16T19:39:39.531725Z,en-US,thunderbird,neue Nachricht automatisch verfassen aus Vorlage ein klick auf Email,False,,,False,1688296,1688296;,email-and-messaging,thunderbird;email-and-messaging;,ags-e,"<p>Mozilla Thunderbird 128.4.2esr (64-Bit) und Windows 10  </p><p>German </p><p>Guten Tag, Wir haben Listen mit verschiedenen Emails von unseren Lieferanten. Und erstellen immer verschiedene Vorlagen. Gibt es eine Möglichkeit wie man die Email nur einmal anklickt und diese dann automatisch eine Email aus der Vorlage verfasst. Das heist ein mal klicken auf die Email und Mozilla Thunderbird verfasst direkt die Email aus der Vorlage mit Betreff. </p><p>Natürlich wenn möglich ohne AddOn. </p><p>Danke  </p><p>Viele Grüße </p><p>Stef </p>",ags-e;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474325,2024-11-14T09:38:09.958092Z,2024-11-14T12:19:26.233848Z,en-US,thunderbird,Passwords,False,,,False,1687787,1687787;,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,ltpy777.bruce,"<p>I have a working version of Thunderbird on my desktop, but I cannot find the password it uses to access Gmail, so that I can use it to access Gmail via Thunderbird on my new laptop? </p><p>This email is being written from my desktop because I cannot sign in to use Thunderbird for my current and only {legally limited) email account, because I cannot open a new email account lawfully. </p>",ltpy777.bruce;davidsk;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474328,2024-11-14T10:07:40.635383Z,2024-11-14T10:07:40.635388Z,en-US,thunderbird,Bulk folder,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,SafeTex,"<p>Hello </p><p>I have emails going into ""bulk"" email and I've read previous replies on this subject that the bulk folder is created by the email platform, in my case ymail, and if it's an IMAP account. </p><p>Firstly, there is no ""bulk"" folder on Ymail if I access it directly. </p><p>Secondly, the message says ""Thunderbird thinks this is bulk email"" (not Ymail thinks...) </p><p>Thirdly, I keep telling Thunderbird which emails are not ""bulk email"" to train its adaptive junk mail feature but the problem persists </p><p>Finally, I also have junk filtering set up to move ""spam"" into my inboxes if the sender is in my address book, and I've set up multiple filter rules to try filtering, both before and after junk classification, any emails sent by a sender in my address book into the Inbox. </p><p>Nothing works though </p><p>Can anyone help please? </p>",SafeTex;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474329,2024-11-14T10:17:47.982072Z,2024-11-14T14:42:58.285282Z,en-US,thunderbird,email accounts order,False,,,False,1687798,1687798;,settings,thunderbird;settings;,macmalmac,"<p>I follow the instructions, i.e. I go to the account configuration and move individual accounts as I wish, i.e. I move some to the top and others down. Unfortunately, there is no ""save settings"" option. Therefore, nothing changes and as soon as I exit the ""account configuration"" window, everything is exactly as it was before the change. What am I doing wrong? </p>",macmalmac;nathsmith;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0",1,0,1,,,,,
+1474331,2024-11-14T10:40:33.681689Z,2024-11-14T10:40:33.681692Z,en-US,thunderbird,External Content Not Displaying Despite Settings (Thunderbird 128.4.3esr 64-Bit),False,,,False,,,privacy-and-security,thunderbird;privacy-and-security_1;,scoop3,"<p>Hello everyone, </p><p>Since updating to the latest version 128.4.3esr (64-bit), I’m having trouble with external content not displaying in emails. Even though I’ve enabled the option under ""Privacy"" &gt; ""Email Content"" &gt; ""Allow Remote Content in Messages"", external content is still generally blocked. </p><p>Every time I receive a new email, I get the message: ""To protect your privacy, Thunderbird has blocked remote content in this message."" </p><p>In the previous version, this worked without any issues, and I didn’t have to manually allow content for each email. Does anyone have an idea what could be causing this, or is this perhaps a bug in the current version? </p><p>Thanks in advance for any help! 😊 </p>",scoop3;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474333,2024-11-14T10:44:46.920628Z,2024-11-14T10:44:46.920634Z,en-US,thunderbird,Thunderbird sometimes not sending,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,bobgarrett,"<p>A strange problem... On a few occasions I have had a situation where and an email sent using the Thunderbird app under Windows 10 from an IMAP account appears to have been sent but not received. On investigation the email has been moved into the local Sent folder but when looking on Webmail on the server it is not in the Sent folder there. Other emails sent the same day are. I get no error messages. I don't know the order in which the emails are processed but could it be that there is some failure in the process , but how and why? </p>",bobgarrett;,True,False,False,";useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474335,2024-11-14T10:53:47.765638Z,2024-11-15T08:52:32.151957Z,en-US,thunderbird,"Great problem to navigate back after sending/reading e-mail, checking enclosed and so on.",False,,,False,1687946,1687946;,performance-and-connectivity,thunderbird;performance-and-connectivity;,oj5,"<p>Great problem to navigate back after sending/reading e-mail, checking enclosed and so on. Waiting up to 5, 7 minutes to get back in business. </p><p>Regards Oystein Johnsen [edited phone number from public] </p>",oj5;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",1,0,0,,,James,,
+1474337,2024-11-14T11:14:57.740359Z,2024-11-14T11:14:57.740365Z,en-US,thunderbird,received this e-mail,False,,,False,,,privacy-and-security,thunderbird;privacy-and-security_1;,ghe.friedrich,"<p>today I received an email from: <a href=""mailto:us12-2d273f8776-cfeb1423f1@inbound.mailchimpapp.net"" rel=""nofollow"">us12-2d273f8776-cfeb1423f1@inbound.mailchimpapp.net</a> I am not sure, if this email is spam? </p>",ghe.friedrich;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474338,2024-11-14T11:16:08.985602Z,2024-11-14T11:16:08.985607Z,en-US,thunderbird,The Message Pane has gone to full screen.    v 115.16.2(32bit) win 8.1,False,,,False,,,settings,thunderbird;settings;,rexwatson1,"<p>While deleting blocks of inbox messages the screen view suddenly went to full screen. By this i mean i have the menu bar at the top and the space bar on the left, the rest of the screen is the actual message that was originally highlighted. (i suspect fat finger syndrome and extra keys pushed) but i can not get back to the classic view even though it is ticked in the view/layout menu no matter what i try. all possibilties in the view menu explored, app restarted just came back to full screen. i have searched help database and cant find anything else to try. To all intents it is locked on this screen and i cant find a way out. </p>",rexwatson1;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",0,0,0,,,,,
+1474339,2024-11-14T11:18:22.397674Z,2024-11-14T11:18:22.397678Z,en-US,thunderbird,I seem to have deleted an important draft e-mail - is there any way I can retrieve it? It's not in my deleted box...,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,rm25,<p>As above! </p>,rm25;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474340,2024-11-14T11:44:01.622448Z,2024-11-15T21:22:21.417396Z,es,thunderbird,Cuenta gmail en Thunderbird,False,,,False,1688091,1688091;,email-and-messaging,thunderbird;email-and-messaging;,abrotes,"<p>Buenos dias y gracias por ayudar. Mi cuenta gmail ha dejado de sincronizarse en Thunderbird desde el día 17 de septiembre. He intentado encontrar el motivo y no lo he conseguido,  Necesito ayuda por favor </p><p>Gracias Ana </p>",abrotes;pcp04;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,1,,,,,
+1474341,2024-11-14T11:44:08.427045Z,2024-11-15T10:04:06.415642Z,it,thunderbird,Mal funzionamento App Thunderbird Desktop,False,,,False,1687956,1687783;1687939;1687941;1687943;1687955;1687956;,email-and-messaging,thunderbird;email-and-messaging;,sergio.parro,"<p>Buongiorno, chiediamo la risoluzione alla seguente problematica: mail <a href=""mailto:sergio.parro@autobencivenni.com"" rel=""nofollow"">sergio.parro@autobencivenni.com</a> mal funzionante! Non riceve/invia alcuna mail e quando si prova a aggiornare la casella postale (tramite F5), duplica/triplica mail precedenti. </p><p>Potete risolvere con estrema urgenza questo problema essendo una mail di lavoro? Rimango in attesa di cortese riscontro, grazie. </p><p>Cordiali saluti. </p>",sergio.parro;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",6,0,0,,,,,
+1474342,2024-11-14T11:57:40.328882Z,2024-11-14T11:57:40.328887Z,en-US,thunderbird,folders disappeared,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,chandi1,<p>Some of my folders in my Thunderbird program have disappeared. I have no idea why. Is there any way to recover them? </p>,chandi1;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15",0,0,0,,,,,
+1474346,2024-11-14T12:12:15.194213Z,2024-11-14T12:16:50.348204Z,hu,thunderbird,Thunderbird 128.4.3esr (64-bit) problema,False,,,False,1687786,1687786;,email-and-messaging,thunderbird;email-and-messaging;,fodorarpi,"<p>Jo napot kivanok! Sajnos a legfrissebb ujitassal valami elromlott a Thunderbird programban, azokat az emailokat amelyeket lattam edig egy par eltunt, pontosabban a szoveg resze. A csatolmany megmaradt de hogy kitol jott es a subject es benne a szoveg nem latszik!!! A webes feluleten leelenoriztem es ott minden rendben lathato. Mi a teendo? </p>",fodorarpi;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474347,2024-11-14T12:31:41.409274Z,2024-11-14T18:14:57.818544Z,en-US,thunderbird,Empty trash on exit works only if I've checked out trash before,False,,,False,1687826,1687800;1687826;,settings,thunderbird;settings;,charles.rozier,"<p>Hello all, </p><p>I've spent some time testing and trying to figure this out myself but without success. Epic fail some would say. </p><p>I'm running Thunderbird 128.4.3esr (64 bits) under Rocky Linux 8.10 (Green Obsidian) installed via Flatpak (Mozilla Thunderbird Flatpak en-US, thunderbird-flatpak - 1.0). </p><p>I have multiple IMAP accounts all set to empty trash on exit. </p><p>When I quit Thunderbird, I can see the actions it's performing in the bottom right among which I do read « Corbeille vidée » (trash cleared) for each account. But these trashes are not actually emptied. </p><p>I first thought it was not working at all but after more testing it seems like it does work but only for the trash that I've looked into before leaving the app (click on trash in the sidebar to display the message list it contains). </p><p>If I remember correctly it was working fine when installed from Rocky repo. </p><p>If anyone has any idea on the why and, even better, has a solution, that would be great. </p><p>Regards, Charles </p>",charles.rozier;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0,2,0,0,,,,,
+1474348,2024-11-14T12:50:31.182883Z,2024-11-14T13:59:50.829124Z,en-US,thunderbird,Changing IMAP and SMTP Servers,False,,,False,1687796,1687796;,accounts,thunderbird;accounts;,david869,"<p>Hi there, </p><p>We use Thunderbird for all of our business email and have done for several years.  Therefore, we have many email accounts and subfolders in Thunderbird.  If we change hosting provider (servers), can I simply change the server settings and password for each email?  and if so, will it delete of the emails that are displayed in thunderbird?  We want to keep the same email addresses.  Is there any way do save all emails and folder etc. to the thunderbird program?  All emails are connected via IMAP.  I would appreciate some advice on how to approach this. </p><p>Many thanks! </p><p>David Wilde </p>",david869;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,0,,,,,
+1474349,2024-11-14T12:51:32.382963Z,2024-11-14T13:31:29.332599Z,cs,thunderbird,Seká se,False,,,False,1687794,1687793;1687794;,email-and-messaging,thunderbird;email-and-messaging;,jarda.nevecny,"<p>Thunderbird používám už několik let i jsem posílal příspěvky, ale co teď dělá?  Mám tam asi 6 adres a od rána se seká takovým způsobem, že než otevřu 1 zprávu, trvá to přes minutu. Četl jsem něco o indexování. Opravdu je možné , že indexování probíhá už několik hodin v dopoledních hodinách? </p>",jarda.nevecny;Ansamb;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",2,0,0,,,,,
+1474350,2024-11-14T12:55:32.878174Z,2024-11-14T12:55:32.878179Z,en-US,thunderbird,find messages,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,daniel.vezzio,<p>Thunderbird doesn't find messages but they in folders! Help! </p>,daniel.vezzio;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474352,2024-11-14T13:00:30.521103Z,2024-11-19T11:11:27.242849Z,es,thunderbird,No se puede guardar el mensaje en el buzón de correo. Compruebe que tiene permiso de escritura en el directorio y suficiente espacio en disco para copiar el buzón de correo.,False,,,False,1688858,1688094;1688858;,accounts,thunderbird;accounts;,perezrayajoseluis,"<p>Pues llevo apenas un año usando Thunderbird con mi correo de hosting Cpanel, y ahora sale este error. He creado 2 carpetas para sacar los correos más viejos y dejar la carpeta de entrada con menos, y luego compacte. A pesar de hacer esto el error sigue saliendo, no sé que más hacer para recibir los emails. </p><p>Gracias </p>",perezrayajoseluis;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",2,0,1,,,,,
+1474353,2024-11-14T13:04:29.359803Z,2024-11-17T09:00:14.762019Z,en-US,thunderbird,Thunderbird 128.4.2esr on KDE Neon Extremely slow to launch,False,,,False,1688420,1688319;1688420;,installation-and-updates,thunderbird;installation-and-updates;,arddix2,<p>Since the latest update Thunderbird is extremely slow to launch the mail pane always comes up with no messages for about 7 seconds after that it works but is often not very responsive Why ?? I have disabled all add-on's and recreated the msf files </p>,arddix2;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",2,0,2,,,,,
+1474362,2024-11-14T13:53:58.566395Z,2024-11-14T19:00:18.404235Z,en-US,thunderbird,Thunderbird mobil for Andriod,False,,,False,1687846,1687846;,email-and-messaging,thunderbird;email-and-messaging;,cdsobczak,<p>How To Import from Thunderbird Desktop </p><pre>   Open Thunderbird Desktop and click ≡ &gt; Tools &gt; Export for Mobile.     </pre> <p>The Export to mobile doesn't show up on my desktop  Thunderbird Desktop is up to date   </p><p>Any suggestions as to how to import desktop to android? </p>,cdsobczak;christ1;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474363,2024-11-14T13:55:53.865027Z,2024-11-14T13:55:53.865033Z,en-US,thunderbird,Betterbird unable to recover corrupt Thunderbird profile; keeps downloading messages,False,,,False,,,installation-and-updates,thunderbird;installation-and-updates;,rsbrux,"<p>Having already experienced terminal problems with Thunderbird under Ubuntu Studio 22.04 LTS, I opted to install Betterbird  115.17.0-bb35 (flatpak)  in my fresh installation of Ubuntu Studio 24.04.1 LTS. I followed the instructions in the README on github to migrate my 9.5GB non-flatpak Thunderbird profile to betterbird.  However, betterbird spent hours re-downloading everything.  On every subsequent start, the downloading starts over again form scratch. In addition, the numerous folders that I had under Local Folders are gone.  Instead, there is one folder which contains a bunch of messages that do not belong there. I have tried numerous workarounds from various sources on the web.  My last experiment consisted of starting betterbird with the ""-purgecaches"" option using a profile made by copying my old Thunderbird profile but excluding: </p> <ul><li> everything with ""cache"" in the name </li><li> all .msf files </li><li> all empty files and directories </li></ul> <p>However, the results were the same.   Unfortunately, I don't have a recent enough backup of the profile to be useful. The profile contains only IMAP accounts and Local Folders. What is the best way to get a working new profile containing as much as possible of the data form the old one? </p>",rsbrux;,True,False,False,;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474364,2024-11-14T14:21:01.838044Z,2024-11-14T14:21:01.838049Z,en-US,thunderbird,Since thunderbird upgraded to 128.3.3esr I can save template,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,kitchenwine,"<p>Thunderbird was upgraded to 128.3.3esr. Since the upgrade I can not save edits to existing templates.  I can't create new templates.  When you choose save, template it acts like it saved but the edited template is not in the template folder. When I test with creating a new template it is not in the template folder. </p><p>tia Mary </p>",kitchenwine;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474367,2024-11-14T14:48:49.818038Z,2024-11-14T15:14:23.073583Z,en-US,thunderbird,Re installing,False,,,False,1687803,1687803;,installation-and-updates,thunderbird;installation-and-updates;,qualityllc,"<p>I had trouble with Thunderbird being slowwwww,  so I uninstalled and have been trying to reinstall but now I get warnings that it can't complete the installation.  The images show the pop ups I get about something not being right. </p>",qualityllc;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,1,,,,,
+1474368,2024-11-14T14:51:35.230973Z,2024-11-14T14:51:35.230979Z,en-US,thunderbird,Can't get into my Thuderbird Email.,False,,,False,,,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,kectumble,"<p>Got a pop up saying to enter a password on my email. Nothing worked. Log story short - contacted Comcast (my carrier) and they had me delete my email from Thunderbird and try to ""add an exsiting email account"" -access is always denied. Can someone please help. Thank you </p>",kectumble;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474369,2024-11-14T14:57:58.401630Z,2024-11-14T15:11:34.929944Z,en-US,thunderbird,email,False,,,False,1687802,1687802;,email-and-messaging,thunderbird;email-and-messaging;,kennethdotsey,<p>I am wondering being as I just want to delete all the emails in the junk folder is it possible to delete them all at once or do I have to do each email separately? </p>,kennethdotsey;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Thunderbird/128.4.3,1,0,0,,,,,
+1474371,2024-11-14T15:11:27.649754Z,2024-11-14T15:11:27.649759Z,en-US,thunderbird,Chats and Motd are not displayed,False,,,False,,,performance-and-connectivity,thunderbird;performance-and-connectivity;,woddy,"<p>Greetings everyone, </p><p>since the upgrade to 128, chats and the motd from the IRC server are only displayed sporadically. I had hoped that this would be fixed in one of the updates, but so far this is not the case. Sometimes nothing is displayed when opening Thunderbird, sometimes only the chats (chat rooms) and sometimes a motd of the IRC server. Maybe someone can help me fix this so that everything is displayed as usual again. </p><p>I am using Thunderbird version 128.4.3esr (64-bit) under Windows 10 Pro 22H2 with Windows Defender. The settings for the chat, that it is connected and that there are also unread messages that are not displayed, I put in the attachment. </p>",woddy;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474373,2024-11-14T15:22:28.965767Z,2024-11-15T15:23:00.828823Z,nl,thunderbird,"""De laatste Thunderbird upgrate van november, krijg ik niet geïnstalleerd.""",False,,,False,1688021,1688021;,email-and-messaging,thunderbird;email-and-messaging;,herman-evers,"<p>Beste Mark, </p><p>Bedankt voor je snelle reactie op mijn vraag om Thunderbird weer berichten doen ophalen van de mailserver <a href=""http://Outlook.com"" rel=""nofollow"">Outlook.com</a>.  Helaas is géén verbetering opgetreden. Nieuwe berichten worden nog niet geladen in Postvak IN van Thunderbird. Telkens wordt gevraagd om nieuw wachtwoord in te voeren. De reden is mij niet duidelijk, omdat Outlook webmail wél met het zelfde/oude gebruikelijke wachtwoord werkt. Dit bericht was daarom alleen mogelijk op te stellen en te  verzenden in de webmail versie(helaas). </p><p>Groet Herman Evers </p>",herman-evers;markh2;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Norton/130.0.0.0",1,0,0,,,,,
+1474374,2024-11-14T15:23:25.216568Z,2025-05-12T00:47:29.231330Z,en-US,thunderbird,Changed email address,False,,,False,1731870,1687814;1731857;1731870;,email-and-messaging,thunderbird;email-and-messaging;,janicemjackson23,"<p>My email address has changed from&lt;<a href=""mailto:jackson@myestespark.com"" rel=""nofollow"">jackson@myestespark.com</a>&gt; TO: &lt;<a href=""mailto:janicemjackson23@gmail.com"" rel=""nofollow"">janicemjackson23@gmail.com</a>&gt;  I have lost all of my address book from the original address~~~I thought everything as recoverable? Not so, according to the Guru's I hired at some cost! Janice <strong>bold text</strong> </p>",janicemjackson23;davidsk;timbernie;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,3,0,0,,,,,
+1474376,2024-11-14T15:49:27.777448Z,2024-11-15T08:31:11.588585Z,nl,thunderbird,NIEUWE PC AANGESCHAFT,False,,,False,1687942,1687942;,accounts,thunderbird;accounts;,j.overhand,"<p>Hallo, IK heb nieuwe pc aangeschaft en wil mijn opgeslagen mails overzetten naar thunderbirds op mijn nieuwe pc, nadat ik natuurlijk thunderbirds opnieuw heb geinstalleerd.  Ik heb al gekeken onder de ""help"" functie maar daar wordt ik niet veel wijzer van.  Hoe kan ik dit het beste doen ?? </p><p>Jan Overhand </p>",j.overhand;Mozilla-assistent;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,0,,,,,
+1474377,2024-11-14T16:02:33.399637Z,2024-11-14T18:57:56.303040Z,en-US,thunderbird,error msg:  invalid format for plain response,False,,,False,1687845,1687812;1687845;,email-and-messaging,thunderbird;email-and-messaging;,paladin1,"<p>Using Thunderbird (and LOVE it!!!.)  Not sure what happened but on one of my accounts I started getting the message when I checked for email: </p><p>""Sending of username did not succeed.  Mail server [server name] responded: invalid format for plain response.  "" </p><p>I have 2 other email accounts on that same server that work fine in Tbird, as did this one until yesterday.  Looked at server settings for other accounts that worked and compared to this one.  Don't see anything different (other than name and pw obviously) </p><p>H  E  L  P   !!!!!    </p><p>thanks... </p>",paladin1;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Avast/130.0.0.0",2,0,1,,,,,
+1474380,2024-11-14T16:39:28.425245Z,2024-11-15T16:09:33.430156Z,nl,thunderbird,Ongewenste mail instelling,True,1688023,markh2,False,1688034,1688004;1688023;1688030;1688034;,email-and-messaging,thunderbird;email-and-messaging;,hk.hans,<p>Sinds enige tijd ontvang ik ongevraagd berichten in de map ongewenst. Ik wil echter alle berichten in postvak IN ontvangen. Bij accountinstellingen zijn alle opties bij ongewenste berichten uitgevinkt maar toch blijf ik berichten in de map ongewenst ontvangen. Graag info hoe dit op te lossen. Bij voorbaat dank. </p>,hk.hans;Mad_Maks;markh2;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0;solver_id:6282654,4,0,0,,,,,
+1474383,2024-11-14T16:57:29.033568Z,2024-11-14T18:26:51.983730Z,en-US,thunderbird,e mails,False,,,False,1687839,1687839;,email-and-messaging,thunderbird;email-and-messaging;,gilletrene,<p>You  can  help  me  if  you  resolve the PB  of  IMAP! </p>,gilletrene;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474384,2024-11-14T16:58:41.521860Z,2024-11-14T18:15:40.457352Z,en-US,thunderbird,Backup,False,,,False,1687828,1687821;1687828;,email-and-messaging,thunderbird;email-and-messaging;,b.nuss,<p>Habe im Adressbuch zu viele Adressen gelöscht. Finde leider keinen Papierkorb für gelöschte Adressen. Gibt es Möglichkeiten für eine Wiederherstellung. </p><p>VG Bernd </p>,b.nuss;davidsk;sfhowes;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,2,0,0,,,,,
+1474385,2024-11-14T17:10:04.129143Z,2024-11-17T16:45:33.360906Z,en-US,thunderbird,emails exist on comcast server but are not downloading regularly,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,d4867,"<p>While there are over 90 emails on the Comcast server so far this morning, only 1 has been downloaded.  I tried repairing the folders but no change.  While I can save chunks of email on the server, my import of a zip file of them is not working.  This has continued to be a problem for over 48 hours.  I am using Thunderbird 128.4.3 under Windows 11 Pro 23H2.   </p><p>I can see notifications of emails downloading from the server but nothing is posted on my machine.   This process repeats each time I start up Thunderbird but no new emails are accessible, either from Comcast or Gmail.   Emails are coming in fine on my iPhone but not on to my ThinkPad where I download and store them off the Comcast server.   </p><p>Two days ago there were thousands of past emails on the server going back to earlier this year but they are all gone now.  I have found it impossible to access Comcast's technical support for their help in solving this problem. </p><p>11/17/24 It took 3 days but rebuilding of the global-messages database has finished at 6.7 Gbytes.   Unfortunately, no change and the Comcast server is filling up.   </p><p>Any suggestions?  </p><p>Thank you for your consideration </p>",d4867;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,d4867,,
+1474386,2024-11-14T17:14:13.892163Z,2024-11-14T18:28:16.900222Z,en-US,thunderbird,Thunderbird Cant send emails,False,,,False,1687840,1687840;,email-and-messaging,thunderbird;email-and-messaging;,emery2,"<p>I have thunderbird email (<a href=""mailto:emery@hawaii.rr.com"" rel=""nofollow"">emery@hawaii.rr.com</a>) and recently moved from Hawaii who was Spectrum to Texas whom is AT&amp;T and now when I try to send an email I get this error... ""The message failed and cannot be sent because connecting to Outgoing sever SMTP failed.  Verify Outgoing server SMTP setting are correct"" </p>",emery2;sfhowes;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,2,,,,,
+1474387,2024-11-14T17:19:47.343996Z,2024-11-18T01:18:18.909926Z,en-US,thunderbird,Local file link procedure,True,1688491,oregonjohn,False,1688533,1687836;1688491;1688533;,email-and-messaging,thunderbird;email-and-messaging;,oregonjohn,"<p>There must be a way to include links to local files in a message. All of our team use the same file-server and we mapped a network drive. Long ago it was easy, I just installed the local link extension. After that stopped working someone told me to insert it as a 'link' which worked for a while. Now that doesn't work either. Maybe i just don't know how. I searched for 2 hours and found nothing but ancient directions - even the ones for two years ago don't help anymore. Thanks in advance for any help you can provide. </p>",oregonjohn;sfhowes;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36;solver_id:1292593",3,0,0,,,,,
+1474388,2024-11-14T17:30:11.577589Z,2024-11-14T19:38:16.912802Z,en-US,thunderbird,Can't connect to Google imap server,False,,,False,1687856,1687856;,email-and-messaging,firefox;accounts;,wa6ilt,<p>I am running TB 128.42esr on Windows 10. Starting 9 November TB is not able to connect to the Google imap server. Graphics of what I'm seeing are attached. I have done some searches and am finding nothing quite like this. Any help will be appreciated. Thank you. </p><p>DR </p>,wa6ilt;markwarner22;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0;troubleshooting:Application Basics
+
+    Name: Thunderbird
+    Version: 128.4.3esr
+    Build ID: 20241108210256
+    Distribution ID:
+
+    Update Channel: esr
+    User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Thunderbird/128.4.3
+    OS: Windows_NT 10.0 19045
+    OS Theme:
+
+    Launcher Process: Enabled
+    Multiprocess Windows: 0/0
+    Fission Windows: 0/0
+              Enabled by default
+    Remote Processes: 2
+    Enterprise Policies: Inactive
+    Google Location Service Key: Missing
+    Google Safebrowsing Key: Missing
+    Mozilla Location Service Key: Missing
+    Safe Mode: false
+    Memory Size (RAM): 15.9 GB
+    Disk Space Available: 378 GB
+
+  Mail and News Accounts
+    account1:
+      INCOMING: account1, , (imap) imap.cox.net:993, 3, 3
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+    account2:
+      INCOMING: account2, , (none) Local Folders, 0, 3
+
+    account3:
+      INCOMING: account3, , (imap) imap.gmail.com:993, 3, OAuth2
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+    account4:
+      INCOMING: account4, , (imap) imap.gmail.com:993, 3, OAuth2
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+    account5:
+      INCOMING: account5, , (imap) imap.gmail.com:993, 3, OAuth2
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+  Libraries
+
+      Library
+      Status
+      Expected minimum version
+      Version in use
+      Path
+
+        RNP (OpenPGP)
+        OK
+        0.17.1
+        0.17.1.MZLA.128.4.3esr.botan
+        C:\Program Files (x86)\Mozilla Thunderbird\rnp.dll
+
+        OTR
+        Failed to load. OTR chat encryption will not work.
+        -
+        -
+        -
+
+  Calendar Settings
+
+    Home
+
+      Name
+      Value
+
+      Name:
+      Type: storage
+      Disabled:
+      Username:
+      URI:
+      Refresh Interval:
+      Read-only:
+      Suppress Alarms:
+      Cache Enabled:
+      iMIP Identity: id4
+      iMIP Disabled:
+      iMIP Account:
+      Organizer Id:
+      Force Email Scheduling:
+      Popup Alarms Supported:
+      Alarms on Invitation Supported:
+      Max Alarms Per Event:
+      Attachment Supported:
+      Max Categories:
+      Privacy State Supported:
+      Priority Supported: true
+      Event Supported:
+      Task Supported:
+      Local Time Supported:
+      UTC/GMT Supported:
+      Auto-Scheduling Supported:
+
+  Crash Reports for the Last 3 Days
+
+  Remote Processes
+
+    Type: Count
+
+      Isolated Web Content: 1
+      GPU: 1
+
+  Add-ons
+
+      Name
+      Type
+      Version
+      Enabled
+      ID
+
+        System theme — auto
+        theme
+        1.3
+        true
+        default-theme@mozilla.org
+
+        Amazon.com
+        extension
+        1.1
+        false
+        amazondotcom@search.mozilla.org
+
+        Bing
+        extension
+        1.0
+        false
+        bing@search.mozilla.org
+
+        DuckDuckGo
+        extension
+        1.0
+        false
+        ddg@search.mozilla.org
+
+        Google
+        extension
+        1.0
+        false
+        google@search.mozilla.org
+
+        Wikipedia (en)
+        extension
+        1.0
+        false
+        wikipedia@search.mozilla.org
+
+        Dark
+        theme
+        1.3
+        false
+        thunderbird-compact-dark@mozilla.org
+
+        Light
+        theme
+        1.3
+        false
+        thunderbird-compact-light@mozilla.org
+
+  Security Software
+
+    Type: Name
+
+      Antivirus: Norton 360
+      Antispyware:
+      Firewall: Norton 360
+
+  Legacy User Stylesheets
+
+    Active: false
+    Stylesheets: No stylesheets found
+
+  Graphics
+
+      Features
+      Compositing: WebRender
+      Font Visibility Debug Info: Windows Platform
+      Asynchronous Pan/Zoom: wheel input enabled; scrollbar drag enabled; keyboard enabled; autoscroll enabled; smooth pinch-zoom enabled
+      WebGL 1 Driver WSI Info: outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control
+      WebGL 1 Driver Renderer: Google Inc. (Intel) -- ANGLE (Intel, Intel(R) UHD Graphics 630 Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.101.2115)
+      WebGL 1 Driver Version: OpenGL ES 2.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+      WebGL 1 Driver Extensions: GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_color_buffer_float_rgb GL_CHROMIUM_color_buffer_float_rgba GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_WEBGL_video_texture
+      WebGL 1 Extensions: ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context WEBGL_provoking_vertex
+      WebGL 2 Driver WSI Info: outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control
+      WebGL 2 Driver Renderer: Google Inc. (Intel) -- ANGLE (Intel, Intel(R) UHD Graphics 630 Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.101.2115)
+      WebGL 2 Driver Version: OpenGL ES 3.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+      WebGL 2 Driver Extensions: GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture
+      WebGL 2 Extensions: EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context WEBGL_provoking_vertex
+      Direct2D: true
+      Target Frame Rate: 60
+      DirectWrite: true (10.0.19041.4355)
+
+      GPU #1
+      Active: Yes
+      Description: Intel(R) UHD Graphics 630
+      Vendor ID: 0x8086
+      Device ID: 0x3e92
+      Driver Version: 31.0.101.2115
+      Driver Date: 11-16-2022
+      Drivers: igdumdim64 igd10iumd64 igd10iumd64 igd12umd64 igdumdim32 igd10iumd32 igd10iumd32 igd12umd32
+      Subsys ID: 312d17aa
+      RAM: 0
+
+      GPU #2
+      Active: No
+      RAM: 0
+
+      Diagnostics
+      AzureCanvasBackend: direct2d 1.1
+      AzureCanvasBackend (UI Process): skia
+      AzureContentBackend: skia
+      AzureContentBackend (UI Process): skia
+      AzureFallbackCanvasBackend (UI Process): skia
+      CMSOutputProfile: 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
+      Display0: 1280x1024@59Hz scales:1.000000|1.000000
+      DisplayCount: 1
+      HardwareStretching: both=0 window-only=0 full-screen-only=0 none=1 error=0
+      OverlaySupport: NV12=Direct YUV2=Direct BGRA8=Software RGB10A2=None
+      SwapChainTearingSupport: Supported
+      GPUProcessPid: 15348
+      Window Device Pixel Ratios: 1
+      ClearType Parameters: Gamma: 1.8 Pixel Structure: RGB ClearType Level: 100 Enhanced Contrast: 50
+      Font Visibility Debug Info: Windows Platform
+      WebGPU Default Adapter: [object Object]
+      WebGPU Fallback Adapter: [object Object]
+
+      Decision Log
+      HW_COMPOSITING: available by default
+      D3D11_COMPOSITING: available by default
+      DIRECT2D: available by default
+      D3D11_HW_ANGLE: available by default
+      GPU_PROCESS: available by default
+      WEBRENDER: available by default
+      WEBRENDER_COMPOSITOR: available by default
+      WEBRENDER_PARTIAL: available by default
+      WEBRENDER_SHADER_CACHE: available by default
+      WEBRENDER_OPTIMIZED_SHADERS: available by default
+      WEBRENDER_ANGLE: available by default
+      WEBRENDER_DCOMP_PRESENT: available by default
+      WEBRENDER_SCISSORED_CACHE_CLEARS: available by defaultblocklisted by env: Blocklisted by gfxInfo
+      WEBGPU: available by defaultblocked by runtime: WebGPU cannot be enabled in release or beta
+      WINDOW_OCCLUSION: available by default
+      VIDEO_HARDWARE_OVERLAY: available by default
+      VIDEO_SOFTWARE_OVERLAY: available by default
+      HW_DECODED_VIDEO_ZERO_COPY: available by default
+      VP8_HW_DECODE: available by default
+      VP9_HW_DECODE: available by default
+      REUSE_DECODER_DEVICE: available by default
+      BACKDROP_FILTER: available by default
+      CANVAS_RENDERER_THREAD: available by default
+      ACCELERATED_CANVAS2D: disabled by default: Disabled by defaultfailed by runtime: Disabled with non-zero canvas worker threads
+      REMOTE_CANVAS: available by default
+
+    Crash Guard Disabled Features
+
+    Workarounds
+
+    Failure Log
+
+  Media
+
+      Audio Backend: wasapi
+      Max Channels: 2
+      Preferred Sample Rate: 48000
+      Roundtrip latency (standard deviation): ...
+
+      Output Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        Speakers (Realtek(R) Audio)
+        HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA312D&REV_1000\4&2c49558b&0&0001
+        Enabled
+        All
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        144 - 480
+
+      Input Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        Microphone (Realtek(R) Audio)
+        HDAUDIO\FUNC_01&VEN_10EC&DEV_0235&SUBSYS_17AA312D&REV_1000\4&2c49558b&0&0001
+        Unplugged
+        None
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+      Media Capabilities
+
+      Enumerate database
+
+  Environment Variables
+
+    MOZ_CRASHREPORTER_DATA_DIRECTORY: C:\Users\w4dsr\AppData\Roaming\Thunderbird\Crash Reports
+    MOZ_CRASHREPORTER_EVENTS_DIRECTORY: C:\Users\w4dsr\AppData\Roaming\Thunderbird\Profiles\sonjv78d.default-release\crashes\events
+    MOZ_CRASHREPORTER_PING_DIRECTORY: C:\Users\w4dsr\AppData\Roaming\Thunderbird\Pending Pings
+    MOZ_CRASHREPORTER_STRINGS_OVERRIDE: C:\Program Files (x86)\Mozilla Thunderbird\crashreporter-override.ini
+
+  Important Modified Preferences
+
+    accessibility.typeaheadfind.flashBar: 0
+    browser.cache.disk.amount_written: 1232864
+    browser.cache.disk.capacity: 1048576
+    browser.cache.disk.filesystem_reported: 1
+    browser.cache.disk.hashstats_reported: 1
+    browser.search.region: US
+    extensions.lastAppVersion: 128.4.3
+    font.internaluseonly.changed: true
+    font.size.variable.x-western: 18
+    gfx.crash-guard.d3d11layers.appVersion: 78.14.0
+    gfx.crash-guard.d3d11layers.deviceID: 0x3e92
+    gfx.crash-guard.d3d11layers.driverVersion: 27.20.100.8783
+    gfx.crash-guard.d3d11layers.feature-d2d: true
+    gfx.crash-guard.d3d11layers.feature-d3d11: true
+    gfx.crash-guard.status.d3d11layers: 2
+    gfx.crash-guard.status.wmfvpxvideo: 2
+    gfx.crash-guard.wmfvpxvideo.appVersion: 91.13.1
+    gfx.crash-guard.wmfvpxvideo.deviceID: 0x3e92
+    gfx.crash-guard.wmfvpxvideo.driverVersion: 27.20.100.8783
+    idle.lastDailyNotification: 1731602252
+    layers.mlgpu.sanity-test-failed: false
+    media.gmp.storage.version.observed: 1
+    media.hardware-video-decoding.failed: false
+    network.predictor.cleaned-up: true
+    network.trr.blocklist_cleanup_done: true
+    places.database.lastMaintenance: 1731602254
+    places.history.expiration.transient_current_max_pages: 46784
+    privacy.bounceTrackingProtection.hasMigratedUserActivationData: true
+    privacy.donottrackheader.enabled: true
+    privacy.purge_trackers.date_in_cookie_database: 0
+    security.osreauthenticator.password_last_changed_hi: 802876
+    security.osreauthenticator.password_last_changed_lo: 464016184
+    security.remote_settings.crlite_filters.checked: 1634140548
+    security.remote_settings.intermediates.checked: 1634140548
+    security.sandbox.content.tempDirSuffix: {c04d3a2e-678b-4fc8-af07-8a8d97848224}
+    security.sandbox.plugin.tempDirSuffix: {f123de3b-74fb-4d8d-b7a1-ebc9778c1f7a}
+    signon.importedFromSqlite: true
+    storage.vacuum.last.content-prefs.sqlite: 1729628986
+    storage.vacuum.last.index: 1
+    storage.vacuum.last.places.sqlite: 1730928820
+    ui.osk.debug.keyboardDisplayReason: IKPOS: Touch screen not found.
+
+  Important Locked Preferences
+
+  fission.autostart.session: true
+
+  Places Database
+
+  Accessibility
+
+    Activated: false
+    Prevent Accessibility: 0
+    Accessible Handler Used:
+    Accessibility Instantiator:
+
+  Library Versions
+
+      Expected minimum version
+      Version in use
+
+      NSPR
+      4.35
+      4.35
+
+      NSS
+      3.101.1
+      3.101.1
+
+      NSSSMIME
+      3.101.1
+      3.101.1
+
+      NSSSSL
+      3.101.1
+      3.101.1
+
+      NSSUTIL
+      3.101.1
+      3.101.1
+
+  Sandbox
+
+    Content Process Sandbox Level: 0
+    Effective Content Process Sandbox Level: 1
+    Win32k Lockdown State for Content Process: Win32k Lockdown enabled -- default value is true
+    GPU Process Sandbox Level: 1
+
+  Startup Cache
+
+    Disk Cache Path: C:\Users\w4dsr\AppData\Local\Thunderbird\Profiles\sonjv78d.default-release\startupCache\startupCache.8.little
+    Ignore Disk Cache: false
+    Found Disk Cache on Init: false
+    Wrote to Disk Cache: true
+
+  Internationalization & Localization
+
+      Application Settings
+      Requested Locales: [""en-US""]
+      Available Locales: [""en-US""]
+      App Locales: [""en-US""]
+      Regional Preferences: [""en-US""]
+      Default Locale: ""en-US""
+
+      Operating System
+      System Locales: [""en-US""]
+      Regional Preferences: [""en-US""]
+
+  Remote Debugging (Chromium Protocol)
+
+    Accepting Connections:
+    URL:
+
+  Printing
+
+  Modified print settings
+
+    print_printer: WF-4820 Series(Network)
+    print.more-settings.open: true
+    print.printer_WF-4820_Series(Network).print_bgcolor: false
+    print.printer_WF-4820_Series(Network).print_bgimages: false
+    print.printer_WF-4820_Series(Network).print_duplex: 0
+    print.printer_WF-4820_Series(Network).print_edge_bottom: 0
+    print.printer_WF-4820_Series(Network).print_edge_left: 0
+    print.printer_WF-4820_Series(Network).print_edge_right: 0
+    print.printer_WF-4820_Series(Network).print_edge_top: 0
+    print.printer_WF-4820_Series(Network).print_footercenter:
+    print.printer_WF-4820_Series(Network).print_footerleft: &PT
+    print.printer_WF-4820_Series(Network).print_footerright: &D
+    print.printer_WF-4820_Series(Network).print_headercenter: &T
+    print.printer_WF-4820_Series(Network).print_headerleft:
+    print.printer_WF-4820_Series(Network).print_headerright:
+    print.printer_WF-4820_Series(Network).print_ignore_unwriteable_margins: false
+    print.printer_WF-4820_Series(Network).print_in_color: false
+    print.printer_WF-4820_Series(Network).print_margin_bottom: 0.5
+    print.printer_WF-4820_Series(Network).print_margin_left: 0.5
+    print.printer_WF-4820_Series(Network).print_margin_right: 0.5
+    print.printer_WF-4820_Series(Network).print_margin_top: 0.5
+    print.printer_WF-4820_Series(Network).print_orientation: 0
+    print.printer_WF-4820_Series(Network).print_page_delay: 50
+    print.printer_WF-4820_Series(Network).print_paper_height: 11
+    print.printer_WF-4820_Series(Network).print_paper_id: 1
+    print.printer_WF-4820_Series(Network).print_paper_size_unit: 0
+    print.printer_WF-4820_Series(Network).print_paper_width: 8.5
+    print.printer_WF-4820_Series(Network).print_reversed: false
+    print.printer_WF-4820_Series(Network).print_scaling: 1
+    print.printer_WF-4820_Series(Network).print_shrink_to_fit: true
+    print.printer_WorkForce_630(Network).print_bgcolor: false
+    print.printer_WorkForce_630(Network).print_bgimages: false
+    print.printer_WorkForce_630(Network).print_duplex: 0
+    print.printer_WorkForce_630(Network).print_edge_bottom: 0
+    print.printer_WorkForce_630(Network).print_edge_left: 0
+    print.printer_WorkForce_630(Network).print_edge_right: 0
+    print.printer_WorkForce_630(Network).print_edge_top: 0
+    print.printer_WorkForce_630(Network).print_evenpages: true
+    print.printer_WorkForce_630(Network).print_footercenter:
+    print.printer_WorkForce_630(Network).print_footerleft: &PT
+    print.printer_WorkForce_630(Network).print_footerright: &D
+    print.printer_WorkForce_630(Network).print_headercenter:
+    print.printer_WorkForce_630(Network).print_headerleft: &T
+    print.printer_WorkForce_630(Network).print_headerright: &U
+    print.printer_WorkForce_630(Network).print_in_color: false
+    print.printer_WorkForce_630(Network).print_margin_bottom: 0.5
+    print.printer_WorkForce_630(Network).print_margin_left: 0.5
+    print.printer_WorkForce_630(Network).print_margin_right: 0.5
+    print.printer_WorkForce_630(Network).print_margin_top: 0.5
+    print.printer_WorkForce_630(Network).print_oddpages: true
+    print.printer_WorkForce_630(Network).print_orientation: 0
+    print.printer_WorkForce_630(Network).print_page_delay: 50
+    print.printer_WorkForce_630(Network).print_paper_data: 1
+    print.printer_WorkForce_630(Network).print_paper_height: 11
+    print.printer_WorkForce_630(Network).print_paper_id: 1
+    print.printer_WorkForce_630(Network).print_paper_name:
+    print.printer_WorkForce_630(Network).print_paper_size_unit: 0
+    print.printer_WorkForce_630(Network).print_paper_width: 8.5
+    print.printer_WorkForce_630(Network).print_resolution: 360
+    print.printer_WorkForce_630(Network).print_reversed: false
+    print.printer_WorkForce_630(Network).print_scaling: 1
+    print.printer_WorkForce_630(Network).print_shrink_to_fit: true
+    print.printer_WorkForce_630(Network).print_to_file: false
+    print.printer_WorkForce_630(Network).print_unwriteable_margin_bottom: 12
+    print.printer_WorkForce_630(Network).print_unwriteable_margin_left: 12
+    print.printer_WorkForce_630(Network).print_unwriteable_margin_right: 12
+    print.printer_WorkForce_630(Network).print_unwriteable_margin_top: 12",1,0,0,,,,,
+1474390,2024-11-14T17:35:02.472872Z,2024-11-14T18:23:47.650878Z,en-US,thunderbird,e mails,False,,,False,1687835,1687835;,email-and-messaging,thunderbird;email-and-messaging;,gilletrene,"<p>Can you let me know when you have resolved the current problem with my email? My email address is: <a href=""mailto:gilletrene@neuf.fr"" rel=""nofollow"">gilletrene@neuf.fr</a> Thank you </p>",gilletrene;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474391,2024-11-14T17:35:30.427362Z,2024-11-14T17:35:30.427368Z,en-US,thunderbird,Imbeded Link with picture,False,,,False,,,settings,thunderbird;settings;,faveran,"<p>Two weeks ago my received email displayed the imbedded links with a picture, now all I get is a blank box for the link. The link works properly but I would rather see the image in the email rather than click on the link </p>",faveran;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,
+1474393,2024-11-14T17:39:00.865406Z,2024-11-16T19:34:57.972834Z,en-US,thunderbird,comment réduire le stockage de ma boite mail,False,,,False,1688292,1687837;1688292;,email-and-messaging,thunderbird;email-and-messaging;,mauricebassan63,<p>comment faire de la place dans ma boite mail </p>,mauricebassan63;davidsk;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",2,0,0,,,,,
+1474396,2024-11-14T18:11:14.290468Z,2024-11-14T18:25:57.759287Z,en-US,thunderbird,thunderbird update,False,,,False,1687838,1687838;,email-and-messaging,thunderbird;email-and-messaging;,cnveneros,<p>Today I got another thunderbird update and agin I cannot revieve any e-mails. Now I got to uninstall and reinstall. This is getting to be a real pain in the neck! </p>,cnveneros;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",1,0,0,,,,,
+1474398,2024-11-14T18:15:55.069882Z,2024-11-14T18:15:55.069888Z,en-US,thunderbird,Is Maildir still in Beta?,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,tbird5,"<p>This says so, but is over 5 years old: <a href=""https://support.mozilla.org/en-US/kb/maildir-thunderbird"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/maildir-thunderbird</a> </p><p>Lots of awful warnings, should I be worried? </p>",tbird5;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",0,0,0,,,,,
+1474400,2024-11-14T18:33:07.507308Z,2024-11-17T16:22:09.956922Z,en-US,thunderbird,Trouble setting up Newsgroup in Thunderbird,True,1688006,davidsk,False,1688452,1687844;1687849;1687852;1687854;1687920;1688006;1688085;1688086;1688090;1688137;1688177;1688223;1688228;1688279;1688288;1688444;1688450;1688452;,accounts,thunderbird;accounts;,8plus7isf,"<p>I'm a Thunderbird novice. </p><p>I had Thunderbird working to allow me to read and write messages to the Quicken newsgroup.  </p><p>Something went wrong (Thunderbird was displaying the Quicken newsgroup name twice - in the left column), but clicking on either of the displayed names produced a blank screen. It did not matter what the read/unread setting said: no messages diaplayed. </p><p>So I tried reinstalling Thunderbird - which is requiring me to set everything up again. I struggled to get setup the first time, and this time I'm getting almost nowhere. </p><p>First: Thunderbird setup my email account even though I don't want to use Thunderbird for my email. I'm hoping that's just a minor annoyance, though I'd like to get rid of the Thunderbird email account. </p><p>But I am not getting anywhere setting up the Newsgroup. </p><p>I'm trying to use <a href=""http://www.eternal-september.org"" rel=""nofollow"">www.eternal-september.org</a> to get messages from the newsgroup alt.comp.software.financial.quicken - which was working fine before I had to reinstall. </p><p>Is there a simple step-by-step guide I can follow to achieve my goal. </p>",8plus7isf;christ1;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36;solver_id:5663781",18,0,0,,,,,
+1474401,2024-11-14T18:38:09.214615Z,2024-11-16T19:58:10.044432Z,en-US,thunderbird,"When Thunderbird v115.9.0 crashes and I send Apple a Report, do you developers receive the report? (locked)",False,,,False,1688302,1687872;1687875;1687877;1688302;,performance-and-connectivity,thunderbird;performance-and-connectivity;,bittersweet47,"<p>When Thunderbird v115.9.0 crashes and I send Apple a Report, do you developers receive the report? </p>",bittersweet47;wsmwk;,True,True,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15",4,0,0,,,wsmwk,,
+1474403,2024-11-14T18:48:45.621170Z,2024-11-14T19:50:23.430435Z,en-US,thunderbird,I've lost my Thunderbird password.,True,1687850,christ1,False,1687861,1687850;1687861;,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,pendever,"<p>I saved it in Thunderbird, but not elsewhere. It doesn't show up in Firefox passwords.  I'm trying to add another email account to Tbird, but can't get past the password requirement. </p>",pendever;christ1;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0;solver_id:4581503,2,0,4,,,,,
+1474405,2024-11-14T19:12:21.583190Z,2024-11-14T19:12:21.583195Z,en-US,thunderbird,Pull office365 through to Thunderbird,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,nikisteenkamp1,<p>I've been attempting for hours now to setup Outlook 2010 to map with my BT Office365. I've tried every setting under the sun including the mapped one on Thunderbird. 2010 does not have starttls so don't think it's possible anymore. </p><p>Before Outlook would pull and download all my emails from 365 no problem.  </p><p>Is there a work around to do this as there is no export facility in the office subscription I have. Perhaps an extension or software piece that could do this may also be helpful. </p><p>Any advise would be greatly appreciated. Cheers Niki </p>,nikisteenkamp1;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",0,0,0,,,,,
+1474406,2024-11-14T19:23:09.327748Z,2024-11-14T19:29:50.057937Z,en-US,thunderbird,Hard Drive Crash and Email+ Data Recovery,False,,,False,1687851,1687851;,email-and-messaging,thunderbird;email-and-messaging;,songsalivelaworkshop21,"<p>I had a hard drive crash and along with that went my email, address book and history data. I had the hard drive replaced and then installed Thunderbird. I also bought a Sabrent recovery unit and found that a lot of data was still intact on the old drive using the recovery hardware. What folders/titles am I looking for in the old hard drive pertaining to Thunderbird and can I merge (not over write) those into the new Thunderbird program on the new hard drive? What’s the procedure? Thanks </p>",songsalivelaworkshop21;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474407,2024-11-14T19:38:55.766966Z,2024-11-14T21:57:30.296802Z,en-US,thunderbird,unable to move thunderbird email acct from one device to another-,False,,,False,1687878,1687878;,email-and-messaging,thunderbird;email-and-messaging;,mariawork,"<p>moving thunderbird email from one device to another- new device cannot find my acct (my email is an old time warner road runner account, I called spectrum and we were unable to access it from the new device) </p>",mariawork;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",1,0,0,,,,,
+1474408,2024-11-14T19:47:01.279740Z,2024-11-14T19:47:01.279746Z,en-US,thunderbird,getting emails. My inbox is empty,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,kathleenmurdoch,<p>why have I no emails? . I sent already one but it hasn't appeared </p>,kathleenmurdoch;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 AVG/130.0.0.0",0,0,0,,,,,
+1474409,2024-11-14T19:48:28.147144Z,2024-11-14T19:48:28.147149Z,en-US,thunderbird,inbox,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,kathleenmurdoch,<p>in box is empty </p>,kathleenmurdoch;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 AVG/130.0.0.0",0,0,0,,,,,
+1474414,2024-11-14T20:13:36.806407Z,2024-11-14T20:13:36.806412Z,en-US,thunderbird,Can't dismiss Thunderbird calendar event reminder,False,,,False,,,performance-and-connectivity,thunderbird;performance-and-connectivity;,ekahan,<p>Often event reminders refuse to dismiss after the event is over. I have to delete the event. Ver 128.4.3esr build 20241108210256. </p>,ekahan;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0,0,0,0,,,,,
+1474423,2024-11-14T21:05:51.089364Z,2024-11-16T19:26:18.477099Z,en-US,thunderbird,jak usunąć konto Thunderbird?,False,,,False,1688274,1688274;,accounts,thunderbird;accounts;,andrzejchatlas,<p>jak usunąć konto Thunderbird? </p>,andrzejchatlas;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",1,0,0,,,,,
+1474425,2024-11-14T21:10:50.170650Z,2024-11-14T21:10:50.170658Z,en-US,thunderbird,Folder Problems,False,,,False,,,installation-and-updates,thunderbird;installation-and-updates;,robin.lake,"<p>I am a long, long, time user of Thunderbird. A hearty ""thank you"" to all who have made it such a good email client. </p><p>I have just replaced a computer with a new computer, part of the replacement process was reinstalling Thunderbird. I have a protonmail email account, so that necessitated also installing and linking Proton Mail Bridge. It was not a happy union. The new account was set up and would not link to Bridge. Wound up deleting and recreating the account. This time the two recognized each other.  </p><p>Unfortunately, as things rest now, under the protonmail account there is only an ""Inbox"", no Drafts, Sent, Archives, Junk, or Trash. Those folders do appear under ""Local Folders"" and I was able to redirect protonmail activity to there to be able to use Thunderbird.  </p><p>I am unable to drag and drop those folders to the main Protonmail account, nor am I able to create a new Drafts, Sent, etc., in that account. </p><p>I would appreciate any advise you can give me for getting Thunderbird back to its proper operating condition. </p><p>Thank you in advance, Robin Lake </p>",robin.lake;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",0,0,0,,,,,
+1474428,2024-11-14T21:19:37.999634Z,2024-11-15T11:44:30.914634Z,nl,thunderbird,imap folders in Thunderbird,False,,,False,1687974,1687974;,email-and-messaging,thunderbird;email-and-messaging;,roald2,"<p>Ik heb een probleem bij het instellen van mijn imap account. Op de server heb de standaard mappen ""Concepten"", ""Verzonden"" en ""Prullenbank"". Elke keer dat ik Thunderbird opstart maakt deze automatisch de mappen ""Sent"", ""Drafts"" en ""Trash"" aan. Hoe zet ik dit uit? Ik moet telkens op mijn webmail inloggen om deze mappen weer te verwijderen. </p><p>Vriendelijke groeten, Roald </p>",roald2;Mad_Maks;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,1,0,0,,,,,
+1474429,2024-11-14T21:28:53.398278Z,2024-11-14T21:58:33.859416Z,en-US,thunderbird,Address bookk empty,False,,,False,1687879,1687879;,email-and-messaging,thunderbird;email-and-messaging;,rodbry1,<p>All the addresses in my address book have gone.  Any way to retrieve please </p>,rodbry1;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 AVG/130.0.0.0",1,0,2,,,,,
+1474435,2024-11-14T22:51:20.061511Z,2024-11-14T22:51:20.061516Z,en-US,thunderbird,lost a large number of folders and files,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,pro19,<p>lost a large number of folders and files </p>,pro19;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",0,0,0,,,,,

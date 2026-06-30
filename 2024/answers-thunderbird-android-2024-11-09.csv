@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1686934,1473519,2024-11-09T16:19:35.350035Z,2024-11-09T16:19:35.350042Z,"<p>Should be an option, at least. </p>",PaulJayD,False,1,0
+1687170,1473595,2024-11-10T22:53:11.504946Z,2024-11-10T22:53:11.504952Z,"<p>Weirdly enough, it seems to have stopped doing it now. </p>",MrsDrJim,False,0,0
