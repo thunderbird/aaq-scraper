@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1774118,1542724,2025-10-23T10:16:50.085641Z,2025-10-23T10:16:50.085650Z,"<p>Ah, found this bug: <a href=""https://github.com/thunderbird/thunderbird-android/issues/9567"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues/9567</a> </p><p>As a workaround I disabled IMAP Namespace Auto-Detect and now it works again. 👍 </p>",tgeppert,False,0,0

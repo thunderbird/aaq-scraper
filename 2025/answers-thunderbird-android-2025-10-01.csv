@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1769057,1538972,2025-10-02T07:23:43.896727Z,2025-10-02T07:25:19.678025Z,"<p>Hello, Have you followed the steps exactly as described here? <a href=""https://support.mozilla.org/en-US/kb/thunderbird-android-import"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/thunderbird-android-import</a>. </p><p>If you see just the outbox it means the credentials are not moved, as in you cannot authenticate with your server.  </p><p>Bogo </p>",shopov.bogomil,False,0,0
