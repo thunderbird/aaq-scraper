@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1749038,1522861,2025-07-14T19:26:51.714006Z,2025-07-14T19:26:51.714017Z,<p>What do you mean by push?  imap isn't giving you your mail?  You mean you are going to the website and seeing the mail there? </p>,jeff-g,False,0,0
+1749112,1522861,2025-07-15T00:38:48.203235Z,2025-07-15T00:38:48.203242Z,<p>Yes that's what I mean. I can see it on any other client and when I manually refresh my Thunderbird app on Android. </p>,home60,False,1,0
+1749228,1522861,2025-07-15T12:39:19.788957Z,2025-07-15T12:39:19.788964Z,"<p>You are in the Thunderbird Desktop forum, which is why this post is a little confusing. I will move it to android. </p>",wsmwk,False,0,0

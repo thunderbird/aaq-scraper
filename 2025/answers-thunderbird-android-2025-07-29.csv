@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1752456,1525748,2025-07-29T04:17:11.648173Z,2025-07-29T04:17:11.648181Z,"<p>Thanks for the feedback, would you mind sharing your device type and OS? </p>",Thundamike,False,0,0
+1752467,1525748,2025-07-29T06:20:56.126229Z,2025-07-29T06:20:56.126237Z,"<p>Hey Mike,  </p><p>Motorola One 5G on Android 11. </p><p>Thanks! </p>",premowo,False,0,0
+1753455,1525748,2025-08-02T03:26:10.685297Z,2025-08-02T03:26:10.685301Z,"<p>Moved to <a href=""https://support.mozilla.org/en-US/questions/thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/thunderbird-android</a> </p>",wsmwk,False,0,0
+1753468,1525748,2025-08-02T05:29:04.488704Z,2025-08-02T05:29:04.488709Z,"<p>This is not a solution to the problem. It is rather, a confirmation of the problem. </p><p>Solution is needed. Thank you. </p>",premowo,False,0,0
