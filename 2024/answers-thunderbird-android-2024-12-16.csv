@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1698677,1479560,2024-12-30T03:36:02.659916Z,2024-12-30T03:36:02.659922Z,<p>A Thunderbird news reader is not planned. You will need to search for an app dedicated to reading news. </p>,wsmwk,False,1,0
+1700304,1479518,2025-01-06T03:46:49.050580Z,2025-01-06T03:46:49.050590Z,"<p>You cannot transfer passwords from desktop to phone.  You must know them and have recorded them. </p><p>Please see <a href=""https://support.mozilla.org/en-US/kb/thunderbird-android-import"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/thunderbird-android-import</a> </p>",wsmwk,False,0,0

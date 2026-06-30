@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1697716,1481413,2024-12-26T06:05:05.573127Z,2024-12-26T06:05:05.573135Z,"<p>To migrate from Thunderbird on Windows to Android: </p><p>Backup Thunderbird data. Set up your email account on the Android app using IMAP or POP3. Export and import contacts to Google contacts. Manually transfer important folders to the Android app. For hosting solutions, visit <a href=""https://ninzahost.net/"" rel=""nofollow"">https://ninzahost.net/</a>. </p>",ninzahost,True,0,0

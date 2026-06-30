@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1698516,1481940,2024-12-29T11:51:35.394931Z,2024-12-29T17:53:39.693124Z,"<p>Wrong channel, please ignore. </p>",christ1,False,0,0
+1700198,1481945,2025-01-05T17:21:41.962406Z,2025-01-05T17:21:41.962411Z,<p>Got it: Account settings / Reading Mail / Always Show Images </p>,pops3,False,2,1
