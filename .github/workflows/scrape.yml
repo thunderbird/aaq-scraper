@@ -24,9 +24,14 @@ on:
 permissions:
   contents: write
 
+# Newest run wins: an hourly refresh that's still going when the next one fires
+# is cancelled in favour of the fresh run. Safe because the refresh is idempotent
+# and the high-water mark only advances on a clean run, so a cancelled run loses
+# nothing (the replacement re-queries the same window). Avoids stale/piled-up
+# runs; paired with timeout-minutes as a hard duration cap.
 concurrency:
   group: scrape
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh:
