@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1778009,1545850,2025-11-10T00:24:33.047074Z,2025-11-10T00:24:33.047080Z,<p>The servers settings are located at: </p><p>Settings &gt; account &gt; fetching mail &gt; incoming server Settings &gt; account &gt; sending mail &gt; outgoing server </p>,platform34,False,0,0

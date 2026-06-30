@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1783460,1550798,2025-12-02T23:13:24.655637Z,2025-12-02T23:14:00.749582Z,<p>Hi Andy </p><p>Have you allowed Thunderbird to run in the background and excluded it from battery optimization in your Android settings. </p>,platform34,False,0,0
