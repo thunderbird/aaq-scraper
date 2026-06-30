@@ -21,24 +21,15 @@ Idempotent: re-running finds nothing once redacted.
 Mirror the same PATTERNS in the scrapers so freshly-scraped days are redacted at
 write time (otherwise a deterministic re-scrape re-introduces the secret).
 """
-import re
 import sys
 from glob import glob
 
-REDACTION = "<credential_deleted>"
-
-PATTERNS = [
-    re.compile(r"1//0[A-Za-z0-9_-]{20,}"),       # google oauth refresh token
-    re.compile(r"AIza[0-9A-Za-z_-]{35}"),         # google api key
-    re.compile(r"AKIA[0-9A-Z]{16}"),              # aws access key id
-    re.compile(r"xox[baprs]-[0-9A-Za-z-]{10,}"),  # slack token
-    re.compile(r"gh[ps]_[0-9A-Za-z]{36,}"),       # github pat
-]
+from csv_safety import CREDENTIAL_PATTERNS, REDACTION
 
 
 def redact_text(text):
     n = 0
-    for pat in PATTERNS:
+    for pat in CREDENTIAL_PATTERNS:
         text, c = pat.subn(REDACTION, text)
         n += c
     return text, n

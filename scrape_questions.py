@@ -26,7 +26,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
-from csv_safety import escape_formula
+from csv_safety import escape_formula, redact_credentials
 from sumo import API_BASE, SumoBrowser
 
 # API product slug -> human label used in output filenames.
@@ -100,14 +100,15 @@ def flatten_question(q):
     if isinstance(row.get("content"), str):
         row["content"] = row["content"].replace("\n", " ").replace("\r", " ")
 
-    # Any remaining non-scalar value -> str, to keep the CSV clean; then guard
-    # against spreadsheet formula injection on every string cell.
+    # Any remaining non-scalar value -> str, to keep the CSV clean; then redact
+    # leaked credentials and guard against spreadsheet formula injection on
+    # every string cell.
     for k, v in list(row.items()):
         if isinstance(v, (dict, list)):
             v = str(v)
         elif v is None:
             v = ""
-        row[k] = escape_formula(v)
+        row[k] = escape_formula(redact_credentials(v))
     return row
 
 

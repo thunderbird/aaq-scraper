@@ -22,7 +22,7 @@ import sys
 import time
 from urllib.parse import urlencode
 
-from csv_safety import escape_formula
+from csv_safety import escape_formula, redact_credentials
 from sumo import API_BASE, SumoBrowser
 
 # Importing sumo raises csv.field_size_limit to the platform maximum, so reading
@@ -49,7 +49,7 @@ def flatten_answer(a):
         "question_id": a.get("question"),
         "created": a.get("created"),
         "updated": a.get("updated"),
-        "content": escape_formula(content),
+        "content": escape_formula(redact_credentials(content)),
         "creator": escape_formula(username_of(a.get("creator"))),
         "is_spam": a.get("is_spam"),
         # API exposes *_votes; the original CSV columns drop the suffix.

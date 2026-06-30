@@ -16,3 +16,8 @@ poc-sample.json
 
 # Month-backfill failure log (local record of dates to redo)
 /backfill-failures.txt
+
+# iCloud / cloud-sync conflict copies (e.g. "questions-... 2.csv"). Real data
+# filenames never contain a space, so this is unambiguous and stops the blanket
+# `git add <year>/` from ever staging sync junk again.
+* *.csv
