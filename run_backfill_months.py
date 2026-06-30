@@ -84,12 +84,17 @@ def commit_push(year_dir, msg):
 
 
 def main():
-    start = parse_month(sys.argv[1])
-    end = parse_month(sys.argv[2])
+    # Positional months; optional --random-delay passes through to the per-day
+    # scrapers (vary 2-10s between API calls instead of fixed 2s) to be gentler
+    # on SUMO and avoid 429s when the hourly refresh runs concurrently.
+    positional = [a for a in sys.argv[1:] if not a.startswith("--")]
+    extra = ["--random-delay"] if "--random-delay" in sys.argv else []
+    start = parse_month(positional[0])
+    end = parse_month(positional[1])
     months = list(months_desc(start, end))
-    print(f"Month backfill: {sys.argv[1]} down to {sys.argv[2]} "
+    print(f"Month backfill: {positional[0]} down to {positional[1]} "
           f"({len(months)} months), random {MIN_WAIT//60}-{MAX_WAIT//60} min "
-          f"between months", flush=True)
+          f"between months; scraper extra args: {extra or 'none'}", flush=True)
 
     for i, (y, m) in enumerate(months):
         ndays = monthrange(y, m)[1]
@@ -104,14 +109,14 @@ def main():
             for product, _label in products:
                 code = run(["uv", "run", "python", "scrape_questions.py",
                             str(y), str(m), str(day), str(y), str(m), str(day),
-                            "--product", product, "--headless"])
+                            "--product", product, "--headless", *extra])
                 if code != 0:
                     record_failure(iso, product, "questions", code)
             for product, label in products:
                 q = f"{year_dir}/questions-{label}-{iso}.csv"
                 if os.path.exists(q):
                     code = run(["uv", "run", "python", "scrape_answers.py",
-                                "--questions", q, "--headless"])
+                                "--questions", q, "--headless", *extra])
                     if code != 0:
                         record_failure(iso, product, "answers", code)
 
