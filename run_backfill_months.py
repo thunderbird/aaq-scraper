@@ -28,6 +28,9 @@ from calendar import monthrange
 
 PRODUCTS = [("thunderbird", "thunderbird-desktop"),
             ("thunderbird-android", "thunderbird-android")]
+# Thunderbird Android launched Oct 2024; before that the API has no Android data,
+# so months earlier than this scrape desktop only (PRODUCTS[:1]).
+ANDROID_START = (2024, 10)
 MIN_WAIT, MAX_WAIT = 120, 600  # seconds between months (2-10 min)
 FAILURES = "backfill-failures.txt"
 
@@ -91,18 +94,20 @@ def main():
     for i, (y, m) in enumerate(months):
         ndays = monthrange(y, m)[1]
         year_dir = f"{y:04d}"
+        # Android has no data before its Oct 2024 launch -> desktop only.
+        products = PRODUCTS if (y, m) >= ANDROID_START else PRODUCTS[:1]
         print(f"\n===== MONTH {i+1}/{len(months)}: {y:04d}-{m:02d} "
-              f"({ndays} days) =====", flush=True)
+              f"({ndays} days, {len(products)} product(s)) =====", flush=True)
 
         for day in range(1, ndays + 1):
             iso = f"{y:04d}-{m:02d}-{day:02d}"
-            for product, _label in PRODUCTS:
+            for product, _label in products:
                 code = run(["uv", "run", "python", "scrape_questions.py",
                             str(y), str(m), str(day), str(y), str(m), str(day),
                             "--product", product, "--headless"])
                 if code != 0:
                     record_failure(iso, product, "questions", code)
-            for product, label in PRODUCTS:
+            for product, label in products:
                 q = f"{year_dir}/questions-{label}-{iso}.csv"
                 if os.path.exists(q):
                     code = run(["uv", "run", "python", "scrape_answers.py",
