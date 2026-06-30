@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1707690,1485983,2025-01-30T08:24:34.698078Z,2025-01-30T08:24:34.698083Z,"<p>Settings &gt; General settings &gt; Display &gt; ""Account list"" section &gt; check ""Show Unified Inbox"" &gt; close Thunderbird for Android &gt; start Thunderbird for Android again. </p>",Yu5tiqX9og,False,2,1
+1763251,1485906,2025-09-10T12:43:02.071853Z,2025-09-10T12:43:02.071859Z,"<p>You can make suggestions, and vote on features, at <a href=""https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird%20android"" rel=""nofollow"">https://connect.mozilla.org/t5/ideas/idb-p/ideas/label-name/thunderbird%20android</a>.  We'd love to have them. </p>",wsmwk,False,0,0
