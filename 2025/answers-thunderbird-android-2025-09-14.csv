@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1764201,1535567,2025-09-14T08:42:08.232505Z,2025-09-14T08:42:08.232527Z,"<p>Hi Dominique, </p><p>The thing is, Thunderbird for Android currently does not handle file-based mail, whether it's mbox, maildir, pst, eml etc. So it's currently not possible. </p><p>Regards, Balázs </p>",meskobalazs,False,2,0
+1764276,1535567,2025-09-14T15:18:31.904243Z,2025-09-14T15:18:31.904250Z,<p>Thank you so much for taking the time to answer me! </p>,dfbgn2,False,0,0
+1773453,1535678,2025-10-20T14:52:38.121099Z,2025-10-20T14:52:38.121105Z,<p>Version 13 should be available later this week.  Please post your status after you are able to update. </p>,wsmwk,False,0,0

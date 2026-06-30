@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1764795,1536000,2025-09-16T14:20:46.340365Z,2025-09-16T14:20:46.340372Z,"<p>If no one answers here, try here: <a href=""https://support.mozilla.org/en-US/questions/thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/thunderbird-android</a> </p>",mozilla98,False,0,0
+1773452,1536020,2025-10-20T14:52:12.810335Z,2025-10-20T14:52:12.810344Z,<p>Version 13 should be available later this week.  Please post your status after you are able to update. </p>,wsmwk,False,0,0
+1780346,1536108,2025-11-19T17:27:55.184157Z,2025-11-19T17:27:55.184162Z,"<p>@Michael, are you still seeing this problem? </p>",wsmwk,False,0,0
+1793688,1536108,2026-01-14T10:14:50.952255Z,2026-01-14T10:14:50.952263Z,"<p>Hi </p><p>Sorry for the late reply, been a bit busy and forgetful. </p><p>Yes, unfortunately. Just tried. I have three accounts. They are converted into three QR codes. However, only the last one can be read. In the scanner you see 1/3 read. It knows that there are three codes, but can still only read one. </p><p>// Micke </p>",wottanandroid,False,0,0

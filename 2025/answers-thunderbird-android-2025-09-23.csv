@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1767246,1537610,2025-09-25T09:28:56.407100Z,2025-09-25T09:29:37.853156Z,"<p>Hello, Proton mail doesn't support direct IMAP. You need to use the proton bridge: <a href=""https://proton.me/support/protonmail-bridge-clients-windows-thunderbird"" rel=""nofollow"">https://proton.me/support/protonmail-bridge-clients-windows-thunderbird</a> </p>",shopov.bogomil,False,2,0
+1773451,1537610,2025-10-20T14:51:51.627381Z,2025-10-20T14:51:51.627387Z,<p>The bridge does not exist for Android afaict.  You will need to convince the proton folks to provide one. </p>,wsmwk,False,1,0

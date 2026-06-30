@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1762502,1534179,2025-09-07T06:02:12.179732Z,2025-09-07T06:02:12.179738Z,<p>Same problem here on Android 13. </p>,kretzschmar2,False,0,0
+1773456,1534179,2025-10-20T14:56:04.014035Z,2025-10-20T14:56:04.014041Z,<p>Version 13 should be available later this week.  Please post your status after you are able to update. </p>,wsmwk,False,0,0
+1794562,1534179,2026-01-17T23:39:58.090316Z,2026-01-17T23:39:58.090322Z,<p>Version 13 was better for you? </p>,wsmwk,False,1,0
+1794585,1534179,2026-01-18T02:33:44.816382Z,2026-01-18T02:33:44.816390Z,<p>Problem is solved </p>,kevin275,False,0,0

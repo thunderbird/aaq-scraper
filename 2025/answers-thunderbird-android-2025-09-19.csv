@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1765717,1536806,2025-09-19T20:59:44.784165Z,2025-09-19T20:59:44.784172Z,<p>Sorry the 'I' is missing That should be 'Impossibile inviare alcuni messaggi' </p> <dl><dd>-( </dd></dl>,Gambalunga,False,0,0
+1767264,1536654,2025-09-25T10:47:37.371655Z,2025-09-25T10:47:37.371663Z,"<p>Dear Stefan, Currently this is not supported by the mobile version. You can see the mobile roadmap here: <a href=""https://github.com/orgs/thunderbird/projects/19/views/1"" rel=""nofollow"">https://github.com/orgs/thunderbird/projects/19/views/1</a>.  </p><p>Have a great day! Bogo </p>",shopov.bogomil,False,0,0
+1767700,1536724,2025-09-26T15:53:35.129859Z,2025-09-26T15:53:35.129865Z,"<p>Sie erhalten möglicherweise bessere Unterstützung auf der deutschsprachigen Website <a href=""http://www.thunderbird-mail.de/wiki/Hauptseite"" rel=""nofollow"">http://www.thunderbird-mail.de/wiki/Hauptseite</a>. </p>",wsmwk,False,0,0
+1767702,1536654,2025-09-26T15:55:04.650174Z,2025-09-26T15:55:04.650180Z,<p>&gt; Is this not available? </p><p>This desktop feature is not available on mobile. </p>,wsmwk,False,0,1
