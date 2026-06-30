@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1784523,1553079,2025-12-07T20:35:12.923807Z,2025-12-07T20:35:12.923813Z,"<p>1. Ensure you have ""Show Unified Inbox"" enabled from general settings &gt; display. 2. Tick ""Unify"" on each folder containing emails you wish to show within the Unified inbox. The unify option is located under: Account &gt; Manage Folders &gt; [Folder Name]. </p><p>Note that only the Unified Inbox is supported. There's currently no Unified Sent, Draft, Outbox, Trash or Spam folders. </p>",platform34,False,0,0

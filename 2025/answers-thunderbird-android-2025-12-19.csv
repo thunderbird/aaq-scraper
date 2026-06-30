@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1787296,1555844,2025-12-19T14:45:38.303138Z,2025-12-19T14:45:38.303143Z,"<p>The following link might be helpful: Want to remove email accounts from the Mobile App <a href=""https://support.mozilla.org/en-US/questions/1524098"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1524098</a> </p>",Yu5tiqX9og,False,0,0
+1813306,1555844,2026-04-23T18:57:39.340748Z,2026-04-23T18:57:39.340754Z,"<p>You can remove an account pretty easily in Thunderbird Android. Just go to Settings, select the account you want to delete, scroll down, and tap “Remove account.” If you don’t see that option, make sure you’re in the account-specific settings, not general settings. </p>",125hayley125,False,0,0

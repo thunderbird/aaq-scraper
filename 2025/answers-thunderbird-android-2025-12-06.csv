@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1784392,1552828,2025-12-07T10:41:27.498678Z,2025-12-07T10:41:27.498685Z,<p>The app doesn't currently have a Unified sent mail feature. It's on the road map but will take some time to implement due to legacy code refactoring. </p>,platform34,False,0,0
