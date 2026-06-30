@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1710599,1491690,2025-02-07T22:47:46.163709Z,2025-02-07T22:47:46.163715Z,"<p>The url for the other post didn't show up correctly. It is <a href=""https://support.mozilla.org/en-US/questions/1239518"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1239518</a> </p>",dioselin,False,0,0
+1710691,1491619,2025-02-08T14:24:50.769352Z,2025-02-08T14:24:50.769360Z,<p>Moving this to android-land </p>,wsmwk,False,0,1
+1710715,1491690,2025-02-08T17:12:27.191599Z,2025-02-08T17:12:27.191605Z,"<p>I would suggest you ask about this in the 'Thunderbird Android' forum. <a href=""https://support.mozilla.org/en-US/products/thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/products/thunderbird-android</a> </p>",Toad-Hall,False,0,0

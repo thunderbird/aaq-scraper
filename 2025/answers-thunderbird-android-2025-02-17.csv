@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1712715,1493801,2025-02-17T14:46:22.786843Z,2025-02-17T14:46:22.786847Z,"<p>Currently, Thunderbird mobile only supports plain text signatures and does not allow HTML or images. A possible workaround is to manually insert the image URL in the signature or use a third-party email app that supports HTML signatures. Hopefully, Thunderbird will add this feature in the future! </p>",Paulraun,False,2,0
