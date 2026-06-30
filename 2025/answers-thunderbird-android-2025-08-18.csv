@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1758763,1530058,2025-08-22T13:57:00.879687Z,2025-08-22T13:57:00.879695Z,"<p>Hello, I am not sure this is possible. What problem are you trying to solve? </p><p>Bogo </p>",shopov.bogomil,False,0,0
+1759508,1530144,2025-08-25T11:30:47.349183Z,2025-08-25T11:30:47.349190Z,"<p>Hello, Do you think this might help? <a href=""https://support.mozilla.org/en-US/kb/configure-push-email-thunderbird-android"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/configure-push-email-thunderbird-android</a> </p><p>Bogo </p>",shopov.bogomil,False,0,0
+1759866,1530144,2025-08-26T19:42:35.116972Z,2025-08-26T19:42:35.116981Z,"<p>Unfortunately not, I already did all of this. </p>",exnor,False,0,0

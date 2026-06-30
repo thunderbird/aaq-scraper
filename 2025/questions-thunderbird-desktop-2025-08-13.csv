@@ -1,0 +1,782 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1528878,2025-08-13T00:11:11.104332Z,2025-08-13T00:11:11.104341Z,en-US,thunderbird,Can't access stored emails in new installation,False,,,False,,,import-and-export-email,thunderbird;import-and-export-email;,bill123,"<p>I reinstalled Thunderbird (Fedora RPM) but now the Local Folder Browse window won't let me select where I store my email (documents/email/(account name)) and profiles from the old installation. When I try to point to the folder where they were stored in the old installation, it says the folder is 'not suitable for message storage'. The result is that I can't access any of my old emails (pop account). They exist, but are inaccessable. These are important business emails and it will seriously impact me if I can get them back. I'd appreciate your ideas on how to bring the old emails on the previous folder into the new installation. Thanks. </p>",bill123;,True,False,False,";useragent:Mozilla/5.0 (X11; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/en-US/kb/profile-manager-create-and-remove-thunderbird-profiles"", ""/en-US/kb/dangerous-directories-Thunderbird-account-settings""]",0,0,0,,,,,
+1528881,2025-08-13T00:34:40.292543Z,2025-08-13T00:34:40.292550Z,en-US,thunderbird,Retrieve an archived message,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,tina.ottman,<p>How can I retrieve an accidentally archived message? </p>,tina.ottman;,True,False,False,";useragent:Mozilla/5.0 (iPhone; CPU iPhone OS 18_5_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/139.0.7258.76 Mobile/15E148 Safari/604.1;kb_visits_prior:[""/en-US/kb/archived-messages""]",0,0,0,,,,,
+1528884,2025-08-13T00:45:14.010180Z,2025-08-13T00:45:14.010186Z,en-US,thunderbird,Migrate accts,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,bjteague1008,<p>Need to migrate my current accts </p>,bjteague1008;,True,False,False,";useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36",0,0,0,,,,,
+1528885,2025-08-13T00:52:26.069544Z,2025-08-14T21:29:24.573922Z,en-US,thunderbird,for a past 2 weeks I cant send and receive emails,False,,,False,1756858,1756858;,email-and-messaging,thunderbird;email-and-messaging;,rayrockmasonry12,<p>to who it may concern ' i have been value customer for 7 years. i been using email only   for a past 2 weeks its stops working. i cant send and receive emails. please help me only one email is working and please contact me at  &lt;redacted&gt;@gmail.com preshiate </p>,rayrockmasonry12;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0;kb_visits_prior:[""/en-US/kb/manual-account-configuration"", ""/en-US/kb/automatic-account-configuration""]",1,0,2,,,wsmwk,,
+1528888,2025-08-13T00:59:56.642280Z,2025-08-14T04:16:04.030394Z,en-US,thunderbird,Creating folder,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,tcluster,"<p>I'm on 141.0 (64 bit).  I'm trying to create a mail folder (right click on ""Local Folders"", ""New Folder""option).  As I type the name, when I exceed eight positions the ""Create Folder"" tab goes dark.  In other words, you can't create a folder with a name longer than eight positions.  This is new. </p><p>SORRY, this is my error.  I'm embarrassed to say what it was.  I was trying to create a new folder, but a folder with the same name already existed.  Duh........ </p><p>I would delete this question but I don't see a way to do it. </p>",tcluster;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,tcluster,,
+1528889,2025-08-13T01:03:18.400902Z,2025-08-14T20:38:21.391373Z,en-US,thunderbird,Corrupt emails show as plain text only (bitdefender??). SOLVED by changing Earthlink POP security authentication from NONE to SSL,False,,,False,1756826,1756175;1756429;1756547;1756734;1756826;,send-and-receive-email,thunderbird;send-and-receive-email;,fannydog18,"<p>With 140.1.1esr 32-bit (on a 64-bit laptop) I'm getting some emails from Earthlink POP3 account corrupted and showing only as plain text. The bad emails all share these 2 lines which do not appear in other good emails: </p><p>Received-SPF: pas . </p><p>I have another laptop with 140.1.0esr 64-bit and it does not have any problems with Earthlink POP3 emails. </p><p>When I installed 140.1.0esr 64-bit on the ""bad"" laptop, the problem goes away. </p><p>I was also getting corrupted emails from a Gmail POP account but could not see what might be missing or bad in the source. </p><p>Just an observation, this suddenly started happening on Aug 11. </p><p>Here's a post about maybe the same problem: <a href=""https://learn.microsoft.com/en-us/answers/questions/5520490/suddenly-most-of-my-e-mails-contain-unintelligble"" rel=""nofollow"">https://learn.microsoft.com/en-us/answers/questions/5520490/suddenly-most-of-my-e-mails-contain-unintelligble</a> </p>",fannydog18;siffemoz;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",5,0,1,,,wsmwk,,
+1528890,2025-08-13T01:09:37.940991Z,2025-08-13T02:02:52.933330Z,en-US,thunderbird,SMTP Not Working,True,1756115,rabbithutch1,False,1756115,1756115;,send-and-receive-email,thunderbird;send-and-receive-email;,rabbithutch1,"<p>Recently, I tried to set up a new account with an email address like this:  <a href=""mailto:webmaster@mywebsite.com"" rel=""nofollow"">webmaster@mywebsite.com</a>.  My intent, when I get this right, is to use it to receive email generated by users of my website or sent to it by non-users who might discover the address.   </p><p>Apparently I hosed something up, because now I can't sent email.  In response to clicking the Send button, I get a response like the that in the screenshot after a few seconds. </p><p>I've checked my settings, also in a screenshot. </p><p>I deleted the new email account but I still get errors.  I've slept more than twice; so I don't remember if I even made any changes to SMTP other than to specify the Google SMTP server for the account I set up. </p><p>What am I doing wrong?  What do I need to do to fix this? </p>",rabbithutch1;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;solver_id:181052,1,0,2,,,,,
+1528892,2025-08-13T01:25:28.536411Z,2025-08-13T07:33:53.918962Z,en-US,thunderbird,email filters,False,,,False,1756173,1756173;,send-and-receive-email,thunderbird;send-and-receive-email;,kristin10,"<p>What has happened to Thunderbird - the 'create filter from message' option is no longer available, filters already set don't seem to be working, and I can't find the settings to run the filters. Please help - I'm missing important emails. Kristin MOore </p>",kristin10;siffemoz;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,1,,,,,
+1528894,2025-08-13T01:27:06.282176Z,2025-08-13T01:27:06.282182Z,en-US,thunderbird,no mail access,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,stefan.badstuebner,"<p>Login to server <a href=""http://imap.mail.yahoo.com"" rel=""nofollow"">imap.mail.yahoo.com</a> with username <a href=""mailto:sbads@pacbell.net"" rel=""nofollow"">sbads@pacbell.net</a> failed. my iCloud sever works and I can receive sbads content on iPhone and MacBook Air </p>",stefan.badstuebner;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1528905,2025-08-13T03:34:04.120666Z,2025-08-13T23:22:50.100367Z,en-US,thunderbird,calendar view right side panel,False,,,False,1756507,1756169;1756482;1756483;1756492;1756493;1756498;1756500;1756503;1756507;,calendar,thunderbird;calendar;windows-10;firefox-1410;firefox-14103;,userheyref,<p>How can I get back the ability / setting I always had to see the right side 'mini-view' of my monthly calendar? I used to be able to see each day on the right side of my calendar - now it's not showing??? I'm sure it's a simple display setting or option - but I can't find it - please help... </p>,userheyref;siffemoz;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;ff_version:141.0.3;os:Windows 10,9,0,2,,,,Windows 10,
+1528911,2025-08-13T04:13:44.456279Z,2025-08-15T23:18:28.514221Z,en-US,thunderbird,Incomming Messages Not Being Displayed Correctly (bitdefender),True,1756486,siffemoz,False,1757225,1756167;1756242;1756243;1756486;1756530;1756533;1756811;1757212;1757225;,email-and-messaging,thunderbird;email-and-messaging;,Matt_McKee,"<p>Updated Thunderbird to version 141.0 and now having issues with new email messages.  When new messages are downloaded the subject line is blank, correspondents line is blank and the actual email message is being shown as the HTML layout.  This also happens if a plain text email message is received.  Any help is appreciated. </p>",Matt_McKee;siffemoz;supsup.linux;dpercival;wsmwk;,True,False,False,;solver_id:626632;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,9,0,3,,,wsmwk,,
+1528916,2025-08-13T04:51:04.954171Z,2025-08-14T19:58:38.985479Z,en-US,thunderbird,emails received without sender name or subject and in source code. (bitdefender),False,,,False,1756802,1756166;1756168;1756171;1756180;1756348;1756405;1756412;1756648;1756802;,send-and-receive-email,thunderbird;send-and-receive-email;,christine.casiez,"<p>Since 2 days, all the emails I received in Thunderbird are not correctly delivered : no sender name, no subject and the contents appears in souce code. My provider is Orange, and I have no problem when I check my emails directly from Orange. On the forum, there is mention of a problem with Bit Defender, but I don't have it. </p>",christine.casiez;siffemoz;pcdumo;web.jprch;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 AtContent/91.5.7604.5;kb_visits_prior:[""/fr/kb/reparer-base-de-donnees-globale""]",9,0,0,,,wsmwk,,
+1528919,2025-08-13T05:11:47.900800Z,2025-08-14T20:24:24.699494Z,en-US,thunderbird,receiving emails with no header (bitdefender),True,1756164,siffemoz,False,1756818,1756164;1756172;1756183;1756193;1756818;,email-and-messaging,thunderbird;email-and-messaging;,ellenminto66,"<p>I am receiving emails with no header and look like this when I open them. Can you please help me.  Thanks.  Ellen Minto </p><p>X-SNCR-VADESECURE: CLEA . X-RazorGate-Vade: gggruggvucftvghtrhhoucdtuddrgeeffedrtdefgddufeeihedvucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuueftkffvkffujffvgffngfevqffonecuuegrihhlohhuthemuceftddunecundfotefknffkpffiucdludejmdenucfjughrpefuhfhrvfffkffojefjtgggsegrtddtrehttdejnecuhfhrohhmpeetnhgurhgvficuhghomhhmrggtkhcuofhinhhishhtrhhivghsuceoihhnfhhosegrfihmihdrnhgvtheqnecuggftrfgrthhtvghrnhepudfggeeftddvgfdugfduveeftefgkeehgeejleeflefhvddtvdeuveefueegteegnecuffhomhgrihhnpehlihhsthdqmhgrnhgrghgvrdgtohhmpdhfohhrfigrrhguqdhtohdqfhhrihgvnhgurdgtohhmnecukfhppedugeekrddutdehrddufedrudejfeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhephhgvlhhopehmrghilhdujeefrdhsvggrhedurdhmtghsvhdrnhgvthdpihhnvghtpedugeekrddutdehrddufedrudejfedpmhgrihhlfhhrohhmpegsohhunhgtvgdqmhgtrdhushefpgduudelkeehtdefudekrdegtdehleehiedvqdehrggsleegtggufeejrgesmhgrihhludejfedrshgvrgehuddrmhgtshhvrdhnvghtpdhrvghvkffrpehmrghilhdujeefrdhsvggrhedurdhmtghsvhdrnhgvthdpshhpfhepphgrshhspdgukhhimhepphgrshhspdgumhgrrhgtpehprghsshdpghgvohfkrfepfgfupdfovfet 	jfhoshhtpegsthhprhgurhhgihdtudefpdhnsggprhgtphhtthhopedupdhrtghpthhtohepvghllhgvnhdrmhhinhhtohessghtihhnthgvrhhnvghtrdgtohhm X-RazorGate-Vade-Verdict: clean 17 X-RazorGate-Vade-Classification: commercial-misc Received: from <a href=""http://mail173.sea51.mcsv.net"" rel=""nofollow"">mail173.sea51.mcsv.net</a> (148.105.13.173) by <a href=""http://btprdrgi013.btinternet.com"" rel=""nofollow"">btprdrgi013.btinternet.com</a> </p><pre>       id 67F5E8B43936DD6D for ellen.minto@btinternet.com; Tue, 12 Aug 2025 23:23:59 +0100 </pre> <p>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://fbl.mcsv.net"" rel=""nofollow"">fbl.mcsv.net</a>; s=k1; 	t=1755037438; x=1755123838; 	bh=Fv80o+gL8P6wOiDeQ74uGa8FewmSCxlqcCvdr+a+H5A=; 	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID: 	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type: 	 MIME-Version:CC:Date:Subject:From; 	b=RGk9XKxs6nm/9PArbt8kWfh8WpHsDh1NOMwiG6dAJVpTVVJNUNNsGiiPmynAOVW+I 	 XJ7a0Fnq8l4yyICTNCypk93mLxAzkpacnxNuTOvPAOAycHNnGQWmf9W/Pz0mZP7W0v 	 6uzzHH0r4ehld9/mykeg/0gT4abttYFu8Bmv65xITUN1bURNxAX1vw4GvQAXw6lIPK 	 X8/yOJNV9EoLIUu0gQacR2y3teYLtMQHb72puW7wlmiU+meh0c1jcWn9NpvS5oOWD/ 	 xmNamdh4COs9fX+BCcZO+mHriIXYWBhbA9t0f3gfBVM5CIgfyH6GjQ/mmClBJWmqkw 	 UblED7kXBflQw== DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://awmi.net"" rel=""nofollow"">awmi.net</a>; s=k3; 	t=1755037438; x=1755307438; <a href=""mailto:i=info@awmi.net"" rel=""nofollow"">i=info@awmi.net</a>; 	bh=Fv80o+gL8P6wOiDeQ74uGa8FewmSCxlqcCvdr+a+H5A=; 	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID: 	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type: 	 MIME-Version:CC:Date:Subject:From; 	b=Yhq93DkRgi+W/au3dGcZ7tOHZM+42D2Jmz/vza64jYtqCLoTYujXBocfFCChrGeYT 	 PBu+yNu3UXWPOmZQhwK3zd//CWUXC6SrPpiJLjr9L+NKKz0WV6r2+MLyodscTpXsrs 	 eaZjcvMfMb+pybJ7NuNJHzzbhmd553UJ1pWTIFF7eMdvpoAoiMT9BHgiqR2IK7VBTN 	 uAQkCoCCJ5oLGFkQ8NgQd8wvKdDcd1mZlv3qiUAyZcaZNZozOotzTVrhb2JEFrNfIk 	 EUspCliAhuFqKuLtajpbmQUNeh/KzQL9FdDxEjY8GGzLSXEBhmkKB00xs5WEhrzHvv 	 /awazjgZUVdkg== Received: from localhost (localhost [127.0.0.1]) 	by <a href=""http://mail173.sea51.mcsv.net"" rel=""nofollow"">mail173.sea51.mcsv.net</a> (Mailchimp) with ESMTP id 4c1mHy0nqDz705hJR 	for &lt;<a href=""mailto:ellen.minto@btinternet.com"" rel=""nofollow"">ellen.minto@btinternet.com</a>&gt;; Tue, 12 Aug 2025 22:23:58 +0000 (GMT) Subject: =?utf-8?Q?=2C=C2=A0It=E2=80=99s=20Time=20to=20Plan=20Ahead=20=E2=80=94=20Your=20Free=20Will=20is=20Waiting?= From: Andrew Wommack Ministries &lt;<a href=""mailto:info@awmi.net"" rel=""nofollow"">info@awmi.net</a>&gt; Reply-To: =?utf-8?Q?Andrew=20Wommack=20Ministries?= &lt;<a href=""mailto:info@awmi.net"" rel=""nofollow"">info@awmi.net</a>&gt; To: =?utf-8?Q??= &lt;<a href=""mailto:ellen.minto@btinternet.com"" rel=""nofollow"">ellen.minto@btinternet.com</a>&gt; Date: Tue, 12 Aug 2025 22:23:46 +0000 Message-ID: &lt;<a href=""mailto:957dee0f9498dc7317c6ae4b4.5ab94cd37a.20250812222336.82ff84bea5.caee7287@mail173.sea51.mcsv.net"" rel=""nofollow"">957dee0f9498dc7317c6ae4b4.5ab94cd37a.20250812222336.82ff84bea5.caee7287@mail173.sea51.mcsv.net</a>&gt; X-Mailer: Mailchimp Mailer - **CID82ff84bea55ab94cd37a** X-Campaign: mailchimp957dee0f9498dc7317c6ae4b4.82ff84bea5 X-campaignid: mailchimp957dee0f9498dc7317c6ae4b4.82ff84bea5 X-Report-Abuse: Please report abuse for this campaign here: <a href=""https://mailchimp.com/contact/abuse/?u=957dee0f9498dc7317c6ae4b4&amp;id=82ff84bea5&amp;e=5ab94cd37a"" rel=""nofollow"">https://mailchimp.com/contact/abuse/?u=957dee0f9498dc7317c6ae4b4&amp;id=82ff84bea5&amp;e=5ab94cd37a</a> X-MC-User: 957dee0f9498dc7317c6ae4b4 Feedback-ID: 119850318:119850318.4059562:us3:mc List-ID: 957dee0f9498dc7317c6ae4b4mc list &lt;<a href=""http://957dee0f9498dc7317c6ae4b4.625017.list-id.mcsv.net"" rel=""nofollow"">957dee0f9498dc7317c6ae4b4.625017.list-id.mcsv.net</a>&gt; X-Accounttype: pr List-Unsubscribe: &lt;<a href=""https://gtntv.us3.list-manage.com/unsubscribe?u=957dee0f9498dc7317c6ae4b4&amp;id=3bf9981e3e&amp;t=h&amp;e=5ab94cd37a&amp;c=82ff84bea5"" rel=""nofollow"">https://gtntv.us3.list-manage.com/unsubscribe?u=957dee0f9498dc7317c6ae4b4&amp;id=3bf9981e3e&amp;t=h&amp;e=5ab94cd37a&amp;c=82ff84bea5</a>&gt;, &lt;<a href=""mailto:unsubscribe-mc.us3_957dee0f9498dc7317c6ae4b4.82ff84bea5-5ab94cd37a@unsubscribe.mailchimpapp.net?subject=unsubscribe"" rel=""nofollow"">mailto:unsubscribe-mc.us3_957dee0f9498dc7317c6ae4b4.82ff84bea5-5ab94cd37a@unsubscribe.mailchimpapp.net?subject=unsubscribe</a>&gt; List-Unsubscribe-Post: List-Unsubscribe=One-Click Content-Type: multipart/alternative; boundary=""_----------=_MCPart_1038815606"" MIME-Version: 1.0 </p>",ellenminto66;siffemoz;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",5,0,3,,,wsmwk,,
+1528920,2025-08-13T05:12:10.942006Z,2025-08-15T02:49:49.428993Z,en-US,thunderbird,e mails in kode text? (bitdefender),True,1756920,umimmak,False,1756920,1756165;1756178;1756186;1756825;1756920;,email-and-messaging,thunderbird;email-and-messaging;,umimmak,"<p>Hi. My e mails looks like this, what is wrong? </p><p>. X-yse-spamcause: OK, (0)(0000)gggruggvucftvghtrhhoucdtuddrgeeffedrtdefgddufeejfeduucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuvfffvedpggftfghnshhusghstghrihgsvgenuceurghilhhouhhtmecufedtudenucenucfjughrpefhshfvuffkffggtgesrgdtreertddtjeenucfhrhhomhepofhoiihilhhlrgcuoegrtggtohhunhhtshesfhhirhgvfhhogidrtghomheqnecuggftrfgrthhtvghrnhepkeevteeihefhiedtkeekheelvdffiefgffettdeihfehtdfhudefveetfeevfefgnecuffhomhgrihhnpehmohiiihhllhgrrdhorhhgnecukfhppeehgedrvdegtddrheelrdegkeenucevlhhushhtvghrufhiiigvpedtnecurfgrrhgrmhepihhnvghtpeehgedrvdegtddrheelrdegkedphhgvlhhopegrheelqdegkedrshhmthhpqdhouhhtrdhushdqfigvshhtqddvrdgrmhgriihonhhsvghsrdgtohhmpdhmrghilhhfrhhomheptddutddutdduleekrgdutggviedvfhegqdefjeelieduleehuddqiedtheelqdegtgelgedqkedufhdvqdeftgegheejugdtvggvugehugdqtddttddttddtsehmrghilhdrfhhirhgvfhhogidrtghomhdpnhgspghrtghpthhtohepuddprhgtphhtthhopehumhhimhhmrghksehmrghilhdrughkpdhsphhfpehprghsshdpughkihhmpehprghsshdpughmrghrtgepphgrshhs Received: from <a href=""http://a59-48.smtp-out.us-west-2.amazonses.com"" rel=""nofollow"">a59-48.smtp-out.us-west-2.amazonses.com</a> (<a href=""http://a59-48.smtp-out.us-west-2.amazonses.com"" rel=""nofollow"">a59-48.smtp-out.us-west-2.amazonses.com</a> [54.240.59.48]) 	(using TLSv1.2 with cipher ECDHE-RSA-AES128-SHA256 (128/128 bits)) 	(No client certificate requested) 	by <a href=""http://mwumf0304.yousee.as8677.net"" rel=""nofollow"">mwumf0304.yousee.as8677.net</a> (SMTP Server) with ESMTPS id 4c1x782xsfz18Wr4Q 	for &lt;<a href=""mailto:umimmak@mail.dk"" rel=""nofollow"">umimmak@mail.dk</a>&gt;; Wed, 13 Aug 2025 07:01:55 +0200 (CEST) DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; 	s=6ujb3doj4mwbngmp2xjutilwl4zbdio3; d=<a href=""http://firefox.com"" rel=""nofollow"">firefox.com</a>; t=1755061314; 	h=From:Sender:To:Subject:Message-ID:Date:MIME-Version:Content-Type; 	bh=ehwL1a6tonjAciJHxnNxH3Os+JPd4lSx4iUD/ClUOIU=; 	b=ASB6Z54wKSpnNDP8WZQ6uGsfuX2ybIRaEPcVKTIcnp3Linh0UQdDvz/6V/X9ubUL 	2yUfXGGjysci33vYkbhnBCadryo+2dA6in2sijEXUfFL8kDuTVKHZi/uokA4deAhZWh 	ktd6t2DRKTZ28JWp7LS8Cfat8XVA9Sno87hXOZGU= DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; 	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=<a href=""http://amazonses.com"" rel=""nofollow"">amazonses.com</a>; t=1755061314; 	h=From:Sender:To:Subject:Message-ID:Date:MIME-Version:Content-Type:Feedback-ID; 	bh=ehwL1a6tonjAciJHxnNxH3Os+JPd4lSx4iUD/ClUOIU=; 	b=ECO7XYkaynSZCxvKkYdhUzDqzCoSiAvN0B7mpSH/Lgr0yMigIxHDsEzS6+CPAFG+ 	zpCxkGWE6K4IpD8VbVZl/sneILLkSVpc7jJpBJ2e0KlOqQ+/0/uAkMPfIUo9bK1iaUo 	JzvC8MDVrS8WgqhK2wZEPDlCXy7ix7zteaC4NeQU= Content-Language: da X-Template-Name: verifyShortCode X-Template-Version: 5 X-Verify-Short-Code: 632679 X-Device-ID: a8daf54929b64a5c8fa334050c2deb1e X-Flow-ID: a19e1e7415204da8eb9cf32529b685884990b21f83df555c4fdf65be3b58e3e2 X-Flow-Begin-Time: 1755061289950 X-Uid: 819627cdb0e5483d98826fc1cb3acd9a From: Mozilla &lt;<a href=""mailto:accounts@firefox.com"" rel=""nofollow"">accounts@firefox.com</a>&gt; Sender: Mozilla &lt;<a href=""mailto:accounts@firefox.com"" rel=""nofollow"">accounts@firefox.com</a>&gt; </p>",umimmak;siffemoz;wsmwk;,True,False,False,";solver_id:626381;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",5,0,0,,,wsmwk,,
+1528921,2025-08-13T05:13:05.016382Z,2025-08-15T10:37:39.249674Z,it,thunderbird,messaggi codificati,False,,,False,1756988,1756153;1756420;1756589;1756670;1756682;1756849;1756988;,send-and-receive-email,thunderbird;send-and-receive-email;,luca.bergamaschi,"<p>Improvvisamente, da ieri, i messaggi arrivano in forma codificata e illeggibile. Esempio: </p><p>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=<a href=""http://email.saldiprivati.com"" rel=""nofollow"">email.saldiprivati.com</a>; </p><pre>h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version: Reply-To:Message-ID:Content-Type; i=saldiprivati@email.saldiprivati.com; bh=fZLDLGBOs3qy0XRwtj/zwNkwO9p8sFeRqRaul+5GCig=; b=HHnQl4Akz0ekUhCiCTGaemwaIwhczjlJvVDrcmy6UOl9m4ui2jxLNLCSsXVzrWHH0BkD5YFlrMpt </pre>",luca.bergamaschi;@next;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,7,0,0,,,,,
+1528935,2025-08-13T06:05:16.951181Z,2025-08-13T11:47:43.406578Z,en-US,thunderbird,Accounts,False,,,False,1756228,1756228;,account-management,thunderbird;account-management;,marion.lebigot,"<p>Hello, to solve a problem I deactivated my email account on Thunderbird, and since then I haven’t been able to reconnect it to any email account at all. I uninstalled and reinstalled the software thinking it would reset it, but it didn’t help at all. What can I do? </p>",marion.lebigot;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,1,,,,,
+1528937,2025-08-13T06:17:06.209451Z,2025-08-13T06:40:50.932503Z,nl,thunderbird,ik kan geen e-mail ontvangen van Ziggo,False,,,False,1756145,1756145;,email-and-messaging,thunderbird;email-and-messaging;,p.f.dupuis,"<p>Sinds de update van vorige week naar 141.0 kan ik geen e-mails meer ontvangen via <a href=""http://pop.ziggo.nl"" rel=""nofollow"">pop.ziggo.nl</a>,  Gmail kan ik wel ontvangen. Ik krijg een time-out  na enige tijd.  Er staan nog meer dan honderd e-mails te wachten en af en toe komt er één binnen. Wat moet ik doen om het te herstellen?  Ik ben te bereiken op ******@gmail.com het lijkt erop dat mijn vrouw hetzelfde probleem. Die heeft gisteren de update geïnstalleerd en heeft sindsdien geen e-mails meer gekregen. Alvast bedankt. Foppe </p>",p.f.dupuis;Mozilla-assistent;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,Fjoerfoks,,
+1528938,2025-08-13T06:25:09.807104Z,2025-08-13T09:38:05.308414Z,en-US,thunderbird,Thunderbird,True,1756205,JMT,False,1756205,1756163;1756205;,send-and-receive-email,thunderbird;send-and-receive-email;,paulmougeat38,"<p>Bonjour, Depuis hier matin, 12/08/25, les mails entrants apparaissent sans titre et le contenu en code source. Est-ce un problème partagé ? Cela vient-il d'un paramétrage local ? Merci de votre aide. </p>",paulmougeat38;siffemoz;JMT;,True,False,False,";solver_id:6947464;useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",2,0,0,,,,,
+1528939,2025-08-13T06:25:19.828002Z,2025-08-14T22:47:08.041179Z,en-US,thunderbird,Thunderbird incoming emails are unreadable (bitdefender??),False,,,False,1756873,1756162;1756170;1756181;1756824;1756873;,send-and-receive-email,thunderbird;send-and-receive-email;,chaslonpearce,<p>Hello Most of my incomming emails are received in unreadable text.  I can read the subject line ok. Screen shot attached. Could not find much info on it.  Some info related to versions prior V78 Using V140.1.1 download 13 Aug.  Problem started occuring 2 days ago not after an update.  I did not make any adjustments to the settings. </p><p>Brian </p>,chaslonpearce;siffemoz;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,5,0,0,,,wsmwk,,
+1528941,2025-08-13T06:38:50.283704Z,2025-08-22T07:50:36.294128Z,it,thunderbird,[DOC] Errore codifica email (Agosto 2025),False,,,False,1757753,1756199;1756591;1757054;1757753;,languages,thunderbird;,'@next,"<p>Date le numerose richiese arrivate nelle ultime ore, raccolgo qui le informazioni disponibili su un problema di visualizzazione delle email (viene mostrato il contenuto grezzo del messaggio) </p><p>Segnalazioni ricevute: </p> <ul><li> <a href=""https://support.mozilla.org/it/questions/1528608"" rel=""nofollow"">https://support.mozilla.org/it/questions/1528608</a> (TB 141, <a href=""http://Alice.it"" rel=""nofollow"">Alice.it</a>) </li><li> <a href=""https://support.mozilla.org/it/questions/1528736"" rel=""nofollow"">https://support.mozilla.org/it/questions/1528736</a> (TB 141, Tiscali, Aruba) </li><li> <a href=""https://support.mozilla.org/it/questions/1528738"" rel=""nofollow"">https://support.mozilla.org/it/questions/1528738</a> </li><li> <a href=""https://support.mozilla.org/it/questions/1528761"" rel=""nofollow"">https://support.mozilla.org/it/questions/1528761</a> </li><li> <a href=""https://support.mozilla.org/it/questions/1528921"" rel=""nofollow"">https://support.mozilla.org/it/questions/1528921</a> (TB 78, Fastwebnet, Gmail, Postecert) </li></ul> <p>(Post in aggiornamento) </p>",'@next;lcpersonale;info10071;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,4,0,2,,,'@next,,
+1528942,2025-08-13T06:52:31.060786Z,2025-08-13T06:52:31.060792Z,hu,thunderbird,Thunderbird piszkozat visszaállítása,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,matay.balazs,"<p>Hajnalban automatikusan lefrissített a gépem, újraindult, de a thunderbirdben a piszkozatként megnyitott üzenetet nem állította vissza, holott korábban mindig így történt. Brutál sok munkám veszett oda, amiket most több napos melóval tudnék újra beírni. Hogy lehet visszahozni az elveszett piszkozatot? Köszönöm! </p>",matay.balazs;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36;kb_visits_prior:[""/hu/kb/profilok-ahol-thunderbird-tarolja-az-uzeneteket-es""]",0,0,0,,,,,
+1528946,2025-08-13T07:12:29.865854Z,2025-08-14T20:23:29.962437Z,en-US,thunderbird,Emails received in code,True,1756194,jerome.framery,False,1756817,1756194;1756573;1756626;1756817;,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,alexis.bonnet3,"<p>Hi, Since yesterday, the messages I receive are in code. My provider is Orange (France). Of course, the messages are not coded in my Orange mailbox. The protocol I use is pop. It looks like all messages are considered as spam. I switched off Bitdefender without solving the problem. Messages start like shown below. Thank you for your help. Alexis </p><p>X-ME-engine: defaul . X-me-spamcause: (17)(0000)dmFkZTG3QdvkEcZ12Q0oMIMxMMwayqDM0xuW6cKSqbMStidLeczaRAD0B/il1RO38qThhaj1oj09GWW/odvQFsckvHDMENaquuselcOUGKwkLi1P1ZbXJ6zOysE6iG86VPGRMFfC4No67lrKiUsBubAJUuT02405XOYH7YLivURg6ZPpIpRfyXETjJ/u1LIWBtEcsE7hxMSUSgc8EzXNMhw0bFSgiIbTEppfH/xE/r/GHiG7/78Me6NwliJfX/dI0Hrpv70tJuNL7hQVBwCwFJn2afaQvByrBB3RLn6C/m9UA3F0ZfRZ6EXCrFiZTekgSfr7nB5ZzwVHm+pKoahsOJfGT+y7C+x3of+mnlAM+2db1TQSrOSEXCUK5pN92WNyqYKYS+Zu5TOie2si/JVBsmsauaJR7hVym+4UxrUpmnAb1kl/nY9XFdqaWEIm+WqC2fELo93f5ZbLmnDUpggo5o5d/s9gv8sSvQ3BpaCdTaj2g+kqiChATL1BQXJthd/+IGt75JVEoAPyDh4xQWRKmocWfu26wwRnIRjsPeSzCZb+HkYc4PFzIWskC2Lc3y1gNeyQPDAEfLmR8OKPSowhKjeYjtbnPY31OZbjc4ucw1fCd/NQ1r/3Mi0srX2wKWy96+eC8ytwHdXyRUX5WJ6oUA4/oyxlYoyvriohHqWa/EGJsm6g7g X-me-spamlevel: not-spam ARC-Seal: i=1; a=rsa-sha256; d=<a href=""http://orange.fr"" rel=""nofollow"">orange.fr</a>; s=t20230301; t=1755055666; cv=none; 	b=SIW7poJk2p67WB7Dosdr6F4CF7WrFxsnj9qC9Wj0DHbRbpFkFELfo/OnnDxPdtfU2p40uRUWDIrUW9U7zcFjp5PSUIZ11vqwiOx4xKv8ZsHnnoernRfQwe+4EmRyOGVqMCsbidnkCCXFAx/16Bq2sCkE1vuydXFST16+Mc0jSpozq45bEONuuWQdtQeEb61eGuJB2Jh2WyP5VGA37ttFiD0t82IV2TqhiRFHw9WtETOOd/D7AJuK8b9MYsW1d0rNB/tWM4yYPqCm69+u9x7zFtPgz+PTb27zkYzUhrxME10sxR9jZ2J7fWwmMYNFUBoT4fzDSicrJSPYebnt1bvgMg== ARC-Message-Signature: i=1; a=rsa-sha256; d=<a href=""http://orange.fr"" rel=""nofollow"">orange.fr</a>; s=t20230301; 	t=1755055666; c=relaxed/simple; 	bh=VUHOmlNHSGVBT7drvrxPDfVQ+J85WRZ97/w1UfZirW0=; h=From:To:Subject; 	b=PEs9j8q0maE6Le6kDFjNe0mR89ZGh/reWMqoDodcQTqpcbAniGU7/6dO6dRA++8OCF8YXTuK2iImRZq7X2BxRLDs8w1+AfsaUiRNuTXRUxz1VGRgE5LiW1RzLAwx90WYYQM5EQfXDHd+h+iNnNLvHgI4a/A2mxxxn0IOTFJ75Z58BSrs8+zePnlzw4KIypSzgqze5ufMUzdjzJiPJtsPMMlU+VLyBcRhWkU2DFs5pV541KI7UJB1KYgnXuEB3UAPYeb9eFO27ZDPHV3tCJ1F2GZaw2/GicrtTJ3JarpxO03XhLdpLvSRR4ALyqAS3/SUSpu8gUimOzy+OTq/6z85zA== ARC-Authentication-Results: i=1; opmta1mti31aub; spf=pass (opmta1mti31aub: domain of <a href=""mailto:sm.22291268386.f4b2124a039fac0e01-news=toner24.fr@emlgrid.com"" rel=""nofollow"">sm.22291268386.f4b2124a039fac0e01-news=toner24.fr@emlgrid.com</a> designates 185.54.187.97 as permited sender) <a href=""mailto:smtp.mailfrom=sm.22291268386.f4b2124a039fac0e01-news=toner24.fr@emlgrid.com"" rel=""nofollow"">smtp.mailfrom=sm.22291268386.f4b2124a039fac0e01-news=toner24.fr@emlgrid.com</a>; </p>",alexis.bonnet3;jerome.framery;wsmwk;,True,False,False,;solver_id:6947562;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,4,0,1,,,,,
+1528950,2025-08-13T07:29:43.136271Z,2025-08-14T07:53:51.841548Z,nl,thunderbird,Donatie,False,,,False,1756584,1756584;,settings,thunderbird;settings;,alainbedeur,<p>Beste....Dear </p><p>Het verzoek om een donatie blijft maar terugkomen...nadat een donatie al gegeven is ???? </p><p>The request for a donation keeps coming back... even after a donation has already been made ???? </p><p>Vriendelijke Groeten Alain </p>,alainbedeur;Mozilla-assistent;,True,False,False,;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,,,
+1528952,2025-08-13T07:44:18.418000Z,2025-08-13T08:23:09.006273Z,it,thunderbird,posta elettronica,False,,,False,1756190,1756190;,send-and-receive-email,thunderbird;needsinfo;send-and-receive-email;,lettricepericolosa,"<p>improvvisamente dalle 300 email in media al giorno che ricevo, adesso ne scarica 8/10.come posso fare? </p>",lettricepericolosa;@next;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0,1,0,0,,,,,
+1528954,2025-08-13T07:51:30.045742Z,2025-10-03T17:01:00.787378Z,en-US,thunderbird,Missing emails,False,,,False,1769410,1756820;1756822;1757016;1757177;1757190;1757197;1757203;1757205;1757214;1757224;1757339;1768515;1769410;,email-and-messaging,thunderbird;email-and-messaging;,turvey.au,"<p>Thunderbird version: 140.1.1esr (aarch64) MacOS 15.6 </p><p>After the most recent Thunderbird update, I noticed that one of my local folders was completely empty.  When I do a search for an email that was in that folder, the email shows as a search result, but when I click on the search result, it opens a new tab and says 'no message found' - although a preview of the email is visible in the search results. </p><p>I have tried restoring a backup of the local folders from my Time Machine backup, and while restoring those files did wind back all the other local folders and emails, it did not restore any emails into the problematic folder, even going back to my oldest time machine backup on the 26th of May this year - when I know the emails were still accessible - didn't help. </p><p>It's clear that the emails are still there, in some form, since the search function can sort of find them, however there is an issue retrieving and viewing them. </p><p>I am hoping someone can help! Thank you in advance, Claire. </p>",turvey.au;wsmwk;Mapenzi;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Safari/605.1.15",13,0,0,,,,,
+1528957,2025-08-13T08:15:30.462697Z,2025-08-14T20:25:03.629447Z,en-US,thunderbird,Version 140.1.1 esr messages via pop no longer correctly processed (bitdefender),False,,,False,1756819,1756819;,send-and-receive-email,thunderbird;send-and-receive-email;,elizabeth.cherhal,"<p>A new version of thunderbird (140.1.1 esr) installed itself yesterday, and since then the incoming messages from an account configured with pop are no longer correctly displayed. ie the headers are not interpreted, and the body is displayed as text, even when the option ""body of message"" says ""original html"" or ""simple html"". (sorry if the terms are inexact, my version of TB speaks french) Is there a way to fix this, or should I now use IMAP on this account ? (basically I used pop so that messages get deleted from the server after one month and kept locally in order not to get over quota stuff from the server). </p>",elizabeth.cherhal;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,wsmwk,,
+1528960,2025-08-13T08:31:36.348912Z,2025-08-18T08:42:36.845976Z,es,thunderbird,Error compactando carpeta,False,,,False,1757748,1757248;1757748;,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,montesas,"<p>Buenos días:  </p><p>Me sale el siguiente error compactando: La carpeta ""bandeja de entrada en ..."" no se pudo compactar porque falló la escritura en la carpeta. Compruebe que tiene suficiente espacio en disco y privilegios de escritura en el directorio, y vuelva a intentarlo. </p><p>- Tengo sitio en el disco y soy administrador del pc - ya probé a reparar la carpeta </p><p>¿Alguna idea? </p>",montesas;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/profile-manager-create-and-remove-thunderbird-profiles"", ""/en-US/kb/compacting-folders""]",2,0,1,,,,,
+1528968,2025-08-13T09:38:22.979673Z,2025-08-13T09:38:22.979681Z,en-US,thunderbird,Emails,False,,,False,,,email-and-messaging,thunderbird;windows-81;email-and-messaging;firefox-115260;firefox-11526;,babbelbekkie,"<p>Good Morning </p><p>My emails disappear after 3 months, it is nowhere to be found.  Is seem like it totally dissappear after 3 months from my emails. </p>",babbelbekkie;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 6.3; rv:109.0) Gecko/20100101 Firefox/115.0;ff_version:115.26.0;os:Windows 8.1;kb_visits_prior:[""/en-US/kb/connection-settings-firefox""]",0,0,0,,,,Windows 8.1,
+1528969,2025-08-13T09:46:31.328008Z,2025-08-14T06:18:18.468769Z,en-US,thunderbird,password,False,,,False,1756557,1756222;1756231;1756285;1756288;1756292;1756557;,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,bplp49,"<p>I've used Thunderbird for many years on many different PCs. I now want to add it to my android mobile and it's asking me for a password. </p><p>I know all my passwords for various email addresses I have, but I don't remember what password I originally used to set up Thunderbird. </p><p>Any suggestions anyone? </p><p>Peter </p>",bplp49;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",6,0,2,,,,,
+1528970,2025-08-13T09:47:07.237799Z,2025-08-13T09:47:07.237807Z,nl,thunderbird,Ik heb dubbele mappen in accounts,False,,,False,,,languages,thunderbird;languages;,AKostenzer,"<p>Hallo, Ik weet niet of ik bij ""settings"" goed zit. Ik heb bij meerdere accounts dubbele systeem mappen: <a href=""https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2025-08-13-02-32-48-b1db84.png"" rel=""nofollow"">https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2025-08-13-02-32-48-b1db84.png</a> </p><p>Als ik de mappen ongewenst wil verwijderen zie ik dat de een de ""Junk"" en de andere de ""Spam"" map is. Bij de twee Archieven lukt dit trucje niet. Daar staat verwijderen niet in het pop-up lijstje. Dus een eventuele andere benaming is dan ook niet te vinden. </p><p>Ik denk dat het bij ongewenst aan de vertaling ligt. Bij archieven vond ik Archive.mfs  en Archives.mfs Zou dat ook aan de vertaling: Archief  en Archieven kunnen zijn? </p><p>Als het aan de vertaling ligt dan zou die bij Ongewenst aanpassen.  Bij archief weet ik het niet. </p>",AKostenzer;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/nl/kb/berichtenlijstkolommen""]",0,0,0,,,,,
+1528973,2025-08-13T10:18:09.686341Z,2025-08-13T18:22:47.129485Z,en-US,thunderbird,Unified Folders,False,,,False,1756388,1756221;1756332;1756354;1756363;1756388;,email-and-messaging,thunderbird;email-and-messaging;,rwillia211,"<p>Not sure if this is the correct subject heading. </p><p>Thunderbird 140.1.1esr for Windows 11 - no add-ons I have 4 email accounts (2 with Google). For some time I have been having trouble with Unified Folders. From the Folders pane on the left of the screen, - the Inbox and Deleted folders appear to be working as intended, if I expand either folder, it correctly displays the 4 accounts, and if I click on either folder, it correctly displays the messages for all 4 accounts - the Sent folder also appears to be working to an extent, if I expand the Sent folder, it displays the 4 accounts plus a duplicate of one of the Google accounts. If I click on Sent, it correctly displays the sent messages for all 4 accounts - the Drafts and Junk folders are both problematic - if I expand the Drafts folder, it displays only 1 of the 4 accounts plus a duplicate of the 1 account. If I click on Drafts, it correctly displays the draft messages for all 4 accounts - if I expand the Junk folder, it displays only 3 of the 4 accounts with 1 of the Google accounts missing, plus a duplicate of one of the non-Google accounts. If I click on Junk, it displays No Messages Found even though I know there are messages to be found My problem is the inconsistent way it treats the Sent, Drafts and Junk folders. I can't rely on them to drill down into individual accounts. If I need to do that I have to go online to webmail, which kind of defeats the object of using Thunderbird.  If I disable Unified Folders and use All Folders everything is fine. Is there any way to get the unified folders to behave as one would expect?  PS I've tried deleting smartmailboxes but this didn't help. </p>",rwillia211;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,5,0,0,,,,,
+1528975,2025-08-13T10:40:29.949282Z,2025-08-13T10:40:29.949289Z,en-US,thunderbird,the actuely thunderbird vision and the firefox vision,False,,,False,,,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,besue,<p>Hello I am working with MAC Catalina 10.15. the starting is very slowly as the other visions. And when I am finished Thunderbird every time I get a message about a mistke by finishing this programm. I am working at the same time with NORTON in the backround safty. </p><p>greetings from Germany Bernd </p>,besue;,True,False,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1528978,2025-08-13T11:16:20.653190Z,2025-08-14T20:20:34.009943Z,en-US,thunderbird,Problems with new messages after 140/141 update (bitdefender),False,,,False,1756815,1756815;,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,Brada,"<p>Up to V128 I had no problems but since the automatic 140/141 update I have a problem with the body of new mail messages as below. I can read previous messages without any issues. My system is Windows 11 24H2 fully up to date. THunderbird is 141.0 (64bit) RElease UPdate Channel Build 20250721141226. I can access my email at Talktalk via their webmail with no problem at all but through Thunderbird I get this type of message . X-VadeSecure-Status: MC . X-VadeSecure-Cause: gggruggvucftvghtrhhoucdtuddrgeeffedrtdefgddufeektdduucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuqfgiuffgfgdpggftfghnshhusghstghrihgsvgdpgffpggdqvfetnffmvfetnffmnecuuegrihhlohhuthemuceftddunecundfotefknffkpffiucdludejmdenucfjughrpefhvffufffjgghrkfgtsegrtderredttdejnecuhfhrohhmpedfofihucghrghithhrohhsvgdfuceoofihhggrihhtrhhoshgvsegvmhhlrdifrghithhrohhsvgdrtghomheqnecuggftrfgrthhtvghrnhepleffkedvkefhkeefheffgfffgfekueehkeeiteefgfdvvdetgffhgffgffejudevnecuffhomhgrihhnpeifrghithhrohhsvgdrtghomhenucfkphepudelkedrvdeghedrleefrddvudenucevlhhushhtvghrufhiiigvpeekfedtnecurfgrrhgrmhepihhnvghtpeduleekrddvgeehrdelfedrvddupdhhvghlohepmhhtrgegrdgvmhhlrdifrghithhrohhsvgdrtghomhdpmhgrihhlfhhrohhmpegsohhunhgtvgdqudeipgfjvffonfdqhedtfeduvdeiuddqieduleelkedtqdehvddttddtudduvdeiqdelfedusegsohhunhgtvgdrvghmlhdrfigrihhtrhhoshgvrdgtohhmpdhnsggprhgtphhtthhopedupdhmohguvgepshhmthhppdhgvghtqdfurghfvggfnhhsuhgsshgtrhhisggvpdhgvghokffrpehushdpshhpfhepphgrshhspdgukhhimhepphgrshhspdgumhgrrhgtpe </p><pre>hprghsshdprhgvvhfkrfepmhhtrgegrdgvmhhlrdifrghithhrohhsvgdrtghomhdrpdhlvggrrhhnihhnghepthhruhgv </pre> <p>X-VadeSecure-Score: 17 X-VadeSecure-SID: ee41513a-185b4dfa799deaff X-VadeSecure-Dom: oxcloud-pro-eu-1 Authentication-Results: <a href=""http://oxseu-vadesecure.net"" rel=""nofollow"">oxseu-vadesecure.net</a>; </p><pre>iprev=pass policy.iprev=198.245.93.21; spf=pass (sender IP is 198.245.93.21) smtp.mailfrom=bounce-16_html-5031261-619980-520001126-931@bounce.eml.waitrose.com; dkim=none (message not signed); dmarc=pass action=reject header.from=eml.waitrose.com; arc=none; </pre> <p>X-OX-DMARC: pass (policy=reject) Received-DKIM: Success Received-SPF: Pass Received: from <a href=""http://mta4.eml.waitrose.com"" rel=""nofollow"">mta4.eml.waitrose.com</a> ([198.245.93.21]) </p><pre>by oxseu2nmtai04p.internal.vadesecure.com with ngmta id ee41513a-185b4dfb300e8b38; Wed, 13 Aug 2025 10:50:21 +0000 </pre> <p>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=<a href=""http://eml.waitrose.com"" rel=""nofollow"">eml.waitrose.com</a>; </p><pre>h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version: Reply-To:Message-ID:Content-Type; i=MyWaitrose@eml.waitrose.com; bh=Qrk+tP6/Th9RstefylsTHjBAGDIUNRTrAYCkfLtc38M=; b=WE1rpforjUyxr16PPRudha8LqiSmD7GsDOFhYzt2/L6g8SANQJCWZP6xRf12waPKh4Sz6V35WPih   Ue716DftEebtBUhRFOda2LmILu6X2+8jVUMZ8+LQW6RpBq5Gw4/ZBsyyPESM0zBMXsG/xLpRQxCI   turi9qN0yV6fmYdxFU0= </pre> <p>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim6; d=<a href=""http://s6.y.mc.salesforce.com"" rel=""nofollow"">s6.y.mc.salesforce.com</a>; </p><pre>h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID: Content-Type; bh=Qrk+tP6/Th9RstefylsTHjBAGDIUNRTrAYCkfLtc38M=; b=iJ8brDdDUkSup+Bc6vSZQz+P0k6lOZi70SDV5Vn/oalGH30v6ZfKqlkzs1tSgP9BOiZUF2hP0Ipx   swvZFBASGiPkGp96LX1gMpRbbHa4PuGYYs6BTiDxYAoyJeUzk9JEiji73zQBcQNcVOZC6VPTTmkz   pE4LSP+1GMbbGDiaDuS+EJ/XVs6Z2roqSxxNJf34KPiVyJlOZgY3MxfXhCLMEB+Q8mC+JWbZwveD   mGDtJanDzTnJn4A3pz0maVPWKaQ8B2DuVmwig3zBWJcJGuAHCxoByX2kG/PdAu0SBzcAqBPdtYDN   YVcSx4q6Ic/ooTA/pqlPIsTrvxrQ/9wH16G6Qw== </pre> <p>Received: by <a href=""http://mta4.eml.waitrose.com"" rel=""nofollow"">mta4.eml.waitrose.com</a> id hjhmuq2fmd4j for &lt;<a href=""mailto:brian.adams@talktalk.net"" rel=""nofollow"">brian.adams@talktalk.net</a>&gt;; Wed, 13 Aug 2025 10:45:12 +0000 (envelope-from &lt;<a href=""mailto:bounce-16_HTML-5031261-619980-520001126-931@bounce.eml.waitrose.com"" rel=""nofollow"">bounce-16_HTML-5031261-619980-520001126-931@bounce.eml.waitrose.com</a>&gt;) From: ""My Waitrose"" &lt;<a href=""mailto:MyWaitrose@eml.waitrose.com"" rel=""nofollow"">MyWaitrose@eml.waitrose.com</a>&gt; To: &lt;<a href=""mailto:brian.adams@talktalk.net"" rel=""nofollow"">brian.adams@talktalk.net</a>&gt; </p>",Brada;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",1,0,0,,,wsmwk,,
+1528984,2025-08-13T11:36:54.897726Z,2025-08-14T07:42:19.454780Z,nl,thunderbird,berichten worden niet goed weergegeven,False,,,False,1756580,1756580;,send-and-receive-email,thunderbird;send-and-receive-email;,tombauwens1977,"<p>de berichten worden sinds 2 dagen niet meer goed weergegeven, ze zien er als volgt uit iemand anders hetzelfde probleem en er werd als oplossing gegeven: beeld, kopregels, normaal; dit geeft echter geen oplossing zit er een bug in de laatste thunderbird update? </p><p>id RP2X2F02830K1Gc01P2XAY; Wed, 13 Aug 2025 13:02:32 +020 . X-Spamcause: dmFkZTFur4+8VNGe9BImS/07y2+TGC1cGWQgUOhdm8vnQgJhk6yNVokEF4sEx1+VVDF8a4OSecd3txNA5tVBvcM54jBQW3CWDXnWfPTi1kJDgJqAhR2CuiarHCSWub9qs97v6b/36gFcVBlmnZPFfGdbllLFOEdM2ToTWnY7dVk0FRm0GvjkLmPUnuqBIblqydzx4yisdY4qYYB4Gu2DLiopCxFDY4iqg3nAewBW+BuJTC5YGlFATVgfAWvs8FCXh8RP9e/oFaWIdKoF1Yqdk4ELM2rrh1ySM4THfvi0oKyrG5IYrGAXO2+fPgH+sI/M/47Cu0DGd9NoiNpkQhKRp5CSMd9fXRtrbj5OYsLZKlX8NQmygrwif9uvefQDRw/2D/c5Lrq/RIrHi/0fP1K9j+pjN2y6AaHGEU+Xh1aVPiMeFXAyb525VhIBRxvOQhpgmAsCSMWJIs0P6sVrHiKoCvFU660Wl4ilzZPPqNpZ8jO1btF9XFrmD5wHaeiSvq4n1UI1LHmnYDfOI3x72wHAc3F59NOqtU2D1t8RAg+BVOOGtTxVx0o35k0FFn68jI2MI0Qv+kzhCvATEsvHZYKXuVsse1PIfPQvD598Kxn+lyh2m0mfi9/x0WgBQx/FPDBKB7O0xkPWPc39aS0ufBKsm3tXtEX/OAJQJ1GdpMQUglJeIvZgCg Delivered-To: =<a href=""http://microsoft.com"" rel=""nofollow"">microsoft.com</a>; cv=none; </p><pre>b=yFC23OnQlgA5bl3y6u1lbab4Dk8l+gpEOzvFjE40qUlzDyWHBm6QkLSJPELb0OmlPqwF2NCHLhp8dmnYTI0Fq5EvtfWcHJA3ST//lnERvuR9eLnrccz1G9loHd0w8P+ZwwwtII7BNPEn13PUgCJX65MVAKouF1ZnP4mpRehGH29sCPPQ95OXZcOcqHjZ9uv/0ry+ve+TsdujMn7K0Zgx8aTzFJFV9+lyoTNZJ9Lk0Nhs7cZZ7i+zcofaGeLIYDw9C/xV0HVjuTgGWAlUa1RWZ5PQ7E7dEIGRkVr7GOePQBCIjxSzm9KiN/ZgotlQV/OW8XDrBP3fTTquV7KqpwbEBQ== </pre> <p>ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://microsoft.com"" rel=""nofollow"">microsoft.com</a>; </p><pre>s=arcselector10001; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-Chunone </pre>",tombauwens1977;Mozilla-assistent;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,,,
+1528987,2025-08-13T11:54:56.694285Z,2025-08-14T20:21:02.394685Z,en-US,thunderbird,Strange code appearing at the start of some of my INBOX emails (bitdefender),True,1756813,wsmwk,False,1756813,1756813;,email-and-messaging,thunderbird;email-and-messaging;,ajc890,"<p>I am using Thunderbird V140.1.1 esr Just lately the first thing I see when looking at some of my incoming emails in my INBOX there are strange lines of code. Attached is an extract of the code that appears. However, it is only appearing on some incoming emails. If I go to look at the email in Webmail rather than Thunderbird I do not see these strange lines of code. Does anyone have any thoughts as to why this has started. </p>",ajc890;wsmwk;,True,False,False,";solver_id:1494947;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",1,0,0,,,wsmwk,,
+1528988,2025-08-13T11:55:21.604004Z,2025-08-13T17:22:24.371899Z,en-US,thunderbird,Thunderbird Password Problem,True,1756369,sfhowes,False,1756369,1756369;,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,k.vanleuven,"<p>I live in Germany and use Deutsche Telekom's T-Online system for my main e-mail system, so my email address is: <a href=""mailto:k.vanleuven@t-online.de"" rel=""nofollow"">k.vanleuven@t-online.de</a> </p><p>Due to some security problem, I had the change my T-Online e-mail password and since this time I can't send or receive e-mails from my German version of Thunderbird. Thunderbird asks me for the""<a href=""http://secureimap.t-online.de"" rel=""nofollow"">secureimap.t-online.de</a>"" server password, but it doesn't recognize the new password that I have for my T-Online e-mail system. </p><p>I store my e-mails in various folders folders in Thunderbird and I want to continue using Thunderbird for my e-mail management. </p><p>I think I might have to re-install Thunderbird from scratch. Must I do this, if so haw do I save all my e-maile files?  </p><p>Your help in solving this problem will be very much appreciated. </p><p>Karl Van Leuven </p>",k.vanleuven;sfhowes;,True,False,False,";solver_id:6945976;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",1,0,0,,,,,
+1528989,2025-08-13T11:56:54.253719Z,2025-08-13T11:56:54.253729Z,en-US,thunderbird,Scammed,False,,,False,,,contacts,thunderbird;contacts;,btwalker,<p>My Thunderbird e.mail has been scammed thru I suspect my Contacts list because passing on the scam he/she has added some personal data. What can I do to stop a repeat of this ? </p><pre>? </pre>,btwalker;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/thunderbird-and-junk-spam-messages"", ""/en-US/kb/manual-account-configuration""]",0,0,0,,,,,
+1528990,2025-08-13T12:05:51.615511Z,2025-08-13T12:05:51.615518Z,en-US,thunderbird,"CAN'T ACCESS PROPERTY ""CLEANUP"", THIS [# CONFIG VERIFIER] IS UNDEFINED.",False,,,False,,,app-crash,thunderbird;app-crash;,kmbaroyale,"<p>My main yahoo email address is @yahoo.de which works perfectly. A second address @yahoo.com has not worked for a longer time. The Account Hub recognises the configuration for this account (see screenshot) but when I click ""continue"" this message appears - CAN'T ACCESS PROPERTY ""CLEANUP"", THIS [# CONFIG VERIFIER] IS UNDEFINED. I would be extremely thankful for any advice. </p><p>Thank you Neville </p>",kmbaroyale;,True,False,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1528992,2025-08-13T12:22:53.774294Z,2025-08-13T12:22:53.774303Z,en-US,thunderbird,creating again an account deleted,False,,,False,,,account-management,thunderbird;account-management;,giotullio,<p>I wrongly delated an account and cannot create it again </p>,giotullio;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1528993,2025-08-13T12:22:56.177219Z,2025-08-14T20:08:55.450272Z,en-US,thunderbird,thunderbird incoming mail (bitdefender),False,,,False,1756809,1756248;1756809;,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,amouage2601,<p>For the past two weeks or so the subject and correspondent columns of Thunderbird email have appeared blank; although double-clicking in the columns opens lines of code. How do I correct this? I have uninstalled and re-installed Thunderbird without effect. </p>,amouage2601;MichelT;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",2,0,0,,,wsmwk,,
+1528995,2025-08-13T12:27:41.825856Z,2025-08-14T20:18:32.817703Z,en-US,thunderbird,Lecture des messages à la réception (spam),False,,,False,1756812,1756410;1756812;,send-and-receive-email,thunderbird;send-and-receive-email;,alainstoffel,"<p>Bonjour, Depuis une semaine, les mails arrivent dans ma boîte thunderbird inexploitables. Voici l'exemple d'un mail test que je me suis envoyé: X-me-messagetype: clea . X-me-spamcause: (50)(0000)dmFkZTGmBxrEeh4RpHN+5XpDE34CSofeQ4o2J7hlgQL1GKGYkeF92vFEUGQqj8WFCXUlqXs9D+B5G8xWm5H21C3g99XRbBtd8cjSxxNUx2YlL7ffe3ZMmPW+QxupmMprzEiyMQYnkpuJ9mIxGsEQQFFH0wFaaqCr/my/CL9+7/4hjQgAyb/pcO0e8QKWpbD3O0EXtrbZagcAiliqt7ghejdQrbxJeHhSwcRX1EKxc1IhMmQLbNCyqSq85HTd+YNpiMGnBETvWLOvmlkIcdxEN7bbSpMwXrbpVDEayK1melqJmD9H7C/5FsPO1Ypy4xFa4WYYUWnU3wRDF0S8UW4fZzKmiW9bjCk7gpNPyrASU5HZjsQMs8jn7UkTSc8HObBDhgMKONGdMzzBkDNod73f6K6sQxcsgm63XIayJK56msqf7CmEIAsNAsoOPougfc/9Fiyfbd+oPUdFlvbGPvOjdwGQL3fauRt9u1kK6flENhbXjWoBSCASt2TXjUIRCtnEioPwLF1P5C7ppQhdHstuxz0zKPZx98Mi87TaTZOsd3+Z6F6hW2Jk8vfD+TjKqTbqMxg+UIBJTQZgM5ouj1T+adFGWQeWOij073OCvGLXBxXL300/tTIU9bDE+fLC4rycj+1uZ/AmVGFrZf+rNgU9uRlx79WMVovd8OGOUwXHia07y0mwjg X-me-spamlevel: not-spam X-ME-bounce-domain: <a href=""http://orange.fr"" rel=""nofollow"">orange.fr</a> DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://orange.fr"" rel=""nofollow"">orange.fr</a>; 	s=t20230301; t=1755086388; 	bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=; 	h=Message-ID:Date:MIME-Version:To:From:Subject; 	b=mtAsP8eqfTru9hafRndneRLOmdH4VH0k21nJdLeF6a7c1Tx9lJZ61qqCyBvSo5MNs 	 LIFf/LBjhimJc/ToyFvdKbWbIFvJYBRFHpeYfX+X6LKNZLaVSO53vqLw/n4JydSanb 	 6VkI6PlCVx22HDOatZVDuHkz0gGGUw5Y8BPBXbNEi3svc43xPP7ONzTnDRNNsiNqnC 	 DHjptG4FLd9aEIONx5RhcQXnSveTBXri+a2lB2LtwH2vxqK2UHhBlavmWHUul8lPMW 	 1g8SaznE2RGJtEwJBVKirDFnZ1NKiKPOkPdSB+isb8fQMCOVLCLKiHmwmwYUQsHv90 	 6qDhzvZ9sA5jQ== X-ME-Helo: [IPV6:2a01:cb1d:8a46:5c00:c57c:5cfb:608b:aeb0] X-ME-Auth: YWxhaW5zdG9mZmVsQG9yYW5nZS5mcg== X-ME-Date: Wed, 13 Aug 2025 13:59:48 +0200 X-ME-IP: 2a01:cb1d:8a46:5c00:c57c:5cfb:608b:aeb0 X-ME-Entity: ofr Message-ID: &lt;<a href=""mailto:3a28c092-b09a-4763-966c-f2cbd3c74bb5@orange.fr"" rel=""nofollow"">3a28c092-b09a-4763-966c-f2cbd3c74bb5@orange.fr</a>&gt; Date: Wed, 13 Aug 2025 13:59:47 +0200 MIME-Version: 1.0 User-Agent: Mozilla Thunderbird Content-Language: fr To: Alain Stoffel &lt;<a href=""mailto:alainstoffel@orange.fr"" rel=""nofollow"">alainstoffel@orange.fr</a>&gt; From: Alain Stoffel &lt;<a href=""mailto:alainstoffel@orange.fr"" rel=""nofollow"">alainstoffel@orange.fr</a>&gt; Subject: test 1 Content-Type: text/plain; charset=UTF-8; format=flowed Content-Transfer-Encoding: 7bit </p><p>Sur le serveur Orange, il est tout a fait normal. Merci à qui peut me proposer une solution. Cordialement, Alain </p>",alainstoffel;Mapenzi;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,2,0,2,,,wsmwk,,
+1528996,2025-08-13T12:27:46.374251Z,2025-08-13T12:27:46.374256Z,en-US,thunderbird,Contats Hotmail sync in Thunderbird 141,False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,sos-sami,"<p>Hi, since Thunderbird 141, tbsync add-on is no more possible. So : how it is possible to sync Hotmail contacts (and calendar) ? What is the way for setting this ? Thank you for your answers. </p>",sos-sami;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1528998,2025-08-13T12:37:02.795593Z,2025-08-13T12:37:02.795600Z,en-US,thunderbird,mails effacés dans corbeille du 13082025,False,,,False,,,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,dewinterjc,<p>liste des mails </p>,dewinterjc;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0;kb_visits_prior:[""/fr/kb/profils-la-ou-thunderbird-conserve-donnees-utilisateur"", ""/en-US/kb/profiles-where-thunderbird-stores-user-data""]",0,0,0,,,,,
+1529001,2025-08-13T12:46:50.860584Z,2025-08-13T13:46:09.183676Z,en-US,thunderbird,How do I backup/export a single account?,False,,,False,1756245,1756245;,import-and-export-email,thunderbird;import-and-export-email;,gholec,"<p>How do I backup/export a single account - neccessity required that I have 4 accounts in Thunderbird. 3 accounts are no longer used. I want to preserve emails in those accounts (in case they are needed in the future), then remove those accounts from Thunderbird. Thanks! </p>",gholec;MichelT;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,1,,,,,
+1529002,2025-08-13T12:49:19.705147Z,2025-08-14T19:08:52.170603Z,en-US,thunderbird,every single email in my drafts is GONE,False,,,False,1756792,1756249;1756792;,email-and-messaging,thunderbird;email-and-messaging;,brmorrison54,"<p>I keep many emails in the draft file. I use this as my templates. I create an email then save it to drafts. I refer to them everyday in my work. Been doing this for 10+ years, no problem. Today I go into my drafts and every single email in my drafts is GONE!!!!!!!!!!!!!!!!!!!!!! Probably 40 of them!   I NEED THEM...............HELP! Where did they go???????? <a href=""mailto:BRMorrison54@Gmail.com"" rel=""nofollow"">BRMorrison54@Gmail.com</a> </p>",brmorrison54;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",2,0,0,,,wsmwk,,
+1529008,2025-08-13T13:20:45.992231Z,2025-08-14T20:09:29.362295Z,en-US,thunderbird,Incoming emails from my BT email account are in gibberish (bitdefender),False,,,False,1756810,1756810;,send-and-receive-email,thunderbird;send-and-receive-email;,d_abrooks,"<p>On 11 August I started to receive emails on my Thunderbird account that in 'gibberish' eg:  <em>X-SNCR-VADESECURE: CLEA </em> . X-RazorGate-Vade: gggruggvucftvghtrhhoucdtuddrgeeffedrtdefgddufeekfedtucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuueftkffvkffujffvgffngfevqffonecuuegrihhlohhuthemuceftddunecutfhouhhtvghrqddqpfgvohhlrghnvgculdejmdenucfjughrpefhufffvfhrggfokfgtgfeshhhqredtuhdtheenucfhrhhomhepfdfrohifvghrpffkfdcuoehnohdqrhgvphhlhieshhhomhgvrdhp...<em> </em> etc., etc. </p><p>I have tried everything that is suggested in various forums, Google etc and nothing seems to correct this. </p><p>I am running Thunderbird v141 and can find some of the suggested menu options, for example: Text Encoding. </p><p>When I try 'Repair folder', 'Trouble shooting mode', 'Repair Text Encoding' etc etc nothing works and I can't restore any of the affected emails. </p><p>I'd be grateful if you would sort this for me. </p><p>Thanks David </p>",d_abrooks;wsmwk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,wsmwk,,
+1529009,2025-08-13T13:24:23.925120Z,2025-08-13T13:24:23.925127Z,en-US,thunderbird,login passwort for imap is not accepted,False,,,False,,,passwords-and-sign-in,thunderbird;passwords-and-sign-in;,c.rehbehn,"<p>I am not able to open my postbox on <a href=""http://web.de"" rel=""nofollow"">web.de</a>. The login password is not accepted for <a href=""http://imap.web.de"" rel=""nofollow"">imap.web.de</a> </p><p>usually the password is not asked. it usually connect directly without asking the password, because it is saved in the password manager. </p><p>What is the problem? </p>",c.rehbehn;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1529013,2025-08-13T14:08:25.714462Z,2025-08-13T14:30:54.621002Z,en-US,thunderbird,Can't read email in any account,False,,,False,1756280,1756280;,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,astuart1955,"<p>I get the following message that doesn't go away and stops me from reading any emails. </p><p>""Welcome to Freedom </p><p>Thunderbird is a gift from thousands of people like you. We hope you'll enjoy the productivity, privacy, and freedom they make possible and we invite you to become part of that gift to others."" </p><p>please advise as to how i can fix this? </p><p>Alan </p>",astuart1955;davidsk;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,,,
+1529014,2025-08-13T14:22:51.881773Z,2025-08-26T04:06:36.367742Z,en-US,thunderbird,Add Email Account (accounthub),True,1756271,davidsk,False,1756271,1756271;,account-management,thunderbird;account-management;,ralf.uhlhorn,"<p>Hi.  I ve been trying the hole day to add my IONOS email account ""<a href=""mailto:r.uhlhorn@starvan.eu"" rel=""nofollow"">r.uhlhorn@starvan.eu</a>"" to my thunderbird. It doesnt work. See pictures attached, thunderbird does not ask me for any password, only name and email adress. Then it gets stuck completely. Please help. </p><p>Best regards, Ralf </p>",ralf.uhlhorn;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0;kb_visits_prior:[""/en-US/kb/using-multiple-profiles""]",1,0,0,,,wsmwk,,
+1529015,2025-08-13T14:31:08.732658Z,2025-08-15T06:48:50.619270Z,en-US,thunderbird,Re-activation of pop up windows in agenda,True,1756286,davidsk,False,1756956,1756286;1756293;1756956;,events,thunderbird;events;,ajulien5914,"<p>Hello, I probably desactivated by mistake the reminder pop up window for event and tasks in the agenda. So that i do not get any warning 1 day before the event as specified in the creation of the event. How can i re-instate this alarm ? Tks brds </p>",ajulien5914;davidsk;,True,False,False,";solver_id:2458833;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/en-US/kb/notifications-thunderbird""]",3,0,1,,,,,
+1529016,2025-08-13T14:33:47.934184Z,2025-09-11T18:31:23.363483Z,en-US,thunderbird,Mobile App?,False,,,False,1756808,1756808;1763595;,email-and-messaging,thunderbird;needsinfo;email-and-messaging;,kalabu,<p>How do I get the mobile app code for my iPhone? </p>,kalabu;wsmwk;aabdulrehmanansari012;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",1,0,1,,,,,
+1529017,2025-08-13T14:33:55.259941Z,2025-08-13T14:33:55.259947Z,en-US,thunderbird,Email send problem with Comcast account,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,DonK,"<p>I can no longer send emails using my Comcast account. This problem just started. I periodically get this error message: </p><p><em>thunderbird authentication failure while connecting to server <a href=""http://imap.comcast.net"" rel=""nofollow"">imap.comcast.net</a></em> </p><p>I am using a Windows 10 desktop PC. - I have no problem sending emails using my gmail account on this PC.  - I have no problem sending emails using the Comcast account on a second Windows 10 desktop PC and using my Android app.  - I can receive email from the Comcast account on the problem PC. - The server settings on the problem PC are the same as on the PC that is able to send messages on the Comcast account. - I tried reinstalling Thunderbird on the problem PC. - I changed Authentication Method from ""OAuth2"" to ""Normal Password"". </p><p>Any suggestions? </p>",DonK;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",0,0,0,,,,,
+1529019,2025-08-13T14:38:32.454231Z,2025-08-13T14:38:32.454236Z,en-US,thunderbird,address book,False,,,False,,,contacts,thunderbird;contacts;,rural2,"<p>Unable to access address book. I am being asked to sign in with password. I have never been asked this before, and have no idea what password is, if there is one. </p>",rural2;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0;kb_visits_prior:[""/en-US/kb/thunderbird-accessibility-features""]",0,0,0,,,,,
+1529020,2025-08-13T14:43:13.752795Z,2025-08-13T14:43:13.752801Z,en-US,thunderbird,"Thunderbird can't handle the mails from my webmail any longer - they turn up garbled and all are called ""spam""",False,,,False,,,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,sailor1947,"<p>Hello, Some time during the weekend my Thunderbird could no longer properly receive and handle my webmail. I tried to repair/reinstall my version of Thunderbird (60.0. with file version 60.1.1.6781). When that didn't help, I tried the latest version instead (115 I believe) but that didn't fix the issue. I then turned to other mail programs like for example Mailbird, but although I tried their latest version, the problem persisted. I do get the mails from my webmail, but when entering the mail program they lose their names and are only called SPAM - all of them. They turn up in a garbled version, which I believe is the source code of the mail in question. Here and there in the text I can see an email address, which lets me know who sent it. But that's all. </p><p>However, there is one mail program, which still can handle my webmail, and that is Microsoft Outlook! That suggests to me that there has been some sort of Microsoft general update/change, which has gone into active mode over the weekend, resulting in that only Microsoft's own mail program can handle the mail. </p><p>Is there anyone out there which has experienced the same or knows the remedy for this, I would be infinitely grateful for help. </p><p>I add a list my own computer's hardware specs if that is of any help. </p><p>Thanks in advance! Kind Regards Ann-Charlotte Thomson </p>",sailor1947;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",0,0,0,,,,,
+1529021,2025-08-13T14:43:31.493315Z,2025-08-14T06:47:14.113606Z,it,thunderbird,Inserimento (non voluto) di trattini all'inizio di un nuovo messaggio,True,1756349,'@next,False,1756561,1756349;1756561;,email-and-messaging,thunderbird;email-and-messaging;,marco.ferri1,"<p>Buongiorno, sto usando la versione 141.0 di Thunderbird 64 bit e ho notato la seguente anomalia. Quando creo un nuovo messaggio di posta usando il bottone ""+ Nuovo messaggio"" all'inizio del messaggio vengono inseriti una riga vuota e una riga con due trattini. Sto utilizzando la firma letta da un file html; lo stesso file viene visualizzato correttamente (quindi senza riga nè trattini) se aperto con Firefox. La cosa strana è che facendo rispondi o inoltra di una mail esistente i trattini e la riga vuota non vengono inseriti. Allego qualche immagine che spiega meglio la situazione. Ho chiesto a un collega e la stessa anomalia capita anche a lui. Potete aiutarmi? Grazie. </p><p>Cordiali saluti Marco </p>",marco.ferri1;@next;,True,False,False,;solver_id:6948471;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,2,0,0,,,,,
+1529023,2025-08-13T15:03:18.606662Z,2025-08-13T15:19:13.064722Z,en-US,thunderbird,Preview screen,True,1756290,davidsk,False,1756290,1756290;,customization,thunderbird;customization;,drmikeft,<p>I am a long term user of thunderbird and its predecessor but I have just  installed version 141.0 on a new Windows 11 computer and cannot get the traditional white preview screen. Thanks for the suggestion but F8 does not seem to work on my machine. I still have to click on each email to view the contents </p>,drmikeft;davidsk;,True,False,False,;solver_id:6921135;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,1,,,drmikeft,,
+1529024,2025-08-13T15:09:11.839666Z,2025-08-14T22:42:09.942866Z,en-US,thunderbird,Latest version (auto update this morning) 141.0  Expression Search not responsive,False,,,False,1756871,1756806;1756871;,search,thunderbird;search;,miles9,"<p>Thunderbird updated and while the expression search bar is there, and you can click in it, typing doesn't do anything and TYPING THE LETTER A DELETES THE LATEST EMAIL !!!!!    If you keep tapping letter ""A"" you keep DELETING EMAILS !!!!  AND THEY ARE NOT IN THE SPAM FOLDER !!! </p>",miles9;wsmwk;sfhowes;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",2,0,0,,,,,
+1529030,2025-08-13T15:42:13.791354Z,2025-08-14T07:42:07.754842Z,nl,thunderbird,request for solution to unreadable emails,False,,,False,1756579,1756579;,send-and-receive-email,thunderbird;send-and-receive-email;,jpthermen,"<p>From a certain point in time, the emails can no longer be read and when opened, we get an unreadable text in characters. We join a printscreen as example. Thank you </p>",jpthermen;Mozilla-assistent;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,,,
+1529031,2025-08-13T15:44:34.188694Z,2025-08-13T15:44:34.188716Z,en-US,thunderbird,Trouble getting my e-mail messages,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,hkern314,"<p>For the last week, many e-mail messages that come in on my phone have not been appearing on my MacBook.  So far today, August 13th, not one e-mail has arrived and I'm missing my regular morning newspapers, etc. </p>",hkern314;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15",0,0,0,,,,,
+1529032,2025-08-13T15:47:52.128271Z,2025-08-13T16:16:37.242603Z,en-US,thunderbird,"Sending of the message failed. An error occurred while sending mail. The mail server responded: SMTP AUTH is required for message submission on port 465. Please check the message recipient ""kevin@andersonfleetservices.com"" and try again.",False,,,False,1756344,1756344;,send-and-receive-email,thunderbird;send-and-receive-email;,edwardjanderson,"<p>Sending of the message failed. An error occurred while sending mail. The mail server responded: SMTP AUTH is required for message submission on port 465. Please check the message recipient ""<a href=""mailto:kevin@andersonfleetservices.com"" rel=""nofollow"">kevin@andersonfleetservices.com</a>"" and try again. </p>",edwardjanderson;davidsk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",1,0,0,,,,,
+1529035,2025-08-13T15:55:36.072676Z,2025-08-14T11:46:26.761549Z,en-US,thunderbird,Mails (bitdefender),True,1756548,wsmwk,False,1756607,1756406;1756423;1756548;1756607;,customization,thunderbird;customization;,jppayant01,"<p>Bonjour, Depuis 2 jours, je reçois mes mails comme ça : Qu'est-ce que je peux faire pour y remédier ? </p><p>X-sfr-spamcause: OK, (0)(0000)gggruggvucftvghtrhhoucdtuddrgeeffedrtdefgddufeekheeiucetufdoteggodetrfdotffvucfrrhhofhhilhgvmecuuffhtffirfdpvehhvggtkhevgfdpggftiffpkfdpggftfghnshhusghstghrihgsvgenuceurghilhhouhhtmecufedtudenucenucfjughrpefhvffuthffkfgtggesmhdttdertddtudenucfhrhhomhepvehlrohmvghntggvucfhgffttfetpfffuceotghfsegsohihvghrqdgrvhhotggrthhsrdhfrheqnecuggftrfgrthhtvghrnhepleelvedvhfdthfffkedtgeeigfevgfehgeetfeeltddukeejgfeiueelvdehfffgnecukfhppeegtddruddtjedrudeitddrleeipddviedtfeemuddtrgeimedutddvmedukedvmeemuddtnecuvehluhhsthgvrhfuihiivgeptdenucfrrghrrghmpehinhgvthepgedtrddutdejrdduiedtrdeliedphhgvlhhopefrtegfrfdvieegvegftddtuddrohhuthgsohhunhgurdhprhhothgvtghtihhonhdrohhuthhlohhokhdrtghomhdpmhgrihhlfhhrohhmpegtfhessghohigvrhdqrghvohgtrghtshdrfhhrpdhnsggprhgtphhtthhopedupdhrtghpthhtohepjhhpphgrhigrnhhttddusehsfhhrrdhfrhdpshhpfhepphgrshhspdgukhhimhepphgrshhspdgumhgrrhgtpehprghsshdprhgvvhfkrfepmhgrihhlqdhfrhgrnhgtvggtvghnthhrrghlrgiiohhnuddutddvuddtleeirdhouhhtsghouhhnugdrphhr </p><pre>ohhtvggtthhiohhnrdhouhhtlhhoohhkrdgtohhmpdhgvghokffrpefhtf </pre> <p>Received: from <a href=""http://PAUP264CU001.outbound.protection.outlook.com"" rel=""nofollow"">PAUP264CU001.outbound.protection.outlook.com</a> (<a href=""http://mail-francecentralazon11021096.outbound.protection.outlook.com"" rel=""nofollow"">mail-francecentralazon11021096.outbound.protection.outlook.com</a> [40.107.160.96]) 	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits)) 	(No client certificate requested) 	by <a href=""http://msfrf2610.sfr.fr"" rel=""nofollow"">msfrf2610.sfr.fr</a> (SMTP Server) with ESMTPS id 4c2BvR4LHvz1LQKcp 	for &lt;<a href=""mailto:jppayant01@sfr.fr"" rel=""nofollow"">jppayant01@sfr.fr</a>&gt;; Wed, 13 Aug 2025 17:22:43 +0200 (CEST) ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=<a href=""http://microsoft.com"" rel=""nofollow"">microsoft.com</a>; cv=none; </p><pre>b=rUsnePgrAtZsy5q2PGMkHlONO88pG7PucTLhUxSk98tTpLnWDuDi4McljhR72j4c1MSLJfxhA17u7snis5ME6JImzENy9xoHmZ+llZxMbLIsFLwkm41lhCUdxoHeo5IWJHFblgwd6GmqtC3u4tLapbOiyROav+bMrY0IjHnzgllLevl7TLKz60XwGOMNlfjn2GUNF/IdysFANYZtJUWaxHeINuG++t5yNZzMp0cIx7Su5FAf6WBSm6ER528HxyULWMFpCcnvt0HafIudSutFoZiBHAImU3eqvhKeJZ5DNTijhKdvoHH/tblnhVRUEZjZ8xhZUQDIRQuAYSCS9om44w== </pre> <p>ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://microsoft.com"" rel=""nofollow"">microsoft.com</a>; </p><pre>s=arcselector10001; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=T8sQe9yV3XmBhW7gti+ZCtq2610QzA3ugb3pYFMX3Es=; b=e6n3xDWSkLdD/LH8ESBvAoXoavuczuNP7xHoAP+DyH//lopaP3xm3TxQPDu+cbXoXoj/8r8sqCray1I36Uwl5+AZqn2dUZEv5zLXf58FG4QngAeEqZ3rBZh06wfZMp5+HchSLiYBup4Gbl6NLz6/m2dk+Vp2CDLvn/0itNj6HtvlZ/h/LNtIJwzm3OqQFaDR8pwTuuhVBznPzDFT9SSc7fXRs4c3XcjI5b37Dkzk/sb8flsaRzcnGdZcCtYPZH2jU32bO/779Yf6lRRakpJ9ddi4HozAds1bVgk1dDfj6YzmzwvzlXnGhwNcZAiZXcQFtg1oMf1rpYnBoiVKFhm1Bw== </pre> <p>ARC-Authentication-Results: i=1; <a href=""http://mx.microsoft.com"" rel=""nofollow"">mx.microsoft.com</a> 1; spf=pass </p><pre>smtp.mailfrom=boyer-avocats.fr; dmarc=pass action=none header.from=boyer-avocats.fr; dkim=pass header.d=boyer-avocats.fr; arc=none </pre> <p>DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://boyer-avocats.fr"" rel=""nofollow"">boyer-avocats.fr</a>; </p><pre>s=selector2; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=T8sQe9yV3XmBhW7gti+ZCtq2610QzA3ugb3pYFMX3Es=; b=B9m0uNFefVWHA8PjNXgE9NiDYZPTnSJbUnU7r7p/aSVZ1L2xOEQNcYTNRGGZYfaLHHezR5JEL/a///QJRYPHpweOZDj1XxuF80aduHBzb82G0plaT9gmZnrdRqx0a5RqSrwEuN59qPUnXJoCliFNgzZIAHPyuJPX958TayCYXQiPT8rwwR+tTj4p5Q5ep8pk6A0C464Eh2gHmKLxONuf31q59lDQB4luWwTUZs5mb2aayyF35BFb5n+bcjaCZtHEtWk0ub+wYATZjCiDuboAppDhSskPXA1ovY9Gg+2JWHhGeLf/Ivfx5EKMW4B3jTDxHtYBs+mqbRUtF1Lfgd1unw== </pre> <p>Received: from <a href=""http://PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM"" rel=""nofollow"">PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM</a> (2603:10a6:102:182::10) </p><pre>by PAZP264MB2750.FRAP264.PROD.OUTLOOK.COM (2603:10a6:102:1f5::7) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9031.16; Wed, 13 Aug 2025 15:22:41 +0000 </pre> <p>Received: from <a href=""http://PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM"" rel=""nofollow"">PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM</a> </p><pre>([fe80::43f0:debb:73bd:dd42]) by PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM ([fe80::43f0:debb:73bd:dd42%6]) with mapi id 15.20.9031.014; Wed, 13 Aug 2025 15:22:41 +0000 </pre> <p>From: =?iso-8859-1?Q?Cl=E9mence_FERRAND?= &lt;<a href=""mailto:cf@boyer-avocats.fr"" rel=""nofollow"">cf@boyer-avocats.fr</a>&gt; To: ""<a href=""mailto:jppayant01@sfr.fr"" rel=""nofollow"">jppayant01@sfr.fr</a>"" &lt;<a href=""mailto:jppayant01@sfr.fr"" rel=""nofollow"">jppayant01@sfr.fr</a>&gt;, yanis daoust 	&lt;<a href=""mailto:yanisdaoustsahali@gmail.com"" rel=""nofollow"">yanisdaoustsahali@gmail.com</a>&gt; Subject: DAOUST - recherches Thread-Topic: DAOUST - recherches Thread-Index: AdwMZhCSWQ2KYQYxTAyhXgjIGThawA== Date: Wed, 13 Aug 2025 15:22:41 +0000 Message-ID: </p><pre>&lt;PR1P264MB3758D41B0C23D1BF581F6F8AF62AA@PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM&gt; </pre> <p>Accept-Language: fr-FR, en-US Content-Language: fr-FR X-MS-Has-Attach: yes X-MS-TNEF-Correlator: authentication-results: dkim=none (message not signed) </p><pre>header.d=none;dmarc=none action=none header.from=boyer-avocats.fr; </pre> <p>x-ms-publictraffictype: Email x-ms-traffictypediagnostic: PR1P264MB3758:EE_|PAZP264MB2750:EE_ x-ms-office365-filtering-correlation-id: 1292ed0b-ab29-4b37-e1bf-08ddda7d3ee0 x-ms-exchange-senderadcheck: 1 x-ms-exchange-antispam-relay: 0 x-microsoft-antispam: </p><pre>BCL:0;ARA:13230040|10070799003|366016|1800799024|376014|38070700018|8096899003|4053099003; </pre> <p>x-microsoft-antispam-message-info: </p><pre>=?iso-8859-1?Q?zejjUgdBuvcbzlJomqLZV5cOaInDMi+Jjstu9D91CYes8LhmMXDtq3XPOz?= =?iso-8859-1?Q?6rtNgRxWItQg0+NTGSBLlhC22V63YzW1zxGKEDVzRqwtahl3ebkFmJs+3K?= =?iso-8859-1?Q?mQkzK3t9BYO96qPCCv6BeB03+hyg9Eo7A7O2W93oTWORKfq2DPD1kRNiIG?= =?iso-8859-1?Q?T8dWoGjVZ2dmspFCvYztqWmFola7h95/oP2lfxyMvsV4A/v0Tewiu1tVMf?= =?iso-8859-1?Q?pKVq0iN3iNQRvMbWlX/0Qd0pgt8W4b5NfsZpuKPJWfFtMJDu/jjdMMQhTU?= =?iso-8859-1?Q?pkvivg6qCJmVK+rc0tghqF9KLMxBYQNnQml63M06R9ak2/yd+aNVJUrAts?= =?iso-8859-1?Q?ljz5DX+MRh74AjnAn1FE4BuSpgJxb95cohrKjsjbDhRKNGXZLYrMMVjgbH?= =?iso-8859-1?Q?tjmAOPeH8AH/xeKCavu78e5TGNku0AfC+2GYe987TmbdsfGtzJkRG4+Y4S?= =?iso-8859-1?Q?OIeXODf783AaRGWASYFpMXeYaJD3IYdPv72AslvMzIyEnabD+AaPp6yNfF?= =?iso-8859-1?Q?VfRdL3Oeh2okQjr9mGLNLMkRqMcilnKz3KZOysEJq4JMPwiDfrsR2PCYv5?= =?iso-8859-1?Q?aCnwqyDcGHj4oSgPQnjJMjN6YQHwCA8or4bN9cR5jIYhLOvfZvM835qRed?= =?iso-8859-1?Q?zN6UAlTryvwsdaunK/rmPmlzNDXkT+k2/nLT59/QM5NoHrsH4yCVF7y8Eu?= =?iso-8859-1?Q?yd7Tw2Tw+IBxzxK3auOvmW8nciJ1Myi+8XrIFvO+Q+zqfLUE2E1VjKQOfb?= =?iso-8859-1?Q?Y4TSrcakvO00HGV+aN1x1DBq0EPUsYfdtxTVySr8NAcXBIpzGuaMxC66Rd?= =?iso-8859-1?Q?jhh+ghFZoQA7/kjEZIHGdatjUvN870Z1LcsWQtaPzD7mSwnA2g0e7V7E2y?= =?iso-8859-1?Q?twPibw8TnCfgi+a5fDMST5o1xBVyGuAImlZ7epup/8jG53BmMi9ACP5iwO?= =?iso-8859-1?Q?GRF2Yb1IcgZxIZN2qvv4bP/DlreiYt6rQ99TpTF0lgQlFOOI54BCoY5bUw?= =?iso-8859-1?Q?hms4OdPdreUY9nzZqmYr3zgKf97Kqs2nybUMegDRlqYUdbZUK0OLsUowIR?= =?iso-8859-1?Q?rXbl47aDAv4m6Z7G5EQ7saigoxaBb2TpHG4bTH52RYJOeyighJA9BJ1U0e?= =?iso-8859-1?Q?1wfkzQ2L3ajn3upGiGPDDtsy0XAXTSLUZRdFIw7mXPSypdcJB2ONxFeYW6?= =?iso-8859-1?Q?1DSYZIXCA4of7Q=3D=3D?= </pre> <p>x-forefront-antispam-report: </p><pre>CIP:255.255.255.255;CTRY:;LANG:fr;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:PR1P264MB3758.FRAP264.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(10070799003)(366016)(1800799024)(376014)(38070700018)(8096899003)(4053099003);DIR:OUT;SFP:1102; </pre> <p>x-ms-exchange-antispam-messagedata-chunkcount: 1 x-ms-exchange-antispam-messagedata-0: </p><pre>=?iso-8859-1?Q?0Wo5x2ZaDyNLFbk7cTRBpxgpSY1Agt7EwGwHL4xri0bF1QY+/vWwTIew2/?= =?iso-8859-1?Q?Fkd+1QWv5UzcR1IDyElYQ6+J6JxbFmPOUdg090FRgd++zylP0H9OdZgLBf?= =?iso-8859-1?Q?rAVv5xfbhipHK7EBjUOUPmE1wdvj5YJEHT86OYJFEq3ZHwu0eL0PmCgwr3?= =?iso-8859-1?Q?W2nMh+6FcZZFNHFnycbb34WdZPx5+NCJC7lMPenH35n87oqGJdVDKFWfFT?= </pre>",jppayant01;Mapenzi;wsmwk;,True,False,False,;solver_id:181052;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,4,0,0,,,wsmwk,,
+1529037,2025-08-13T16:01:22.156423Z,2025-08-13T20:56:57.966932Z,en-US,thunderbird,When I opened Thunderbird my calendar was not there.,False,,,False,1756431,1756404;1756424;1756431;,calendar,thunderbird;calendar;,ms.013831,<p>when I opened thunderbird today my calendar was missing. </p>,ms.013831;Mapenzi;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",3,0,1,,,,,
+1529041,2025-08-13T16:18:38.853278Z,2025-08-14T20:00:43.672043Z,en-US,thunderbird,Email is numbers and symbols,False,,,False,1756804,1756804;,send-and-receive-email,thunderbird;send-and-receive-email;,nparra5,"<p>The last few days some of my emails come in as just a bunch of numbers and symbols is all, others the same but also with the normal email. </p><pre>I go to my actual email account and everything is fine, only when it is brought in by Thunderbird to my PC they get messed up. </pre>",nparra5;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36",1,0,0,,,wsmwk,,
+1529042,2025-08-13T16:20:30.605462Z,2025-08-13T16:20:30.605468Z,en-US,thunderbird,"""Disappeared"" emails saved in files and read in recent.",False,,,False,,,email-and-messaging,thunderbird;email-and-messaging;,denny.milberg,"<p>I've contacted the volunteers before when my follow-up on a problem wasn't resolved.  I haven't had any answers or suggestions since.  I don't know what I did to create the problem a couple of weeks ago, while I was trying to change the chronological order of receiving current emails.  I wanted the most recent messages at the top with the oldest at the bottom (descending?).  The whole system froze; when I rebooted and reopened Thunderbird I discovered that all the folders used for saved messages appeared to be empty.  Moreover, every time I read a message in the recent panel it would also ""disappear"" as soon as I closed it to read another message.  One of the volunteers suggested a method to retrieve the lost messages in the folders.  I followed his instructions and when I got to the ""repair"" button, it was grayed out and didn't function, so I'm at a loss.  So far as the most recent messages are concerned: very few are displayed in that file.  I can only read them now in ""All messages"".  For the first time since I've been a Thunderbird user, I've been forced to go to Gmail through Google and I really miss the Thunderbird platform's features.  I hope someone can help sort out my problems. </p>",denny.milberg;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1529043,2025-08-13T16:22:11.900831Z,2025-08-15T16:59:05.187002Z,en-US,thunderbird,Incoming emails,True,1756803,wsmwk,False,1757128,1756446;1756752;1756803;1757128;,send-and-receive-email,thunderbird;send-and-receive-email;,wallace368,"<p>Two days ago (Aug 10 2025) two email subscriptions came in with empty to and from fields. The email body looked similar to the  email text associated with a returned undeliverable email. So far this has happened with only two email subscriptions for the past few days. No other emails are affected. I am able to look at the emails online through my internet providers webmail access and the emails look normal and have, as far as I can determine, originated from the correct websites where they originated. As far as I know nothing has changed on my local computer or my email service. I am running windows 10. I have had Thunderbird for at least the last 15 years. </p>",wallace368;wsmwk;,True,False,False,";solver_id:6948729;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Avast/138.0.0.0",4,0,0,,,,,
+1529044,2025-08-13T16:24:03.982424Z,2025-08-14T19:46:39.874204Z,en-US,thunderbird,Problem: received emails appear encoded (bitdefender),True,1756357,chrisbraque,False,1756797,1756357;1756434;1756797;,send-and-receive-email,thunderbird;send-and-receive-email;,raphael.barteau,"<p>Hello, I receive my emails in code form. Example: </p><p>( X-ProXaD-SC: state=HAM score= . X-ProXaD-Cause: dmFkZTFqxmBzyeewlHBbAR5Y3zkBvqsIpyIUmID8CUp5ji6Ned4J0QIyp1NhWNgFPjk6PeS1LX1LjSaxLePB8tMou/tWS3xpoRAcG+DE5w8eP8gB8Y9nzkf2CiLsA5RmfNqWUhoKIw+hHcMsG9HzzVWAawpcjtpYd5iZCmHjVb/zHm670d3HwYr5hUrmZSFZB/B/wmikc6NhIXDK5mPvWl1WUfGFbrGoZpCfPbi37zQ3My4I9hVp9tVm/nTu45omfCK3KFyoajtkmG6r9OZ88BW5bNLtiWKikP6eCOKwJLS6IRKx4xrJez814QIqs9c324ppe4LiaNkqaNYyPITio8d8S5izPbQR0nMZ6K8LbzB5WyL7omNQKoPDGMDsuWvd86N/pGUQJsR6LXqYSEiyY/MppZqK2OdGYegF0BozbwMREbSV6XB/aZipnhoeqsAkd//p6Ifym6YZx0yTxVu56YSYg0NUzed9TZtEDX6mfi7ugo9ksiR08u8h6FJ/FqmAhbh7J+SRUYPAQjhzztlqNm8JulYH8rGUjwkHZ3+O5rVuyCD68MT6J4zeRqdcv8Th5ss/n0HfpC+wau1FzzamHf79Qgwmws0IctgJ9AlvV6b5GOCrbs7Got09aOJw8MNSZRLqOSR8oYvbhHAk+8dBYjox8i6ibpPjGAXythtXPhJk79buAg X-ProXaD-Context: Received: from [IPV6:2a01:e0a:153:6890:8549:21aa:815a:5692] (unknown [IPv6:2a01:e0a:153:6890:8549:21aa:815a:5692]) (Authenticated sender: <a href=""mailto:raphael.barteau@free.fr"" rel=""nofollow"">raphael.barteau@free.fr</a>) by <a href=""http://smtp6-g21.free.fr"" rel=""nofollow"">smtp6-g21.free.fr</a> (Postfix) with ESMTPSA id A91D378034D for &lt;<a href=""mailto:ho.ka.hey@free.fr"" rel=""nofollow"">ho.ka.hey@free.fr</a>&gt;; Wed, 13 Aug 2025 10:24:24 +0200 (CEST) DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=<a href=""http://free.fr"" rel=""nofollow"">free.fr</a>; s=smtp-20201208; t=1755073464; bh=m+iJfftWOI9PpWVt7W6EIRRDYw8TuRpdP7qZidUJtE4=; h=Date:To:From:Subject:From; b=fHBGUl2qpN4m8/fre5zWLfOQ3e2xUGxLYhNvMYdljk6meHFeMTmdOGmcXa67zb62x eFOnFF/XZOsCNodApwagewHzjOxx6w1YcjEdLTSElTO2v968YDDUnrreqBbv19/IPI CeFOI/opazy3yDQ6Xua0DRbDZUBv1A13gD9WTBfOjBMXBqEW0mMNJ5KGggPOKkVW1c 13uM76jcbrjLPWzTbU4CZVbGI4vE0sTe/xAp3W7Wvk5xidwupwo19DLGtHYlu7N+Tb z1IvgvUtahr6EXWqMxHVhYLixBaAUp3qw91t7W5VurVr97iojtumJZYW5VZmbwLXy3 6+xmNfPdSExew== Message-ID: &lt;<a href=""mailto:8fad7a1b-440c-4647-8b96-3adcb26da069@free.fr"" rel=""nofollow"">8fad7a1b-440c-4647-8b96-3adcb26da069@free.fr</a>&gt; Date: Wed, 13 Aug 2025 10:24:26 +0200 MIME-Version: 1.0 User-Agent: Mozilla Thunderbird Content-Language: fr To: Ho-Ka-Hey Raphael &lt;<a href=""mailto:ho.ka.hey@free.fr"" rel=""nofollow"">ho.ka.hey@free.fr</a>&gt; From: Ho-Ka-Hey Raphael &lt;<a href=""mailto:raphael.barteau@free.fr"" rel=""nofollow"">raphael.barteau@free.fr</a>&gt; Subject: Test Content-Type: text/plain; charset=UTF-8; format=flowed Content-Transfer-Encoding: 8bit </p><p>Je test avec la sécurité abaissée ) The problem is only present in Thunderbird; the emails are clearly readable in my provider's online messaging system. In image 1 you can see that there is no subject or the name of the correspondent and in image 2 the email is unreadable... hundreds of lines of code. Could you help me? Thank you very much. </p>",raphael.barteau;chrisbraque;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/fr/kb/faq-thunderbird-78""]",3,0,3,,,wsmwk,,
+1529049,2025-08-13T16:37:33.932304Z,2025-08-14T20:55:23.446924Z,en-US,thunderbird,incoming mails are since yesterday 2025-08-12 shown in HTML or similar nor in usual text (bitdefender?),True,1756447,wsmwk,False,1756837,1756447;1756800;1756837;,email-and-messaging,thunderbird;email-and-messaging;,jens.kirk,"<p>Since 2025-08-12, 21:04 (DK-time, equivalent to 20:04 GmT) incomming mails are shown in HTML or someting looking like that. Please see the attached file.  I am not aware to have changed settings in Thunderbird. Perhaps it is connected to the recent update og Thunderbird (?) I have a web-mail in the firm transporting e-mails to me. In the web-mail mails look ok. My wife running Thunderburd too has the same problem too. </p><p>It is very difficult to read mails as shown. </p><p>Some few recent mails are however shown perfectly i text-style. I see no pattern in these mails. Who is sending them etc. </p><p>Please advice me how to make Thunderbird show readable mail. </p><p>Mails I send from Thunderbird are are delivered in text as expected. </p><p>I expect that many other similar cases are reported to you. Please send any reply to <a href=""mailto:jens.kirk@adslhome.dk"" rel=""nofollow"">jens.kirk@adslhome.dk</a> AND to &lt;redacted&gt;@gmail.com. </p><p><br> Best regards  Jens Kirk  &lt;redacted&gt;@adslhome.dk </p>",jens.kirk;wsmwk;,True,False,False,";solver_id:6944855;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",3,0,1,,,wsmwk,,
+1529059,2025-08-13T16:57:45.559212Z,2025-08-13T16:57:45.559231Z,en-US,thunderbird,can't get old emails,False,,,False,,,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,sandymrc,"<p>I have several old emails that I have in various folders in TB. When I now try to view them, I get a blank screen and the blue line in the lower right hand corner that signifies loading comes on and just stays blue. How can I view these old emails? </p>",sandymrc;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1529061,2025-08-13T17:07:10.412234Z,2025-08-13T17:07:10.412241Z,en-US,thunderbird,Lost pop email on Mac and Thunderbird has bad data in database on configuration,False,,,False,,,account-management,thunderbird;account-management;,marcrose,"<p>Greetings, After years of using <a href=""http://zoho.com"" rel=""nofollow"">zoho.com</a> as my email provider it suddenly erased two accounts from Thunderbirds memory. I am using OS/2 and the latest version. When I went to add them back using Thunderbirds account set up they complained about not being recognized in its database. It said ""component returned failure code 0x80550014.""  I also noticed that the POP settings were wrong for both the servers.  The are from the zoho website: </p><p>POP3 Server Configuration Server/ Host	Port	Mode In	<a href=""http://pop.zoho.com"" rel=""nofollow"">pop.zoho.com</a>	995	SSL Out	<a href=""http://smtp.zoho.com"" rel=""nofollow"">smtp.zoho.com</a>	465	SSL </p><p>Your listings are something else. Do you have any idea of what happened to cause both accounts to be deleted? Why are they wrong on your probe and can you change them them to be correct.  Everything works when I entered my password on zoho website. except for Thunderbird.  Thank you.  --Marc </p>",marcrose;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",0,0,0,,,,,
+1529066,2025-08-13T17:35:08.866833Z,2025-08-13T17:35:08.866853Z,en-US,thunderbird,E-mail,False,,,False,,,send-and-receive-email,thunderbird;windows-11;send-and-receive-email;,rmikloski,"<p>I opened my thunderbird E-mail then copied and pasted an Amazon link to it.  Then sent it to myself.  When I opened the email I sent to myself the below appeared with no Subject and From.  This is the first time this happened.  I did the same thing with my Yahoo E-mail with no problems.  Please advise.  I have been using Thunderbird for many years. Bob Mikloski 619-690-1102 </p><p>Wed, 13 Aug 2025 15:59:47 +000 . DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://cox.net"" rel=""nofollow"">cox.net</a>; s=y1; t=1755100786; bh=r/UnUVkrrxLd60yzezk2iEG14yD3iJssCAjShjyp0Y8=; h=Date:To:From:Subject:References:From:Subject:Reply-To; b=oQrzYMxsgbqad9PxeApxId8JwSNkWEZRSNZa6SaHDAqJDWd5QID777+TSHM28om7U3iGT09KHvp2B1gZJb6xgWjGJM4NengVF48TFKo0XVeOLmt7DAdvgqtfuSYKaipuWc5tsiLl42tl0Bmu+vYmH9NmDamllqlKhgEJ996tNnWPMkbLDKjtH9Lg5j8RFAvR/xy7GHcxasHe13l/uTXt3KzYv3feFJ4c4LPIhsyxLL8xtTbPR/afB0KDBb5i8AdeTedeiO8VouH7SSXxJj+hBqUeelU7AG14zKQIYnoWEfJEzAlryGPLYl6Vpx5QTTK1dxPV4c1MX6sIl6YoFrc0Vg== X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=<a href=""http://yahoo.com"" rel=""nofollow"">yahoo.com</a>; s=s2048; t=1755100786; bh=PnKd1Z5h90ZadSrEL0xXBIsPs5l0NNDHZOfj3X/HwYP=; h=X-Sonic-MF:Date:To:From:Subject:From:Subject; b=DcYKlXhW6rdOHWWft7ugHD7EbHW6HoYhDNOMlRzFXSCXvRpnvGs7UNIIAyK9BNewPDQGmRPCc1jtAIP3v3iANv8scboubIOI1al7nYvnkWELSCcMszh3Rfe9sjqmkaDgtBBU5WNEdZUpon65ixTf+PND7VJ0BinCpKZyGipMJqNrR6eme2uZoc9DGTfXFzuRLevyX6QEJ5rQkRSLhCzXVsk6cLE8QrottJ5yFoQIEGGC9J+nSe7pFzMdAy2dwJKEWPTOZY66IYTdCjFx5fmpuc0EXaiMs+OUhBTGLT9w+ZkaDD5I+euLl2Pg0cy3pJH7/KgnBfnjoxKUnn31UmYqqQ== X-YMail-OSG: Bfy9db4VM1lktsPJfZh2KVgh.ToKUKnrpsXGra6wTj9kbOdCAilmqcJWkpDdhsu </p><pre>.Ue4LL6Jq5drqikVZiHcXb8zj1CPik6yCc5dFGnXgKvF.W660qD1DPf_aFuIFB_leZRPoNIJoOTZ pQdVadx10sZH33ylL2a8ABacWX9ZvZIAmD4eMkZ7hVbL7YerCAwOTL4N2CjGq0Yk5PKa1D9OHH4I iAPmtwyYDnGAoZmuds1yl2IFxVP0WBgW.obgAASEPsROdr_qgk4Y6ui.GnkgXL_h9.SNFApZ1Xa2 txMNXnxtwyMYT1ihRQNEgJF77c1mITWbdXftXDiuoxuWRXFQbocOdSblOwsQ4J7TMps4N8CcCeDy kD8ZzhgJbvdXE9.AKjK0qCRZ_P8VGDSlWyxQyju7Y3rQ2JrsSBrbYtCSWgM2vY3Z91sTIjk7CffU Jc7pkCP5P5G_th1WH98lwu6al3Wfhp7tZSegsTxrpLpfQh9IaFVWGm9Ta84TxzBcDmydPMPgbyUZ 7u1Wrzt7LwFvXC1Lqc.1HqhZSv3l9B.Vx0c0itI.JPKCEouwHOaqtoxxyMv1nmSdJo2K.Rvmnjds DQxctGh8xYP0RGzHAK_JgBkZCARliTGL2y43lDcJ8Tqgo20SGRwq3zpLsoihRUZfCa9pm3uhPrHA .YbiqK6WXLg0oKOyryfJDl8xThKZnCVZtwrwBj84tZfTZzBBUkewNseX_NWKY2H4qWevYyJnBqhU rXCC0oBRLKLIGEaX6fSHp2Y9t.UXtAbsR8Sg5wTqZI3Ug4phXY2qOc12Fuf1Jjp1d3bkjQfkEAom _8mp4NF3UMabDpagkjcDl_43y_Dzzq0VonLTnCn3SoXGwRAM6qoH3xk0OEKoRhvsI3wLTP.kZRqK 3hh5PNODBbJ8CyntdrBMBkIM4TdxsdF_m_pqz8l3zNbyx0WWWat5UE3EmH9AsMcT.jqn6Yd9J63l HbPfUUfwv1I56coMYnhEgafEQsJltKtihoJsCjIt78VuAG1._rMAFkKJoeqY3G.9zZKWTOvwu2vZ ceuyDxDeMwvVba1ff4xPck1JnOTRChRq4fUu0Z_D7RxpP7JyMVWS7aGn8KnfaKSPIjW.YW9xtzdY IjNGJoQeirgtEjl5nDc9XS2v5hwbNRkleXwk3T1OPp8g7Me1i.vBt.V7hp5aMgy9JOi74Bkznkk5 3f2JXI9Awu7nEaEBoTszXlS14XH_kESbDCxhkOxw2UYJGWTqwLnJ6ssSALUGT8gp1igriANL8edV IFYmnCYTc4DttcUBV0NehAvQFgDSc.OdUvgWAAM2YmiKRBKOgicOP8RMCOl2URUcAK5386DU1.qI o9XAUkAgrMB95pzMpc1fSmJBi1yqVR6QGTXfOV9_4fOmLsigH0Y8X.o.ChtnRSZqayrNH.AuDTXi LASqaieV69raUTGZ73J_2hdCTZvqGwhVhiVeeps2EbE1GpROiR1uKQpz1.ln1Op9kikCA.ikqOIG jWnHv1BtODEnyjek2hHyWyIK6znMAJ3jN98uOsEDxPvppqm_zAMXdZi.74RzC6cGTdcyb.3fY12N VdcZ3kXp185XTvGf9AEvilk2y667QcDqIP7KiCsORxyXmsi0Oq3.vDKAAIhPxaU.ZKllj0qgSrog X3b3_NjX4cmYa43o3QcrHI9O47uOEmr8eoX6HTHeObs5eevqPJEoToBmmniYVJiPTT5tL.hgTTeq qUcmvDIT.GiwPx.3JVGFe.8CwrG0__OsV5dibC61X39qP4XkWkD_LBa8Qd_EgN3myrXEN4j1TefH xumWCfwE5df7zCX_Y2WOIV6O7VzGIQrVZS9gy6aWvwUqijU7rHTUpYLiDY90Rwd_aj_khEcBzOBn 5yeEXUnDeJqVwghuprR1en0zujdQCUvdhLkb9MWrOO.caDC6QGRnlhlqjK6bed511Sjt9_tezYXd g4SXM6r2zZlmX8wWy7QgXL.0AQvER2KexgA04cpKnHz3ZDhmpRTnuE7a792eG9MuVlqIgkr3aZPc te.XqocIAgai3HDXaTS8iv.ZySPwIYolL5gObB2I8BtqAWQNEPs4iS3C91NTIPLDdJowIX2A3dV. m4pW.186JxfNBmanMMgGcMk8oHnLiYypzhiWOl2Ul8Am4Xp7zGoQdxEo8TpicfTOMi34ikNJgL0_ aWETgu8XfQq99qSPjwEMK6B0nAyMZYgrr4ax1LeVjnVBiDdikdRPfIYIYcZK6HE0yxg9U.Np2uE4 cIyozUElZhm2pAxWPzCOENn2zQDrUU4JvFA-- </pre> <p>X-Sonic-MF: &lt;<a href=""mailto:rmikloski@cox.net"" rel=""nofollow"">rmikloski@cox.net</a>&gt; X-Sonic-ID: ecac279e-2a18-47cc-8fd4-fad64ab83e39 Received: from <a href=""http://sonic.gate.mail.ne1.yahoo.com"" rel=""nofollow"">sonic.gate.mail.ne1.yahoo.com</a> by <a href=""http://sonic310.consmr.mail.ne1.yahoo.com"" rel=""nofollow"">sonic310.consmr.mail.ne1.yahoo.com</a> with HTTP; Wed, 13 Aug 2025 15:59:46 +0000 Received: by hermes--production-gq1-74d64bb7d7-5qmwx (Yahoo Inc. Hermes SMTP Server) with ESMTPA ID 8a290f4237580e6563f83772dc4e05a2; </p><pre>         Wed, 13 Aug 2025 15:59:43 +0000 (UTC) </pre> <p>Message-ID: &lt;<a href=""mailto:ef810650-e5e0-4235-80b5-d784eea4cf64@cox.net"" rel=""nofollow"">ef810650-e5e0-4235-80b5-d784eea4cf64@cox.net</a>&gt; Date: Wed, 13 Aug 2025 08:59:41 -0700 MIME-Version: 1.0 User-Agent: Mozilla Thunderbird Content-Language: en-US To: Robert Mikloski &lt;<a href=""mailto:rmikloski@cox.net"" rel=""nofollow"">rmikloski@cox.net</a>&gt; From: Robert Mikloski &lt;<a href=""mailto:rmikloski@cox.net"" rel=""nofollow"">rmikloski@cox.net</a>&gt; Subject: test Content-Type: text/plain; charset=UTF-8; format=flowed Content-Transfer-Encoding: 7bit References: &lt;<a href=""mailto:ef810650-e5e0-4235-80b5-d784eea4cf64.ref@cox.net"" rel=""nofollow"">ef810650-e5e0-4235-80b5-d784eea4cf64.ref@cox.net</a>&gt; X-Mailer: WebService/1.1.24260 mail.backend.jedi.jws.acl:role.jedi.acl.token.atz.jws.hermes.yahoo Content-Length: 47 </p>",rmikloski;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0;os:Windows 11",0,0,0,,,,Windows 11,
+1529067,2025-08-13T17:38:48.429626Z,2025-08-21T15:09:14.251957Z,en-US,thunderbird,Calendar reminders have stopped showing in reminder dialog,False,,,False,1758470,1758470;,calendar,thunderbird;calendar;,MarkFoley,"<p>A week or so ago my Thunderbird (140.1.0esr) reminder dialog stopped showing up. No idea why. Calendars &gt; properties does have ""Show Reminders"" checked. Account &gt; Thunderbird Settings &gt; Calendar &gt; Show the reminder dialog (X) is checked. I've restarted and rebooted (Linux). </p><p>I can add events to the calendar and they show up on my phone. I did update to 140.1.0 10 days ago, so perhaps this is a problem with this version. I'm considering reverting to the previous 128.9.1esr version, but it would be great if someone had a solution for this.  </p><p>THX </p>",MarkFoley;,True,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0,1,0,2,,,,,
+1529069,2025-08-13T17:41:10.747533Z,2025-08-16T03:48:18.532516Z,es,thunderbird,No puedo poner contraseña,False,,,False,1757258,1757258;,passwords-and-sign-in,thunderbird;needsinfo;passwords-and-sign-in;,quijotefer,<p><strong>pongo contraseñas y no me las acepta</strong> </p>,quijotefer;pcp04;,True,False,False,";useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",1,0,2,,,,,
+1529073,2025-08-13T18:23:51.340431Z,2026-01-16T14:48:15.811698Z,en-US,thunderbird,INBOX won't display message content,False,,,False,1794177,1756448;1756480;1756552;1794177;,send-and-receive-email,thunderbird;send-and-receive-email;,dshoemann,<p>INBOX won't display message content.  All other subfolders do show content  What happened or how to fix it. </p>,dshoemann;wsmwk;barrym;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 OPR/120.0.0.0",4,0,4,,,wsmwk,,
+1529077,2025-08-13T18:40:03.196673Z,2025-08-17T22:58:15.545094Z,es,thunderbird,Unwanted Microsoft window overlaps Thunderbird when I want to download mail,False,,,False,1757673,1757673;,crashing-and-slow-performance,thunderbird;needsinfo;crashing-and-slow-performance;,vicverg,"<p>Since the latest update to Windows 10 Pro and Thunderbird, this annoying Microsoft window keeps popping up, and I have to put it in the background, otherwise I can't even read my emails. </p>",vicverg;pcp04;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",1,0,0,,,,,
+1529078,2025-08-13T18:45:17.612686Z,2025-08-13T18:45:17.612708Z,en-US,thunderbird,"I had been able to change the color of the email text first line - not just the ""tag""",False,,,False,,,customization,thunderbird;customization;,CarolMB,"<p>Previously I had been able to change the color of the email text first line - not just add a ""tag"" at the far right. Is there a way with the updated version to do that. It's much more noticeable to change the text than just add the tag at the far right. Thank you for your help! </p>",CarolMB;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",0,0,0,,,,,
+1529080,2025-08-13T18:50:55.402581Z,2025-08-13T18:50:55.402599Z,en-US,thunderbird,"Since Upgrade, receiving notifications for Spam emails",False,,,False,,,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,diana45,"<p>Hi, </p><p>I’m currently on version 140.1.1esr (32-bit). Since the last upgrade, I’ve started receiving alerts whenever new messages arrive in my Spam folder. Previously, I only received alerts for my Inbox. </p><p>This is happening constantly and is driving me a bit nuts. Is there a new setting I can change so I no longer get notifications for the Spam folder? </p><p>Thanks for your help! </p>",diana45;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",0,0,0,,,,,
+1529082,2025-08-13T18:56:15.118914Z,2025-08-13T19:44:53.261658Z,en-US,thunderbird,Thunderbird email client 141.0,False,,,False,1756415,1756403;1756415;1757173;,send-and-receive-email,thunderbird;windows-10;send-and-receive-email;,,"<p>Hello there, </p><p>Using POP3 protocol I receive only the email metadata. It used to work before, it is happening for the last 2 days. See below. It works if the account is created as an IMAP, but this is not what I want.  And another thing, it works properly with EM Client latest version that I installed. </p><p>Thanks, George </p><p>X-RG-Rigid: 684FABBC0C25E40 . X-RazorGate-Vade: dmFkZTF4qgkjYRGh0ND0sQBqJGb67S6Bi3jMjo1zYF0CqTHB8AOU4y2yWSdBrBq1sqHgXqOs/Z1X+kECkDHUAYNutKqv7SpO1vWkjEY25WQfczIeYgAVZxSYyuShECwBjtweSkwoB/B27uXs+3r5rV/lDjRQ0k2N78dLkGLADMQuCdKBY6aKuUqNTYAiJdIO1uE0vaiKVyh82p56dNonfs+xMK7XMofStQVAAVd75o0bP8soSewtX8cZIsDQXVRtNRb6BXU9DMR1vhn7h/i4HzDkwki9KqhVSz33B0WWXEJe9bzJILT9eUPmiwYnnDEc75uBetq36Z+AXrR1dnbGZ1SGxul+S6bIj422jr7zfKgFux8lkhJRgnMLP2nj6YktFpgVXs2uZL/kV3MtP7+JIBsjuvBmrq09BNUvkb06bUt7nkrLJtIxh7Sz7kZ4+KduMxApz6qI0sAeH7kvKls6ANAwje/2UTW4P3yva5KvWMFCpuh92KchWEc5S1W5wEJGUuf8Hpxw5KrvIi7d0IovWoIqhNvUt9m5zUmRQbmS9W6nRd6rsOHekfQbzdoIv49apqKsM3rTZur+oZArvL+9yodmLz8exe4SW2sNQliuXIV6wg6lxhP763vlyURQH4eJSxWczs6fZEJLqIu2hVJD7Kp15d8CmdDWwqg16FU0+UXLWi4DoQ X-RazorGate-Vade-Verdict: clean 20 X-RazorGate-Vade-Classification: transactional-account Received: from <a href=""http://a59-51.smtp-out.us-west-2.amazonses.com"" rel=""nofollow"">a59-51.smtp-out.us-west-2.amazonses.com</a> (54.240.59.51) by <a href=""http://cmx-torrgi004.bell.net"" rel=""nofollow"">cmx-torrgi004.bell.net</a> </p><pre>       id 684FABBC0C25E407 for gdonisan@sympatico.ca; Wed, 13 Aug 2025 14:45:00 -0400 </pre> <p>DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; 	s=6ujb3doj4mwbngmp2xjutilwl4zbdio3; d=<a href=""http://firefox.com"" rel=""nofollow"">firefox.com</a>; t=1755110699; 	h=From:Sender:To:Subject:Message-ID:Date:MIME-Version:Content-Type; </p>",Mapenzi;,True,True,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36;os:Windows 10;troubleshooting:X-RG-Rigid: 684FABBC0C25E40
+.
+X-RazorGate-Vade: dmFkZTF4qgkjYRGh0ND0sQBqJGb67S6Bi3jMjo1zYF0CqTHB8AOU4y2yWSdBrBq1sqHgXqOs/Z1X+kECkDHUAYNutKqv7SpO1vWkjEY25WQfczIeYgAVZxSYyuShECwBjtweSkwoB/B27uXs+3r5rV/lDjRQ0k2N78dLkGLADMQuCdKBY6aKuUqNTYAiJdIO1uE0vaiKVyh82p56dNonfs+xMK7XMofStQVAAVd75o0bP8soSewtX8cZIsDQXVRtNRb6BXU9DMR1vhn7h/i4HzDkwki9KqhVSz33B0WWXEJe9bzJILT9eUPmiwYnnDEc75uBetq36Z+AXrR1dnbGZ1SGxul+S6bIj422jr7zfKgFux8lkhJRgnMLP2nj6YktFpgVXs2uZL/kV3MtP7+JIBsjuvBmrq09BNUvkb06bUt7nkrLJtIxh7Sz7kZ4+KduMxApz6qI0sAeH7kvKls6ANAwje/2UTW4P3yva5KvWMFCpuh92KchWEc5S1W5wEJGUuf8Hpxw5KrvIi7d0IovWoIqhNvUt9m5zUmRQbmS9W6nRd6rsOHekfQbzdoIv49apqKsM3rTZur+oZArvL+9yodmLz8exe4SW2sNQliuXIV6wg6lxhP763vlyURQH4eJSxWczs6fZEJLqIu2hVJD7Kp15d8CmdDWwqg16FU0+UXLWi4DoQ
+X-RazorGate-Vade-Verdict: clean 20
+X-RazorGate-Vade-Classification: transactional-account
+Received: from a59-51.smtp-out.us-west-2.amazonses.com (54.240.59.51) by cmx-torrgi004.bell.net
+        id 684FABBC0C25E407 for gdonisan@sympatico.ca; Wed, 13 Aug 2025 14:45:00 -0400
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6ujb3doj4mwbngmp2xjutilwl4zbdio3; d=firefox.com; t=1755110699;
+	h=From:Sender:To:Subject:Message-ID:Date:MIME-Version:Content-Type;
+	bh=O1AxsBk+ckmn+YeQrdpbn7ZSNTD1Ojajm37EZtGHVyk=;
+	b=sCr3lPCOCMFeE/bydmrVmHVV1OVFXiIqOnVcZH3hWxT2EnWaRgylvJPgGKDs3azw
+	e5X1vY8Pg4SpZ1vOK5Rf0IeebXdzTSANjoBd/6gec5rt+qYKtgZWKYTC3kFv5Al9A5E
+	lkq1ifO818QYS9t5Ld3Q2eQslkMQbCl0nuayXk7I=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1755110699;
+	h=From:Sender:To:Subject:Message-ID:Date:MIME-Version:Content-Type:Feedback-ID;
+	bh=O1AxsBk+ckmn+YeQrdpbn7ZSNTD1Ojajm37EZtGHVyk=;
+	b=TsRNFP84oHJqr+pJPXKrn42DEE9J2iW4fIEqCPL3wc+RJWNeNTTTT+sFe7ACe3xd
+	Yb0kyqWowtSFqC04SzZmU/IEIvHKSE2do924Kszet+hvIWTBiJ24qYcxC0zj2W1dFBK
+	hqH1JJaFNrgN/TBkfzCID01k03jdKjKXEzT28z6E=
+Content-Language: en-US
+X-Template-Name: verifyShortCode
+X-Template-Version: 5
+X-Verify-Short-Code: 658438
+X-Device-ID: fb59c8fb58fb4d6d95571e11c042a6c4
+X-Flow-ID: 321a430d6cb7c33a29c81d185abfc51fb08a16cc2de82d1ca53fc2ce36dd075b
+X-Flow-Begin-Time: 1755110638075
+X-Uid: e1d4eb2c7a6f47d58a44f8cea67ce398
+From: Mozilla <accounts@firefox.com>
+Sender: Mozilla <accounts@firefox.com>
+To: gdonisan@sympatico.ca
+Subject: Confirm your account
+Message-ID: <01010198a4bff1d9-0ca586d9-5488-4e47-836e-c32606440d4e-000000@us-west-2.amazonses.com>
+Date: Wed, 13 Aug 2025 18:44:59 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary=""--_NmP-fdc36b47139742c0-Part_1""
+Feedback-ID: fxa-verify::1.us-west-2.9obwqSuHxAmNPKpejVDo3cEAmnSHOVLO3+B/64gdyXQ=:AmazonSES
+X-SES-Outgoing: 2025.08.13-54.240.59.51
+
+----_NmP-fdc36b47139742c0-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Open the internet with Mozilla
+
+Confirm your account and get the most out=
+ of Mozilla everywhere you sign in starting with:
+
+Chrome on Windows 10
+Pierrefonds, QC, Canada (estimated)
+Wednesday, Aug 13, 2025
+2:44:59 PM (EDT)
+
+Use this confirmation code:
+658438
+
+It expires in 5 minutes.
+
+This is an automated email. If you received it by=
+ mistake, you don=E2=80=99t need to do anything.
+
+For more info, visit =
+Mozilla Support: https://support.mozilla.org/kb/im-having-problems-my-firef=
+ox-account?utm_medium=3Demail&utm_campaign=3Dfx-welcome&utm_content=3Dfx-su=
+pport.
+
+Mozilla. 149 New Montgomery St, 4th Floor, San Francisco, CA 94105
+
+Mozilla Accounts Privacy Notice
+https://www.mozilla.=
+org/privacy/mozilla-accounts/?utm_medium=3Demail&utm_campaign=3Dfx-welcome&=
+utm_content=3Dfx-privacy
+
+Mozilla Accounts Terms of Service
+https://www.mozilla.org/about/legal/terms/services/
+
+----_NmP-fdc36b47139742c0-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D""und"" dir=3D""auto"" xmlns=3D""http://www.w3.org/1999/xhtml"" =
+xmlns:v=3D""urn:schemas-microsoft-com:vml"" xmlns:o=3D""urn:schemas-microsoft-=
+com:office:office""><head>
+    <title>Confirm your account</title>
+    <!--[if !mso]><!-->
+    <meta http-equiv=3D""X-UA-Compatible"" =
+content=3D""IE=3Dedge"">
+    <!--<![endif]-->
+    <meta =
+http-equiv=3D""Content-Type"" content=3D""text/html; charset=3DUTF-8"">
+    <meta name=3D""viewport"" content=3D""width=3Ddevice-width, =
+initial-scale=3D1"">
+    <style type=3D""text/css"">
+      #outlook a { =
+padding:0; }
+      body { margin:0;padding:0;-webkit-text-size-adjust:100%;=
+-ms-text-size-adjust:100%; }
+      table, td { border-collapse:collapse;mso=
+-table-lspace:0pt;mso-table-rspace:0pt; }
+      img { =
+border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-m=
+s-interpolation-mode:bicubic; }
+      p { display:block;margin:13px 0; }
+    </style>
+    <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      =
+<o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D""text/css"">
+      .mj-outlook-group-fix { width:100% !=
+important; }
+    </style>
+    <![endif]-->
+   =20
+      <!--[if !mso]><!-->
+        <link href=3D""https://fonts.googleapis.com/css?family=3DUbuntu:300,=
+400,500,700"" rel=3D""stylesheet"" type=3D""text/css"">
+        <style =
+type=3D""text/css"">
+          @import url(https://fonts.googleapis.com/css?=
+family=3DUbuntu:300,400,500,700);
+        </style>
+      <!--<![endif]-->
+
+   =20
+   =20
+    <style type=3D""text/css"">
+      @media only screen and =
+(min-width:480px) {
+        .mj-column-per-100 { width:100% !important; =
+max-width: 100%; }
+      }
+    </style>
+    <style media=3D""screen and =
+(min-width:480px)"">
+      .moz-text-html .mj-column-per-100 { width:100% !=
+important; max-width: 100%; }
+    </style>
+   =20
+   =20
+ =20
+   =20
+    <style type=3D""text/css"">
+
+    @media only screen and (max-width:479px)=
+ {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+    }
+ =20
+    </style>
+    =20
+    <style type=3D""text/css"">
+.ltr div {
+  direction: ltr !important;
+}
+.ltr td {
+  direction: ltr !important;
+}
+
+.rtl div {
+  direction: rtl !important;
+}
+.rtl td {
+  direction: rtl !important;
+}
+    </style>
+    <meta =
+http-equiv=3D""Content-Type"" content=3D""text/html; charset=3DUTF-8"">
+
+  </head>
+  <body style=3D""word-spacing:normal;"">
+   =20
+    <div style=3D""display:none;font-size:1px;color:#ffffff;line-height:1px;=
+max-height:0px;max-width:0px;opacity:0;overflow:hidden;"">Use the included =
+code to confirm your Mozilla account.</div>
+ =20
+   =20
+      <div style=3D"""" lang=3D""und"" dir=3D""auto"">
+       =20
+     =20
+      <!--[if mso | IE]><table align=3D""center"" border=3D""0"" =
+cellpadding=3D""0"" cellspacing=3D""0"" class=3D""body-outlook"" =
+role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" ><tr><td =
+style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactly;""><!=
+[endif]-->
+   =20
+     =20
+      <div class=3D""body"" style=3D""max-width: =
+310px; margin: 0px auto;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" width=3D""600px"" ><table =
+align=3D""center"" border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+class=3D"""" role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" =
+> <tr><td style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;""><![endif]-->
+   =20
+     =20
+      <div style=3D""margin:0px =
+auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" style=3D""vertical-align:top;width:600p=
+x;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 =
+mj-outlook-group-fix"" style=3D""font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+role=3D""presentation"" style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td =
+align=3D""center"" class=3D""mozilla-logo"" style=3D""align-items: center; =
+font-size: 0px; word-break: break-word; padding: 40px 0px; margin: 0 auto; =
+display: block;"">
+                 =20
+      <table border=3D""0"" =
+cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""border-collapse:collapse;border-spacing:0px;"">
+        <tbody>
+          <tr>
+            <td style=3D""width: 120px; padding: 0px;"" =
+data-l10n-id=3D""fxa-header-mozilla-logo"" width=3D""120""><img alt=3D""Mozilla =
+logo"" src=3D""https://cdn.accounts.firefox.com/product-icons/mozilla-logo.=
+png"" style=3D""border:0;display:block;outline:none;text-decoration:none;heig=
+ht:auto;width:100%;font-size:13px;"" width=3D""120"" height=3D""auto"" =
+data-l10n-name=3D""mozilla-logo""></td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | =
+IE]></td></tr></table></td></tr><tr><td class=3D"""" width=3D""600px"" ><table =
+align=3D""center"" border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+class=3D"""" role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" =
+> <tr><td style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;""><![endif]-->
+   =20
+     =20
+      <div style=3D""margin:0px =
+auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" style=3D""vertical-align:top;width:600p=
+x;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 =
+mj-outlook-group-fix"" style=3D""font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+role=3D""presentation"" style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td =
+align=3D""left"" class=3D""text-header"" style=3D""font-size: 0px; word-break: =
+break-word; padding: 0px;"">
+                 =20
+      <div style=3D""color:=
+ #000000; font-size: 20px; line-height: 28px; font-family: sans-serif; =
+margin-bottom: 12px; text-align: center;""><span data-l10n-id=3D""verifyShort=
+Code-title-3"">Open the internet with Mozilla</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D""left"" class=3D""text-body"" style=3D""font-size: =
+0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""color: #000000; font-size: 14px; line-height: 22px; =
+font-family: sans-serif; margin-bottom: 20px; text-align: center;""><span =
+data-l10n-id=3D""verifyShortCode-title-subtext-2"">Confirm your account and =
+get the most out of Mozilla everywhere you sign in starting =
+with:</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | =
+IE]></td></tr></table></td></tr><tr><td class=3D"""" width=3D""600px"" ><table =
+align=3D""center"" border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+class=3D"""" role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" =
+> <tr><td style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;""><![endif]-->
+   =20
+     =20
+      <div style=3D""margin:0px =
+auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" style=3D""vertical-align:top;width:600p=
+x;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 =
+mj-outlook-group-fix"" style=3D""font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+role=3D""presentation"" style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td =
+align=3D""left"" class=3D""text-body-grey"" style=3D""font-size: 0px; =
+word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""font-size: 14px; line-height: 22px; font-family: =
+sans-serif; margin-bottom: 24px; text-align: center; color: #4b5563;""><span=
+ data-l10n-id=3D""device-all"" data-l10n-args=3D""{&quot;uaBrowser&quot;:&quot=
+;Chrome&quot;,&quot;uaOS&quot;:&quot;Windows&quot;,&quot;uaOSVersion&quot;:=
+&quot;10&quot;}"">Chrome on Windows 10</span>
+     =20
+   =20
+ =20
+
+        <br>
+     =20
+     =20
+       =20
+
+
+ =20
+   =20
+      <span data-l10n-id=3D""location-all"" data-l10n-args=3D""{&quot;city&quo=
+t;:&quot;Pierrefonds&quot;,&quot;stateCode&quot;:&quot;QC&quot;,=
+&quot;country&quot;:&quot;Canada&quot;}"">Pierrefonds, QC, Canada =
+(estimated)</span>
+   =20
+ =20
+
+        <br>
+     =20
+     =20
+        Wednesday, Aug 13, 2025
+        <br>
+     =20
+     =20
+        2:44:59 PM (EDT)
+        <br></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><!=
+[endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"""" =
+width=3D""600px"" ><table align=3D""center"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0"" class=3D"""" role=3D""presentation"" style=3D""width:600px;"" =
+width=3D""600"" ><tr><td style=3D""line-height:0px;font-size:0px;mso-line-heig=
+ht-rule:exactly;""><![endif]-->
+   =20
+     =20
+      <div =
+style=3D""margin:0px auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0"" role=3D""presentation"" style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: =
+ltr; font-size: 0px; text-align: center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | IE]><table role=3D""presentation"" border=3D""0""=
+ cellpadding=3D""0"" cellspacing=3D""0""><tr><td class=3D"""" =
+style=3D""vertical-align:top;width:600px;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 mj-outlook-group-fix"" =
+style=3D""font-size:0px;text-align:left;direction:ltr;display:inline-block;v=
+ertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" =
+cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D""left"" class=3D""text-body"" =
+style=3D""font-size: 0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""color: #000000; font-size: 14px; =
+line-height: 22px; font-family: sans-serif; margin-bottom: 20px; =
+text-align: center;""><span data-l10n-id=3D""verifyShortCode-prompt-3"">Use =
+this confirmation code:</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D""left"" class=3D""code-large"" style=3D""font-size:=
+ 0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""font-family: Ubuntu, Helvetica, Arial, sans-serif; =
+color: #000000; font-size: 32px; line-height: 36px; margin-bottom: 24px; =
+text-align: center;"">658438</div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D""left"" class=3D""text-body-no-margin"" =
+style=3D""font-size: 0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""color: #000000; font-size: 14px; =
+line-height: 22px; font-family: sans-serif; text-align: center;""><span =
+data-l10n-id=3D""verifyShortCode-expiry-notice"">It expires in 5 minutes.=
+</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | =
+IE]></td></tr></table></td></tr><tr><td class=3D"""" width=3D""600px"" ><table =
+align=3D""center"" border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+class=3D"""" role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" =
+> <tr><td style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;""><![endif]-->
+   =20
+     =20
+      <div style=3D""margin:0px =
+auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" style=3D""vertical-align:top;width:600p=
+x;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 =
+mj-outlook-group-fix"" style=3D""font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+role=3D""presentation"" style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td =
+align=3D""left"" class=3D""text-footer-automatedEmail"" style=3D""font-size: =
+0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""font-size: 12px; line-height: 20px; font-family: =
+sans-serif; margin-top: 40px; margin-bottom: 12px; text-align: center; =
+color: #6d6d6e;""><span data-l10n-id=3D""automated-email-no-action"">This is =
+an automated email. If you received it by mistake, you don=E2=80=99t need =
+to do anything. For more info, visit <a class=3D""link-blue"" =
+href=3D""https://support.mozilla.org/kb/im-having-problems-my-firefox-accoun=
+t?utm_medium=3Demail&amp;utm_campaign=3Dfx-welcome&amp;utm_content=3Dfx-sup=
+port"" data-l10n-name=3D""supportLink"" style=3D""color: #0060df; =
+text-decoration: underline; font-family: sans-serif;"">Mozilla Support</a>.=
+</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | =
+IE]></td></tr></table></td></tr><tr><td class=3D"""" width=3D""600px"" ><table =
+align=3D""center"" border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+class=3D"""" role=3D""presentation"" style=3D""width:600px;"" width=3D""600"" =
+> <tr><td style=3D""line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;""><![endif]-->
+   =20
+     =20
+      <div style=3D""margin:0px =
+auto;max-width:600px;"">
+       =20
+        <table align=3D""center"" =
+border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" role=3D""presentation"" =
+style=3D""width:100%;"">
+          <tbody>
+            <tr>
+              <td style=3D""direction: ltr; font-size: 0px; text-align: =
+center; padding: 0px;"" align=3D""center"">
+                <!--[if mso | =
+IE]><table role=3D""presentation"" border=3D""0"" cellpadding=3D""0"" =
+cellspacing=3D""0""><tr><td class=3D"""" style=3D""vertical-align:top;width:600p=
+x;"" ><![endif]-->
+           =20
+      <div class=3D""mj-column-per-100 =
+mj-outlook-group-fix"" style=3D""font-size:0px;text-align:left;direction:ltr;=
+display:inline-block;vertical-align:top;width:100%;"">
+       =20
+      <table border=3D""0"" cellpadding=3D""0"" cellspacing=3D""0"" =
+role=3D""presentation"" style=3D""vertical-align:top;"" width=3D""100%"">
+        <tbody>
+         =20
+              <tr>
+                <td =
+align=3D""left"" class=3D""text-footer"" style=3D""font-size: 0px; word-break: =
+break-word; padding: 0px;"">
+                 =20
+      <div =
+style=3D""font-size: 12px; line-height: 20px; font-family: sans-serif; =
+text-align: center; color: #6d6d6e;"">Mozilla. 149 New Montgomery St, 4th =
+Floor, San Francisco, CA 94105</div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D""left"" class=3D""text-footer"" =
+style=3D""font-size: 0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""font-size: 12px; line-height: =
+20px; font-family: sans-serif; text-align: center; color: #6d6d6e;""><a =
+class=3D""link-blue"" data-l10n-id=3D""moz-accounts-privacy-url-2"" =
+href=3D""https://www.mozilla.org/privacy/mozilla-accounts/?=
+utm_medium=3Demail&amp;utm_campaign=3Dfx-welcome&amp;utm_content=3Dfx-priva=
+cy"" style=3D""color: #0060df; text-decoration: underline; font-family: =
+sans-serif;"">Mozilla Accounts Privacy Notice</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D""left"" class=3D""text-footer"" =
+style=3D""font-size: 0px; word-break: break-word; padding: 0px;"">
+                 =20
+      <div style=3D""font-size: 12px; line-height: =
+20px; font-family: sans-serif; text-align: center; color: #6d6d6e;""><a =
+class=3D""link-blue"" data-l10n-id=3D""moz-accounts-terms-url"" =
+href=3D""https://www.mozilla.org/about/legal/terms/services/"" =
+style=3D""color: #0060df; text-decoration: underline; font-family: =
+sans-serif;"">Mozilla Accounts Terms of Service</a></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | =
+IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | =
+IE]></td></tr></table><![endif]-->
+   =20
+   =20
+      </div>
+   =20
+ =20
+
+  </body></html>
+----_NmP-fdc36b47139742c0-Part_1--",2,0,1,,,,Windows 10,
+1529083,2025-08-13T19:03:21.391019Z,2025-08-13T21:41:21.003599Z,en-US,thunderbird,Server Reset,False,,,False,1756432,1756432;,connectivity,thunderbird;connectivity;,jonkoenigsberg,<p>Every time I start the software the server connection is reset and no new emails are coming in. What should I do? </p><p>Version 140.1.1esr (64-bit) </p>,jonkoenigsberg;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,7,,,,,
+1529087,2025-08-13T19:11:06.676829Z,2025-08-13T19:11:06.676850Z,en-US,thunderbird,All Folders list: Only shows count of unread mails.  Used to show two counts - Read AND Unread.  How can I fix this?,False,,,False,,,customization,thunderbird;customization;,FHY1,<p>There must be a way to change the display settings for the All Folders panel.  I have looked for it but cannot find it. </p>,FHY1;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/en-US/kb/appearance-panel-layout-message-list-card-view-tab""]",0,0,0,,,,,
+1529091,2025-08-13T19:38:39.663997Z,2025-08-14T04:50:01.352366Z,en-US,thunderbird,messages coming through without showing sender or subject line,False,,,False,1756553,1756435;1756436;1756437;1756441;1756443;1756553;,send-and-receive-email,thunderbird;send-and-receive-email;,jan94,"<p>A handful of messages are now coming through without showing the sender or subject line, and they are gobbledygook, like this portion of one from the Red Cross confirming an appointment; I have received messages from them a few months ago the last time I donated blood without any problem.  Here is a portion of the message: </p><p>List-Unsubscribe . </p><pre>&lt;https://cell0.track.email.us-ashburn-1.oci.oraclecloud.com/20221014/track/unsubscribe?V=10&amp;H=AAF_T7gjJrNsjijurS-kfbIUCRPnn3EoO2sYMe3LGVkIjjXu1CH0Ik4_iJVNvnLQEsxGSA-oVCn2jNrKI3On1lfWycmfmCPXzO6HtCGk_0hAOAJWSd7OJG7CVkgJESQfVj0puMNXNwufEosw_6YW-n7pBMyt3QLN3Nmmbk7eC0cD9hdELv3luw8a3tGBEDdlPwrp8bNrBQO4emF5qGFBjjXKG3DDY-e178He05LCvQGPRou1SskY4BJSyWPJLTxAkKAkmnykSEo1iiBqO5lW5flJqKcXQi-FirtD4gUSv9BDJTc3g3LStX6LclnaEff2Ygt0rc1JClzu7ygZaEXyvqAOyjG7252Z9_KEpXDVFg563dnbxfufD7DFYgEVS-jfSD2npEry9vuqTfVuQMmdwQu4pQwh20NoW9NwfaxYnQ&gt; </pre> <p>List-Unsubscribe-Post: List-Unsubscribe=One-Click Message-id: </p><pre>&lt;0T0X00LRSW6HHYW0@submit-ad1-fd1-302-us-ashburn-1.rmtaad1.vcndpiad.oraclevcn.com&gt; </pre> <p>MIME-version: 1.0 Content-transfer-encoding: 7bit Content-type: text/html;	charset=""UTF-8"" Date: 13 Aug 2025 10:54:17 -0500 From: American Red Cross &lt;<a href=""mailto:donotreply@notifications.redcrossblood.org"" rel=""nofollow"">donotreply@notifications.redcrossblood.org</a>&gt; Subject: Donation Appointment Confirmation To: <a href=""mailto:jan@davejan.net"" rel=""nofollow"">jan@davejan.net</a> X-Mailer: Siebel CRM X-MSMail-priority: Normal X-Priority: 3 Reporting-Meta: </p><pre>AAGKGtGpCWlbT0fnexkvxRAbd1I5Lz7F74pMsIlZDlBlSZ34pwkbQnUGnY2SNU+H 5vRUl+q0fNzmzp04zoutIuSiiasywHE5nVQ0wiLfJrpxHJObPm3Jx3WVtVmJM9Kl </pre>",jan94;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",6,0,0,,,wsmwk,,
+1529093,2025-08-13T19:52:09.264236Z,2025-08-20T11:50:04.862596Z,it,thunderbird,errore calendario,False,,,False,1758198,1756587;1756773;1756989;1757148;1757279;1758180;1758198;,calendar,thunderbird;calendar;,pierangelo.cignoli,"<p>Buongiorno, mi esce questo errore esportando il calendario da quando ho aggiornato all'ultima versione: ""Si è verificato un errore. Impossibile scrivere nel file (con link del file nella cartella)"" grazie saluti </p>",pierangelo.cignoli;@next;,True,False,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0,7,0,0,,,,,
+1529096,2025-08-13T20:16:58.608122Z,2025-08-13T21:33:13.016369Z,en-US,thunderbird,eMail displayed in source code,True,1756442,wsmwk,False,1756450,1756442;1756450;,performance-and-connectivity,thunderbird;performance-and-connectivity;,raygreen,"<p>Recently when I download messages they are blank in the inbox, but when opened they are in source code! This happens with all accounts. It was working correctly up until 7th August. The only update since then was for .net! I'm running latest Windows 11. When I uninstall, then reinstall Thunderbird, initially any messages download correctly, but any further downloads revert back to the problem in question. Any help would be appreciated. Thanks Ray </p>",raygreen;wsmwk;,True,False,False,;solver_id:6949203;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,2,0,2,,,,,
+1529098,2025-08-13T20:22:35.731177Z,2025-10-12T16:45:53.928186Z,en-US,thunderbird,"Thunderbird 141.0 ""Ghost Message"" - deleted message in message list",False,,,False,1771565,1771408;1771565;,crashing-and-slow-performance,thunderbird;crashing-and-slow-performance;,lajoes,"<p>I have a message that is still listed after being deleted.  When I highlight the messages listed above it and below it, I can see their contents with no problem. However, when I click on the ""ghost message"" listing in between them, <em>I will see the contents of the last message viewed</em>, not the contents of the ghost message that is highlighted.  </p><p>Also, when I first open Thunderbird and highlight that ghost message first, the review pane is blank, like there is no message there. Then if I click on a different message, that message's contents will show in the preview pane.  Then when I go back and click on the the ghost message listing, that pane is still showing the previous message's contents. </p><p>When I click on ""delete"" message, I get the constant blue indicator light in the lower right glowing and nothing happens. </p>",lajoes;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/en-US/kb/cannot-delete-messages""]",2,0,0,,,wsmwk,,
+1529099,2025-08-13T20:41:25.652702Z,2025-08-13T20:41:25.652719Z,en-US,thunderbird,sending emails,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,dennisyows,<p>How do you get the emai send icon to display? </p>,dennisyows;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36;kb_visits_prior:[""/en-US/kb/manual-account-configuration""]",0,0,0,,,,,
+1529101,2025-08-13T20:45:48.755701Z,2025-08-13T20:45:48.755750Z,en-US,thunderbird,".jpg files are opening with windows media player instead of the default photo app.  It just started this today.  If I save the file to my desktop, it opens with the photo app.",False,,,False,,,attachments,thunderbird;attachments;,marknazar,"<p>Thunderbird is opening .jpg file with windows media player even though my computer is defaulted to photo app.  If I save the file to my desktop, it opens with photo app.  Can this be fixed? </p><p>Mark Nazar </p>",marknazar;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",0,0,0,,,,,
+1529102,2025-08-13T20:49:02.447680Z,2025-08-14T08:02:34.344251Z,it,thunderbird,FILE ALLEGATI IN WORD E LIBRE OFFICE  NON S APRONO,False,,,False,1756590,1756590;,attachments,thunderbird;needsinfo;attachments;,infolucidi,<p>NON RIUSCIAMO PIU AD APRIRE I FILE ALLEGATI DA 2 GIORNI COME MAI? </p>,infolucidi;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0;kb_visits_prior:[""/it/kb/bloccare-mittente""]",1,0,2,,,,,
+1529103,2025-08-13T20:59:47.894258Z,2025-08-13T20:59:47.894273Z,en-US,thunderbird,Non-profit looking for simple group email,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,psisk,"<p>I am a church administrator looking for a email handler that will allow group emailing with disparate ISPs. Example, the adult ministry committee with 12 members would like to share a group email, maybe send a PDF or announce a meeting change. Users have different email handlers from gmail, yahoo, aol, etc. and many are seniors. Google Workspace and Google Groups require all members to have gmail accounts. AI indicated Thunderbird can do this with disparate email providers. </p>",psisk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",0,0,0,,,,,
+1529104,2025-08-13T21:07:03.045504Z,2025-08-13T21:07:03.045510Z,en-US,thunderbird,Incoming emails from ms-exchange,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,johncpacfpmba,<p>Incoming emails from ms-exchange are garbled.  All of the headers and other information are displayed.  The email itself can usually be found somewhere in the mess. </p>,johncpacfpmba;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",0,0,0,,,,,
+1529113,2025-08-13T21:42:54.779148Z,2025-08-13T21:42:54.779165Z,en-US,thunderbird,Incomplete messages received - TB 141.0 (64-bit) Windows 11 - Virgin Media broadband,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,daratcliffe,"<p>Over the last week, some of the messages I receive are incomplete. When I Get them from my ISP Virgin Media they look like this in Thunderbird :- </p><p>X-MS-Exchange-AntiSpam-ExternalHop-MessageData-ChunkCount:  . X-MS-Exchange-AntiSpam-ExternalHop-MessageData-0: Pdk3KCGaSdM7obYPCf7ej2y0ZU9mqCf+EmGKc/7tySvXgTpX31N4w03AUwCXcmJsmD/vnSuX6irRS7Jk1deejOuUw1C+aYSzwH/ubXJajWzoP9OEph/SO+j9DCICnSA9ZNZSGkOIN5DvQ0OLYb5llli+4Gbx6X6ShSwBkmLCWabWyw74zQwnDiWdHLiLjICWCeTIvr7/my3s300/7asddJAu4NE9GWKmt9NcQfNcf8Rtbni3v8usn7YdANVwPsTb/UPgL5XsykziftdCsW304JHh/ldRL2skgySg0EN4QEn0y37xkq8F7C5/oi9rB65uKHuE3m/wrsJTIgi1TI3Sx8Cvh09T+yVmsHgiy7B3XcvCJ0/Y6EJjZqc1trZixXkkJRAGj4Fvn5/NFK1FNeB7UnAYpVnOpj9tvkiUxr+maDGgJz3NPuq4DbZjxbLDF76IUB4paEXEIOnbaq/8QuCdlH4N0RZutsF5qPuUy38RKESy8Dq8SgNtzcpgDs1JRexJ9GMXah/n/a39kkCDEtwyCdyHV7JslIAykpqXv7KHte0QDUFGDl09j5GvH+YLRLRc1y3vEBnhpfE+rU6R+oD04lRlnUL/fEqDpDpOR81rpzxt8JYOq0PBuoh4S .... </p><p>I keep having to repair my inbox folder. </p><p>I have checked the messages by accessing them via Virgin Media using my browser. There, they are all complete.  </p><p>What can be done to resolve this issue? </p>",daratcliffe;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0;kb_visits_prior:[""/en-US/kb/rebuilding-global-database""]",0,0,0,,,,,
+1529120,2025-08-13T22:34:49.145931Z,2025-08-14T08:06:26.375913Z,it,thunderbird,Non vedo i messaggi in arrivo,False,,,False,1756593,1756593;,send-and-receive-email,thunderbird;needsinfo;send-and-receive-email;,augusta.busico1,<p>Non vedo i messaggi in arrivo. Mi arriva il messaggio che il sistema non riesce a compattare e mi dice di controllare lo spazio su disco. Controllato e lo spazio è sufficiente Cosa fare? Augusta </p>,augusta.busico1;@next;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0",1,0,0,,,,,
+1529125,2025-08-13T22:59:27.999515Z,2025-08-14T01:36:55.534248Z,en-US,thunderbird,Is there a way to import into CardBook extension?,False,,,False,1756534,1756534;1763450;,extensions,thunderbird;extensions;,,"<p>I added the Cardbook extension and I want to import a CSV file with contacts from Outlook. Is there a way to do this? Can you export from Cardbook? Thanks, -- Haig </p>",Thundamike;,True,True,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,1,0,0,,,,,
+1529126,2025-08-13T23:02:54.947948Z,2025-08-13T23:02:54.947976Z,en-US,thunderbird,Mail delivery failed: returning message to sender,False,,,False,,,send-and-receive-email,thunderbird;send-and-receive-email;,Hikermann,"<p>Sent an e-message to a recipient's address; message also was sent to a number BCC recipients. </p><p>Mail delivery to original recipient failed, and pages of code announcing that showed up in my InBox.  Since I have zero capacity to translate all of that (other than the ""Mail delivery failed: returning message to sender"" bit), please inform me:  </p><p>Are the BCC messages still sent on to those recipients, or do they simply disappear off into cybertrash? </p><p>Thank you,  Nels </p>",Hikermann;,True,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0,0,0,0,,,,,
+1529127,2025-08-13T23:33:01.947197Z,2025-08-16T14:29:36.002740Z,en-US,thunderbird,"I paid to renew license, but it hasn't been registered.",False,,,False,1757314,1756549;1756644;1756645;1757311;1757314;,accounts,thunderbird;accounts;,carolrubin45,"<p>Two days ago I paid to renew my Thunderbird license, but I still am getting a message that I need to renew my license.  Also, when I try to write an outgoing email, Thunderbird freezes up, and I have to shut it down before I can use it again.  I also lose whatever message I was writing. </p>",carolrubin45;wsmwk;,True,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36",5,0,0,,,,,
+1529128,2025-08-13T23:38:22.163670Z,2025-08-13T23:38:22.163686Z,en-US,thunderbird,Applications,False,,,False,,,accessibility,thunderbird;accessibility;,pk24,"<p>As I was moving icon to application folder , my application file disappeared. </p>",pk24;,True,False,False,";useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15",0,0,0,,,,,
