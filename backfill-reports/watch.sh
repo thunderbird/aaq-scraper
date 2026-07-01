@@ -21,16 +21,20 @@ emit() { echo "$1" >> "$EVENTFILE"; echo "$1"; }
 rows() { local n=0 l; for f in "$@"; do [ -f "$f" ] || continue; l=$(wc -l < "$f"); n=$((n + l - 1)); done; echo "$n"; }
 
 gen_report() {
-  local month="$1" year="${month%%-*}" f="$RDIR/$month.md"
-  local qd ad qdrows adrows qa aa qarows aarows fails commit ts total done_n
-  qd=$(ls "$year"/questions-thunderbird-desktop-"$month"-*.csv 2>/dev/null | wc -l | tr -d ' ')
-  ad=$(ls "$year"/answers-thunderbird-desktop-"$month"-*.csv 2>/dev/null | wc -l | tr -d ' ')
-  qa=$(ls "$year"/questions-thunderbird-android-"$month"-*.csv 2>/dev/null | wc -l | tr -d ' ')
-  aa=$(ls "$year"/answers-thunderbird-android-"$month"-*.csv 2>/dev/null | wc -l | tr -d ' ')
-  qdrows=$(rows "$year"/questions-thunderbird-desktop-"$month"-*.csv)
-  adrows=$(rows "$year"/answers-thunderbird-desktop-"$month"-*.csv)
-  qarows=$(rows "$year"/questions-thunderbird-android-"$month"-*.csv)
-  aarows=$(rows "$year"/answers-thunderbird-android-"$month"-*.csv)
+  # NB: separate `local` lines — bash 3.2 evaluates all RHS in a single
+  # `local a=.. b=$a` before assigning, so b would not see a.
+  local month="$1"
+  local year="${month%%-*}"
+  local f="$RDIR/$month.md"
+  local qd ad qdrows adrows qa aa qarows aarows fails commit ts done_n
+  qd=$(ls "$year"/questions-thunderbird-desktop-"$month"-??.csv 2>/dev/null | wc -l | tr -d ' ')
+  ad=$(ls "$year"/answers-thunderbird-desktop-"$month"-??.csv 2>/dev/null | wc -l | tr -d ' ')
+  qa=$(ls "$year"/questions-thunderbird-android-"$month"-??.csv 2>/dev/null | wc -l | tr -d ' ')
+  aa=$(ls "$year"/answers-thunderbird-android-"$month"-??.csv 2>/dev/null | wc -l | tr -d ' ')
+  qdrows=$(rows "$year"/questions-thunderbird-desktop-"$month"-??.csv)
+  adrows=$(rows "$year"/answers-thunderbird-desktop-"$month"-??.csv)
+  qarows=$(rows "$year"/questions-thunderbird-android-"$month"-??.csv)
+  aarows=$(rows "$year"/answers-thunderbird-android-"$month"-??.csv)
   commit=$(git log --pretty='%h %s' --grep="Backfill $month " -1 2>/dev/null)
   [ -z "$commit" ] && commit="(no data-commit — deterministic/no changes)"
   fails=$(grep -E "^$month-[0-9]{2}" backfill-failures.txt 2>/dev/null)
