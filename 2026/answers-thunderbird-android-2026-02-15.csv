@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1800220,1565809,2026-02-15T04:32:04.647027Z,2026-02-15T04:32:04.647032Z,"<p>You've posted in the Android forum. Please repost in the desktop forum for platform specific support, linked below. </p><p><a href=""https://support.mozilla.org/en-US/questions/thunderbird"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/thunderbird</a> </p><p>If a moderator see's this, maybe they can help by moving it. </p>",platform34,False,0,0
+1800221,1565809,2026-02-15T04:34:41.332704Z,2026-02-15T04:34:41.332710Z,<p>Thanks. </p>,glozon,False,0,0
+1800478,1565871,2026-02-16T00:45:51.721969Z,2026-02-16T00:45:51.721973Z,"<p>Duplicate of <a href=""https://support.mozilla.org/en-US/questions/1565794"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1565794</a> </p>",platform34,False,0,0
