@@ -44,6 +44,11 @@ jobs:
     timeout-minutes: 50
     steps:
       - uses: actions/checkout@v5
+        # Full history so the "Commit results" rebase-onto-latest-main can always
+        # find the merge base when another pusher (local backfill / a prior
+        # refresh) advanced main after checkout.
+        with:
+          fetch-depth: 0
 
       - name: Install uv
         uses: astral-sh/setup-uv@v8.2.0
@@ -98,7 +103,26 @@ jobs:
           git add 20*/
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "Hourly refresh $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            exit 0
           fi
+          git commit -m "Hourly refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          # main also receives pushes from the local backfill and overlapping
+          # refresh runs, so the remote can advance between checkout and push.
+          # Rebase onto the latest main and retry with backoff rather than
+          # failing on a rejected ("fetch first") push.
+          for attempt in 1 2 3 4 5; do
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "rebase failed (attempt $attempt/5); retrying"
+              sleep $((attempt * 5))
+              continue
+            fi
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt/5); retrying"
+            sleep $((attempt * 5))
+          done
+          echo "ERROR: could not push after 5 attempts"
+          exit 1
