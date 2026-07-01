@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1792108,1558919,2026-01-07T16:33:07.567314Z,2026-01-07T16:33:07.567320Z,"<p>The app doesn't provide any feature to filter emails. </p><p>The community has shown interest in such a feature. You can show support by voting for the idea linked below on Mozilla Connect. </p><p><a href=""https://connect.mozilla.org/t5/ideas/filtering-with-android-thunderbird/idi-p/61144"" rel=""nofollow"">https://connect.mozilla.org/t5/ideas/filtering-with-android-thunderbird/idi-p/61144</a> </p>",platform34,False,0,0

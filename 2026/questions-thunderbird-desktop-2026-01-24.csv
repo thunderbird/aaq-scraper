@@ -1,0 +1,529 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1561928,2026-01-24T00:01:00.439647Z,2026-01-24T10:40:03.981813Z,en-US,thunderbird,My Deleted file has vanished. I did not delete it,False,,,False,1795973,1795973;,email-and-messaging,thunderbird;email-and-messaging;,peterkingston7,<p>My Deleted folder has vanished and I did not delete it - just noticed it so it may be a few days since it happened </p>,peterkingston7;khushiratra.pcvita;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0",0,0,1,,,,,
+1561929,2026-01-24T00:07:56.336949Z,2026-01-24T21:27:47.123899Z,en-US,thunderbird,Calendar not syncing,False,,,False,1796051,1796051;,calendar,thunderbird;calendar;mac-os-x-1015;firefox-1470;firefox-14701;,amanno,"<p>mac calendar keeps wanting me to use a password for Safari, which I do not use, which then passes me on to Chrome. Plus calendar is not syncing with phone anymore. Help </p>",amanno;Mapenzi;,False,False,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0;ff_version:147.0.1;os:Mac OS x 10.15,1,0,0,,,,Mac OS x 10.15,
+1561935,2026-01-24T01:23:34.104438Z,2026-01-24T01:52:25.630405Z,en-US,thunderbird,why do you ignore my defaults?,False,,,False,1795925,1795925;,customization,thunderbird;customization;,safetygenie,"<p>Why is it that everytime I try to open a link, you ignore my defaults and use firefox? I have another browser that I made my default because firefox has become so bloated as to be unusable- Do I have to delete firefox entirely to get you to use my defaults? firefox is NOT what I want to open in-- and yes, I know I can copy the link, which is what I usually do, but sometimes I forget-- then get infuriated at how bad firefox has become. </p>",safetygenie;rednoise;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0;os:win",1,0,0,,,,win,
+1561936,2026-01-24T01:52:14.578822Z,2026-01-24T02:18:08.102187Z,en-US,thunderbird,cant send emails,False,,,False,1795929,1795929;,send-and-receive-email,thunderbird;send-and-receive-email;,rlove6,"<p>Can receive emails but cant send. ""Insufficent system storage"" but have emptied  trash and got rid of all surplus messages. can access and send from bordernet site but not Thunderbird. </p>",rlove6;rednoise;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",1,0,1,,,,,
+1561938,2026-01-24T02:17:42.042412Z,2026-01-24T02:58:06.973014Z,en-US,thunderbird,Updating Profiles between two desktops running Thunderbird,True,1795932,rednoise,False,1795932,1795932;,update,thunderbird;update;,mayserin,"<p>I have Thunderbird installed on a Surface Pro running Windows10 and on a Surface Pro running Linux Fedora.  When I use the Windows10 computer to prepare a Thunderbird export file for the profile, the Fedora machine Thuderbird import command will not read it. </p><p>The Windows10 machine has Thunderbird 147 and the Fedora machine has 146.  Is the difference in version responsible for the failure to import the profile files?  Or is it something else? </p><p>If the difference is the version of Thunderbird, then how do I get 147 on my Fedora machine? </p><p>If it is something else, what do I do so that I do not lose saved emails and calendar data from 147 version when I am running the 146 version? </p>",mayserin;rednoise;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0;os:Windows 10 on one desktop and Linux Fedora on the other desktop;solver_id:7358527",1,0,1,,,,Windows 10 on one desktop and Linux Fedora on the other desktop,
+1561946,2026-01-24T04:10:35.985579Z,2026-01-31T16:00:59.453134Z,en-US,thunderbird,"""Blank From"" filter is filtering valid emails showing from name",True,1796019,davidsk,False,1797412,1795994;1796009;1796019;1797412;,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,swedtex,"<p>The ""Blank From"" filter in Thunderbird is filtering valid emails that are showing a valid from name. </p>",swedtex;davidsk;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 OPR/126.0.0.0;os:Win 11 Home;solver_id:1079345",4,0,0,,,,Win 11 Home,
+1561965,2026-01-24T08:32:06.070567Z,2026-01-24T10:53:36.344463Z,en-US,thunderbird,What is the maximum number of email accounts that Thunderbird can bind?,False,,,False,1795976,1795976;,account-management,thunderbird;account-management;,a24055744,<p>What is the maximum number of email accounts that Thunderbird can bind? Is it 1000? </p>,a24055744;christ1;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36;os:win",1,0,0,,,,win,
+1561972,2026-01-24T09:15:19.466391Z,2026-01-24T12:39:30.155805Z,it,thunderbird,file 147.02 risulta danneggiato e non posso scaricare thunderbird,False,,,False,1795989,1795989;,install,thunderbird;install;,lucabiagi4,<p>mac os sierra versione 10.13.06 ho scaricato il vostro file dal vostro sito ma mi risulta danneggiato </p>,lucabiagi4;@next;,False,False,False,;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0,1,0,0,,,,,
+1561975,2026-01-24T10:14:55.002710Z,2026-01-31T14:29:41.162412Z,nl,thunderbird,automatisch antwoorden om inkomende e-mail,True,1796991,dillenger,False,1797399,1796325;1796388;1796991;1797053;1797167;1797399;,send-and-receive-email,thunderbird;send-and-receive-email;,jovanhomel,"<p>Dag allemaal, Graag wil ik in Thunderbird bij inkomende mails een automatische bevestiging op een ontvangen mail sturen naar het e-mailadres dat staat in het adresveld: ""Antwoord naar:"" Dit e-emailadres is bij elke inkomende mail anders gezien het komt van een invulformulier  voor een vereniging gemaakt in Wordpress plugin Wpforms. Ik probeerde reeds bij de webmail een automatische bevestiging in te voeren maar dat lukt niet voor dat specifieke veld ""Antwoord naar"". Is dit op te lossen in Thunderbird ? Hierbij een kopie van de adresvelden ter info. Dank voor een antwoord. Johan </p>",jovanhomel;markh2;dillenger;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36;os:windows 11 Pro 25H2;solver_id:2041068",6,0,0,,,,windows 11 Pro 25H2,
+1562011,2026-01-24T14:43:22.387012Z,2026-01-25T06:11:50.391279Z,it,thunderbird,"Appearance date January 1, 1970",True,1796008,'@next,False,1796105,1796008;1796105;,email-and-messaging,thunderbird;email-and-messaging;,mne.webmaster,"<p>Good morning, I've been using Thunderbird in Windows for years and install it on my clients' computers. Some people find it annoying when non-deletable lines appear with the date January 1, 1970. How can I fix this? Thanks. </p>",mne.webmaster;@next;,False,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0;os:Windows all version;solver_id:3346297,2,0,0,,,,Windows all version,
+1562018,2026-01-24T15:47:37.197751Z,2026-01-25T13:31:08.145888Z,en-US,thunderbird,Opening template acts different in different accounts,False,,,False,1796156,1796156;,email-and-messaging,thunderbird;windows-11;email-and-messaging;,kharrisma,"<p>Hi All, </p><p>I have three different email accounts.  In my main gmail account, if I double-click on a template, it opens up in a new email with the content of the template already in there (which is how I want it to behave.)  In my other two accounts, double-clicking a template just opens a new tab with the contents of the template displayed, as it would if I double-clicked any email in my inbox. </p><p>I've been through the settings, comparing them for all three accounts, and I can find no difference anywhere.  Right-clicking on the Template folder offers no obvious path to follow, nor does right-clicking on the template itself. </p><p>Any ideas why the difference in behavior, and/or suggestions on how to change the not-gmail account so it behaves the same way as the gmail account (double-click opens new pre-filled email) ?? </p><p>Thanks!!! </p>",kharrisma;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36;os:Windows 11;troubleshooting:Application Basics
+
+    Name: Thunderbird
+    Version: 147.0
+    Build ID: 20260108190847
+    Distribution ID:
+
+    Update Channel: release
+    User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Thunderbird/147.0
+    OS: Windows_NT 10.0 26200
+    OS Theme:
+
+    Launcher Process: Enabled
+    Multiprocess Windows: 0/0
+    Fission Windows: 0/0
+              Enabled by default
+    Remote Processes: 2
+    Enterprise Policies: Inactive
+    Google Location Service Key: Missing
+    Google Safebrowsing Key: Missing
+    Mozilla Location Service Key: Missing
+    Safe Mode: false
+    Memory Size (RAM): 15.7 GB
+    Disk Space Available: 445 GB
+
+  Mail and News Accounts
+    account2:
+      INCOMING: account2, , (none) Local Folders, plain, passwordCleartext
+
+    account3:
+      INCOMING: account3, , (imap) imap.gmail.com:993, SSL, OAuth2
+      OUTGOING: , smtp.gmail.com:465, SSL, OAuth2, true
+
+    account7:
+      INCOMING: account7, , (imap) imap.gmail.com:993, SSL, OAuth2
+      OUTGOING: , smtp.gmail.com:465, SSL, OAuth2, true
+
+    account12:
+      INCOMING: account12, , (imap) mail.myfairpoint.net:143, alwaysSTARTTLS, passwordCleartext
+      OUTGOING: , smtp.myfairpoint.net:587, alwaysSTARTTLS, passwordCleartext, true
+
+  Libraries
+
+      Library
+      Status
+      Expected minimum version
+      Version in use
+      Path
+
+        RNP (OpenPGP)
+        OK
+        0.17.1
+        0.17.1.MZLA.147.0.botan
+        C:\Program Files\Mozilla Thunderbird\rnp.dll
+
+        OTR
+        Failed to load. OTR chat encryption will not work.
+        -
+        -
+        -
+
+  Calendar Settings
+
+    Contacts
+
+      Name
+      Value
+
+      Name:
+      Type: caldav
+      Disabled:
+      Username:
+      URI:
+      Refresh Interval: 30
+      Read-only: false
+      Suppress Alarms: false
+      Cache Enabled: false
+      iMIP Identity: id2
+      iMIP Disabled:
+      iMIP Account:
+      Organizer Id:
+      Force Email Scheduling:
+      Popup Alarms Supported:
+      Alarms on Invitation Supported:
+      Max Alarms Per Event:
+      Attachment Supported:
+      Max Categories:
+      Privacy State Supported:
+      Priority Supported:
+      Event Supported: true
+      Task Supported: false
+      Local Time Supported:
+      UTC/GMT Supported:
+      Auto-Scheduling Supported: true
+
+  Crash Reports for the Last 3 Days
+
+  Remote Processes
+
+    Type: Count
+
+      GPU: 1
+      RDD: 1
+
+  Add-ons
+
+      Name
+      Type
+      Version
+      Enabled
+      Location
+      ID
+
+        System theme — auto
+        theme
+        1.4.2
+        true
+        app-builtin
+        default-theme@mozilla.org
+
+        Amazon.com
+        extension
+        1.1
+        false
+        app-builtin
+        amazondotcom@search.mozilla.org
+
+        Bing
+        extension
+        1.0
+        false
+        app-builtin
+        bing@search.mozilla.org
+
+        DuckDuckGo
+        extension
+        1.0
+        false
+        app-builtin
+        ddg@search.mozilla.org
+
+        EditEmailSubject MX
+        extension
+        7.4
+        false
+        app-profile
+        EditMailSubject@jcp.convenant
+
+        Google
+        extension
+        1.0
+        false
+        app-builtin
+        google@search.mozilla.org
+
+        Web Translate
+        extension
+        6.1
+        false
+        app-profile
+        admin@fastaddons.com_WebTranslate
+
+        Wikipedia (en)
+        extension
+        1.0
+        false
+        app-builtin
+        wikipedia@search.mozilla.org
+
+        Dark
+        theme
+        1.3.2
+        false
+        app-builtin
+        thunderbird-compact-dark@mozilla.org
+
+        Light
+        theme
+        1.3.2
+        false
+        app-builtin
+        thunderbird-compact-light@mozilla.org
+
+  Security Software
+
+    Type: Name
+
+      Antivirus:
+      Antispyware:
+      Firewall:
+
+  Legacy User Stylesheets
+
+    Active: false
+    Stylesheets: No stylesheets found
+
+  Graphics
+
+      Features
+      Compositing: WebRender (Software)
+      Font Visibility Debug Info: Windows Platform
+      Asynchronous Pan/Zoom: wheel input enabled; scrollbar drag enabled; keyboard enabled; autoscroll enabled; smooth pinch-zoom enabled
+      WebGL 1 Driver WSI Info: outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control
+      WebGL 1 Driver Renderer: Google Inc. (Intel) -- ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.101.5592)
+      WebGL 1 Driver Version: OpenGL ES 3.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+      WebGL 1 Driver Extensions: GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture
+      WebGL 1 Extensions: ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context WEBGL_provoking_vertex
+      WebGL 2 Driver WSI Info: outOfProcess: false
+inProcess: true
+EGL_VENDOR: Google Inc. (Intel)
+EGL_VERSION: 1.5 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+EGL_EXTENSIONS: EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_ANGLE_windows_ui_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync
+EGL_EXTENSIONS(nullptr): EGL_EXT_client_extensions EGL_EXT_device_query EGL_EXT_platform_base EGL_EXT_platform_device EGL_ANGLE_platform_angle EGL_ANGLE_platform_angle_d3d EGL_ANGLE_platform_angle_d3d11on12 EGL_ANGLE_platform_angle_device_id EGL_ANGLE_device_creation EGL_ANGLE_device_creation_d3d11 EGL_ANGLE_experimental_present_path EGL_KHR_client_get_all_proc_addresses EGL_KHR_debug EGL_ANGLE_feature_control
+      WebGL 2 Driver Renderer: Google Inc. (Intel) -- ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.101.5592)
+      WebGL 2 Driver Version: OpenGL ES 3.0.0 (ANGLE 2.1.19739 git hash: 419cd2c3213b)
+      WebGL 2 Driver Extensions: GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_client_arrays GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multi_draw GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_CHROMIUM_sync_query GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_multi_draw_indirect GL_EXT_multisampled_render_to_texture GL_EXT_occlusion_query_boolean GL_EXT_read_format_bgra GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_rgb8_rgba8 GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture
+      WebGL 2 Extensions: EXT_color_buffer_float EXT_float_blend EXT_texture_compression_bptc EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear OVR_multiview2 WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context WEBGL_provoking_vertex
+      Target Frame Rate: 144
+      DirectWrite: true (10.0.26100.7623)
+
+      GPU #1
+      Active: Yes
+      Description: Intel(R) UHD Graphics
+      Vendor ID: 0x8086
+      Device ID: 0x46a3
+      Driver Version: 31.0.101.5592
+      Driver Date: 6-19-2024
+      Drivers: igdumdim64 igd10iumd64 igd10iumd64 igd12umd64 igdumdim32 igd10iumd32 igd10iumd32 igd12umd32
+      Subsys ID: 13b61462
+      RAM: 0
+
+      GPU #2
+      Active: No
+      Description: NVIDIA GeForce RTX 2050
+      Vendor ID: 0x10de
+      Device ID: 0x25ad
+      Driver Version: 32.0.15.6614
+      Driver Date: 11-6-2024
+      Drivers: C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumdx.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumdx.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumdx.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumdx.dll C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumd.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumd.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumd.dll,C:\WINDOWS\System32\DriverStore\FileRepository\nvmi.inf_amd64_9a9d1548c06ce277\nvldumd.dll
+      Subsys ID: 13b61462
+      RAM: 4096
+
+      Diagnostics
+      AzureCanvasBackend: skia
+      AzureCanvasBackend (UI Process): skia
+      AzureContentBackend: skia
+      AzureContentBackend (UI Process): skia
+      AzureFallbackCanvasBackend (UI Process): skia
+      CMSOutputProfile: AAAMSExpbm8CEAAAbW50clJHQiBYWVogB84AAgAJAAYAMQAAYWNzcE1TRlQAAAAASUVDIHNSR0IAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1IUCAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARY3BydAAAAVAAAAAzZGVzYwAAAYQAAABsd3RwdAAAAfAAAAAUYmtwdAAAAgQAAAAUclhZWgAAAhgAAAAUZ1hZWgAAAiwAAAAUYlhZWgAAAkAAAAAUZG1uZAAAAlQAAABwZG1kZAAAAsQAAACIdnVlZAAAA0wAAACGdmlldwAAA9QAAAAkbHVtaQAAA/gAAAAUbWVhcwAABAwAAAAkdGVjaAAABDAAAAAMclRSQwAABDwAAAgMZ1RSQwAABDwAAAgMYlRSQwAABDwAAAgMdGV4dAAAAABDb3B5cmlnaHQgKGMpIDE5OTggSGV3bGV0dC1QYWNrYXJkIENvbXBhbnkAAGRlc2MAAAAAAAAAEnNSR0IgSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAASc1JHQiBJRUM2MTk2Ni0yLjEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAADzUQABAAAAARbMWFlaIAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9kZXNjAAAAAAAAABZJRUMgaHR0cDovL3d3dy5pZWMuY2gAAAAAAAAAAAAAABZJRUMgaHR0cDovL3d3dy5pZWMuY2gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZGVzYwAAAAAAAAAuSUVDIDYxOTY2LTIuMSBEZWZhdWx0IFJHQiBjb2xvdXIgc3BhY2UgLSBzUkdCAAAAAAAAAAAAAAAuSUVDIDYxOTY2LTIuMSBEZWZhdWx0IFJHQiBjb2xvdXIgc3BhY2UgLSBzUkdCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGRlc2MAAAAAAAAALFJlZmVyZW5jZSBWaWV3aW5nIENvbmRpdGlvbiBpbiBJRUM2MTk2Ni0yLjEAAAAAAAAAAAAAACxSZWZlcmVuY2UgVmlld2luZyBDb25kaXRpb24gaW4gSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB2aWV3AAAAAAATpP4AFF8uABDPFAAD7cwABBMLAANcngAAAAFYWVogAAAAAABMCVYAUAAAAFcf521lYXMAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAKPAAAAAnNpZyAAAAAAQ1JUIGN1cnYAAAAAAAAEAAAAAAUACgAPABQAGQAeACMAKAAtADIANwA7AEAARQBKAE8AVABZAF4AYwBoAG0AcgB3AHwAgQCGAIsAkACVAJoAnwCkAKkArgCyALcAvADBAMYAywDQANUA2wDgAOUA6wDwAPYA+wEBAQcBDQETARkBHwElASsBMgE4AT4BRQFMAVIBWQFgAWcBbgF1AXwBgwGLAZIBmgGhAakBsQG5AcEByQHRAdkB4QHpAfIB+gIDAgwCFAIdAiYCLwI4AkECSwJUAl0CZwJxAnoChAKOApgCogKsArYCwQLLAtUC4ALrAvUDAAMLAxYDIQMtAzgDQwNPA1oDZgNyA34DigOWA6IDrgO6A8cD0wPgA+wD+QQGBBMEIAQtBDsESARVBGMEcQR+BIwEmgSoBLYExATTBOEE8AT+BQ0FHAUrBToFSQVYBWcFdwWGBZYFpgW1BcUF1QXlBfYGBgYWBicGNwZIBlkGagZ7BowGnQavBsAG0QbjBvUHBwcZBysHPQdPB2EHdAeGB5kHrAe/B9IH5Qf4CAsIHwgyCEYIWghuCIIIlgiqCL4I0gjnCPsJEAklCToJTwlkCXkJjwmkCboJzwnlCfsKEQonCj0KVApqCoEKmAquCsUK3ArzCwsLIgs5C1ELaQuAC5gLsAvIC+EL+QwSDCoMQwxcDHUMjgynDMAM2QzzDQ0NJg1ADVoNdA2ODakNww3eDfgOEw4uDkkOZA5/DpsOtg7SDu4PCQ8lD0EPXg96D5YPsw/PD+wQCRAmEEMQYRB+EJsQuRDXEPURExExEU8RbRGMEaoRyRHoEgcSJhJFEmQShBKjEsMS4xMDEyMTQxNjE4MTpBPFE+UUBhQnFEkUahSLFK0UzhTwFRIVNBVWFXgVmxW9FeAWAxYmFkkWbBaPFrIW1hb6Fx0XQRdlF4kXrhfSF/cYGxhAGGUYihivGNUY+hkgGUUZaxmRGbcZ3RoEGioaURp3Gp4axRrsGxQbOxtjG4obshvaHAIcKhxSHHscoxzMHPUdHh1HHXAdmR3DHeweFh5AHmoelB6+HukfEx8+H2kflB+/H+ogFSBBIGwgmCDEIPAhHCFIIXUhoSHOIfsiJyJVIoIiryLdIwojOCNmI5QjwiPwJB8kTSR8JKsk2iUJJTglaCWXJccl9yYnJlcmhya3JugnGCdJJ3onqyfcKA0oPyhxKKIo1CkGKTgpaymdKdAqAio1KmgqmyrPKwIrNitpK50r0SwFLDksbiyiLNctDC1BLXYtqy3hLhYuTC6CLrcu7i8kL1ovkS/HL/4wNTBsMKQw2zESMUoxgjG6MfIyKjJjMpsy1DMNM0YzfzO4M/E0KzRlNJ402DUTNU01hzXCNf02NzZyNq426TckN2A3nDfXOBQ4UDiMOMg5BTlCOX85vDn5OjY6dDqyOu87LTtrO6o76DwnPGU8pDzjPSI9YT2hPeA+ID5gPqA+4D8hP2E/oj/iQCNAZECmQOdBKUFqQaxB7kIwQnJCtUL3QzpDfUPARANER0SKRM5FEkVVRZpF3kYiRmdGq0bwRzVHe0fASAVIS0iRSNdJHUljSalJ8Eo3Sn1KxEsMS1NLmkviTCpMcky6TQJNSk2TTdxOJU5uTrdPAE9JT5NP3VAnUHFQu1EGUVBRm1HmUjFSfFLHUxNTX1OqU/ZUQlSPVNtVKFV1VcJWD1ZcVqlW91dEV5JX4FgvWH1Yy1kaWWlZuFoHWlZaplr1W0VblVvlXDVchlzWXSddeF3JXhpebF69Xw9fYV+zYAVgV2CqYPxhT2GiYfViSWKcYvBjQ2OXY+tkQGSUZOllPWWSZedmPWaSZuhnPWeTZ+loP2iWaOxpQ2maafFqSGqfavdrT2una/9sV2yvbQhtYG25bhJua27Ebx5veG/RcCtwhnDgcTpxlXHwcktypnMBc11zuHQUdHB0zHUodYV14XY+dpt2+HdWd7N4EXhueMx5KnmJeed6RnqlewR7Y3vCfCF8gXzhfUF9oX4BfmJ+wn8jf4R/5YBHgKiBCoFrgc2CMIKSgvSDV4O6hB2EgITjhUeFq4YOhnKG14c7h5+IBIhpiM6JM4mZif6KZIrKizCLlov8jGOMyo0xjZiN/45mjs6PNo+ekAaQbpDWkT+RqJIRknqS45NNk7aUIJSKlPSVX5XJljSWn5cKl3WX4JhMmLiZJJmQmfyaaJrVm0Kbr5wcnImc951kndKeQJ6unx2fi5/6oGmg2KFHobaiJqKWowajdqPmpFakx6U4pammGqaLpv2nbqfgqFKoxKk3qamqHKqPqwKrdavprFys0K1ErbiuLa6hrxavi7AAsHWw6rFgsdayS7LCszizrrQltJy1E7WKtgG2ebbwt2i34LhZuNG5SrnCuju6tbsuu6e8IbybvRW9j74KvoS+/796v/XAcMDswWfB48JfwtvDWMPUxFHEzsVLxcjGRsbDx0HHv8g9yLzJOsm5yjjKt8s2y7bMNcy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp22vvbgNwF3IrdEN2W3hzeot8p36/gNuC94UThzOJT4tvjY+Pr5HPk/OWE5g3mlucf56noMui86Ubp0Opb6uXrcOv77IbtEe2c7ijutO9A78zwWPDl8XLx//KM8xnzp/Q09ML1UPXe9m32+/eK+Bn4qPk4+cf6V/rn+3f8B/yY/Sn9uv5L/tz/bf//
+      Display0: 1920x1080@144Hz scales:1.000000|1.250000
+      DisplayCount: 1
+      HardwareStretching: both=1 window-only=0 full-screen-only=0 none=0 error=0
+      GPUProcessPid: 17336
+      Window Device Pixel Ratios: 1.25
+      ClearType Parameters: Gamma: 1.8 Pixel Structure: RGB ClearType Level: 100 Enhanced Contrast: 50
+      Font Visibility Debug Info: Windows Platform
+      WebGPU Default Adapter: [object Object]
+      WebGPU Fallback Adapter: [object Object]
+
+      Decision Log
+      HW_COMPOSITING: available by defaultdisabled by user: Disabled by layers.acceleration.disabled=true
+      D3D11_COMPOSITING: unavailable by default: Hardware compositing is disabled
+      D3D11_HW_ANGLE: unavailable by default: D3D11 compositing is disableddisabled by env: D3D11 compositing is disabled
+      GPU_PROCESS: available by default
+      WEBRENDER: available by defaultunavailable-no-hw-compositing by runtime: Hardware compositing is disabled
+      WEBRENDER_COMPOSITOR: available by defaultunavailable by runtime: No DirectComposition usage
+      WEBRENDER_PARTIAL: available by default
+      WEBRENDER_SHADER_CACHE: available by defaultunavailable by runtime: WebRender disabled
+      WEBRENDER_OPTIMIZED_SHADERS: available by defaultunavailable by runtime: WebRender disabled
+      WEBRENDER_ANGLE: available by defaultunavailable-no-angle by runtime: ANGLE is disabled
+      WEBRENDER_DCOMP_PRESENT: available by defaultunavailable by runtime: Requires ANGLE
+      WEBRENDER_SCISSORED_CACHE_CLEARS: available by defaultblocklisted by env: Blocklisted by gfxInfo
+      WEBGPU: available by default
+      WINDOW_OCCLUSION: available by default
+      HARDWARE_VIDEO_DECODING: available by defaultunavailable by runtime: Requires texture sharing
+      HARDWARE_VIDEO_ENCODING: available by defaultunavailable by runtime: Requires texture sharing
+      REUSE_DECODER_DEVICE: blocked by default: Blocklisted by gfxInfo
+      BACKDROP_FILTER: available by default
+      CANVAS_RENDERER_THREAD: available by default
+      ACCELERATED_CANVAS2D: available by defaultblocked by env: Disabled by Software WebRender
+      GL_NORM16_TEXTURES: available by default
+      WEBGPU_EXTERNAL_TEXTURE: available by default
+
+    Crash Guard Disabled Features
+
+    Workarounds
+
+    Failure Log
+
+  Media
+
+      Audio Backend: wasapi
+      Max Channels: 2
+      Preferred Sample Rate: 48000
+      Roundtrip latency (standard deviation): NaNms (NaN)
+
+      Output Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        Speakers (Realtek(R) Audio)
+        INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_146213B6&REV_1000\5&2cff018&0&0001
+        Enabled
+        All
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        144 - 480
+
+        Speakers (Nahimic mirroring device)
+        ROOT\MEDIA\0000
+        Disabled
+        None
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+        Headphones (Realtek(R) Audio)
+        INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_146213B6&REV_1000\5&2cff018&0&0001
+        Unplugged
+        None
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+        Speakers (Nahimic Easy Surround device)
+        SWD\DRIVERENUM\{dd052805-d06a-4ac5-9629-329ff6a861e5}#Nahimic_BTLink&6&1e2f2a87&0
+        Disabled
+        None
+        default: F32LE, support: S16LE F32LE
+        8
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+      Input Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        Microphone Array (Intel® Smart Sound Technology for Digital Microphones)
+        INTELAUDIO\CTLR_DEV_51C8&LINKTYPE_02&DEVTYPE_00&VEN_8086&DEV_AE20&SUBSYS_13B61462&REV_10EC\5&2cff018&0&0000
+        Enabled
+        All
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        96 - 480
+
+        Stereo Mix (Realtek(R) Audio)
+        INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_146213B6&REV_1000\5&2cff018&0&0001
+        Disabled
+        None
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+        Microphone (Realtek(R) Audio)
+        INTELAUDIO\FUNC_01&VEN_10EC&DEV_0256&SUBSYS_146213B6&REV_1000\5&2cff018&0&0001
+        Unplugged
+        None
+        default: F32LE, support: S16LE F32LE
+        2
+        default: 48000, support: 48000 - 48000
+        0 - 0
+
+      Media Capabilities
+
+      Enumerate database
+
+  Environment Variables
+
+    MOZ_CRASHREPORTER_DATA_DIRECTORY: C:\Users\kharr\AppData\Roaming\Thunderbird\Crash Reports
+    MOZ_CRASHREPORTER_EVENTS_DIRECTORY: C:\Users\kharr\AppData\Roaming\Thunderbird\Profiles\mg67yths.default-release\crashes\events
+    MOZ_CRASHREPORTER_PING_DIRECTORY: C:\Users\kharr\AppData\Roaming\Thunderbird\Pending Pings
+    MOZ_LAUNCHER_PROCESS: 1
+
+  Important Modified Preferences
+
+    accessibility.force_disabled: 1
+    accessibility.typeaheadfind.flashBar: 0
+    browser.search.region: US
+    doh-rollout.home-region: US
+    extensions.lastAppVersion: 147.0
+    font.name.sans-serif.x-western: Arial
+    idle.lastDailyNotification: 1769229886
+    layers.acceleration.disabled: true
+    media.gmp.storage.version.observed: 1
+    media.hardware-video-decoding.failed: false
+    network.cookie.CHIPS.lastMigrateDatabase: 2
+    places.database.lastMaintenance: 1768754892
+    privacy.bounceTrackingProtection.hasMigratedUserActivationData: true
+    privacy.clearOnShutdown.cache: true
+    privacy.clearOnShutdown.cookies: true
+    privacy.clearOnShutdown.downloads: false
+    privacy.clearOnShutdown.formdata: false
+    privacy.clearOnShutdown.history: false
+    privacy.clearOnShutdown.offlineApps: true
+    privacy.clearOnShutdown.sessions: false
+    privacy.clearOnShutdown.siteSettings: false
+    privacy.donottrackheader.enabled: true
+    privacy.purge_trackers.date_in_cookie_database: 0
+    privacy.sanitize.sanitizeOnShutdown: true
+    privacy.trackingprotection.allow_list.hasMigratedCategoryPrefs: true
+    security.webauthn.show_ms_settings_link: true
+    storage.vacuum.last.content-prefs.sqlite: 1767199978
+    storage.vacuum.last.index: 2
+    storage.vacuum.last.places.sqlite: 1767459183
+    svg.context-properties.content.enabled: true
+    ui.osk.debug.keyboardDisplayReason: IKPOS: Touch screen not found.
+
+  Important Locked Preferences
+
+    fission.autostart.session: true
+    media.utility-process.enabled: true
+    signon.management.page.os-auth.locked.enabled: false
+
+  Places Database
+
+  Accessibility
+
+    Activated: false
+    Prevent Accessibility: 1
+    Accessible Handler Used:
+    Accessibility Instantiator:
+
+  Library Versions
+
+      Expected minimum version
+      Version in use
+
+      NSPR
+      4.38.2
+      4.38.2
+
+      NSS
+      3.119
+      3.119
+
+      NSSSMIME
+      3.119
+      3.119
+
+      NSSSSL
+      3.119
+      3.119
+
+      NSSUTIL
+      3.119
+      3.119
+
+  Sandbox
+
+    Content Process Sandbox Level: 7
+    Effective Content Process Sandbox Level: 7
+    Win32k Lockdown State for Content Process: Win32k Lockdown enabled -- default value is true
+    GPU Process Sandbox Level: 2
+
+  Startup Cache
+
+    Disk Cache Path: C:\Users\kharr\AppData\Local\Thunderbird\Profiles\mg67yths.default-release\startupCache\startupCache.8.little
+    Ignore Disk Cache: false
+    Found Disk Cache on Init: false
+    Wrote to Disk Cache: true
+
+  Internationalization & Localization
+
+      Application Settings
+      Requested Locales: [""en-US""]
+      Available Locales: [""en-US""]
+      App Locales: [""en-US""]
+      Regional Preferences: [""en-US""]
+      Default Locale: ""en-US""
+
+      Operating System
+      System Locales: [""en-US""]
+      Regional Preferences: [""en-US""]
+
+  Remote Debugging (Chromium Protocol)
+
+    Accepting Connections:
+    URL:
+
+  Printing
+
+  Modified print settings
+
+  print_printer: HP18B93A (HP OfficeJet Pro 6970)",1,0,0,,,,Windows 11,
+1562032,2026-01-24T17:39:49.253227Z,2026-01-25T10:50:51.377939Z,en-US,thunderbird,cannot get my E Mail,False,,,False,1796117,1796027;1796117;,send-and-receive-email,thunderbird;send-and-receive-email;,sedlockdavid9,<p>cannot get my Email cannot get on Thundrbird </p>,sedlockdavid9;davidsk;christ1;,False,True,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Avast/143.0.0.0",2,0,0,,,,,
+1562035,2026-01-24T17:46:02.849894Z,2026-01-24T18:12:39.460844Z,en-US,thunderbird,i cannot get my Emails,False,,,False,1796028,1796028;,send-and-receive-email,thunderbird;send-and-receive-email;,sedlockdavid9,<p>cannot get my E Mails </p>,sedlockdavid9;davidsk;,False,True,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Avast/143.0.0.0",1,0,0,,,,,
+1562038,2026-01-24T17:52:29.056579Z,2026-01-24T21:12:46.292505Z,en-US,thunderbird,Very Slow Thunderbird. Works for about 3 emails then seizes up completely.,False,,,False,1796049,1796049;,crashing-and-slow-performance,thunderbird;windows-11;crashing-and-slow-performance;,martin.anderson,"<p>Actually this is more an observation than a query, but I hope it's helpful. My Thunderbird V147.0 running two accounts on IMAP, Windows 11 and a lot of local folders (35Gb) had slowly got slower, but then just about packed up. e.g. 5 minutes to load one email, 20 minutes to download maybe 25 emails. Then it would stop completely requiring a Task Manager terminate and a restart. I read all the advice and tried a lot of it, but didn't see anything about the ""global-messages-db.sqlite"" file affecting performance. Anyway I got to having a look at it - 1.37Gb!!  Deleted the ""global-messages-db.sqlite"" file and restarted. Thunderbird was back to normal and now 10 days later the sqlite file seems to be stable at approx 41Mb. I have no idea how it grew so big (33 times bigger than it seems it needs to be), I have never deleted it before and I have probably been using the current Thunderbird configuration for 20 years, but I imagined that reindexing etc would keep it a manageable size, clearly not. I wonder whether there should be a ""Clear down Global Messages DB"" button. </p>",martin.anderson;Mapenzi;,False,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0;os:Windows 11,1,0,0,,,,Windows 11,
+1562043,2026-01-24T18:38:57.681757Z,2026-02-03T11:59:39.513465Z,en-US,thunderbird,Preview of threaded message pane background color is different from individual message pane background color,True,1797861,Toad-Hall,False,1797866,1796031;1797070;1797211;1797417;1797723;1797726;1797854;1797855;1797858;1797861;1797866;,customization,thunderbird;customization;,PercussionGuy33,"<p>When using Thunderbird 140 I am able to setup the background color of the message pane for individual messages. However when the messages are threaded, the message pane shows a preview of all of the threaded messages together in the message pane with a different background color than individual messages. </p>",PercussionGuy33;Toad-Hall;Mapenzi;,False,False,False,";useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36;os:Linux Mint Cinnamon 22.3;solver_id:6896124",11,0,2,,,,Linux Mint Cinnamon 22.3,
+1562045,2026-01-24T18:48:07.749299Z,2026-01-24T18:54:44.462841Z,it,thunderbird,mail cancellate per errore,False,,,False,1796035,1796035;,email-and-messaging,thunderbird;windows-10;email-and-messaging;,manliocazzato,<p>buonasera  come faccio a recuperare le mail cancellate pe errore da thunderbirds ? attendo vostre  cordiali saluti  manlio cazzato </p>,manliocazzato;@next;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0;os:windows 10",1,0,0,,,,windows 10,
+1562052,2026-01-24T20:35:45.297453Z,2026-01-24T22:39:26.239811Z,en-US,thunderbird,Thunderbird loading twice,False,,,False,1796066,1796066;,app-crash,thunderbird;windows-11;app-crash;,aussieq,<p>my problem started when I got greedy and highlighted too much mail in gmail for deletion. There was warning but I wasn't worried about the time but that was 2 days ago Now when I open thunderbird it comes up twice but 1 not responding in task manager. I have deleted the programme twice but when the new install tries to open it's the same thing. I have 7 or so accounts and thunderbird works fine for me. I bought a copy of office from microsoft but the outlook didn't open the pst file(not happy) but I am happier with thunderbird. as I used it many years ago Any help suggestions would be greatly appreciated. I am in Aus btw </p>,aussieq;,False,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0;os:windows 11,1,0,0,,,,windows 11,
+1562074,2026-01-24T22:06:43.807219Z,2026-01-25T01:15:56.931599Z,en-US,thunderbird,Why does oauth2 not allow me to log in with a personal account like hotmail/outlook when setting up email accounts in Thunderbird?,False,,,False,1796080,1796080;,email-and-messaging,thunderbird;email-and-messaging;,Darkeforce,"<p>I'm trying to add my email accounts to Thunderbird, I manage to get everything set up okay (using ""<a href=""http://outlook.office365.com"" rel=""nofollow"">outlook.office365.com</a>"" as the SMTP server rather than the auto-selected ""<a href=""mailto:mail-smtp@outlook.com"" rel=""nofollow"">mail-smtp@outlook.com</a>"" that is autofilled), but when I try to add it and the popup window for Oauth2 opens up, I enter my email and password for my hotmail and outlook accounts, I get an error saying: </p><p>You can't sign in here with a personal account. Use your work or school account instead. </p><p>What's going on? I never had trouble setting up Oauth2 with my personal accounts before, until I switched to a Windows 11 computer (was using Windows 10 before). </p><p>What am I doing wrong? Or is this some kind of messup with Microsoft. I set up my Gmail account (with Oauth2) without any trouble? </p><p>I can't find any solutions to this online. Please help. I'm desperate to get access to my email on my new computer. </p>",Darkeforce;sfhowes;,False,False,False,;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0;os:Windows 11 Pro 64bit,1,0,0,,,,Windows 11 Pro 64bit,
+1562082,2026-01-24T23:01:39.025905Z,2026-05-16T15:09:54.714908Z,en-US,thunderbird,I would pay for this: (better email filtering),False,,,False,1818768,1796077;1796078;1796079;1796083;1796084;1796086;1796107;1818768;,junk-mail-and-spam,thunderbird;junk-mail-and-spam;,yukitaga,"<p>There are certain emails that I receive that are *absolutely known* spam. I want these (but ONLY these) deleted as they come in. </p><p>I understand that one need to tick the ""delete"" box in Settings, but this seems to giver Thunderbird the right to delete anything that 𝒊𝒕 determines is spam. I don't want that. I want ONLY my own predetermined spam to be deleted. </p><p>And by deleted, I mean just that. Thunderbird just piles them up in the Trash folder, and this gets to be a big pile. Because Thunderbird makes mistakes, cannot just let it delete everything it determines to be spam, and so I have to go through this long list of junk in the Trash folder, which is annoying (because there's surely a better way that no one has implemented yet) and time-consuming. </p><p>I've made my own ""delete"" filter. It runs first (it's the first filter in the list), ""before Junk Classification"" and ""Getting New Mail"". Anything on this list should be deleted, because that's the ONLY action I have in this filter. If you're in here, you're gone. </p><p>Except your not. The filter is (for some reason) NOT run when new mail arrives. Instead, I have to open the filter, and choose ""run on Trash folder"". Then it works. But is THAT the design?!? Why is it not deleting arriving mail that meets the criteria? </p><p>There is also the problem now (as spammers have gotten more proficient) of the random character string preceding the @, followed by a domain name that you dare not mark as spam (for example, <a href=""http://yahoo.com"" rel=""nofollow"">yahoo.com</a>). These random characters are indeed random, and constantly changing, so you cannot filter on the address. But it seems to me some bright person might come up with something like ""if 'known domain' is NOT preceded by 'known sender', delete"". (This would require a user [me] to be very careful, or I could lose a new respondent who is not spamming me.) </p><p>But the point here is this: Over time, I have a great ""delete"" filter. Mail that this filter catches makes NO mistake. I want these messages (but ONLY these messages) to be gone when mail is retrieved. I don't want them in the Trash. And I don't want to have to take the time to run that filter on the Trash, because no one has created an extension that allows me to do this with a single click. </p><p>I would pay/donate, for this capability. But I can't bring myself to donate, or pay, when I have to go through a big Trash pile full of mail that, according to my filter, I should NEVER even see. </p><p>Other suggestions entertained of course. </p><p>But I'm spending too much of my life dealing with things that should be automated. </p><p>Regards, </p>",yukitaga;MattAuSupport;rednoise;peterbluestein18;,False,False,False,;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0;os:Linuxmint 22.2,8,0,0,,,,Linuxmint 22.2,

@@ -1,0 +1,3 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1792780,1559371,2026-01-09T22:48:27.939872Z,2026-01-09T22:48:27.939881Z,<p>You should wait and upgrade using the play store version when it becomes available.  </p><p>It's not unusual for F-droid to notify you about about the update. Their store is usually a little quicker at making updates available to users compared with google play.  </p><p>You can't use F-droid to upgrade a version from the play store and vice versa. It will fail if you attempt it. Each store signs the app with a different key. </p>,platform34,False,0,0
+1792831,1559371,2026-01-10T08:11:19.589993Z,2026-01-10T08:11:19.589998Z,<p>Thank you! </p>,zoltanina-fantasy,False,0,0

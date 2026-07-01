@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1796198,1562186,2026-01-25T17:20:09.496614Z,2026-01-25T20:56:21.955616Z,"<p>Hi Andy </p><p>Plain text view was added in beta 16.0b1 for testing. You can download the latest beta at the link below or wait for the v16 standard release on your app store. </p><p><a href=""https://github.com/thunderbird/thunderbird-android/releases"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/releases</a> </p>",platform34,False,0,0
