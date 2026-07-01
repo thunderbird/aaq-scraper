@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1682719,1469173,2024-10-20T08:14:52.456219Z,2024-10-20T08:15:24.131244Z,"<p>Hi, </p><p>The people who answer questions here, for the most part, are other users volunteering their time (like me), not Mozilla employees or developers. If you want to leave feedback for developers, you can use <a href=""https://connect.mozilla.org/"" rel=""nofollow"">this link</a>. Your feedback gets collected by a team of people who read it and gather data about the most common issues. </p>",plwt,False,0,0

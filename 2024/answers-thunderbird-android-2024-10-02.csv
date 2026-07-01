@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1678546,1466797,2024-10-02T15:56:26.458324Z,2024-10-02T15:56:26.458331Z,"<p>test worked, locking this question </p>",rtanglao,False,0,0
+1678564,1466775,2024-10-02T17:23:43.034430Z,2024-10-02T17:23:43.034435Z,<p>I encourage you to share your feedback at the beta site. Thanks.  </p><pre>https://blog.thunderbird.net/2024/09/help-us-test-the-thunderbird-for-android-beta/ </pre>,davidsk,False,0,1
+1678739,1466860,2024-10-03T03:05:09.010715Z,2024-10-03T03:05:09.010721Z,"<p>From a folder or unified inbox view, tap the ||| in the top left If you don't see the accounts on the far left, tap Show Accounts When the accounts show, tap the gear lower left </p><p>You are now in settings.  You'll see a section for Accounts.  At the bottom, ""Add account"".  Tap and proceed to add your next account. </p>",Andrew.B,False,1,0
+1688514,1466775,2024-11-17T22:47:21.787421Z,2024-11-17T22:47:36.904319Z,<p>p.s. in the future you will want to be sure to pick the android product for support </p>,wsmwk,False,0,0

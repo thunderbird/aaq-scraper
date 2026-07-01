@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1685495,1468175,2024-11-02T16:42:17.983240Z,2024-11-02T16:42:17.983247Z,"<p>Please see <a href=""https://www.thunderbird.net/en-US/thunderbird/all/"" rel=""nofollow"">https://www.thunderbird.net/en-US/thunderbird/all/</a> </p>",wsmwk,False,0,0
+1685641,1468171,2024-11-03T09:51:07.234518Z,2024-11-03T09:51:07.234523Z,"<p>In 'Display' under 'General settings' for the app, there is an option untick the checkbox 'Show Unified inbox'. </p>",thunderbirds_are_go,False,2,0
+1703338,1468171,2025-01-13T20:56:59.070606Z,2025-01-13T20:56:59.070611Z,<p>I had to also shutdown and restart the app </p>,david361,False,0,1

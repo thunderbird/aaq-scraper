@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1685476,1470062,2024-11-02T14:55:00.844304Z,2024-11-02T14:55:00.844311Z,"<p>This is much requested at <a href=""https://github.com/thunderbird/thunderbird-android/issues/8381"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues/8381</a>.  Not yet possible to do, but expected to have development priority. </p>",wsmwk,False,1,0
