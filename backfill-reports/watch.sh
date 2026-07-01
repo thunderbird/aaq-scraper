@@ -105,18 +105,18 @@ while true; do
   fi
 
   # report any finished month lacking a report file
-  reported_something=0
+  # Persistent: generate+commit+push a report for every finished month lacking
+  # one, then KEEP watching. Exiting per-boundary meant a slow re-arm (harness
+  # notification latency) could let the backfill finish several months with no
+  # report written; staying alive guarantees each month is reported on time.
   for m in "${finished[@]}"; do
     [ -f "$RDIR/$m.md" ] && continue
     gen_report "$m" >/dev/null
     commit_push_report "$m"
     emit "EVENT month_done $m"
-    reported_something=1
   done
 
   if [ "$complete" -gt 0 ] && [ "$alive" -eq 0 ]; then emit "EVENT complete"; exit 0; fi
-  [ "$reported_something" -eq 1 ] && exit 0
-
   if [ "$alive" -eq 0 ]; then emit "EVENT process_died"; exit 0; fi
   # stall: log untouched for STALL_MIN minutes while process still alive
   if [ -n "$(find "$LOG" -mmin +$STALL_MIN 2>/dev/null)" ]; then emit "EVENT stalled"; exit 0; fi
