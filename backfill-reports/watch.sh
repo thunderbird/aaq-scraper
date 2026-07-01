@@ -4,7 +4,8 @@
 # commits + pushes it under backfill-reports/, and exits with an EVENT line so
 # the driving session is re-invoked to surface it. Exits on stall/death too.
 # NOT part of the scraper; safe to delete.
-set -u
+# (macOS ships bash 3.2 — no `mapfile`, and empty-array reads trip `set -u`,
+# so this stays 3.2-compatible and avoids `set -u`.)
 
 REPO="/Users/roland/Documents/GIT/aaq-scraper"
 RDIR="$REPO/backfill-reports"
@@ -83,7 +84,10 @@ commit_push_report() {
 
 while true; do
   # months whose header has appeared, in order
-  mapfile -t headers < <(grep -oE 'MONTH [0-9]+/[0-9]+: [0-9]{4}-[0-9]{2}' "$LOG" 2>/dev/null | grep -oE '[0-9]{4}-[0-9]{2}')
+  headers=()
+  while IFS= read -r hline; do
+    [ -n "$hline" ] && headers+=("$hline")
+  done < <(grep -oE 'MONTH [0-9]+/[0-9]+: [0-9]{4}-[0-9]{2}' "$LOG" 2>/dev/null | grep -oE '[0-9]{4}-[0-9]{2}')
   complete=$(grep -c 'MONTH BACKFILL COMPLETE' "$LOG" 2>/dev/null)
   alive=0; kill -0 "$PID" 2>/dev/null && alive=1
 
