@@ -59,7 +59,7 @@ def main():
                  "--product", product, "--headless"])
 
         for _, label in PRODUCTS:
-            q = f"2026/questions-{label}-{iso}.csv"
+            q = f"{y}/questions-{label}-{iso}.csv"
             if os.path.exists(q):
                 run(["uv", "run", "python", "scrape_answers.py",
                      "--questions", q, "--headless"])
