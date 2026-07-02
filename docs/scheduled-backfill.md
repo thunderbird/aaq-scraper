@@ -18,6 +18,25 @@ timer (both of which die when the terminal / Claude session ends).
   runs it on the next wake.
 - `~/.aaq-backfill/backfill.log` — combined stdout/stderr; `tail -f` to watch.
 
+## PATH gotcha (required in the wrapper)
+
+`launchd` starts jobs with a **minimal PATH** that does *not* include Homebrew's
+`/opt/homebrew/bin` (nor the pyenv shims). Calling `uv` by absolute path in the
+wrapper is not enough, because `run_backfill.py` shells out to a **bare `uv`**
+(`subprocess.run(["uv", ...])`), which then fails with
+`FileNotFoundError: 'uv'`. The wrapper must export PATH before running:
+
+```sh
+export PATH="/opt/homebrew/bin:$HOME/.pyenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+```
+
+Verify resolution in a clean env before arming:
+
+```sh
+env -i HOME="$HOME" /bin/zsh -c \
+  'export PATH="/opt/homebrew/bin:$HOME/.pyenv/shims:/usr/bin:/bin"; uv --version'
+```
+
 ## Load / verify
 
 ```sh
