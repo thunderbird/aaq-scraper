@@ -15,7 +15,7 @@ import random
 import sys
 import time
 
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeoutError
 
 
 def _max_csv_field_size():
@@ -71,17 +71,38 @@ class SumoBrowser:
 
     def __enter__(self):
         self._pw = sync_playwright().start()
-        self._browser = self._pw.chromium.launch(headless=self.headless)
+        # --disable-quic: SUMO's CDN advertises HTTP/3, and Chromium can stall
+        # indefinitely on the QUIC/UDP path on some networks (while curl over
+        # TCP is fine); forcing HTTP over TCP avoids that hang.
+        self._browser = self._pw.chromium.launch(
+            headless=self.headless, args=["--disable-quic"])
         context = self._browser.new_context(
             user_agent=USER_AGENT,
             locale="en-US",
             viewport={"width": 1280, "height": 800},
         )
-        self._page = context.new_page()
-        # Acquire challenge cookies by loading the site once.
-        self._page.goto(HOME_URL, wait_until="domcontentloaded", timeout=60000)
-        self._page.wait_for_timeout(self.settle_ms)
-        return self
+        # Acquire challenge cookies by loading the site once. This load can
+        # transiently stall (SUMO intermittently tarpits automated clients), so
+        # retry with a fresh page + backoff rather than letting one timeout kill
+        # the whole per-day scrape — a sustained stall window otherwise fails
+        # every day in a backfill (the "cascade" failures seen in practice).
+        last_err = None
+        for attempt in range(1, self.max_attempts + 1):
+            self._page = context.new_page()
+            try:
+                self._page.goto(HOME_URL, wait_until="domcontentloaded",
+                                timeout=60000)
+                self._page.wait_for_timeout(self.settle_ms)
+                return self
+            except PWTimeoutError as e:
+                last_err = e
+                print(f"home load timed out "
+                      f"(attempt {attempt}/{self.max_attempts})",
+                      file=sys.stderr, flush=True)
+                self._page.close()
+                if attempt < self.max_attempts:
+                    time.sleep(self.backoff_base ** attempt)
+        raise last_err
 
     def __exit__(self, exc_type, exc, tb):
         if self._browser is not None:
