@@ -1,0 +1,680 @@
+id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version
+1425960,2023-10-03T00:06:40Z,2023-10-03T00:06:40Z,en-US,thunderbird,Supernova - 115 - High CPU - trashing disk,False,,,False,,,troubleshooting,fix-problems;,lolix,"<p>I noticed that the upgrade probably triggered a re-indexation of all emails.  This is causing high CPU usage AND disk activity. The process is trashing the disk with small IOs. (As seen with procmon. Lots of writes to global-message-db-sqlite and global-message-db-sqlite-journal) </p><p>This is a problem for VDI environnement and shared storage.  Not everyone has its own 8 cores, 1TB superfast NVMe SSD disk. </p><p>There is room for improvement here. I think. </p>",lolix;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425961,2023-10-03T00:31:47Z,2023-10-03T01:26:47Z,it,thunderbird,Mancato invio email,False,,,False,1607928,1607928;,other,other;,avv.nannielena,"<p>Non riesco ad inviare le email nonostante plurimi tentativi e riavvio di Thunderbird. Appare sempre questo messaggio: Non è stato possibile inviare il messaggio perché la connessione al server di posta in uscita (SMTP) <a href=""http://smtp.mail.yahoo.com"" rel=""nofollow"">smtp.mail.yahoo.com</a> è stata interrotta durante la trasmissione. Riprovare. </p>",avv.nannielena;@next;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1425962,2023-10-03T00:42:06Z,2023-10-03T00:42:06Z,en-US,thunderbird,New version bugs,False,,,False,,,other,other;,eugenepowers001,<p>Just got upgrade to new version 115.3.1 (64-bit) and instantly found a bug. I have multiple accounts so the cursor could be in one account but new messages could arrive in to different account. So then I click on that account the cursor is somewhere in the middle of all the previous read messages instead of on the bottom of the pane where new messages are. So now I have to scroll through the thousands of messages to reach unread messages. Does anyone test this kind of simple stuff before releasing the new version? </p>,eugenepowers001;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425964,2023-10-03T01:07:53Z,2023-10-03T01:07:53Z,en-US,thunderbird,New Event Window Cut Off at Top of Screen - Thunderbird 115 Supernova,False,,,False,,,calendar,calendar;,ajp1228,"<p>I just created a new calendar event and had difficulty with the pop-up window for the entry.  I use a large DPI setting on my laptop in order to make all Windows fonts large enough to see.  Previously when I made a new calendar entry, the event window was correct at the top of my screen and I could scroll down and add more details if needed.  However, in this new version, the event window seems to center on the screen and it's cut off at the top.  I can't enter my event title until I click around and get the window to move down.  Can you please fix this so the event window isn't cut off at the top and bottom of the screen and instead has a scroll bar if we need to add the information at the bottom?  I'm attaching a screenshot showing how the event window opens when I first click inside the calendar to create a new event.  (The last time I added a screenshot in this forum, the picture was much larger than the actual view on my laptop screen, so if this turns out the same way, please note that I do not have my DPI set THAT large...LOL) </p>",ajp1228;,True,False,False,;category:calendar;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425966,2023-10-03T01:12:25Z,2023-10-03T01:12:25Z,fi,thunderbird,"Lähtevän postin palvelimen käyttö ei onnistu, vaikka olen kaikki mahdolliset korjaukset tehnyt",False,,,False,,,other,other;,puutarhuri50,"<p>Siis lähtevän postin palvelin ei toimi, vaikka kaikki toiminnot on yritetty </p>",puutarhuri50;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",0,0,0,,,,,
+1425967,2023-10-03T01:15:03Z,2023-10-03T01:15:03Z,en-US,thunderbird,delete button not working in combined inbox,False,,,False,,,settings,customize;,konuko,"<p>the delete button in combined inbox is not working, in a separate inbox it works fine. it's the button in the column in the header pane </p>",konuko;,True,False,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425968,2023-10-03T01:17:13Z,2023-10-19T23:35:20Z,en-US,thunderbird,Synchronization of contacts on different PCs via the cloud,False,,,False,1612306,1608042;1608157;1608318;1611465;1611582;1612306;,other,other;,nadvornik.a,"<p>Hello, please, is there any way to have the contacts syncronized on multiple computers that I have thunderbird on so that all the PCs have the same contact database at all times? For example, I have a thundebird in my office where I have work contacts. I would like to have these contacts automatically in the laptop that I have in my home office, or on my personal PC, which I sometimes also use for work, and it is very annoying when my home office laptop does not know the contacts that I work with on the PC in the office. Is there a solution to have contacts sync automatically across PCs? For example, is it not possible to somehow log in to all thundebird accounts on different PCs, etc. and keep this database of contacts? Thank you and have a nice rest of the day. </p>",nadvornik.a;sfhowes;standegroff;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",6,0,2,,,,,
+1425969,2023-10-03T01:31:09Z,2023-10-03T01:31:09Z,en-US,thunderbird,cannot send emails,False,,,False,,,troubleshooting,fix-problems;,koenwentink,"<p>Since today I cannot send emails. Keep getting the following message: </p><p>""Sending of the message failed. The message could not be sent because the connection to Outgoing server (SMTP) <a href=""http://smtp.mail.yahoo.com"" rel=""nofollow"">smtp.mail.yahoo.com</a> was lost in the middle of the transaction. Try again."" </p><p>I have tried again many times. As far as I know I have not changed any settings. I can send emails from my phone on yahoo </p>",koenwentink;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",0,0,0,,,,,
+1425971,2023-10-03T01:52:32Z,2023-10-03T01:52:32Z,en-US,thunderbird,TESTqweerwazs,False,,,False,,,installation-and-updates,download-and-install_1;,gauravbhatia989,<p><b>test</b> </p>,gauravbhatia989;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425972,2023-10-03T02:01:39Z,2023-10-03T02:01:39Z,en-US,thunderbird,Outgoing server error after upgrade to Thunderbird 115.3.1,False,,,False,,,troubleshooting,fix-problems;,andrearae06,"<p>My Thunderbird email software was automatically upgraded to version 115.3.1 yesterday and since then I am not able to send email. I am receiving emails without any problem and all other aspects of the software seem to be working okay. I use Windows 11 on a Dell XPS 15 9500 laptop. My email is with Yahoo Mail. My antivirus software is Norton and Thunderbird seems to be set up with the correct version and supported within Norton. </p><p>When I try to send emails I get the error message:  Sending of the message failed. The message could not be sent because the connection to the Outbound server (SMTP) <a href=""http://smtp.mail.yahoo.com"" rel=""nofollow"">smtp.mail.yahoo.com</a> was lost in the middle of the transaction. Try again. </p><p>I have attached an image of the error message. </p><p>I have checked the Outbound SMTP settings and they all look correct and haven't changed since before the upgrade. </p><p>Many thanks for your support, Andrea </p>",andrearae06;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",0,0,0,,,,,
+1425973,2023-10-03T02:02:31Z,2023-10-03T02:02:31Z,en-US,thunderbird,Find default profile in profiles.ini,False,,,False,,,other,other;,jhnp2j8dnh,"<p>Hi, </p><p>developer here. My app archives emails from Imap accounts and email clients. Thunderbird is supported, too. </p><p>I've used the profiles.ini file to find the default profile. Now a user has sent me a profile where my app picks the wrong profile ""default-beta"" instead of ""default-release"". </p><p>How can I identify the correct profile? </p><p>[Profile3] Name=default-release-1 IsRelative=1 Path=Profiles/y9e2c7sr.default-release-1 </p><p>[Install8A5568C0C627886C] Default=Profiles/y9e2c7sr.default-release-1 Locked=1 </p><p>[Profile2] Name=default-beta IsRelative=1 Path=Profiles/bjw0cxva.default-beta </p><p>[InstallCE03754FCADA46BC] Default=Profiles/kxv3b70s.default-release-2 Locked=1 </p><p>[Profile1] Name=default IsRelative=1 Path=Profiles/vi879yrx.default Default=1 </p><p>[Install7D008BF7B2CDD27] Default=Profiles/bjw0cxva.default-beta Locked=1 </p><p>[Profile0] Name=default-release IsRelative=1 Path=Profiles/7akvzb1h.default-release </p><p>[General] StartWithLastProfile=1 Version=2 </p><p>[Install712DAF5A23ABECDC] Default=Profiles/7akvzb1h.default-release Locked=1 </p><p>[Profile5] Name=default-release-3 IsRelative=1 Path=Profiles/awtgam0x.default-release-3 </p><p>[Profile4] Name=default-release-2 IsRelative=1 Path=Profiles/kxv3b70s.default-release-2 </p><p>[InstallDC7B2240DF176F85] Default=Profiles/awtgam0x.default-release-3 Locked=1 </p>",jhnp2j8dnh;,True,False,False,";category:other;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425974,2023-10-03T02:17:54Z,2023-10-03T03:38:42Z,en-US,thunderbird,Inbox window too 'busy' after update to 115.3.1,True,1607946,dave.thiss,False,1607946,1607946;,settings,customize;,dave.thiss,<p>Since the app updated the layout is very hard to read - the list of emails in the Inbox window are very close together.  I've tried increasing the font but that doesn't help </p><p>Must be a setting somewhere ? </p><p>(Image attached) </p><p>Tks Dave </p>,dave.thiss;,True,False,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird;solver_id:5498146",1,0,1,,,,,
+1425976,2023-10-03T02:25:06Z,2023-10-03T02:25:06Z,pt-BR,thunderbird,Há alguém aí?,False,,,False,,,troubleshooting,fix-problems;,js.araujo,<p>Problemas no thunderbird versão 115.3.1. subpastas estão sendo movidas sem que o usuário possa controlar. CAOS! </p>,js.araujo;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425977,2023-10-03T02:36:07Z,2023-10-03T06:54:50Z,it,thunderbird,sistema di posta bloccato a causa di attività di spam,False,,,False,1607973,1607939;1607940;1607944;1607973;,other,other;,maurizio.bilancione,"<p>salve,chiedo aiuto per il seguente problema, non riesco più d inviare e-mail l'accesso al sistema di posta è stato bloccato a causa di attività di spam, come posso risolvere il problema? </p><p>grazieeeeeeeee </p>",maurizio.bilancione;@next;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36;product:thunderbird",4,0,1,,,,,
+1425981,2023-10-03T03:04:34Z,2023-10-03T03:04:34Z,en-US,thunderbird,Thunderbird (115.3.1) Canot open settings or calendar,False,,,False,,,installation-and-updates,download-and-install_1;,stefan165,"<p>Hi, I just installed Thunderbird to use under windows with my iCloud mail. Setting up and receiving mails was a breeze, but when I try to add a calendar, it accepts the address i give, but there is no icon top see the calendar - as I read online there should be one in the upper right corner. </p><p>I also noted that the ""hamburger"" menu in the upper right corner doesn't do anything, and when I try to open Thunderbird settings, nothing happens. Account settings work fine. Not sure what is going on here. </p><p>/Stefan </p>",stefan165;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425986,2023-10-03T03:44:02Z,2023-10-03T03:44:02Z,en-US,thunderbird,Can i get the look/functionality of old version without uninstalling?,False,,,False,,,other,other;,type3particle1,"<p>New version of Thunderbird popped up on my desktop, i hate it. Im trying not to be the guy who stops updating programs, but i dont see a way to get the old format back with out uninstalling the new update. Any suggestions? </p>",type3particle1;,True,False,False,";category:other;useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425987,2023-10-03T03:47:32Z,2023-10-09T03:00:26Z,it,thunderbird,Problema: Thunderbird 115 Supernova non invia mail,False,,,False,1609520,1607975;1609520;,troubleshooting,fix-problems;,paolfranco,"<p>Buongiorno, appena aggiornato thunderbird a supernova e dopo questo aggiornamento ricevo mail ma non riesco ad inviarle. </p><p>Grazie </p><p>Francesco </p>",paolfranco;@next;ortile;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0;product:thunderbird,2,0,1,,,paolfranco,,
+1425989,2023-10-03T04:12:34Z,2023-10-03T04:12:34Z,en-US,thunderbird,Email folders not found in 'unified folders' after update.,False,,,False,,,other,other;,willpom,"<p>Since the Supernova update email folders don't show under the respective (unified) but instead under individual email accounts. Pre update they all showed under the respective dropdowns for inbox, sent, junk, deleted etc with user created sub folders showing in the respective email account. </p><p>How do I fix this &amp; why didn't the update maintain previous setup? </p><p>Screen shot picks out inbox and junk. </p>",willpom;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425990,2023-10-03T04:19:45Z,2023-10-03T04:19:45Z,en-US,thunderbird,Tool & Tab Bar - can't combine as pre Supernova - need a global setting too.,False,,,False,,,settings,customize;,willpom,"<p>Before update it was possible to have tabs, quick links &amp; window controls all on one tool bar removing dead space. I can't find an obvious way of doing this with the Supernova update, please advise how. </p><p>Also under customise there needs a global setting for common quick links. </p>",willpom;,True,False,False,;category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425991,2023-10-03T04:20:30Z,2023-10-04T00:08:07Z,it,thunderbird,perdita totale del profiloDopo,False,,,False,1608175,1607976;1608066;1608175;,troubleshooting,fix-problems;,elvfirefox,"<p>Dopo l'ultimo aggiornamento, Thunderbird risultava vuoto e chiedeva di creare un nuovo profilo. Andata per riprendere il profilo preesistente in Windows 11, non risultava presente nessun profilo. Cercando di creare il nuovo profilo, non lo permetteva: emetteva una maschera di errore vuota. Ho quindi provato a disinstallare e reinstallare Thunderbird. Non ho nessuna copia del profilo cancellato. C'è possibilità di recuperare gli account e le cartelle perse? Cosa ha causato il crash totale di Thunderbird? Come posso tutelarmi per il futuro? Il problema non riguarda il PC da cui vi sto chiedendo assistenza, ma altro Notebook. </p>",elvfirefox;@next;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,3,0,1,,,,,
+1425992,2023-10-03T04:22:08Z,2023-10-03T04:22:08Z,en-US,thunderbird,Thunderbird wont start up after yesterdays update,False,,,False,,,troubleshooting,fix-problems;,starttohatepc,"<p>Yesterday got the thunderbird update (did not really liked it by the way). Closed everything off for the day. Started up the pc today and just decided to open thunderbird. And I get this message --<strong>Thunderbird is already running, but is not responding. The old Thunderbird process must be closed to open a new window.</strong> With 2 possibilities. -Close thunderbird- and -Cancel-. So I click Close thunderbird and then the message keeps coming up. --  so I cannot start up thunderbird, have not tried shutting down the pc and restarting. </p>",starttohatepc;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425993,2023-10-03T04:28:35Z,2023-10-03T04:28:35Z,en-US,thunderbird,New look,False,,,False,,,other,other;,thafunkyequine,"<p>Thunderbird autoupdated and now it looks completely different. The new look is awful and I hate it. Please tell me how to revert to the old look, else I'm installing Outlook. Thanks. </p>",thafunkyequine;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1425995,2023-10-03T04:32:56Z,2023-10-03T04:32:56Z,en-US,thunderbird,New UI is garbage,False,,,False,,,other,other;,ein_general,"<p>There was no need to change the UI and make it harder to read, or force me to relearn where things are. I have to swap back to an older, less secure version of thunderbird until you address font size and arbitrary UI placement. </p>",ein_general;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0 Waterfox/56.6.2022.11;product:thunderbird,0,0,0,,,,,
+1425997,2023-10-03T04:48:00Z,2023-10-03T07:13:54Z,it,thunderbird,Problema TLS con Thunderbird dopo trasferimento profilo - SOLUZIONE,False,,,False,1607977,1607977;,installation-and-updates,download-and-install_1;,dapinna,"<p>Ho trasferito il profilo di Thunderbird da un vecchio PC con Windows 7 ad un nuovo PC con Windows 11. </p><p>Tutto OK riguardo i vari account di posta che ho regolarmente ritrovato, ma stranamento non scaricava la posta di nessuna casaella (domini aziendali, pec e gmail), con questo messaggio di errore: </p><p>""Si è verificato un errore TLS che non può essere ignorato. Si tratta di un errore di Handshake o probabilmente la versione TLS o il certificato usato dal server xxxxx non sono compatibili"" </p><p>Ho trovato una risposta su questo sito che suggeriva di abbassare il livello minimo del TLS da 3 a 1 (da TLS 1.2 a TLS 1.0), ma nonostante anche un riavvio, il problema è rimasto. </p><p>Inoltre è abbastanza strano che caselle delle PEC ma anche la GMAIL utilizzino ancora un TLS vecchio e insicuro. </p><p>Ho rimesso i parametri come prima e ho creato un nuovo profilo e configurato una nuova casella di posta, inserendo i parametri corretti di imap e smpt. Compare la richiesta per l'eccezione del certificato.  </p><p>OK è la mail del dominio ma sono sicuro che il certificato è valido, un semplice Let's Encrypt, ma valido. Vado a vedere il certificato... E compaiono varie informazioni di ESET, ovvero l'antivirus installato nel PC (Endpoint Security). </p><p>Ho risolto andando in Configurazione -&gt; Protezioni -&gt; SSL/TLS  e disattivando la voce ""Blocca traffico crittografato da una versione obsoleta di SSL2"" </p><p>Thunderbird ha ripreso a scaricare la posta </p><p>La cosa strana è che lo stesso Antivirus è installato in moltissimi altri computer che usando Thunderbird, con quella funzione regolarmente attiva. </p>",dapinna;@next;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1425998,2023-10-03T04:50:24Z,2023-10-03T04:50:24Z,en-US,thunderbird,Lost all filtered E-Mails after resetting drive on E-Mail account,False,,,False,,,other,other;,Metakon,"<p>Hello, </p><p>I seem to have lost every E-Mail that I filtered in my E-Mail account. </p><p>I used Thunderbird to filter E-Mails from two GMX-Accounts to locale Folders, they were just basic filters like: Move all Phone bills into an Folder, Move all Steam Payments into an Folder, etc. </p><p>A few days ago I changed my Windows-drive from BIOS to UEFI and subsequently lost everything that was on that drive. Yesterday I wanted to setup Thunderbird again but I noticed that all the E-Mails that I had filtered before were gone (from Thunderbird aswell as from the GMX Accounts) </p><p>The few backups I have stored on another drive don't have an Thunderbird folder in %APPDATA%, so I can't use a Backup of the Profile either. </p><p>So my Question is now: Is there anyway to restore them or am I right in the assumption that they are gone forever? </p>",Metakon;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1425999,2023-10-03T05:03:12Z,2023-10-03T12:21:33Z,en-US,thunderbird,tb115.3.1 writng direction,False,,,False,1608041,1608041;,other,other;,eddie.bor.eb,<p>tb115.3.1 on windows: how to set writing direction to Right to Left ? </p>,eddie.bor.eb;sfhowes;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
+1426002,2023-10-03T05:21:03Z,2023-10-03T05:47:55Z,en-US,thunderbird,OpenPGP digital signature unverified,False,,,False,1607958,1607958;,privacy-and-security,privacy-and-security_1;,richard.bogle,"<p>I have an external PGP key on a Yubikey that has three identities (e-mail addresses) on it. </p><p>I can send an e-mail from one of these identities to another. If I encrypt the e-mail the other mailbox will be able to decrypt it and verify the signature (of course). If I only sign the e-mail, however, the other mailbox will complain, ""Invalid Digital Signature"". The 'sent' folder of the sender will show the e-mail as correctly signed even when it was only signed and not encrypted. </p><p>Any ideas what is going wrong here would be gratefully received. </p>",richard.bogle;,True,False,False,;category:privacy-and-security;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1426003,2023-10-03T05:21:23Z,2023-10-03T05:21:23Z,en-US,thunderbird,Outlook email missing from Unified Archives in Thunderbird.,False,,,False,,,other,other;,rwdarby,"<p>I have three email accounts in Thunderbird (2 Gmail and 1 Outlook) and use Unified Folders. All OK except that my <a href=""http://outlook.com"" rel=""nofollow"">outlook.com</a> email doesn't show in the unified Archives. Outlook shows in all the other categories. </p>",rwdarby;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426004,2023-10-03T05:26:54Z,2023-10-03T05:26:54Z,en-US,thunderbird,Yahoo mail won't send messages from Thunderbird 115.3.1 (64-bit),False,,,False,,,troubleshooting,fix-problems;,paulhillery,<p>Updated Thunderbird this morning to 115.3.1 (64-bit)  </p><p>Now I can't send messages from my yahoo.mail account within the Thunderbird application. </p><p>Emails work fine if I log into Yahoo and send messages. </p><p>Please advise as I can find no help online for this issue </p><p>I'm using a Mac running macOS Mojave 10.14.6 </p>,paulhillery;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:109.0) Gecko/20100101 Firefox/115.0;product:thunderbird,0,0,0,,,,,
+1426006,2023-10-03T05:57:41Z,2023-10-03T05:57:41Z,en-US,thunderbird,Lack of disk place to get new messages,False,,,False,,,installation-and-updates,download-and-install_1;,jry4sc85gs,"<p>I'm running Thunderbird 115.3.1 - recently updated automatically. Thunderbird has all its files on my C-drive, which is an SSD with 117 GB Currently, 108 GB is used - so 9 GB is free. This amount of free space was before the update sufficient for Thunderbird (actually, 5 GB has shown to be OK before the update). I know I have several messages waiting to enter the inbox, but Thunderbird claims that it is missing disk space in order to fetch the waiting messages. How much free space does Thunderbird require?  The standard message given says ""Delete old mails, empty the waste basket, and optimize your mail maps"". BTW, how do I optimize my mail maps? /Per </p>",jry4sc85gs;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426007,2023-10-03T05:59:46Z,2023-10-03T05:59:46Z,en-US,thunderbird,Backspace button,False,,,False,,,other,other;,rtiii,"<p>Just now this morning with the new version 115, the backspace button now turns on bold when typing and email message.  Really very annoying.  Would be nice if fixed. </p>",rtiii;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,0,0,0,,,,,
+1426008,2023-10-03T06:00:48Z,2023-10-03T06:00:48Z,en-US,thunderbird,Emails that have been read are marked as unread,False,,,False,,,other,other;,tuttleja,"<p>Which .sqlite file (or other type file) tells Thunderbird which emails have been 'read' and which ones have been 'unread'? Please don't ask 'why' I want to know. Either you know, or you don't know. </p>",tuttleja;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426014,2023-10-03T06:39:24Z,2023-10-03T12:02:26Z,en-US,thunderbird,How Do I make Thunderbird 115 Look like Thunderbird 102?,False,,,False,1608036,1608005;1608036;,settings,customize;,nunya_fukkin_bizness,<p>I don't like the UI of Thunderbird 115. I couldn't find any way to make 115 look more like 102. I have downgraded and locked the version until I can find a way to do this. If Mozilla can help that would be great otherwise I will stick with an older version until a classic UI theme or something is available. I have included a snapshot of the look and layout I like. If this can't be done in Thunderbird I am strongly considering a different email application. </p>,nunya_fukkin_bizness;fwilson00;,True,False,False,;category:customize;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,2,0,2,,,,,
+1426017,2023-10-03T07:09:09Z,2023-10-03T07:09:09Z,en-US,thunderbird,"No SMTP authentication method works with Synology Mail Server (SSL, port 465)",False,,,False,,,privacy-and-security,privacy-and-security_1;,xt8088,"<p>Hello all, </p><p>yesterday I installed the latest version of the Thunderbird client on my Windows 11 machine and created several email accounts. </p><p>IMAP access over SSL to my Synology mail server account works without any problems. </p><p>However, when I try to send a mail (SMTP authentication = ""password normal"", SSL, port 465), I get an error message that this authentication method is not supported. If I set the authentication method to ""Password encrypted"" I also get an error message and am advised to switch to ""Password normal"". With the other two authentication methods it does not work either. </p><p>With other email clients (Mail app from Windows, Various Android apps) I don't have these problems. </p><p>I thank you in advance for any helpful tips! </p><p>Best regards </p><p>xt8088 </p>",xt8088;,True,False,False,";category:privacy-and-security;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.41;product:thunderbird",0,0,0,,,,,
+1426018,2023-10-03T07:14:47Z,2023-10-03T12:10:38Z,en-US,thunderbird,"Unable to log in at server. Probably wrong configuration, username, or password'""",False,,,False,1608039,1608039;,privacy-and-security,privacy-and-security_1;,terrymargeson,"<p>I have been using Sky for  my ISP for years and using Thunderbird for my Yahoo Mail. I am now finding that I cannot create a new email account in Thunderbird after removing the old account to try and ressolve my problem ( not receiving my mail) I am getting the above message and on contacting Sky to try and resolve the issue. Sky have now informed me that I can no longer use Thunderbird for my default emails. I have therefore lost all my sub folders,Contacts and Calendar. Any help please, desperate can I recover the lost information. </p>",terrymargeson;sfhowes;,True,False,False,;category:privacy-and-security;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1426019,2023-10-03T07:19:40Z,2023-10-03T07:33:54Z,it,thunderbird,Import Export Tool,False,,,False,1607978,1607978;,installation-and-updates,download-and-install_1;,l.pagni2,"<p>Buonasera a tutti. Ho aggiornato T.Bird alla versione 115.2.2. Il componente aggiuntivo ImportExportTools NF pare non funzioni più con questa versione. Vorrei un consiglio, ho necessità si salvare fuori da T.Bird (disco esterno) le cartelle locali. Qualcuno può aiutarmi, per capire se esiste una strada alternativa o se conviene fare un downgrade. Grazie </p>",l.pagni2;@next;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
+1426022,2023-10-03T07:36:14Z,2023-10-03T07:36:14Z,en-US,thunderbird,"All of my Lightning Calendar data disappered after Thunderbird update, Oct. 3/23.",False,,,False,,,calendar,calendar;,BruSkald,"<p>All of my Lightning Calendar data disappered after Thunderbird update, Oct. 3/23. </p><p>The solutions I have seen thus far seem to be for a previous version of Thunderbird. The UI is not the same!!! </p><p>Did the developers not anticipate this? </p><p>Please help. </p>",BruSkald;,True,False,False,";category:calendar;useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426023,2023-10-03T07:39:13Z,2023-10-03T07:39:13Z,en-US,thunderbird,Thunderbird Email Server Issue,False,,,False,,,troubleshooting,fix-problems;,essie2,"<p>Hello, I need some guidance in getting my Thunderbird email to work properly again. When I log in with both the primary and regular passwords for my store's email account I keep getting an error message. The message states Login to server xxx with username xxx failed. I checked the Account settings and the information for the server is what it's always been. Thank you. </p>",essie2;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426024,2023-10-03T07:53:27Z,2023-12-28T06:00:58.389554Z,en-US,thunderbird,Thunderbird 115.31 update made fonts and page ENORMOUS!,False,,,False,1626964,1626964;,other,other;,shadowfaxfan,"<p>What is going on with this new update. I don't have time to google for hours trying to fix Thunderbird. I am in the middle of repairing my fence because the dogs keep getting out and the fence was destroyed by hurricane Ian's eye a year ago. I am so tired of fixing everything. I have been using Thunderbird since 2006. Why do the updates keep getting more bizarre? Waterfox did a similar thing yesterday just not as big, and from what I could gather it has something to do with fricking Microsoft, the super bullies of the tech world and the way the screen size is programed in Windows 10, wish Windows 7 would come back. Windows 10 screen sizing has always been a royal pain. 100% is not big enough so I have it at 125% and various websites are always screwed up, this never happened in Windows 7 and now it looks like it will screw up Waterfox which I went back to 5G.1.13 instead of the new 6G until I have a couple of days to screw around and endlessly google to find the perfect answer and figure out if its about:config or some CSS file or whatever needs to be fixed. I don't understand why these errors are not fixed before the updates are released. Especially when the update destroys the program making it nonfunctional.  Thunder bird is all distorted and I can't use it. I am screwed, I have packages coming, and a food truck from Oregon I have to meet and the delivery schedule keeps changing and texts are not coming through fricking Tmobile. I hate technology it is a royal time consuming pain in the ass. What ever happened to phone calls and not having to write  a novel to communicate.  </p><p>I CANT EVEN CLOSE THE FRICKING Thunderbird SUPERNOVA FROM HELL PAGE FROM THE SCREEN PAGE. THE X is off the page. SEE THE SCREEN PRINT </p>",shadowfaxfan;wsmwk;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0;product:thunderbird,1,0,0,,,wsmwk,,
+1426026,2023-10-03T07:55:49Z,2023-10-03T07:55:49Z,en-US,thunderbird,downloads email then deletes it from local folder,False,,,False,,,troubleshooting,fix-problems;,jasonberkes,<p>Thunderbird downloads my mail and then deletes it right away and never adds the mail to my local folder?  This is a new problem after I updated. </p>,jasonberkes;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426028,2023-10-03T08:17:27Z,2023-10-03T11:40:41Z,en-US,thunderbird,Transfer 400k email from 3 gmail accounts to 1 new account,False,,,False,1608030,1608030;,troubleshooting,fix-problems;,conor.read.collins,"<p>I have setup thunderbird to transfer 3 accounts emails to one new one in thunderbird but have run into some issues.  It is roughly 400k emails across all accounts.   </p><p>IMAP is turned on in all the accounts.   I have tried going to one accounts ""All Mail"" and selecting all and right clicking on that selection to copy them all to ""All Mail"" on the new account - I get a message that it is downloading all these emails again ( in the bottom left corner)  though I don't see any emails show up in that new folder.  When I try a single email copy it doesn't show up there either.   </p><p>I believe I am missing some sort of functionally ( IMAP or otherwise) that belies the UX instruction to copy an email from one folder to another.   </p><p>Also I tried setting up a local folder and doing the same,  and no luck there either.   </p><p>In some instances I was able to get maybe 100 emails to move from one all mail to another though It was me trying this over and over and sometimes the number of total email would change to the right of ""all mail"" </p><p>Ultimately I want to download all my email locally,  copy all these local emails to the local sync path for my new email account and hopefully have those sync up to Gmail via thunderbird.  Do I have this process misunderstood,  are there limitations and how would this be possible through other means if what I describe is incorrect? </p><p>the new gmail is setup to have the storage needed for these emails as well. </p>",conor.read.collins;sfhowes;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
+1426032,2023-10-03T08:50:45Z,2023-11-11T03:48:30Z,en-US,thunderbird,New Version of TBird no longer fetches mail,False,,,False,1617365,1617365;,troubleshooting,fix-problems;,jscohen,"<p>HI,  I just updated to Supernova 115.3.1. T-Bird no longer downloads any mail from any of my accounts. It acts like it's going to, but nothing happens.  </p><p>How can I fix this, or how can I downgrade to the last version?  </p><p>Thank you,  </p><p>James </p>",jscohen;wsmwk;,True,True,False,";category:fix-problems;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15;product:thunderbird",1,0,0,,,,,
+1426033,2023-10-03T08:51:28Z,2023-12-28T05:57:45.757933Z,en-US,thunderbird,"Disappointing release, Thunderbird Team",False,,,False,1626962,1608170;1626962;,installation-and-updates,download-and-install_1;,tim263,"<p>Thunderbird Team, </p><p>The 115.3.1 release is a real disappointment. </p><p>1) I have three accounts in Thunderbird. The subfolders for my three accounts now make no sense. Inbox - has my three accounts, as expected. Drafts - has my three accounts, as expected. Sent  - has my three accounts, as expected. Trash - folder now empty. Used to have my three accounts. Now they are under each account's folder Junk - has only two of my three accounts. The third junk folder is labeled 'spam' and is under my Gmail account. </p><p>2) When I got a couple of messages just now, they were duplicated (only in Thunderbird, not on any other of my clients). Deleting one of the duplicates wound up deleting both of them and replacing them with a null message dated January 1, 1970. I moved the deleted message from the Trash folder back to the Inbox, resulting in the correct single message. </p><p>3) My 2020 Archive folder is no longer under Archives &gt; Local Folders. It is now under the Local Folders account. All the other Archive folders are where they used to be. </p><p>4) When I switch to Inbox - sometimes it scrolls to the top, not to where I was, and not to bottom where the most recent messages are. I cannot figure out how to reproduce this. </p><p>5) The default density for viewing emails does not correspond to what I used to have. It is unfortunate to not keep the previous default. </p><p>I don't dare reverting to the prior release because I have no confidence that doing so will restore my folder configuration. I fear I might even lose data. I know you worked hard on this release, but this user is not happy with the folder bugs and user interface changes. </p><p>Tim </p>",tim263;wsmwk;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,2,0,0,,,,,
+1426035,2023-10-03T08:58:49Z,2023-10-04T02:39:52Z,en-US,thunderbird,Blank message display tabs when opening inbox and sent mails,False,,,False,1608199,1608167;1608199;,installation-and-updates,download-and-install_1;,Ernie_Gurney,"<p>I recently noticed that Thunderbird quietly updated itself from 102.15.1 to 115.3.1 for me today. (I'm on Win 10) </p><p>After this, none of the emails in my <a href=""http://imap.gmail.com"" rel=""nofollow"">imap.gmail.com</a> mail account are viewable:  My 'Inbox' shows 2 email accounts underneath and selecting the gmail one shows a big list of messages but opening (double-clicking) any of them just opens a new tab that remains entirely empty. </p><p>Emails for the other Inbox account do correctly show messages in a new tab when opening, as things were previously. </p><p>The Tools &gt; Developer Tools &gt; Error Console shows the following errors (after having first cleared the log and then restarted Tb) - NotFoundError: No such JSWindowActor 'DevToolsFrame' Assert failed: Calendar manager initialised calendars before loadCalendarComponent ran on the first 3pane window. This should not happen. </p><pre>calUtils.jsm:127:15 </pre> <p>NotFoundError: No such JSWindowActor 'DevToolsFrame' </p><p>I found recent posts for <em>similar</em> sounding issues (but not quite the same).  One suggested deleting 'folderCache.json', 'session.json', and 'xulstore.json' files from my thunderbird profile folder and restarting. I tried and it had no noticeable effect. </p><p>I can't be sure whether it was there before but after the problem update, I notice I have 2 instances of my gmail address showing under the 'Sent' tray/group. Under sent it lists 2 x my <a href=""http://gmail.com"" rel=""nofollow"">gmail.com</a> account and my other account. Again, the other account's sent mails can be viewed just fine as before but the first '...@gmail.com' account list most (perhaps all) of my sent emails, but opening any of them just brings up a totally blank new tab again. </p><p>Interestingly, however, the other (new?) duplicate '...@gmail.com' under the Sent group also shows a big list of sent emails and this one does correctly show all messages when viewing any in a new tab. The properties of both of these identical-looking 'sent' mailboxes ('x'-ing out my email) are - 1st - Location: imap://xxxxxxxxx%40gmail.com@imap.gmail.com/Sent 	Showing 267 sent messages 	Doesn't work. Viewing any of the messages just shows a blank tab. 2nd - Location: imap://xxxxxxxxx%40gmail.com@imap.gmail.com/%5BGmail%5D/Sent%20Mail 	Showing 283 sent messages 	Works.  Viewing any of these opens a tab that correctly shows the message. To my knowledge, I've not added the second almost identical 'sent' gmail account. </p><p>The location of the newly broken @gmail.com Inbox is - Location:  imap://xxxxxxxxxx%40gmail.com@imap.gmail.com/INBOX </p><p>The fact that one of the <a href=""http://gmail.com"" rel=""nofollow"">gmail.com</a> sent lists/view works and the other doesn't suggests something might be wrong with the 1st 'location' format.  I've not touched either for as long as I can remember.  Could the upgrade have diddled the 'location' in such a way as to cause this behaviour or also duplicated a subtly different <a href=""http://gmail.com"" rel=""nofollow"">gmail.com</a> 'Sent' folder? </p><p>The main Tools &gt; Account Settings does not appear to have a field that directly specified any of the 'Inbox' or 'Sent' Location fields that I can see;  it just list my 2 email accounts, with my now broken <a href=""http://gmail.com"" rel=""nofollow"">gmail.com</a> one listed first, with server settings - - Type: IMAP mail server - Server Name:  <a href=""http://imap.gmail.com"" rel=""nofollow"">imap.gmail.com</a> - User Name: <a href=""mailto:xxxxxxxxxx@gmail.com"" rel=""nofollow"">xxxxxxxxxx@gmail.com</a> - Port:  993 - Connection security:  SSL/TLS - Authentication method:  OAuth2 </p><p>Can anyone explain where the subtly different 'Sent' gmail entries might have come from and whether either of the 'Location' fields look invalid? Also, since my gmail Inbox 'Location' looks to have a similar format of that of the broken 'Sent' item/folder, does anyone know whether it is invalid and can be fixed with a different location field? </p>",Ernie_Gurney;wsmwk;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0;product:thunderbird,2,0,0,,,wsmwk,,
+1426037,2023-10-03T09:07:27Z,2023-10-04T00:01:03Z,it,thunderbird,Thunderbird supernova versione 115.3.1,True,1608172,'@next,False,1608172,1608172;,other,other;,larab1,<p>Ho installato la versione in oggetto non riesco a trovare i seguenti componenti aggiuntivi: Addressbooks Synchronizer Importexporttools ng Provider per google Calendar </p><p><br> Mi dicono che sono incompatibili con la versione come posso fare non vedo piu' nulla </p><p>Allego nell'immagine il problema </p>,larab1;@next;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird;solver_id:4816655",1,0,0,,,,,
+1426038,2023-10-03T09:10:41Z,2023-10-03T09:31:30Z,en-US,thunderbird,new design,False,,,False,1608004,1608004;,other,other;,bmcclung,<p>Really don't like the new design.  How do I get the old one back? </p>,bmcclung;fwilson00;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,1,,,,,
+1426039,2023-10-03T09:21:29Z,2023-10-03T09:30:22Z,en-US,thunderbird,Font too big in Thunderbird 115 compares to other applications,True,1608003,mfabin,False,1608003,1608003;,other,other;,mfabin,"<p>I started using thunderbird 115 in linuxmint 21. It was upgraded from Thunderbird 102. I see the all text in bigger font size after the upgrade. I see no settings in the ""Thunderbird Setting"" which effectively reduces the fontsize. If I reduce the system font in Linuxmint ""Font Selection"", I see fontsize getting smaller but the font size of other application reduce to too smaller size. It is as if Thunderbird has some scaling factor set which is causing this issue. Please help. </p>",mfabin;,True,False,False,;category:other;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird;solver_id:5499016,1,0,1,,,,,
+1426040,2023-10-03T09:30:40Z,2023-10-03T09:30:40Z,en-US,thunderbird,Thunderbird updated (and stopped working) on its won,False,,,False,,,installation-and-updates,download-and-install_1;,fwilson00,"<p>I do ntop recall explicitly allowing Thunderbord to update on itself, however, it did so today. </p><p>The new application has a completely new UI and has stopped working with my many email accounts. </p><p>Is there a method to get my old Thunderbord installation back? </p><p>My previous version was Thunderbird 102.7.0 </p><p>I have no idea what version this new monstrosity is. </p><p>Thank you. </p>",fwilson00;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,1,,,,,
+1426043,2023-10-03T09:43:42Z,2023-10-03T09:43:42Z,en-US,thunderbird,Bugs and problems with Thunderbird,False,,,False,,,troubleshooting,fix-problems;,Rapha-L_Pherdiux,"<p>Bugs and problems with Thunderbird </p><p>Thunderbird crashes by random. White sending e-mail, just leaving the program running at some point, saving a concept e-mail. I don't see any (error) message. Or any form of reason is given. This bug is still not solved.  </p><p>As same bug and problem with Firefox, Thunderbird doesn't update.  Menu Help --&gt; About Thunderbird, show the version  Thunderbird 115.2.0 (64-bits) - No new update information does appear here. - See a spinning circle, become stuck in download or install mode. - Need restart Thunderbird to apply the update, then *same* updates needs to be installed or downloaded, keep stuck here and this message. The only way is do the update manually and go tho the website. </p> <ul><li>Don't use the installer*, but always the setup. Which contains the full package and can finish the update installation. </li></ul> <p>This bug appeared already in earliest versions of Thunderbird and Firefox. </p><p>Why I cannot save concept e-mails? Which should be saved locally on my hard drive.  But, it seems I need an internet connection to do this. For this one, the SMTP settings do not match (error) message can appear many times. Saving that e-mail on another e-mail address can work, if waiting and trying later doesn't solve this. </p><p><br> Icon from Thunderbird was changed to stranger looking one.  Now there's a lighter blue bird is lying, surrounding a pearl. Instead of a darker blue bird with the wings around the envelop.  Original and better being known icon: <a href=""https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/products/2020-04-14-08-47-12-0d1c59_1.png"" rel=""nofollow"">https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/products/2020-04-14-08-47-12-0d1c59_1.png</a> </p><p><br> Several folders do appear multiple times. Like having a Spam and Junk folder for same e-mail account. Folder name can a little bit different.  It seems not possible to delete all these folders, or just one of them. </p><p>Thunderbird seems to respond slower, it take more time. Switching from Thunderbird to Firefox, gives white or black empty windows, or smal parts are still visible. Same for switching from Firefox to Thunderbird.  Same with Notepad. Trying to select a piece of text. Other opened folder and windows.   </p><p>Missing e-mail messages and get no answers on my e-mail messages I did send. Can send e-mail messages to several others with my ISP given e-mail addresses, but some of them seems to can send an answer back, while they saying they did.   - Do they really send the e-mail message? - Also, are they using my good e-mail address?  Already added confirm and delivery notices to it, but this seems to do nothing. When I add my own e-mail to this e-mail message, this one will arrive fast. New e-mail messages to them as the less received answer e-mail messages from them. Same ISP e-mail addresses are used. </p><p><br> Sending e-mail messages, even new, with just text, a few words or lines take longer time.  A loading bar appears and gets filled with large lines. Unknown why this happen. It seems useless, as the loading bar will fast disappear.  Sometimes it can be longer and showing some message about no connection, which is also stupid.  </p><p><br> While sending e-mail Thunderbird gives following (error) messages:  -Server is busy. -SMTP-settings do not match. Random and return. Strange, when sending an e-mail test message, this one will arrive. Same as e-mail message before and later. It seems the server forgets SMTP-settings and connection. -Other less known and stupid (error) messages.  </p><p>For unknown reasons, I cannot send some e-mail messages. Wait and try later doesn't work. I see a strange, useless (error) message, who doesn't help with this problem. Why let it send my e-mail? This is stupid. </p><p><br> Same e-mail appears multiple times in my e-mail accounts from same sender and with same subject. </p><p><br> E-mail settings are good, otherwise I could not send e-mail messages, at that current time or later.  Is Thunderbird forgetting something, using wrong settings or this happen due bugs in version 100x and newer.  </p><p>Other bugs and problems happen after an ""update"" was installed.  From not able to start Thunderbird anymore, seeing strange and useless error messages to empty e-mail.  </p><p>Now, Thunderbird crashed without any reason and showing an (error) message, didn't save my e-mail messages and they don't appear in the Send or Concept folders. Thank you, every e-mail message who I was still making, are now gone. This is very annoying and stupid! </p><p><br> </p><p><br> I'm using Thunderbird version 115.2.0 (64-bits) on Windows 64-bits and cable internet connection. </p>",Rapha-L_Pherdiux;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/116.0;product:thunderbird,0,0,0,,,,,
+1426046,2023-10-03T09:58:40Z,2023-10-03T11:34:27Z,en-US,thunderbird,Text as email,False,,,False,1608029,1608029;,other,other;,white134098,<p>Incoming texts from a T-mobile smart phone arrive but the message is missing.  </p><p>For a good while emails sent as text to the same phone never arrived but were in the sent box. As of today that seems to be working. </p>,white134098;sfhowes;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0;product:thunderbird,1,0,0,,,,,
+1426047,2023-10-03T10:04:08Z,2023-10-03T23:34:03Z,cs,thunderbird,Po aktualizaci se nezobrazují složky,False,,,False,1608163,1608163;,troubleshooting,fix-problems;,tomajk,<p>Po aktualizaci Thunderbird na verzi 115.3.1 se mi nezobrazují složky žádného poštovního účtu. Pokud je aktivní záložka pošta nelze ani zprávy vytvářet či jinak s nimi pracovat. Předem děkuji za radu Tomáš Vyhnálek </p>,tomajk;Ansamb;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,1,,,,,
+1426048,2023-10-03T10:06:06Z,2024-11-19T12:05:03.237525Z,en-US,thunderbird,Increase the height of Thunderbird 115 card view,False,,,False,1608320,1608027;1608103;1608108;1608116;1608123;1608132;1608134;1608160;1608320;,other,other;,mfabin,<p>I'm using Thunderbird 115. I changed to card view layout but I have a problem where the height of the row in card view is too small. See screenshot. </p><p>How do I increase the height of the rows or set some margin/padding etc so I can see the email subject properly. Please help. </p>,mfabin;sfhowes;,True,False,False,;category:other;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,9,0,0,,,,,
+1426054,2023-10-03T10:50:28Z,2023-12-30T04:12:33.356789Z,en-US,thunderbird,My computer was updated with the lastest Thunderbird version and the screen is blown up out of all proportion,True,1611183,bdjim,False,1627289,1611183;1627289;,troubleshooting,fix-problems;,bdjim,"<p>My computer indicated that there were updates to install.  I clicked the update button. A whole host of items were updated, including operating system updates.  When it was all over, Firefox opened up with an appeal for a donation.  I made a donation.  When I returned from the donation, I opened up Thunderbird.  The screen was so magnified, there was no section where you could see the whole section. Particularly annoying was the return of the ""new Thunderbird"" which I had suppressed using a Thunderbird app that gave me back the old Thunderbird screen which I knew how to operate. How do I get rid ov the magnification and get my old Thunderbird screen back? </p><p>I apologize if I seem grumpy.  I wish Mozilla wouldn't change things that don't  need changing. Also, I'm 84. </p>",bdjim;wsmwk;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird;solver_id:446440,2,0,2,,,,,
+1426056,2023-10-03T11:03:40Z,2023-10-03T11:03:40Z,en-US,thunderbird,Built-in PDF viewer shows symbols instead of letters/numbers?,False,,,False,,,other,other;,store3778,"<p>Thunderbird updated last week, and today I went to open an attachment and the screen was filled with symbols rather than letters/numbers. I'm able to open outside of Thunderbird with Acrobat, however having the attachments open in a new tab is a great part of the program. Please assist? </p>",store3778;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426057,2023-10-03T11:07:01Z,2023-12-28T05:47:45.274653Z,en-US,thunderbird,the hourglass icon comes on whenever I click anywhere in the inbox. (win7),False,,,False,1610062,1608087;1608447;1608554;1608841;1609438;1609445;1610062;,troubleshooting,fix-problems;,ErictheGreen,"<p>the hourglass icon comes on whenever I click anywhere in the inbox, and the program makes me wait too long. This is a new problem with the so-called new thunderbird. It is not an improvement; it was made worse. Please fix this bug. And where it says report a bug, I can't report one. </p>",ErictheGreen;wsmwk;,True,True,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36;product:thunderbird",7,0,0,,,wsmwk,,
+1426058,2023-10-03T11:07:19Z,2023-10-03T11:07:19Z,en-US,thunderbird,Cannot access AOL e-mails,False,,,False,,,troubleshooting,fix-problems;,Chazmanium,"<p>Recently, I started not being able to download e-mails from my AIM/AOL account after about 10:00 PM EST.  Then, as of October 1st, I can't download any e-mails from AOL e-mails at all.  Every time I use Get Messages, I get ab error saying that Thunderbird is processing the account.  This happens even if my computers have been sitting idle for several hours.  This does <em><strong>not </strong></em>happen when my computers are checking automatically. </p><p>I'm using the current version of Thunderbird Supernova.  One copy on a mid-2013 MacBook Air running BigSur 11.7.10.  The other is a 2008 MacPro running High Sierra 10.3.6.  Thunderbird and AOL are both behaving the same way. </p><p>I've been using the same settings on both machines to get POP access to AOL for at least a year, possibly two. </p><p>Does anyone know if this is Thunderbird having an issue with AOL or did AOL change their systems over and not tell anyone? </p>",Chazmanium;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:109.0) Gecko/20100101 Firefox/115.0;product:thunderbird,0,0,0,,,,,
+1426060,2023-10-03T12:03:38Z,2023-12-28T13:15:58.090868Z,en-US,thunderbird,Problems with 102 -> 115 Upgrade,False,,,False,1626997,1626961;1626997;,installation-and-updates,download-and-install_1;,scott168,"<p>I was forced to upgrade from 102 to 115 today; it was automatic.  I had tried to avoid doing so until several more releases. </p><p>When it forced the upgrade, all of my OAuth logins seemed to be lost and I am now trying to track down old passwords for numerous accounts.  Not a productive use of time and quite surprised that upgrading would lose login credentials.  </p><p>Love Thunderbird, but this was not the expected behavior or a good introduction to 115. </p><p>Thanks, Scott </p>",scott168;wsmwk;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",2,0,1,,,,,
+1426061,2023-10-03T12:07:03Z,2023-10-03T13:20:22Z,en-US,thunderbird,Changing background and font size and colors in Thunderbird.`,False,,,False,1608050,1608045;1608049;1608050;,settings,customize;,pittviper1965,"<p>Hi, </p><p>After the new version of Thunderbird came out, I liked some of the new features I have been familiar with, but then decided I wanted to be able to change the general (not reading pane) of the rest of Thunderbird (folder pane background and font color and size, as well as the main preview pane (same like I want to do to the folders pane. </p><p>I know I used to do this a long time ago, but my pc has been redone so many times that I just haven't thought about it.  Now I wish to do it again.  I know there used to be an addon that allowed you to do this, but now I cannot find one that works with the current version to TB. </p><p>So, the obvious question is, Is there an addon that allows you to do this? </p><p>I read some things that talk about creating a folder, and putting some sort of code in it, but that does not seem like it would simply allow me to do what I wish to do with just the mouse. </p><p>Can anyone please explain to me how I can change the background of these panes from black background and white lettering?  I'm a bit behind technically with TB, as anything custom I've ever done just used addons. </p><p>I welcome all advice I can get. </p><p>Thanks! </p>",pittviper1965;sfhowes;,True,False,False,;category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,3,0,0,,,,,
+1426062,2023-10-03T12:14:58Z,2023-10-03T12:14:58Z,en-US,thunderbird,Passwort prompt comes up for deleted account,False,,,False,,,troubleshooting,fix-problems;,f.naumann,"<p>Dear all, </p><p>I deleted an IMAP-Account that I just used for e-mails (no calendar etc.). However I am still asked for the password for this account on each startup of Thunderbird. I would appreciated any help - thanks in advance! </p>",f.naumann;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426064,2023-10-03T12:21:00Z,2023-10-03T12:21:00Z,en-US,thunderbird,Upgrade broke unified inbox,False,,,False,,,troubleshooting,fix-problems;,brian305,"<p>OS: Ubuntu 20.04(64bit) Thunderbird upgraded to 115.3.1 (64-bit) today. Now when I select View--&gt;Folders--&gt;Unified folders it checks off the Unified Folder menu item but nothing visually happens. When I click on View--&gt;Folders again, the Unified Folders menu item is not longer checked.  In the error console it produces the following error: </p><p>Uncaught Error: Component returned failure code: 0x80550005 [nsIMsgFolder.msgDatabase] </p><pre>   get dbFolderInfo resource:///modules/VirtualFolderWrapper.jsm:243    get searchFolders resource:///modules/VirtualFolderWrapper.jsm:125    init chrome://messenger/content/about3Pane.js:889    _initMode chrome://messenger/content/about3Pane.js:1958    _toggleMode chrome://messenger/content/about3Pane.js:1941    set activeModes chrome://messenger/content/about3Pane.js:1844    folderViewMenuOnCommand chrome://messenger/content/panelUI.js:743    oncommand chrome://messenger/content/messenger.xhtml:1 </pre> <p>VirtualFolderWrapper.jsm:243 </p><p>Is there a way to rollback the upgrade? If not, how do I fix this? </p>",brian305;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426066,2023-10-03T12:23:36Z,2023-10-03T12:23:36Z,en-US,thunderbird,servers,False,,,False,,,troubleshooting,fix-problems;,s.weathered,"<p>Hi Support. My name is Steve and i keep getting this message :    'Login to server <a href=""http://imap.telstra.com"" rel=""nofollow"">imap.telstra.com</a> with username <a href=""mailto:s.weathered@bigpond.co"" rel=""nofollow"">s.weathered@bigpond.co</a> failed' on the same message it shows buttons 'retry' 'enter new password' (which i got from telstra last time this happened) &amp; ""cancel. I rang Telstra and after a 2hr wait they tell me the problem is on your end of the deal. Can you help please. Kind Regards, Steve.W. </p>",s.weathered;,True,False,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426067,2023-10-03T12:27:40Z,2023-10-04T00:13:14Z,it,thunderbird,thunderbird - mancato reindirizzamento a siti internet,False,,,False,1608179,1608179;,other,other;,eman.me,"<p>Buonasera, cliccando su un qualsiasi link prersente nel messaggio, che mi indirizzi ad un  sito internet, mi appare il messaggio che vi invio nel file allegato. Mi potete aiutare. Grazie Emanuele Mestroni <a href=""mailto:eman.me@gmail.com"" rel=""nofollow"">eman.me@gmail.com</a> </p>",eman.me;@next;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",1,0,0,,,,,
+1426068,2023-10-03T12:34:45Z,2023-10-04T00:12:09Z,it,thunderbird,thunderbird,False,,,False,1608177,1608177;,other,other;,eman.me,"<p>Good evening, by clicking on any link in the message, which directs me to a website, I see the message that I send you in the attached file. Can you help me. Thank you Emanuele Mestroni <a href=""mailto:eman.me@gmail.com"" rel=""nofollow"">eman.me@gmail.com</a> </p>",eman.me;@next;,True,True,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",1,0,0,,,,,
+1426069,2023-10-03T12:38:58Z,2023-10-03T12:38:58Z,en-US,thunderbird,Download email,False,,,False,,,installation-and-updates,download-and-install_1;,caroljones01@bellsouth.net,"<p>Cannot get thunderbird to download. Reloaded, and restarted computer. Made donation will have to cancel if cannot use. </p>",caroljones01@bellsouth.net;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",0,0,0,,,,,
+1426070,2023-10-03T12:44:17Z,2023-10-04T07:00:30Z,en-US,thunderbird,"email will not download, just donated and restarted computer, nothing.",False,,,False,1608258,1608044;1608258;,installation-and-updates,download-and-install_1;,caroljones01@bellsouth.net,"<p>Cannot download, reloaded and restarted, nothing, on POP. </p>",caroljones01@bellsouth.net;glindathegood;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",2,0,2,,,,,
+1426072,2023-10-03T12:50:55Z,2024-07-08T02:23:58.845688Z,en-US,thunderbird,Subscription calendars not showing on 115,False,,,False,1660835,1608929;1609124;1660834;1660835;,calendar,calendar;,chunnel,"<p>No matter how many times I re-create the link, I cannot get my subscription calendars to either work at all or if they do they work very rarely.  Forcing a sync doesn't help.  I can see the same calendars just find online and in other calendars including but not limited to Mac OS Calendar. </p>",chunnel;MattAuSupport;wsmwk;,True,False,False,;category:calendar;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,4,0,0,,,,,
+1426073,2023-10-03T13:04:02Z,2023-10-06T12:48:14Z,en-US,thunderbird,How to disable confirmation dialog box after shift-delete,False,,,False,1608851,1608051;1608073;1608074;1608106;1608109;1608846;1608851;,settings,customize;,Stoobiedood,"<p>Before the upgrade to 115, shift-delete simply deleted messages permanently. After the upgrade there is always an annoying confirmation dialog box that requires another click. I can't find a way to get rid of it. Please advise. </p>",Stoobiedood;sfhowes;,True,False,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",7,0,0,,,,,
+1426074,2023-10-03T13:05:52Z,2023-10-03T13:05:52Z,en-US,thunderbird,Emails in TRASH do not appear.,False,,,False,,,other,other;,TomWilliams231,<p>Emails in TRASH do not appear. </p>,TomWilliams231;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426076,2023-10-03T13:10:55Z,2023-10-03T23:18:17Z,en-US,thunderbird,How do I change the font used in the panes?,False,,,False,1608159,1608159;,settings,customize;,hockeycat,"<p>I managed to revert back to Thunderbird 102 after my system automatically updated to Supernova, which I absolutely detested. Everything is back to the way it was except for the fonts Thunderbird is using for the folder pane and the pane that lists all my emails in whatever folder I'm viewing. The font used now seems to be the one that Supernova uses, and reverting to 102 didn't change it back. How do I change the font in these panes? </p>",hockeycat;wsmwk;,True,False,False,;category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,1,0,4,,,,,
+1426077,2023-10-03T13:10:59Z,2023-10-03T13:10:59Z,en-US,thunderbird,Different format,False,,,False,,,other,other;,cooper716@twc.com,"<p>After I made a donation to Thunderbird, I have a different format or layout on the home page.  There is no place on top left where I can print or save as, etc.  How do I get back to my regular page? </p>",cooper716@twc.com;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426079,2023-10-03T13:18:54Z,2023-10-03T13:18:54Z,en-US,thunderbird,Thunderbird Mail list,False,,,False,,,other,other;,edeldsqr,"<p>Hello, in the last version, the new emails were always listed at the bottom of the subject line (sorted by date and time), making it easy to find new incoming emails. However, now the new emails are randomly scattered everywhere. Could you please change it so that the new incoming emails in the subject line are again moved to the bottom, sorted by date and time, and displayed there every time Thunderbird starts? Thank you for that. </p>",edeldsqr;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0;product:thunderbird,0,0,0,,,,,
+1426080,2023-10-03T13:26:15Z,2023-10-07T02:17:16Z,en-US,thunderbird,Supernova - Local Folders are missing - OK in Troubleshoot but with Inbox Data,False,,,False,1609004,1609004;,installation-and-updates,download-and-install_1;,u.i.hill,"<p>After updating to version 115 'Supernova,' I am left without 'Local Folders'. They are back in Troubleshoot Mode but with an empty Inbox. When I switch Troubleshoot Mode off, I get the Inbox messages but no LOcal Folders. </p><p>Thanks for reading this cry for help, Ulrike </p>",u.i.hill;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
+1426081,2023-10-03T13:27:07Z,2023-10-03T19:50:37Z,en-US,thunderbird,Get Messages button changed!,False,,,False,1608105,1608053;1608105;,settings,customize;,mihaela.jurkovic,"<p>I used to use the ""Get messages"" button to download only the new messages for the currently active account.  </p><p>After the latest update (thank you to all contributors BTW!) the button seems to have changed to check for all accounts.  </p><p>Is there a way to customize that button to only check the currently active account, like it has been until now?  </p><p>I know there's a keyboard shortcut F5, but it would also be nice to have the mouse option on the toolbar as well. </p>",mihaela.jurkovic;sfhowes;,True,False,False,;category:customize;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,2,0,1,,,,,
+1426083,2023-10-03T13:43:00Z,2023-10-03T19:33:24Z,en-US,thunderbird,Thunderbird,False,,,False,1608102,1608102;,other,other;,bernardonilaw,"<p>We use Gmail as our primary email account.  We import that into Thunderbird.  We have many folders and subfolders in Gmail which we could always see in Thunderbird.  Most of those folders have suddenly disappeared from Thunderbird.  We can still see them in Gmail so we know that they still exist.  We are not aware of any changes that we made in Thunderbird to cause this.  Any assistance or suggestions with this matter would be greatly appreciated.  If it makes a difference, we use Firefox for our browser and Linux for our operating system. Thank you. </p>",bernardonilaw;sfhowes;,True,False,False,;category:other;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,1,0,0,,,,,
+1426084,2023-10-03T13:52:59Z,2023-10-08T23:06:38Z,en-US,thunderbird,Please keep the option of a separate mail toolbar as this new design breaks consistency with most linux programs..,True,1609476,MattAuSupport,False,1609497,1609298;1609476;1609497;,settings,customize;,product,"<p>Can there please be an option to un-unify the dynamic toolbar?  Attached are two screen shots.  The first shows the top of a myriad of linux applications.  The second attachment show the former version of thunderbird.    </p><p>All share a common theme.  At the top is what I think is called the system bar with the min/max/close icons at the right, the title in the center, and the hamburger icon for a menu of system options on the left.  Below that is what I think is called the menu bar which in most cases contains submenus like ""File"", ""Edit"", etc.  Further more there is a coomon design theme where in my theme selection, has the system and menu bars in different colors.  For the active window, the system bar is in color and for the other it is darker than the menu bar. </p><p>A consistent style across most applications.  To a great extent, the system bar is for top-level system options, not the application.  Consistency is good.  Consistency is efficient. </p><p>The latest version of thunderbird breaks that consistency, in a variety of ways.  Some people might like the new look, but if you are going to break the consistency of design, at least give users the option of restore the consistent style. Have a option to leave the system bar as it was, have a separate ""mail toolbar"" under the menu toolbar as it used to be, and use the standard colorization of the various toolbars so the only one which is colored is the system toolbar. </p><p>Thank you. </p>",product;MattAuSupport;,True,False,False,;category:customize;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird;solver_id:2553409,3,0,0,,,,,
+1426091,2023-10-03T14:57:45Z,2023-10-03T15:00:21Z,en-US,thunderbird,Character size in the list of incoming emails - not of the emails themselves.,False,,,False,,,settings,customize;,Raoul_Drapeau,"<p>For a long time, the size of the characters in the LIST of incoming emails has been smaller than I would like.  There are simple ways to change the character size in the emails themselves, but not in the list.  I have seen some requests for the same problem, but they all require clicking on an ""Options"" item which does not seem to exist in my Windows 10 version of Thunderbird.  I'm surprised that this feature is not simply available. Any suggestions? </p>",Raoul_Drapeau;,True,False,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,1,,,Raoul_Drapeau,,
+1426092,2023-10-03T14:57:54Z,2023-10-03T14:57:54Z,en-US,thunderbird,In week view on calendar the dates for the days are incorrect,False,,,False,,,calendar,calendar;,andrew6,"<p>In day or week view on calendar the dates at the top of the days are incorrect. </p><p>In the attached example, it's Wednesday, 4 Oct 2023 but the calendar is showing Wednesday, 3 Oct 2023. </p><p>In Multiweek or Month view the date is correct but it's highlighting Tuesday, 3 Oct 2023 as the current day. </p><p>In the screenshot I've marked the correct dates in a green box and the incorrect in red to demonstrate. </p><p>I'm using Thunderbird 115.3.1 on macOS Sonoma 14.0. </p>",andrew6;,True,False,False,;category:calendar;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426093,2023-10-03T15:00:54Z,2023-10-03T15:00:54Z,en-US,thunderbird,"Thunderbird: When moving a message to a different folder, my view of the inbox shifts and shows e-mails from earlier",False,,,False,,,troubleshooting,fix-problems;,adam.zhn,"<p>Good Afternoon, </p><p>With the new update to Supernova, I'm having an issue when I'm moving e-mails to different folders that I have. When I drag and drop the e-mail to a different folder, my inbox screen refreshes and shifts my view of e-mails down to a previous day. </p><p>Example: </p> <ul><li> Moved an e-mail to Folder 1 </li><li> The list of e-mails that I'm looking at ... let's say from Oct 3rd, 2023 - Sept 29th, 2023 ... shifts. Now it is showing e-mails from Sept 26th, and I need to scroll up in order to view the e-mails I was looking at  </li><li> Basically, all this means is that each time I move an invoice, I have to scroll up to look at the current group of e-mails I was looking at which is inconvenient and did not happen previously </li></ul>",adam.zhn;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426094,2023-10-03T15:07:13Z,2023-10-03T15:07:13Z,en-US,thunderbird,Filters that don't seem to exist are moving email from inbox to  my folder,False,,,False,,,other,other;,Gawain_Green_Dragon,"<p>Tb 102.15.1 IMAP; Windows 22H2 </p><p>My personal folder is under Local Folders. There are NO filters in Filters for: Local Filters. Recently, emails from the Inbox are ending up in my folder, and when that happens, Filters for: switches from my email address filters to Local Folders. </p><p>I have checked, more than once, to see if an improperly moved email has been moved by one of my filters, but not once have I found a legitimate filter that would explain why the wrongly-moved email was moved. </p><p>How do I exorcise the evil spirit? </p>",Gawain_Green_Dragon;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426096,2023-10-03T15:24:55Z,2023-12-28T05:55:17.385593Z,en-US,thunderbird,Unified Trash Folder issues,False,,,False,1626960,1608801;1626960;,other,other;,newdino,"<p>I have been having problems with deleted emails. The issue seems to be with unified trash folder. If you have the account checked in unified trash folder, the trash folder in that account disappears, so when you delete an email it goes to ??? If you uncheck the account in the unified trash folder properties, the trash folder reappears in the account and deleted emails will then go to that accounts trash folder. </p><p>So, you have to have 1 account in unified trash folder  to save settings. As a work around I used an old account I no longer use and have it as the only account in the unified trash folder. </p><p>Trash in all other accounts now go to their individual trash folder and not the unified folder. </p><p>I hope this makes sense but it is the only way I could get deleted files to work. </p>",newdino;wsmwk;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,2,0,0,,,,,
+1426097,2023-10-03T15:25:19Z,2023-10-03T19:04:32Z,en-US,thunderbird,Thunderbird settings,False,,,False,1608097,1608097;,other,other;,carolcottle2,"<p>Your rescent Thunderbird Updates have altered  a setting that I absolutely hate,  It is that I can not expand the body of the Emails because there are 20 odd email addresses.  I would like to go back to seeing 2 or 3 Email headings.  The body of an email is what I want to read.   Regards, Carol </p>",carolcottle2;sfhowes;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",1,0,0,,,,,
+1426100,2023-10-03T15:33:40Z,2023-10-03T15:33:40Z,en-US,thunderbird,How to move the close button back (Linux)?,False,,,False,,,settings,customize;,blu6,"<p>Ideally I'd like the old layout back, however since the latest update the close button moved to slightly which unfortunately means that it doesn't react anymore when I click from the top right corner which means I have to actually aim for it which is extremely annoying, takes longer, I have to actually look/use shortcuts, is the only application with that issue (so even harder to get used to it) and doesn't even make sense in any way. I'd really like to get the old layout back (I changed a few settings already, just hoping for a button) or at least fix the close button (layout settings could work, however so far nothing has worked). </p>",blu6;,True,False,False,;category:customize;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426102,2023-10-03T15:55:28Z,2023-10-03T15:55:28Z,en-US,thunderbird,why is Tbird making me re-enter passwords several times every day?,False,,,False,,,other,other;,c.s.campbell,<p>why is Tbird making me re-enter passwords several times every day? </p>,c.s.campbell;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426104,2023-10-03T16:19:00Z,2023-10-16T13:34:06Z,en-US,thunderbird,"After Thunderbird upgrade to Supernova, scroll wheel stopped working.  ""Mark"" message in toolbar works differently",True,1609808,SynHolliday,False,1611516,1608095;1608126;1608152;1608540;1608560;1609808;1611420;1611516;,settings,customize;,SynHolliday,"<p>Right after upgrading Thunderbird to Supernova on my Windows desktop, the scroll wheel on my mouse stopped working.  This is just within Thunderbird, the scroll wheel works fine for everything else in Windows. </p><p>Is there a fix?  If not, is it possible I can revert back to Thunderbird pre-Supernova?  This is really annoying, that one convenient feature missing knocks Thunderbird far down below other mail software. </p><p>Add to that the ""Mark as"" button on the toolbar no longer works as it did before.  Used to be able to just click it to toggle the status of the message, a one-click method of marking a message as read or unread. </p><p>~Syn~ </p>",SynHolliday;sfhowes;wsmwk;reg30;,True,False,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird;solver_id:5499635",8,0,2,,,wsmwk,,
+1426105,2023-10-03T16:25:04Z,2023-10-08T20:23:42Z,en-US,thunderbird,How do I go back to the version before version 115.3.1?,False,,,False,1609457,1608278;1609457;,installation-and-updates,download-and-install_1;,markfilipak,"<p>How do I go back to the version before version 115.3.1? </p><p>Thank You, Mark. </p>",markfilipak;gaja1;wsmwk;,True,True,False,;category:download-and-install;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,2,0,3,,,,,
+1426106,2023-10-03T16:25:49Z,2023-10-03T16:25:49Z,en-US,thunderbird,remove and re add account,False,,,False,,,other,other;,pottsy2147,"<p><strong>I have been advised (to correct an email account problem) to remove my account from Thunderbird, restart the computer, then re add the account. Will I lose all my emails, folders, etc? </strong> </p><p><strong></strong> </p>",pottsy2147;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",0,0,0,,,,,
+1426107,2023-10-03T16:27:59Z,2023-10-03T20:33:32Z,en-US,thunderbird,"After Thunderbird upgrade to Supernova, clicking the ""Mark as"" button no longer toggles the status of the message",False,,,False,1608117,1608096;1608117;,settings,customize;,SynHolliday,"<p>After Thunderbird upgrade to Supernova on my Windows desktop, the ""Mark as"" button on the toolbar no longer toggles the status of the message.  This was a really convenient feature. </p><p>Is there a way to get the ""Mark as"" button to work as it did before?  If not, is there a way I can revert back to the pre-Supernova Thunderbird?  It was a perfect program, but now with the change to the ""Mark as"" button and with the mouse scroll wheel no longer working (just in Supernova, works fine for everything else in Windows), seems like Thunderbird took steps backwards with Supernova. </p>",SynHolliday;sfhowes;,True,True,False,";category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47;product:thunderbird",2,0,0,,,,,
+1426108,2023-10-03T16:31:48Z,2023-10-15T11:36:56Z,en-US,thunderbird,Command functions do not work T-bird 115,False,,,False,1611226,1608187;1608198;1611195;1611226;,troubleshooting,fix-problems;,19jamal,"<p>Using the new Thunderbird on Mac 10/3/2023. Command functions do not work. For example, the essential ""Command 1"" while Tbird is open only results in a beep, not an open window. The only way to open a window is to click on the icon in the Dock, or to quit and reopen the app. When open, none of the command functions are black in the drop-down menus - all gray. </p>",19jamal;wsmwk;renaud.jean-francois;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,4,0,1,,,,,
+1426109,2023-10-03T16:36:26Z,2024-07-14T01:46:21.503462Z,en-US,thunderbird,MacOS Ventura update to MacOS Sonoma caused Thunderbird to stop working - related to icloud?,False,,,False,1661803,1608181;1608261;1608266;1608347;1608349;1608367;1609076;1609153;1609155;1609227;1609360;1609508;1609510;1609573;1609605;1609620;1609623;1609641;1609642;1609643;1609652;1609924;1609929;1610181;1611332;1611379;1612990;1613830;1626966;1627004;1627915;1628682;1628865;1628874;1632248;1632282;1643958;1649107;1649109;1661803;,installation-and-updates,download-and-install_1;,rejohnston01,"<p>When I upgraded from MacOS Ventura to MacOS Sonoma, Thunderbird stopped working.  Getting it to work the first time required me to use Apple's 2 Step Verification process to create an app-specific password.  After the MacOS upgrade, that process was no longer available.  Apple switched to 2 Factor Authentication, which is apparently different and incompatible with 2sv.  The other websites and applications on my iMac have already switched to 2fa, and I'm not sure I can have both methods active on the same computer (but I've asked, Apple, anyway). </p><p>Is there a recent change in Thunderbird that would allow me to use 2fa instead of 2sv to access Thunderbird?   </p><p>I have many years worth of emails in Thunderbird that I can no longer access.  I can see the directory structure, and some of the email lists, but not the content. </p><p>Thanks for the help! </p>",rejohnston01;wsmwk;acdp;mitra1;kjames196;dwmusic;sjallyn;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15;product:thunderbird",40,0,8,,,wsmwk,,
+1426110,2023-10-03T16:45:00Z,2023-10-03T16:45:00Z,en-US,thunderbird,Emails going to All Mail,False,,,False,,,other,other;,Bryan1,"<p>Suddenly a number of my emails are going directly to All Mail, by-passing the In Box. I haven't made any changes to settings </p>",Bryan1;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426116,2023-10-03T17:01:54Z,2023-10-03T18:57:23Z,en-US,thunderbird,Thunderbird E-mail cannot connect to outlook.com account,False,,,False,1608094,1608094;,other,other;,FDReynolds,"<p>ERROR From Microsoft.  Account is at <a href=""http://outlook.com"" rel=""nofollow"">outlook.com</a>. Using Firefox browser. Standard Security setting. </p><p>We can't sign you in Your browser is currently set to block cookies. You need to allow cookies to use this service. </p><p>Just started this evening. Just got upgraded to Thunderbird version 115.3.1 on one machine.  Second machine still running version 105.13.0 with no issues. Both machines are Windows 11 Home Ver 22H2 </p>",FDReynolds;sfhowes;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1426122,2023-10-03T18:13:21Z,2023-10-04T00:22:00Z,en-US,thunderbird,emails automatically being deleted,False,,,False,1608182,1608182;,other,other;,thewainwrights,"<p>Emails that I receive in Mail for Windows, when deleted, also delete the same email from Thunderbird, but not the other way around.  </p><p>How do I stop this and recover those lost emails? </p>",thewainwrights;wsmwk;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1426124,2023-10-03T18:27:27Z,2023-12-28T05:54:05.742148Z,en-US,thunderbird,Thunderbird update 115.3.1 self installed now nothing works (pop + zoho),False,,,False,1626959,1626959;,installation-and-updates,download-and-install_1;,divideweb,"<p>Thunderbird update 115.3.1 self installed now nothing works. </p><p>When I first opened program after update and tried to retrieve mail for one account (of5) got a window telling me password not accepted by pop server (at <a href=""http://zoho.com"" rel=""nofollow"">zoho.com</a>) and asking if i wished to enter a new one. Said no and went to passwords in config to check if they had transferred properly. They had.  </p><p>Tried again to download messages with same results (password not accepted)and clicked to enter new one. Instead window popped up for next account telling me password not accepted by server and did I want to enter a new one. Same results for every account in order without ever letting me access one. Rebooted - no change. </p><p>Downloaded copy from mozilla and re-installed thinking it may reconfigure what was wrong. No luck. Now when I try to retrieve messages I don't even get password not accepted only ""done"" in bottom left corner where it usually shows download happening. </p><p>I have used Thunderbird practically since it came out and have installed configured  and transferred accounts across many computers and never had any problem like this! </p>",divideweb;wsmwk;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,1,,,wsmwk,,
+1426125,2023-10-03T18:32:13Z,2023-10-10T16:47:53Z,en-US,thunderbird,Some emails not being marked as read (v118.0.1),False,,,False,1609982,1608178;1608451;1608455;1609982;,troubleshooting,fix-problems;,Jay.Dear,"<p>Since installing the new version of ThunderBird I find that some messages are not automatically marked as read immediately. If I wait long enough they do get marked, but if I'm skipping through promotional stuff they just don't get automatically marked as read. Messages that have been sitting in the list unread for a day or two are affected the same as recently arrived messages.  </p><p>I think it might have something to do with the affected messages containing lots of links, e.g. advertising material from supermarket chains.  </p><p>In Settings I have ""Automatically mark messages as read"" - ""Immediately on display"". </p>",Jay.Dear;wsmwk;,True,False,False,;category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,4,0,12,,,,,
+1426126,2023-10-03T18:37:46Z,2023-10-03T23:10:00Z,en-US,thunderbird,"I don't understand. Thunderbird changes, and there's no way to contact the people who made the changes?",False,,,False,1608156,1608156;,troubleshooting,fix-problems;,ErictheGreen,<p>The system is worse; it makes me wait a long time when I didn't have to wait before. Noone answers. </p>,ErictheGreen;wsmwk;,True,True,False,";category:fix-problems;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
+1426128,2023-10-03T19:01:23Z,2023-10-03T19:01:23Z,en-US,thunderbird,My emails are sending vacation response to senders,False,,,False,,,other,other;,peaceomind,<p>my emails are sending a reply to senders saying vacation response? how do I stop this? </p>,peaceomind;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426129,2023-10-03T19:05:53Z,2023-10-03T23:16:31Z,en-US,thunderbird,support options,False,,,False,1608158,1608158;,settings,customize;,hockeycat,"<p>I realize that this forum is made up of Mozilla users. Is there any way to reach any type of support person at Mozilla (specifically for Thunderbird)? What does one do when no one has an answer, or even a suggestion, on how to fix a problem? Is there any way to contact Mozilla, either to ask questions or to make suggestions? </p>",hockeycat;wsmwk;,True,False,False,;category:customize;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0;product:thunderbird,1,0,1,,,,,
+1426133,2023-10-03T19:14:08Z,2023-10-03T19:14:08Z,en-US,thunderbird,Favourites/Favorites Folder isn't showing selected favourited folders,False,,,False,,,other,other;,andrew6,<p>I created some Saved Search folders which I marked as Favourite folders and they appeared in the Favourite Folder section. I then quit Thunderbird 115 and later reopened Thunderbird to find that those folders are no longer appearing in the Favourite Folders section yet they are still marked as Favourite folders. </p>,andrew6;,True,False,False,;category:other;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,0,0,0,,,,,
+1426134,2023-10-03T19:17:49Z,2023-10-03T23:01:00Z,en-US,thunderbird,Lost current profile data,False,,,False,1608153,1608153;,installation-and-updates,download-and-install_1;,rosseddy,"<p>I did a dumb thing. I transferred my TB (v 115.3.1 64) Profiles folder to OneDrive because I couldn't find a way to automatically back it up. However I wasn't able to make TB work so I transferred it back into Appdata\Roaming\Thunderbird. Now when I open TB, it has an old folder structure and emails up to 2020 but nothing beyond in any folder. The default profile is big, 25 GB or so. The setup is fine as it connects to my ISP and downloads current emails and those stored on the server. How can I recover the recent profile? </p>",rosseddy;wsmwk;,True,False,False,;category:download-and-install;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,1,0,0,,,,,
+1426135,2023-10-03T19:17:57Z,2023-10-03T19:17:57Z,en-US,thunderbird,"Email not working after update to SuperNova?  Multiple - gmail, dreamhost, frontier etc",False,,,False,,,other,other;,marcyslawrence,"<p><strong>bold text</strong>After the Thunderbird update to Supernova none of my emails work - including gmail, local <a href=""http://risebroadband.net"" rel=""nofollow"">risebroadband.net</a>, frontier, and dreamhost.  All worked prior to the update.  I cannot enter my risebroadband as new and get to work either???  Any suggestions?  THanks. </p>",marcyslawrence;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36;product:thunderbird",0,0,1,,,,,
+1426137,2023-10-03T19:46:13Z,2023-10-04T16:28:52Z,en-US,thunderbird,My emails are showing with the listed time one hour too early after latest version update,False,,,False,1608405,1608385;1608390;1608404;1608405;,tips-and-tricks,desktop;other;,admin410,<p>Earlier today I installed the latest version of Firefox on my Mac system and now the time assigned to incoming emails is 1 hour too early. We are on Sydney daylight savings time. My computer is indicating the correct time but the Thunderbird emails listing is not. I've searched for solutions and checked a number of Thunderbird time and date settings but nothing has fixed the one hour time error that I'm seeing. Can anyone suggest a fix for this? </p>,admin410;cor-el;,True,False,False,";category:other;useragent:Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15;os:Mac OS x 10_15_7;troubleshooting:Application Basics
+
+    Name: Thunderbird
+    Version: 115.3.1
+    Build ID: 20230928194049
+    Distribution ID:
+
+    Update Channel: release
+    User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:115.0) Gecko/20100101 Thunderbird/115.3.1
+    OS: Darwin 23.0.0 Darwin Kernel Version 23.0.0: Fri Sep 15 14:41:43 PDT 2023; root:xnu-10002.1.13~1/RELEASE_ARM64_T6000
+    OS Theme:
+    Rosetta Translated: false
+
+    Multiprocess Windows: 0/0
+    Fission Windows: 0/0
+              Enabled by default
+    Remote Processes: 1
+    Enterprise Policies: Inactive
+    Google Location Service Key: Missing
+    Google Safebrowsing Key: Missing
+    Mozilla Location Service Key: Missing
+    Safe Mode: false
+    Memory Size (RAM): 32.0 GB
+    Disk Space Available: 68.2 GB
+
+  Mail and News Accounts
+    account1:
+      INCOMING: account1, , (imap) imap.gmail.com:993, 3, OAuth2
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+    account2:
+      INCOMING: account2, , (none) Local Folders, 0, 3
+
+    account3:
+      INCOMING: account3, , (imap) secure.emailsrvr.com:993, 3, 3
+      OUTGOING: , secure.emailsrvr.com:465, 3, 3, true
+
+    account5:
+      INCOMING: account5, , (imap) secure.emailsrvr.com:993, 3, 3
+      OUTGOING: , secure.emailsrvr.com:465, 3, 3, true
+
+    account6:
+      INCOMING: account6, , (imap) secure.emailsrvr.com:993, 3, 3
+      OUTGOING: , secure.emailsrvr.com:465, 3, 3, true
+
+    account10:
+      INCOMING: account10, , (imap) secure.emailsrvr.com:993, 3, 3
+      OUTGOING: , secure.emailsrvr.com:465, 3, 3, true
+
+    account11:
+      INCOMING: account11, , (imap) mail.weblynx.com.au:143, 2, 3
+      OUTGOING: , mail.weblynx.com.au:587, 2, 3, true
+
+    account20:
+      INCOMING: account20, , (rss) Feeds, 0, 3
+
+    account21:
+      INCOMING: account21, , (imap) imap.gmail.com:993, 3, OAuth2
+      OUTGOING: , smtp.gmail.com:465, 3, OAuth2, true
+
+  Libraries
+
+      Library
+      Status
+      Expected minimum version
+      Version in use
+      Path
+
+      RNP (OpenPGP)
+      OK
+      0.17.0
+      0.17.0+PR2073.MZLA.115.3.1
+      /Applications/Thunderbird.app/Contents/MacOS/librnp.dylib
+
+  Calendar Settings
+
+      First Calendar of help@djmir.com.au
+
+        Name
+        Value
+
+        Name:
+        Type: caldav
+        Disabled: true
+        Username:
+        URI:
+        Refresh Interval: 5
+        Read-only: false
+        Suppress Alarms: false
+        Cache Enabled: true
+        iMIP Identity:
+        iMIP Disabled:
+        iMIP Account:
+        Organiser Id:
+        Force Email Scheduling:
+        Popup Alarms Supported:
+        Alarms on Invitation Supported:
+        Max Alarms Per Event:
+        Attachment Supported:
+        Max Categories:
+        Privacy State Supported:
+        Priority Supported:
+        Event Supported: true
+        Task Supported: false
+        Local Time Supported:
+        UTC/GMT Supported:
+        Auto-Scheduling Supported: false
+
+      Home
+
+        Name
+        Value
+
+        Name:
+        Type: storage
+        Disabled: false
+        Username:
+        URI:
+        Refresh Interval:
+        Read-only: false
+        Suppress Alarms: false
+        Cache Enabled: false
+        iMIP Identity: id3
+        iMIP Disabled:
+        iMIP Account:
+        Organiser Id:
+        Force Email Scheduling:
+        Popup Alarms Supported:
+        Alarms on Invitation Supported:
+        Max Alarms Per Event:
+        Attachment Supported:
+        Max Categories:
+        Privacy State Supported:
+        Priority Supported: true
+        Event Supported:
+        Task Supported:
+        Local Time Supported:
+        UTC/GMT Supported:
+        Auto-Scheduling Supported:
+
+  Crash Reports for the Last 3 Days
+
+  Remote Processes
+
+    Type: Count
+
+    Isolated Web Content: 1
+
+  Add-ons
+
+      Name
+      Type
+      Version
+      Enabled
+      ID
+
+        English (Australian) Dictionary
+        dictionary
+        2.2.1webext
+        true
+        en-AU@dictionaries.addons.mozilla.org
+
+        Amazon.co.uk
+        extension
+        1.1
+        true
+        amazon@search.mozilla.org
+
+        Bing
+        extension
+        1.0
+        true
+        bing@search.mozilla.org
+
+        Chambers (UK)
+        extension
+        1.0
+        true
+        chambers-en-GB@search.mozilla.org
+
+        DuckDuckGo
+        extension
+        1.0
+        true
+        ddg@search.mozilla.org
+
+        Google
+        extension
+        1.0
+        true
+        google@search.mozilla.org
+
+        Wikipedia (en)
+        extension
+        1.0
+        true
+        wikipedia@search.mozilla.org
+
+        Language: English (GB)
+        locale
+        115.3.20230928.194049
+        true
+        langpack-en-GB@thunderbird.mozilla.org
+
+  Security Software
+
+    Type: Name
+
+      Antivirus:
+      Antispyware:
+      Firewall:
+
+  Graphics
+
+      Features
+      Compositing: WebRender
+      Asynchronous Pan/Zoom: wheel input enabled; scrollbar drag enabled; keyboard enabled; autoscroll enabled; smooth pinch-zoom enabled
+      WebGL 1 Driver WSI Info: CGL
+IsWebglOutOfProcessEnabled: 1
+      WebGL 1 Driver Renderer: Apple -- Apple M1 Max
+      WebGL 1 Driver Version: 4.1 Metal - 86
+      WebGL 1 Driver Extensions: GL_ARB_blend_func_extended GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader5 GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_occlusion_query2 GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_subroutine GL_ARB_shading_language_include GL_ARB_tessellation_shader GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_cube_map_array GL_ARB_texture_gather GL_ARB_texture_query_lod GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_vertex_attrib_64bit GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_sRGB_decode GL_APPLE_client_storage GL_APPLE_container_object_shareable GL_APPLE_flush_render GL_APPLE_rgb_422 GL_APPLE_row_bytes GL_APPLE_texture_range GL_NV_texture_barrier
+      WebGL 1 Extensions: ANGLE_instanced_arrays EXT_blend_minmax EXT_color_buffer_half_float EXT_float_blend EXT_frag_depth EXT_shader_texture_lod EXT_sRGB EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_element_index_uint OES_fbo_render_mipmap OES_standard_derivatives OES_texture_float OES_texture_float_linear OES_texture_half_float OES_texture_half_float_linear OES_vertex_array_object WEBGL_color_buffer_float WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_depth_texture WEBGL_draw_buffers WEBGL_lose_context WEBGL_provoking_vertex
+      WebGL 2 Driver WSI Info: CGL
+IsWebglOutOfProcessEnabled: 1
+      WebGL 2 Driver Renderer: Apple -- Apple M1 Max
+      WebGL 2 Driver Version: 4.1 Metal - 86
+      WebGL 2 Driver Extensions: GL_ARB_blend_func_extended GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader5 GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_occlusion_query2 GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_subroutine GL_ARB_shading_language_include GL_ARB_tessellation_shader GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_cube_map_array GL_ARB_texture_gather GL_ARB_texture_query_lod GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_vertex_attrib_64bit GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_sRGB_decode GL_APPLE_client_storage GL_APPLE_container_object_shareable GL_APPLE_flush_render GL_APPLE_rgb_422 GL_APPLE_row_bytes GL_APPLE_texture_range GL_NV_texture_barrier
+      WebGL 2 Extensions: EXT_color_buffer_float EXT_float_blend EXT_texture_compression_rgtc EXT_texture_filter_anisotropic MOZ_debug OES_draw_buffers_indexed OES_texture_float_linear WEBGL_compressed_texture_s3tc WEBGL_compressed_texture_s3tc_srgb WEBGL_debug_renderer_info WEBGL_debug_shaders WEBGL_lose_context WEBGL_provoking_vertex
+      Target Frame Rate: 60
+
+      GPU #1
+      Active: Yes
+      Vendor ID: 0x106b
+      RAM: 0
+
+    GPU #2
+
+      Diagnostics
+      AzureCanvasBackend: skia
+      AzureContentBackend: skia
+      AzureFallbackCanvasBackend: skia
+      CMSOutputProfile: AAANFGFwcGwCEAAAbW50clJHQiBYWVogB+cACQAdABIALgAYYWNzcEFQUEwAAAAAQVBQTAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARZGVzYwAAAVAAAABiZHNjbQAAAbQAAAHwY3BydAAAA6QAAAAjd3RwdAAAA8gAAAAUclhZWgAAA9wAAAAUZ1hZWgAAA/AAAAAUYlhZWgAABAQAAAAUclRSQwAABBgAAAgMYWFyZwAADCQAAAAgdmNndAAADEQAAAAwbmRpbgAADHQAAAA+bW1vZAAADLQAAAAodmNncAAADNwAAAA4YlRSQwAABBgAAAgMZ1RSQwAABBgAAAgMYWFiZwAADCQAAAAgYWFnZwAADCQAAAAgZGVzYwAAAAAAAAAIRGlzcGxheQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAAJgAAAAxockhSAAAAGAAAAdhrb0tSAAAAGAAAAdhuYk5PAAAAGAAAAdhpZAAAAAAAGAAAAdhodUhVAAAAGAAAAdhjc0NaAAAAGAAAAdhkYURLAAAAGAAAAdhubE5MAAAAGAAAAdhmaUZJAAAAGAAAAdhpdElUAAAAGAAAAdhlc0VTAAAAGAAAAdhyb1JPAAAAGAAAAdhmckNBAAAAGAAAAdhhcgAAAAAAGAAAAdh1a1VBAAAAGAAAAdhoZUlMAAAAGAAAAdh6aFRXAAAAGAAAAdh2aVZOAAAAGAAAAdhza1NLAAAAGAAAAdh6aENOAAAAGAAAAdhydVJVAAAAGAAAAdhlbkdCAAAAGAAAAdhmckZSAAAAGAAAAdhtcwAAAAAAGAAAAdhoaUlOAAAAGAAAAdh0aFRIAAAAGAAAAdhjYUVTAAAAGAAAAdhlbkFVAAAAGAAAAdhlc1hMAAAAGAAAAdhkZURFAAAAGAAAAdhlblVTAAAAGAAAAdhwdEJSAAAAGAAAAdhwbFBMAAAAGAAAAdhlbEdSAAAAGAAAAdhzdlNFAAAAGAAAAdh0clRSAAAAGAAAAdhwdFBUAAAAGAAAAdhqYUpQAAAAGAAAAdgARABFAEwATAAgAFMAMgA3ADIAMQBRAFN0ZXh0AAAAAENvcHlyaWdodCBBcHBsZSBJbmMuLCAyMDIzAABYWVogAAAAAAAA89gAAQAAAAEWCFhZWiAAAAAAAABx8AAAOJIAAAGDWFlaIAAAAAAAAF1cAAC24AAADMZYWVogAAAAAAAAJ4oAABCOAADE5GN1cnYAAAAAAAAEAAAAAAUACgAPABQAGQAeACMAKAAtADIANgA7AEAARQBKAE8AVABZAF4AYwBoAG0AcgB3AHwAgQCGAIsAkACVAJoAnwCjAKgArQCyALcAvADBAMYAywDQANUA2wDgAOUA6wDwAPYA+wEBAQcBDQETARkBHwElASsBMgE4AT4BRQFMAVIBWQFgAWcBbgF1AXwBgwGLAZIBmgGhAakBsQG5AcEByQHRAdkB4QHpAfIB+gIDAgwCFAIdAiYCLwI4AkECSwJUAl0CZwJxAnoChAKOApgCogKsArYCwQLLAtUC4ALrAvUDAAMLAxYDIQMtAzgDQwNPA1oDZgNyA34DigOWA6IDrgO6A8cD0wPgA+wD+QQGBBMEIAQtBDsESARVBGMEcQR+BIwEmgSoBLYExATTBOEE8AT+BQ0FHAUrBToFSQVYBWcFdwWGBZYFpgW1BcUF1QXlBfYGBgYWBicGNwZIBlkGagZ7BowGnQavBsAG0QbjBvUHBwcZBysHPQdPB2EHdAeGB5kHrAe/B9IH5Qf4CAsIHwgyCEYIWghuCIIIlgiqCL4I0gjnCPsJEAklCToJTwlkCXkJjwmkCboJzwnlCfsKEQonCj0KVApqCoEKmAquCsUK3ArzCwsLIgs5C1ELaQuAC5gLsAvIC+EL+QwSDCoMQwxcDHUMjgynDMAM2QzzDQ0NJg1ADVoNdA2ODakNww3eDfgOEw4uDkkOZA5/DpsOtg7SDu4PCQ8lD0EPXg96D5YPsw/PD+wQCRAmEEMQYRB+EJsQuRDXEPURExExEU8RbRGMEaoRyRHoEgcSJhJFEmQShBKjEsMS4xMDEyMTQxNjE4MTpBPFE+UUBhQnFEkUahSLFK0UzhTwFRIVNBVWFXgVmxW9FeAWAxYmFkkWbBaPFrIW1hb6Fx0XQRdlF4kXrhfSF/cYGxhAGGUYihivGNUY+hkgGUUZaxmRGbcZ3RoEGioaURp3Gp4axRrsGxQbOxtjG4obshvaHAIcKhxSHHscoxzMHPUdHh1HHXAdmR3DHeweFh5AHmoelB6+HukfEx8+H2kflB+/H+ogFSBBIGwgmCDEIPAhHCFIIXUhoSHOIfsiJyJVIoIiryLdIwojOCNmI5QjwiPwJB8kTSR8JKsk2iUJJTglaCWXJccl9yYnJlcmhya3JugnGCdJJ3onqyfcKA0oPyhxKKIo1CkGKTgpaymdKdAqAio1KmgqmyrPKwIrNitpK50r0SwFLDksbiyiLNctDC1BLXYtqy3hLhYuTC6CLrcu7i8kL1ovkS/HL/4wNTBsMKQw2zESMUoxgjG6MfIyKjJjMpsy1DMNM0YzfzO4M/E0KzRlNJ402DUTNU01hzXCNf02NzZyNq426TckN2A3nDfXOBQ4UDiMOMg5BTlCOX85vDn5OjY6dDqyOu87LTtrO6o76DwnPGU8pDzjPSI9YT2hPeA+ID5gPqA+4D8hP2E/oj/iQCNAZECmQOdBKUFqQaxB7kIwQnJCtUL3QzpDfUPARANER0SKRM5FEkVVRZpF3kYiRmdGq0bwRzVHe0fASAVIS0iRSNdJHUljSalJ8Eo3Sn1KxEsMS1NLmkviTCpMcky6TQJNSk2TTdxOJU5uTrdPAE9JT5NP3VAnUHFQu1EGUVBRm1HmUjFSfFLHUxNTX1OqU/ZUQlSPVNtVKFV1VcJWD1ZcVqlW91dEV5JX4FgvWH1Yy1kaWWlZuFoHWlZaplr1W0VblVvlXDVchlzWXSddeF3JXhpebF69Xw9fYV+zYAVgV2CqYPxhT2GiYfViSWKcYvBjQ2OXY+tkQGSUZOllPWWSZedmPWaSZuhnPWeTZ+loP2iWaOxpQ2maafFqSGqfavdrT2una/9sV2yvbQhtYG25bhJua27Ebx5veG/RcCtwhnDgcTpxlXHwcktypnMBc11zuHQUdHB0zHUodYV14XY+dpt2+HdWd7N4EXhueMx5KnmJeed6RnqlewR7Y3vCfCF8gXzhfUF9oX4BfmJ+wn8jf4R/5YBHgKiBCoFrgc2CMIKSgvSDV4O6hB2EgITjhUeFq4YOhnKG14c7h5+IBIhpiM6JM4mZif6KZIrKizCLlov8jGOMyo0xjZiN/45mjs6PNo+ekAaQbpDWkT+RqJIRknqS45NNk7aUIJSKlPSVX5XJljSWn5cKl3WX4JhMmLiZJJmQmfyaaJrVm0Kbr5wcnImc951kndKeQJ6unx2fi5/6oGmg2KFHobaiJqKWowajdqPmpFakx6U4pammGqaLpv2nbqfgqFKoxKk3qamqHKqPqwKrdavprFys0K1ErbiuLa6hrxavi7AAsHWw6rFgsdayS7LCszizrrQltJy1E7WKtgG2ebbwt2i34LhZuNG5SrnCuju6tbsuu6e8IbybvRW9j74KvoS+/796v/XAcMDswWfB48JfwtvDWMPUxFHEzsVLxcjGRsbDx0HHv8g9yLzJOsm5yjjKt8s2y7bMNcy1zTXNtc42zrbPN8+40DnQutE80b7SP9LB00TTxtRJ1MvVTtXR1lXW2Ndc1+DYZNjo2WzZ8dp22vvbgNwF3IrdEN2W3hzeot8p36/gNuC94UThzOJT4tvjY+Pr5HPk/OWE5g3mlucf56noMui86Ubp0Opb6uXrcOv77IbtEe2c7ijutO9A78zwWPDl8XLx//KM8xnzp/Q09ML1UPXe9m32+/eK+Bn4qPk4+cf6V/rn+3f8B/yY/Sn9uv5L/tz/bf//cGFyYQAAAAAAAwAAAAJmZgAA8qcAAA1ZAAAT0AAAClt2Y2d0AAAAAAAAAAEAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAABuZGluAAAAAAAAADYAAKhAAABUQAAATgAAAKUAAAAmgAAAD0AAAFBAAABUQAACMzMAAjMzAAIzMwAAAAAAAAAAbW1vZAAAAAAAABCsAAChmDBHVkzds18AAAAAAAAAAAAAAAAAAAAAAHZjZ3AAAAAAAAMAAAACZmYAAwAAAAJmZgADAAAAAmZmAAAAAjMzAAAAAAACMzMAAAAAAAIzMwAA
+      Display0: 5120x2880@0Hz scales:2.000000|2.000000
+      DisplayCount: 1
+      Window Device Pixel Ratios: 2
+      WebGPU Default Adapter: [object Object]
+      WebGPU Fallback Adapter: [object Object]
+
+      Decision Log
+      HW_COMPOSITING: available by default
+      OPENGL_COMPOSITING: available by default
+      WEBRENDER: available by default
+      WEBRENDER_COMPOSITOR: available by default
+      WEBRENDER_PARTIAL: disabled by default: User disabled via pref
+      WEBRENDER_SHADER_CACHE: disabled by default: Disabled by default
+      WEBRENDER_OPTIMIZED_SHADERS: available by default
+      WEBRENDER_ANGLE: available by defaultunavailable by env: OS not supported
+      WEBRENDER_DCOMP_PRESENT: available by defaultdisabled by user: User disabled via prefunavailable by env: Requires GPU processunavailable by runtime: Requires ANGLE
+      WEBRENDER_SCISSORED_CACHE_CLEARS: available by default
+      WEBGPU: available by defaultBlocklisted; failure code BLOCKLIST_FEATURE_FAILURE_MAC_WGPU_NO_METAL_BOUNDS_CHECKSblocked by runtime: WebGPU cannot be enabled in release or beta
+      VP8_HW_DECODE: available by default
+      VP9_HW_DECODE: available by default
+      BACKDROP_FILTER: available by default
+      CANVAS_RENDERER_THREAD: available by default
+      ACCELERATED_CANVAS2D: available by default
+
+    Crash Guard Disabled Features
+
+    Workarounds
+
+    Failure Log
+
+  Media
+
+      Audio Backend: audiounit-rust
+      Max Channels: 2
+      Preferred Sample Rate: 44100
+
+      Output Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        DELL S2721QS
+        DEL
+        Enabled
+        None
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        2
+        default: 48000, support: 32000 - 48000
+        103 - 4184
+
+        Microsoft Teams Audio Device
+        MSLoopbackDriverDevice_ModelUID
+        Microsoft Corp.
+        Enabled
+        None
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        2
+        default: 48000, support: 48000 - 48000
+        15 - 4096
+
+        MacBook Pro Speakers
+        builtin-internal-mic|spk
+        Apple Inc.
+        Enabled
+        All
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        2
+        default: 44100, support: 44100 - 96000
+        718 - 4800
+
+      Input Devices
+
+        Name
+        Group
+        Vendor
+        State
+        Preferred
+        Format
+        Channels
+        Rate
+        Latency
+
+        HD Pro Webcam C920
+        HD Pro Webcam C920:046D:08E5
+        Unknown Manufacturer
+        Enabled
+        All
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        2
+        default: 16000, support: 16000 - 32000
+        21 - 4112
+
+        Microsoft Teams Audio Device
+        MSLoopbackDriverDevice_ModelUID
+        Microsoft Corp.
+        Enabled
+        None
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        2
+        default: 48000, support: 48000 - 48000
+        15 - 4096
+
+        MacBook Pro Microphone
+        builtin-internal-mic|spk
+        Apple Inc.
+        Enabled
+        None
+        default: F32LE, support: S16LE S16BE F32LE F32BE
+        1
+        default: 48000, support: 44100 - 96000
+        2414 - 6495
+
+      Media Capabilities
+
+      Enumerate database
+
+  Environment Variables
+
+    MOZ_CRASHREPORTER_EVENTS_DIRECTORY: /Users/stevenjones/Library/Thunderbird/Profiles/dj4jcz14.default/crashes/events
+    MOZ_CRASHREPORTER_RESTART_ARG_0: /Applications/Thunderbird.app/Contents/MacOS/thunderbird
+    MOZ_CRASHREPORTER_RESTART_ARG_1:
+    MOZ_CRASHREPORTER_DATA_DIRECTORY: /Users/stevenjones/Library/Thunderbird/Crash Reports
+    MOZ_CRASHREPORTER_PING_DIRECTORY: /Users/stevenjones/Library/Thunderbird/Pending Pings
+    MOZ_CRASHREPORTER_STRINGS_OVERRIDE: /Applications/Thunderbird.app/Contents/Resources/crashreporter-override.ini
+    MOZ_LAUNCHED_CHILD:
+    MOZ_APP_SILENT_START:
+    XRE_PROFILE_PATH:
+    XRE_PROFILE_LOCAL_PATH:
+    XRE_START_OFFLINE:
+    XRE_BINARY_PATH:
+    XRE_RESTARTED_BY_PROFILE_MANAGER:
+
+  Important Modified Preferences
+
+    accessibility.typeaheadfind.flashBar: 0
+    browser.search.region: AU
+    extensions.lastAppVersion: 115.3.1
+    font.internaluseonly.changed: true
+    font.name.sans-serif.x-western: Helvetica Neue
+    idle.lastDailyNotification: 1696356529
+    media.gmp.storage.version.observed: 1
+    network.trr.blocklist_cleanup_done: true
+    places.database.lastMaintenance: 1695970381
+    privacy.purge_trackers.date_in_cookie_database: 0
+    security.sandbox.content.tempDirSuffix: 70d8e521-179b-7d45-8529-3de4ac109368
+    storage.vacuum.last.index: 1
+    storage.vacuum.last.places.sqlite: 1694352191
+
+  Important Locked Preferences
+
+  fission.autostart.session: true
+
+  Places Database
+
+  Accessibility
+
+    Activated: false
+    Prevent Accessibility: 0
+
+  Library Versions
+
+      Expected minimum version
+      Version in use
+
+      NSPR
+      4.35
+      4.35
+
+      NSS
+      3.90
+      3.90
+
+      NSSSMIME
+      3.90
+      3.90
+
+      NSSSSL
+      3.90
+      3.90
+
+      NSSUTIL
+      3.90
+      3.90
+
+  Sandbox
+
+    Content Process Sandbox Level: 0
+    Effective Content Process Sandbox Level: 1
+    Win32k Lockdown State for Content Process: Win32k Lockdown disabled -- Operating system not supported
+    GPU Process Sandbox Level: 0
+
+  Startup Cache
+
+    Disk Cache Path: /Users/stevenjones/Library/Caches/Thunderbird/Profiles/dj4jcz14.default/startupCache/startupCache.8.little
+    Ignore Disk Cache: false
+    Found Disk Cache on Init: true
+    Wrote to Disk Cache: false
+
+  Internationalisation & Localisation
+
+      Application Settings
+      Requested Locales: [""en-GB"",""en-US""]
+      Available Locales: [""en-US"",""en-GB""]
+      App Locales: [""en-GB"",""en-US""]
+      Regional Preferences: [""en-AU""]
+      Default Locale: ""en-US""
+
+      Operating System
+      System Locales: [""en-AU""]
+      Regional Preferences: [""en-AU""]
+
+  Remote Debugging (Chromium Protocol)
+
+    Accepting Connections:
+    URL:
+
+  Printing
+
+  Modified print settings
+
+    print_printer: HP Color LaserJet MFP M277dw (C9CC43)
+    print.more-settings.open: true
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_bgcolor: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_bgimages: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_duplex: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_edge_bottom: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_edge_left: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_edge_right: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_edge_top: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_footercenter:
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_footerleft: &PT
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_footerright: &D
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_headercenter: &T
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_headerleft:
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_headerright:
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_in_color: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_margin_bottom: 0.5
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_margin_left: 0.5
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_margin_right: 0.5
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_margin_top: 0.5
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_orientation: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_page_delay: 50
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_paper_height: 11.6945
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_paper_id: iso_a4_210x297mm
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_paper_size_unit: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_paper_width: 8.26378
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_resolution: 0
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_reversed: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_scaling: 1.2
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_shrink_to_fit: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_to_file: false
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_unwriteable_margin_bottom: 24
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_unwriteable_margin_left: 20
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_unwriteable_margin_right: 20
+    print.printer_Canon_MF4360-4390(09:F2:4E).print_unwriteable_margin_top: 24
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_bgcolor: false
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_bgimages: false
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_duplex: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_edge_bottom: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_edge_left: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_edge_right: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_edge_top: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_footercenter:
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_footerleft: &PT
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_footerright: &D
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_headercenter: &T
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_headerleft:
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_headerright:
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_in_color: true
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_margin_bottom: 0.5
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_margin_left: 0.5
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_margin_right: 0.5
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_margin_top: 0.5
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_orientation: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_page_delay: 50
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_paper_height: 11.6929
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_paper_id: iso_a4_210x297mm
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_paper_size_unit: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_paper_width: 8.26772
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_resolution: 0
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_reversed: false
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_scaling: 1
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_shrink_to_fit: false
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_to_file: false
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_unwriteable_margin_bottom: 17
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_unwriteable_margin_left: 17
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_unwriteable_margin_right: 17
+    print.printer_HP_Color_LaserJet_MFP_M277dw_(C9CC43).print_unwriteable_margin_top: 17
+    print.printer_Mozilla_Save_to_PDF.print_bgcolor: false
+    print.printer_Mozilla_Save_to_PDF.print_bgimages: false
+    print.printer_Mozilla_Save_to_PDF.print_duplex: 0
+    print.printer_Mozilla_Save_to_PDF.print_edge_bottom: 0
+    print.printer_Mozilla_Save_to_PDF.print_edge_left: 0
+    print.printer_Mozilla_Save_to_PDF.print_edge_right: 0
+    print.printer_Mozilla_Save_to_PDF.print_edge_top: 0
+    print.printer_Mozilla_Save_to_PDF.print_footercenter:
+    print.printer_Mozilla_Save_to_PDF.print_footerleft: &PT
+    print.printer_Mozilla_Save_to_PDF.print_footerright: &D
+    print.printer_Mozilla_Save_to_PDF.print_headercenter: &T
+    print.printer_Mozilla_Save_to_PDF.print_headerleft:
+    print.printer_Mozilla_Save_to_PDF.print_headerright:
+    print.printer_Mozilla_Save_to_PDF.print_in_color: true
+    print.printer_Mozilla_Save_to_PDF.print_margin_bottom: 0.5
+    print.printer_Mozilla_Save_to_PDF.print_margin_left: 0.5
+    print.printer_Mozilla_Save_to_PDF.print_margin_right: 0.5
+    print.printer_Mozilla_Save_to_PDF.print_margin_top: 0.5
+    print.printer_Mozilla_Save_to_PDF.print_orientation: 0
+    print.printer_Mozilla_Save_to_PDF.print_page_delay: 50
+    print.printer_Mozilla_Save_to_PDF.print_paper_height: 11.6929
+    print.printer_Mozilla_Save_to_PDF.print_paper_id: iso_a4
+    print.printer_Mozilla_Save_to_PDF.print_paper_size_unit: 0
+    print.printer_Mozilla_Save_to_PDF.print_paper_width: 8.26772
+    print.printer_Mozilla_Save_to_PDF.print_resolution: 0
+    print.printer_Mozilla_Save_to_PDF.print_reversed: false
+    print.printer_Mozilla_Save_to_PDF.print_scaling: 0.72
+    print.printer_Mozilla_Save_to_PDF.print_shrink_to_fit: false
+    print.printer_Mozilla_Save_to_PDF.print_to_file: true
+    print.printer_Mozilla_Save_to_PDF.print_unwriteable_margin_bottom: 0
+    print.printer_Mozilla_Save_to_PDF.print_unwriteable_margin_left: 0
+    print.printer_Mozilla_Save_to_PDF.print_unwriteable_margin_right: 0
+    print.printer_Mozilla_Save_to_PDF.print_unwriteable_margin_top: 0;product:desktop",4,0,0,,,,Mac OS x 10_15_7,
+1426138,2023-10-03T19:56:20Z,2023-10-03T19:56:20Z,en-US,thunderbird,Security Device Manager - OS Client Cert Module,False,,,False,,,installation-and-updates,download-and-install_1;,steven.wright,<p>OS Client Cert Module not installed/loaded after clean installation of Thunderbird version 115.3.1. The osclientcerts.dll is present in the Thunderbird program directory.   Trying to load the dll in the Security Device Manager does not work. </p><p>Is there a way to manually add the security module to the configuration file or registry? </p>,steven.wright;,True,False,False,";category:download-and-install;useragent:Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Mobile Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426139,2023-10-03T20:04:11Z,2023-10-03T22:58:17Z,en-US,thunderbird,Several Suggestions.  [was Supernova menus - a bit of a mess],False,,,False,,,settings,customize;,mozilla457,"<p>I've been using Thunderbird as my default mail client since it first came out. It's always been rock solid, and does what I expect of a mail program, manage my home email accounts and nothing more. The design has always been simple and well layed out. I have my folder list on the left, the folder preview/summary on top right, and actual highlighted email on botton right. </p><p>The new new menu layout is a bit of a mess. It now sits on the top of the Thunderbird window, above the file/edit/view menu, and can't be moved to below the file/edit/view menu. Every other program follows a defacto standard of default menu ontop, and custom menu's below file/edit/view. </p><p>It would be nicer still if I could move this new menu, to sit along side the (Inbox - Local Folders tab), there's all this dead space sitting there. (Where the new tabs sit, when I double click on a email.) </p><p>To be honest, where the menu originally sat, (above the message list) was more intuitive, as it applied to task you can apply to messages. </p><p>There's also the new ""+New Message"" button sitting at the top of the Folder Pane, yet the new menu uses ""Write"" instead of New Message, meaning no consistency. Is it Write or New Message. Also the ""New Message"" button looks out-of-place sitting there, and both buttons have different text pop-ups. ""New Message"" has Compose a new message, and ""Write"" has Create a new message. Again no consistency. </p><p>What would make more sense is instead of the ""New Message"" button sitting at the top of Folder pane, the ""Get Messsages"" button was there instead, as that has more relevance to the mail folders. (I just noticed that there is a small cloud icon sitting there that is the ""Get Messages"" button, but as it has no text I've never paid any attention to it, perhaps add some text to it, so that both buttons look like buttons, or both look like Icons. or an option to select text/icon/both.) </p><p>Further comment on the New Messages button area (at the top of the Folder pane). The space where that button sits, would be great to add other buttons/icons, ie: Address book, or better still combine the Spaces toolbar into this area, with on/off options for each icon. The spaces toolbar is pointless, a bar that runs the full height of the window for 5 icons. </p><p>Trevor.. </p>",mozilla457;,True,False,False,";category:customize;useragent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,wsmwk,,
+1426142,2023-10-03T20:40:20Z,2023-10-03T20:40:20Z,en-US,thunderbird,Font size on mailbox window is now too small.  Changing the setting seems to do nothing.,False,,,False,,,other,other;,Bob_Blaylock,"<p>Just a very short while ago, Thunderbird updated to 115.3.1 from whatever it was just before that.  This is under 64-bit Windows 10 Pro. </p><p>  Now, the font size on the mailbox window is way too small, and I cannot seem to change it. </p><p>  Searching through all the settings, I found this one setting that appeared to possibly be relevant, but change it seems to have no effect at all that I can see. </p><p>  Is there a relevant setting somewhere else, that I am failing to see? </p><p>  The font size was just fine before this latest update. </p><p><a href=""https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2023-10-03-20-39-22-911af7.png"" rel=""nofollow"">https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2023-10-03-20-39-22-911af7.png</a> </p>",Bob_Blaylock;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",0,0,0,,,,,
+1426143,2023-10-03T20:41:08Z,2023-10-03T22:01:49Z,en-US,thunderbird,Font size on mailbox window is now too small.  Changing the setting seems to do nothing.,True,1608138,sfhowes,False,1608147,1608122;1608138;1608139;1608142;1608144;1608147;,other,other;,Bob_Blaylock,"<p>Just a very short while ago, Thunderbird updated to 115.3.1 from whatever it was just before that.  This is under 64-bit Windows 10 Pro. </p><p>  Now, the font size on the mailbox window is way too small, and I cannot seem to change it. </p><p>  Searching through all the settings, I found this one setting that appeared to possibly be relevant, but change it seems to have no effect at all that I can see. </p><p>  Is there a relevant setting somewhere else, that I am failing to see? </p><p>  The font size was just fine before this latest update. </p><p><a href=""https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2023-10-03-20-39-22-911af7.png"" rel=""nofollow"">https://assets-prod.sumo.prod.webservices.mozgcp.net/media/uploads/images/2023-10-03-20-39-22-911af7.png</a> </p>",Bob_Blaylock;sfhowes;,True,False,False,";category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird;solver_id:5499893",6,0,2,,,,,
+1426144,2023-10-03T20:58:14Z,2023-12-01T09:07:22.965475Z,en-US,thunderbird,Thunderbird header pane scrolls unpredictably,False,,,False,1621315,1608146;1608151;1608316;1609487;1621290;1621315;,other,other;,bwffx,"<p>This problem is intermittent, but frequent. </p><p>When I am reading a message in Thunderbird 115.3.1, and I click on the ""delete"" button, the message will be deleted, but the contents of the header pane (i.e. the pane that's above the message body pane) will scroll unpredictably, by a large amount.  I have to manually scroll the header pane to get back to where I was before. </p><p>This is happening on Windows 11, and it started happening after Thunderbird did the automatic update to v115, less than 1 week ago. </p><p>Ben </p>",bwffx;wsmwk;mraman.m;,True,False,False,;category:other;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,6,0,1,,,,,
+1426147,2023-10-03T21:57:58Z,2023-10-05T06:29:41Z,en-US,thunderbird,"115.3.1 when I click on ""Get Messages"" NOTHING happens",True,1608522,cbell44,False,1608522,1608211;1608522;,other,other;,cbell44,"<p>I just upgraded to 115.3.1 and when I click on ""Get Messages"" NOTHING happens!  How do I get messages???? </p>",cbell44;MattAuSupport;,True,False,False,;category:other;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird;solver_id:181052,2,0,0,,,wsmwk,,
+1426151,2023-10-03T22:42:55Z,2023-10-04T08:03:35Z,it,thunderbird,Colori cambiati con ultima versione.,False,,,False,1608279,1608176;1608232;1608262;1608277;1608279;,settings,customize;,clrpla74,"<p>Salve, uso kde (mxlinux libretto) con l'ultima versione mi sono ritrovato i colori come ad esempio background del pannello dell'albero delle cartelle di posta completamente stravolto e in stile gnome, come devo fare per ripristinare i colori che ho impostato in kde come ad esempio il colore di hover sul rosso invece che sul blu? Qual'e' il file da modificare che contiene le impostazione dei colori dell'applicazione? Perche' non fate finalmente una versione Qt o facilmente configurabile che non cambi ad ogni nuovo rilascio? (mica tutti usiamo ubuntu...) </p>",clrpla74;@next;,True,True,False,;category:customize;useragent:Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0;product:thunderbird,5,0,0,,,,,
+1426154,2023-10-03T23:39:44Z,2023-10-09T06:27:40Z,tr,thunderbird,Thunderbird Takvim daveti katılımcılara gitmiyor,False,,,False,1609563,1609563;,calendar,calendar;,sayeste.kucur,"<p>Merhaba, En son güncellemeden sonra Thunderbird Takvim daveti katılımcılara gitmiyor. oluşturduğum davet sadece bana iletiliyor. Güncelleme ile gelen yeni bir ayar mı var? yada eski sürüme nasıl geçebilirim? </p>",sayeste.kucur;maxcoder;,True,False,False,";category:calendar;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36;product:thunderbird",1,0,0,,,,,
