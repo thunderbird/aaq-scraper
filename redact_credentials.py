@@ -5,15 +5,19 @@
 """Redact leaked credentials from scraped CSVs in place.
 
 SUMO forum content is untrusted user input; occasionally a user pastes a live
-credential (e.g. a Google OAuth refresh token) into a question/answer, which we
-then scrape. GitHub push protection rightly blocks such commits, and we should
-not republish someone's secret regardless. This replaces each matched secret
-with the literal ``<credential_deleted>``.
+credential (e.g. a Google OAuth refresh token, a JWT/bearer token, or a PEM
+private-key block) into a question/answer, which we then scrape. GitHub push
+protection rightly blocks such commits, and we should not republish someone's
+secret regardless. This replaces each matched secret with the literal
+``<credential_deleted>``.
 
-The patterns match contiguous tokens with no CSV delimiters (comma/quote/
-newline), so a raw substring substitution preserves every other byte and all
-CSV quoting -- redacted files stay byte-identical except for the secret itself.
-Idempotent: re-running finds nothing once redacted.
+The pattern set lives in ``csv_safety.CREDENTIAL_PATTERNS`` (imported below) so
+the scrapers and this back-fill stay in lock-step -- see that module for the
+full list and, crucially, the INVARIANT every pattern must satisfy: it matches a
+single contiguous token with no CSV delimiters (comma/quote/newline). That lets
+this script do a raw substring substitution on the whole file while preserving
+every other byte and all CSV quoting -- redacted files stay byte-identical
+except for the secret itself. Idempotent: re-running finds nothing once redacted.
 
     uv run python redact_credentials.py 2025/answers-...csv   # specific files
     uv run python redact_credentials.py                       # all 20*/*.csv
