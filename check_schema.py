@@ -102,8 +102,16 @@ def build_report(baseline, obs):
     """Return (drift: bool, markdown: str)."""
     sections = []
 
-    def add_section(title, base_list, obs_list):
+    def add_section(title, base_list, obs_list, additive_only=False):
+        # additive_only: metadata names are optional user-generated content, so a
+        # given ~40-question sample legitimately lacks many of them (ff_version,
+        # troubleshooting, solver_id, ...). Treating a missing name as "removed"
+        # would false-alarm on every sample that happens not to include it, so we
+        # only report NEWLY-appeared names here. (A metadata field genuinely
+        # dropped by SUMO just leaves its derived column blank — not breaking.)
         added, removed = diff(base_list, obs_list)
+        if additive_only:
+            removed = []
         if not (added or removed):
             return False
         lines = [f"### {title}"]
@@ -127,6 +135,7 @@ def build_report(baseline, obs):
             f"{product} — question metadata names",
             baseline.get("question_metadata", {}).get(product, []),
             obs["question_metadata"][product],
+            additive_only=True,
         )
     drift |= add_section(
         "answer fields",
@@ -164,6 +173,17 @@ def main():
 
     if args.update_baseline:
         import os
+        # Metadata names are optional user-generated content: union them with the
+        # prior baseline so a bump taken from a sample that happens to lack an
+        # optional field (ff_version, troubleshooting, solver_id, ...) doesn't
+        # silently drop it. Top-level / answer fields are overwritten as observed.
+        if os.path.exists(args.baseline):
+            with open(args.baseline, encoding="utf-8") as f:
+                prior = json.load(f)
+            prior_meta = prior.get("question_metadata", {})
+            for product, names in obs["question_metadata"].items():
+                merged = set(names) | set(prior_meta.get(product, []))
+                obs["question_metadata"][product] = sorted(merged)
         os.makedirs(os.path.dirname(args.baseline) or ".", exist_ok=True)
         with open(args.baseline, "w", encoding="utf-8") as f:
             json.dump(obs, f, indent=2, sort_keys=True)

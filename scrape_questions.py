@@ -8,8 +8,8 @@ Bucket 1 — scrape SUMO questions for a date window to CSV.
 Reproduces the original Ruby script
 `get-tb-creator-answers-questions-for-arbitrary-time-period.rb`, but drives a
 real browser (see sumo.py) to pass the JS challenge. Output keeps the original
-columns/format and adds three clean columns: operating_system,
-thunderbird_version, taken_by.
+columns/format and adds clean columns: operating_system, thunderbird_version,
+firefox_version (from metadata os/tb_version/ff_version), and taken_by.
 
 The window is start-day..end-day inclusive (UTC). For a single calendar day,
 pass the same date twice:
@@ -39,7 +39,7 @@ LEADING_KEYS = [
     "tags", "creator", "content",
 ]
 # New clean columns we add (derived; not raw API keys).
-DERIVED_KEYS = ["operating_system", "thunderbird_version"]
+DERIVED_KEYS = ["operating_system", "thunderbird_version", "firefox_version"]
 
 
 def metadata_value(metadata, name):
@@ -66,6 +66,7 @@ def flatten_question(q):
     metadata = q.get("metadata")
     row["operating_system"] = metadata_value(metadata, "os")
     row["thunderbird_version"] = metadata_value(metadata, "tb_version")
+    row["firefox_version"] = metadata_value(metadata, "ff_version")
 
     # tags -> ";"-joined slugs (trailing ;), matching the original.
     tags = q.get("tags") or []

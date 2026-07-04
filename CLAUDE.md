@@ -62,10 +62,19 @@ context.
 - **Questions** (`scrape_questions.py`): the original Ruby leading columns +
   remaining API keys, with the original flattening (`tags`→`;`-joined slugs;
   `metadata`→`;name:value`; `creator`/`updated_by`/`solved_by`→username; newlines
-  stripped from `content`), PLUS three clean columns: `operating_system` (from
+  stripped from `content`), PLUS clean columns: `operating_system` (from
   `metadata` entry `os`), `thunderbird_version` (from `metadata` entry
-  `tb_version`), and `taken_by` (top-level, username; usually empty). Note
-  `metadata` is a **list of `{name, value}`**.
+  `tb_version`), `firefox_version` (from `metadata` entry `ff_version`), and
+  `taken_by` (top-level, username; usually empty). Note `metadata` is a **list
+  of `{name, value}`**. **Metadata names are optional user-generated content** —
+  any given question may or may not carry `ff_version`, `troubleshooting`, `os`,
+  `solver_id`, etc., so the derived columns are frequently blank and their
+  absence is normal (not drift). `firefox_version` was added going forward (see
+  issue #18); old CSVs were **not** back-filled. The big `troubleshooting`
+  metadata blob (the full Firefox about:support JSON, can be ~200KB) is left in
+  the flattened `metadata` column only — not promoted to its own column.
+  Because these names are sparse, `check_schema.py` treats metadata drift as
+  **additive-only** (reports new names, never flags a missing one as "removed").
 - **Answers** (`scrape_answers.py`): `id, question_id (<-question), created,
   updated, content, creator (username), is_spam, num_helpful
   (<-num_helpful_votes), num_unhelpful (<-num_unhelpful_votes)`.
