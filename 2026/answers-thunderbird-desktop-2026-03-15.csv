@@ -134,3 +134,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1813401,1571079,2026-04-24T08:23:45.571593Z,2026-04-24T08:23:45.571599Z,<p>I have lost my password but I cannot find where to go in Mozilla to renew it. </p>,Will1946,False,0,0
 1813457,1571079,2026-04-24T13:06:32.545238Z,2026-04-24T13:06:32.545244Z,"<p>Your password is not at Mozilla, but at your email provider. </p>",davidsk,False,0,0
 1830310,1570932,2026-07-05T20:07:56.549171Z,2026-07-05T20:07:56.549177Z,<p>Does Thunderbird / Mozilla have a phone number for support </p>,Pomona73,False,0,0
+1830313,1570932,2026-07-05T20:34:47.274547Z,2026-07-05T20:34:47.274553Z,"<p>I have no idea what changed or exactly when, but Thunderbird no longer asks for a password when sending mail.  It is back to the normal behavior.  This was a problem in March and I don't remember if I received an update or perhaps there was some other factor that changed. </p>",richard269,False,0,0
+1830314,1570932,2026-07-05T20:37:19.709552Z,2026-07-05T20:37:19.709557Z,<p>No idea how to close this thread other than to mark this as solved even though I have no idea what solved the issue. </p>,richard269,False,0,0
