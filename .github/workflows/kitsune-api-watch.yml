@@ -1,0 +1,133 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+name: Kitsune API watch
+
+# Early-warning for UPSTREAM changes to the SUMO/Kitsune code that serves the
+# APIs this scraper depends on. This complements (does not replace) the
+# empirical schema-check.yml, which detects changes in the actual API responses
+# regardless of where they originate. Note: the Fastly JS/WAF challenge is edge
+# infra, NOT a kitsune commit, so it will never show up here — that failure mode
+# is caught by check_schema.py / scrape.yml instead (see
+# docs/js-challenge-edge-waf.md).
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # weekly, Mondays 07:00 UTC
+  workflow_dispatch:
+    inputs:
+      since_days:
+        description: "Look back this many days (default 8)"
+        required: false
+        default: "8"
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: kitsune-api-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check kitsune API paths for new commits
+        id: watch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SINCE_DAYS: ${{ github.event.inputs.since_days || '8' }}
+        run: |
+          set -euo pipefail
+
+          # CORE paths directly define/serve the Q&A + KB API output: every
+          # non-merge commit is worth a look.
+          CORE_PATHS="
+            kitsune/questions/api.py
+            kitsune/wiki/api.py
+            kitsune/questions/models.py
+            kitsune/wiki/models.py
+            kitsune/questions/config.py
+          "
+          # CROSS-CUTTING paths (request-path config) change often for unrelated
+          # reasons, so only surface commits whose message hints at something that
+          # could affect the API — throttling, pagination, DRF, CSP, ratelimit.
+          # (Anything these miss still gets caught empirically by check_schema.py.)
+          CROSS_PATHS="
+            kitsune/settings.py
+            kitsune/sumo/middleware.py
+          "
+          CROSS_RE='REST_FRAMEWORK|THROTTL|PAGINAT|RATELIMIT|RATE.?LIMIT|\bCSP\b|connect-src|SERIALIZ|\bAPI\b|CORS|MIDDLEWARE'
+
+          SINCE="$(date -u -d "${SINCE_DAYS} days ago" +%Y-%m-%dT%H:%M:%SZ)"
+          echo "Looking for mozilla/kitsune commits since $SINCE"
+
+          # SHAs already reported in the open watch issue (if any), so a rolling
+          # window with overlap never double-reports the same commit.
+          EXISTING="$(gh issue list --repo "$GITHUB_REPOSITORY" \
+            --label kitsune-api-change --state open \
+            --json number --jq '.[0].number')"
+          SEEN=""
+          if [ -n "$EXISTING" ]; then
+            SEEN="$(gh issue view "$EXISTING" --repo "$GITHUB_REPOSITORY" \
+              --json body,comments --jq '.body, (.comments[].body)')"
+          fi
+
+          : > report.md
+          FOUND=0
+          report_path() {  # $1=path  $2=filter-regex ("" = none)
+            local p="$1" filter="$2" commits sha date msg short
+            commits="$(gh api \
+              "repos/mozilla/kitsune/commits?path=${p}&sha=main&since=${SINCE}&per_page=100" \
+              --jq '.[] | "\(.sha)\t\(.commit.author.date[0:10])\t\(.commit.message | split("\n")[0])"' \
+              || true)"
+            [ -z "$commits" ] && return 0
+            while IFS="$(printf '\t')" read -r sha date msg; do
+              [ -z "$sha" ] && continue
+              # Drop merge commits (pure noise).
+              case "$msg" in "Merge pull request"*|"Merge branch"*) continue;; esac
+              # For cross-cutting paths, require an API-relevant keyword.
+              if [ -n "$filter" ] && ! printf '%s' "$msg" | grep -qiE "$filter"; then
+                continue
+              fi
+              # Skip commits already reported in the open issue.
+              if [ -n "$SEEN" ] && printf '%s' "$SEEN" | grep -qF "$sha"; then
+                continue
+              fi
+              short="${sha:0:9}"
+              echo "- \`$short\` $date — $msg" >> report.md
+              echo "  ([\`$p\`](https://github.com/mozilla/kitsune/commit/$sha))" >> report.md
+              FOUND=1
+            done < <(printf '%s\n' "$commits")
+          }
+
+          for p in $CORE_PATHS;  do report_path "$p" ""; done
+          for p in $CROSS_PATHS; do report_path "$p" "$CROSS_RE"; done
+
+          echo "found=$FOUND" >> "$GITHUB_OUTPUT"
+          echo "existing=$EXISTING" >> "$GITHUB_OUTPUT"
+          echo "----- report -----"; cat report.md || true
+
+      - name: Open or update issue on new upstream commits
+        if: steps.watch.outputs.found == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh label create kitsune-api-change --color 0E8A16 \
+            --description "New upstream kitsune commits touch the APIs we use" \
+            2>/dev/null || true
+
+          HEADER=$'New **mozilla/kitsune** commits touch code that serves (or gates) the SUMO APIs this scraper depends on.\n\n**Review each:** does it change serialized fields, filtering, throttling, or request handling for `/api/2/question|answer/` or `/api/1/kb/`? If field-affecting, run `uv run python check_schema.py --headless` and update `docs/kitsune-api-commits-2026.md`.\n'
+          BODY="$HEADER"$'\n'"$(cat report.md)"
+
+          EXISTING="${{ steps.watch.outputs.existing }}"
+          if [ -n "$EXISTING" ]; then
+            echo "Commenting on existing issue #$EXISTING"
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            echo "Opening a new kitsune-api-change issue"
+            gh issue create --title "Upstream kitsune API commits to review" \
+              --label kitsune-api-change --body "$BODY"
+          fi
