@@ -146,6 +146,24 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   and opens/comments a labelled `schema-change` issue on drift (de-duped by
   label). Baseline `schema/expected-fields.json` is **only** updated manually via
   `--update-baseline`; if a field is *removed*, update the scrapers too.
+  `check_schema.py` exits **2 (not 1)** when the API is **blocked by the Fastly
+  JS/WAF challenge** (a persistent 200-but-HTML, surfaced as `sumo.ChallengeError`);
+  the workflow then opens/comments a separate `api-blocked` issue instead of a
+  spurious `schema-change` one. See `docs/js-challenge-edge-waf.md`.
+- `.github/workflows/kitsune-api-watch.yml` — **weekly** (Mondays 07:00 UTC) +
+  manual; **early-warning for UPSTREAM `mozilla/kitsune` commits** that touch the
+  code serving/gating our APIs. Queries the GitHub API for new commits (rolling
+  window, default 8 days; de-duped by SHA against the open issue) on **core paths**
+  (`questions/api.py`, `wiki/api.py`, `questions/models.py`, `wiki/models.py`,
+  `questions/config.py` — all non-merge commits) plus **cross-cutting paths**
+  (`settings.py`, `sumo/middleware.py` — only when the message hints at
+  throttle/pagination/DRF/CSP/ratelimit, since they churn for unrelated reasons),
+  and opens/comments a labelled `kitsune-api-change` issue. This **complements, not
+  replaces**, `schema-check.yml`: the schema check is the empirical safety net
+  (catches response changes regardless of origin, incl. edge/WAF), while this is
+  code-level early warning. **The Fastly challenge is edge infra, not a kitsune
+  commit, so it never appears here** — that's caught by the schema check /
+  `run_refresh` instead.
 - Actions are pinned to Node-24 versions: `actions/checkout@v5`,
   `astral-sh/setup-uv@v8.2.0`.
 

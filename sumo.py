@@ -35,6 +35,18 @@ _max_csv_field_size()
 HOME_URL = "https://support.mozilla.org/"
 API_BASE = "https://support.mozilla.org/api/2/"
 
+
+class ChallengeError(RuntimeError):
+    """The API returned a 200 that isn't JSON — i.e. the Fastly edge served the
+    JS/WAF bot-challenge page (HTML) instead of the API, and the browser did not
+    pass it within the retry budget.
+
+    Subclasses RuntimeError so existing ``except RuntimeError`` handlers still
+    catch it, while callers that care (e.g. check_schema.py) can distinguish a
+    *blocked* API from ordinary schema drift or a transient 5xx. See
+    docs/js-challenge-edge-waf.md (upstream mozilla/sumo#3124,
+    thunderbird/bitergia-deploy#50)."""
+
 # A realistic, current desktop UA reduces the chance of being flagged.
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -177,7 +189,12 @@ class SumoBrowser:
                   f"({reason}) for {url}", file=sys.stderr)
             time.sleep(wait)
 
-        raise RuntimeError(
+        # A give-up on a 200 means every attempt returned non-JSON: the Fastly
+        # edge is serving the HTML bot-challenge instead of the API. Raise the
+        # distinct ChallengeError so callers can alert on "API blocked" rather
+        # than misreport it as schema drift or a server error.
+        exc = ChallengeError if last["status"] == 200 else RuntimeError
+        raise exc(
             f"Gave up after {self.max_attempts} attempts; last status "
             f"{last['status']} for {url}\nFirst 300 chars: {last['snippet']!r}\n"
             "If this is a 200 with HTML, the browser may not have passed the "

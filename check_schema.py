@@ -24,7 +24,7 @@ import json
 import sys
 from urllib.parse import urlencode
 
-from sumo import API_BASE, SumoBrowser
+from sumo import API_BASE, ChallengeError, SumoBrowser
 
 BASELINE_PATH = "schema/expected-fields.json"
 PRODUCTS = ["thunderbird", "thunderbird-android"]
@@ -169,7 +169,25 @@ def main():
                    help="MANUAL BUMP: overwrite the baseline with observed fields")
     args = p.parse_args()
 
-    obs = observe(args.headless, args.pages)
+    try:
+        obs = observe(args.headless, args.pages)
+    except ChallengeError as e:
+        # The API is blocked by the Fastly JS/WAF challenge, not drifting. Report
+        # it distinctly (exit 2) so the workflow can raise a different, correctly
+        # framed alert instead of a "schema drift" issue. See
+        # docs/js-challenge-edge-waf.md.
+        print(
+            "API BLOCKED: the SUMO API returned the Fastly JS/WAF bot-challenge "
+            "(HTTP 200 HTML, not JSON) — the browser did not pass it. This is "
+            "**not** schema drift; no baseline change is warranted.\n\n"
+            f"```\n{e}\n```\n\n"
+            "**What to check:** whether the edge challenge tightened (e.g. "
+            "behavioural checks a scripted browser can't pass) or our runner IP "
+            "is being challenged harder. Background + upstream trail: "
+            "`docs/js-challenge-edge-waf.md` (mozilla/sumo#3124, "
+            "thunderbird/bitergia-deploy#50)."
+        )
+        sys.exit(2)
 
     if args.update_baseline:
         import os
