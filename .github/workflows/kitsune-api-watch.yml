@@ -115,7 +115,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          gh label create kitsune-api-change --color 0E8A16 \
+          # No actions/checkout in this job, so gh can't infer the repo from git
+          # — pass --repo explicitly on every gh command.
+          gh label create kitsune-api-change --repo "$GITHUB_REPOSITORY" \
+            --color 0E8A16 \
             --description "New upstream kitsune commits touch the APIs we use" \
             2>/dev/null || true
 
@@ -125,9 +128,10 @@ jobs:
           EXISTING="${{ steps.watch.outputs.existing }}"
           if [ -n "$EXISTING" ]; then
             echo "Commenting on existing issue #$EXISTING"
-            gh issue comment "$EXISTING" --body "$BODY"
+            gh issue comment "$EXISTING" --repo "$GITHUB_REPOSITORY" --body "$BODY"
           else
             echo "Opening a new kitsune-api-change issue"
-            gh issue create --title "Upstream kitsune API commits to review" \
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "Upstream kitsune API commits to review" \
               --label kitsune-api-change --body "$BODY"
           fi
