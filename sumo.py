@@ -47,6 +47,23 @@ class ChallengeError(RuntimeError):
     docs/js-challenge-edge-waf.md (upstream mozilla/sumo#3124,
     thunderbird/bitergia-deploy#50)."""
 
+
+class RateLimitDeferral(RuntimeError):
+    """A 429 asked us to wait longer than `SumoBrowser.max_429_wait_s`, so instead
+    of blocking the whole run on one long rate-limit window we abort this fetch and
+    let the caller DEFER the unit of work (a created-day) to a later run.
+
+    Subclasses RuntimeError so existing handlers still catch it. run_refresh.py
+    treats a deferred day specially: it leaves that day's CSV untouched and holds
+    the high-water mark below the day's earliest change so the next run retries it.
+    Deferral is OFF unless `max_429_wait_s` is set (default None = wait as before)."""
+
+
+# Exit code a scraper subprocess uses to signal "deferred, not a hard failure"
+# (chosen from the 64-113 sysexits range, distinct from 0/1/2). run_refresh.py
+# distinguishes this from a real error when deciding whether a day completed.
+DEFERRAL_EXIT_CODE = 75
+
 # A realistic, current desktop UA reduces the chance of being flagged.
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -68,11 +85,17 @@ class SumoBrowser:
 
     def __init__(self, headless=False, settle_ms=6000,
                  max_attempts=5, backoff_base=2.0,
-                 retry_jitter_min_s=60, retry_jitter_max_s=300):
+                 retry_jitter_min_s=60, retry_jitter_max_s=300,
+                 max_429_wait_s=None):
         self.headless = headless
         self.settle_ms = settle_ms
         self.max_attempts = max_attempts
         self.backoff_base = backoff_base
+        # If set, a 429 whose required wait (Retry-After / backoff) exceeds this
+        # many seconds raises RateLimitDeferral instead of sleeping, so a caller
+        # can defer the work rather than burn the run on one long window. None =
+        # honour the wait in full (original behaviour).
+        self.max_429_wait_s = max_429_wait_s
         # Extra random pause added on top of a 429 wait (default 1-5 min) so we
         # always retry strictly AFTER SUMO's Retry-After window and desync retries.
         self.retry_jitter_min_s = retry_jitter_min_s
@@ -181,6 +204,17 @@ class SumoBrowser:
                         wait = max(wait, float(result["retry_after"]))
                     except (TypeError, ValueError):
                         pass
+                # Defer instead of blocking when the server's required wait is
+                # long: waiting out a ~12 min Retry-After (repeatedly) is what
+                # made the hourly refresh exceed its job timeout. The threshold is
+                # the server-demanded wait, before our own retry jitter.
+                if (self.max_429_wait_s is not None
+                        and wait > self.max_429_wait_s):
+                    raise RateLimitDeferral(
+                        f"429 requires waiting {wait:.0f}s "
+                        f"(> max_429_wait {self.max_429_wait_s:.0f}s) for {url}; "
+                        "deferring to a later run."
+                    )
                 wait += random.uniform(self.retry_jitter_min_s,
                                        self.retry_jitter_max_s)
             reason = (f"HTTP {status}" if status != 200

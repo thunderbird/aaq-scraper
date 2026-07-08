@@ -56,6 +56,24 @@ context.
   query params (`id__in`, a `product` filter on answers, etc. are dropped and you
   get the unfiltered list) — only whitelisted fields filter, so verify filters
   empirically.
+- **429 deferral + durable partial high-water mark** (guards the refresh against
+  the SUMO API's aggressive rate-limiting, which returns HTTP 429 with
+  `Retry-After` windows of ~10-15 min). `SumoBrowser(max_429_wait_s=…)` +
+  `fetch_json` raise **`sumo.RateLimitDeferral`** instead of sleeping when a 429
+  demands longer than the threshold; the scrapers exit **`DEFERRAL_EXIT_CODE`
+  (75)** *without touching their CSV* (writes are atomic: tmp file + `os.replace`).
+  `run_refresh.py` treats a deferred day as *not completed* and advances the
+  high-water mark only to just **below the earliest `updated` change of any
+  deferred/failed day** (`compute_new_hwm`; fully to `now` if nothing deferred).
+  For that, `find_updated_days` returns **`{(slug, day): earliest_updated_dt}`**
+  (not just pairs). A **`--soft-deadline`** (minutes) stops taking new days near a
+  CI timeout and defers the rest. Net effect: a slow/rate-limited/cut-off run
+  advances the mark over what finished and retries only the rest next run — so a
+  single slow run can **never** freeze the mark and trigger the growing-window
+  death spiral (incident 2026-07-08). Deferral is **off by default**
+  (`max_429_wait_s=None`, no soft deadline) so manual backfills / explicit-range
+  refreshes still wait in full; the **hourly workflow opts in** with
+  `--soft-deadline 40 --max-429-wait 120`.
 
 ## CSV columns
 

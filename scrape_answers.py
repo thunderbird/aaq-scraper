@@ -23,7 +23,7 @@ import time
 from urllib.parse import urlencode
 
 from csv_safety import escape_formula, redact_credentials
-from sumo import API_BASE, SumoBrowser
+from sumo import API_BASE, DEFERRAL_EXIT_CODE, RateLimitDeferral, SumoBrowser
 
 # Importing sumo raises csv.field_size_limit to the platform maximum, so reading
 # questions files with very large `content` fields works.
@@ -78,6 +78,10 @@ def main():
                    help="randomly vary each delay between --min-delay and --max-delay")
     p.add_argument("--min-delay", type=float, default=2.0)
     p.add_argument("--max-delay", type=float, default=10.0)
+    p.add_argument("--max-429-wait", type=float, default=None, dest="max_429_wait",
+                   help="defer (exit %d) instead of waiting when a 429 demands "
+                        "longer than this many seconds (default: wait in full)"
+                        % DEFERRAL_EXIT_CODE)
     args = p.parse_args()
 
     qids = read_question_ids(args.questions)
@@ -97,31 +101,41 @@ def main():
             else args.sleep
 
     rows = []
-    with SumoBrowser(headless=args.headless) as sumo:
-        for n, qid in enumerate(qids, 1):
-            params = {"format": "json", "question": qid}
-            if args.ordering != "none":
-                params["ordering"] = args.ordering
-            url = f"{API_BASE}answer/?{urlencode(params)}"
-            got = 0
-            while url:
-                data = sumo.fetch_json(url)
-                for a in data.get("results", []):
-                    rows.append(flatten_answer(a))
-                    got += 1
-                url = data.get("next")
-                if url:
+    try:
+        with SumoBrowser(headless=args.headless,
+                         max_429_wait_s=args.max_429_wait) as sumo:
+            for n, qid in enumerate(qids, 1):
+                params = {"format": "json", "question": qid}
+                if args.ordering != "none":
+                    params["ordering"] = args.ordering
+                url = f"{API_BASE}answer/?{urlencode(params)}"
+                got = 0
+                while url:
+                    data = sumo.fetch_json(url)
+                    for a in data.get("results", []):
+                        rows.append(flatten_answer(a))
+                        got += 1
+                    url = data.get("next")
+                    if url:
+                        time.sleep(delay())
+                print(f"[{n}/{len(qids)}] question {qid}: {got} answers "
+                      f"(total {len(rows)})", file=sys.stderr)
+                if n < len(qids):
                     time.sleep(delay())
-            print(f"[{n}/{len(qids)}] question {qid}: {got} answers "
-                  f"(total {len(rows)})", file=sys.stderr)
-            if n < len(qids):
-                time.sleep(delay())
+    except RateLimitDeferral as e:
+        # Leave any existing CSV untouched and signal "deferred" so run_refresh
+        # holds the high-water mark and retries this day on a later run.
+        print(f"DEFERRED (rate-limited): {e}", file=sys.stderr)
+        sys.exit(DEFERRAL_EXIT_CODE)
 
     rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
-    with open(out, "w", newline="", encoding="utf-8") as f:
+    # Atomic write (tmp + replace): a hard kill mid-write can't truncate the CSV.
+    tmp = out + ".tmp"
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=COLUMNS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
+    os.replace(tmp, out)
 
     print(f"Wrote {len(rows)} answers to {out}", file=sys.stderr)
 

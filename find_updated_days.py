@@ -91,7 +91,7 @@ def _questions_updated(sumo, slug, gt_str, lt_str, less_than, delay, seen,
             if min_day is not None and day < min_day:
                 continue  # too old to refresh
             found += 1
-            yield (slug, day)
+            yield (slug, day, updated)  # updated (may be None) -> watermark
         print(f"[q:{slug}] page {page_num}: +{len(results)} (kept {found})",
               file=sys.stderr)
         if stop:
@@ -102,10 +102,13 @@ def _questions_updated(sumo, slug, gt_str, lt_str, less_than, delay, seen,
 
 
 def _answer_question_ids(sumo, gt_str, lt_str, less_than, delay):
-    """Return the set of distinct question ids whose ANSWERS changed in the
-    window. The answer endpoint has no product filter, so this spans all
-    products; the caller resolves product per question. ordering=updated
-    (ascending) lets us early-stop once updated >= less_than."""
+    """Return {question_id: earliest_answer_updated_dt} for questions whose
+    ANSWERS changed in the window (updated may be None if the API omitted it).
+
+    The answer endpoint has no product filter, so this spans all products; the
+    caller resolves product per question. ordering=updated (ascending) lets us
+    early-stop once updated >= less_than (and means the first time we see a qid is
+    its earliest change)."""
     params = {
         "format": "json",
         "updated__gt": gt_str,
@@ -115,7 +118,7 @@ def _answer_question_ids(sumo, gt_str, lt_str, less_than, delay):
     url = f"{API_BASE}answer/?{urlencode(params)}"
     print(f"[a] First URL: {url}", file=sys.stderr)
 
-    qids = set()
+    qid_updated = {}
     page_num = 0
     stop = False
     while url and not stop:
@@ -128,16 +131,21 @@ def _answer_question_ids(sumo, gt_str, lt_str, less_than, delay):
                 stop = True
                 break
             qid = a.get("question")
-            if qid is not None:
-                qids.add(qid)
-        print(f"[a] page {page_num}: +{len(results)} (distinct questions {len(qids)})",
-              file=sys.stderr)
+            if qid is None:
+                continue
+            if qid not in qid_updated:
+                qid_updated[qid] = updated
+            elif updated is not None and (qid_updated[qid] is None
+                                          or updated < qid_updated[qid]):
+                qid_updated[qid] = updated
+        print(f"[a] page {page_num}: +{len(results)} "
+              f"(distinct questions {len(qid_updated)})", file=sys.stderr)
         if stop:
             break
         url = data.get("next")
         if url:
             time.sleep(delay())
-    return qids
+    return qid_updated
 
 
 def _resolve_question(sumo, qid, slugs):
@@ -163,8 +171,14 @@ def find_updated_days(sumo, greater_than, less_than, products=PRODUCTS,
                       delay=lambda: 2.0, include_answers=True, min_day=None):
     """Query the `updated` window on an already-open SumoBrowser (caller owns it).
 
-    Returns a sorted list of (slug, 'YYYY-MM-DD') pairs, where the day is each
-    modified question's `created` date (UTC) -- i.e. which day-CSV to rebuild.
+    Returns a dict {(slug, 'YYYY-MM-DD'): earliest_updated_dt} sorted by key,
+    where the day is each modified question's `created` date (UTC) -- i.e. which
+    day-CSV to rebuild -- and the value is the earliest `updated` time of any
+    change (question or answer) that maps to that day. run_refresh uses that
+    earliest time as the durable-watermark floor for a day it has to DEFER: the
+    high-water mark must never advance past an unapplied change. (Iterating the
+    dict yields the (slug, day) keys, so callers that only need the pairs still
+    work.)  A change with no `updated` falls back to the window start.
 
     `greater_than`/`less_than` are the raw tz-aware UTC window bounds
     (updated__gt / updated__lt). For whole-day windows use day_bounds(); the
@@ -190,18 +204,32 @@ def find_updated_days(sumo, greater_than, less_than, products=PRODUCTS,
     if min_day:
         print(f"Age cutoff: skip created day < {min_day}", file=sys.stderr)
 
-    pairs = set()
-    seen_q = {}  # question id -> (slug, day) resolved in the question pass
+    def fold(key, updated):
+        # Keep the earliest change time per day; a missing `updated` falls back to
+        # the window start (most conservative floor for a deferred day).
+        u = updated if updated is not None else greater_than
+        if key not in pair_min or u < pair_min[key]:
+            pair_min[key] = u
+
+    pair_min = {}  # (slug, day) -> earliest updated dt
+    seen_q = {}    # question id -> (slug, day) resolved in the question pass
     for slug, _label in products:
-        pairs.update(_questions_updated(sumo, slug, gt_str, lt_str, less_than,
-                                        delay, seen_q, min_day))
+        for s, day, updated in _questions_updated(sumo, slug, gt_str, lt_str,
+                                                  less_than, delay, seen_q, min_day):
+            fold((s, day), updated)
 
     if include_answers:
-        qids = _answer_question_ids(sumo, gt_str, lt_str, less_than, delay)
-        todo = [qid for qid in qids if qid not in seen_q]
-        print(f"[a] {len(qids)} questions had answer changes; "
+        qid_updated = _answer_question_ids(sumo, gt_str, lt_str, less_than, delay)
+        todo = [qid for qid in qid_updated if qid not in seen_q]
+        print(f"[a] {len(qid_updated)} questions had answer changes; "
               f"{len(seen_q)} already known, resolving {len(todo)} by detail fetch",
               file=sys.stderr)
+        # Fold answer-change times for questions already mapped in pass 1 (no
+        # detail fetch needed): an answer-only edit can predate the question's own
+        # `updated`, so a deferred day's floor must account for it too.
+        for qid in qid_updated:
+            if qid in seen_q and seen_q[qid] in pair_min:
+                fold(seen_q[qid], qid_updated[qid])
         too_old = 0
         for n, qid in enumerate(todo, 1):
             resolved = _resolve_question(sumo, qid, slugs)
@@ -209,14 +237,14 @@ def find_updated_days(sumo, greater_than, less_than, products=PRODUCTS,
                 if min_day is not None and resolved[1] < min_day:
                     too_old += 1
                 else:
-                    pairs.add(resolved)
+                    fold(resolved, qid_updated[qid])
             if n % 25 == 0 or n == len(todo):
                 print(f"[a] resolved {n}/{len(todo)} "
-                      f"(pairs {len(pairs)}, too old {too_old})", file=sys.stderr)
+                      f"(pairs {len(pair_min)}, too old {too_old})", file=sys.stderr)
             if n < len(todo):
                 time.sleep(delay())
 
-    return sorted(pairs)
+    return dict(sorted(pair_min.items()))
 
 
 def find_updated_days_standalone(start_dt, end_dt, products=PRODUCTS,
