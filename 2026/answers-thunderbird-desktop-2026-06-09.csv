@@ -85,3 +85,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1829591,1586494,2026-07-02T03:27:13.479262Z,2026-07-02T03:27:13.479267Z,<p>Kim are you still seeing this issue? </p>,wsmwk,False,0,0
 1829722,1586383,2026-07-02T16:30:56.590966Z,2026-07-02T16:30:56.590976Z,<p>This just happened to me this morning - yesterday was fine.  TB version 152.0.1 (aarch64) on MacOSX Tahoe 26.4. </p>,sally.houghton,False,0,0
 1829726,1586383,2026-07-02T16:36:44.756065Z,2026-07-02T16:36:44.756073Z,<p>Ah - no problem - is my mail server.  I went into TB account settings and used the test connection to server option under 'server settings' and see that the certificate on my mail server is out of date. </p>,sally.houghton,False,0,0
+1830472,1586446,2026-07-06T12:32:33.899428Z,2026-07-06T12:32:33.899434Z,"<p>k8volk8voj, thanks for your update. </p><p>In the future, please mark one of comments as solving your problem. </p>",wsmwk,False,0,0
