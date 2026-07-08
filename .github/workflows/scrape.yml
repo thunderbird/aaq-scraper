@@ -36,12 +36,13 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # Cap the run so SUMO rate-limiting (429 retry-backoff) can't hang a refresh
-    # for GitHub's 6h default and block subsequent runs. A healthy incremental
-    # refresh finishes in minutes; under throttling this gives a run room to ride
-    # out a few Retry-After waits, and failing past it lets the next hourly run
-    # (with a fresh rate-limit budget) self-heal.
-    timeout-minutes: 50
+    # Hard backstop above run_refresh's --soft-deadline (40 min): the refresh
+    # stops taking new days at 40 min and exits cleanly with the high-water mark
+    # advanced over whatever finished, so this cap should rarely fire. It only
+    # guards against a hang below the deadline check (e.g. a stuck browser). Keep
+    # it > the soft deadline and < the hourly interval so cancel-in-progress still
+    # bounds a truly stuck run.
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v5
         # Full history so the "Commit results" rebase-onto-latest-main can always
@@ -84,9 +85,13 @@ jobs:
           START="${{ github.event.inputs.start_date }}"
           END="${{ github.event.inputs.end_date }}"
           if [ -n "$START" ]; then
+            # Manual explicit-range catch-up: run to completion (no deferral).
             uv run python run_refresh.py "$START" ${END:+"$END"}
           else
-            uv run python run_refresh.py
+            # Hourly incremental: defer long 429 waits and stop at the soft
+            # deadline so the run ends cleanly and the mark advances over what
+            # finished (deferred days are retried next run — no spiral).
+            uv run python run_refresh.py --soft-deadline 40 --max-429-wait 120
           fi
 
       - name: Save refresh high-water mark

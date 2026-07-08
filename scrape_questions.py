@@ -27,7 +27,7 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlencode
 
 from csv_safety import escape_formula, redact_credentials
-from sumo import API_BASE, SumoBrowser
+from sumo import API_BASE, DEFERRAL_EXIT_CODE, RateLimitDeferral, SumoBrowser
 
 # API product slug -> human label used in output filenames.
 PRODUCT_LABELS = {"thunderbird": "thunderbird-desktop"}
@@ -158,6 +158,10 @@ def main():
                    help="randomly vary each delay between --min-delay and --max-delay")
     p.add_argument("--min-delay", type=float, default=2.0)
     p.add_argument("--max-delay", type=float, default=10.0)
+    p.add_argument("--max-429-wait", type=float, default=None, dest="max_429_wait",
+                   help="defer (exit %d) instead of waiting when a 429 demands "
+                        "longer than this many seconds (default: wait in full)"
+                        % DEFERRAL_EXIT_CODE)
     args = p.parse_args()
 
     start_dt = datetime(args.sy, args.sm, args.sd, tzinfo=timezone.utc)
@@ -189,36 +193,47 @@ def main():
     print(f"First URL: {first_url}", file=sys.stderr)
 
     collected = []
-    with SumoBrowser(headless=args.headless) as sumo:
-        url = first_url
-        page_num = 0
-        stop = False
-        while url and not stop:
-            data = sumo.fetch_json(url)
-            page_num += 1
-            results = data.get("results", [])
-            for q in results:
-                created = parse_dt(q.get("created"))
-                if ascending and created is not None and created >= less_than:
-                    stop = True
+    try:
+        with SumoBrowser(headless=args.headless,
+                         max_429_wait_s=args.max_429_wait) as sumo:
+            url = first_url
+            page_num = 0
+            stop = False
+            while url and not stop:
+                data = sumo.fetch_json(url)
+                page_num += 1
+                results = data.get("results", [])
+                for q in results:
+                    created = parse_dt(q.get("created"))
+                    if ascending and created is not None and created >= less_than:
+                        stop = True
+                        break
+                    collected.append(q)
+                print(f"page {page_num}: +{len(results)} (total {len(collected)})",
+                      file=sys.stderr)
+                if stop:
                     break
-                collected.append(q)
-            print(f"page {page_num}: +{len(results)} (total {len(collected)})",
-                  file=sys.stderr)
-            if stop:
-                break
-            url = data.get("next")
-            if url:
-                time.sleep(delay())
+                url = data.get("next")
+                if url:
+                    time.sleep(delay())
+    except RateLimitDeferral as e:
+        # Leave any existing CSV untouched (we never reached the write) and signal
+        # "deferred" so run_refresh holds the high-water mark and retries later.
+        print(f"DEFERRED (rate-limited): {e}", file=sys.stderr)
+        sys.exit(DEFERRAL_EXIT_CODE)
 
     rows = [flatten_question(q) for q in collected]
     rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
     fieldnames = build_fieldnames(rows)
-    with open(out, "w", newline="", encoding="utf-8") as f:
+    # Write atomically (tmp + replace) so a hard kill mid-write can't leave a
+    # truncated CSV; the previous good file survives until the new one is complete.
+    tmp = out + ".tmp"
+    with open(tmp, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, restval="",
                                 extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
+    os.replace(tmp, out)
 
     print(f"Wrote {len(rows)} questions to {out} ({len(fieldnames)} columns)",
           file=sys.stderr)

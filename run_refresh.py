@@ -36,7 +36,7 @@ import time
 from datetime import datetime, timedelta, timezone
 
 import find_updated_days as fud
-from sumo import SumoBrowser
+from sumo import DEFERRAL_EXIT_CODE, RateLimitDeferral, SumoBrowser
 
 PRODUCTS = [("thunderbird", "thunderbird-desktop"),
             ("thunderbird-android", "thunderbird-android")]
@@ -49,6 +49,24 @@ def run(cmd):
     r = subprocess.run(cmd)
     if r.returncode != 0:
         print(f"WARN exit {r.returncode}: {' '.join(cmd)}", flush=True)
+    return r.returncode
+
+
+def compute_new_hwm(deferred_floors, less_than):
+    """High-water mark to persist after a run.
+
+    `deferred_floors` are the earliest-`updated` times of the days that did NOT
+    complete this run (rate-limited, failed, or skipped past the soft deadline).
+    `less_than` is the window end (the run's start `now`).
+
+    With nothing deferred, advance fully to `less_than`. Otherwise hold the mark
+    just before the earliest unapplied change (min floor − 1s) so the next run
+    re-queries and retries exactly those days, while every completed day stays
+    applied. Never advances past `less_than`.
+    """
+    if not deferred_floors:
+        return less_than
+    return min(min(deferred_floors) - timedelta(seconds=1), less_than)
 
 
 def parse_date(s):
@@ -86,6 +104,15 @@ def main():
     p.add_argument("--max-age-days", type=int, default=fud.DEFAULT_MAX_AGE_DAYS,
                    help="don't refresh created days older than this (default "
                         f"{fud.DEFAULT_MAX_AGE_DAYS}; 0 disables)")
+    p.add_argument("--soft-deadline", type=float, default=None,
+                   help="stop starting new days after this many minutes and defer "
+                        "the rest, so the run ends before a CI timeout and the "
+                        "high-water mark still advances over what finished "
+                        "(default: no deadline)")
+    p.add_argument("--max-429-wait", type=float, default=None, dest="max_429_wait",
+                   help="defer a day (retry it next run) instead of blocking when "
+                        "a 429 demands longer than this many seconds; passed to "
+                        "the scrapers and the discovery browser")
     args = p.parse_args()
 
     incremental = not args.dates
@@ -112,46 +139,93 @@ def main():
     print(f"Refresh window: {greater_than.isoformat()} .. {less_than.isoformat()}",
           flush=True)
 
+    deadline_s = args.soft_deadline * 60 if args.soft_deadline else None
+    start_mono = time.monotonic()
+
+    def maybe_pass(v):  # forward --max-429-wait to a subprocess only when set
+        return ["--max-429-wait", str(v)] if v is not None else []
+
     # One browser for discovery; each scrape subprocess opens its own (as in
     # run_backfill.py). Reusing a single browser across all scrapes is a future
-    # optimisation that would require importable scraper functions.
-    with SumoBrowser(headless=True) as sumo:
-        pairs = fud.find_updated_days(sumo, greater_than, less_than, PRODUCTS,
-                                      min_day=fud.cutoff_day(args.max_age_days))
+    # optimisation that would require importable scraper functions. If discovery
+    # itself is rate-limited beyond tolerance we can't learn the full change set,
+    # so we defer the WHOLE run and leave the high-water mark untouched.
+    try:
+        with SumoBrowser(headless=True, max_429_wait_s=args.max_429_wait) as sumo:
+            pairs = fud.find_updated_days(sumo, greater_than, less_than, PRODUCTS,
+                                          min_day=fud.cutoff_day(args.max_age_days))
+    except RateLimitDeferral as e:
+        print(f"DISCOVERY DEFERRED (rate-limited): {e}", flush=True)
+        print("High-water mark unchanged; next run retries this window.",
+              flush=True)
+        return
 
     labels = dict(PRODUCTS)
-    print(f"Refreshing {len(pairs)} (product, day) pairs", flush=True)
+    day_items = list(pairs.items())  # [((slug, day), earliest_updated_dt), ...]
+    print(f"Refreshing {len(day_items)} (product, day) pairs", flush=True)
 
     rebuilt = []
-    for i, (slug, day) in enumerate(pairs):
+    deferred_floors = []  # earliest-updated floor of each day NOT completed
+    for i, ((slug, day), floor) in enumerate(day_items):
         label = labels.get(slug, slug)
+
+        # Soft deadline: stop starting new days, defer the remainder so the run
+        # ends cleanly (the mark still advances over whatever finished).
+        if deadline_s is not None and (time.monotonic() - start_mono) > deadline_s:
+            remaining = day_items[i:]
+            print(f"\nSOFT DEADLINE reached ({args.soft_deadline:g} min); "
+                  f"deferring {len(remaining)} remaining day(s)", flush=True)
+            deferred_floors.extend(f for _, f in remaining)
+            break
+
         y, m, dd = (int(x) for x in day.split("-"))
-        print(f"\n=== {i+1}/{len(pairs)}: {slug} {day} ===", flush=True)
+        print(f"\n=== {i+1}/{len(day_items)}: {slug} {day} ===", flush=True)
 
-        run(["uv", "run", "python", "scrape_questions.py",
-             str(y), str(m), str(dd), str(y), str(m), str(dd),
-             "--product", slug, "--headless", "--random-delay"])
-
-        q = f"{day[:4]}/questions-{label}-{day}.csv"
-        if os.path.exists(q):
-            run(["uv", "run", "python", "scrape_answers.py",
-                 "--questions", q, "--headless", "--random-delay"])
-            rebuilt.append(q)
+        rc = run(["uv", "run", "python", "scrape_questions.py",
+                  str(y), str(m), str(dd), str(y), str(m), str(dd),
+                  "--product", slug, "--headless", "--random-delay"]
+                 + maybe_pass(args.max_429_wait))
+        if rc != 0:
+            kind = "DEFERRED (rate-limited)" if rc == DEFERRAL_EXIT_CODE \
+                else f"FAILED (exit {rc})"
+            print(f"{kind} day {slug} {day} at questions; will retry", flush=True)
+            deferred_floors.append(floor)
         else:
-            print(f"WARN no questions CSV at {q}", flush=True)
+            q = f"{day[:4]}/questions-{label}-{day}.csv"
+            if os.path.exists(q):
+                rc = run(["uv", "run", "python", "scrape_answers.py",
+                          "--questions", q, "--headless", "--random-delay"]
+                         + maybe_pass(args.max_429_wait))
+                if rc != 0:
+                    kind = "DEFERRED (rate-limited)" if rc == DEFERRAL_EXIT_CODE \
+                        else f"FAILED (exit {rc})"
+                    print(f"{kind} day {slug} {day} at answers; will retry",
+                          flush=True)
+                    deferred_floors.append(floor)
+                else:
+                    rebuilt.append(q)
+            else:
+                # scrape_questions always writes a CSV (header even for 0 rows), so
+                # this is only a path mismatch; nothing to retry for the watermark.
+                print(f"WARN no questions CSV at {q}", flush=True)
 
-        if i < len(pairs) - 1:
+        if i < len(day_items) - 1:
             time.sleep(random.uniform(MIN_WAIT, MAX_WAIT))
 
-    # Advance the high-water mark only after a clean incremental run, so a crash
-    # mid-run re-queries the same window next time (idempotent).
+    # Advance the high-water mark after an incremental run. Deferred/failed days
+    # hold it just below their earliest change so they're retried next run; if
+    # nothing was deferred it advances fully. A hard crash writes nothing, so the
+    # same window is re-queried next time (idempotent).
     if incremental:
-        write_hwm(args.state, less_than)
-        print(f"High-water mark -> {less_than.isoformat()} ({args.state})",
+        new_hwm = compute_new_hwm(deferred_floors, less_than)
+        note = "advanced" if not deferred_floors \
+            else f"held below {len(deferred_floors)} deferred/failed day(s)"
+        write_hwm(args.state, new_hwm)
+        print(f"High-water mark -> {new_hwm.isoformat()} ({args.state}) [{note}]",
               flush=True)
 
-    print(f"\nREFRESH COMPLETE: {len(pairs)} pairs, "
-          f"{len(rebuilt)} question/answer CSV sets rebuilt", flush=True)
+    print(f"\nREFRESH COMPLETE: {len(day_items)} pairs, {len(rebuilt)} rebuilt, "
+          f"{len(deferred_floors)} deferred/failed", flush=True)
 
 
 if __name__ == "__main__":
