@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1831048,1591932,2026-07-09T01:29:38.337027Z,2026-07-09T01:29:38.337034Z,"<p>That is an issue with your email provider, not Thunderbird. Thunderbird has no ability to suspend accounts. </p>",davidsk,False,0,0
+1831084,1591938,2026-07-09T06:17:11.781930Z,2026-07-09T06:17:11.781936Z,"<p>It's likely that the folder's index is corrupt and is showing phantom messages. To repair the folder, right-click on it, choose ""Properties"" from the context menu, and click the ""Repair folder"" button. Follow this up with Compacting the folder. </p>",rednoise,False,0,0
