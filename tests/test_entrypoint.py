@@ -79,3 +79,53 @@ def test_entrypoint_no_changes_no_commit(tmp_path):
 
     count = _run(["git", "rev-list", "--count", "main"], cwd=origin, env=genv)
     assert count.stdout.strip() == "1"  # still just the seed commit
+
+
+def test_entrypoint_rebase_retries_past_competing_push(tmp_path):
+    """A competing commit lands on origin after the entrypoint clones but
+    before it pushes, so the entrypoint's first push is rejected. Verify the
+    rebase-retry loop recovers and both commits end up on origin/main."""
+    genv = _git_env()
+    origin = tmp_path / "origin.git"
+    _run(["git", "init", "--bare", "-b", "main", str(origin)], env=genv)
+    seed = tmp_path / "seed"
+    _run(["git", "clone", str(origin), str(seed)], env=genv)
+    (seed / "2099").mkdir()
+    (seed / "2099" / ".keep").write_text("")
+    _run(["git", "add", "-A"], cwd=seed, env=genv)
+    _run(["git", "commit", "-m", "seed"], cwd=seed, env=genv)
+    _run(["git", "push", "origin", "main"], cwd=seed, env=genv)
+
+    repo_root = Path(__file__).resolve().parent.parent
+    comp = tmp_path / "competitor"
+    # REFRESH_CMD runs from inside the entrypoint's own clone (after it has
+    # already cloned origin), so pushing a competing commit here lands on
+    # origin *after* the entrypoint's clone but *before* its own push --
+    # forcing the entrypoint's first push to be rejected.
+    refresh_cmd = (
+        f"git clone {origin} {comp} && "
+        f"(cd {comp} && echo x > other.csv && git add -A && "
+        f"git commit -m competitor && git push origin main) && "
+        f"echo id > 2099/questions-test-2099-01-01.csv"
+    )
+    env = _git_env()
+    env.update({
+        "GIT_REPO_URL": f"file://{origin}",
+        "GITHUB_TOKEN": "dummy",
+        "GIT_BRANCH": "main",
+        "REFRESH_CMD": refresh_cmd,
+    })
+    _run(["bash", str(repo_root / "deploy" / "entrypoint.sh")], env=env)
+
+    # Both the competitor's file and the entrypoint's own commit/CSV must be
+    # present on origin/main -- proving rebase-retry reconciled them instead
+    # of dropping either side.
+    log = _run(["git", "log", "--oneline", "-5", "main"], cwd=origin, env=genv)
+    assert "Hourly refresh" in log.stdout
+    assert "competitor" in log.stdout
+
+    other = _run(["git", "show", "main:other.csv"], cwd=origin, env=genv)
+    assert other.stdout.strip() == "x"
+    show = _run(["git", "show",
+                 "main:2099/questions-test-2099-01-01.csv"], cwd=origin, env=genv)
+    assert show.stdout.strip() == "id"

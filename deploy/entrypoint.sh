@@ -17,11 +17,18 @@ GIT_AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-aaq-scraper-bot@thunderbird.net}"
 REFRESH_ARGS="${REFRESH_ARGS:---soft-deadline 40 --max-429-wait 120}"
 
 WORKDIR="$(mktemp -d)"
-# Embed the token in the clone URL (https://x-access-token:TOKEN@github.com/...).
-AUTH_URL="$(printf '%s' "$GIT_REPO_URL" | sed -E "s#https://#https://x-access-token:${GITHUB_TOKEN}@#")"
+trap 'rm -rf "$WORKDIR"' EXIT
 
-git clone --branch "$GIT_BRANCH" "$AUTH_URL" "$WORKDIR/repo"
+# Supply the PAT via a credential helper that reads $GITHUB_TOKEN from the
+# environment at call time, so only the variable NAME (never its value) ever
+# appears in argv (visible via ps / /proc/<pid>/cmdline). The clone/pull/push
+# all use the plain GIT_REPO_URL -- no token spliced into the URL.
+export GIT_TERMINAL_PROMPT=0
+CRED_HELPER='!f() { echo "username=x-access-token"; echo "password=${GITHUB_TOKEN}"; }; f'
+
+git -c credential.helper="$CRED_HELPER" clone --branch "$GIT_BRANCH" "$GIT_REPO_URL" "$WORKDIR/repo"
 cd "$WORKDIR/repo"
+git config credential.helper "$CRED_HELPER"
 git config user.name "$GIT_AUTHOR_NAME"
 git config user.email "$GIT_AUTHOR_EMAIL"
 
