@@ -20,8 +20,9 @@ deployment with a stable, allowlistable egress IP (issue #27).
   compatibility) drives a plain `httpx` client; historically it launched
   Chromium via Playwright to pass the JS challenge, but that is now
   fingerprinted/blocked (#28).
-- **Stack: Python + Playwright, managed with `uv`** — use `uv sync` / `uv run`,
-  never pip or raw venv. Deps in `pyproject.toml`.
+- **Stack: Python + `httpx`, managed with `uv`** — use `uv sync` / `uv run`,
+  never pip or raw venv. Deps in `pyproject.toml`. (`poc.py` still uses Playwright,
+  which is no longer a project dependency — install it separately to run the PoC.)
 - **`fetch_json` retries** transient failures with exponential backoff: HTTP 429
   (honours `Retry-After`), 5xx, and a 200-but-non-JSON challenge hiccup.
   Non-retryable 4xx fail fast.
@@ -112,8 +113,7 @@ deployment with a stable, allowlistable egress IP (issue #27).
 ## Commands
 
 ```sh
-uv sync
-uv run playwright install chromium                 # one-time
+uv sync                                            # httpx client; no browser install needed
 
 # Questions (single day = same date twice). Add --product thunderbird-android for Android.
 uv run python scrape_questions.py 2026 6 10 2026 6 10 --headless
