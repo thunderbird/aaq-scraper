@@ -150,6 +150,25 @@ async function run() {
       return;
     }
     if (endDt < startDt) { setStatus("End date is before start date.", "err"); return; }
+
+    // Firefox MV3 treats host_permissions as opt-in (Chrome grants them at
+    // install), so scripting.executeScript is refused until the user grants
+    // support.mozilla.org. Request it here — this MUST be the first await in
+    // the click handler, because Firefox invalidates permissions.request()
+    // once any other async call has run. Chrome (already granted) resolves
+    // true instantly with no prompt.
+    let granted = true;
+    try {
+      granted = await api.permissions.request({
+        origins: ["https://support.mozilla.org/*"],
+      });
+    } catch (e) { /* API absent on some builds: let executeScript surface it */ }
+    if (!granted) {
+      setStatus("Access to support.mozilla.org was denied. Grant it (about:addons " +
+        "→ SUMO AAQ fetcher → Permissions) and retry.", "err");
+      return;
+    }
+
     // Window math mirrors scrape_questions.py: start-day 00:00:00 minus 1s;
     // end-day 00:00:00 plus 1 day (both days inclusive).
     const gt = fmtStamp(new Date(startDt.getTime() - 1000));
