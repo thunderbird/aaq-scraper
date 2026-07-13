@@ -53,9 +53,14 @@ not blocking. See [#29].
 2. Click the extension's toolbar icon.
 3. Pick the **product**, the **start/end** date window (UTC; same day twice = one
    day), and whether to **fetch answers too**.
-4. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
+4. The **first** click prompts for access to `support.mozilla.org` — allow it.
+   Host access is an *optional* permission (Firefox temporary add-ons and Chrome
+   both grant it on request, not at install), and it's required for the in-page
+   fetch. If you ever deny it, re-grant via `about:addons` → SUMO AAQ fetcher →
+   Permissions.
+5. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
    Downloads folder.
-5. Import it into CSVs:
+6. Import it into CSVs:
    ```sh
    uv run python import_json.py ~/Downloads/aaq-thunderbird-2026-06-10.json
    ```
@@ -74,10 +79,13 @@ not blocking. See [#29].
 
 ## Files
 
-- `manifest.json` — MV3, host permission for `support.mozilla.org`, `scripting`
+- `manifest.json` — MV3, *optional* host permission for `support.mozilla.org`
+  (requested on first fetch), `scripting`
   + `downloads`.
 - `common.js` — `browser`/`chrome` namespace shim + `API_BASE` + product slugs.
 - `popup.html` / `popup.js` — the UI and the injected fetch loop.
+- `icons/` — the 🕷 toolbar/listing icons; regenerate with
+  `uv run python make-icons.py`.
 
 [#26]: https://github.com/thunderbird/aaq-scraper/issues/26
 [#29]: https://github.com/thunderbird/aaq-scraper/issues/29

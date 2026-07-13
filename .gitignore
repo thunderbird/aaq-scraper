@@ -11,6 +11,10 @@ poc-sample.json
 /answers*.csv
 /*.json
 
+# Un-ignore the extension icon dir: the global macOS `Icon?` rule matches
+# `icons` case-insensitively on macOS and would otherwise drop it.
+!extension/icons/
+
 # Incremental-refresh high-water mark (persisted via Actions cache, not git)
 /.refresh-hwm
 
