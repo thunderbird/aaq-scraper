@@ -53,13 +53,14 @@ not blocking. See [#29].
 2. Click the extension's toolbar icon.
 3. Pick the **product**, the **start/end** date window (UTC; same day twice = one
    day), and whether to **fetch answers too**.
-4. First time only: click **Grant support.mozilla.org access** and allow the
-   prompt. Host access is an *optional* permission (granted on request, not at
-   install). **Firefox:** a runtime grant only applies to tabs loaded *after* it,
-   so **reload the support.mozilla.org tab once** after granting. If you ever deny
-   it, re-grant via `about:addons` → SUMO AAQ fetcher → Permissions.
+4. Host access to `support.mozilla.org` is required. **Chrome** grants it at
+   install (nothing to do). **Firefox** does not, so click **Grant
+   support.mozilla.org access** and allow the prompt (or toggle it on under
+   `about:addons` → SUMO AAQ fetcher → Permissions), then reload the
+   support.mozilla.org tab once.
 5. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
-   Downloads folder.
+   Downloads folder. (If in-tab injection is blocked, it automatically retries the
+   fetch from the extension itself.)
 6. Import it into CSVs:
    ```sh
    uv run python import_json.py ~/Downloads/aaq-thunderbird-2026-06-10.json
@@ -79,8 +80,7 @@ not blocking. See [#29].
 
 ## Files
 
-- `manifest.json` — MV3, *optional* host permission for `support.mozilla.org`
-  (requested on first fetch), `scripting`
+- `manifest.json` — MV3, host permission for `support.mozilla.org`, `scripting`
   + `downloads`.
 - `common.js` — `browser`/`chrome` namespace shim + `API_BASE` + product slugs.
 - `popup.html` / `popup.js` — the UI and the injected fetch loop.
