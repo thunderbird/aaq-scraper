@@ -45,7 +45,6 @@ not blocking. See [#29].
 2. **Load Temporary Add-on…** → select `extension/manifest.json`.
 3. Note: a *temporary* add-on **unloads when Firefox restarts** — just re-load
    it. (Permanent install needs AMO signing; out of scope for a stopgap.)
-   Requires Firefox 128+ (for `world: "MAIN"` script injection).
 
 ## Use
 
@@ -68,7 +67,7 @@ not blocking. See [#29].
 | Scraper step | Extension equivalent |
 |---|---|
 | `SumoBrowser` passes the challenge | your real browsing session already did |
-| `page.evaluate` in-page `fetch()` | `scripting.executeScript` in the page's MAIN world (`popup.js` → `fetchInPage`) |
+| `page.evaluate` in-page `fetch()` | `scripting.executeScript` (ISOLATED world) in the tab (`popup.js` → `fetchInPage`); same-origin fetch reuses the browser's cookies |
 | `created__gt/lt` window + ascending early-stop | same math in `popup.js` (`fmtStamp`, `fetchInPage`) |
 | `/api/2/question/`, `/api/2/answer/` pagination | same, following `next` |
 | `flatten_*` / `build_fieldnames` / atomic write | `import_json.py` (imported unchanged) |
