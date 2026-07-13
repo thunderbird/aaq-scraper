@@ -130,6 +130,16 @@ bundle for `import_json.py`.
 5. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
    Downloads folder. (If in-tab injection is blocked, it automatically retries the
    fetch from the extension itself.)
+
+   > **Keep the popup focused while it runs — don't click the page, switch
+   > windows, or change apps until you see "Done: … Saved …".** The browser
+   > dismisses an extension popup the moment it loses focus, and the popup is
+   > what awaits the fetch result; if it closes mid-fetch the run is dropped and
+   > nothing downloads (this is browser popup behavior, not a bug). Keep windows
+   > small (about a week, answers included) so each run finishes quickly. **For
+   > long runs or anything you want to walk away from, use the console snippet
+   > below instead** — it runs as the page's own code, so losing window focus
+   > does not stop it.
 6. Import it into CSVs:
    ```sh
    uv run python import_json.py ~/Downloads/aaq-thunderbird-2026-06-10.json

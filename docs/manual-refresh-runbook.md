@@ -73,6 +73,13 @@ diff /tmp/q.csv 2026/questions-thunderbird-desktop-2026-07-01.csv
 
 ## Gotchas
 
+- **Keep the Chrome popup focused while it fetches** — the browser closes an
+  extension popup the instant it loses focus (clicking the page, switching
+  windows/apps, minimizing), and the popup is what awaits the fetch result, so a
+  mid-fetch close **drops the run** and nothing downloads. This is browser popup
+  behavior, not a bug. Keep windows to ~a week so runs finish quickly; for long
+  runs or anything you want to walk away from, use the **console snippet**
+  (runs as the page's own code, so focus loss doesn't stop it).
 - **Firefox needs the signed install** — temporary add-ons fail with "Missing
   host permission for the tab" even when the popup shows access granted.
 - **Re-signing:** bump `manifest.json` `version`, delete any stale
