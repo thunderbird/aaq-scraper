@@ -67,3 +67,31 @@ def test_429_under_threshold_retries_then_succeeds(monkeypatch):
                   [_resp(429, retry_after="10"), _resp(200, {"ok": 1})],
                   max_429_wait_s=1000)
     assert sb.fetch_json("u") == {"ok": 1}
+
+
+def test_raw_fetch_maps_httpx_response():
+    """_raw_fetch turns an httpx response into the dict fetch_json expects."""
+    import httpx
+
+    def handler(request):
+        return httpx.Response(429, headers={"retry-after": "30"},
+                              text='{"a": 1}')
+
+    sb = sumo.SumoBrowser()
+    sb._client = httpx.Client(transport=httpx.MockTransport(handler))
+    out = sb._raw_fetch("https://support.mozilla.org/api/2/question/")
+    assert out == {"status": 429, "json": {"a": 1},
+                   "snippet": '{"a": 1}', "retry_after": "30"}
+
+
+def test_raw_fetch_non_json_body_sets_json_none():
+    import httpx
+
+    def handler(request):
+        return httpx.Response(200, text="<html>challenge</html>")
+
+    sb = sumo.SumoBrowser()
+    sb._client = httpx.Client(transport=httpx.MockTransport(handler))
+    out = sb._raw_fetch("https://support.mozilla.org/api/2/question/")
+    assert out["status"] == 200 and out["json"] is None
+    assert out["snippet"] == "<html>challenge</html>"
