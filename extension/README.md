@@ -84,6 +84,8 @@ not blocking. See [#29].
   + `downloads`.
 - `common.js` — `browser`/`chrome` namespace shim + `API_BASE` + product slugs.
 - `popup.html` / `popup.js` — the UI and the injected fetch loop.
+- `icons/` — the 🕷 toolbar/listing icons; regenerate with
+  `uv run python make-icons.py`.
 
 [#26]: https://github.com/thunderbird/aaq-scraper/issues/26
 [#29]: https://github.com/thunderbird/aaq-scraper/issues/29
