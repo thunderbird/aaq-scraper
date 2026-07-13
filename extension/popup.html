@@ -10,7 +10,8 @@
     h1 { font-size: 14px; margin: 0 0 4px; }
     .sub { color: #666; margin: 0 0 10px; font-size: 11px; }
     label { display: block; margin: 8px 0 2px; font-weight: 600; }
-    select, input[type="date"] { width: 100%; box-sizing: border-box; padding: 4px; }
+    select, input[type="text"] { width: 100%; box-sizing: border-box; padding: 4px; }
+    input[type="text"]:invalid { border-color: #b60205; }
     .row { display: flex; gap: 8px; }
     .row > div { flex: 1; }
     .check { margin-top: 10px; font-weight: 400; display: flex; align-items: center; gap: 6px; }
@@ -29,14 +30,21 @@
   <label for="product">Product</label>
   <select id="product"></select>
 
+  <!-- Text inputs, not type="date": Firefox's native calendar panel is taller
+       than the auto-sized popup and its top rows get clipped behind the popup.
+       Typing YYYY-MM-DD is robust and identical in both browsers. -->
   <div class="row">
     <div>
       <label for="start">Start (UTC)</label>
-      <input type="date" id="start">
+      <input type="text" id="start" inputmode="numeric" maxlength="10"
+             placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"
+             title="YYYY-MM-DD">
     </div>
     <div>
       <label for="end">End (UTC)</label>
-      <input type="date" id="end">
+      <input type="text" id="end" inputmode="numeric" maxlength="10"
+             placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"
+             title="YYYY-MM-DD">
     </div>
   </div>
 
