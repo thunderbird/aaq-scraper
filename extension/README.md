@@ -106,7 +106,9 @@ bundle for `import_json.py`.
    normally (i.e. the Fastly challenge has passed for your session).
 2. Click the extension's toolbar icon.
 3. Pick the **product**, the **start/end** date window (UTC; same day twice = one
-   day), and whether to **fetch answers too**.
+   day, or a **range** with End after Start), and whether to **fetch answers too**.
+   A range is fetched in one pass; keep it to about a week — wider windows are
+   slow (a paginated answers call per question) and likelier to hit rate limits.
 4. Host access to `support.mozilla.org` is required. **Chrome** grants it at
    install (nothing to do). **Firefox** does not, so click **Grant
    support.mozilla.org access** and allow the prompt (or toggle it on under
@@ -121,6 +123,11 @@ bundle for `import_json.py`.
    ```
    This writes `2026/questions-thunderbird-desktop-2026-06-10.csv` (and the
    matching `answers-…` CSV if answers were fetched), then you commit as usual.
+   A **multi-day** bundle is split automatically into one `…-YYYY-MM-DD.csv` per
+   day (questions bucketed by their `created` day, answers by their parent
+   question's day) — each byte-identical to a single-day fetch, so it drops
+   straight into the tracked per-day layout. `--questions-out`/`--answers-out`
+   apply only to a single-day bundle.
 
 ## How it maps to the scraper
 

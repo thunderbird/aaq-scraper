@@ -15,6 +15,14 @@ to a scrape_questions.py / scrape_answers.py run of the same day.
 
 Purely additive: it only imports from the existing modules and never edits them.
 
+**Per-day output.** The bundle may span multiple days (extension Start != End).
+Questions are bucketed by their `created` UTC day and written to one
+`<year>/questions-<label>-<day>.csv` per day; answers are bucketed by their
+PARENT question's created day (matching scrape_answers, whose per-day answers
+file pairs with that day's questions file). Each per-day file is byte-identical
+to a single-day scrape/fetch of that day, so extension output drops straight into
+the tracked per-day layout and the refresh/backfill.
+
 Bundle shape (JSON):
     {
       "product": "thunderbird" | "thunderbird-android",   # API product slug
@@ -33,10 +41,16 @@ import csv
 import json
 import os
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 
 from scrape_answers import COLUMNS, flatten_answer
-from scrape_questions import build_fieldnames, default_output_path, flatten_question
+from scrape_questions import (
+    build_fieldnames,
+    default_output_path,
+    flatten_question,
+    parse_dt,
+)
 
 # Match the repo convention: allow very large `content` fields. (Importing sumo,
 # transitively, already raises this; we set it explicitly too.)
@@ -69,14 +83,26 @@ def _require(bundle, key):
     return bundle[key]
 
 
+def _created_day(obj):
+    """UTC date of an object's `created`, or None if missing/unparsable."""
+    dt = parse_dt(obj.get("created"))
+    return dt.astimezone(timezone.utc).date() if dt is not None else None
+
+
+def _day_dt(day):
+    """datetime.date -> aware UTC datetime at midnight (for default_output_path)."""
+    return datetime(day.year, day.month, day.day, tzinfo=timezone.utc)
+
+
 def main():
     p = argparse.ArgumentParser(
-        description="Import an extension JSON bundle into questions/answers CSVs")
+        description="Import an extension JSON bundle into per-day questions/answers "
+                    "CSVs (bucketed by created day; multi-day bundles are split).")
     p.add_argument("bundle", help="path to the JSON bundle from the extension")
     p.add_argument("--questions-out", default=None,
-                   help="override the questions CSV path")
+                   help="override the questions CSV path (single-day bundle only)")
     p.add_argument("--answers-out", default=None,
-                   help="override the answers CSV path")
+                   help="override the answers CSV path (single-day bundle only)")
     args = p.parse_args()
 
     try:
@@ -88,34 +114,75 @@ def main():
         sys.exit("error: bundle must be a JSON object")
 
     product = _require(bundle, "product")
-    start = _require(bundle, "start")
-    end = _require(bundle, "end")
+    _require(bundle, "start")            # window bounds are informational; output
+    _require(bundle, "end")              # paths come from each row's created day
     questions = _require(bundle, "questions")
-    try:
-        start_dt = datetime(start[0], start[1], start[2], tzinfo=timezone.utc)
-        end_dt = datetime(end[0], end[1], end[2], tzinfo=timezone.utc)
-    except (TypeError, IndexError, ValueError) as e:
-        sys.exit(f"error: bad start/end date in bundle: {e}")
 
-    # Questions -> the same flatten + dynamic-column ordering + sort the scraper uses.
-    q_rows = [flatten_question(q) for q in questions]
-    q_rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
-    fieldnames = build_fieldnames(q_rows)
-    q_out = args.questions_out or default_output_path(
-        "questions", product, start_dt, end_dt)
-    _write_csv(q_rows, fieldnames, q_out, restval="")
-    print(f"Wrote {len(q_rows)} questions to {q_out} ({len(fieldnames)} columns)",
-          file=sys.stderr)
+    # Bucket questions by their created UTC day.
+    q_by_day = defaultdict(list)
+    for q in questions:
+        day = _created_day(q)
+        if day is None:
+            sys.exit(f"error: question {q.get('id')!r} has no parsable 'created'")
+        q_by_day[day].append(q)
 
-    # Answers are optional (only if the extension fetched them). Absent key ->
-    # skip entirely; present-but-empty -> header-only CSV (matches an empty day).
-    if "answers" in bundle:
-        a_rows = [flatten_answer(a) for a in bundle["answers"]]
-        a_rows.sort(key=lambda r: int(r["id"]))  # CSV sorted by ascending id
-        a_out = args.answers_out or default_output_path(
-            "answers", product, start_dt, end_dt)
-        _write_csv(a_rows, COLUMNS, a_out)
-        print(f"Wrote {len(a_rows)} answers to {a_out}", file=sys.stderr)
+    # Map question id -> created day, so answers land in their parent's day file.
+    qid_day = {}
+    for day, qs in q_by_day.items():
+        for q in qs:
+            try:
+                qid_day[int(q["id"])] = day
+            except (KeyError, TypeError, ValueError):
+                pass
+
+    override = args.questions_out or args.answers_out
+    if override and len(q_by_day) > 1:
+        sys.exit("error: --questions-out/--answers-out only apply to a single-day "
+                 f"bundle; this one spans {len(q_by_day)} days — omit them to write "
+                 "per-day files automatically")
+
+    # Answers (optional): bucket by parent question's created day.
+    answers = bundle.get("answers")
+    a_by_day = defaultdict(list)
+    orphans = 0
+    if answers is not None:
+        for a in answers:
+            try:
+                qid = int(a.get("question"))
+            except (TypeError, ValueError):
+                qid = None
+            day = qid_day.get(qid)
+            if day is None:
+                orphans += 1
+                continue
+            a_by_day[day].append(a)
+
+    # Write one questions CSV per day (byte-identical to a single-day scrape:
+    # flatten + id-sort + build_fieldnames over just that day's rows).
+    for day in sorted(q_by_day):
+        rows = [flatten_question(q) for q in q_by_day[day]]
+        rows.sort(key=lambda r: int(r["id"]))
+        fieldnames = build_fieldnames(rows)
+        out = args.questions_out or default_output_path(
+            "questions", product, _day_dt(day), _day_dt(day))
+        _write_csv(rows, fieldnames, out, restval="")
+        print(f"Wrote {len(rows)} questions to {out} ({len(fieldnames)} columns)",
+              file=sys.stderr)
+
+    # Answers are optional (only if the extension fetched them). Write one file per
+    # QUESTIONS day (header-only when that day has no answers), pairing with the
+    # questions file exactly like scrape_answers.
+    if answers is not None:
+        for day in sorted(q_by_day):
+            rows = [flatten_answer(a) for a in a_by_day.get(day, [])]
+            rows.sort(key=lambda r: int(r["id"]))
+            out = args.answers_out or default_output_path(
+                "answers", product, _day_dt(day), _day_dt(day))
+            _write_csv(rows, COLUMNS, out)
+            print(f"Wrote {len(rows)} answers to {out}", file=sys.stderr)
+        if orphans:
+            print(f"note: skipped {orphans} answers whose parent question was not "
+                  "in the bundle", file=sys.stderr)
 
 
 if __name__ == "__main__":
