@@ -1130,6 +1130,16 @@ gh pr create --repo thunderbird/platform-infrastructure --base main \
 
 # Cutover (follow-up, after Mozilla allowlists — not in these PRs)
 
+- **Pre-cutover: verify the entrypoint runs end-to-end in the container against a
+  read-only root FS** (final-review Issue 2). The pod uses
+  `readOnlyRootFilesystem: true` with a writable emptyDir at `$HOME=/work`. The
+  entrypoint now creates its workdir under `$HOME` (survives a read-only `/tmp`),
+  but two things still need real-image verification before the Job can succeed:
+  (1) set `TMPDIR=/work` (or mount an emptyDir at `/tmp`) if any tool writes to
+  `/tmp`; (2) `run_refresh.py` shells out to `uv run python scrape_*.py` inside
+  the *clone* dir — confirm `uv run` reuses the image's baked venv (or set
+  `UV_PROJECT_ENVIRONMENT`/run the baked interpreter directly) so it does **not**
+  try to build a fresh `.venv` needing PyPI network + a writable clone at runtime.
 - Bump the CronJob `image:` tag to the first built `git-<sha>` (platform-infra PR); confirm ArgoCD syncs and a manually-triggered Job commits real CSVs.
 - Arm the VMRule (remove `and vector(0)`).
 - Disable `scrape.yml` in the aaq-scraper repo.
