@@ -9,6 +9,9 @@ const api = globalThis.browser ?? globalThis.chrome;
 // Same API base as sumo.py.
 const API_BASE = "https://support.mozilla.org/api/2/";
 
+// Host we need access to (match pattern for permissions + host checks).
+const SUMO_ORIGIN = "https://support.mozilla.org/*";
+
 // API product slugs. The slug is what goes in the API query AND in the bundle's
 // `product` field; import_json.py / default_output_path map "thunderbird" ->
 // the "thunderbird-desktop" filename label.

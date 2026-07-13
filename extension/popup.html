@@ -20,6 +20,8 @@
     #status { margin-top: 10px; white-space: pre-wrap; font-size: 12px; min-height: 1em; }
     #status.err { color: #b60205; }
     #status.ok { color: #0e8a16; }
+    #grant { margin-top: 6px; }
+    #diag { margin-top: 8px; font-size: 11px; color: #888; font-family: ui-monospace, monospace; }
   </style>
 </head>
 <body>
@@ -51,7 +53,9 @@
   <label class="check"><input type="checkbox" id="answers" checked> Fetch answers too</label>
 
   <button id="fetch">Fetch &amp; download</button>
+  <button id="grant" type="button">Grant support.mozilla.org access</button>
   <div id="status"></div>
+  <div id="diag"></div>
 
   <script src="common.js"></script>
   <script src="popup.js"></script>

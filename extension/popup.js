@@ -61,10 +61,44 @@ function init() {
   $("start").value = t;
   $("end").value = t;
   $("fetch").addEventListener("click", run);
+  $("grant").addEventListener("click", grant);
+  showDiag();
 }
 
-// The injected function. Runs in the page's MAIN world (same origin as the
-// site's own JS), so its fetch() is indistinguishable from normal site usage.
+// Self-diagnostics shown in the popup (so debugging needs no devtools): which
+// build is loaded, which permission key the manifest carries, and whether
+// support.mozilla.org access is currently granted.
+async function showDiag() {
+  try {
+    const m = api.runtime.getManifest();
+    const key = m.optional_host_permissions ? "optional_host_permissions"
+      : (m.host_permissions ? "host_permissions" : "(none)");
+    let has = false;
+    try { has = await api.permissions.contains({ origins: [SUMO_ORIGIN] }); } catch (e) { /* */ }
+    $("diag").textContent =
+      `build v${m.version} · ${key} · access granted: ${has ? "yes" : "no"}`;
+  } catch (e) {
+    $("diag").textContent = `diag error: ${(e && e.message) || e}`;
+  }
+}
+
+// Dedicated grant button: its handler's first statement is the request, so the
+// user gesture is intact and Firefox will show the permission prompt. Requires
+// the origin in optional_host_permissions (manifest).
+async function grant() {
+  try {
+    const granted = await api.permissions.request({ origins: [SUMO_ORIGIN] });
+    setStatus(granted ? "Access granted." : "Access was not granted.",
+      granted ? "ok" : "err");
+  } catch (e) {
+    setStatus(`permissions.request() failed: ${(e && e.message) || e}`, "err");
+  }
+  showDiag();
+}
+
+// The injected function. Runs in the tab's ISOLATED world; its same-origin
+// fetch() still carries the browser's cookies (incl. the httpOnly Fastly
+// challenge cookie), so it's indistinguishable from normal site usage.
 // Fully self-contained: no closures over popup scope. Returns raw, unflattened
 // API objects; all CSV shaping happens later in Python.
 async function fetchInPage(cfg) {
