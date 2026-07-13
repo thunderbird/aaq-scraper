@@ -136,8 +136,8 @@ class SumoBrowser:
     def _raw_fetch(self, url):
         """Do one HTTP GET; return {status, json, snippet, retry_after}.
 
-        Parses the body as JSON the same way the old in-page fetch did (json is
-        None when the body is not valid JSON — e.g. an HTML challenge page)."""
+        Parses the body as JSON (json is None when the body is not valid
+        JSON — e.g. an HTML challenge page)."""
         res = self._client.get(url, headers={"Accept": "application/json"})
         text = res.text
         try:
@@ -152,9 +152,9 @@ class SumoBrowser:
         }
 
     def fetch_json(self, url):
-        """Fetch `url` via an in-page fetch(), retrying transient failures.
+        """Fetch `url` via the HTTP client, retrying transient failures.
 
-        Reuses the page's cookies/origin so the JS challenge stays satisfied.
+        Reuses the client's cookie jar so the JS challenge stays satisfied.
         Retries with exponential backoff on HTTP 429 and 5xx (honouring
         Retry-After for 429). A 200 that isn't JSON is treated as a challenge
         hiccup and retried too. Other 4xx fail immediately. Raises RuntimeError
@@ -215,8 +215,8 @@ class SumoBrowser:
         raise exc(
             f"Gave up after {self.max_attempts} attempts; last status "
             f"{last['status']} for {url}\nFirst 300 chars: {last['snippet']!r}\n"
-            "If this is a 200 with HTML, the browser may not have passed the "
-            "challenge."
+            "If this is a 200 with HTML, the client may not have passed the "
+            "challenge / the edge served the challenge page."
         )
 
     def paginate(self, first_url, on_page=None):

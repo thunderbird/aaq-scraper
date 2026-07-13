@@ -16,7 +16,10 @@ GIT_AUTHOR_NAME="${GIT_AUTHOR_NAME:-aaq-scraper-bot}"
 GIT_AUTHOR_EMAIL="${GIT_AUTHOR_EMAIL:-aaq-scraper-bot@thunderbird.net}"
 REFRESH_ARGS="${REFRESH_ARGS:---soft-deadline 40 --max-429-wait 120}"
 
-WORKDIR="$(mktemp -d)"
+# $HOME is the writable emptyDir mounted in the pod (Phase B sets HOME=/work);
+# /tmp is on the read-only root filesystem (readOnlyRootFilesystem: true), so
+# mktemp must be pointed at $HOME rather than its default /tmp base.
+WORKDIR="$(mktemp -d "${HOME:-/tmp}/aaq-scraper.XXXXXX")"
 trap 'rm -rf "$WORKDIR"' EXIT
 
 # Supply the PAT via a credential helper that reads $GITHUB_TOKEN from the

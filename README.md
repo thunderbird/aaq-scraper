@@ -17,6 +17,9 @@ GitHub Actions refresh (`scrape.yml`) stays the production path.
 
 ## Proof of concept (Bucket 0)
 
+Historical Bucket-0 script; `playwright` is no longer a project dependency,
+so install it separately (`uv run pip install playwright`) before running.
+
 ```sh
 uv sync
 uv run playwright install chromium

@@ -5,6 +5,12 @@
 """
 aaq-scraper — Bucket 0 proof of concept.
 
+Historical: this was the original browser-based proof of concept; the
+scraper has since moved to a plain `httpx` client (`sumo.py`), and
+`playwright` is no longer a project dependency (`pyproject.toml`). To run
+this script, install playwright separately (`uv run pip install playwright`
+or `pip install playwright`, then `playwright install chromium`).
+
 Goal: prove a real browser can pass the JavaScript challenge that SUMO
 (support.mozilla.org) now puts in front of its API, then read one page of
 /api/2/question/ as JSON from inside the browser's authenticated context.

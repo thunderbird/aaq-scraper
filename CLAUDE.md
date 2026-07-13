@@ -8,17 +8,18 @@ Scrape the Mozilla SUMO (support.mozilla.org) "Ask a Question" API for Thunderbi
 Desktop and Thunderbird Android, producing CSVs compatible with the legacy Ruby
 reports in `thunderbird/github-action-thunderbird-aaq`. Since ~June 2026 the API
 sits behind a JavaScript challenge that blocks headless HTTP (issue
-thunderbird/github-action-thunderbird-aaq#34), so we drive a **real browser** to
-pass the challenge and call the JSON API from inside the browser's authenticated
-context.
+thunderbird/github-action-thunderbird-aaq#34); a real-browser (Playwright/
+Chromium) workaround passed the challenge for a while but is now itself
+fingerprinted and blocked (issue #28), so the scraper instead calls the API
+over a plain **`httpx`** HTTP client, and is moving to a Kubernetes CronJob
+deployment with a stable, allowlistable egress IP (issue #27).
 
 ## Core architecture & crucial decisions
 
-- **Browser-passes-challenge approach** (`sumo.py`): `SumoBrowser` launches
-  Chromium (Playwright), loads the site once to acquire challenge cookies, then
-  `fetch_json()` does an **in-page `fetch()`** (`page.evaluate`) so the request
-  reuses the page's cookies/origin. Headless works (locally **and in GitHub
-  Actions** — this is what resolves #34).
+- **HTTP-client approach** (`sumo.py`): `SumoBrowser` (name kept for
+  compatibility) drives a plain `httpx` client; historically it launched
+  Chromium via Playwright to pass the JS challenge, but that is now
+  fingerprinted/blocked (#28).
 - **Stack: Python + Playwright, managed with `uv`** — use `uv sync` / `uv run`,
   never pip or raw venv. Deps in `pyproject.toml`.
 - **`fetch_json` retries** transient failures with exponential backoff: HTTP 429
