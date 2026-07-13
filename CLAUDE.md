@@ -184,6 +184,29 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   `run_refresh` instead.
 - Actions are pinned to Node-24 versions: `actions/checkout@v5`,
   `astral-sh/setup-uv@v8.2.0`.
+- **k8s CronJob deployment (Phase B, in progress; ready-for-cutover, not live):**
+  the scraper is moving off GitHub Actions onto an ArgoCD-managed **Kubernetes
+  CronJob** on the workloads EKS cluster so it egresses via a stable IP Mozilla
+  can allowlist (issue #27) — the k8s manifests/Pulumi/ArgoCD app live in the
+  separate `platform-infrastructure` repo; this repo only builds the image
+  (`Dockerfile`, `.github/workflows/aaq-scraper-image.yml` → shared ECR via
+  OIDC) and ships `deploy/entrypoint.sh` (clone → `run_refresh.py` → commit).
+  Two prerequisites already landed here: (1) `sumo.py` **dropped Playwright**
+  entirely — the Chromium challenge-bypass is itself now fingerprinted and
+  blocked (issue #28) — and drives the same `SumoBrowser`/`fetch_json` public
+  API over a plain **`httpx`** client instead; (2) **`.refresh-hwm` is now
+  tracked in git** (removed from `.gitignore`, no longer the Actions cache)
+  since the pod is stateless and the repo is the durable state. The pod pushes
+  its commits authenticated with a **fine-grained GitHub PAT** sourced from AWS
+  Secrets Manager (synced in by External Secrets Operator) via a **git
+  credential helper** — the token is read from the environment at call time and
+  never appears in argv or a URL. Because the API is still blocked pending the
+  egress-IP allowlist, `.github/workflows/scrape.yml` **stays live** as the
+  production refresh until cutover, and `schema-check.yml`'s daily schedule is
+  **parked** (`workflow_dispatch` only) to stop spurious `api-blocked` issues
+  against the same block. Full design:
+  `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
+  and `docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`.
 
 ## Notes
 

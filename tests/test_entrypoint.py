@@ -4,8 +4,9 @@
 """Integration test for deploy/entrypoint.sh using a local bare repo.
 
 Exercises the clone -> (fake) refresh -> commit -> push loop without a network
-or a real token. The token is stripped from a file:// URL by git, so a dummy
-value is fine."""
+or a real token. The entrypoint authenticates via a git credential helper
+rather than splicing the token into the URL, and a file:// origin needs no
+auth at all, so the dummy token value is never actually used."""
 import os
 import subprocess
 from pathlib import Path
