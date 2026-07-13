@@ -181,9 +181,15 @@ async function run() {
     }
 
     setStatus("Fetching in the page… (this can take a while with answers)");
+    // Inject into the default ISOLATED world (not MAIN): Firefox gates MAIN-world
+    // injection behind a fully-granted host permission and rejects activeTab for
+    // it ("Missing host permission for the tab"), whereas activeTab (granted on
+    // the toolbar click) DOES allow ISOLATED injection. The fetch is unchanged on
+    // the wire — a same-origin request from the tab still carries the browser's
+    // cookies, including the httpOnly Fastly challenge cookie — so the bypass is
+    // identical; it just isn't blocked.
     const injection = await api.scripting.executeScript({
       target: { tabId: tab.id },
-      world: "MAIN",
       func: fetchInPage,
       args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
     });
