@@ -74,8 +74,23 @@ automatically (no public listing, no review wait). One-time setup:
    pick the signed `.xpi`. It persists across restarts and its host permission is
    enforced, so **Fetch works**.
 
-Bump `version` in `manifest.json` before each new signing (AMO rejects a
-duplicate version). `run web-ext lint` first — it must report 0 errors.
+### Re-signing (checklist + gotchas)
+
+1. Bump `version` in `manifest.json` — AMO rejects a duplicate version, and a
+   half-finished upload "consumes" that version (error *"This upload has already
+   been submitted"*). If a prior attempt left `extension/.amo-upload-uuid`, delete
+   it so the new version uploads fresh.
+2. `npx web-ext lint` — must report **0 errors** before signing.
+3. **Export the credentials as their own statements** (as shown above). Do **not**
+   inline them on the command line like
+   `AMO_JWT_ISSUER=… AMO_JWT_SECRET=… npx web-ext sign --api-key="$AMO_JWT_ISSUER" …`
+   — the shell expands `"$AMO_JWT_ISSUER"` against the *current* shell (empty)
+   *before* the inline assignment applies, so web-ext gets an empty `--api-key`
+   and AMO fails with the misleading *"Unknown JWT iss (issuer)"* (the credential
+   is fine). Either `export` first, or pass the literal values to the flags.
+4. Signing polls AMO for validation/approval and can take a couple of minutes;
+   let it finish. The signed `.xpi` lands in `extension/web-ext-artifacts/`
+   (gitignored). Install it via `about:addons` → ⚙ → Install Add-on From File.
 
 ## Page-console fallback (`console-snippet.js`) — no extension needed
 
