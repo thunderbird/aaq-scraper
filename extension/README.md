@@ -53,11 +53,11 @@ not blocking. See [#29].
 2. Click the extension's toolbar icon.
 3. Pick the **product**, the **start/end** date window (UTC; same day twice = one
    day), and whether to **fetch answers too**.
-4. The **first** click prompts for access to `support.mozilla.org` — allow it.
-   Host access is an *optional* permission (Firefox temporary add-ons and Chrome
-   both grant it on request, not at install), and it's required for the in-page
-   fetch. If you ever deny it, re-grant via `about:addons` → SUMO AAQ fetcher →
-   Permissions.
+4. First time only: click **Grant support.mozilla.org access** and allow the
+   prompt. Host access is an *optional* permission (granted on request, not at
+   install). **Firefox:** a runtime grant only applies to tabs loaded *after* it,
+   so **reload the support.mozilla.org tab once** after granting. If you ever deny
+   it, re-grant via `about:addons` → SUMO AAQ fetcher → Permissions.
 5. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
    Downloads folder.
 6. Import it into CSVs:

@@ -62,7 +62,37 @@ function init() {
   $("end").value = t;
   $("fetch").addEventListener("click", run);
   $("grant").addEventListener("click", grant);
+  $("test").addEventListener("click", testAccess);
   showDiag();
+}
+
+// Diagnostic: report the active tab's URL, whether the granted permission
+// actually covers it (by pattern and by exact URL), and the precise result /
+// error of a trivial script injection. Surfaces the real state without devtools.
+async function testAccess() {
+  try {
+    const [tab] = await api.tabs.query({ active: true, currentWindow: true });
+    if (!tab) { $("diag").textContent = "no active tab"; return; }
+    const url = tab.url || "(url hidden — no permission)";
+    let byPattern = "?", byUrl = "?";
+    try { byPattern = String(await api.permissions.contains({ origins: [SUMO_ORIGIN] })); } catch (e) { byPattern = `err:${e.message}`; }
+    if (tab.url) {
+      try { byUrl = String(await api.permissions.contains({ origins: [tab.url] })); } catch (e) { byUrl = `err:${e.message}`; }
+    }
+    let inj;
+    try {
+      const r = await api.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: () => location.href,
+      });
+      inj = `OK -> ${r && r[0] && r[0].result}`;
+    } catch (e) { inj = `ERROR -> ${(e && e.message) || e}`; }
+    $("diag").textContent =
+      `tab.id=${tab.id}\ntab.url=${url}\ncontains(pattern)=${byPattern}\n` +
+      `contains(tab.url)=${byUrl}\ninject=${inj}`;
+  } catch (e) {
+    $("diag").textContent = `test error: ${(e && e.message) || e}`;
+  }
 }
 
 // Self-diagnostics shown in the popup (so debugging needs no devtools): which
@@ -217,18 +247,28 @@ async function run() {
     }
 
     setStatus("Fetching in the page… (this can take a while with answers)");
-    // Inject into the default ISOLATED world (not MAIN): Firefox gates MAIN-world
-    // injection behind a fully-granted host permission and rejects activeTab for
-    // it ("Missing host permission for the tab"), whereas activeTab (granted on
-    // the toolbar click) DOES allow ISOLATED injection. The fetch is unchanged on
-    // the wire — a same-origin request from the tab still carries the browser's
-    // cookies, including the httpOnly Fastly challenge cookie — so the bypass is
-    // identical; it just isn't blocked.
-    const injection = await api.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: fetchInPage,
-      args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
-    });
+    // Inject into the default ISOLATED world; its same-origin fetch still carries
+    // the browser's cookies (incl. the Fastly challenge cookie), so the bypass is
+    // identical to the site's own requests.
+    let injection;
+    try {
+      injection = await api.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: fetchInPage,
+        args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
+      });
+    } catch (e) {
+      // Firefox applies a runtime-granted host permission only to tabs loaded
+      // AFTER the grant, so a tab opened earlier is still refused. Tell the user
+      // to reload it rather than surfacing the raw "Missing host permission".
+      if (/host permission/i.test((e && e.message) || "")) {
+        setStatus("Access is granted, but this tab was open before the grant so " +
+          "Firefox hasn't applied it here yet. Reload the support.mozilla.org tab " +
+          "(Ctrl/Cmd+R), then click Fetch again.", "err");
+        return;
+      }
+      throw e;
+    }
     const result = injection && injection[0] && injection[0].result;
     if (!result) { setStatus("No result from the page (injection failed).", "err"); return; }
     if (result.error) { setStatus(`Fetch failed: ${result.error}`, "err"); return; }
