@@ -14,6 +14,9 @@ turns that bundle into the same CSVs the Playwright scrapers produce —
 **byte-for-byte identical**, because it reuses the existing
 `flatten_question` / `flatten_answer` / `build_fieldnames` helpers unchanged.
 
+**For the repeatable weekly procedure, see the runbook:**
+[`../docs/manual-refresh-runbook.md`](../docs/manual-refresh-runbook.md).
+
 ## Why this exists
 
 Since ~June 2026 the SUMO API sits behind a Fastly JS/WAF challenge, and as of
