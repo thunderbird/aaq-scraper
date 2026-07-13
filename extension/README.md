@@ -40,16 +40,42 @@ not blocking. See [#29].
 3. **Load unpacked** → select this `extension/` folder.
 4. It stays installed across restarts.
 
-**Firefox:**
-1. Go to `about:debugging#/runtime/this-firefox`.
-2. **Load Temporary Add-on…** → select `extension/manifest.json`.
-3. Note: a *temporary* add-on **unloads when Firefox restarts** — just re-load
-   it. (Permanent install needs AMO signing; out of scope for a stopgap.)
-4. **Known limitation:** Firefox does **not** put a *temporarily-loaded* MV3
-   add-on's host permission into force for `scripting`/CORS — so the in-tab
-   fetch fails with "Missing host permission for the tab" even though the popup
-   shows access granted. Until the add-on is signed/installed normally, use the
-   **page-console fallback** below on Firefox. (Chrome is unaffected.)
+**Firefox — signed install (recommended; the in-tab fetch works):**
+See "Signing for Firefox" below. A *temporarily*-loaded MV3 add-on does **not**
+get its host permission enforced for `scripting`/CORS (the in-tab fetch fails
+with "Missing host permission for the tab" even though the popup shows access
+granted). A **signed, installed** add-on does — so on Firefox, sign it once and
+install the `.xpi`.
+
+**Firefox — temporary load (dev only; use the page-console fallback to fetch):**
+1. `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → select
+   `extension/manifest.json`. Unloads on restart.
+2. Because of the limitation above, Fetch won't work here — use the
+   **page-console fallback** below.
+
+## Signing for Firefox (unlisted / self-distribution)
+
+Firefox release only runs signed add-ons, but Mozilla signs **unlisted** add-ons
+automatically (no public listing, no review wait). One-time setup:
+
+1. Create an add-on developer account, then generate API credentials
+   (JWT issuer + secret) at
+   <https://addons.mozilla.org/developers/addon/api/key/>.
+2. From this `extension/` directory (uses `web-ext-config.cjs`, which keeps
+   non-runtime files out of the package), with the credentials in your env:
+   ```sh
+   export AMO_JWT_ISSUER=user:xxxxx:yyy
+   export AMO_JWT_SECRET=your-secret         # do NOT commit this
+   npx web-ext sign --channel=unlisted \
+       --api-key="$AMO_JWT_ISSUER" --api-secret="$AMO_JWT_SECRET"
+   ```
+   Mozilla signs it and drops the `.xpi` in `extension/web-ext-artifacts/`.
+3. Install it: Firefox `about:addons` → gear ⚙ → **Install Add-on From File…** →
+   pick the signed `.xpi`. It persists across restarts and its host permission is
+   enforced, so **Fetch works**.
+
+Bump `version` in `manifest.json` before each new signing (AMO rejects a
+duplicate version). `run web-ext lint` first — it must report 0 errors.
 
 ## Page-console fallback (`console-snippet.js`) — no extension needed
 
