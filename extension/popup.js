@@ -151,21 +151,23 @@ async function run() {
     }
     if (endDt < startDt) { setStatus("End date is before start date.", "err"); return; }
 
-    // Firefox MV3 treats host_permissions as opt-in (Chrome grants them at
-    // install), so scripting.executeScript is refused until the user grants
-    // support.mozilla.org. Request it here — this MUST be the first await in
-    // the click handler, because Firefox invalidates permissions.request()
-    // once any other async call has run. Chrome (already granted) resolves
-    // true instantly with no prompt.
-    let granted = true;
+    // Firefox does not grant host access to temporary add-ons at install, and
+    // scripting.executeScript is refused ("Missing host permission for the tab")
+    // until it is granted. permissions.request() can only grant origins declared
+    // in optional_host_permissions (see manifest), so we request it here. This
+    // MUST be the first await in the click handler — Firefox invalidates the
+    // request once any other async call has run. Chrome prompts/grants the same.
+    const origins = ["https://support.mozilla.org/*"];
+    let granted = false;
     try {
-      granted = await api.permissions.request({
-        origins: ["https://support.mozilla.org/*"],
-      });
-    } catch (e) { /* API absent on some builds: let executeScript surface it */ }
+      granted = await api.permissions.request({ origins });
+    } catch (e) {
+      setStatus(`Could not request host permission: ${(e && e.message) || e}`, "err");
+      return;
+    }
     if (!granted) {
-      setStatus("Access to support.mozilla.org was denied. Grant it (about:addons " +
-        "→ SUMO AAQ fetcher → Permissions) and retry.", "err");
+      setStatus("Access to support.mozilla.org is required. Grant it when prompted " +
+        "(or via about:addons → SUMO AAQ fetcher → Permissions), then retry.", "err");
       return;
     }
 
