@@ -217,18 +217,28 @@ async function run() {
     }
 
     setStatus("Fetching in the page… (this can take a while with answers)");
-    // Inject into the default ISOLATED world (not MAIN): Firefox gates MAIN-world
-    // injection behind a fully-granted host permission and rejects activeTab for
-    // it ("Missing host permission for the tab"), whereas activeTab (granted on
-    // the toolbar click) DOES allow ISOLATED injection. The fetch is unchanged on
-    // the wire — a same-origin request from the tab still carries the browser's
-    // cookies, including the httpOnly Fastly challenge cookie — so the bypass is
-    // identical; it just isn't blocked.
-    const injection = await api.scripting.executeScript({
-      target: { tabId: tab.id },
-      func: fetchInPage,
-      args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
-    });
+    // Inject into the default ISOLATED world; its same-origin fetch still carries
+    // the browser's cookies (incl. the Fastly challenge cookie), so the bypass is
+    // identical to the site's own requests.
+    let injection;
+    try {
+      injection = await api.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: fetchInPage,
+        args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
+      });
+    } catch (e) {
+      // Firefox applies a runtime-granted host permission only to tabs loaded
+      // AFTER the grant, so a tab opened earlier is still refused. Tell the user
+      // to reload it rather than surfacing the raw "Missing host permission".
+      if (/host permission/i.test((e && e.message) || "")) {
+        setStatus("Access is granted, but this tab was open before the grant so " +
+          "Firefox hasn't applied it here yet. Reload the support.mozilla.org tab " +
+          "(Ctrl/Cmd+R), then click Fetch again.", "err");
+        return;
+      }
+      throw e;
+    }
     const result = injection && injection[0] && injection[0].result;
     if (!result) { setStatus("No result from the page (injection failed).", "err"); return; }
     if (result.error) { setStatus(`Fetch failed: ${result.error}`, "err"); return; }
