@@ -45,6 +45,19 @@ not blocking. See [#29].
 2. **Load Temporary Add-on…** → select `extension/manifest.json`.
 3. Note: a *temporary* add-on **unloads when Firefox restarts** — just re-load
    it. (Permanent install needs AMO signing; out of scope for a stopgap.)
+4. **Known limitation:** Firefox does **not** put a *temporarily-loaded* MV3
+   add-on's host permission into force for `scripting`/CORS — so the in-tab
+   fetch fails with "Missing host permission for the tab" even though the popup
+   shows access granted. Until the add-on is signed/installed normally, use the
+   **page-console fallback** below on Firefox. (Chrome is unaffected.)
+
+## Page-console fallback (`console-snippet.js`) — no extension needed
+
+Works in any browser with zero permissions, because it runs in the page's own
+context: open a support.mozilla.org tab, open DevTools → Console (in Firefox,
+type `allow pasting` first), edit the CONFIG block in `console-snippet.js`, paste
+the whole file, and press Enter. It downloads the same `aaq-<product>-<dates>.json`
+bundle for `import_json.py`.
 
 ## Use
 
