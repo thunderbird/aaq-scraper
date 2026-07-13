@@ -246,31 +246,27 @@ async function run() {
       return;
     }
 
+    const cfg = { apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 };
     setStatus("Fetching in the page… (this can take a while with answers)");
-    // Inject into the default ISOLATED world; its same-origin fetch still carries
-    // the browser's cookies (incl. the Fastly challenge cookie), so the bypass is
-    // identical to the site's own requests.
-    let injection;
+    // Preferred path: inject the fetch into the tab (ISOLATED world) so it runs
+    // same-origin as the site. But Firefox Nightly refuses executeScript even
+    // when the host permission is granted (permissions.contains()==true) — a
+    // scripting-permission quirk. In that case fall back to running the SAME
+    // fetch directly from the extension context: with the host permission
+    // granted, an extension fetch(..., {credentials:"include"}) is treated as
+    // first-party and carries the browser's cookies, incl. the Fastly cookie.
+    let result;
     try {
-      injection = await api.scripting.executeScript({
-        target: { tabId: tab.id },
-        func: fetchInPage,
-        args: [{ apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 }],
+      const injection = await api.scripting.executeScript({
+        target: { tabId: tab.id }, func: fetchInPage, args: [cfg],
       });
+      result = injection && injection[0] && injection[0].result;
     } catch (e) {
-      // Firefox applies a runtime-granted host permission only to tabs loaded
-      // AFTER the grant, so a tab opened earlier is still refused. Tell the user
-      // to reload it rather than surfacing the raw "Missing host permission".
-      if (/host permission/i.test((e && e.message) || "")) {
-        setStatus("Access is granted, but this tab was open before the grant so " +
-          "Firefox hasn't applied it here yet. Reload the support.mozilla.org tab " +
-          "(Ctrl/Cmd+R), then click Fetch again.", "err");
-        return;
-      }
-      throw e;
+      if (!/host permission/i.test((e && e.message) || "")) throw e;
+      setStatus("Tab injection blocked by Firefox — fetching directly from the extension…");
+      result = await fetchInPage(cfg);
     }
-    const result = injection && injection[0] && injection[0].result;
-    if (!result) { setStatus("No result from the page (injection failed).", "err"); return; }
+    if (!result) { setStatus("No result (injection failed).", "err"); return; }
     if (result.error) { setStatus(`Fetch failed: ${result.error}`, "err"); return; }
 
     const bundle = {

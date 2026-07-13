@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "SUMO AAQ fetcher (stopgap)",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Fetch Thunderbird Ask-a-Question data from support.mozilla.org in a genuine browser and download a raw-JSON bundle for import_json.py. Stopgap for the Fastly automated-browser block (aaq-scraper #29).",
   "permissions": ["scripting", "downloads", "activeTab"],
   "optional_host_permissions": ["https://support.mozilla.org/*"],
