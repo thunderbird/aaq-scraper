@@ -1,0 +1,8 @@
+.git
+.venv
+__pycache__
+*.pyc
+20*/
+docs/
+backfill-reports/
+tests/
