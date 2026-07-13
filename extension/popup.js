@@ -132,27 +132,55 @@ async function grant() {
 // Fully self-contained: no closures over popup scope. Returns raw, unflattened
 // API objects; all CSV shaping happens later in Python.
 async function fetchInPage(cfg) {
-  const { apiBase, product, gt, lt, ordering, includeAnswers, delayMs } = cfg;
+  const { apiBase, product, gt, lt, ordering, includeAnswers, delayMs,
+          max429WaitS = 120, max429Retries = 3 } = cfg;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+  // Parse a Retry-After header (delta-seconds or an HTTP-date) into seconds.
+  function retryAfterSeconds(v) {
+    if (!v) return null;
+    const n = Number(v);
+    if (Number.isFinite(n)) return Math.max(0, n);
+    const t = Date.parse(v);
+    return Number.isNaN(t) ? null : Math.max(0, (t - Date.now()) / 1000);
+  }
+
   async function getJson(url) {
-    const res = await fetch(url, {
-      headers: { Accept: "application/json" },
-      credentials: "include",
-    });
-    const text = await res.text();
-    let json = null;
-    try { json = JSON.parse(text); } catch (e) { /* non-JSON */ }
-    if (res.status === 429) {
-      const ra = res.headers.get("retry-after");
-      throw new Error("HTTP 429 rate-limited" + (ra ? ` (Retry-After: ${ra})` : ""));
+    for (let attempt = 0; ; attempt++) {
+      const res = await fetch(url, {
+        headers: { Accept: "application/json" },
+        credentials: "include",
+      });
+      const text = await res.text();
+      let json = null;
+      try { json = JSON.parse(text); } catch (e) { /* non-JSON */ }
+      if (res.status === 429) {
+        // Honor Retry-After, but bounded — this runs in an attended popup, so a
+        // long sleep risks the popup closing and dropping the fetch. Cap the wait
+        // and the retry count; beyond that, abort with a clear message.
+        const raHdr = res.headers.get("retry-after");
+        const waitS = retryAfterSeconds(raHdr);
+        if (attempt >= max429Retries) {
+          throw new Error(`HTTP 429 rate-limited; gave up after ${max429Retries} `
+            + `retries` + (raHdr ? ` (Retry-After: ${raHdr})` : ""));
+        }
+        if (waitS !== null && waitS > max429WaitS) {
+          throw new Error(`HTTP 429: SUMO asked to wait ${Math.round(waitS)}s `
+            + `(> ${max429WaitS}s cap) — retry a smaller window later.`);
+        }
+        const w = waitS !== null ? waitS : Math.min(max429WaitS, 5 * (attempt + 1));
+        console.log(`[aaq] HTTP 429 — waiting ${Math.round(w)}s, retry `
+          + `${attempt + 1}/${max429Retries}`);
+        await sleep(w * 1000);
+        continue;
+      }
+      if (json === null) {
+        throw new Error(
+          `HTTP ${res.status} non-JSON response (Fastly challenge / block?): `
+          + text.slice(0, 120));
+      }
+      return json;
     }
-    if (json === null) {
-      throw new Error(
-        `HTTP ${res.status} non-JSON response (Fastly challenge / block?): ` +
-        text.slice(0, 120));
-    }
-    return json;
   }
 
   try {
@@ -246,7 +274,8 @@ async function run() {
       return;
     }
 
-    const cfg = { apiBase: API_BASE, product, gt, lt, ordering: "created", includeAnswers, delayMs: 2000 };
+    const cfg = { apiBase: API_BASE, product, gt, lt, ordering: "created",
+      includeAnswers, delayMs: 2000, max429WaitS: 120, max429Retries: 3 };
     setStatus("Fetching in the page… (this can take a while with answers)");
     // Preferred path: inject the fetch into the tab (ISOLATED world) so it runs
     // same-origin as the site. But Firefox Nightly refuses executeScript even

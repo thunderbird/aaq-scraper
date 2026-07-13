@@ -109,6 +109,9 @@ bundle for `import_json.py`.
    day, or a **range** with End after Start), and whether to **fetch answers too**.
    A range is fetched in one pass; keep it to about a week — wider windows are
    slow (a paginated answers call per question) and likelier to hit rate limits.
+   On an HTTP 429 the fetch **honors `Retry-After` and retries**, but bounded
+   (≤120s per wait, 3 retries) since this is an attended popup; if SUMO demands a
+   longer wait it stops with a message so you can retry a smaller window later.
 4. Host access to `support.mozilla.org` is required. **Chrome** grants it at
    install (nothing to do). **Firefox** does not, so click **Grant
    support.mozilla.org access** and allow the prompt (or toggle it on under
