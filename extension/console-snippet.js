@@ -74,14 +74,17 @@
 
   const questions = [];
   let stop = false;
+  let page = 0;
   let url = `${API}question/?${new URLSearchParams({ format: "json", product, created__gt: gt, created__lt: lt, ordering: "created" })}`;
   while (url && !stop) {
     const d = await getJson(url);
+    page++;
     for (const q of (d.results || [])) {
       const c = q.created ? new Date(q.created) : null;
       if (c && c >= lessThan) { stop = true; break; }
       questions.push(q);
     }
+    console.log(`[aaq] questions page ${page} (${questions.length} so far)`);
     if (stop) break;
     url = d.next;
     if (url) await sleep(2000);
@@ -90,7 +93,9 @@
 
   const answers = [];
   if (includeAnswers) {
-    for (const q of questions) {
+    for (let i = 0; i < questions.length; i++) {
+      const q = questions[i];
+      console.log(`[aaq] answers: question ${i + 1}/${questions.length}`);
       let a = `${API}answer/?${new URLSearchParams({ format: "json", question: String(q.id), ordering: "created" })}`;
       while (a) {
         const d = await getJson(a);

@@ -17,6 +17,16 @@ async function aaqFetch(cfg) {
           max429WaitS = 120, max429Retries = 3 } = cfg;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+  // Live progress → popup. `rt` is present in the content-script and
+  // executeScript worlds but ABSENT in the page's own context
+  // (console-snippet), where report() silently no-ops. Wrapped in try/catch so a
+  // closed popup (no receiver) can never throw into the fetch loop.
+  const rt = (globalThis.browser ?? globalThis.chrome)?.runtime;
+  const report = (info) => {
+    try { if (rt) rt.sendMessage({ type: "aaq-progress", ...info }); }
+    catch (e) { /* popup closed / no receiver */ }
+  };
+
   // Parse a Retry-After header (delta-seconds or an HTTP-date) into seconds.
   function retryAfterSeconds(v) {
     if (!v) return null;
@@ -51,6 +61,8 @@ async function aaqFetch(cfg) {
         const w = waitS !== null ? waitS : Math.min(max429WaitS, 5 * (attempt + 1));
         console.log(`[aaq] HTTP 429 — waiting ${Math.round(w)}s, retry `
           + `${attempt + 1}/${max429Retries}`);
+        report({ kind: "ratelimit", waitS: Math.round(w),
+          attempt: attempt + 1, retries: max429Retries });
         await sleep(w * 1000);
         continue;
       }
@@ -71,14 +83,17 @@ async function aaqFetch(cfg) {
     let url = `${apiBase}question/?${qParams.toString()}`;
     const questions = [];
     let stop = false;
+    let page = 0;
     while (url && !stop) {
       const data = await getJson(url);
+      page++;
       for (const q of (data.results || [])) {
         const created = q.created ? new Date(q.created) : null;
         // ascending early-stop: once we pass the window, later rows are newer.
         if (created && created >= lessThan) { stop = true; break; }
         questions.push(q);
       }
+      report({ kind: "questions", page, count: questions.length });
       if (stop) break;
       url = data.next;
       if (url) await sleep(delayMs);
@@ -86,7 +101,9 @@ async function aaqFetch(cfg) {
 
     const answers = [];
     if (includeAnswers) {
-      for (const q of questions) {
+      for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
+        report({ kind: "answers", index: i + 1, total: questions.length });
         const aParams = new URLSearchParams({
           format: "json", question: String(q.id), ordering,
         });

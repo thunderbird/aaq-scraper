@@ -19,6 +19,22 @@ function setStatus(msg, cls) {
 
 function pad(n) { return String(n).padStart(2, "0"); }
 
+// Render an aaq-progress event (emitted by aaqFetch in the page, fetch-core.js)
+// into a human status line.
+function fmtProgress(p) {
+  switch (p.kind) {
+    case "questions":
+      return `Fetching questions… page ${p.page} (${p.count} so far)`;
+    case "answers":
+      return `Fetching answers… question ${p.index}/${p.total}`;
+    case "ratelimit":
+      return `Rate limited (HTTP 429) — waiting ${p.waitS}s, retry `
+        + `${p.attempt}/${p.retries}…`;
+    default:
+      return "Fetching in the page…";
+  }
+}
+
 // Format a Date as YYYY-MM-DDTHH:MM:SSZ (UTC), matching Python's
 // strftime("%Y-%m-%dT%H:%M:%SZ").
 function fmtStamp(d) {
@@ -206,6 +222,14 @@ async function run() {
     const cfg = { apiBase: API_BASE, product, gt, lt, ordering: "created",
       includeAnswers, delayMs: 2000, max429WaitS: 120, max429Retries: 3 };
     setStatus("Fetching in the page… (this can take a while with answers)");
+    // Live progress: aaqFetch (in the page) emits aaq-progress via
+    // runtime.sendMessage as it pages questions/answers and honors 429s. Listen
+    // while the fetch runs, then detach — this is UI-only, the result still
+    // arrives via runInPage's return value.
+    const onProgress = (msg) => {
+      if (msg && msg.type === "aaq-progress") setStatus(fmtProgress(msg));
+    };
+    api.runtime.onMessage.addListener(onProgress);
     let result;
     try {
       result = await runInPage(tab.id, cfg);
@@ -214,6 +238,8 @@ async function run() {
         + "(the content script loads on page load), then click Fetch again. "
         + `[${(e && e.message) || e}]`, "err");
       return;
+    } finally {
+      api.runtime.onMessage.removeListener(onProgress);
     }
     if (!result) {
       setStatus("No result from the page — reload the support.mozilla.org tab "

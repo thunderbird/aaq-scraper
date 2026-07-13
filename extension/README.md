@@ -127,9 +127,11 @@ bundle for `import_json.py`.
    support.mozilla.org access** and allow the prompt (or toggle it on under
    `about:addons` → SUMO AAQ fetcher → Permissions), then reload the
    support.mozilla.org tab once.
-5. Click **Fetch & download**. It downloads `aaq-<product>-<dates>.json` to your
-   Downloads folder. (If in-tab injection is blocked, it automatically retries the
-   fetch from the extension itself.)
+5. Click **Fetch & download**. The status line updates **live** as it runs —
+   question paging (`page N (M so far)`), answer progress (`question X/Y`), and
+   any 429 waits (`waiting Ns, retry k/3`) — then it downloads
+   `aaq-<product>-<dates>.json` to your Downloads folder. (If in-tab injection is
+   blocked, it automatically retries the fetch from the extension itself.)
 
    > **Keep the popup focused while it runs — don't click the page, switch
    > windows, or change apps until you see "Done: … Saved …".** The browser
