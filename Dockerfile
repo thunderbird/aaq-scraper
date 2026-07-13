@@ -28,4 +28,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 RUN useradd --create-home --uid 65532 appuser
 USER 65532
 
-CMD ["python", "-c", "import sumo; print('image ok')"]
+ENTRYPOINT ["deploy/entrypoint.sh"]
