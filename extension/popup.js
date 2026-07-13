@@ -32,6 +32,17 @@ function ymd(s) {
   return [y, m, d];
 }
 
+// Parse a strict "YYYY-MM-DD" string to a UTC Date, or null if malformed /
+// not a real calendar date (e.g. 2026-13-40, 2026-02-30).
+function parseDay(s) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(s)) return null;
+  const [y, m, d] = ymd(s);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  if (dt.getUTCFullYear() !== y || dt.getUTCMonth() !== m - 1 ||
+      dt.getUTCDate() !== d) return null;   // rolled over -> invalid date
+  return dt;
+}
+
 function today() {
   const n = new Date();
   return `${n.getUTCFullYear()}-${pad(n.getUTCMonth() + 1)}-${pad(n.getUTCDate())}`;
@@ -128,13 +139,16 @@ async function run() {
   btn.disabled = true;
   try {
     const product = $("product").value;
-    const startStr = $("start").value;
-    const endStr = $("end").value;
-    if (!startStr || !endStr) { setStatus("Pick a start and end date.", "err"); return; }
+    const startStr = $("start").value.trim();
+    const endStr = $("end").value.trim();
     const includeAnswers = $("answers").checked;
 
-    const startDt = new Date(`${startStr}T00:00:00Z`);
-    const endDt = new Date(`${endStr}T00:00:00Z`);
+    const startDt = parseDay(startStr);
+    const endDt = parseDay(endStr);
+    if (!startDt || !endDt) {
+      setStatus("Enter dates as YYYY-MM-DD (e.g. 2026-07-01).", "err");
+      return;
+    }
     if (endDt < startDt) { setStatus("End date is before start date.", "err"); return; }
     // Window math mirrors scrape_questions.py: start-day 00:00:00 minus 1s;
     // end-day 00:00:00 plus 1 day (both days inclusive).
