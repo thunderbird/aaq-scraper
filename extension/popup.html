@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px system-ui, sans-serif; width: 320px; margin: 0; padding: 12px; }
+    h1 { font-size: 14px; margin: 0 0 4px; }
+    .sub { color: #666; margin: 0 0 10px; font-size: 11px; }
+    label { display: block; margin: 8px 0 2px; font-weight: 600; }
+    select, input[type="date"] { width: 100%; box-sizing: border-box; padding: 4px; }
+    .row { display: flex; gap: 8px; }
+    .row > div { flex: 1; }
+    .check { margin-top: 10px; font-weight: 400; display: flex; align-items: center; gap: 6px; }
+    button { margin-top: 12px; width: 100%; padding: 8px; font-size: 13px; cursor: pointer; }
+    button:disabled { cursor: default; opacity: 0.6; }
+    #status { margin-top: 10px; white-space: pre-wrap; font-size: 12px; min-height: 1em; }
+    #status.err { color: #b60205; }
+    #status.ok { color: #0e8a16; }
+  </style>
+</head>
+<body>
+  <h1>SUMO AAQ fetcher</h1>
+  <p class="sub">Run on an open support.mozilla.org tab. Downloads a raw-JSON
+    bundle for <code>import_json.py</code>.</p>
+
+  <label for="product">Product</label>
+  <select id="product"></select>
+
+  <div class="row">
+    <div>
+      <label for="start">Start (UTC)</label>
+      <input type="date" id="start">
+    </div>
+    <div>
+      <label for="end">End (UTC)</label>
+      <input type="date" id="end">
+    </div>
+  </div>
+
+  <label class="check"><input type="checkbox" id="answers" checked> Fetch answers too</label>
+
+  <button id="fetch">Fetch &amp; download</button>
+  <div id="status"></div>
+
+  <script src="common.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
