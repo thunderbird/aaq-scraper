@@ -43,20 +43,27 @@ not blocking. See [#29].
 3. **Load unpacked** → select this `extension/` folder.
 4. It stays installed across restarts.
 
-**Firefox — signed install (recommended; the in-tab fetch works):**
-See "Signing for Firefox" below. A *temporarily*-loaded MV3 add-on does **not**
-get its host permission enforced for `scripting`/CORS (the in-tab fetch fails
-with "Missing host permission for the tab" even though the popup shows access
-granted). A **signed, installed** add-on does — so on Firefox, sign it once and
-install the `.xpi`.
+### Firefox: the extension's Fetch button does NOT work — use the console snippet
 
-**Firefox — temporary load (dev only; use the page-console fallback to fetch):**
-1. `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → select
-   `extension/manifest.json`. Unloads on restart.
-2. Because of the limitation above, Fetch won't work here — use the
-   **page-console fallback** below.
+**Firefox blocks this extension from running any script on `support.mozilla.org`.**
+Verified exhaustively (2026-07-13): temporary *and* signed installs;
+`scripting.executeScript` *and* a manifest-declared content script; host
+permission granted (`permissions.contains(tab.url)` = true); and with
+`extensions.quarantinedDomains.enabled = false` + a restart. In every case
+injection is refused ("Missing host permission for the tab") and the content
+script won't load ("Receiving end does not exist"). This is Firefox restricting
+extensions on Mozilla-owned domains; it is not fixable from the extension side.
+
+**So on Firefox, use the page-console fallback below** (`console-snippet.js`) —
+it runs as the page's own code, so it isn't subject to the extension sandbox.
+The extension UI (Fetch button) is effectively **Chrome-only**.
 
 ## Signing for Firefox (unlisted / self-distribution)
+
+> **Note:** signing does **not** make the Fetch button work on Firefox — Firefox
+> blocks the extension's scripts on `support.mozilla.org` regardless (see above).
+> Kept for reference / in case Firefox's domain restrictions change. On Firefox,
+> use the console snippet.
 
 Firefox release only runs signed add-ons, but Mozilla signs **unlisted** add-ons
 automatically (no public listing, no review wait). One-time setup:
@@ -74,8 +81,8 @@ automatically (no public listing, no review wait). One-time setup:
    ```
    Mozilla signs it and drops the `.xpi` in `extension/web-ext-artifacts/`.
 3. Install it: Firefox `about:addons` → gear ⚙ → **Install Add-on From File…** →
-   pick the signed `.xpi`. It persists across restarts and its host permission is
-   enforced, so **Fetch works**.
+   pick the signed `.xpi`. It persists across restarts — but note the Fetch
+   button still won't run on `support.mozilla.org` (see the Firefox note above).
 
 ### Re-signing (checklist + gotchas)
 

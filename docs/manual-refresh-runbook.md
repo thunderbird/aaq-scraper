@@ -18,10 +18,10 @@ durable fix is still moving the scraper to an allowlisted constant-IP server.
 
 - **Chrome:** `chrome://extensions` → Developer mode → **Load unpacked** →
   `extension/`. (Host permission is auto-granted; nothing else to do.)
-- **Firefox:** install the **signed** `.xpi` (see the "Signing for Firefox"
-  section of `extension/README.md`) via `about:addons` → ⚙ → Install Add-on From
-  File. A temporarily-loaded add-on will *not* work (host permission isn't
-  enforced) — use the signed install, or the page-console fallback.
+- **Firefox:** the extension's Fetch button does **not** work — Firefox blocks
+  extension scripts on `support.mozilla.org` (verified across signed/temp,
+  executeScript + content script, permission granted, quarantine off). **Use the
+  page-console fallback** (`extension/console-snippet.js`) on Firefox instead.
 - `uv sync` in the repo (for `import_json.py`).
 
 ## Weekly procedure
@@ -32,18 +32,17 @@ likely to hit rate limits).
 
 1. **Warm the session.** Open a `https://support.mozilla.org/` tab and browse a
    page so the Fastly challenge clears.
-2. **Fetch (per product).** Click the 🕷 toolbar icon → choose the product, set
-   **Start** and **End** (UTC, e.g. `2026-07-01` … `2026-07-07`), leave **Fetch
-   answers too** checked → **Fetch & download**. You get
-   `aaq-<product>-<start>_<end>.json` in Downloads.
-   - *Firefox first run:* click **Grant support.mozilla.org access**, then reload
-     the SUMO tab once, then Fetch.
-   - *Rate limiting:* a 429 is auto-retried honoring `Retry-After` (bounded
-     ≤120s × 3). If it stops asking for a longer wait, retry a smaller window
-     later.
-   - *No extension?* Use `extension/console-snippet.js`: edit `product`/`start`/
-     `end` in its CONFIG block, paste into the SUMO tab's DevTools console
-     (Firefox: type `allow pasting` first).
+2. **Fetch (per product).**
+   - **Chrome (extension):** click the 🕷 toolbar icon → choose the product, set
+     **Start** and **End** (UTC, e.g. `2026-07-01` … `2026-07-07`), leave **Fetch
+     answers too** checked → **Fetch & download**. You get
+     `aaq-<product>-<start>_<end>.json` in Downloads. A 429 is auto-retried
+     honoring `Retry-After` (bounded ≤120s × 3); if it needs a longer wait, retry
+     a smaller window later.
+   - **Firefox (console snippet — the extension button doesn't work here):** open
+     `extension/console-snippet.js`, edit `product`/`start`/`end` in its CONFIG
+     block, and paste it into the SUMO tab's DevTools console (type
+     `allow pasting` first). It downloads the same bundle.
 3. **Import (per bundle).** From the repo root:
    ```sh
    uv run python import_json.py ~/Downloads/aaq-thunderbird-2026-07-01_2026-07-07.json
