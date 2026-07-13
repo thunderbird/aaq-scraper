@@ -62,7 +62,37 @@ function init() {
   $("end").value = t;
   $("fetch").addEventListener("click", run);
   $("grant").addEventListener("click", grant);
+  $("test").addEventListener("click", testAccess);
   showDiag();
+}
+
+// Diagnostic: report the active tab's URL, whether the granted permission
+// actually covers it (by pattern and by exact URL), and the precise result /
+// error of a trivial script injection. Surfaces the real state without devtools.
+async function testAccess() {
+  try {
+    const [tab] = await api.tabs.query({ active: true, currentWindow: true });
+    if (!tab) { $("diag").textContent = "no active tab"; return; }
+    const url = tab.url || "(url hidden — no permission)";
+    let byPattern = "?", byUrl = "?";
+    try { byPattern = String(await api.permissions.contains({ origins: [SUMO_ORIGIN] })); } catch (e) { byPattern = `err:${e.message}`; }
+    if (tab.url) {
+      try { byUrl = String(await api.permissions.contains({ origins: [tab.url] })); } catch (e) { byUrl = `err:${e.message}`; }
+    }
+    let inj;
+    try {
+      const r = await api.scripting.executeScript({
+        target: { tabId: tab.id },
+        func: () => location.href,
+      });
+      inj = `OK -> ${r && r[0] && r[0].result}`;
+    } catch (e) { inj = `ERROR -> ${(e && e.message) || e}`; }
+    $("diag").textContent =
+      `tab.id=${tab.id}\ntab.url=${url}\ncontains(pattern)=${byPattern}\n` +
+      `contains(tab.url)=${byUrl}\ninject=${inj}`;
+  } catch (e) {
+    $("diag").textContent = `test error: ${(e && e.message) || e}`;
+  }
 }
 
 // Self-diagnostics shown in the popup (so debugging needs no devtools): which

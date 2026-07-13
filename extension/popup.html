@@ -20,8 +20,8 @@
     #status { margin-top: 10px; white-space: pre-wrap; font-size: 12px; min-height: 1em; }
     #status.err { color: #b60205; }
     #status.ok { color: #0e8a16; }
-    #grant { margin-top: 6px; }
-    #diag { margin-top: 8px; font-size: 11px; color: #888; font-family: ui-monospace, monospace; }
+    #grant, #test { margin-top: 6px; }
+    #diag { margin-top: 8px; font-size: 11px; color: #888; font-family: ui-monospace, monospace; white-space: pre-wrap; }
   </style>
 </head>
 <body>
@@ -54,6 +54,7 @@
 
   <button id="fetch">Fetch &amp; download</button>
   <button id="grant" type="button">Grant support.mozilla.org access</button>
+  <button id="test" type="button">Test access on this tab</button>
   <div id="status"></div>
   <div id="diag"></div>
 
