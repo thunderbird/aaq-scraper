@@ -2,10 +2,10 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-// Driver for the popup. Mirrors the fetch windows / pagination / early-stop of
-// scrape_questions.py + scrape_answers.py, but runs the actual fetch inside the
-// real support.mozilla.org page (see fetchInPage) so it reuses the genuine
-// browser's Fastly challenge cookies and fingerprint. `api`, `API_BASE`,
+// Driver for the popup. Runs the fetch (aaqFetch, fetch-core.js) inside the real
+// support.mozilla.org page — via the declared content script (messaging) with a
+// scripting.executeScript fallback — so it reuses the genuine browser's Fastly
+// challenge cookies and fingerprint. `api`, `API_BASE`, `SUMO_ORIGIN`,
 // `PRODUCTS` come from common.js.
 
 const $ = (id) => document.getElementById(id);
@@ -79,6 +79,13 @@ async function testAccess() {
     if (tab.url) {
       try { byUrl = String(await api.permissions.contains({ origins: [tab.url] })); } catch (e) { byUrl = `err:${e.message}`; }
     }
+    // Content-script path (the one that should work on Firefox): ping it.
+    let cs;
+    try {
+      const r = await api.tabs.sendMessage(tab.id, { type: "aaq-ping" });
+      cs = r && r.href ? `OK -> ${r.href}` : `no reply (${JSON.stringify(r)})`;
+    } catch (e) { cs = `ERROR -> ${(e && e.message) || e}`; }
+    // Programmatic-injection path (works on Chrome; Firefox tends to refuse).
     let inj;
     try {
       const r = await api.scripting.executeScript({
@@ -89,7 +96,7 @@ async function testAccess() {
     } catch (e) { inj = `ERROR -> ${(e && e.message) || e}`; }
     $("diag").textContent =
       `tab.id=${tab.id}\ntab.url=${url}\ncontains(pattern)=${byPattern}\n` +
-      `contains(tab.url)=${byUrl}\ninject=${inj}`;
+      `contains(tab.url)=${byUrl}\ncontentScript=${cs}\ninject=${inj}`;
   } catch (e) {
     $("diag").textContent = `test error: ${(e && e.message) || e}`;
   }
@@ -101,8 +108,11 @@ async function testAccess() {
 async function showDiag() {
   try {
     const m = api.runtime.getManifest();
-    const key = m.optional_host_permissions ? "optional_host_permissions"
-      : (m.host_permissions ? "host_permissions" : "(none)");
+    // Check array length, not truthiness: Firefox returns an (empty) array for
+    // the unused key, which is truthy and would mislabel it.
+    const hp = (m.host_permissions || []).length;
+    const ohp = (m.optional_host_permissions || []).length;
+    const key = hp ? "host_permissions" : (ohp ? "optional_host_permissions" : "(none)");
     let has = false;
     try { has = await api.permissions.contains({ origins: [SUMO_ORIGIN] }); } catch (e) { /* */ }
     $("diag").textContent =
@@ -126,104 +136,23 @@ async function grant() {
   showDiag();
 }
 
-// The injected function. Runs in the tab's ISOLATED world; its same-origin
-// fetch() still carries the browser's cookies (incl. the httpOnly Fastly
-// challenge cookie), so it's indistinguishable from normal site usage.
-// Fully self-contained: no closures over popup scope. Returns raw, unflattened
-// API objects; all CSV shaping happens later in Python.
-async function fetchInPage(cfg) {
-  const { apiBase, product, gt, lt, ordering, includeAnswers, delayMs,
-          max429WaitS = 120, max429Retries = 3 } = cfg;
-  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-  // Parse a Retry-After header (delta-seconds or an HTTP-date) into seconds.
-  function retryAfterSeconds(v) {
-    if (!v) return null;
-    const n = Number(v);
-    if (Number.isFinite(n)) return Math.max(0, n);
-    const t = Date.parse(v);
-    return Number.isNaN(t) ? null : Math.max(0, (t - Date.now()) / 1000);
-  }
-
-  async function getJson(url) {
-    for (let attempt = 0; ; attempt++) {
-      const res = await fetch(url, {
-        headers: { Accept: "application/json" },
-        credentials: "include",
-      });
-      const text = await res.text();
-      let json = null;
-      try { json = JSON.parse(text); } catch (e) { /* non-JSON */ }
-      if (res.status === 429) {
-        // Honor Retry-After, but bounded — this runs in an attended popup, so a
-        // long sleep risks the popup closing and dropping the fetch. Cap the wait
-        // and the retry count; beyond that, abort with a clear message.
-        const raHdr = res.headers.get("retry-after");
-        const waitS = retryAfterSeconds(raHdr);
-        if (attempt >= max429Retries) {
-          throw new Error(`HTTP 429 rate-limited; gave up after ${max429Retries} `
-            + `retries` + (raHdr ? ` (Retry-After: ${raHdr})` : ""));
-        }
-        if (waitS !== null && waitS > max429WaitS) {
-          throw new Error(`HTTP 429: SUMO asked to wait ${Math.round(waitS)}s `
-            + `(> ${max429WaitS}s cap) — retry a smaller window later.`);
-        }
-        const w = waitS !== null ? waitS : Math.min(max429WaitS, 5 * (attempt + 1));
-        console.log(`[aaq] HTTP 429 — waiting ${Math.round(w)}s, retry `
-          + `${attempt + 1}/${max429Retries}`);
-        await sleep(w * 1000);
-        continue;
-      }
-      if (json === null) {
-        throw new Error(
-          `HTTP ${res.status} non-JSON response (Fastly challenge / block?): `
-          + text.slice(0, 120));
-      }
-      return json;
-    }
-  }
-
+// Run aaqFetch (fetch-core.js) inside the support.mozilla.org page. Prefer the
+// declared content script via messaging — the path that works on Firefox, where
+// scripting.executeScript is refused even with host permission — and fall back
+// to programmatic injection (works on Chrome / wherever it's allowed). Throws if
+// neither can reach the tab (e.g. the tab predates the install → no content
+// script yet → reload it).
+async function runInPage(tabId, cfg) {
   try {
-    const lessThan = new Date(lt);
-    const qParams = new URLSearchParams({
-      format: "json", product, created__gt: gt, created__lt: lt, ordering,
-    });
-    let url = `${apiBase}question/?${qParams.toString()}`;
-    const questions = [];
-    let stop = false;
-    while (url && !stop) {
-      const data = await getJson(url);
-      for (const q of (data.results || [])) {
-        const created = q.created ? new Date(q.created) : null;
-        // ascending early-stop: once we pass the window, later rows are newer.
-        if (created && created >= lessThan) { stop = true; break; }
-        questions.push(q);
-      }
-      if (stop) break;
-      url = data.next;
-      if (url) await sleep(delayMs);
-    }
-
-    const answers = [];
-    if (includeAnswers) {
-      for (const q of questions) {
-        const aParams = new URLSearchParams({
-          format: "json", question: String(q.id), ordering,
-        });
-        let aurl = `${apiBase}answer/?${aParams.toString()}`;
-        while (aurl) {
-          const data = await getJson(aurl);
-          for (const a of (data.results || [])) answers.push(a);
-          aurl = data.next;
-          if (aurl) await sleep(delayMs);
-        }
-        await sleep(delayMs);
-      }
-    }
-    return { questions, answers, includeAnswers };
+    const r = await api.tabs.sendMessage(tabId, { type: "aaq-fetch", cfg });
+    if (r !== undefined) return r;      // content script handled it
   } catch (e) {
-    return { error: String((e && e.message) || e) };
+    // No content script in this tab; fall through to executeScript.
   }
+  const inj = await api.scripting.executeScript({
+    target: { tabId }, func: aaqFetch, args: [cfg],
+  });
+  return inj && inj[0] && inj[0].result;
 }
 
 async function run() {
@@ -277,25 +206,20 @@ async function run() {
     const cfg = { apiBase: API_BASE, product, gt, lt, ordering: "created",
       includeAnswers, delayMs: 2000, max429WaitS: 120, max429Retries: 3 };
     setStatus("Fetching in the page… (this can take a while with answers)");
-    // Preferred path: inject the fetch into the tab (ISOLATED world) so it runs
-    // same-origin as the site. But Firefox Nightly refuses executeScript even
-    // when the host permission is granted (permissions.contains()==true) — a
-    // scripting-permission quirk. In that case fall back to running the SAME
-    // fetch directly from the extension context: with the host permission
-    // granted, an extension fetch(..., {credentials:"include"}) is treated as
-    // first-party and carries the browser's cookies, incl. the Fastly cookie.
     let result;
     try {
-      const injection = await api.scripting.executeScript({
-        target: { tabId: tab.id }, func: fetchInPage, args: [cfg],
-      });
-      result = injection && injection[0] && injection[0].result;
+      result = await runInPage(tab.id, cfg);
     } catch (e) {
-      if (!/host permission/i.test((e && e.message) || "")) throw e;
-      setStatus("Tab injection blocked by Firefox — fetching directly from the extension…");
-      result = await fetchInPage(cfg);
+      setStatus("Couldn't run in the support.mozilla.org tab. Reload that tab "
+        + "(the content script loads on page load), then click Fetch again. "
+        + `[${(e && e.message) || e}]`, "err");
+      return;
     }
-    if (!result) { setStatus("No result (injection failed).", "err"); return; }
+    if (!result) {
+      setStatus("No result from the page — reload the support.mozilla.org tab "
+        + "and try again.", "err");
+      return;
+    }
     if (result.error) { setStatus(`Fetch failed: ${result.error}`, "err"); return; }
 
     const bundle = {
