@@ -14,6 +14,13 @@ this is the repeatable weekly procedure.
 **It's attended and manual** — it does not restore the hourly automation. The
 durable fix is still moving the scraper to an allowlisted constant-IP server.
 
+> **Less clicking (Chrome):** the extension has an opt-in **background auto-fetch**
+> that runs this fetch on a schedule (default: every 24h, trailing 7-day window)
+> and downloads the bundles for you — you still `import_json.py` + commit. It
+> needs a support.mozilla.org tab open and the machine awake, and it's Chrome
+> only. See [`../extension/README.md`](../extension/README.md#background-auto-fetch-opt-in-chrome-only)
+> (issue #46). The manual steps below still apply for Firefox and for backfills.
+
 ## One-time setup
 
 - **Chrome:** `chrome://extensions` → Developer mode → **Load unpacked** →

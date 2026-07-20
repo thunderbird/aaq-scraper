@@ -79,7 +79,113 @@ function init() {
   $("fetch").addEventListener("click", run);
   $("grant").addEventListener("click", grant);
   $("test").addEventListener("click", testAccess);
+  $("ka-enabled").addEventListener("change", onToggleKeepalive);
+  $("ka-answers").addEventListener("change", applyKeepalive);
+  $("ka-interval").addEventListener("change", applyKeepalive);
+  $("ka-window").addEventListener("change", applyKeepalive);
+  $("ka-run").addEventListener("click", runKeepaliveNow);
   showDiag();
+  loadKeepalive();
+}
+
+// Human-readable one-liner for a background keep-alive status record (set by
+// background.js). `null` = never run.
+function fmtKeepaliveStatus(st) {
+  if (!st) return "Background fetch has not run yet.";
+  const when = st.at ? new Date(st.at).toLocaleString() : "?";
+  const tag = { ok: "OK", "needs-attention": "Needs attention", error: "Error" }[st.outcome] || st.outcome;
+  const lines = [`Last run (${when}) — ${tag}. Window ${st.window || "?"}.`];
+  for (const p of (st.products || [])) {
+    lines.push(p.ok
+      ? `  ${p.product}: ${p.questions} q${p.answers != null ? `, ${p.answers} a` : ""} → ${p.filename}`
+      : `  ${p.product}: FAILED — ${p.error}`);
+  }
+  if (st.message) lines.push(st.message);
+  return lines.join("\n");
+}
+
+function renderKeepalive(res) {
+  const s = (res && res.settings) || {};
+  $("ka-enabled").checked = !!s.enabled;
+  $("ka-answers").checked = s.includeAnswers !== false;
+  $("ka-interval").value = String(s.intervalHours ?? 24);
+  $("ka-window").value = String(s.windowDays ?? 7);
+  $("ka-status").textContent = fmtKeepaliveStatus(res && res.status);
+}
+
+async function loadKeepalive() {
+  try {
+    renderKeepalive(await api.runtime.sendMessage({ type: "aaq-keepalive-get" }));
+  } catch (e) {
+    $("ka-status").textContent = `background unavailable: ${(e && e.message) || e}`;
+  }
+}
+
+// Read the keep-alive controls into a settings patch, clamping the numerics.
+function readKeepaliveSettings() {
+  const intervalHours = Math.max(1, parseInt($("ka-interval").value, 10) || 24);
+  const windowDays = Math.max(1, parseInt($("ka-window").value, 10) || 7);
+  return {
+    enabled: $("ka-enabled").checked,
+    includeAnswers: $("ka-answers").checked,
+    intervalHours,
+    windowDays,
+  };
+}
+
+// Enable/disable toggle. `alarms` is an optional permission (#47): request it as
+// the FIRST statement here (Firefox invalidates the user gesture after any other
+// await) when enabling, and remove it when disabling.
+async function onToggleKeepalive() {
+  const cb = $("ka-enabled");
+  if (cb.checked) {
+    let granted = false;
+    try {
+      granted = await api.permissions.request({ permissions: ["alarms"] });
+    } catch (e) {
+      granted = false;
+    }
+    if (!granted) {
+      cb.checked = false;
+      $("ka-status").textContent = "Scheduling needs the \"alarms\" permission — "
+        + "not granted. Auto-fetch stays off.";
+      return;
+    }
+    await applyKeepalive();
+  } else {
+    await applyKeepalive();               // persist enabled:false first
+    try { await api.permissions.remove({ permissions: ["alarms"] }); } catch (e) { /* */ }
+  }
+}
+
+async function applyKeepalive() {
+  try {
+    const res = await api.runtime.sendMessage({
+      type: "aaq-keepalive-apply", settings: readKeepaliveSettings(),
+    });
+    // Reflect the clamped/stored values back into the fields.
+    if (res && res.settings) {
+      $("ka-interval").value = String(res.settings.intervalHours);
+      $("ka-window").value = String(res.settings.windowDays);
+    }
+  } catch (e) {
+    $("ka-status").textContent = `could not save: ${(e && e.message) || e}`;
+  }
+}
+
+async function runKeepaliveNow() {
+  const btn = $("ka-run");
+  btn.disabled = true;
+  $("ka-status").textContent = "Running background fetch now…";
+  try {
+    await applyKeepalive();   // persist current control values first
+    const res = await api.runtime.sendMessage({ type: "aaq-keepalive-run-now" });
+    $("ka-status").textContent = fmtKeepaliveStatus(res && res.status);
+  } catch (e) {
+    $("ka-status").textContent = `run failed: ${(e && e.message) || e}`;
+  } finally {
+    btn.disabled = false;
+  }
 }
 
 // Diagnostic: report the active tab's URL, whether the granted permission

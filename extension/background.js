@@ -1,0 +1,255 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+// Opt-in background KEEP-ALIVE fetch (aaq-scraper #46). On a schedule (default
+// daily), fetch a trailing window of recent AAQ data — from inside a genuine,
+// already-open support.mozilla.org tab, exactly like the popup's Fetch button —
+// and download one raw-JSON bundle per product for import_json.py. This only
+// reduces the manual friction of the extension stopgap (#29); it does NOT
+// restore headless/CI scraping (the Fastly automated-browser block is why we're
+// here) and it needs a real, awake browser with a SUMO tab open.
+//
+// CHROME-ONLY in practice: like the Fetch button, this drives a fetch inside a
+// support.mozilla.org tab, which Firefox refuses for this add-on (see README).
+// On Firefox it will report "needs attention" rather than fetch.
+//
+// The fetch itself runs aaqFetch (fetch-core.js) IN THE PAGE — via the declared
+// content script (messaging) with a scripting.executeScript fallback — so it
+// reuses the browser's genuine cookies + fingerprint, identical to the popup.
+
+// Chrome loads only this file as the service worker, so pull in the shared
+// globals (api, API_BASE, SUMO_ORIGIN, PRODUCTS, aaqFetch). Firefox loads
+// common.js + fetch-core.js ahead of this via background.scripts, so they're
+// already defined there and importScripts is skipped.
+try {
+  if (typeof aaqFetch === "undefined") {
+    importScripts("common.js", "fetch-core.js");
+  }
+} catch (e) {
+  // importScripts is absent in a Firefox event page; the scripts array already
+  // loaded the dependencies, so there is nothing to do.
+}
+
+const ALARM = "aaq-keepalive";
+const SETTINGS_KEY = "aaq-keepalive-settings";
+const STATUS_KEY = "aaq-keepalive-status";
+
+// Off by default (opt-in). Window default is 7 days.
+const DEFAULTS = Object.freeze({
+  enabled: false,
+  intervalHours: 24,
+  windowDays: 7,
+  includeAnswers: true,
+});
+
+async function getSettings() {
+  const stored = (await api.storage.local.get(SETTINGS_KEY))[SETTINGS_KEY] || {};
+  return { ...DEFAULTS, ...stored };
+}
+async function saveSettings(patch) {
+  const next = { ...(await getSettings()), ...patch };
+  await api.storage.local.set({ [SETTINGS_KEY]: next });
+  return next;
+}
+async function getStatus() {
+  return (await api.storage.local.get(STATUS_KEY))[STATUS_KEY] || null;
+}
+async function setStatus(status) {
+  await api.storage.local.set({ [STATUS_KEY]: status });
+}
+
+const pad = (n) => String(n).padStart(2, "0");
+const dayStr = (d) =>
+  `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
+// YYYY-MM-DDTHH:MM:SSZ (UTC), matching Python's strftime("%Y-%m-%dT%H:%M:%SZ").
+const fmtStamp = (d) =>
+  `${dayStr(d)}T${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}:${pad(d.getUTCSeconds())}Z`;
+const ymd = (s) => s.split("-").map(Number);
+
+// Trailing window of `windowDays` COMPLETED UTC days, ending YESTERDAY — today
+// is still accumulating (a partial day would download incomplete). The daily
+// cadence + multi-day window overlap means yesterday's day is picked up the next
+// run, and any run that fails/aborts is re-covered by the next run's overlapping
+// window (so there are no silent gaps — see #46).
+function trailingWindow(windowDays) {
+  const now = new Date();
+  const todayUTC = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const endDt = new Date(todayUTC.getTime() - 86400000);                 // yesterday 00:00:00Z
+  const startDt = new Date(endDt.getTime() - (windowDays - 1) * 86400000);
+  return {
+    startStr: dayStr(startDt),
+    endStr: dayStr(endDt),
+    // Window math mirrors scrape_questions.py: start 00:00:00 -1s; end +1 day.
+    gt: fmtStamp(new Date(startDt.getTime() - 1000)),
+    lt: fmtStamp(new Date(endDt.getTime() + 86400000)),
+  };
+}
+
+// A Fastly-challenge / block response surfaces from aaqFetch as a non-JSON body.
+const looksLikeChallenge = (err) =>
+  /non-json|challenge|block/i.test(String(err || ""));
+
+// Run aaqFetch (fetch-core.js) in the given SUMO tab. Prefer the declared content
+// script via messaging (the path that works on Firefox — though Firefox blocks
+// the whole SUMO injection anyway), fall back to programmatic injection (Chrome).
+async function runInTab(tabId, cfg) {
+  try {
+    const r = await api.tabs.sendMessage(tabId, { type: "aaq-fetch", cfg });
+    if (r !== undefined) return r;
+  } catch (e) {
+    // No content script in this tab (loaded before install) — fall through.
+  }
+  const inj = await api.scripting.executeScript({
+    target: { tabId }, func: aaqFetch, args: [cfg],
+  });
+  return inj && inj[0] && inj[0].result;
+}
+
+// downloads.download needs a URL. A service worker has no URL.createObjectURL,
+// so encode the bundle as a base64 data: URL (UTF-8 safe).
+function bundleDataUrl(bundle) {
+  const bytes = new TextEncoder().encode(JSON.stringify(bundle));
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return `data:application/json;base64,${btoa(bin)}`;
+}
+
+async function fetchProduct(tabId, product, win, includeAnswers) {
+  const cfg = {
+    apiBase: API_BASE, product, gt: win.gt, lt: win.lt, ordering: "created",
+    includeAnswers, delayMs: 2000, max429WaitS: 120, max429Retries: 3,
+  };
+  const result = await runInTab(tabId, cfg);
+  if (!result) return { product, ok: false, error: "no result from page" };
+  if (result.error) return { product, ok: false, error: result.error };
+
+  const bundle = {
+    product, start: ymd(win.startStr), end: ymd(win.endStr),
+    questions: result.questions,
+  };
+  if (result.includeAnswers) bundle.answers = result.answers;
+  const dates = win.startStr === win.endStr ? win.startStr : `${win.startStr}_${win.endStr}`;
+  const filename = `aaq-${product}-${dates}.json`;
+  await api.downloads.download({ url: bundleDataUrl(bundle), filename, saveAs: false });
+  return {
+    product, ok: true, filename,
+    questions: result.questions.length,
+    answers: result.includeAnswers ? result.answers.length : null,
+  };
+}
+
+// The scheduled job (also invoked by the popup's "Run now").
+async function runJob(trigger) {
+  const s = await getSettings();
+  const startedAt = new Date().toISOString();
+  const win = trailingWindow(s.windowDays);
+
+  // Find an already-open SUMO tab to fetch from (host permission lets us read
+  // and filter these tabs' URLs without the broad "tabs" permission).
+  const tabs = await api.tabs.query({ url: SUMO_ORIGIN });
+  if (!tabs.length) {
+    await setStatus({
+      at: startedAt, trigger, outcome: "needs-attention",
+      window: `${win.startStr}..${win.endStr}`,
+      message: "No support.mozilla.org tab open. Keep one open (and browse it "
+        + "once so the challenge clears); the next run will fetch.",
+      products: [],
+    });
+    return;
+  }
+
+  const products = [];
+  let needsAttention = false, anyError = false;
+  for (const p of PRODUCTS) {
+    let r;
+    try {
+      r = await fetchProduct(tabs[0].id, p.slug, win, s.includeAnswers);
+    } catch (e) {
+      r = { product: p.slug, ok: false, error: String((e && e.message) || e) };
+    }
+    if (!r.ok) {
+      anyError = true;
+      if (looksLikeChallenge(r.error)) needsAttention = true;
+    }
+    products.push(r);
+  }
+
+  const outcome = needsAttention ? "needs-attention" : (anyError ? "error" : "ok");
+  const message = needsAttention
+    ? "Fastly challenge/block hit — open a support.mozilla.org tab and browse it "
+      + "normally, then it retries on the next run (nothing is lost; the window "
+      + "overlaps)."
+    : anyError
+      ? "One or more products failed; the next run's overlapping window retries them."
+      : "Downloaded. Import each bundle:  uv run python import_json.py ~/Downloads/<file>";
+  await setStatus({
+    at: startedAt, trigger, outcome, window: `${win.startStr}..${win.endStr}`,
+    message, products,
+  });
+}
+
+// Create/clear the periodic alarm to match the current settings. `alarms` is an
+// OPTIONAL permission (#47) requested when the user enables auto-fetch: if it
+// isn't granted, api.alarms is absent and there is simply nothing to schedule.
+async function reconcileAlarm() {
+  if (!api.alarms) return;
+  const s = await getSettings();
+  if (s.enabled) {
+    api.alarms.create(ALARM, {
+      periodInMinutes: Math.max(0.5, s.intervalHours * 60),
+      delayInMinutes: 1,
+    });
+  } else {
+    await api.alarms.clear(ALARM);
+  }
+}
+
+// Register the onAlarm listener (idempotent — Chrome dedups identical refs) and
+// reconcile. Called at startup when `alarms` is already held, and again from
+// permissions.onAdded when the user grants it at enable-time in an already-running
+// worker (where api.alarms didn't exist at top-level evaluation).
+function initAlarms() {
+  if (!api.alarms) return;
+  api.alarms.onAlarm.addListener(onAlarm);
+  reconcileAlarm();
+}
+function onAlarm(a) {
+  if (a.name === ALARM) runJob("alarm");
+}
+
+api.runtime.onInstalled.addListener(initAlarms);
+api.runtime.onStartup.addListener(initAlarms);
+// Grant/revoke of the optional `alarms` permission at runtime.
+api.permissions.onAdded.addListener((p) => {
+  if (p && (p.permissions || []).includes("alarms")) initAlarms();
+});
+api.permissions.onRemoved.addListener((p) => {
+  if (p && (p.permissions || []).includes("alarms")) reconcileAlarm();
+});
+// Cover the case where the worker (re)starts with the permission already held
+// but neither onInstalled nor onStartup fires (e.g. wake from an event).
+initAlarms();
+
+// Popup ↔ worker control channel. (aaq-fetch/aaq-ping are handled by the content
+// script via tabs.sendMessage and never reach here; aaq-progress is ignored.)
+api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (!msg || typeof msg.type !== "string") return undefined;
+  if (msg.type === "aaq-keepalive-get") {
+    Promise.all([getSettings(), getStatus()])
+      .then(([settings, status]) => sendResponse({ settings, status }));
+    return true;
+  }
+  if (msg.type === "aaq-keepalive-apply") {
+    saveSettings(msg.settings || {})
+      .then(() => initAlarms())   // register onAlarm + reconcile (idempotent)
+      .then(getSettings)
+      .then((settings) => sendResponse({ settings }));
+    return true;
+  }
+  if (msg.type === "aaq-keepalive-run-now") {
+    runJob("manual").then(getStatus).then((status) => sendResponse({ status }));
+    return true;
+  }
+  return undefined;
+});

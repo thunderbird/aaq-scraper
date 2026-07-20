@@ -9,7 +9,7 @@
 module.exports = {
   ignoreFiles: [
     "make-icons.py",       // build tool, not shipped
-    "console-snippet.js",  // page-console fallback, not part of the add-on
+    "console-snippet*.js", // page-console fallbacks, not part of the add-on
     "web-ext-config.cjs",  // this file
     "README.md",
     "web-ext-artifacts",   // signed .xpi output dir

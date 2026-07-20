@@ -58,6 +58,29 @@
   <div id="status"></div>
   <div id="diag"></div>
 
+  <hr style="margin-top:14px">
+  <label class="check"><input type="checkbox" id="ka-enabled"> Auto-fetch on a schedule
+    <span style="font-weight:400;color:#888">(Chrome only)</span></label>
+  <p class="sub" style="margin:4px 0 0">Fetches a trailing window of completed
+    UTC days on a timer, from an open support.mozilla.org tab, and downloads a
+    bundle per product for <code>import_json.py</code>. Keep a SUMO tab open and
+    the machine awake.</p>
+  <div class="row">
+    <div>
+      <label for="ka-interval">Every (hours)</label>
+      <input type="text" id="ka-interval" inputmode="numeric" maxlength="4"
+             placeholder="24" pattern="\d+" title="hours">
+    </div>
+    <div>
+      <label for="ka-window">Window (days)</label>
+      <input type="text" id="ka-window" inputmode="numeric" maxlength="3"
+             placeholder="7" pattern="\d+" title="days">
+    </div>
+  </div>
+  <label class="check"><input type="checkbox" id="ka-answers" checked> Include answers</label>
+  <button id="ka-run" type="button">Run background fetch now</button>
+  <div id="ka-status"></div>
+
   <script src="common.js"></script>
   <script src="fetch-core.js"></script>
   <script src="popup.js"></script>

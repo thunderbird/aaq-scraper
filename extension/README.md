@@ -123,6 +123,40 @@ keep the machine awake (`caffeinate -dims` on macOS) and allow the browser's
 "multiple downloads?" prompt on the first save. Import each downloaded bundle with
 `import_json.py` as usual. See issue #45.
 
+## Background auto-fetch (opt-in, Chrome only)
+
+Instead of clicking Fetch by hand, the extension can fetch on a **schedule** and
+download a bundle per product automatically (issue #46). It's **off by default**;
+enable it in the popup under **Auto-fetch on a schedule**:
+
+- **Every (hours)** — how often it runs (default **24**).
+- **Window (days)** — trailing window of **completed** UTC days it fetches each
+  run (default **7**). It ends at *yesterday* (today is still accumulating), and
+  the window overlaps run-to-run, so a run that fails/aborts (429, challenge
+  lapse, closed popup, service-worker eviction) is simply re-covered next run —
+  no silent gaps.
+- **Run background fetch now** triggers a run immediately and shows the result.
+
+Ticking the box requests the **`alarms`** permission the first time (it's an
+optional permission — the extension doesn't hold it unless you turn auto-fetch
+on; un-ticking removes it again). See [#46] and [#47].
+
+It drives the **same in-page fetch** as the button, so the same caveats apply and
+then some:
+
+- **Chrome only.** It injects into a support.mozilla.org tab, which Firefox
+  refuses for this add-on (see the Firefox note above). On Firefox it reports
+  *needs attention* instead of fetching — use the console snippet there.
+- **Keep a support.mozilla.org tab open** and browse it once so the Fastly
+  challenge clears; the background run fetches from that tab. If none is open, or
+  the challenge has lapsed, the popup's status line says so and the next run
+  retries.
+- **Keep the machine awake** (`caffeinate -dims` on macOS). It does **not**
+  restore headless/CI scraping — the durable fix is still an allowlisted server
+  ([#26]).
+- It downloads bundles to your Downloads folder; you still run `import_json.py`
+  on them (and commit) as below. A later iteration could auto-import.
+
 ## Use
 
 1. Open a `https://support.mozilla.org/` tab and make sure you can browse it
@@ -180,11 +214,19 @@ keep the machine awake (`caffeinate -dims` on macOS) and allow the browser's
 ## Files
 
 - `manifest.json` — MV3, host permission for `support.mozilla.org`, `scripting`
-  + `downloads`.
+  + `downloads` + `storage`; `alarms` is an **optional** permission requested
+  when background auto-fetch is enabled (#47).
 - `common.js` — `browser`/`chrome` namespace shim + `API_BASE` + product slugs.
-- `popup.html` / `popup.js` — the UI and the injected fetch loop.
+- `fetch-core.js` — the shared in-page fetch loop (`aaqFetch`), used by the
+  content script, the popup, and the background worker.
+- `popup.html` / `popup.js` — the UI, the manual fetch, and the background
+  auto-fetch controls.
+- `background.js` — the opt-in scheduled keep-alive worker (`alarms`); drives the
+  same `aaqFetch` in an open SUMO tab and downloads a bundle per product (#46).
 - `icons/` — the 🕷 toolbar/listing icons; regenerate with
   `uv run python make-icons.py`.
 
 [#26]: https://github.com/thunderbird/aaq-scraper/issues/26
 [#29]: https://github.com/thunderbird/aaq-scraper/issues/29
+[#46]: https://github.com/thunderbird/aaq-scraper/issues/46
+[#47]: https://github.com/thunderbird/aaq-scraper/issues/47
