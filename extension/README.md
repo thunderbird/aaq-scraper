@@ -110,6 +110,19 @@ type `allow pasting` first), edit the CONFIG block in `console-snippet.js`, past
 the whole file, and press Enter. It downloads the same `aaq-<product>-<dates>.json`
 bundle for `import_json.py`.
 
+### Multi-week backfill (`console-snippet-8weeks.js`)
+
+For a longer catch-up (default **8 trailing weeks**), use `console-snippet-8weeks.js`
+instead. Same page-console mechanism, but it fetches each week as its own 7-day
+window and **downloads one bundle per week** — so if a later week fails (429,
+challenge expiry, network) the finished weeks are already saved and you only
+re-run the failed one(s). It also honors SUMO's long 429 `Retry-After` windows
+(~10–15 min) rather than aborting, jitters the delay between API calls (2–10 s),
+and pauses a random 1–4 min between weeks. A full run can take a few **hours**, so
+keep the machine awake (`caffeinate -dims` on macOS) and allow the browser's
+"multiple downloads?" prompt on the first save. Import each downloaded bundle with
+`import_json.py` as usual. See issue #45.
+
 ## Use
 
 1. Open a `https://support.mozilla.org/` tab and make sure you can browse it
