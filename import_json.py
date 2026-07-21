@@ -67,7 +67,8 @@ def _write_csv(rows, fieldnames, out, restval=None):
     """Atomic write (tmp + os.replace), matching the scrapers exactly."""
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     tmp = out + ".tmp"
-    kwargs = {"fieldnames": fieldnames, "extrasaction": "ignore"}
+    kwargs = {"fieldnames": fieldnames, "extrasaction": "ignore",
+              "lineterminator": "\n"}
     if restval is not None:
         kwargs["restval"] = restval
     with open(tmp, "w", newline="", encoding="utf-8") as f:

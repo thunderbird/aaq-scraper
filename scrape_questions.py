@@ -230,7 +230,7 @@ def main():
     tmp = out + ".tmp"
     with open(tmp, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames, restval="",
-                                extrasaction="ignore")
+                                extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     os.replace(tmp, out)
