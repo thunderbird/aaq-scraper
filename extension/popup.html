@@ -67,9 +67,10 @@
     the machine awake.</p>
   <div class="row">
     <div>
-      <label for="ka-interval">Every (hours)</label>
-      <input type="text" id="ka-interval" inputmode="numeric" maxlength="4"
-             placeholder="24" pattern="\d+" title="hours">
+      <label for="ka-time">Every day at (UTC)</label>
+      <input type="text" id="ka-time" inputmode="numeric" maxlength="5"
+             placeholder="06:00" pattern="([01]\d|2[0-3]):[0-5]\d"
+             title="HH:MM, 24-hour UTC">
     </div>
     <div>
       <label for="ka-window">Window (days)</label>

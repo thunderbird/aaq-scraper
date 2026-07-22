@@ -129,7 +129,9 @@ Instead of clicking Fetch by hand, the extension can fetch on a **schedule** and
 download a bundle per product automatically (issue #46). It's **off by default**;
 enable it in the popup under **Auto-fetch on a schedule**:
 
-- **Every (hours)** — how often it runs (default **24**).
+- **Every day at (UTC)** — the UTC time of day it runs, as `HH:MM` (24-hour,
+  default **06:00**). It runs once a day at that time. If the machine is asleep
+  at that moment, Chrome fires the run shortly after it next wakes.
 - **Window (days)** — trailing window of **completed** UTC days it fetches each
   run (default **7**). It ends at *yesterday* (today is still accumulating), and
   the window overlaps run-to-run, so a run that fails/aborts (429, challenge
