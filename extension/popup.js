@@ -19,6 +19,16 @@ function setStatus(msg, cls) {
 
 function pad(n) { return String(n).padStart(2, "0"); }
 
+// Normalize a "HH:MM" 24-hour UTC time string, falling back to "06:00" if it's
+// malformed or out of range. Returns zero-padded "HH:MM".
+function normalizeTime(s) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec((s || "").trim());
+  if (!m) return "06:00";
+  const h = parseInt(m[1], 10), min = parseInt(m[2], 10);
+  if (h > 23 || min > 59) return "06:00";
+  return `${pad(h)}:${pad(min)}`;
+}
+
 // Render an aaq-progress event (emitted by aaqFetch in the page, fetch-core.js)
 // into a human status line.
 function fmtProgress(p) {
@@ -81,7 +91,7 @@ function init() {
   $("test").addEventListener("click", testAccess);
   $("ka-enabled").addEventListener("change", onToggleKeepalive);
   $("ka-answers").addEventListener("change", applyKeepalive);
-  $("ka-interval").addEventListener("change", applyKeepalive);
+  $("ka-time").addEventListener("change", applyKeepalive);
   $("ka-window").addEventListener("change", applyKeepalive);
   $("ka-run").addEventListener("click", runKeepaliveNow);
   showDiag();
@@ -108,7 +118,7 @@ function renderKeepalive(res) {
   const s = (res && res.settings) || {};
   $("ka-enabled").checked = !!s.enabled;
   $("ka-answers").checked = s.includeAnswers !== false;
-  $("ka-interval").value = String(s.intervalHours ?? 24);
+  $("ka-time").value = normalizeTime(s.dailyTimeUTC);
   $("ka-window").value = String(s.windowDays ?? 7);
   $("ka-status").textContent = fmtKeepaliveStatus(res && res.status);
 }
@@ -121,14 +131,15 @@ async function loadKeepalive() {
   }
 }
 
-// Read the keep-alive controls into a settings patch, clamping the numerics.
+// Read the keep-alive controls into a settings patch, normalizing the time and
+// clamping the window.
 function readKeepaliveSettings() {
-  const intervalHours = Math.max(1, parseInt($("ka-interval").value, 10) || 24);
+  const dailyTimeUTC = normalizeTime($("ka-time").value);
   const windowDays = Math.max(1, parseInt($("ka-window").value, 10) || 7);
   return {
     enabled: $("ka-enabled").checked,
     includeAnswers: $("ka-answers").checked,
-    intervalHours,
+    dailyTimeUTC,
     windowDays,
   };
 }
@@ -165,7 +176,7 @@ async function applyKeepalive() {
     });
     // Reflect the clamped/stored values back into the fields.
     if (res && res.settings) {
-      $("ka-interval").value = String(res.settings.intervalHours);
+      $("ka-time").value = normalizeTime(res.settings.dailyTimeUTC);
       $("ka-window").value = String(res.settings.windowDays);
     }
   } catch (e) {

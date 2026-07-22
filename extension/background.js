@@ -35,10 +35,10 @@ const ALARM = "aaq-keepalive";
 const SETTINGS_KEY = "aaq-keepalive-settings";
 const STATUS_KEY = "aaq-keepalive-status";
 
-// Off by default (opt-in). Window default is 7 days.
+// Off by default (opt-in). Runs once a day at a fixed UTC time; window is 7 days.
 const DEFAULTS = Object.freeze({
   enabled: false,
-  intervalHours: 24,
+  dailyTimeUTC: "06:00",
   windowDays: 7,
   includeAnswers: true,
 });
@@ -189,16 +189,34 @@ async function runJob(trigger) {
   });
 }
 
-// Create/clear the periodic alarm to match the current settings. `alarms` is an
+// Epoch ms of the next occurrence of "HH:MM" UTC — today if it's still ahead,
+// otherwise tomorrow. Falls back to 06:00 UTC on a malformed value.
+function nextDailyUTC(hhmm) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || ""));
+  let h = 6, min = 0;
+  if (m) {
+    const hh = parseInt(m[1], 10), mm = parseInt(m[2], 10);
+    if (hh <= 23 && mm <= 59) { h = hh; min = mm; }
+  }
+  const now = new Date();
+  let next = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, min, 0, 0);
+  if (next <= now.getTime()) next += 86400000;   // already passed today → tomorrow
+  return next;
+}
+
+// Create/clear the daily alarm to match the current settings. `alarms` is an
 // OPTIONAL permission (#47) requested when the user enables auto-fetch: if it
 // isn't granted, api.alarms is absent and there is simply nothing to schedule.
+// `when` anchors the fire to the chosen UTC time; `periodInMinutes: 1440` repeats
+// it daily. Recreating with the same target time is idempotent — `create`
+// replaces the existing alarm, and `when` recomputes to the same next occurrence.
 async function reconcileAlarm() {
   if (!api.alarms) return;
   const s = await getSettings();
   if (s.enabled) {
     api.alarms.create(ALARM, {
-      periodInMinutes: Math.max(0.5, s.intervalHours * 60),
-      delayInMinutes: 1,
+      when: nextDailyUTC(s.dailyTimeUTC),
+      periodInMinutes: 1440,
     });
   } else {
     await api.alarms.clear(ALARM);
