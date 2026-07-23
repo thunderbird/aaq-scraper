@@ -35,10 +35,15 @@ const ALARM = "aaq-keepalive";
 const SETTINGS_KEY = "aaq-keepalive-settings";
 const STATUS_KEY = "aaq-keepalive-status";
 
-// Off by default (opt-in). Runs once a day at a fixed UTC time; window is 7 days.
+// Off by default (opt-in). Runs once a day at a fixed time; window is 7 days.
+// `dailyTimeUTC` holds the HH:MM time-of-day (the key keeps its historical name
+// for storage back-compat); `dailyTimeZone` decides whether that HH:MM is read as
+// UTC (default — unchanged behavior for existing installs) or the browser's local
+// wall-clock time (#53).
 const DEFAULTS = Object.freeze({
   enabled: false,
   dailyTimeUTC: "06:00",
+  dailyTimeZone: "utc",     // "utc" | "local"
   windowDays: 7,
   includeAnswers: true,
 });
@@ -210,9 +215,16 @@ async function runJobInner(trigger) {
   });
 }
 
-// Epoch ms of the next occurrence of "HH:MM" UTC — today if it's still ahead,
-// otherwise tomorrow. Falls back to 06:00 UTC on a malformed value.
-function nextDailyUTC(hhmm) {
+// Epoch ms of the next occurrence of "HH:MM" in the given zone ("utc" | "local")
+// — today if it's still ahead, otherwise the next calendar day. Falls back to
+// 06:00 on a malformed value.
+//
+// Local mode advances by a CALENDAR day (Date(y, m, d+1, h, min)), not a fixed
+// +24h, so the fire stays pinned to the same local wall-clock time across DST
+// transitions; because the alarm is re-armed after every fire (see onAlarm) this
+// recomputes daily, so a DST shift self-corrects on the next day rather than
+// drifting. UTC has no DST, so its next-day is a plain +24h.
+function nextDailyMs(hhmm, zone) {
   const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || ""));
   let h = 6, min = 0;
   if (m) {
@@ -220,6 +232,13 @@ function nextDailyUTC(hhmm) {
     if (hh <= 23 && mm <= 59) { h = hh; min = mm; }
   }
   const now = new Date();
+  if (zone === "local") {
+    let next = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, min, 0, 0).getTime();
+    if (next <= now.getTime()) {
+      next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, h, min, 0, 0).getTime();
+    }
+    return next;
+  }
   let next = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, min, 0, 0);
   if (next <= now.getTime()) next += 86400000;   // already passed today → tomorrow
   return next;
@@ -228,17 +247,17 @@ function nextDailyUTC(hhmm) {
 // Create/clear the daily alarm to match the current settings. `alarms` is an
 // OPTIONAL permission (#47) requested when the user enables auto-fetch: if it
 // isn't granted, api.alarms is absent and there is simply nothing to schedule.
-// `when` anchors the fire to the chosen UTC time; `periodInMinutes: 1440` repeats
-// it daily. Recreating with the same target time is idempotent — `create`
-// replaces the existing alarm, and `when` recomputes to the same next occurrence.
+// `when` anchors the fire to the next occurrence of the chosen time in the chosen
+// zone. It's a ONE-SHOT alarm (no `periodInMinutes`): onAlarm re-arms the next
+// occurrence after each fire, so a local-time schedule recomputes its wall-clock
+// instant every day and stays correct across DST (a fixed 1440-min repeat would
+// drift by an hour). Recreating with the same settings is idempotent — `create`
+// replaces the existing alarm and `when` recomputes to the same next occurrence.
 async function reconcileAlarm() {
   if (!api.alarms) return;
   const s = await getSettings();
   if (s.enabled) {
-    api.alarms.create(ALARM, {
-      when: nextDailyUTC(s.dailyTimeUTC),
-      periodInMinutes: 1440,
-    });
+    api.alarms.create(ALARM, { when: nextDailyMs(s.dailyTimeUTC, s.dailyTimeZone) });
   } else {
     await api.alarms.clear(ALARM);
   }
@@ -254,7 +273,13 @@ function initAlarms() {
   reconcileAlarm();
 }
 function onAlarm(a) {
-  if (a.name === ALARM) runJob("alarm");
+  if (a.name !== ALARM) return;
+  // Re-arm the NEXT occurrence first (the alarm is one-shot), before running —
+  // so a failing job can never break the schedule, and local-time runs recompute
+  // their wall-clock instant daily (DST-correct). At fire time `now` ~= the
+  // scheduled instant, so nextDailyMs returns tomorrow's occurrence.
+  reconcileAlarm();
+  runJob("alarm");
 }
 
 api.runtime.onInstalled.addListener(initAlarms);

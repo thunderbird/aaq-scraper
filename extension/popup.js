@@ -29,6 +29,29 @@ function normalizeTime(s) {
   return `${pad(h)}:${pad(min)}`;
 }
 
+// Read the selected schedule zone, defaulting to "utc" for anything unexpected.
+function scheduleZone() {
+  return $("ka-zone").value === "local" ? "local" : "utc";
+}
+
+// Show the scheduled time alongside its equivalent in the other zone, so "06:00
+// local" vs "06:00 UTC" is never ambiguous. Computed for today's date (the
+// UTC⇄local offset can shift by an hour across a DST boundary).
+function updateTimeHint() {
+  const hhmm = normalizeTime($("ka-time").value);
+  const [h, min] = hhmm.split(":").map(Number);
+  const now = new Date();
+  let hint;
+  if (scheduleZone() === "local") {
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, min);
+    hint = `Runs ${hhmm} local (= ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())} UTC).`;
+  } else {
+    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, min));
+    hint = `Runs ${hhmm} UTC (≈ ${pad(d.getHours())}:${pad(d.getMinutes())} your time).`;
+  }
+  $("ka-time-hint").textContent = hint;
+}
+
 // Render an aaq-progress event (emitted by aaqFetch in the page, fetch-core.js)
 // into a human status line.
 function fmtProgress(p) {
@@ -92,6 +115,8 @@ function init() {
   $("ka-enabled").addEventListener("change", onToggleKeepalive);
   $("ka-answers").addEventListener("change", applyKeepalive);
   $("ka-time").addEventListener("change", applyKeepalive);
+  $("ka-time").addEventListener("input", updateTimeHint);   // live hint as you type
+  $("ka-zone").addEventListener("change", () => { updateTimeHint(); applyKeepalive(); });
   $("ka-window").addEventListener("change", applyKeepalive);
   $("ka-run").addEventListener("click", runKeepaliveNow);
   showDiag();
@@ -119,7 +144,9 @@ function renderKeepalive(res) {
   $("ka-enabled").checked = !!s.enabled;
   $("ka-answers").checked = s.includeAnswers !== false;
   $("ka-time").value = normalizeTime(s.dailyTimeUTC);
+  $("ka-zone").value = s.dailyTimeZone === "local" ? "local" : "utc";
   $("ka-window").value = String(s.windowDays ?? 7);
+  updateTimeHint();
   $("ka-status").textContent = fmtKeepaliveStatus(res && res.status);
 }
 
@@ -140,6 +167,7 @@ function readKeepaliveSettings() {
     enabled: $("ka-enabled").checked,
     includeAnswers: $("ka-answers").checked,
     dailyTimeUTC,
+    dailyTimeZone: scheduleZone(),
     windowDays,
   };
 }
@@ -177,7 +205,9 @@ async function applyKeepalive() {
     // Reflect the clamped/stored values back into the fields.
     if (res && res.settings) {
       $("ka-time").value = normalizeTime(res.settings.dailyTimeUTC);
+      $("ka-zone").value = res.settings.dailyTimeZone === "local" ? "local" : "utc";
       $("ka-window").value = String(res.settings.windowDays);
+      updateTimeHint();
     }
   } catch (e) {
     $("ka-status").textContent = `could not save: ${(e && e.message) || e}`;

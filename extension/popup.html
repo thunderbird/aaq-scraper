@@ -67,10 +67,17 @@
     the machine awake.</p>
   <div class="row">
     <div>
-      <label for="ka-time">Every day at (UTC)</label>
+      <label for="ka-time">Every day at</label>
       <input type="text" id="ka-time" inputmode="numeric" maxlength="5"
              placeholder="06:00" pattern="([01]\d|2[0-3]):[0-5]\d"
-             title="HH:MM, 24-hour UTC">
+             title="HH:MM, 24-hour">
+    </div>
+    <div>
+      <label for="ka-zone">Time zone</label>
+      <select id="ka-zone">
+        <option value="utc">UTC</option>
+        <option value="local">Local</option>
+      </select>
     </div>
     <div>
       <label for="ka-window">Window (days)</label>
@@ -78,6 +85,7 @@
              placeholder="7" pattern="\d+" title="days">
     </div>
   </div>
+  <p class="sub" id="ka-time-hint" style="margin:4px 0 0"></p>
   <label class="check"><input type="checkbox" id="ka-answers" checked> Include answers</label>
   <button id="ka-run" type="button">Run background fetch now</button>
   <div id="ka-status"></div>

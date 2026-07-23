@@ -129,9 +129,16 @@ Instead of clicking Fetch by hand, the extension can fetch on a **schedule** and
 download a bundle per product automatically (issue #46). It's **off by default**;
 enable it in the popup under **Auto-fetch on a schedule**:
 
-- **Every day at (UTC)** — the UTC time of day it runs, as `HH:MM` (24-hour,
-  default **06:00**). It runs once a day at that time. If the machine is asleep
-  at that moment, Chrome fires the run shortly after it next wakes.
+- **Every day at** + **Time zone** — the time of day it runs, as `HH:MM`
+  (24-hour, default **06:00**), interpreted in either **UTC** (default) or your
+  browser's **Local** wall-clock time (#53). It runs once a day at that time; the
+  popup shows the resolved equivalent in the other zone so it's unambiguous. If
+  the machine is asleep at that moment, Chrome fires the run shortly after it next
+  wakes. **Local** mode stays pinned to the same wall-clock time across daylight-
+  saving changes (the fire is recomputed and re-armed after each run), so its
+  instant in UTC terms shifts by an hour across a DST boundary — that's expected.
+  The zone only changes *when* the run happens, never *which* days are fetched
+  (that's always completed UTC days — see Window below).
 - **Window (days)** — trailing window of **completed** UTC days it fetches each
   run (default **7**). It ends at *yesterday* (today is still accumulating), and
   the window overlaps run-to-run, so a run that fails/aborts (429, challenge
