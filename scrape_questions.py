@@ -38,6 +38,19 @@ LEADING_KEYS = [
     "solution", "solved_by", "is_spam", "last_answer", "answers", "topic",
     "tags", "creator", "content",
 ]
+# The remaining raw API keys, in a FIXED canonical order. The API (and the
+# browser-extension JSON bundles built from it) do not guarantee a stable key
+# order between fetches, so relying on first-seen order made the trailing columns
+# reorder run-to-run for identical data — breaking the "re-run => byte-identical"
+# guarantee (an extension re-import silently swapped num_votes/num_votes_past_week
+# and taken_by/taken_until). Pinning the order fixes that at the source. This
+# list is the order used by the overwhelming majority of already-committed CSVs,
+# so existing files stay byte-identical.
+TRAILING_KEYS = [
+    "involved", "is_archived", "is_locked", "is_taken", "metadata",
+    "num_answers", "num_votes_past_week", "num_votes", "taken_until",
+    "taken_by", "updated_by",
+]
 # New clean columns we add (derived; not raw API keys).
 DERIVED_KEYS = ["operating_system", "thunderbird_version", "firefox_version"]
 
@@ -114,14 +127,21 @@ def flatten_question(q):
 
 
 def build_fieldnames(rows):
-    """Leading columns, then remaining API keys (first-seen), then derived."""
-    fieldnames = list(LEADING_KEYS)
-    seen = set(LEADING_KEYS) | set(DERIVED_KEYS)
+    """Leading columns, then remaining API keys in a FIXED canonical order
+    (TRAILING_KEYS), then any unknown API keys sorted (additive schema drift is
+    surfaced, never dropped), then derived. Deterministic regardless of the key
+    order a given API response / extension bundle happens to use."""
+    known = set(LEADING_KEYS) | set(TRAILING_KEYS) | set(DERIVED_KEYS)
+    present = set()
+    extra = []
     for row in rows:
         for k in row:
-            if k not in seen:
-                fieldnames.append(k)
-                seen.add(k)
+            present.add(k)
+            if k not in known and k not in extra:
+                extra.append(k)
+    fieldnames = list(LEADING_KEYS)
+    fieldnames += [k for k in TRAILING_KEYS if k in present]
+    fieldnames += sorted(extra)
     fieldnames.extend(DERIVED_KEYS)
     return fieldnames
 
