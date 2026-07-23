@@ -34,6 +34,11 @@ try {
 const ALARM = "aaq-keepalive";
 const SETTINGS_KEY = "aaq-keepalive-settings";
 const STATUS_KEY = "aaq-keepalive-status";
+const LOCK_KEY = "aaq-keepalive-lock";
+// A run's desktop leg can take ~9 min (162 questions × 2s answer fetches), so a
+// lease longer than that covers a healthy run; a crashed worker's stale lock
+// expires after this so the next trigger isn't blocked forever.
+const LEASE_MS = 20 * 60 * 1000;
 
 // Off by default (opt-in). Runs once a day at a fixed UTC time; window is 7 days.
 const DEFAULTS = Object.freeze({
@@ -139,8 +144,40 @@ async function fetchProduct(tabId, product, win, includeAnswers) {
   };
 }
 
-// The scheduled job (also invoked by the popup's "Run now").
+// Re-entrancy guard. Two triggers can arrive close together — the daily alarm
+// plus a manual "Run now", or a worker wake mid-run — and without coalescing
+// them each launches a full concurrent job, so every product's bundle downloads
+// 2-3× (Chrome auto-suffixes the fixed filename `(1)`, `(2)`; issue #51).
+//
+// Two layers: `jobInFlight` (module scope) is set synchronously before any await
+// so rapid triggers in the SAME worker share one run; a storage lease guards the
+// rarer cross-worker-restart case (MV3 tears the worker down, so module scope
+// alone isn't enough). The lease self-expires after LEASE_MS so a crashed run
+// never wedges future runs.
+let jobInFlight = null;
 async function runJob(trigger) {
+  if (jobInFlight) return jobInFlight;
+  jobInFlight = (async () => {
+    const lock = (await api.storage.local.get(LOCK_KEY))[LOCK_KEY];
+    if (lock && Date.parse(lock.at) && Date.now() - Date.parse(lock.at) < LEASE_MS) {
+      return; // another worker is (still) running this job
+    }
+    await api.storage.local.set({ [LOCK_KEY]: { at: new Date().toISOString(), trigger } });
+    try {
+      return await runJobInner(trigger);
+    } finally {
+      await api.storage.local.remove(LOCK_KEY);
+    }
+  })();
+  try {
+    return await jobInFlight;
+  } finally {
+    jobInFlight = null;
+  }
+}
+
+// The scheduled job (also invoked by the popup's "Run now").
+async function runJobInner(trigger) {
   const s = await getSettings();
   const startedAt = new Date().toISOString();
   const win = trailingWindow(s.windowDays);
