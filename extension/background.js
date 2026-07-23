@@ -34,11 +34,6 @@ try {
 const ALARM = "aaq-keepalive";
 const SETTINGS_KEY = "aaq-keepalive-settings";
 const STATUS_KEY = "aaq-keepalive-status";
-const LOCK_KEY = "aaq-keepalive-lock";
-// A run's desktop leg can take ~9 min (162 questions × 2s answer fetches), so a
-// lease longer than that covers a healthy run; a crashed worker's stale lock
-// expires after this so the next trigger isn't blocked forever.
-const LEASE_MS = 20 * 60 * 1000;
 
 // Off by default (opt-in). Runs once a day at a fixed UTC time; window is 7 days.
 const DEFAULTS = Object.freeze({
@@ -145,30 +140,19 @@ async function fetchProduct(tabId, product, win, includeAnswers) {
 }
 
 // Re-entrancy guard. Two triggers can arrive close together — the daily alarm
-// plus a manual "Run now", or a worker wake mid-run — and without coalescing
-// them each launches a full concurrent job, so every product's bundle downloads
-// 2-3× (Chrome auto-suffixes the fixed filename `(1)`, `(2)`; issue #51).
-//
-// Two layers: `jobInFlight` (module scope) is set synchronously before any await
-// so rapid triggers in the SAME worker share one run; a storage lease guards the
-// rarer cross-worker-restart case (MV3 tears the worker down, so module scope
-// alone isn't enough). The lease self-expires after LEASE_MS so a crashed run
-// never wedges future runs.
+// plus a manual "Run now" — and without coalescing them each launches a full
+// concurrent job, so every product's bundle downloads 2-3× (Chrome auto-suffixes
+// the fixed filename `(1)`, `(2)`; issue #51). `jobInFlight` is set synchronously
+// before any await, so a second trigger while a run is active returns the SAME
+// in-flight promise instead of starting a parallel run. A storage-based lease was
+// considered for the cross-worker-restart case but dropped: nothing re-invokes
+// runJob on a bare worker restart (the daily alarm can't re-fire same-day; a
+// manual click is a fresh user action), and a lease that isn't cleared by a
+// crashed run would silently no-op every later run until it expired.
 let jobInFlight = null;
 async function runJob(trigger) {
   if (jobInFlight) return jobInFlight;
-  jobInFlight = (async () => {
-    const lock = (await api.storage.local.get(LOCK_KEY))[LOCK_KEY];
-    if (lock && Date.parse(lock.at) && Date.now() - Date.parse(lock.at) < LEASE_MS) {
-      return; // another worker is (still) running this job
-    }
-    await api.storage.local.set({ [LOCK_KEY]: { at: new Date().toISOString(), trigger } });
-    try {
-      return await runJobInner(trigger);
-    } finally {
-      await api.storage.local.remove(LOCK_KEY);
-    }
-  })();
+  jobInFlight = runJobInner(trigger);
   try {
     return await jobInFlight;
   } finally {
@@ -303,7 +287,16 @@ api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
   }
   if (msg.type === "aaq-keepalive-run-now") {
-    runJob("manual").then(getStatus).then((status) => sendResponse({ status }));
+    // Always send a response (even on error) so the popup re-enables its button;
+    // a hung sendResponse would leave "Run background fetch now" grayed out.
+    runJob("manual")
+      .catch((e) => setStatus({
+        at: new Date().toISOString(), trigger: "manual", outcome: "error",
+        message: `run failed: ${(e && e.message) || e}`, products: [],
+      }))
+      .then(getStatus)
+      .then((status) => sendResponse({ status }))
+      .catch(() => sendResponse({ status: null }));
     return true;
   }
   return undefined;
