@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1833730,1594236,2026-07-22T18:03:02.754448Z,2026-07-22T18:03:44.954114Z,"<p>It sounds like your question relates to Thunderbird desktop rather than the Android mobile app. </p><p>You'll receive platform specific support in the desktop forum below. <a href=""https://support.mozilla.org/en-US/questions/thunderbird"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/thunderbird</a> </p>",platform34,False,0,0
