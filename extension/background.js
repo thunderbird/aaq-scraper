@@ -139,8 +139,29 @@ async function fetchProduct(tabId, product, win, includeAnswers) {
   };
 }
 
-// The scheduled job (also invoked by the popup's "Run now").
+// Re-entrancy guard. Two triggers can arrive close together — the daily alarm
+// plus a manual "Run now" — and without coalescing them each launches a full
+// concurrent job, so every product's bundle downloads 2-3× (Chrome auto-suffixes
+// the fixed filename `(1)`, `(2)`; issue #51). `jobInFlight` is set synchronously
+// before any await, so a second trigger while a run is active returns the SAME
+// in-flight promise instead of starting a parallel run. A storage-based lease was
+// considered for the cross-worker-restart case but dropped: nothing re-invokes
+// runJob on a bare worker restart (the daily alarm can't re-fire same-day; a
+// manual click is a fresh user action), and a lease that isn't cleared by a
+// crashed run would silently no-op every later run until it expired.
+let jobInFlight = null;
 async function runJob(trigger) {
+  if (jobInFlight) return jobInFlight;
+  jobInFlight = runJobInner(trigger);
+  try {
+    return await jobInFlight;
+  } finally {
+    jobInFlight = null;
+  }
+}
+
+// The scheduled job (also invoked by the popup's "Run now").
+async function runJobInner(trigger) {
   const s = await getSettings();
   const startedAt = new Date().toISOString();
   const win = trailingWindow(s.windowDays);
@@ -266,7 +287,16 @@ api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return true;
   }
   if (msg.type === "aaq-keepalive-run-now") {
-    runJob("manual").then(getStatus).then((status) => sendResponse({ status }));
+    // Always send a response (even on error) so the popup re-enables its button;
+    // a hung sendResponse would leave "Run background fetch now" grayed out.
+    runJob("manual")
+      .catch((e) => setStatus({
+        at: new Date().toISOString(), trigger: "manual", outcome: "error",
+        message: `run failed: ${(e && e.message) || e}`, products: [],
+      }))
+      .then(getStatus)
+      .then((status) => sendResponse({ status }))
+      .catch(() => sendResponse({ status: null }));
     return true;
   }
   return undefined;
