@@ -40,7 +40,10 @@ const STATUS_KEY = "aaq-keepalive-status";
 // active (subscribing via storage.onChanged so it updates even if opened
 // mid-run) and falls back to STATUS otherwise.
 const LIVE_KEY = "aaq-keepalive-live";
-const NOTIFY_ID = "aaq-keepalive";        // reused id → each notification replaces the last
+// Distinct ids for the start vs finish toasts so BOTH persist in Notification
+// Center (a shared id would make the finish overwrite the start in place).
+const NOTIFY_START_ID = "aaq-keepalive-start";
+const NOTIFY_DONE_ID = "aaq-keepalive-done";
 const NOTIFY_ICON = "icons/icon-128.png";
 
 // Off by default (opt-in). Runs once a day at a fixed time; window is 7 days.
@@ -98,10 +101,10 @@ function setBadge(text, color) {
 // requested from the popup; until granted, api.notifications is undefined and
 // this no-ops. Reuses one id so a later notification replaces the earlier one
 // rather than stacking. Gated by the user's `notify` setting by the caller.
-function notify(title, message) {
+function notify(id, title, message) {
   try {
     if (!api.notifications || !api.notifications.create) return;
-    api.notifications.create(NOTIFY_ID, {
+    api.notifications.create(id, {
       type: "basic", iconUrl: NOTIFY_ICON, title, message,
     });
   } catch (e) { /* best-effort */ }
@@ -233,9 +236,10 @@ async function runJobInner(trigger) {
   await setLive(live);
   setBadge("…", "#1a73e8");
   if (trigger !== "manual" && notifyOn) {
-    notify("SUMO AAQ fetcher", trigger === "catchup"
-      ? `Catching up a missed run — fetching ${winStr}…`
-      : `Alarm fired — fetching ${winStr}…`);
+    notify(NOTIFY_START_ID, trigger === "catchup"
+      ? "🔄 SUMO AAQ — catching up"
+      : "🔄 SUMO AAQ — fetching",
+    `${trigger === "catchup" ? "Missed run" : "Alarm fired"} — window ${winStr}…`);
   }
 
   const finishLive = () => { liveState = null; return setLive({ ...live, running: false }); };
@@ -247,7 +251,7 @@ async function runJobInner(trigger) {
     await finishLive();
     setBadge("!", "#b60205");
     if (notifyOn) {
-      notify("SUMO AAQ fetcher — needs attention",
+      notify(NOTIFY_DONE_ID, "⚠️ SUMO AAQ — needs attention",
         "No support.mozilla.org tab open. Keep one open and browse it once, then "
         + "it retries next run.");
     }
@@ -293,10 +297,10 @@ async function runJobInner(trigger) {
   if (notifyOn) {
     const ok = products.filter((p) => p.ok);
     const summary = ok.map((p) => `${p.questions} q${p.answers != null ? `/${p.answers} a` : ""}`).join(", ");
-    notify(
-      outcome === "ok" ? "SUMO AAQ fetcher — done"
-        : outcome === "needs-attention" ? "SUMO AAQ fetcher — needs attention"
-          : "SUMO AAQ fetcher — error",
+    notify(NOTIFY_DONE_ID,
+      outcome === "ok" ? "✅ SUMO AAQ — done"
+        : outcome === "needs-attention" ? "⚠️ SUMO AAQ — needs attention"
+          : "❌ SUMO AAQ — error",
       outcome === "ok" ? `Fetched ${summary || "0"}. Import the bundle(s) with import_json.py.` : message,
     );
   }

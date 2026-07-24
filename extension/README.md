@@ -148,9 +148,11 @@ enable it in the popup under **Auto-fetch on a schedule**:
   no silent gaps.
 - **Run background fetch now** triggers a run immediately and shows the result.
 - **Desktop notifications** — when ticked, the extension posts an OS notification
-  when a scheduled run **starts** (*"Alarm fired — fetching…"*) and **finishes**
-  (*"Fetched 162 q / 262 a…"*, or a needs-attention / error message), so you see
-  what happened without opening the popup. Optional; see permissions below.
+  when a scheduled run **starts** (*"🔄 SUMO AAQ — fetching"*) and **finishes**
+  (*"✅ SUMO AAQ — done · Fetched 162 q/262 a…"*, or *"⚠️ … needs attention"* /
+  *"❌ … error"*), so you see what happened without opening the popup. Start and
+  finish use **distinct notification ids**, so both persist in Notification Center
+  rather than the finish overwriting the start. Optional; see permissions below.
 
 **Seeing the status (v0.12.0).** A scheduled run happens with the popup closed,
 so status is surfaced three ways:
