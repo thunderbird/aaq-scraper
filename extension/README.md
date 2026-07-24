@@ -133,8 +133,10 @@ enable it in the popup under **Auto-fetch on a schedule**:
   (24-hour, default **06:00**), interpreted in either **UTC** (default) or your
   browser's **Local** wall-clock time (#53). It runs once a day at that time; the
   popup shows the resolved equivalent in the other zone so it's unambiguous. If
-  the machine is asleep at that moment, Chrome fires the run shortly after it next
-  wakes. **Local** mode stays pinned to the same wall-clock time across daylight-
+  the machine is asleep (or Chrome closed) at that moment the one-shot alarm is
+  dropped, so on the next worker start the extension **catches up** the missed run
+  (it fires once if the last run predates the most recent scheduled time; v0.12.0)
+  rather than waiting a full day. **Local** mode stays pinned to the same wall-clock time across daylight-
   saving changes (the fire is recomputed and re-armed after each run), so its
   instant in UTC terms shifts by an hour across a DST boundary — that's expected.
   The zone only changes *when* the run happens, never *which* days are fetched
@@ -145,10 +147,29 @@ enable it in the popup under **Auto-fetch on a schedule**:
   lapse, closed popup, service-worker eviction) is simply re-covered next run —
   no silent gaps.
 - **Run background fetch now** triggers a run immediately and shows the result.
+- **Desktop notifications** — when ticked, the extension posts an OS notification
+  when a scheduled run **starts** (*"Alarm fired — fetching…"*) and **finishes**
+  (*"Fetched 162 q / 262 a…"*, or a needs-attention / error message), so you see
+  what happened without opening the popup. Optional; see permissions below.
 
-Ticking the box requests the **`alarms`** permission the first time (it's an
-optional permission — the extension doesn't hold it unless you turn auto-fetch
-on; un-ticking removes it again). See [#46] and [#47].
+**Seeing the status (v0.12.0).** A scheduled run happens with the popup closed,
+so status is surfaced three ways:
+
+- **Toolbar icon badge** — `…` while a run is in progress, `✓` on success, `!`
+  when it needs attention or errored. Always visible, no popup needed.
+- **Popup live line** — while a run is active the Auto-fetch status line shows the
+  current phase live (*"🔄 Running (alarm) — Fetching Thunderbird Desktop… question
+  42/262"*), updating in real time whether the popup was open before the run or you
+  open it mid-run. When idle it shows the **last run** summary.
+- **Next-run countdown** — when idle and enabled, the popup shows *"⏰ Waiting for
+  alarm — next run in 2h 14m (at 23:28)."*
+- **Desktop notifications** — the start/finish toasts described above (opt-in).
+
+Ticking **Auto-fetch** requests the **`alarms`** permission the first time, and
+ticking **Desktop notifications** requests **`notifications`** — both are
+*optional* permissions the extension doesn't hold unless you turn the respective
+feature on (un-ticking removes them again). The badge and popup live line need no
+permission. See [#46] and [#47].
 
 It drives the **same in-page fetch** as the button, so the same caveats apply and
 then some:
@@ -223,8 +244,9 @@ then some:
 ## Files
 
 - `manifest.json` — MV3, host permission for `support.mozilla.org`, `scripting`
-  + `downloads` + `storage`; `alarms` is an **optional** permission requested
-  when background auto-fetch is enabled (#47).
+  + `downloads` + `storage`; `alarms` and `notifications` are **optional**
+  permissions requested when background auto-fetch (#47) and desktop
+  notifications (v0.12.0) are respectively enabled.
 - `common.js` — `browser`/`chrome` namespace shim + `API_BASE` + product slugs.
 - `fetch-core.js` — the shared in-page fetch loop (`aaqFetch`), used by the
   content script, the popup, and the background worker.
@@ -232,6 +254,8 @@ then some:
   auto-fetch controls.
 - `background.js` — the opt-in scheduled keep-alive worker (`alarms`); drives the
   same `aaqFetch` in an open SUMO tab and downloads a bundle per product (#46).
+  Writes live run status to storage and drives the toolbar badge + optional
+  desktop notifications (v0.12.0).
 - `icons/` — the 🕷 toolbar/listing icons; regenerate with
   `uv run python make-icons.py`.
 

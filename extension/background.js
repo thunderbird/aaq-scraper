@@ -34,6 +34,14 @@ try {
 const ALARM = "aaq-keepalive";
 const SETTINGS_KEY = "aaq-keepalive-settings";
 const STATUS_KEY = "aaq-keepalive-status";
+// LIVE = the in-progress phase of the CURRENT run (running/phase/product +
+// the latest aaq-progress). Distinct from STATUS_KEY, which is the FINAL
+// summary of the LAST completed run. The popup renders LIVE while a run is
+// active (subscribing via storage.onChanged so it updates even if opened
+// mid-run) and falls back to STATUS otherwise.
+const LIVE_KEY = "aaq-keepalive-live";
+const NOTIFY_ID = "aaq-keepalive";        // reused id → each notification replaces the last
+const NOTIFY_ICON = "icons/icon-128.png";
 
 // Off by default (opt-in). Runs once a day at a fixed time; window is 7 days.
 // `dailyTimeUTC` holds the HH:MM time-of-day (the key keeps its historical name
@@ -46,6 +54,8 @@ const DEFAULTS = Object.freeze({
   dailyTimeZone: "utc",     // "utc" | "local"
   windowDays: 7,
   includeAnswers: true,
+  notify: true,             // desktop notifications on start/finish (needs the
+                            // optional "notifications" permission; a no-op until granted)
 });
 
 async function getSettings() {
@@ -62,6 +72,39 @@ async function getStatus() {
 }
 async function setStatus(status) {
   await api.storage.local.set({ [STATUS_KEY]: status });
+}
+async function getLive() {
+  return (await api.storage.local.get(LIVE_KEY))[LIVE_KEY] || null;
+}
+async function setLive(live) {
+  await api.storage.local.set({ [LIVE_KEY]: live });
+}
+
+// Toolbar-icon badge: an ambient indicator visible without opening the popup.
+// "…" while running, "✓" ok, "!" needs-attention/error. `api.action` is absent
+// on old Chrome / some Firefox builds, so guard it. Best-effort — never throws
+// into the job.
+function setBadge(text, color) {
+  try {
+    if (!api.action || !api.action.setBadgeText) return;
+    api.action.setBadgeText({ text: text || "" });
+    if (color && api.action.setBadgeBackgroundColor) {
+      api.action.setBadgeBackgroundColor({ color });
+    }
+  } catch (e) { /* best-effort */ }
+}
+
+// Desktop notification (start/finish). `notifications` is an OPTIONAL permission
+// requested from the popup; until granted, api.notifications is undefined and
+// this no-ops. Reuses one id so a later notification replaces the earlier one
+// rather than stacking. Gated by the user's `notify` setting by the caller.
+function notify(title, message) {
+  try {
+    if (!api.notifications || !api.notifications.create) return;
+    api.notifications.create(NOTIFY_ID, {
+      type: "basic", iconUrl: NOTIFY_ICON, title, message,
+    });
+  } catch (e) { /* best-effort */ }
 }
 
 const pad = (n) => String(n).padStart(2, "0");
@@ -155,6 +198,13 @@ async function fetchProduct(tabId, product, win, includeAnswers) {
 // manual click is a fresh user action), and a lease that isn't cleared by a
 // crashed run would silently no-op every later run until it expired.
 let jobInFlight = null;
+// The current run's live object (null between runs). The aaq-progress listener
+// mutates `liveState` in place and persists it (throttled), so the popup's
+// storage.onChanged subscription shows page/answer counts as they arrive. Runs
+// are serialized by `jobInFlight` and this is nulled at run end, so the
+// listener's `if (liveState)` guard alone prevents cross-run contamination.
+let liveState = null;
+let lastProgressWriteMs = 0;
 async function runJob(trigger) {
   if (jobInFlight) return jobInFlight;
   jobInFlight = runJobInner(trigger);
@@ -168,16 +218,41 @@ async function runJob(trigger) {
 // The scheduled job (also invoked by the popup's "Run now").
 async function runJobInner(trigger) {
   const s = await getSettings();
+  const notifyOn = s.notify !== false;
   const startedAt = new Date().toISOString();
   const win = trailingWindow(s.windowDays);
+  const winStr = `${win.startStr}..${win.endStr}`;
+
+  // Mark the run live and light the badge so the phase is visible without the
+  // popup open.
+  const live = {
+    running: true, trigger, at: startedAt, window: winStr,
+    phase: "Starting…", product: null, progress: null,
+  };
+  liveState = live;
+  await setLive(live);
+  setBadge("…", "#1a73e8");
+  if (trigger !== "manual" && notifyOn) {
+    notify("SUMO AAQ fetcher", trigger === "catchup"
+      ? `Catching up a missed run — fetching ${winStr}…`
+      : `Alarm fired — fetching ${winStr}…`);
+  }
+
+  const finishLive = () => { liveState = null; return setLive({ ...live, running: false }); };
 
   // Find an already-open SUMO tab to fetch from (host permission lets us read
   // and filter these tabs' URLs without the broad "tabs" permission).
   const tabs = await api.tabs.query({ url: SUMO_ORIGIN });
   if (!tabs.length) {
+    await finishLive();
+    setBadge("!", "#b60205");
+    if (notifyOn) {
+      notify("SUMO AAQ fetcher — needs attention",
+        "No support.mozilla.org tab open. Keep one open and browse it once, then "
+        + "it retries next run.");
+    }
     await setStatus({
-      at: startedAt, trigger, outcome: "needs-attention",
-      window: `${win.startStr}..${win.endStr}`,
+      at: startedAt, trigger, outcome: "needs-attention", window: winStr,
       message: "No support.mozilla.org tab open. Keep one open (and browse it "
         + "once so the challenge clears); the next run will fetch.",
       products: [],
@@ -188,6 +263,10 @@ async function runJobInner(trigger) {
   const products = [];
   let needsAttention = false, anyError = false;
   for (const p of PRODUCTS) {
+    live.phase = `Fetching ${p.label}…`;
+    live.product = p.slug;
+    live.progress = null;
+    await setLive(live);
     let r;
     try {
       r = await fetchProduct(tabs[0].id, p.slug, win, s.includeAnswers);
@@ -209,9 +288,20 @@ async function runJobInner(trigger) {
     : anyError
       ? "One or more products failed; the next run's overlapping window retries them."
       : "Downloaded. Import each bundle:  uv run python import_json.py ~/Downloads/<file>";
+  await finishLive();
+  setBadge(outcome === "ok" ? "✓" : "!", outcome === "ok" ? "#0e8a16" : "#b60205");
+  if (notifyOn) {
+    const ok = products.filter((p) => p.ok);
+    const summary = ok.map((p) => `${p.questions} q${p.answers != null ? `/${p.answers} a` : ""}`).join(", ");
+    notify(
+      outcome === "ok" ? "SUMO AAQ fetcher — done"
+        : outcome === "needs-attention" ? "SUMO AAQ fetcher — needs attention"
+          : "SUMO AAQ fetcher — error",
+      outcome === "ok" ? `Fetched ${summary || "0"}. Import the bundle(s) with import_json.py.` : message,
+    );
+  }
   await setStatus({
-    at: startedAt, trigger, outcome, window: `${win.startStr}..${win.endStr}`,
-    message, products,
+    at: startedAt, trigger, outcome, window: winStr, message, products,
   });
 }
 
@@ -244,6 +334,53 @@ function nextDailyMs(hhmm, zone) {
   return next;
 }
 
+// Epoch ms of the MOST RECENT occurrence of "HH:MM" at or before now, in the
+// given zone — the mirror of nextDailyMs, used by the catch-up check to decide
+// whether a scheduled run was missed. Same calendar-day arithmetic so it's
+// DST-correct in local mode. Falls back to 06:00 on a malformed value.
+function prevDailyMs(hhmm, zone) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || ""));
+  let h = 6, min = 0;
+  if (m) {
+    const hh = parseInt(m[1], 10), mm = parseInt(m[2], 10);
+    if (hh <= 23 && mm <= 59) { h = hh; min = mm; }
+  }
+  const now = new Date();
+  if (zone === "local") {
+    let prev = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, min, 0, 0).getTime();
+    if (prev > now.getTime()) {
+      prev = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1, h, min, 0, 0).getTime();
+    }
+    return prev;
+  }
+  let prev = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, min, 0, 0);
+  if (prev > now.getTime()) prev -= 86400000;    // not yet today → yesterday's
+  return prev;
+}
+
+// Catch up a run the one-shot alarm dropped. Chrome does not deliver an alarm
+// whose time passed while the machine was asleep / the browser was closed; worse,
+// our onStartup reconcile re-arms it to the NEXT occurrence, cancelling Chrome's
+// own would-be catch-up. So on every worker (re)start, if auto-fetch is enabled
+// and the last recorded run predates the most recent scheduled occurrence, run
+// once now. Guards: needs `alarms` (else nothing is scheduled); skips when a run
+// is already in flight; and requires a PRIOR run to exist, so first-enable waits
+// for the real alarm instead of firing immediately. runJob's jobInFlight guard
+// coalesces this with any genuine alarm Chrome does deliver at startup (no double
+// fetch); the overlapping trailing window means an at-most-once catch-up loses
+// no data even if it lands on a no-tab / challenge miss.
+async function maybeCatchUp() {
+  if (!api.alarms || jobInFlight) return;
+  const s = await getSettings();
+  if (!s.enabled) return;
+  const st = await getStatus();
+  const lastRunMs = st && st.at ? Date.parse(st.at) : NaN;
+  if (!Number.isFinite(lastRunMs)) return;       // never ran → let the alarm handle first run
+  if (lastRunMs < prevDailyMs(s.dailyTimeUTC, s.dailyTimeZone)) {
+    runJob("catchup");                           // fire-and-forget; don't block startup
+  }
+}
+
 // Create/clear the daily alarm to match the current settings. `alarms` is an
 // OPTIONAL permission (#47) requested when the user enables auto-fetch: if it
 // isn't granted, api.alarms is absent and there is simply nothing to schedule.
@@ -260,6 +397,23 @@ async function reconcileAlarm() {
     api.alarms.create(ALARM, { when: nextDailyMs(s.dailyTimeUTC, s.dailyTimeZone) });
   } else {
     await api.alarms.clear(ALARM);
+  }
+}
+
+// On worker (re)start, heal any state a mid-run eviction left behind: a stale
+// LIVE record still flagged `running:true` would otherwise wedge the popup on
+// "🔄 Running" forever, since the run that would have cleared it is gone. Guard
+// on `!jobInFlight` so we never clobber a run that started this same tick (e.g.
+// an alarm that fired at startup). Also reflect the last outcome on the badge,
+// which resets to empty across a browser restart.
+async function initStatus() {
+  const live = await getLive();
+  if (live && live.running && !jobInFlight) {
+    await setLive({ ...live, running: false });
+  }
+  const st = await getStatus();
+  if (st && !jobInFlight) {
+    setBadge(st.outcome === "ok" ? "✓" : "!", st.outcome === "ok" ? "#0e8a16" : "#b60205");
   }
 }
 
@@ -282,8 +436,18 @@ function onAlarm(a) {
   runJob("alarm");
 }
 
-api.runtime.onInstalled.addListener(initAlarms);
-api.runtime.onStartup.addListener(initAlarms);
+// Worker startup: arm the alarm, heal stale live/badge state, then catch up a
+// run the one-shot alarm dropped while asleep/closed. This runs on browser
+// start (onStartup), install/update (onInstalled), and every bare worker
+// re-evaluation (the top-level call) — so a machine that wakes after sleeping
+// through the scheduled time gets its missed run on the next worker tick.
+async function bootstrap() {
+  initAlarms();
+  await initStatus();
+  await maybeCatchUp();
+}
+api.runtime.onInstalled.addListener(bootstrap);
+api.runtime.onStartup.addListener(bootstrap);
 // Grant/revoke of the optional `alarms` permission at runtime.
 api.permissions.onAdded.addListener((p) => {
   if (p && (p.permissions || []).includes("alarms")) initAlarms();
@@ -293,15 +457,34 @@ api.permissions.onRemoved.addListener((p) => {
 });
 // Cover the case where the worker (re)starts with the permission already held
 // but neither onInstalled nor onStartup fires (e.g. wake from an event).
-initAlarms();
+bootstrap();
 
 // Popup ↔ worker control channel. (aaq-fetch/aaq-ping are handled by the content
-// script via tabs.sendMessage and never reach here; aaq-progress is ignored.)
+// script via tabs.sendMessage and never reach here.) aaq-progress from the page
+// (fetch-core.js) DOES reach here during a background run — we fold it into the
+// live status so the popup can show page/answer counts as they arrive.
 api.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (!msg || typeof msg.type !== "string") return undefined;
+  if (msg.type === "aaq-progress") {
+    // Only meaningful during our own run; ignore otherwise. Throttle storage
+    // writes (progress can fire per page / per answer) but always let the phase
+    // KIND change (questions→answers) or a rate-limit event through immediately.
+    if (liveState) {
+      const now = Date.now();
+      const kindChanged = !liveState.progress || liveState.progress.kind !== msg.kind;
+      const isRatelimit = msg.kind === "ratelimit";
+      if (kindChanged || isRatelimit || now - lastProgressWriteMs >= 400) {
+        lastProgressWriteMs = now;
+        const { type, ...progress } = msg;
+        liveState.progress = progress;
+        setLive(liveState);
+      }
+    }
+    return undefined;   // no response expected
+  }
   if (msg.type === "aaq-keepalive-get") {
-    Promise.all([getSettings(), getStatus()])
-      .then(([settings, status]) => sendResponse({ settings, status }));
+    Promise.all([getSettings(), getStatus(), getLive()])
+      .then(([settings, status, live]) => sendResponse({ settings, status, live }));
     return true;
   }
   if (msg.type === "aaq-keepalive-apply") {
