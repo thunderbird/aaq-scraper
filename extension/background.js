@@ -232,8 +232,10 @@ async function runJobInner(trigger) {
   liveState = live;
   await setLive(live);
   setBadge("…", "#1a73e8");
-  if (trigger === "alarm" && notifyOn) {
-    notify("SUMO AAQ fetcher", `Alarm fired — fetching ${winStr}…`);
+  if (trigger !== "manual" && notifyOn) {
+    notify("SUMO AAQ fetcher", trigger === "catchup"
+      ? `Catching up a missed run — fetching ${winStr}…`
+      : `Alarm fired — fetching ${winStr}…`);
   }
 
   const finishLive = () => { liveState = null; return setLive({ ...live, running: false }); };
@@ -332,6 +334,53 @@ function nextDailyMs(hhmm, zone) {
   return next;
 }
 
+// Epoch ms of the MOST RECENT occurrence of "HH:MM" at or before now, in the
+// given zone — the mirror of nextDailyMs, used by the catch-up check to decide
+// whether a scheduled run was missed. Same calendar-day arithmetic so it's
+// DST-correct in local mode. Falls back to 06:00 on a malformed value.
+function prevDailyMs(hhmm, zone) {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(String(hhmm || ""));
+  let h = 6, min = 0;
+  if (m) {
+    const hh = parseInt(m[1], 10), mm = parseInt(m[2], 10);
+    if (hh <= 23 && mm <= 59) { h = hh; min = mm; }
+  }
+  const now = new Date();
+  if (zone === "local") {
+    let prev = new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, min, 0, 0).getTime();
+    if (prev > now.getTime()) {
+      prev = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1, h, min, 0, 0).getTime();
+    }
+    return prev;
+  }
+  let prev = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h, min, 0, 0);
+  if (prev > now.getTime()) prev -= 86400000;    // not yet today → yesterday's
+  return prev;
+}
+
+// Catch up a run the one-shot alarm dropped. Chrome does not deliver an alarm
+// whose time passed while the machine was asleep / the browser was closed; worse,
+// our onStartup reconcile re-arms it to the NEXT occurrence, cancelling Chrome's
+// own would-be catch-up. So on every worker (re)start, if auto-fetch is enabled
+// and the last recorded run predates the most recent scheduled occurrence, run
+// once now. Guards: needs `alarms` (else nothing is scheduled); skips when a run
+// is already in flight; and requires a PRIOR run to exist, so first-enable waits
+// for the real alarm instead of firing immediately. runJob's jobInFlight guard
+// coalesces this with any genuine alarm Chrome does deliver at startup (no double
+// fetch); the overlapping trailing window means an at-most-once catch-up loses
+// no data even if it lands on a no-tab / challenge miss.
+async function maybeCatchUp() {
+  if (!api.alarms || jobInFlight) return;
+  const s = await getSettings();
+  if (!s.enabled) return;
+  const st = await getStatus();
+  const lastRunMs = st && st.at ? Date.parse(st.at) : NaN;
+  if (!Number.isFinite(lastRunMs)) return;       // never ran → let the alarm handle first run
+  if (lastRunMs < prevDailyMs(s.dailyTimeUTC, s.dailyTimeZone)) {
+    runJob("catchup");                           // fire-and-forget; don't block startup
+  }
+}
+
 // Create/clear the daily alarm to match the current settings. `alarms` is an
 // OPTIONAL permission (#47) requested when the user enables auto-fetch: if it
 // isn't granted, api.alarms is absent and there is simply nothing to schedule.
@@ -387,8 +436,18 @@ function onAlarm(a) {
   runJob("alarm");
 }
 
-api.runtime.onInstalled.addListener(initAlarms);
-api.runtime.onStartup.addListener(initAlarms);
+// Worker startup: arm the alarm, heal stale live/badge state, then catch up a
+// run the one-shot alarm dropped while asleep/closed. This runs on browser
+// start (onStartup), install/update (onInstalled), and every bare worker
+// re-evaluation (the top-level call) — so a machine that wakes after sleeping
+// through the scheduled time gets its missed run on the next worker tick.
+async function bootstrap() {
+  initAlarms();
+  await initStatus();
+  await maybeCatchUp();
+}
+api.runtime.onInstalled.addListener(bootstrap);
+api.runtime.onStartup.addListener(bootstrap);
 // Grant/revoke of the optional `alarms` permission at runtime.
 api.permissions.onAdded.addListener((p) => {
   if (p && (p.permissions || []).includes("alarms")) initAlarms();
@@ -398,8 +457,7 @@ api.permissions.onRemoved.addListener((p) => {
 });
 // Cover the case where the worker (re)starts with the permission already held
 // but neither onInstalled nor onStartup fires (e.g. wake from an event).
-initAlarms();
-initStatus();
+bootstrap();
 
 // Popup ↔ worker control channel. (aaq-fetch/aaq-ping are handled by the content
 // script via tabs.sendMessage and never reach here.) aaq-progress from the page

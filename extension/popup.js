@@ -163,7 +163,8 @@ function fmtKeepaliveStatus(st) {
 // last-run summary). `fmtProgress` renders the page/answer/429 detail.
 function fmtLive(live) {
   if (!live || !live.running) return null;
-  const label = live.trigger === "alarm" ? "alarm" : "manual";
+  const label = live.trigger === "alarm" ? "alarm"
+    : live.trigger === "catchup" ? "catch-up" : "manual";
   const lines = [`🔄 Running (${label}) — window ${live.window || "?"}`];
   if (live.phase) lines.push(`  ${live.phase}`);
   if (live.progress) lines.push(`  ${fmtProgress(live.progress)}`);

@@ -133,8 +133,10 @@ enable it in the popup under **Auto-fetch on a schedule**:
   (24-hour, default **06:00**), interpreted in either **UTC** (default) or your
   browser's **Local** wall-clock time (#53). It runs once a day at that time; the
   popup shows the resolved equivalent in the other zone so it's unambiguous. If
-  the machine is asleep at that moment, Chrome fires the run shortly after it next
-  wakes. **Local** mode stays pinned to the same wall-clock time across daylight-
+  the machine is asleep (or Chrome closed) at that moment the one-shot alarm is
+  dropped, so on the next worker start the extension **catches up** the missed run
+  (it fires once if the last run predates the most recent scheduled time; v0.12.0)
+  rather than waiting a full day. **Local** mode stays pinned to the same wall-clock time across daylight-
   saving changes (the fire is recomputed and re-armed after each run), so its
   instant in UTC terms shifts by an hour across a DST boundary — that's expected.
   The zone only changes *when* the run happens, never *which* days are fetched
