@@ -11,6 +11,12 @@
 const $ = (id) => document.getElementById(id);
 const statusEl = () => $("status");
 
+// Storage keys + alarm name shared with background.js (for the live-status
+// subscription and the next-run countdown).
+const LIVE_KEY = "aaq-keepalive-live";
+const STATUS_KEY = "aaq-keepalive-status";
+const ALARM = "aaq-keepalive";
+
 function setStatus(msg, cls) {
   const el = statusEl();
   el.textContent = msg;
@@ -114,6 +120,7 @@ function init() {
   $("test").addEventListener("click", testAccess);
   $("ka-enabled").addEventListener("change", onToggleKeepalive);
   $("ka-answers").addEventListener("change", applyKeepalive);
+  $("ka-notify").addEventListener("change", onToggleNotify);
   $("ka-time").addEventListener("change", applyKeepalive);
   $("ka-time").addEventListener("input", updateTimeHint);   // live hint as you type
   $("ka-zone").addEventListener("change", () => { updateTimeHint(); applyKeepalive(); });
@@ -121,6 +128,18 @@ function init() {
   $("ka-run").addEventListener("click", runKeepaliveNow);
   showDiag();
   loadKeepalive();
+
+  // Live status: background.js writes phase/progress to storage as a run
+  // proceeds, so re-render the status line on change — this updates the popup
+  // even if it was opened mid-run. Only the status line is touched (not the
+  // form fields), so it can't clobber what the user is editing.
+  api.storage.onChanged.addListener((changes, area) => {
+    if (area === "local" && (changes[LIVE_KEY] || changes[STATUS_KEY])) refreshStatusLine();
+  });
+  // "Next run in Xh Ym" countdown while idle. Refresh a few times a minute so it
+  // stays roughly current; the interval dies with the popup.
+  updateNextRun();
+  setInterval(updateNextRun, 5000);
 }
 
 // Human-readable one-liner for a background keep-alive status record (set by
@@ -139,20 +158,72 @@ function fmtKeepaliveStatus(st) {
   return lines.join("\n");
 }
 
+// Human one-liner for the LIVE (in-progress) state background.js writes while a
+// run is active. Returns null when nothing is running (caller falls back to the
+// last-run summary). `fmtProgress` renders the page/answer/429 detail.
+function fmtLive(live) {
+  if (!live || !live.running) return null;
+  const label = live.trigger === "alarm" ? "alarm" : "manual";
+  const lines = [`🔄 Running (${label}) — window ${live.window || "?"}`];
+  if (live.phase) lines.push(`  ${live.phase}`);
+  if (live.progress) lines.push(`  ${fmtProgress(live.progress)}`);
+  return lines.join("\n");
+}
+
 function renderKeepalive(res) {
   const s = (res && res.settings) || {};
   $("ka-enabled").checked = !!s.enabled;
   $("ka-answers").checked = s.includeAnswers !== false;
+  $("ka-notify").checked = s.notify !== false;
   $("ka-time").value = normalizeTime(s.dailyTimeUTC);
   $("ka-zone").value = s.dailyTimeZone === "local" ? "local" : "utc";
   $("ka-window").value = String(s.windowDays ?? 7);
   updateTimeHint();
-  $("ka-status").textContent = fmtKeepaliveStatus(res && res.status);
+  $("ka-status").textContent = fmtLive(res && res.live) || fmtKeepaliveStatus(res && res.status);
+}
+
+// Update ONLY the status line from storage (used by the storage.onChanged
+// subscription) — no form-field writes, so it never clobbers user edits.
+async function refreshStatusLine() {
+  try {
+    const got = await api.storage.local.get([LIVE_KEY, STATUS_KEY]);
+    $("ka-status").textContent =
+      fmtLive(got[LIVE_KEY]) || fmtKeepaliveStatus(got[STATUS_KEY] || null);
+  } catch (e) { /* ignore transient storage errors */ }
+}
+
+// "Waiting for alarm — next run in Xh Ym (at HH:MM)". Needs the `alarms`
+// permission (held whenever auto-fetch is enabled); guarded so it silently
+// clears when off / not granted.
+async function updateNextRun() {
+  const el = $("ka-next");
+  if (!el) return;
+  try {
+    if (!$("ka-enabled").checked || !api.alarms) { el.textContent = ""; return; }
+    const a = await api.alarms.get(ALARM);
+    if (!a) { el.textContent = "No alarm scheduled yet."; return; }
+    const ms = a.scheduledTime - Date.now();
+    if (ms <= 0) { el.textContent = "⏰ Next run: due now…"; return; }
+    const totalMin = Math.floor(ms / 60000);
+    const h = Math.floor(totalMin / 60), m = totalMin % 60;
+    const rel = h > 0 ? `${h}h ${m}m` : `${m}m`;
+    const when = new Date(a.scheduledTime)
+      .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    el.textContent = `⏰ Waiting for alarm — next run in ${rel} (at ${when}).`;
+  } catch (e) { el.textContent = ""; }
 }
 
 async function loadKeepalive() {
   try {
     renderKeepalive(await api.runtime.sendMessage({ type: "aaq-keepalive-get" }));
+    // Reflect the ACTUAL notification permission: the setting may say "on" but
+    // the optional permission can be absent (e.g. removed in about:addons).
+    try {
+      const has = api.permissions
+        && await api.permissions.contains({ permissions: ["notifications"] });
+      if (!has) $("ka-notify").checked = false;
+    } catch (e) { /* permissions API quirk — leave the setting value */ }
+    updateNextRun();
   } catch (e) {
     $("ka-status").textContent = `background unavailable: ${(e && e.message) || e}`;
   }
@@ -166,10 +237,37 @@ function readKeepaliveSettings() {
   return {
     enabled: $("ka-enabled").checked,
     includeAnswers: $("ka-answers").checked,
+    notify: $("ka-notify").checked,
     dailyTimeUTC,
     dailyTimeZone: scheduleZone(),
     windowDays,
   };
+}
+
+// Desktop-notifications toggle. `notifications` is an OPTIONAL permission —
+// request it as the FIRST statement when checking on (Firefox invalidates the
+// user gesture after any other await), remove it when unchecking. Mirrors
+// onToggleKeepalive's alarms handling.
+async function onToggleNotify() {
+  const cb = $("ka-notify");
+  if (cb.checked) {
+    let granted = false;
+    try {
+      granted = await api.permissions.request({ permissions: ["notifications"] });
+    } catch (e) {
+      granted = false;
+    }
+    if (!granted) {
+      cb.checked = false;
+      $("ka-status").textContent = "Notifications need the \"notifications\" "
+        + "permission — not granted. Status still shows here and on the icon.";
+      return;
+    }
+    await applyKeepalive();
+  } else {
+    await applyKeepalive();               // persist notify:false first
+    try { await api.permissions.remove({ permissions: ["notifications"] }); } catch (e) { /* */ }
+  }
 }
 
 // Enable/disable toggle. `alarms` is an optional permission (#47): request it as
