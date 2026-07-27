@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+     License, v. 2.0. If a copy of the MPL was not distributed with this
+     file, You can obtain one at https://mozilla.org/MPL/2.0/. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 13px system-ui, sans-serif; width: 320px; margin: 0; padding: 12px; }
+    h1 { font-size: 14px; margin: 0 0 4px; }
+    .sub { color: #666; margin: 0 0 10px; font-size: 11px; }
+    label { display: block; margin: 8px 0 2px; font-weight: 600; }
+    select, input[type="text"] { width: 100%; box-sizing: border-box; padding: 4px; }
+    input[type="text"]:invalid { border-color: #b60205; }
+    .row { display: flex; gap: 8px; }
+    .row > div { flex: 1; }
+    .check { margin-top: 10px; font-weight: 400; display: flex; align-items: center; gap: 6px; }
+    button { margin-top: 12px; width: 100%; padding: 8px; font-size: 13px; cursor: pointer; }
+    button:disabled { cursor: default; opacity: 0.6; }
+    #status { margin-top: 10px; white-space: pre-wrap; font-size: 12px; min-height: 1em; }
+    #status.err { color: #b60205; }
+    #status.ok { color: #0e8a16; }
+    #grant, #test { margin-top: 6px; }
+    #diag { margin-top: 8px; font-size: 11px; color: #888; font-family: ui-monospace, monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>SUMO AAQ fetcher</h1>
+  <p class="sub">Run on an open support.mozilla.org tab. Downloads a raw-JSON
+    bundle for <code>import_json.py</code>.</p>
+
+  <label for="product">Product</label>
+  <select id="product"></select>
+
+  <!-- Text inputs, not type="date": Firefox's native calendar panel is taller
+       than the auto-sized popup and its top rows get clipped behind the popup.
+       Typing YYYY-MM-DD is robust and identical in both browsers. -->
+  <div class="row">
+    <div>
+      <label for="start">Start (UTC)</label>
+      <input type="text" id="start" inputmode="numeric" maxlength="10"
+             placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"
+             title="YYYY-MM-DD">
+    </div>
+    <div>
+      <label for="end">End (UTC)</label>
+      <input type="text" id="end" inputmode="numeric" maxlength="10"
+             placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}"
+             title="YYYY-MM-DD">
+    </div>
+  </div>
+
+  <label class="check"><input type="checkbox" id="answers" checked> Fetch answers too</label>
+
+  <button id="fetch">Fetch &amp; download</button>
+  <button id="grant" type="button">Grant support.mozilla.org access</button>
+  <button id="test" type="button">Test access on this tab</button>
+  <div id="status"></div>
+  <div id="diag"></div>
+
+  <hr style="margin-top:14px">
+  <label class="check"><input type="checkbox" id="ka-enabled"> Auto-fetch on a schedule
+    <span style="font-weight:400;color:#888">(Chrome only)</span></label>
+  <p class="sub" style="margin:4px 0 0">Fetches a trailing window of completed
+    UTC days on a timer, from an open support.mozilla.org tab, and downloads a
+    bundle per product for <code>import_json.py</code>. Keep a SUMO tab open and
+    the machine awake.</p>
+  <div class="row">
+    <div>
+      <label for="ka-time">Every day at</label>
+      <input type="text" id="ka-time" inputmode="numeric" maxlength="5"
+             placeholder="06:00" pattern="([01]\d|2[0-3]):[0-5]\d"
+             title="HH:MM, 24-hour">
+    </div>
+    <div>
+      <label for="ka-zone">Time zone</label>
+      <select id="ka-zone">
+        <option value="utc">UTC</option>
+        <option value="local">Local</option>
+      </select>
+    </div>
+    <div>
+      <label for="ka-window">Window (days)</label>
+      <input type="text" id="ka-window" inputmode="numeric" maxlength="3"
+             placeholder="7" pattern="\d+" title="days">
+    </div>
+  </div>
+  <p class="sub" id="ka-time-hint" style="margin:4px 0 0"></p>
+  <label class="check"><input type="checkbox" id="ka-answers" checked> Include answers</label>
+  <label class="check"><input type="checkbox" id="ka-notify" checked> Desktop notifications
+    <span style="font-weight:400;color:#888">(start/finish)</span></label>
+  <p class="sub" id="ka-next" style="margin:6px 0 0"></p>
+  <button id="ka-run" type="button">Run background fetch now</button>
+  <div id="ka-status"></div>
+
+  <script src="common.js"></script>
+  <script src="fetch-core.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

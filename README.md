@@ -12,16 +12,21 @@ allowlist (issue #27) — see the design and plan docs under
 [`docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`](docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md)
 and
 [`docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`](docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md).
-Until that IP is allowlisted, live API calls remain blocked and the hourly
-GitHub Actions refresh (`scrape.yml`) stays the production path.
+
+That cluster's egress IPs turn out to be **already allowlisted** (verified
+2026-07-27 from a pod in each AZ), so the API is reachable from the cluster —
+but *not* from GitHub Actions or a developer workstation, where a run still
+fails with `ChallengeError`. That is expected, not an outage. Data is currently
+produced by the browser extension under [`extension/`](extension); all GitHub
+workflows are disabled.
 
 ## Proof of concept (Bucket 0)
 
-Historical Bucket-0 script; `playwright` is no longer a project dependency,
-so install it separately (`uv run pip install playwright`) before running.
+Historical Bucket-0 script. `playwright` is no longer a runtime dependency, but
+it is kept as an **optional dependency group** so this still runs:
 
 ```sh
-uv sync
+uv sync --group playwright
 uv run playwright install chromium
 uv run python poc.py            # headed — most likely to pass the challenge
 uv run python poc.py --headless # try headless (closer to CI)

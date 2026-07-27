@@ -25,6 +25,17 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 > alerting ships **armed**, not suppressed; and the remaining gate is purely
 > mechanical (build the image, create the PAT secret, unsuspend). Sections below
 > that describe waiting for an allowlist should be read as historical.
+>
+> **Also obsolete: every reference below to `scrape.yml` "staying live" as the
+> production refresh.** As of 2026-07-27 all three GitHub workflows are
+> `disabled_manually` (`scrape.yml` last ran 2026-07-10). Data is being produced
+> by the browser extension under `extension/`, whose JSON bundles `import_json.py`
+> converts using the scrapers' own CSV writers — so extension output and
+> `run_refresh.py` output are format-compatible. Accordingly the planned
+> "disable `schema-check.yml`" change was **dropped** (it is already disabled),
+> and the open question is no longer *when to turn `scrape.yml` off* but
+> **whether the CronJob replaces the extension or runs beside it** — both commit
+> the same day-CSVs on `main`.
 **Related:** #27 (Mozilla API-access / IP-allowlist request), #28 (move off GitHub
 Actions to a self-hosted runner / static egress IP), github-action-thunderbird-aaq#34,
 bitergia-deploy#50.

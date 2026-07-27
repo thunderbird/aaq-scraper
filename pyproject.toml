@@ -11,3 +11,14 @@ dependencies = [
 dev = [
     "pytest>=8",
 ]
+# Playwright is no longer used by the scraper: the Chromium challenge-bypass is
+# itself fingerprinted and blocked (issue #28), so sumo.py drives a plain httpx
+# client. It is kept as an OPTIONAL group -- not a runtime dependency -- so the
+# historical Bucket-0 proof of concept (poc.py) and any manual browser
+# experiment still work:
+#     uv sync --group playwright && uv run python poc.py
+# Keeping it out of the default sync keeps the container image browser-free and
+# avoids dragging in greenlet, which has no wheel on newer CPythons.
+playwright = [
+    "playwright==1.49.1",
+]

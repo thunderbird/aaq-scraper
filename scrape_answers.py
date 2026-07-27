@@ -132,7 +132,8 @@ def main():
     # Atomic write (tmp + replace): a hard kill mid-write can't truncate the CSV.
     tmp = out + ".tmp"
     with open(tmp, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=COLUMNS, extrasaction="ignore")
+        writer = csv.DictWriter(f, fieldnames=COLUMNS, extrasaction="ignore",
+                                lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     os.replace(tmp, out)

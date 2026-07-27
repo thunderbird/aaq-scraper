@@ -49,7 +49,7 @@ def normalize_file(path):
 
     if changed:
         with open(path, "w", newline="", encoding="utf-8") as f:
-            csv.writer(f).writerows(out)
+            csv.writer(f, lineterminator="\n").writerows(out)
     return changed
 
 

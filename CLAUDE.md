@@ -202,7 +202,10 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   Two prerequisites already landed here: (1) `sumo.py` **dropped Playwright**
   entirely — the Chromium challenge-bypass is itself now fingerprinted and
   blocked (issue #28) — and drives the same `SumoBrowser`/`fetch_json` public
-  API over a plain **`httpx`** client instead; (2) **`.refresh-hwm` is now
+  API over a plain **`httpx`** client instead — Playwright is kept only as an
+  **optional dependency group** (`uv sync --group playwright`) so `poc.py` still
+  runs; it is not installed by default and is absent from the image; (2)
+  **`.refresh-hwm` is now
   tracked in git** (removed from `.gitignore`, no longer the Actions cache)
   since the pod is stateless and the repo is the durable state. The pod pushes
   its commits authenticated with a **fine-grained GitHub PAT** sourced from AWS
@@ -211,14 +214,20 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   never appears in argv or a URL. The CronJob ships **suspended** with a
   placeholder image tag — the only remaining gate is mechanical (`pulumi up` for
   the ECR repo + OIDC role, create the Secrets Manager PAT, merge so the image
-  builds, then pin the tag and unsuspend). Until that cutover
-  `.github/workflows/scrape.yml` **stays live** as the production refresh — note
-  it is now permanently failing, since Actions runners are not allowlisted — and
-  `schema-check.yml`'s daily schedule is **parked** (`workflow_dispatch` only)
-  because it too runs from Actions and would only open spurious `api-blocked`
-  issues; both retire once the CronJob is verified green. Full design:
+  builds, then pin the tag and unsuspend). Full design:
   `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
   and `docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`.
+- **What is actually producing data right now: the browser extension**, not any
+  GitHub workflow. As of 2026-07-27 **all three workflows are `disabled_manually`**
+  (`scrape.yml` last ran 2026-07-10) — do not describe `scrape.yml` as the live
+  refresh. The `extension/` add-on runs a scheduled auto-fetch from a real
+  browser and its JSON bundles are imported by `import_json.py`, which reuses the
+  scrapers' own writers (`build_fieldnames`, `flatten_answer`, `COLUMNS`), so
+  extension-imported and `run_refresh.py`-generated CSVs are format-compatible.
+  **Open decision:** whether the k8s CronJob *replaces* the extension or runs
+  alongside it — both would commit the same day-CSVs on `main`, so running both
+  duplicates work (the pod's rebase-retry copes with the race, but it is not a
+  plan). Decide before unsuspending.
 
 ## Notes
 

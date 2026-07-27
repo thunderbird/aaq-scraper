@@ -11,6 +11,18 @@ poc-sample.json
 /answers*.csv
 /*.json
 
+# Un-ignore the extension icon dir: the global macOS `Icon?` rule matches
+# `icons` case-insensitively on macOS and would otherwise drop it.
+!extension/icons/
+
+# web-ext signing artifacts / state (local only)
+/extension/web-ext-artifacts/
+/extension/.amo-upload-uuid
+
+# NOTE: /.refresh-hwm is intentionally NOT ignored — the k8s CronJob commits the
+# incremental-refresh high-water mark to the repo (the pod is stateless and the
+# GitHub Actions cache that used to hold it is gone).
+
 # Month-backfill failure log (local record of dates to redo)
 /backfill-failures.txt
 

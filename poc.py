@@ -6,10 +6,16 @@
 aaq-scraper — Bucket 0 proof of concept.
 
 Historical: this was the original browser-based proof of concept; the
-scraper has since moved to a plain `httpx` client (`sumo.py`), and
-`playwright` is no longer a project dependency (`pyproject.toml`). To run
-this script, install playwright separately (`uv run pip install playwright`
-or `pip install playwright`, then `playwright install chromium`).
+scraper has since moved to a plain `httpx` client (`sumo.py`). `playwright`
+is no longer a runtime dependency, but it is kept as an optional dependency
+group, so to run this script:
+
+    uv sync --group playwright
+    uv run playwright install chromium
+
+NOTE: the browser approach no longer passes the challenge from any IP -- it
+is fingerprinted regardless of headless/headed (issue #28) -- so this script
+is kept for reference, not as a working fallback.
 
 Goal: prove a real browser can pass the JavaScript challenge that SUMO
 (support.mozilla.org) now puts in front of its API, then read one page of

@@ -766,6 +766,14 @@ git commit -m "ci: build and push the scraper image to ECR via OIDC"
 
 ## Task A8: Disable `schema-check.yml` with a reviewer note
 
+> **REVERTED 2026-07-27 — do not implement.** This task was based on the belief
+> that `schema-check.yml` was still running on its daily cron. It is not: all
+> three workflows in this repo are `disabled_manually` at the GitHub level, so
+> commenting out the cron changes nothing and its stated rationale ("stop
+> spurious `api-blocked` issues") is false — a disabled workflow cannot open any.
+> The commit was reverted and `schema-check.yml` now matches `main` byte for
+> byte. Kept here for the record.
+
 **Files:**
 - Modify: `.github/workflows/schema-check.yml`
 

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "SUMO AAQ fetcher (stopgap)",
+  "version": "0.13.0",
+  "description": "Fetch Thunderbird Ask-a-Question data from support.mozilla.org in a genuine browser and download a raw-JSON bundle for import_json.py. Stopgap for the Fastly automated-browser block (aaq-scraper #29).",
+  "permissions": ["scripting", "downloads", "activeTab", "storage"],
+  "optional_permissions": ["alarms", "notifications"],
+  "host_permissions": ["https://support.mozilla.org/*"],
+  "background": {
+    "service_worker": "background.js",
+    "scripts": ["common.js", "fetch-core.js", "background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://support.mozilla.org/*"],
+      "js": ["fetch-core.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SUMO AAQ fetcher",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "aaq-fetcher@thunderbird.net",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  }
+}

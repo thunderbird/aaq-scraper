@@ -3,13 +3,9 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 name: API schema check
 
-# NOTE (2026-07-13, #28): parked pending its own migration to the k8s runner.
-# check_schema.py hits the live SUMO API and is blocked by the same Fastly
-# challenge as the scraper, so the daily schedule is disabled to stop spurious
-# api-blocked issues. Re-enable / migrate after the egress IP is allowlisted.
 on:
-  # schedule:
-  #   - cron: "30 6 * * *"   # disabled — see NOTE above
+  schedule:
+    - cron: "30 6 * * *" # daily at 06:30 UTC
   workflow_dispatch:
 
 permissions:
