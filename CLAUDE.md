@@ -185,10 +185,17 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   `run_refresh` instead.
 - Actions are pinned to Node-24 versions: `actions/checkout@v5`,
   `astral-sh/setup-uv@v8.2.0`.
-- **k8s CronJob deployment (Phase B, in progress; ready-for-cutover, not live):**
+- **k8s CronJob deployment (manifests merged-pending; job ships suspended):**
   the scraper is moving off GitHub Actions onto an ArgoCD-managed **Kubernetes
-  CronJob** on the workloads EKS cluster so it egresses via a stable IP Mozilla
-  can allowlist (issue #27) — the k8s manifests/Pulumi/ArgoCD app live in the
+  CronJob** on the workloads EKS cluster, because that cluster's NAT egress IPs
+  are **already allowlisted** by Mozilla while Actions runners (shared, rotating
+  IPs) are not. Verified 2026-07-27 from a pod in each AZ with the scraper's own
+  httpx client: `3.67.52.124` (eu-central-1a) and `63.182.70.185` (eu-central-1b)
+  both return 200 + JSON; the same request from a non-allowlisted network returns
+  the challenge HTML. **So the API is NOT blocked from the cluster** — only from
+  Actions and from developer workstations, which is why a local run still raises
+  `ChallengeError` and is not evidence of an outage. The k8s manifests/Pulumi/
+  ArgoCD app live in the
   separate `platform-infrastructure` repo; this repo only builds the image
   (`Dockerfile`, `.github/workflows/aaq-scraper-image.yml` → shared ECR via
   OIDC) and ships `deploy/entrypoint.sh` (clone → `run_refresh.py` → commit).
@@ -201,11 +208,15 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   its commits authenticated with a **fine-grained GitHub PAT** sourced from AWS
   Secrets Manager (synced in by External Secrets Operator) via a **git
   credential helper** — the token is read from the environment at call time and
-  never appears in argv or a URL. Because the API is still blocked pending the
-  egress-IP allowlist, `.github/workflows/scrape.yml` **stays live** as the
-  production refresh until cutover, and `schema-check.yml`'s daily schedule is
-  **parked** (`workflow_dispatch` only) to stop spurious `api-blocked` issues
-  against the same block. Full design:
+  never appears in argv or a URL. The CronJob ships **suspended** with a
+  placeholder image tag — the only remaining gate is mechanical (`pulumi up` for
+  the ECR repo + OIDC role, create the Secrets Manager PAT, merge so the image
+  builds, then pin the tag and unsuspend). Until that cutover
+  `.github/workflows/scrape.yml` **stays live** as the production refresh — note
+  it is now permanently failing, since Actions runners are not allowlisted — and
+  `schema-check.yml`'s daily schedule is **parked** (`workflow_dispatch` only)
+  because it too runs from Actions and would only open spurious `api-blocked`
+  issues; both retire once the CronJob is verified green. Full design:
   `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
   and `docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`.
 

@@ -7,7 +7,24 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 # Design: run the AAQ scraper as an ArgoCD CronJob on the workloads EKS cluster
 
 **Date:** 2026-07-13
-**Status:** approved (brainstorming) — pending implementation plan
+**Status:** approved; Phase A implemented (PR #44), Phase B implemented
+(platform-infrastructure)
+
+> **Update 2026-07-27 — the "blocked until allowlisted" premise below is
+> obsolete.** This document was written assuming the API would stay blocked
+> until Mozilla allowlisted a new egress IP, so the deployment was scoped as
+> scaffolding that would sit idle until then. That is wrong: the workloads
+> cluster's NAT egress IPs are **already allowlisted**. Verified 2026-07-27 from
+> a pod in each AZ using the scraper's exact httpx client — `3.67.52.124`
+> (eu-central-1a) and `63.182.70.185` (eu-central-1b) both return HTTP 200 +
+> JSON, while the identical request from a non-allowlisted network returns the
+> challenge HTML. The earlier "still blocked" conclusion came from testing on a
+> workstation rather than in the cluster.
+>
+> Consequences: the CronJob works as soon as it is deployed (no wait on #27); its
+> alerting ships **armed**, not suppressed; and the remaining gate is purely
+> mechanical (build the image, create the PAT secret, unsuspend). Sections below
+> that describe waiting for an allowlist should be read as historical.
 **Related:** #27 (Mozilla API-access / IP-allowlist request), #28 (move off GitHub
 Actions to a self-hosted runner / static egress IP), github-action-thunderbird-aaq#34,
 bitergia-deploy#50.

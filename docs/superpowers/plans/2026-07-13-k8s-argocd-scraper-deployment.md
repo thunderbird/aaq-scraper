@@ -825,6 +825,25 @@ git push
 
 # Phase B — `platform-infrastructure` repo (separate PR)
 
+> **Status 2026-07-27: implemented** on branch `aaq-scraper-cronjob`. Two
+> deviations from the tasks below, both driven by what the repo/cluster actually
+> do:
+> - **B2 came back positive, not pending.** The workloads NAT EIPs are already
+>   allowlisted (`3.67.52.124` / `63.182.70.185`, verified per-AZ), so there is no
+>   IP to request from Mozilla and nothing to wait on. Worth confirming with
+>   Mozilla that both are *formally* on the list so we aren't relying on
+>   something incidental.
+> - **The VMRule ships armed, not suppressed.** The plan suppressed it because
+>   the job was expected to fail hourly until an allowlist landed. Instead the
+>   staleness alert is gated on `kube_cronjob_spec_suspend == 0`, so it is quiet
+>   while the CronJob ships suspended and arms itself automatically at cutover.
+>
+> Also corrected against repo convention: secrets use the **`aws-secrets-manager`**
+> store with a **`mzla/workloads/aaq-scraper`** key (eu-central-1), not the
+> shared-services store the plan guessed; and platform-infrastructure manifests
+> carry descriptive comments rather than MPL headers. A NetworkPolicy and a
+> per-app README were added to match the neighbouring services.
+
 Executes in the `platform-infrastructure` checkout (`/home/aatchison/src/tb/platform-infrastructure`), on a new branch. These tasks use verification commands rather than unit tests (infra-as-code). Before writing manifests, **open the canonical example** `services/bamboohr-cal-sync/deploy/` and `argocd/workloads/apps/thundermail-ticket-spike-monitor.yaml` and copy their structure — especially any block this plan says to "copy verbatim".
 
 ## Task B1: Pulumi — ECR repo + OIDC push role
@@ -1130,16 +1149,16 @@ gh pr create --repo thunderbird/platform-infrastructure --base main \
 
 # Cutover (follow-up, after Mozilla allowlists — not in these PRs)
 
-- **Pre-cutover: verify the entrypoint runs end-to-end in the container against a
-  read-only root FS** (final-review Issue 2). The pod uses
-  `readOnlyRootFilesystem: true` with a writable emptyDir at `$HOME=/work`. The
-  entrypoint now creates its workdir under `$HOME` (survives a read-only `/tmp`),
-  but two things still need real-image verification before the Job can succeed:
-  (1) set `TMPDIR=/work` (or mount an emptyDir at `/tmp`) if any tool writes to
-  `/tmp`; (2) `run_refresh.py` shells out to `uv run python scrape_*.py` inside
-  the *clone* dir — confirm `uv run` reuses the image's baked venv (or set
-  `UV_PROJECT_ENVIRONMENT`/run the baked interpreter directly) so it does **not**
-  try to build a fresh `.venv` needing PyPI network + a writable clone at runtime.
+- ~~**Pre-cutover: verify the entrypoint runs end-to-end against a read-only root
+  FS**~~ (final-review Issue 2) — **DONE 2026-07-27.** Ran the real image with
+  `docker run --read-only` and a writable `/work`: the clone → refresh → commit
+  flow works, and `uv run` reuses the image's baked venv (`sys.prefix =
+  /app/.venv`, no PyPI fetch) once `UV_NO_SYNC=1`,
+  `UV_PROJECT_ENVIRONMENT=/app/.venv`, `UV_CACHE_DIR=/work/.uv-cache`, and
+  `UV_PYTHON_DOWNLOADS=never` are set. Without them uv builds a fresh `.venv` in
+  the clone on every run. Those four env vars are now in the CronJob spec, and
+  `HOME=/work` keeps git config and the workdir on the writable volume — no
+  separate `TMPDIR` mount is needed.
 - Bump the CronJob `image:` tag to the first built `git-<sha>` (platform-infra PR); confirm ArgoCD syncs and a manually-triggered Job commits real CSVs.
 - Arm the VMRule (remove `and vector(0)`).
 - Disable `scrape.yml` in the aaq-scraper repo.
