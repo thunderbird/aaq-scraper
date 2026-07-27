@@ -155,7 +155,7 @@ enable it in the popup under **Auto-fetch on a schedule**:
   rather than the finish overwriting the start. Optional; see permissions below.
 
 **Seeing the status (v0.12.0).** A scheduled run happens with the popup closed,
-so status is surfaced three ways:
+so status is surfaced four ways:
 
 - **Toolbar icon badge** — `…` while a run is in progress, `✓` on success, `!`
   when it needs attention or errored. Always visible, no popup needed.
@@ -166,6 +166,31 @@ so status is surfaced three ways:
 - **Next-run countdown** — when idle and enabled, the popup shows *"⏰ Waiting for
   alarm — next run in 2h 14m (at 23:28)."*
 - **Desktop notifications** — the start/finish toasts described above (opt-in).
+- **Run log on disk — `~/Downloads/aaq-run-log.txt` (v0.13.0).** Every finished
+  run (success, failure, or *needs attention*) appends an entry, so you can read
+  what happened after the fact without opening the popup — and so can a tool or
+  agent reconciling bundles against the committed CSVs, which cannot see inside
+  `chrome.storage`. Newest run is the **tail** (`tail -20 ~/Downloads/aaq-run-log.txt`):
+
+  ```text
+  2026-07-26T17:00:02Z  alarm  OK  window 2026-07-20..2026-07-26
+    thunderbird          183 q    273 a  -> aaq-thunderbird-2026-07-20_2026-07-26.json
+    thunderbird-android    8 q     21 a  -> aaq-thunderbird-android-2026-07-20_2026-07-26.json
+
+  2026-07-24T08:04:11Z  alarm  ERROR  window 2026-07-17..2026-07-23
+    thunderbird          FAILED: HTTP 502 Bad Gateway
+    thunderbird-android    6 q      7 a  -> aaq-thunderbird-android-2026-07-17_2026-07-23.json
+    note: One or more products failed; the next run's overlapping window retries them.
+  ```
+
+  A service-worker download cannot *append*, so the last 100 entries are kept in
+  storage and the **whole file is rewritten** each run with
+  `conflictAction: "overwrite"`. If a browser build uniquifies instead of
+  overwriting, the newest `aaq-run-log(N).txt` still holds the complete history —
+  the cost is clutter, never a lost entry. It is written to `~/Downloads` (the only
+  place an extension may write) and **not** committed to the repo, which would mean
+  a commit per run; copy out of it instead. Needs no extra permission (`downloads`
+  is already required for the bundles).
 
 Ticking **Auto-fetch** requests the **`alarms`** permission the first time, and
 ticking **Desktop notifications** requests **`notifications`** — both are

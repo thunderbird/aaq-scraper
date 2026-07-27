@@ -20,6 +20,14 @@ durable fix is still moving the scraper to an allowlisted constant-IP server.
 > needs a support.mozilla.org tab open and the machine awake, and it's Chrome
 > only. See [`../extension/README.md`](../extension/README.md#background-auto-fetch-opt-in-chrome-only)
 > (issue #46). The manual steps below still apply for Firefox and for backfills.
+>
+> **To see what an unattended run did, read `~/Downloads/aaq-run-log.txt`**
+> (v0.13.0) — one entry per run, newest at the tail, with per-product question /
+> answer counts, bundle filenames, and any error. Faster than opening the popup,
+> and readable by tooling outside the browser:
+> ```sh
+> tail -20 ~/Downloads/aaq-run-log.txt
+> ```
 
 ## One-time setup
 

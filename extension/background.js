@@ -75,6 +75,81 @@ async function getStatus() {
 }
 async function setStatus(status) {
   await api.storage.local.set({ [STATUS_KEY]: status });
+  await appendRunLog(status);
+}
+
+// ---------------------------------------------------------------------------
+// RUN LOG on disk (`~/Downloads/aaq-run-log.txt`)
+//
+// The popup's last-run summary lives in chrome.storage, which nothing OUTSIDE
+// the browser can read — so after an unattended run the only way to learn what
+// happened was to open the popup and retype it. This mirrors every terminal
+// status to a plain-text file that a human can `tail` and an agent (Claude Code)
+// can read directly when reconciling bundles against the committed CSVs.
+//
+// A service worker can only write files via downloads.download, and a download
+// cannot APPEND — so the full history is kept in storage (capped at LOG_MAX) and
+// the whole file is rewritten each run with conflictAction "overwrite". If a
+// browser build uniquifies instead of overwriting, the newest `aaq-run-log(N).txt`
+// still holds the COMPLETE history, so the failure mode is clutter, never a lost
+// entry. Entries are oldest-first so the newest run is the tail.
+//
+// Deliberately NOT written into the repo: it would mean a commit per run. Copy
+// what you need out of it instead.
+const LOG_KEY = "aaq-keepalive-log";
+const LOG_FILENAME = "aaq-run-log.txt";
+const LOG_MAX = 100;
+
+// Longest product slug ("thunderbird-android"), so columns line up.
+const LOG_SLUG_WIDTH = 19;
+
+function renderRunLogEntry(s) {
+  const outcome = String(s.outcome || "?").toUpperCase();
+  // status.at is a full ISO string with milliseconds; second precision is plenty
+  // here and lines up with the timestamps the CSV/commit messages use.
+  const at = Number.isNaN(Date.parse(s.at)) ? (s.at || "?") : fmtStamp(new Date(s.at));
+  const lines = [`${at}  ${s.trigger || "?"}  ${outcome}  window ${s.window || "?"}`];
+  for (const p of s.products || []) {
+    const slug = String(p.product || "?").padEnd(LOG_SLUG_WIDTH);
+    if (p.ok) {
+      const counts = `${String(p.questions).padStart(5)} q`
+        + (p.answers != null ? `  ${String(p.answers).padStart(5)} a` : "");
+      lines.push(`  ${slug}${counts}  -> ${p.filename}`);
+    } else {
+      lines.push(`  ${slug}  FAILED: ${p.error || "unknown error"}`);
+    }
+  }
+  // The ok-message is just the "now import it" reminder, which would repeat on
+  // every successful entry; only carry the message when it says something.
+  if (s.outcome !== "ok" && s.message) lines.push(`  note: ${s.message}`);
+  return lines.join("\n");
+}
+
+function renderRunLog(entries) {
+  return [
+    "# SUMO AAQ fetcher — background run log (newest last).",
+    "# Rewritten in full after each run; not committed to the repo.",
+    "# Import a bundle:  uv run python import_json.py ~/Downloads/<file>",
+    "",
+    entries.map(renderRunLogEntry).join("\n\n"),
+    "",
+  ].join("\n");
+}
+
+async function appendRunLog(status) {
+  // Best-effort: logging must never break a run that otherwise succeeded.
+  try {
+    const prev = (await api.storage.local.get(LOG_KEY))[LOG_KEY];
+    const entries = (Array.isArray(prev) ? prev : []).concat([status]).slice(-LOG_MAX);
+    await api.storage.local.set({ [LOG_KEY]: entries });
+    if (!api.downloads || !api.downloads.download) return;
+    await api.downloads.download({
+      url: textDataUrl(renderRunLog(entries), "text/plain"),
+      filename: LOG_FILENAME,
+      conflictAction: "overwrite",
+      saveAs: false,
+    });
+  } catch (e) { /* best-effort */ }
 }
 async function getLive() {
   return (await api.storage.local.get(LIVE_KEY))[LIVE_KEY] || null;
@@ -158,12 +233,17 @@ async function runInTab(tabId, cfg) {
 }
 
 // downloads.download needs a URL. A service worker has no URL.createObjectURL,
-// so encode the bundle as a base64 data: URL (UTF-8 safe).
-function bundleDataUrl(bundle) {
-  const bytes = new TextEncoder().encode(JSON.stringify(bundle));
+// so encode the payload as a base64 data: URL (UTF-8 safe — btoa alone would
+// throw on non-latin1, hence the TextEncoder round-trip).
+function textDataUrl(text, mime) {
+  const bytes = new TextEncoder().encode(text);
   let bin = "";
   for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
-  return `data:application/json;base64,${btoa(bin)}`;
+  return `data:${mime};base64,${btoa(bin)}`;
+}
+
+function bundleDataUrl(bundle) {
+  return textDataUrl(JSON.stringify(bundle), "application/json");
 }
 
 async function fetchProduct(tabId, product, win, includeAnswers) {
