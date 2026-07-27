@@ -95,3 +95,24 @@ def test_raw_fetch_non_json_body_sets_json_none():
     out = sb._raw_fetch("https://support.mozilla.org/api/2/question/")
     assert out["status"] == 200 and out["json"] is None
     assert out["snippet"] == "<html>challenge</html>"
+
+
+def test_default_output_path_default_layout(monkeypatch):
+    """Without AAQ_DATA_ROOT the layout is the committed one: <year>/..."""
+    import scrape_questions as sq
+    from datetime import datetime
+    monkeypatch.delenv("AAQ_DATA_ROOT", raising=False)
+    d = datetime(2026, 7, 1)
+    assert sq.default_output_path("questions", "thunderbird", d, d) == \
+        "2026/questions-thunderbird-desktop-2026-07-01.csv"
+
+
+def test_default_output_path_honors_data_root(monkeypatch):
+    """AAQ_DATA_ROOT relocates the whole <year>/ tree under a prefix, so a
+    parallel writer never touches the committed CSVs."""
+    import scrape_questions as sq
+    from datetime import datetime
+    monkeypatch.setenv("AAQ_DATA_ROOT", "cronjob-test")
+    d = datetime(2026, 7, 1)
+    assert sq.default_output_path("answers", "thunderbird-android", d, d) == \
+        "cronjob-test/2026/answers-thunderbird-android-2026-07-01.csv"

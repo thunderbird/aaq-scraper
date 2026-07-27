@@ -130,3 +130,41 @@ def test_entrypoint_rebase_retries_past_competing_push(tmp_path):
     show = _run(["git", "show",
                  "main:2099/questions-test-2099-01-01.csv"], cwd=origin, env=genv)
     assert show.stdout.strip() == "id"
+
+
+def test_entrypoint_stages_only_configured_paths(tmp_path):
+    """A shakedown deployment sets GIT_ADD_PATHS to its own root, so the
+    committed data tree is never staged even if it changes underneath."""
+    genv = _git_env()
+    origin = tmp_path / "origin.git"
+    _run(["git", "init", "--bare", "-b", "main", str(origin)], env=genv)
+    seed = tmp_path / "seed"
+    _run(["git", "clone", str(origin), str(seed)], env=genv)
+    (seed / "2099").mkdir()
+    (seed / "2099" / "questions-real.csv").write_text("id\n1\n")
+    _run(["git", "add", "-A"], cwd=seed, env=genv)
+    _run(["git", "commit", "-m", "seed"], cwd=seed, env=genv)
+    _run(["git", "push", "origin", "main"], cwd=seed, env=genv)
+
+    repo_root = Path(__file__).resolve().parent.parent
+    env = _git_env()
+    env.update({
+        "GIT_REPO_URL": f"file://{origin}",
+        "GITHUB_TOKEN": "dummy",
+        "GIT_BRANCH": "main",
+        "GIT_ADD_PATHS": "cronjob-test/",
+        # Write into BOTH the shakedown root and the real tree; only the
+        # former may be committed.
+        "REFRESH_CMD": ("mkdir -p cronjob-test/2099 "
+                        "&& echo id > cronjob-test/2099/questions-test.csv "
+                        "&& echo tampered >> 2099/questions-real.csv"),
+    })
+    _run(["bash", str(repo_root / "deploy" / "entrypoint.sh")], env=env)
+
+    files = _run(["git", "show", "--stat", "--name-only", "--format=", "main"],
+                 cwd=origin, env=genv).stdout.split()
+    assert files == ["cronjob-test/2099/questions-test.csv"], files
+    # The real CSV on origin is untouched.
+    real = _run(["git", "show", "main:2099/questions-real.csv"],
+                cwd=origin, env=genv)
+    assert real.stdout == "id\n1\n"

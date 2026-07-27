@@ -36,6 +36,7 @@ import time
 from datetime import datetime, timedelta, timezone
 
 import find_updated_days as fud
+import scrape_questions as sq
 from sumo import DEFERRAL_EXIT_CODE, RateLimitDeferral, SumoBrowser
 
 PRODUCTS = [("thunderbird", "thunderbird-desktop"),
@@ -191,7 +192,10 @@ def main():
             print(f"{kind} day {slug} {day} at questions; will retry", flush=True)
             deferred_floors.append(floor)
         else:
-            q = f"{day[:4]}/questions-{label}-{day}.csv"
+            # Same helper the scraper itself used, so the path (including any
+            # AAQ_DATA_ROOT prefix) can only be derived one way.
+            q = sq.default_output_path("questions", slug,
+                                       datetime(y, m, dd), datetime(y, m, dd))
             if os.path.exists(q):
                 rc = run(["uv", "run", "python", "scrape_answers.py",
                           "--questions", q, "--headless", "--random-delay"]

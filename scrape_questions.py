@@ -153,12 +153,20 @@ def parse_dt(s):
 
 
 def default_output_path(kind, product, start_dt, end_dt):
-    """<start-year>/<kind>-<product-label>-<dates>.csv"""
+    """[$AAQ_DATA_ROOT/]<start-year>/<kind>-<product-label>-<dates>.csv
+
+    AAQ_DATA_ROOT relocates the whole <year>/ tree under a prefix, so a second
+    writer (e.g. the k8s CronJob running alongside the browser extension) can
+    produce a parallel copy without touching the committed data. Unset/empty =
+    the normal in-repo layout. Read at call time so it can be set per-process.
+    """
     label = PRODUCT_LABELS.get(product, product)
     s = start_dt.strftime("%Y-%m-%d")
     e = end_dt.strftime("%Y-%m-%d")
     dates = s if s == e else f"{s}_{e}"
-    return os.path.join(start_dt.strftime("%Y"), f"{kind}-{label}-{dates}.csv")
+    root = os.environ.get("AAQ_DATA_ROOT", "")
+    return os.path.join(root, start_dt.strftime("%Y"),
+                        f"{kind}-{label}-{dates}.csv")
 
 
 def main():
