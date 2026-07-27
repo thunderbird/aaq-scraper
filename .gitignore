@@ -19,8 +19,9 @@ poc-sample.json
 /extension/web-ext-artifacts/
 /extension/.amo-upload-uuid
 
-# Incremental-refresh high-water mark (persisted via Actions cache, not git)
-/.refresh-hwm
+# NOTE: /.refresh-hwm is intentionally NOT ignored — the k8s CronJob commits the
+# incremental-refresh high-water mark to the repo (the pod is stateless and the
+# GitHub Actions cache that used to hold it is gone).
 
 # Month-backfill failure log (local record of dates to redo)
 /backfill-failures.txt

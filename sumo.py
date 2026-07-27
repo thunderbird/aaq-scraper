@@ -2,20 +2,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 """
-Shared SUMO (support.mozilla.org) browser helper.
+Shared SUMO (support.mozilla.org) API client.
 
-Drives a real Chromium (Playwright) so the JavaScript challenge that fronts the
-API is satisfied, then lets callers fetch JSON API pages from inside the
-browser's authenticated context. Proven in Bucket 0 (poc.py) to work both
-headed and headless.
+Historically drove a real Chromium (Playwright) to pass the Fastly JS/WAF
+challenge; that path is now fingerprinted and blocked (issue #28), so this uses
+a plain HTTP client (httpx). Once our egress IP is allowlisted by Mozilla
+(issue #27) the API is reachable directly. The public API (SumoBrowser,
+fetch_json, paginate) is unchanged so callers did not have to change.
 """
 
 import csv
+import json
 import random
 import sys
 import time
 
-from playwright.sync_api import sync_playwright, TimeoutError as PWTimeoutError
+import httpx
 
 
 def _max_csv_field_size():
@@ -73,12 +75,13 @@ USER_AGENT = (
 
 
 class SumoBrowser:
-    """A browser session that has passed the SUMO JS challenge.
+    """A SUMO API HTTP session.
 
-    Use as a context manager:
+    Named `SumoBrowser` for backwards compatibility with existing call sites;
+    it no longer drives a browser. Use as a context manager:
 
         with SumoBrowser(headless=True) as sumo:
-            data = sumo.fetch_json("https://support.mozilla.org/api/2/question/?...")
+            data = sumo.fetch_json(sumo_url)
             for page in sumo.paginate(first_url):
                 ...
     """
@@ -87,8 +90,9 @@ class SumoBrowser:
                  max_attempts=5, backoff_base=2.0,
                  retry_jitter_min_s=60, retry_jitter_max_s=300,
                  max_429_wait_s=None):
-        self.headless = headless
-        self.settle_ms = settle_ms
+        # `headless` and `settle_ms` are accepted for backwards-compatible call
+        # sites but ignored: there is no browser to run headed/headless and
+        # nothing to "settle" for a plain HTTP client.
         self.max_attempts = max_attempts
         self.backoff_base = backoff_base
         # If set, a 429 whose required wait (Retry-After / backoff) exceeds this
@@ -100,77 +104,57 @@ class SumoBrowser:
         # always retry strictly AFTER SUMO's Retry-After window and desync retries.
         self.retry_jitter_min_s = retry_jitter_min_s
         self.retry_jitter_max_s = retry_jitter_max_s
-        self._pw = None
-        self._browser = None
-        self._page = None
+        self._client = None
 
     def __enter__(self):
-        self._pw = sync_playwright().start()
-        # --disable-quic: SUMO's CDN advertises HTTP/3, and Chromium can stall
-        # indefinitely on the QUIC/UDP path on some networks (while curl over
-        # TCP is fine); forcing HTTP over TCP avoids that hang.
-        self._browser = self._pw.chromium.launch(
-            headless=self.headless, args=["--disable-quic"])
-        context = self._browser.new_context(
-            user_agent=USER_AGENT,
-            locale="en-US",
-            viewport={"width": 1280, "height": 800},
+        # A persistent client keeps a cookie jar across calls, so any edge
+        # cookie handed out on the first request is reused (mirrors the old
+        # browser context's cookie reuse). follow_redirects matches a browser.
+        self._client = httpx.Client(
+            headers={
+                "User-Agent": USER_AGENT,
+                "Accept-Language": "en-US,en;q=0.9",
+            },
+            timeout=60.0,
+            follow_redirects=True,
         )
-        # Acquire challenge cookies by loading the site once. This load can
-        # transiently stall (SUMO intermittently tarpits automated clients), so
-        # retry with a fresh page + backoff rather than letting one timeout kill
-        # the whole per-day scrape — a sustained stall window otherwise fails
-        # every day in a backfill (the "cascade" failures seen in practice).
-        last_err = None
-        for attempt in range(1, self.max_attempts + 1):
-            self._page = context.new_page()
-            try:
-                self._page.goto(HOME_URL, wait_until="domcontentloaded",
-                                timeout=60000)
-                self._page.wait_for_timeout(self.settle_ms)
-                return self
-            except PWTimeoutError as e:
-                last_err = e
-                print(f"home load timed out "
-                      f"(attempt {attempt}/{self.max_attempts})",
-                      file=sys.stderr, flush=True)
-                self._page.close()
-                if attempt < self.max_attempts:
-                    time.sleep(self.backoff_base ** attempt)
-        raise last_err
+        # Warm up by loading the home page once so any cookie is captured before
+        # the API call. Best-effort: a failure here is not fatal — a genuine
+        # block surfaces later as ChallengeError from fetch_json.
+        try:
+            self._client.get(HOME_URL)
+        except httpx.HTTPError as e:
+            print(f"home warm-up failed (continuing): {e}",
+                  file=sys.stderr, flush=True)
+        return self
 
     def __exit__(self, exc_type, exc, tb):
-        if self._browser is not None:
-            self._browser.close()
-        if self._pw is not None:
-            self._pw.stop()
+        if self._client is not None:
+            self._client.close()
         return False
 
     def _raw_fetch(self, url):
-        """Do one in-page fetch(); return {status, json, snippet, retry_after}."""
-        return self._page.evaluate(
-            """async (url) => {
-                const res = await fetch(url, {
-                    headers: { 'Accept': 'application/json' },
-                    credentials: 'include',
-                });
-                const text = await res.text();
-                let json = null;
-                try { json = JSON.parse(text); } catch (e) {}
-                return {
-                    status: res.status,
-                    json,
-                    snippet: text.slice(0, 300),
-                    retry_after: res.headers.get('retry-after'),
-                };
-            }""",
-            url,
-        )
+        """Do one HTTP GET; return {status, json, snippet, retry_after}.
+
+        Parses the body as JSON (json is None when the body is not valid
+        JSON — e.g. an HTML challenge page)."""
+        res = self._client.get(url, headers={"Accept": "application/json"})
+        text = res.text
+        try:
+            body = json.loads(text)
+        except ValueError:
+            body = None
+        return {
+            "status": res.status_code,
+            "json": body,
+            "snippet": text[:300],
+            "retry_after": res.headers.get("retry-after"),
+        }
 
     def fetch_json(self, url):
-        """Fetch `url` via an in-page fetch(), retrying transient failures.
+        """Fetch `url` via the HTTP client, retrying transient failures.
 
-        Reuses the page's cookies/origin so the JS challenge stays satisfied.
+        Reuses the client's cookie jar so the JS challenge stays satisfied.
         Retries with exponential backoff on HTTP 429 and 5xx (honouring
         Retry-After for 429). A 200 that isn't JSON is treated as a challenge
         hiccup and retried too. Other 4xx fail immediately. Raises RuntimeError
@@ -231,8 +215,8 @@ class SumoBrowser:
         raise exc(
             f"Gave up after {self.max_attempts} attempts; last status "
             f"{last['status']} for {url}\nFirst 300 chars: {last['snippet']!r}\n"
-            "If this is a 200 with HTML, the browser may not have passed the "
-            "challenge."
+            "If this is a 200 with HTML, the client may not have passed the "
+            "challenge / the edge served the challenge page."
         )
 
     def paginate(self, first_url, on_page=None):

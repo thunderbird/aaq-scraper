@@ -1,0 +1,75 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#
+# Build & push the scraper image to the shared ECR via GitHub OIDC.
+# One-time setup (see platform-infrastructure Task B1):
+#   - GitHub Environment "image-aaq-scraper" (protected to main)
+#   - repo variable IMAGE_PUSH_ROLE_ARN = the push-only role ARN
+name: Build scraper image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.py"
+      - "pyproject.toml"
+      - "uv.lock"
+      - "Dockerfile"
+      - "deploy/entrypoint.sh"
+      - ".github/workflows/aaq-scraper-image.yml"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Explicit image tag (default git-<sha>)"
+        required: false
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: image-aaq-scraper
+    env:
+      ECR: 826971876779.dkr.ecr.us-east-1.amazonaws.com
+      REPO: aaq-scraper
+    steps:
+      - uses: actions/checkout@v5
+      - name: Compute tag
+        id: tag
+        env:
+          # Pass the workflow_dispatch input through an env var rather than
+          # interpolating ${{ github.event.* }} directly into the run script
+          # (that is a shell-injection vector, since this job holds ECR-push
+          # OIDC creds). Then validate the tag charset before use.
+          TAG_INPUT: ${{ github.event.inputs.tag }}
+        run: |
+          T="$TAG_INPUT"
+          [ -n "$T" ] || T="git-$(git rev-parse --short HEAD)"
+          case "$T" in
+            ""|*[!A-Za-z0-9._-]*)
+              echo "invalid tag: $T" >&2; exit 1 ;;
+          esac
+          printf 'tag=%s\n' "$T" >> "$GITHUB_OUTPUT"
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.IMAGE_PUSH_ROLE_ARN }}
+          aws-region: us-east-1
+      - name: Login to ECR
+        uses: aws-actions/amazon-ecr-login@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm64
+          push: true
+          tags: ${{ env.ECR }}/${{ env.REPO }}:${{ steps.tag.outputs.tag }}

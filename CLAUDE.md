@@ -8,19 +8,21 @@ Scrape the Mozilla SUMO (support.mozilla.org) "Ask a Question" API for Thunderbi
 Desktop and Thunderbird Android, producing CSVs compatible with the legacy Ruby
 reports in `thunderbird/github-action-thunderbird-aaq`. Since ~June 2026 the API
 sits behind a JavaScript challenge that blocks headless HTTP (issue
-thunderbird/github-action-thunderbird-aaq#34), so we drive a **real browser** to
-pass the challenge and call the JSON API from inside the browser's authenticated
-context.
+thunderbird/github-action-thunderbird-aaq#34); a real-browser (Playwright/
+Chromium) workaround passed the challenge for a while but is now itself
+fingerprinted and blocked (issue #28), so the scraper instead calls the API
+over a plain **`httpx`** HTTP client, and is moving to a Kubernetes CronJob
+deployment with a stable, allowlistable egress IP (issue #27).
 
 ## Core architecture & crucial decisions
 
-- **Browser-passes-challenge approach** (`sumo.py`): `SumoBrowser` launches
-  Chromium (Playwright), loads the site once to acquire challenge cookies, then
-  `fetch_json()` does an **in-page `fetch()`** (`page.evaluate`) so the request
-  reuses the page's cookies/origin. Headless works (locally **and in GitHub
-  Actions** — this is what resolves #34).
-- **Stack: Python + Playwright, managed with `uv`** — use `uv sync` / `uv run`,
-  never pip or raw venv. Deps in `pyproject.toml`.
+- **HTTP-client approach** (`sumo.py`): `SumoBrowser` (name kept for
+  compatibility) drives a plain `httpx` client; historically it launched
+  Chromium via Playwright to pass the JS challenge, but that is now
+  fingerprinted/blocked (#28).
+- **Stack: Python + `httpx`, managed with `uv`** — use `uv sync` / `uv run`,
+  never pip or raw venv. Deps in `pyproject.toml`. (`poc.py` still uses Playwright,
+  which is no longer a project dependency — install it separately to run the PoC.)
 - **`fetch_json` retries** transient failures with exponential backoff: HTTP 429
   (honours `Retry-After`), 5xx, and a 200-but-non-JSON challenge hiccup.
   Non-retryable 4xx fail fast.
@@ -111,8 +113,7 @@ context.
 ## Commands
 
 ```sh
-uv sync
-uv run playwright install chromium                 # one-time
+uv sync                                            # httpx client; no browser install needed
 
 # Questions (single day = same date twice). Add --product thunderbird-android for Android.
 uv run python scrape_questions.py 2026 6 10 2026 6 10 --headless
@@ -184,6 +185,49 @@ vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
   `run_refresh` instead.
 - Actions are pinned to Node-24 versions: `actions/checkout@v5`,
   `astral-sh/setup-uv@v8.2.0`.
+- **k8s CronJob deployment (manifests merged-pending; job ships suspended):**
+  the scraper is moving off GitHub Actions onto an ArgoCD-managed **Kubernetes
+  CronJob** on the workloads EKS cluster, because that cluster's NAT egress IPs
+  are **already allowlisted** by Mozilla while Actions runners (shared, rotating
+  IPs) are not. Verified 2026-07-27 from a pod in each AZ with the scraper's own
+  httpx client: `3.67.52.124` (eu-central-1a) and `63.182.70.185` (eu-central-1b)
+  both return 200 + JSON; the same request from a non-allowlisted network returns
+  the challenge HTML. **So the API is NOT blocked from the cluster** — only from
+  Actions and from developer workstations, which is why a local run still raises
+  `ChallengeError` and is not evidence of an outage. The k8s manifests/Pulumi/
+  ArgoCD app live in the
+  separate `platform-infrastructure` repo; this repo only builds the image
+  (`Dockerfile`, `.github/workflows/aaq-scraper-image.yml` → shared ECR via
+  OIDC) and ships `deploy/entrypoint.sh` (clone → `run_refresh.py` → commit).
+  Two prerequisites already landed here: (1) `sumo.py` **dropped Playwright**
+  entirely — the Chromium challenge-bypass is itself now fingerprinted and
+  blocked (issue #28) — and drives the same `SumoBrowser`/`fetch_json` public
+  API over a plain **`httpx`** client instead — Playwright is kept only as an
+  **optional dependency group** (`uv sync --group playwright`) so `poc.py` still
+  runs; it is not installed by default and is absent from the image; (2)
+  **`.refresh-hwm` is now
+  tracked in git** (removed from `.gitignore`, no longer the Actions cache)
+  since the pod is stateless and the repo is the durable state. The pod pushes
+  its commits authenticated with a **fine-grained GitHub PAT** sourced from AWS
+  Secrets Manager (synced in by External Secrets Operator) via a **git
+  credential helper** — the token is read from the environment at call time and
+  never appears in argv or a URL. The CronJob ships **suspended** with a
+  placeholder image tag — the only remaining gate is mechanical (`pulumi up` for
+  the ECR repo + OIDC role, create the Secrets Manager PAT, merge so the image
+  builds, then pin the tag and unsuspend). Full design:
+  `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
+  and `docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`.
+- **What is actually producing data right now: the browser extension**, not any
+  GitHub workflow. As of 2026-07-27 **all three workflows are `disabled_manually`**
+  (`scrape.yml` last ran 2026-07-10) — do not describe `scrape.yml` as the live
+  refresh. The `extension/` add-on runs a scheduled auto-fetch from a real
+  browser and its JSON bundles are imported by `import_json.py`, which reuses the
+  scrapers' own writers (`build_fieldnames`, `flatten_answer`, `COLUMNS`), so
+  extension-imported and `run_refresh.py`-generated CSVs are format-compatible.
+  **Open decision:** whether the k8s CronJob *replaces* the extension or runs
+  alongside it — both would commit the same day-CSVs on `main`, so running both
+  duplicates work (the pod's rebase-retry copes with the race, but it is not a
+  plan). Decide before unsuspending.
 
 ## Notes
 

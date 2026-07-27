@@ -1,16 +1,32 @@
 # aaq-scraper
 
 Until we get an official API that has a way to prevent DOS-ing, we scrape the SUMO
-(support.mozilla.org) API by driving a real browser. Since ~June 2026 the API sits
-behind a JavaScript challenge that blocks headless HTTP (see
-[thunderbird/github-action-thunderbird-aaq#34](https://github.com/thunderbird/github-action-thunderbird-aaq/issues/34));
-a real browser passes the challenge, then we call the JSON API from inside the
-browser's authenticated context.
+(support.mozilla.org) API. Since ~June 2026 the API sits behind a JavaScript
+challenge that blocks headless HTTP (see
+[thunderbird/github-action-thunderbird-aaq#34](https://github.com/thunderbird/github-action-thunderbird-aaq/issues/34)).
+A real-browser (Playwright/Chromium) workaround passed the challenge for a
+while but is now itself fingerprinted and blocked (issue #28), so the scraper
+is a plain **`httpx`** client instead, and is being redeployed as a
+**Kubernetes CronJob** on a cluster with a stable egress IP that Mozilla can
+allowlist (issue #27) — see the design and plan docs under
+[`docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`](docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md)
+and
+[`docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`](docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md).
+
+That cluster's egress IPs turn out to be **already allowlisted** (verified
+2026-07-27 from a pod in each AZ), so the API is reachable from the cluster —
+but *not* from GitHub Actions or a developer workstation, where a run still
+fails with `ChallengeError`. That is expected, not an outage. Data is currently
+produced by the browser extension under [`extension/`](extension); all GitHub
+workflows are disabled.
 
 ## Proof of concept (Bucket 0)
 
+Historical Bucket-0 script. `playwright` is no longer a runtime dependency, but
+it is kept as an **optional dependency group** so this still runs:
+
 ```sh
-uv sync
+uv sync --group playwright
 uv run playwright install chromium
 uv run python poc.py            # headed — most likely to pass the challenge
 uv run python poc.py --headless # try headless (closer to CI)
