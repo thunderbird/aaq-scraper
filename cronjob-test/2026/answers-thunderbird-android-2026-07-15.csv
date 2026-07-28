@@ -1,0 +1,5 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1832348,1593049,2026-07-15T15:22:54.160024Z,2026-07-15T15:22:54.160035Z,"<p>Navigate to: Settings &gt; account name &gt; reading mail. Toggle off ""Mark as read when opened"". </p>",platform34,False,0,0
+1832353,1593037,2026-07-15T15:41:54.962555Z,2026-07-15T15:41:54.962565Z,<p>Thunderbird for Android can only download emails from the server. There's no way to import email data copied directly from desktop to your phones storage. </p>,platform34,False,0,0
+1832354,1593037,2026-07-15T15:48:36.916611Z,2026-07-15T15:48:36.916616Z,"<p>OK, thank you. That explains everything I've found by myself. </p>",georges.giralt,False,0,0
+1834655,1593021,2026-07-27T04:38:04.926828Z,2026-07-27T04:38:04.926835Z,"<p>If no one knows, I'll file a bug report. </p>",a3times7,False,0,0
