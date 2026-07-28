@@ -132,6 +132,14 @@ uv run python check_schema.py --headless --update-baseline
 
 Delay between API calls: fixed `--sleep 2` by default, or `--random-delay` to
 vary 2–10s (`--min-delay`/`--max-delay`). Use `--headless` for CI parity.
+`run_refresh.py` used to **hardcode** `--random-delay` for its subprocesses; it
+no longer does. That jitter was anti-fingerprinting cover from when we called
+the API as an unallowlisted client — it is not a rate-limit requirement, and at
+a ~6s mean it *tripled* runtime (delay dominates: a 30-question day is ~31
+calls). Now that our egress IP is allowlisted, the default is a steady 2s
+(0.5 req/s — half the ~1 req/s the sibling GrimoireLab collector sustains
+against the same API). Pass `--random-delay` to `run_refresh.py` to restore the
+jitter when running from a non-allowlisted network.
 
 ## Automation (GitHub Actions)
 
