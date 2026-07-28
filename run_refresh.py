@@ -29,6 +29,7 @@ sparse, data-driven set with a short pause so it fits an hourly cron.
 """
 
 import argparse
+import json
 import os
 import random
 import subprocess
@@ -68,6 +69,74 @@ def compute_new_hwm(deferred_floors, less_than):
     if not deferred_floors:
         return less_than
     return min(min(deferred_floors) - timedelta(seconds=1), less_than)
+
+
+def deferred_path(state_path):
+    """Companion file holding the carry-forward set, beside the mark.
+
+    Deliberately a SEPARATE file: `.refresh-hwm` is committed, human-readable,
+    and seeded by hand at cutover, so its one-timestamp format stays untouched.
+    """
+    return state_path + ".deferred"
+
+
+def read_deferred(path):
+    """Return (deferred_pairs, consecutive_stalls). Missing/corrupt -> ([], 0).
+
+    Never fatal: this is an optimisation hint, and a run that cannot read it
+    must still do useful work rather than refuse to start.
+    """
+    try:
+        with open(path, encoding="utf-8") as f:
+            d = json.load(f)
+        return ([tuple(p) for p in d.get("pairs", [])], int(d.get("stalls", 0)))
+    except (OSError, ValueError, TypeError, AttributeError):
+        return ([], 0)
+
+
+def write_deferred(path, pairs, stalls):
+    """Persist the carry-forward set, or remove the file when there is none.
+
+    Removing (rather than writing an empty list) keeps a clean run from leaving
+    stale state that would reorder the next run for no reason.
+    """
+    if not pairs and not stalls:
+        try:
+            os.remove(path)
+        except OSError:
+            pass
+        return
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({"pairs": [list(p) for p in pairs], "stalls": stalls}, f)
+        f.write("\n")
+
+
+def order_day_items(day_items, deferred_pairs):
+    """Put previously-deferred days FIRST, preserving order otherwise.
+
+    This is the fix for issue #58. The soft deadline always truncates the tail
+    of this list, so with a stable discovery order the same days were deferred
+    every run and never ran at all, while the high-water mark stayed pinned
+    below them and the window grew without bound. Rotating the starved days to
+    the front guarantees each one is attempted, so the mark can advance.
+
+    Entries no longer present in this run's discovery are ignored -- a stale
+    carry-forward must not resurrect a day outside the current window.
+    """
+    if not deferred_pairs:
+        return day_items
+    priority = {p: i for i, p in enumerate(deferred_pairs)}
+    return sorted(day_items, key=lambda kv: (priority.get(kv[0], len(priority)),))
+
+
+def next_stall_count(old_hwm, new_hwm, stalls):
+    """Consecutive runs where the mark failed to move. 0 once it advances.
+
+    A cold start (no previous mark) is not a stall.
+    """
+    if old_hwm is None or new_hwm > old_hwm:
+        return 0
+    return stalls + 1
 
 
 def parse_date(s):
@@ -184,10 +253,23 @@ def main():
 
     labels = dict(PRODUCTS)
     day_items = list(pairs.items())  # [((slug, day), earliest_updated_dt), ...]
+
+    # Issue #58: days starved by a previous soft deadline go to the FRONT, so a
+    # stable discovery order can't keep truncating the same tail forever.
+    # Explicit-range runs don't use the state file, so they don't carry forward.
+    dpath = deferred_path(args.state)
+    carried, stalls = read_deferred(dpath) if incremental else ([], 0)
+    if carried:
+        day_items = order_day_items(day_items, carried)
+        prioritised = [p for p in carried if p in pairs]
+        print(f"Carrying forward {len(prioritised)} previously-deferred day(s) "
+              f"to the front of the queue", flush=True)
+
     print(f"Refreshing {len(day_items)} (product, day) pairs", flush=True)
 
     rebuilt = []
     deferred_floors = []  # earliest-updated floor of each day NOT completed
+    deferred_pairs = []   # the (slug, day) keys, to retry first next run
     for i, ((slug, day), floor) in enumerate(day_items):
         label = labels.get(slug, slug)
 
@@ -198,6 +280,7 @@ def main():
             print(f"\nSOFT DEADLINE reached ({args.soft_deadline:g} min); "
                   f"deferring {len(remaining)} remaining day(s)", flush=True)
             deferred_floors.extend(f for _, f in remaining)
+            deferred_pairs.extend(k for k, _ in remaining)
             break
 
         y, m, dd = (int(x) for x in day.split("-"))
@@ -211,7 +294,7 @@ def main():
             kind = "DEFERRED (rate-limited)" if rc == DEFERRAL_EXIT_CODE \
                 else f"FAILED (exit {rc})"
             print(f"{kind} day {slug} {day} at questions; will retry", flush=True)
-            deferred_floors.append(floor)
+            deferred_floors.append(floor); deferred_pairs.append((slug, day))
         else:
             # Same helper the scraper itself used, so the path (including any
             # AAQ_DATA_ROOT prefix) can only be derived one way.
@@ -226,7 +309,7 @@ def main():
                         else f"FAILED (exit {rc})"
                     print(f"{kind} day {slug} {day} at answers; will retry",
                           flush=True)
-                    deferred_floors.append(floor)
+                    deferred_floors.append(floor); deferred_pairs.append((slug, day))
                 else:
                     rebuilt.append(q)
             else:
@@ -248,6 +331,22 @@ def main():
         write_hwm(args.state, new_hwm)
         print(f"High-water mark -> {new_hwm.isoformat()} ({args.state}) [{note}]",
               flush=True)
+
+        # Carry the starved days forward so the next run runs them FIRST (#58),
+        # and count consecutive runs where the mark did not move. A pinned mark
+        # with a growing window is the signature of the treadmill: every run
+        # "succeeds", commits nothing, and makes no progress. Say so loudly --
+        # it went unnoticed for 24 hours precisely because nothing complained.
+        stalls = next_stall_count(hwm, new_hwm, stalls)
+        write_deferred(dpath, deferred_pairs, stalls)
+        if stalls >= 3:
+            print(f"\n*** WARNING: high-water mark has not advanced in {stalls} "
+                  f"consecutive runs. The refresh is succeeding without making "
+                  f"progress -- the work no longer fits the budget. Drain the "
+                  f"backlog (raise/remove --soft-deadline for one run) or raise "
+                  f"throughput. See issue #58.", flush=True)
+        elif stalls:
+            print(f"NOTE: mark did not advance ({stalls} consecutive)", flush=True)
 
     print(f"\nREFRESH COMPLETE: {len(day_items)} pairs, {len(rebuilt)} rebuilt, "
           f"{len(deferred_floors)} deferred/failed", flush=True)

@@ -76,6 +76,21 @@ deployment with a stable, allowlistable egress IP (issue #27).
   (`max_429_wait_s=None`, no soft deadline) so manual backfills / explicit-range
   refreshes still wait in full; the **hourly workflow opts in** with
   `--soft-deadline 40 --max-429-wait 120`.
+- **Deferral fairness / starvation guard** (issue #58, fixed 2026-07-28): the
+  soft deadline always truncates the **tail** of the work list, and the list was
+  rebuilt in the same order every run — so a backlog that didn't fit the budget
+  meant the same trailing days were deferred *forever* while the mark stayed
+  pinned below them and the window grew hourly. Every run "succeeded" and
+  committed nothing (observed live: 24h pinned at one timestamp, ~14 runs).
+  `run_refresh.py` now persists the deferred `(product, day)` keys to
+  **`<state>.deferred`** (JSON, beside the mark — `.refresh-hwm`'s
+  one-timestamp format is deliberately unchanged since it's seeded by hand at
+  cutover) and `order_day_items` puts them at the **front** of the next run, so
+  no day can be starved. It also counts consecutive runs where the mark didn't
+  move and **warns loudly at 3** — the original failure was invisible precisely
+  because nothing complained. `deploy/entrypoint.sh` stages `.refresh-hwm*` so
+  the companion file is committed (the pod is stateless; losing it silently
+  reintroduces the bug).
 
 ## CSV columns
 
