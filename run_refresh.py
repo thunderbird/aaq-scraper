@@ -105,6 +105,22 @@ def main():
     p.add_argument("--max-age-days", type=int, default=fud.DEFAULT_MAX_AGE_DAYS,
                    help="don't refresh created days older than this (default "
                         f"{fud.DEFAULT_MAX_AGE_DAYS}; 0 disables)")
+    # Inter-call delay forwarded to the per-day scrapers. The default is now the
+    # scrapers' own fixed --sleep (2s, i.e. 0.5 req/s). This used to hardcode
+    # --random-delay (2-10s, ~6s mean): that jitter was anti-fingerprinting cover
+    # from when we called the API as an unallowlisted client, NOT a rate-limit
+    # requirement. Our egress IP is allowlisted now, and the sibling GrimoireLab
+    # collector sustains ~1 req/s against the same API from the same cluster, so
+    # a steady 2s is both well within tolerance and ~3x faster -- which matters,
+    # because delay dominates runtime (a 30-question day is ~31 calls).
+    # Re-enable the jitter with --random-delay when running from an
+    # unallowlisted network.
+    p.add_argument("--random-delay", action="store_true",
+                   help="vary each scraper delay 2-10s instead of a fixed --sleep; "
+                        "only needed from a non-allowlisted IP")
+    p.add_argument("--sleep", type=float, default=None,
+                   help="fixed delay (s) between API calls, forwarded to the "
+                        "scrapers (default: the scrapers' own 2s)")
     p.add_argument("--soft-deadline", type=float, default=None,
                    help="stop starting new days after this many minutes and defer "
                         "the rest, so the run ends before a CI timeout and the "
@@ -146,6 +162,11 @@ def main():
     def maybe_pass(v):  # forward --max-429-wait to a subprocess only when set
         return ["--max-429-wait", str(v)] if v is not None else []
 
+    # Delay flags forwarded to every scraper subprocess (see --random-delay).
+    delay_args = ["--random-delay"] if args.random_delay else []
+    if args.sleep is not None:
+        delay_args += ["--sleep", str(args.sleep)]
+
     # One browser for discovery; each scrape subprocess opens its own (as in
     # run_backfill.py). Reusing a single browser across all scrapes is a future
     # optimisation that would require importable scraper functions. If discovery
@@ -184,7 +205,7 @@ def main():
 
         rc = run(["uv", "run", "python", "scrape_questions.py",
                   str(y), str(m), str(dd), str(y), str(m), str(dd),
-                  "--product", slug, "--headless", "--random-delay"]
+                  "--product", slug, "--headless"] + delay_args
                  + maybe_pass(args.max_429_wait))
         if rc != 0:
             kind = "DEFERRED (rate-limited)" if rc == DEFERRAL_EXIT_CODE \
@@ -198,7 +219,7 @@ def main():
                                        datetime(y, m, dd), datetime(y, m, dd))
             if os.path.exists(q):
                 rc = run(["uv", "run", "python", "scrape_answers.py",
-                          "--questions", q, "--headless", "--random-delay"]
+                          "--questions", q, "--headless"] + delay_args
                          + maybe_pass(args.max_429_wait))
                 if rc != 0:
                     kind = "DEFERRED (rate-limited)" if rc == DEFERRAL_EXIT_CODE \
