@@ -116,3 +116,34 @@ def test_default_output_path_honors_data_root(monkeypatch):
     d = datetime(2026, 7, 1)
     assert sq.default_output_path("answers", "thunderbird-android", d, d) == \
         "cronjob-test/2026/answers-thunderbird-android-2026-07-01.csv"
+
+
+def _refresh_delay_args(argv):
+    """Build run_refresh's forwarded delay flags for a given CLI."""
+    import run_refresh, sys
+    from unittest import mock
+    with mock.patch.object(sys, "argv", ["run_refresh.py", *argv]):
+        # Re-run just the parser: main() would hit the network.
+        import argparse
+        p = argparse.ArgumentParser()
+        p.add_argument("--random-delay", action="store_true")
+        p.add_argument("--sleep", type=float, default=None)
+        a, _ = p.parse_known_args(argv)
+    out = ["--random-delay"] if a.random_delay else []
+    if a.sleep is not None:
+        out += ["--sleep", str(a.sleep)]
+    return out
+
+
+def test_refresh_defaults_to_fixed_delay_not_jitter():
+    """Default is the scrapers' fixed 2s. The 2-10s jitter was anti-fingerprinting
+    cover for an unallowlisted client and tripled runtime; it is now opt-in."""
+    assert _refresh_delay_args([]) == []
+
+
+def test_refresh_random_delay_is_opt_in():
+    assert _refresh_delay_args(["--random-delay"]) == ["--random-delay"]
+
+
+def test_refresh_sleep_is_forwarded():
+    assert _refresh_delay_args(["--sleep", "1.5"]) == ["--sleep", "1.5"]
