@@ -18,7 +18,11 @@ REFRESH_ARGS="${REFRESH_ARGS:---soft-deadline 40 --max-429-wait 120}"
 # Paths staged for the commit. Defaults to the real data tree; a shakedown
 # deployment writing under AAQ_DATA_ROOT sets this to that directory instead so
 # it never stages the committed CSVs. Word-split deliberately (multiple paths).
-GIT_ADD_PATHS="${GIT_ADD_PATHS:-20*/ .refresh-hwm}"
+# .refresh-hwm* covers BOTH the mark and its .deferred companion (the
+# carry-forward set for issue #58). The pod is stateless, so anything not
+# committed here is lost between runs -- and losing the carry-forward
+# silently reintroduces the starvation it exists to prevent.
+GIT_ADD_PATHS="${GIT_ADD_PATHS:-20*/ .refresh-hwm*}"
 
 # $HOME is the writable emptyDir mounted in the pod (Phase B sets HOME=/work);
 # /tmp is on the read-only root filesystem (readOnlyRootFilesystem: true), so
