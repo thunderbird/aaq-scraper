@@ -41,7 +41,13 @@ import sys
 
 
 def raise_field_limit():
-    """Match the scrapers: allow very large `content` cells."""
+    """Match the scrapers: allow very large `content` cells.
+
+    Called at IMPORT, not just from main(): normalize() parses the file itself
+    to prove parse-equivalence, and the `troubleshooting` blob can reach ~200KB
+    against csv's 128KB default -- so any direct caller (tests, other scripts)
+    would otherwise hit a field-limit error on real data.
+    """
     n = sys.maxsize
     while True:
         try:
@@ -49,6 +55,9 @@ def raise_field_limit():
             return
         except OverflowError:
             n //= 10
+
+
+raise_field_limit()
 
 
 def is_crlf_terminated(path):
@@ -63,12 +72,20 @@ def is_crlf_terminated(path):
 
 
 def _parse(data):
-    """Parse CSV bytes to a list of rows, or None if it isn't decodable."""
+    """Parse CSV bytes to a list of rows, or None if it can't be parsed.
+
+    Returns None rather than raising: an unparseable file must be REFUSED, not
+    crash the run partway through the corpus leaving it half-converted. csv.Error
+    covers a field over the size limit or malformed quoting.
+    """
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
         return None
-    return list(csv.reader(io.StringIO(text, newline="")))
+    try:
+        return list(csv.reader(io.StringIO(text, newline="")))
+    except csv.Error:
+        return None
 
 
 def changes_parsed_content(before, after):
