@@ -1,0 +1,7 @@
+# Data CSVs are LF in the repo and LF on checkout. The scrapers write LF
+# (lineterminator="\n"), and 125 files committed before that fix were
+# back-filled by normalize_line_endings.py (see docs/crlf-normalized.md).
+# Without this, a contributor whose git reintroduces CRLF -- or any tool that
+# rewrites a file with platform line endings -- could silently undo that, and
+# nothing in CI checks for it.
+*.csv text eol=lf
