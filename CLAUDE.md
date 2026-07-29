@@ -124,6 +124,12 @@ deployment with a stable, allowlistable egress IP (issue #27).
   `normalize_csv_escaping.py` back-fills the same transform onto committed CSVs
   in place (API-free, idempotent); the one-time normalization is audited in
   `docs/escaped-cells.md` (171 cells, all `@`-prefixed usernames).
+- **Line endings:** CSVs are written LF (`lineterminator="\n"`). 125 files
+  committed before that fix still had CRLF terminators; `normalize_line_endings.py`
+  back-filled them in place on 2026-07-29 (API-free, idempotent, byte-level so
+  only the separators change), audited in `docs/crlf-normalized.md`. It CSV-parses
+  first and refuses a file whose cells contain a bare CR/LF, since a global byte
+  replace can't tell an embedded CRLF from a record separator.
 
 ## Commands
 
