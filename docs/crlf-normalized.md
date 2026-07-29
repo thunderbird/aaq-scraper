@@ -34,11 +34,26 @@ only the record separators change and every other byte -- quoting style,
 escaping, field order -- is preserved. A re-scrape of a normalised day therefore
 still produces no diff.
 
-That is only safe while no CR or LF appears inside a quoted cell, since a global
-byte replace cannot distinguish an embedded CRLF from a record separator. The
-script CSV-parses each file first and **refuses** (loudly, leaving the file
-untouched) if any cell contains a bare CR or LF. On this corpus **0 files were
-skipped** -- all 125 were clean.
+That is only safe where the rewrite cannot change what the CSV *means*, since a
+global byte replace cannot distinguish an embedded CRLF inside a quoted cell
+from a record separator. The script therefore parses each file **before and
+after** in memory and **refuses** (loudly, leaving the file untouched) if the
+two parses differ. On this corpus **0 files were skipped** -- all 125 were clean.
+
+An earlier version approximated this by scanning cells for a bare CR/LF. Review
+found that misses `\r\r\n`, which csv reads as an extra **empty** row: an empty
+row has no cells, so the scan passed vacuously while the byte replace silently
+dropped the blank row -- changing the parsed CSV while still satisfying the
+byte-level check. No committed file contained `\r\r` (all 3997 were checked), so
+nothing was corrupted, but the guard now enforces parse-equivalence directly
+rather than approximating it.
+
+## Regression guard
+
+`.gitattributes` was empty, so nothing stopped CRLF being reintroduced by a
+contributor's git config or a tool that rewrites with platform line endings, and
+no CI check covers it. It now carries `*.csv text eol=lf`. Verified a no-op:
+`git add --renormalize .` restages no data file.
 
 ## Verification
 

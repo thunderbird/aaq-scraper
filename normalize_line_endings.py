@@ -17,12 +17,14 @@ byte -- quoting style, escaping, field order -- exactly as it was, so the diff
 is provably just line endings and a later re-scrape of a normalised day still
 produces no diff.
 
-That is only safe while no CR or LF appears INSIDE a quoted field, because a
-global byte replace cannot tell an embedded CRLF from a record separator. The
-scrapers strip newlines from `content`, and all 125 affected files were verified
-clean, but data is untrusted: each file is CSV-parsed first and SKIPPED (loudly)
-if any cell contains a bare CR or LF. Refusing is the safe failure here --
-corrupting user content silently is not.
+That is only safe where the rewrite cannot change what the CSV *means* -- a
+global byte replace cannot tell an embedded CRLF inside a quoted cell from a
+record separator. Data here is untrusted, so rather than approximate that with a
+cell scan, the file is parsed before and after in memory and SKIPPED (loudly) if
+the two parses differ. Enforcing it directly matters: a cell-level check misses
+`\\r\\r\\n`, which csv reads as an extra EMPTY row -- no cells to scan, so the
+check passes vacuously while the byte replace silently drops the blank row.
+Refusing is the safe failure here; corrupting data is not.
 
 Idempotent: a file already LF-terminated is left untouched and reported as such.
 
@@ -33,6 +35,7 @@ Idempotent: a file already LF-terminated is left untouched and reported as such.
 
 import csv
 import glob
+import io
 import os
 import sys
 
@@ -59,24 +62,38 @@ def is_crlf_terminated(path):
         return fh.readline().endswith(b"\r\n")
 
 
-def has_embedded_newline(path):
-    """True if any CELL contains a bare CR or LF (byte rewrite unsafe)."""
-    with open(path, newline="", encoding="utf-8") as fh:
-        for row in csv.reader(fh):
-            if any("\r" in c or "\n" in c for c in row):
-                return True
-    return False
+def _parse(data):
+    """Parse CSV bytes to a list of rows, or None if it isn't decodable."""
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        return None
+    return list(csv.reader(io.StringIO(text, newline="")))
+
+
+def changes_parsed_content(before, after):
+    """True if the rewrite would alter the parsed CSV at all.
+
+    This ENFORCES the safety property rather than approximating it. An earlier
+    version only scanned cells for a bare CR/LF, which misses `\\r\\r\\n`: csv
+    reads that as an extra EMPTY row, and an empty row has no cells for a
+    cell-level scan to look at, so the check passed vacuously while the byte
+    replace silently dropped the blank row. Comparing the parse directly closes
+    that hole and any other pathological input, at the cost of one extra parse.
+    """
+    b, a = _parse(before), _parse(after)
+    return b is None or a is None or b != a
 
 
 def normalize(path):
     """Rewrite CRLF -> LF in place. Returns 'converted' | 'clean' | 'skipped'."""
     if not is_crlf_terminated(path):
         return "clean"
-    if has_embedded_newline(path):
-        return "skipped"
     with open(path, "rb") as fh:
         data = fh.read()
     out = data.replace(b"\r\n", b"\n")
+    if changes_parsed_content(data, out):
+        return "skipped"
     tmp = path + ".tmp"
     with open(tmp, "wb") as fh:
         fh.write(out)
@@ -95,10 +112,12 @@ def main():
         if check_only:
             if not is_crlf_terminated(p):
                 counts["clean"] += 1
-            elif has_embedded_newline(p):
-                counts["skipped"] += 1
-                print(f"WOULD SKIP (embedded newline): {p}")
             else:
+                data = open(p, "rb").read()
+                if changes_parsed_content(data, data.replace(b"\r\n", b"\n")):
+                    counts["skipped"] += 1
+                    print(f"WOULD SKIP (rewrite would alter parsed content): {p}")
+                    continue
                 counts["converted"] += 1
                 print(f"WOULD CONVERT: {p}")
             continue
@@ -107,7 +126,7 @@ def main():
         if r == "converted":
             print(f"converted: {p}")
         elif r == "skipped":
-            print(f"SKIPPED (embedded newline, left CRLF): {p}", file=sys.stderr)
+            print(f"SKIPPED (rewrite would alter parsed content): {p}", file=sys.stderr)
 
     verb = "would convert" if check_only else "converted"
     print(f"\n{verb} {counts['converted']}, already LF {counts['clean']}, "
