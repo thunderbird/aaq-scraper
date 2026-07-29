@@ -1,3 +1,4 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1835135,1595456,2026-07-29T00:52:49.380124Z,2026-07-29T00:52:49.380133Z,<p>Are you trying to forward mail <em>to</em> those addresses or <em>from</em> those addresses to another address? </p>,dillenger,False,0,0
 1835138,1595456,2026-07-29T01:07:54.406964Z,2026-07-29T01:07:54.406975Z,<p>Thank you so much for your quick response. </p><p>From the both accounts to my phone (a gmail account). My domain provider uses Microsoft Exchange 365 (if that helps) </p>,danny.crump,False,0,0
+1835144,1595456,2026-07-29T04:48:46.114341Z,2026-07-29T04:51:54.001998Z,"<p>I just tested it here and forwarding by filter should work. </p><p>Can you send mail from those addresses, is your SMTP server set correctly? Can you receive mail on your gmail address? </p><p>If that looks OK can you try to forward to another address? </p>",dillenger,False,0,0
