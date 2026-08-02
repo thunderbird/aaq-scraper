@@ -6,9 +6,9 @@ challenge that blocks headless HTTP (see
 [thunderbird/github-action-thunderbird-aaq#34](https://github.com/thunderbird/github-action-thunderbird-aaq/issues/34)).
 A real-browser (Playwright/Chromium) workaround passed the challenge for a
 while but is now itself fingerprinted and blocked (issue #28), so the scraper
-is a plain **`httpx`** client instead, and is being redeployed as a
-**Kubernetes CronJob** on a cluster with a stable egress IP that Mozilla can
-allowlist (issue #27) — see the design and plan docs under
+is a plain **`httpx`** client instead, and has been redeployed as a
+**Kubernetes CronJob** on a cluster with a stable egress IP that Mozilla
+allowlists (issue #27) — see the design and plan docs under
 [`docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`](docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md)
 and
 [`docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`](docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md).
@@ -16,9 +16,20 @@ and
 That cluster's egress IPs turn out to be **already allowlisted** (verified
 2026-07-27 from a pod in each AZ), so the API is reachable from the cluster —
 but *not* from GitHub Actions or a developer workstation, where a run still
-fails with `ChallengeError`. That is expected, not an outage. Data is currently
-produced by the browser extension under [`extension/`](extension); all GitHub
-workflows are disabled.
+fails with `ChallengeError`. That is expected, not an outage.
+
+### Who produces the data (cutover history)
+
+The **k8s CronJob is the producer of record.** Its first commit into `2026/` was
+**`7ab57dc`, 2026-07-29T20:03Z** — before that the bot was writing to the
+throwaway `cronjob-test/` directory (since deleted), so bot commits dated
+2026-07-27/07-28 touched only that scratch dir and not real data. It commits as
+`aaq-scraper-bot` with the message `Hourly refresh <ts>`.
+
+Data committed *before* the cutover came from the browser extension under
+[`extension/`](extension), which was the stopgap while the API was blocked; it
+is now retired and kept only as a manual fallback. All GitHub Actions workflows
+remain disabled.
 
 ## Proof of concept (Bucket 0)
 
