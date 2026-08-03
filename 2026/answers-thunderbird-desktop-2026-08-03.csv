@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1836324,1596331,2026-08-03T01:51:03.770280Z,2026-08-03T01:51:03.770289Z,<p>OutBox </p>,wxie2016,False,0,0
+1836327,1596331,2026-08-03T02:09:17.564454Z,2026-08-03T02:09:17.564461Z,"<p>Oh, in Local Folders, there's Outbox, thanks. Hmm, but the message is still waiting there, I assumed it would've been sent when some other message was successfully sent, but that evidently didn't happen. I just sent it now (Edit as New Message) and it went out okay. And yet there's still the draft in the Outbox...but no big deal, I'm  happy knowing where the message went before it was Sent Later. </p>",weisskopf,False,0,0
