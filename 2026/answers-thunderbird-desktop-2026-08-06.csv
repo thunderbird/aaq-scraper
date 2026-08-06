@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1836994,1596872,2026-08-06T00:28:35.525092Z,2026-08-06T00:28:35.525098Z,"<p>The version of the add-on is 0.6.7, so not a finished product and expected to have some bugs. </p><p>You may want to search the developer's discussion forum or post a question there: <a href=""https://github.com/eyalroz/removedupes/issues/"" rel=""nofollow"">https://github.com/eyalroz/removedupes/issues/</a> </p>",mozilla98,False,0,0
