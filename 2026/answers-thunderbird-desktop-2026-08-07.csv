@@ -72,3 +72,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1838041,1597076,2026-08-10T05:19:03.687154Z,2026-08-10T05:19:03.687162Z,<p>Are you using a 32bit version of Windows? </p>,MattAuSupport,False,0,0
 1838052,1597076,2026-08-10T06:46:27.836975Z,2026-08-10T06:46:27.836986Z,<p>64bit </p>,DrStrange10150,False,0,0
 1838053,1597076,2026-08-10T06:47:17.769991Z,2026-08-10T06:47:17.769996Z,"<p>Today, the screen ended up with a white overly and froze for hours. </p>",DrStrange10150,False,0,0
+1838088,1597091,2026-08-10T09:20:24.815001Z,2026-08-10T09:20:24.815008Z,<p>Fijn dat het is opgelost. Voor zover ik weet is er linksonder een voortgangsbalkje ten behoeve van het comprimeren. </p>,Mozilla-assistent,False,0,0
