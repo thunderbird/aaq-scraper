@@ -70,3 +70,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1837898,1597169,2026-08-09T13:29:58.448060Z,2026-08-09T13:29:58.448068Z,<p>No I've done all this.  The only difference is that STARTTLS is not recognised so I've used SSL/TLS instead with port 465 (as per PN website) which has always worked before. </p><p>Now I just get the password error message again. </p>,jan299,False,0,0
 1837963,1597076,2026-08-09T18:17:04.564669Z,2026-08-09T18:17:04.564675Z,"<p>Two more crashes reported. Any updates on a fix? </p><p>bp-943db7ad-17b7-4870-a448-98a710260808 	8/8/2026, 6:18 PM 	 bp-1c7373a6-d146-43c9-8f55-55cef0260808 	8/8/2026, 12:20 AM </p>",DrStrange10150,False,0,0
 1838041,1597076,2026-08-10T05:19:03.687154Z,2026-08-10T05:19:03.687162Z,<p>Are you using a 32bit version of Windows? </p>,MattAuSupport,False,0,0
+1838052,1597076,2026-08-10T06:46:27.836975Z,2026-08-10T06:46:27.836986Z,<p>64bit </p>,DrStrange10150,False,0,0
+1838053,1597076,2026-08-10T06:47:17.769991Z,2026-08-10T06:47:17.769996Z,"<p>Today, the screen ended up with a white overly and froze for hours. </p>",DrStrange10150,False,0,0
