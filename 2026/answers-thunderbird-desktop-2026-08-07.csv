@@ -73,3 +73,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1838052,1597076,2026-08-10T06:46:27.836975Z,2026-08-10T06:46:27.836986Z,<p>64bit </p>,DrStrange10150,False,0,0
 1838053,1597076,2026-08-10T06:47:17.769991Z,2026-08-10T06:47:17.769996Z,"<p>Today, the screen ended up with a white overly and froze for hours. </p>",DrStrange10150,False,0,0
 1838088,1597091,2026-08-10T09:20:24.815001Z,2026-08-10T09:20:24.815008Z,<p>Fijn dat het is opgelost. Voor zover ik weet is er linksonder een voortgangsbalkje ten behoeve van het comprimeren. </p>,Mozilla-assistent,False,0,0
+1838100,1597076,2026-08-10T10:31:49.779668Z,2026-08-10T10:31:49.779676Z,"<p>Try 64 bit Thunderbird from <a href=""https://www.thunderbird.net/en-US/download/esr"" rel=""nofollow"">https://www.thunderbird.net/en-US/download/esr</a> </p>",wsmwk,False,0,0
