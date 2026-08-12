@@ -10,3 +10,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1838559,1597880,2026-08-12T09:59:34.248778Z,2026-08-12T09:59:34.248786Z,<p>Why a duplicate post ? </p>,amoun,False,0,0
 1838561,1597879,2026-08-12T10:01:09.248321Z,2026-08-12T10:01:09.248333Z,"<p>NO one stopped you, and note this is a duplicate post. </p><p>How did you copy you emails previously, please detail the steps that did work and what doesn't now. </p>",amoun,False,0,0
 1838562,1597862,2026-08-12T10:03:22.258459Z,2026-08-12T10:03:22.258466Z,<p>Check your settings. There are those that only download the headers until you click on them. </p><p>You can find the settings via a search </p>,amoun,False,0,0
+1838585,1597835,2026-08-12T11:51:27.017341Z,2026-08-12T11:51:27.017352Z,"<p>Thank you so much, Rick!  This worked!  I really appreciate your help! </p>",jon72,False,0,0
