@@ -67,3 +67,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1840109,1598639,2026-08-17T19:49:00.000672Z,2026-08-17T19:49:00.000679Z,"<p>3rd jpeg (rr3) is what is shown in Thunderbird. I reviewed this with Spectrum with the only change being <a href=""http://Mail.twc.com"" rel=""nofollow"">Mail.twc.com</a>. Thanks </p>",kbrennan3,False,0,0
 1840113,1598639,2026-08-17T20:04:45.679572Z,2026-08-17T20:04:45.679577Z,<p>Attached is the only message I get when trying to send an email. I receive emails w/o a problem. See attached. </p>,kbrennan3,False,0,0
 1840117,1598639,2026-08-17T20:26:42.992977Z,2026-08-17T20:26:42.992983Z,<p>Hello there </p><p>You still seem to use Roadrunner as your mail provider; you should update it. </p>,Googlethunderbird.,False,0,0
+1840127,1598576,2026-08-17T21:44:28.765743Z,2026-08-17T21:44:28.765752Z,"<p>amoun, meant to include C:\Users\_____\AppData\Roaming\Thunderbird\Profiles </p>",dcal53,False,0,0
