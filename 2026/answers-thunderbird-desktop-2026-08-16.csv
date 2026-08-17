@@ -59,3 +59,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1840064,1598639,2026-08-17T16:00:12.566773Z,2026-08-17T16:10:00.459484Z,"<p>Please cite the specific support page. There are many here and I don't know which one you are referring to. </p><p>Also, please list your SMTP settings. </p>",rednoise,False,0,0
 1840074,1598576,2026-08-17T16:46:07.985493Z,2026-08-17T16:46:07.985501Z,"<p>amoun, Managed to delete 1 Local Folders. </p>",dcal53,False,0,0
 1840075,1598576,2026-08-17T16:53:08.046204Z,2026-08-17T16:53:08.046219Z,"<p>amoun, Now moving  folders to '<em>Movit</em> folder! </p>",dcal53,False,0,0
+1840080,1598639,2026-08-17T17:38:35.441929Z,2026-08-17T17:38:35.441936Z,"<p>Home/Thunderbird/Email and messaging/Cannot send messages </p><p><a href=""https://support.mozilla.org/en-US/kb/cannot-send-messages"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/cannot-send-messages</a> </p>",kbrennan3,False,0,0
