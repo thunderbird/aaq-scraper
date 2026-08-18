@@ -45,3 +45,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1840251,1597789,2026-08-18T12:39:27.383858Z,2026-08-18T12:39:27.383864Z,"<p><em>In this section of the forum we speak Italian. For english support -&gt; <a href=""https://support.mozilla.org/en-US/questions/new/thunderbird/form"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/new/thunderbird/form</a> </em> </p>",'@next,False,0,0
 1840263,1597770,2026-08-18T14:05:07.901400Z,2026-08-18T14:05:07.901412Z,"<p>Reporters, do you find this is fixed in 153.0.3 ??  (it should be) </p>",wsmwk,False,0,0
 1840290,1597770,2026-08-18T16:33:49.832727Z,2026-08-18T16:33:49.832732Z,<p>It works for me with 153.0.3. I can now drag-and-drop attachments from the message window to any folder on my Windows file system. </p>,rednoise,False,0,0
+1840315,1597770,2026-08-18T17:41:31.757181Z,2026-08-18T17:41:31.757187Z,<p>Now it is also working for me. Great job. </p>,s.wukovatz,False,0,0
