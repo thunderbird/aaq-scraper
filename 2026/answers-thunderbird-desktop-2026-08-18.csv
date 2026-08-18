@@ -1,1 +1,6 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1840208,1598833,2026-08-18T09:19:18.633752Z,2026-08-18T09:19:18.633757Z,"<p>Computer crashes and/or power outages often damage the prefs.js file in the Thunderbird profile, thus destroying all email account settings. When you start Thunderbird does your start page ressemble to the one I've attached to this answer? </p>",Mapenzi,False,0,0
+1840211,1598833,2026-08-18T09:35:36.843768Z,2026-08-18T09:35:36.843779Z,"<p>Attached is a picture of the view. At the top, there is a blinking dot or something next to a message. In addition, there is a message at the top that Thunderbird is not responding. </p>",mikko.vitikainen,False,0,0
+1840217,1598872,2026-08-18T09:56:27.564051Z,2026-08-18T09:56:27.564057Z,<p>La connessione ad Internet è di Telecom Italia/TIM? </p>,'@next,False,0,0
+1840219,1598870,2026-08-18T10:00:10.281818Z,2026-08-18T10:00:10.281827Z,<p>Quali sono esattamente le estensioni (nome completo e/o link)? Con quale versione di Thunderbird? Ci sono altre estensioni installate? </p>,'@next,False,0,0
+1840220,1598872,2026-08-18T10:01:11.135375Z,2026-08-18T10:01:11.135380Z,"<p><a href=""http://TIN.IT"" rel=""nofollow"">TIN.IT</a> è di TIM come Alice mail </p>",giannimaria46,False,0,0
