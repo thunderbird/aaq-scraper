@@ -51,3 +51,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1841359,1592320,2026-08-22T21:54:53.002401Z,2026-08-22T21:54:53.002414Z,<p>Do you have administrative rights? </p>,mozilla98,False,0,0
 1841360,1592320,2026-08-22T21:55:41.014275Z,2026-08-22T21:55:41.014286Z,"<p>The Go menu does not have a ""Library"" option.  In Finder, command+shift+L gives a dull beep.  And marj is in lowercase.  I believe I have the latest OS.  Tahoe 25.6.2.  Is there something in my system settings that I preventing those options from working? </p>",mkdeupree,False,0,0
 1841361,1592320,2026-08-22T21:56:43.299498Z,2026-08-22T21:56:43.299506Z,<p>I think so.  It's my machine and I'm the only user. </p>,mkdeupree,False,0,0
+1841372,1592320,2026-08-22T22:16:48.450770Z,2026-08-22T22:16:48.450779Z,"<p>I checked ""Get Info"" on the profile files (there are 2) and they both say I have permission to read or write.  I was thinking maybe they were hidden somehow but I guess not. </p>",mkdeupree,False,0,0
+1841373,1592320,2026-08-22T22:17:19.159010Z,2026-08-22T22:17:19.159016Z,"<p>I'm thinking this is a Mac issue, not a Thunderbird issue? </p>",mkdeupree,False,0,0
