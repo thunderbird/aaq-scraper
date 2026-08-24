@@ -18,3 +18,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1841812,1599990,2026-08-24T13:56:18.916543Z,2026-08-24T13:56:18.916554Z,"<p>""Yazdır""a tıkladığınızda herhangi bir hata veriyor mu yoksa hiçbir şey olmuyor mu? ""Hedef"" listesinden Microsoft Print to PDF'i seçip yazdırmayı deneyin. Bunu yaptığınızda PDF kaydetme ekranı açılıyor mu? </p>",maxcoder,False,0,0
 1841813,1599990,2026-08-24T14:00:16.724121Z,2026-08-24T14:00:16.724127Z,<p>yazdır dedikten sonra sayfa kapanıyor ve hiç bir etki olmuyor. Öylece kalıyor </p>,efsungida,False,0,0
 1841823,1599982,2026-08-24T14:40:04.713053Z,2026-08-24T14:40:04.713060Z,<p>goede middag Mark. </p><p>Als ik opnieuw Thunderbird downloads gaat mijn adressenboek van meer dan 1000 adressen ook mee. </p><p>.Tejo de Haan </p>,walfehaan,False,0,0
+1841833,1599990,2026-08-24T15:53:31.887520Z,2026-08-24T15:53:31.887528Z,<p>Microsoft Print to PDF'i seçtiğinizde ne oluyor? </p>,maxcoder,False,0,0
