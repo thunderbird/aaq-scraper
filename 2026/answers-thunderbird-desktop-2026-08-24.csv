@@ -19,3 +19,6 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1841813,1599990,2026-08-24T14:00:16.724121Z,2026-08-24T14:00:16.724127Z,<p>yazdır dedikten sonra sayfa kapanıyor ve hiç bir etki olmuyor. Öylece kalıyor </p>,efsungida,False,0,0
 1841823,1599982,2026-08-24T14:40:04.713053Z,2026-08-24T14:40:04.713060Z,<p>goede middag Mark. </p><p>Als ik opnieuw Thunderbird downloads gaat mijn adressenboek van meer dan 1000 adressen ook mee. </p><p>.Tejo de Haan </p>,walfehaan,False,0,0
 1841833,1599990,2026-08-24T15:53:31.887520Z,2026-08-24T15:53:31.887528Z,<p>Microsoft Print to PDF'i seçtiğinizde ne oluyor? </p>,maxcoder,False,0,0
+1841837,1600022,2026-08-24T16:29:22.518370Z,2026-08-24T16:29:22.518392Z,<p>see settings&gt;composition   where you can specify whether to add outgoing messages to your addressbook </p>,davidsk,False,0,0
+1841838,1600019,2026-08-24T16:31:03.065955Z,2026-08-24T16:31:03.065964Z,<p>Is the intent for your viewing or the recipient's viewing? </p>,davidsk,False,0,0
+1841839,1600037,2026-08-24T16:31:51.503723Z,2026-08-24T16:31:51.503729Z,<p>My Outlook server is OK. Receiving Emails OK there. </p>,art.towslee,False,0,0
