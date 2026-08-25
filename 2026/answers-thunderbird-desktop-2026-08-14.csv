@@ -76,3 +76,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1841115,1598321,2026-08-22T02:06:43.907546Z,2026-08-22T02:06:43.907553Z,"<p>It may not be installed in the normal location, so you'd always need to determine where it's actually running from. But regardless, it should be sufficient to just (re)install. </p>",wsmwk,False,0,0
 1841498,1598325,2026-08-23T10:41:51.088153Z,2026-08-23T10:41:51.088159Z,"<p>See <a href=""https://support.mozilla.org/en-US/questions/1599551"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1599551</a> </p>",christ1,False,0,0
 1842037,1598311,2026-08-25T10:45:30.984890Z,2026-08-25T10:45:30.984898Z,<p>Is google better now? What antivirus do you use? </p>,wsmwk,False,0,0
+1842147,1598311,2026-08-25T17:07:39.305170Z,2026-08-25T17:07:39.305177Z,"<p>No, not better. 1 of the 3 I reverted back to pop3 and it's fine now. But the other 2 persist. I don't want to change those. </p>",TheNightowl,False,0,0
