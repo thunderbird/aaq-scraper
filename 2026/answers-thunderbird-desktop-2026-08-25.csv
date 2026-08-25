@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1841981,1600152,2026-08-25T06:43:10.362711Z,2026-08-25T06:43:10.362717Z,<p>It will be fixed in version 155.0. </p>,TyDraniu,False,0,0
+1841986,1600149,2026-08-25T07:08:54.024115Z,2026-08-25T07:08:54.024123Z,"<p>This is temporary fixable by either downloading Thunderbird 155 beta or by changing the preview of PDFs from thunderbird to any web browser (chrome, edge). </p>",actualh8ter,False,0,0
