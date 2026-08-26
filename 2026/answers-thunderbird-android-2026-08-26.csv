@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1842246,1600332,2026-08-26T01:45:41.482112Z,2026-08-26T01:45:41.482124Z,"<p>It would be helpful to include what the authentication error message said, otherwise it's just guess work. It may have been a temporary network or server issue. </p><p>Navigate to settings &gt; account name &gt; fetching mail &gt; incoming server. Tap next. </p><p>If the step doesn't show any error messages then no further action is needed. </p>",platform34,False,0,0
+1842248,1600332,2026-08-26T03:01:57.272075Z,2026-08-26T03:01:57.272083Z,<p>Error: Authentication Failed.  </p><p>That's the message. </p>,recinosx89,False,0,0
