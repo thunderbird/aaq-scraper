@@ -1,3 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1842275,1600378,2026-08-26T07:38:31.062371Z,2026-08-26T07:38:31.062377Z,<p>Bedoelt u dat een verzonden bericht niet in de map Verzonden wordt geplaatst? Controleer allereerst wat de instelling voor verzonden berichten is in Accountinstellingen &gt; Kopieën en mappen. De eerste optie bepaalt waar uw verzonden berichten worden geplaatst. </p>,markh2,False,1,0
-1842279,1600378,2026-08-26T07:45:28.579319Z,2026-08-26T07:45:28.579328Z,<p>bedankt voor de oplossing </p>,triangel,False,0,0
+1842279,1600378,2026-08-26T07:45:28.579319Z,2026-08-26T07:45:28.579328Z,<p>bedankt voor de oplossing </p>,triangel,False,1,0
