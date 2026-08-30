@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1843377,1601072,2026-08-30T00:49:44.139266Z,2026-08-30T00:49:44.139273Z,"<p>In Thunderbird, you can use Filter rules to remove those senders' email. </p><p><a href=""https://support.mozilla.org/en-US/kb/blocking-sender"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/blocking-sender</a> </p>",wxie2016,False,0,0
