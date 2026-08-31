@@ -48,3 +48,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1843062,1600245,2026-08-28T22:50:08.110591Z,2026-08-28T22:50:08.110597Z,"<p>Is it turned off in settings?  Global search and indexer is the item description in settings, under indexing. </p>",MattAuSupport,False,0,0
 1843108,1600245,2026-08-29T01:40:25.215483Z,2026-08-29T01:40:25.215489Z,<p>Settings / Search for indexing </p>,theking2,False,0,0
 1843676,1600308,2026-08-31T10:38:38.683571Z,2026-08-31T10:38:38.683576Z,<p>I have the same problem Screenshot attached </p>,paulasteve,False,0,0
+1843690,1600308,2026-08-31T11:45:46.546786Z,2026-08-31T11:45:46.546792Z,"<p>Similar symtoms, but a different problems. I am unfamiliar with btinternet, but I suggest changing port to 465 and security to SSL/TTLS and see if that works. </p>",davidsk,False,0,0
