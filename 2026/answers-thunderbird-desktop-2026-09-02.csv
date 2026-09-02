@@ -25,3 +25,6 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844332,1601684,2026-09-02T14:13:40.703636Z,2026-09-02T14:13:40.703644Z,"<p>Non saprei, altre segnalazioni al momento non ne ho viste </p>",'@next,False,0,0
 1844359,1601728,2026-09-02T15:22:21.613176Z,2026-09-02T15:22:21.613183Z,<p>Не могу войти на сервер </p>,vitalijmiki,False,0,0
 1844380,1601738,2026-09-02T16:46:16.061166Z,2026-09-02T16:46:16.061173Z,<p>E' un bug noto che dovrebbe essere risolto con gli ultimi aggiornamenti. Assicurati di aver aggiornato a Thunderbird 155 </p>,'@next,False,0,0
+1844383,1601687,2026-09-02T17:03:59.430529Z,2026-09-02T17:03:59.430542Z,"<p>I tried to link a gmail account and it worked without any problem. Is only outlook account that is not working for some reason. At first it opened a microsoft page for login, but it closes automatically before I could log in . </p>",guilherme.mirandaa1,False,0,0
+1844393,1601777,2026-09-02T17:26:27.600779Z,2026-09-02T17:26:27.600787Z,<p>SMTP hiba 152.233.4.146 </p>,habany,False,0,0
+1844403,1601687,2026-09-02T17:44:29.328393Z,2026-09-02T17:44:29.328397Z,<p>found the solution. Enable the IMAP on web outlook settings </p>,guilherme.mirandaa1,False,0,0
