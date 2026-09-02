@@ -23,3 +23,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844322,1601728,2026-09-02T13:43:06.003749Z,2026-09-02T13:43:06.003758Z,"<p><a href=""https://support.mozilla.org/kb/cannot-receive-messages"" rel=""nofollow"">https://support.mozilla.org/kb/cannot-receive-messages</a> </p>",christ1,False,0,0
 1844329,1601684,2026-09-02T14:00:41.713033Z,2026-09-02T14:00:41.713039Z,<p>Può essere il nuovo aggiornamento? perchè fino al 31/08 funzionava poi da ieri ho riscontrato questo problema ed ho notato che il giorno 01/09 è stato rilasciato il nuovo aggiornamento </p>,logisticatcr11,False,0,0
 1844332,1601684,2026-09-02T14:13:40.703636Z,2026-09-02T14:13:40.703644Z,"<p>Non saprei, altre segnalazioni al momento non ne ho viste </p>",'@next,False,0,0
+1844359,1601728,2026-09-02T15:22:21.613176Z,2026-09-02T15:22:21.613183Z,<p>Не могу войти на сервер </p>,vitalijmiki,False,0,0
