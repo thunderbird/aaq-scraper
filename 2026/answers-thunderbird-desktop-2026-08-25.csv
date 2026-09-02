@@ -57,3 +57,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1843988,1600308,2026-09-01T15:00:05.736578Z,2026-09-01T15:00:05.736586Z,"<p>It turned out that Thunderbird was operating under a different password to btinternets online email password, it was using an older password, dont ask me how that happened as I have no clue! </p>",paulasteve,False,0,0
 1844076,1600228,2026-09-01T18:38:07.807811Z,2026-09-01T18:38:07.807819Z,<p>Kunnen jullie al printen vanuit Thunderbird mail? </p>,vanbeek.sandra,False,0,0
 1844077,1600228,2026-09-01T18:39:14.597589Z,2026-09-01T18:39:14.597597Z,<p>Wanner komt er een nieuwe versie van Thunderbird. </p>,vanbeek.sandra,False,0,0
+1844191,1600149,2026-09-02T05:36:33.891741Z,2026-09-02T05:36:33.891748Z,<p>Issue fixed in TB 155.0 and PDF print now works correctly again. </p>,actualh8ter,False,0,0
