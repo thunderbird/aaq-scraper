@@ -58,3 +58,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844076,1600228,2026-09-01T18:38:07.807811Z,2026-09-01T18:38:07.807819Z,<p>Kunnen jullie al printen vanuit Thunderbird mail? </p>,vanbeek.sandra,False,0,0
 1844077,1600228,2026-09-01T18:39:14.597589Z,2026-09-01T18:39:14.597597Z,<p>Wanner komt er een nieuwe versie van Thunderbird. </p>,vanbeek.sandra,False,0,0
 1844191,1600149,2026-09-02T05:36:33.891741Z,2026-09-02T05:36:33.891748Z,<p>Issue fixed in TB 155.0 and PDF print now works correctly again. </p>,actualh8ter,False,0,0
+1844318,1600149,2026-09-02T13:33:33.705435Z,2026-09-02T13:33:33.705446Z,<p>Sorry but where can I find TB 155 ? not from the normal download  thanks Carlo </p>,c.gianassi,False,0,0
+1844328,1600149,2026-09-02T13:59:23.344874Z,2026-09-02T13:59:23.344881Z,"<em><p>Carlo Gianassi <a href=""#answer-1844318"" rel=""nofollow"">said</a></p></em> <blockquote>Sorry but where can I find TB 155 ? not from the normal download  thanks Carlo </blockquote> <p>If you are on version 154, do Help &gt; About which should announce v155. </p>",wsmwk,False,0,0
