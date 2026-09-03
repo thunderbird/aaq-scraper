@@ -33,4 +33,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844751,1602027,2026-09-03T20:07:38.733329Z,2026-09-03T20:07:38.733337Z,"<p>Get started with Thunderbird &gt;&gt; <a href=""https://support.mozilla.org/en-US/kb/getting-started-thunderbird"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/getting-started-thunderbird</a> </p>",Mapenzi,False,0,0
 1844752,1602009,2026-09-03T20:10:20.531800Z,2026-09-03T20:10:20.531806Z,"<p>This addon may do what you want:  <a href=""https://addons.thunderbird.net/en-US/thunderbird/addon/replywithheader/"" rel=""nofollow"">https://addons.thunderbird.net/en-US/thunderbird/addon/replywithheader/</a> </p>",davidsk,False,0,0
 1844766,1602019,2026-09-03T20:44:29.738393Z,2026-09-03T20:44:29.738401Z,<p>Are you receiving error messages? You've told us nothing. </p>,davidsk,False,0,0
-1844768,1602004,2026-09-03T20:46:08.766774Z,2026-09-03T20:46:08.766781Z,<dl><dd>)  We can stand together. </dd></dl>,davidsk,False,0,0
+1844768,1602004,2026-09-03T20:46:08.766774Z,2026-09-03T20:46:08.766781Z,<dl><dd>)  We can stand together. </dd></dl>,davidsk,False,1,0
+1844781,1601930,2026-09-03T21:20:17.873942Z,2026-09-03T21:20:17.873948Z,<p>I presume you verified the SMTP server. This might be an SPF error. I suggest checking with your email provider. </p>,davidsk,False,0,0
