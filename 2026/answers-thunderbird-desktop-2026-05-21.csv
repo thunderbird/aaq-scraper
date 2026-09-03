@@ -113,3 +113,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1823191,1582921,2026-06-04T14:01:14.358544Z,2026-06-04T14:01:14.358550Z,"<p>Actually because you are on a Mac, <strong>FIRST</strong>, <strong>disable</strong> Thunderbird's access to the Mac address book via Mac Settings. </p>",wsmwk,False,0,0
 1836159,1582899,2026-08-02T05:00:19.355886Z,2026-08-02T05:00:19.355894Z,<p>This was fixed in 153. </p>,adam.anon,False,0,0
 1836173,1582899,2026-08-02T07:17:47.109228Z,2026-08-02T07:17:47.109238Z,<p>Thanks for the update and marking the question solved. </p>,wsmwk,False,0,0
+1844705,1583009,2026-09-03T17:50:37.844777Z,2026-09-03T17:50:37.844783Z,"<p>I had this problem.  My son did the troubleshooting and found the problem was with the font size.    By decreasing the font size, the attachment became visible on the screen. </p>",maylaths,False,0,0
