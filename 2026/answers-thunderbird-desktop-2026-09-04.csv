@@ -7,3 +7,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844932,1602133,2026-09-04T09:57:51.902274Z,2026-09-04T09:58:12.252451Z,<p>I fixed this myself by installing 155.0 over the old version. </p>,Mixerer,False,0,0
 1844939,1602121,2026-09-04T10:37:30.755348Z,2026-09-04T10:37:30.755358Z,"<p>Your best bet is to write to the author, as thunderbird developers do not provide support to addons,  Cardbook does not appear to support ver 155 so if you did an update to 155 that would explain it. </p>",davidsk,False,0,0
 1844944,1602143,2026-09-04T10:53:18.792030Z,2026-09-04T10:53:18.792036Z,<p>The term 'reactivation' implies a task that you need to do on the talktalk site. Just my guess... </p>,davidsk,False,0,0
+1844965,1602135,2026-09-04T11:39:36.163077Z,2026-09-04T11:39:36.163089Z,<p>Seems to have resolved after a system restart. </p>,timearl,False,0,0
