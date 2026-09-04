@@ -35,3 +35,12 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844766,1602019,2026-09-03T20:44:29.738393Z,2026-09-03T20:44:29.738401Z,<p>Are you receiving error messages? You've told us nothing. </p>,davidsk,False,0,0
 1844768,1602004,2026-09-03T20:46:08.766774Z,2026-09-03T20:46:08.766781Z,<dl><dd>)  We can stand together. </dd></dl>,davidsk,False,1,0
 1844781,1601930,2026-09-03T21:20:17.873942Z,2026-09-03T21:20:17.873948Z,<p>I presume you verified the SMTP server. This might be an SPF error. I suggest checking with your email provider. </p>,davidsk,False,0,0
+1844843,1602062,2026-09-04T01:22:29.590110Z,2026-09-04T01:22:29.590117Z,<p>Help &gt; About </p>,wsmwk,False,0,0
+1844844,1602038,2026-09-04T01:23:21.811879Z,2026-09-04T01:23:21.811885Z,<p>Please check your antivirus software. </p>,wsmwk,False,0,0
+1844845,1601872,2026-09-04T01:24:13.624019Z,2026-09-04T01:24:13.624025Z,<p>Who is the mail provider? What authentication setting is specified in Account settings? </p>,wsmwk,False,0,0
+1844854,1601955,2026-09-04T01:33:58.417151Z,2026-09-04T01:33:58.417157Z,"<p>David, do you see errors in Tools &gt; Developer Console ? </p>",wsmwk,False,0,0
+1844855,1601875,2026-09-04T01:36:22.504714Z,2026-09-04T01:36:22.504720Z,"<p>See <a href=""https://support.mozilla.org/en-US/kb/tb-oauth"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/tb-oauth</a> </p>",wsmwk,False,0,0
+1844857,1601978,2026-09-04T01:41:36.627328Z,2026-09-04T01:41:36.627336Z,"<p>Delete the Thunderbird <strong>program</strong> directory (not the data directory) and reinstall from <a href=""https://www.thunderbird.net/en-US/download/esr"" rel=""nofollow"">https://www.thunderbird.net/en-US/download/esr</a> </p>",wsmwk,False,0,0
+1844859,1602051,2026-09-04T01:55:18.032057Z,2026-09-04T01:55:18.032062Z,<p>what authentication method is specified in the  Thunderbird Account &gt; Server </p>,wsmwk,False,0,0
+1844860,1601872,2026-09-04T01:57:44.588332Z,2026-09-04T01:57:44.588339Z,<p>Gmail. OAuth2. </p>,aakhuen,False,0,0
+1844861,1601872,2026-09-04T02:01:33.394565Z,2026-09-04T02:01:33.394574Z,"<p>See <a href=""https://support.mozilla.org/en-US/kb/tb-oauth"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/tb-oauth</a> </p>",wsmwk,False,0,0
