@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1845623,1602615,2026-09-07T02:06:38.872635Z,2026-09-07T02:06:38.872646Z,"<p>If you have idea and suggestions I suggest you use the link on Thunderbird help menu to submit them. </p><p>It points to <a href=""https://connect.mozilla.org/"" rel=""nofollow"">https://connect.mozilla.org/</a> </p>",MattAuSupport,False,0,0
+1845637,1602624,2026-09-07T03:46:29.554716Z,2026-09-07T03:46:29.554723Z,<p>Press F10 in the new message window and select view and then toolbars. </p><p>Personally I have all four selected but the one you ask about specifically in the composition toolbar. </p>,MattAuSupport,False,0,0
