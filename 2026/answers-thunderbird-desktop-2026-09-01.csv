@@ -54,3 +54,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1845872,1601528,2026-09-07T20:18:36.317027Z,2026-09-07T20:18:36.317035Z,<p>Fijn dat het opgelost is </p>,Mad_Maks,False,1,0
 1846558,1601478,2026-09-10T14:27:34.259482Z,2026-09-10T14:27:34.259493Z,"<p>Confermo, anche la 155 da' lo stesso problema Clelia </p>",clelia.marchionna,False,0,0
 1846579,1601573,2026-09-10T16:15:12.754407Z,2026-09-10T16:15:12.754418Z,"<p>Sorted It was due to password saving Once ""save password"" was ticked in the main options menu for sending mail (receiving was already ticked) and the <em>correct</em> password entered it worked. Due to finger trouble I had also been entering an incorrect password! </p>",KeithT2,False,0,0
+1846602,1601573,2026-09-10T17:31:35.878662Z,2026-09-10T17:31:35.878681Z,<p>Thanks for sharing. I'm glad all worked out. :) </p>,davidsk,False,0,0
