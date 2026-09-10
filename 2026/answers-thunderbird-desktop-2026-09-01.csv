@@ -48,7 +48,8 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1844652,1601465,2026-09-03T14:44:27.557531Z,2026-09-03T14:44:27.557539Z,<p>No worries David. Thanks anyway </p>,parwez0809,False,0,0
 1844841,1601607,2026-09-04T01:21:11.442627Z,2026-09-04T01:21:11.442635Z,"<p>Please see <a href=""https://support.mozilla.org/en-US/kb/tb-oauth"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/tb-oauth</a> </p>",wsmwk,False,0,0
 1844842,1601623,2026-09-04T01:22:12.230511Z,2026-09-04T01:22:12.230517Z,"<p>Spectrum has been known to be unstable. If oauth is your authentication method, then please see <a href=""https://support.mozilla.org/en-US/kb/tb-oauth"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/tb-oauth</a> </p>",wsmwk,False,0,0
-1845000,1601544,2026-09-04T14:15:43.785442Z,2026-09-04T14:15:43.785447Z,<p>I also have this problem.  But there doesn't seem to be an answer to our problem - and there is no where to go to try and find an answer. </p>,waterloosloan,False,0,0
+1845000,1601544,2026-09-04T14:15:43.785442Z,2026-09-04T14:15:43.785447Z,<p>I also have this problem.  But there doesn't seem to be an answer to our problem - and there is no where to go to try and find an answer. </p>,,False,0,0
 1845850,1601528,2026-09-07T19:03:52.716689Z,2026-09-07T19:03:52.716699Z,<p>Kunt u precies de stappen beschrijven wat u doet en wanneer het misgaat? </p>,Mad_Maks,False,0,0
-1845867,1601528,2026-09-07T20:00:17.239768Z,2026-09-07T20:00:17.239777Z,"<p>Goedenavond , </p><p>Mijn probleem is met de nieuwe versie opgelost. bedankt voor het reageren. </p><p>Met vriendelijke groet, </p><p>Sandra van Beek </p>",vanbeek.sandra,False,0,0
-1845872,1601528,2026-09-07T20:18:36.317027Z,2026-09-07T20:18:36.317035Z,<p>Fijn dat het opgelost is </p>,Mad_Maks,False,0,0
+1845867,1601528,2026-09-07T20:00:17.239768Z,2026-09-07T20:00:17.239777Z,"<p>Goedenavond , </p><p>Mijn probleem is met de nieuwe versie opgelost. bedankt voor het reageren. </p><p>Met vriendelijke groet, </p><p>Sandra van Beek </p>",vanbeek.sandra,False,1,0
+1845872,1601528,2026-09-07T20:18:36.317027Z,2026-09-07T20:18:36.317035Z,<p>Fijn dat het opgelost is </p>,Mad_Maks,False,1,0
+1846558,1601478,2026-09-10T14:27:34.259482Z,2026-09-10T14:27:34.259493Z,"<p>Confermo, anche la 155 da' lo stesso problema Clelia </p>",clelia.marchionna,False,0,0
