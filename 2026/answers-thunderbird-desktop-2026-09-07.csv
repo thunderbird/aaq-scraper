@@ -93,3 +93,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1846272,1602700,2026-09-09T12:32:52.096772Z,2026-09-09T12:32:52.096779Z,<p>Dankje Mark. Uiteindelijk heeft een update en het leeghalen van SMC/PRAM cache geholpen. </p>,proyer1,False,1,0
 1846336,1602685,2026-09-09T17:37:12.760897Z,2026-09-09T17:37:12.760906Z,<p>John? </p>,wsmwk,False,0,0
 1846337,1602755,2026-09-09T17:38:27.546254Z,2026-09-09T17:38:27.546260Z,<p>Please check Thunderbird's filters for a blank text field. </p>,wsmwk,False,0,0
+1846439,1602685,2026-09-09T23:32:57.813179Z,2026-09-09T23:32:57.813195Z,<p>The deleted folder no longer exists and is replaced by a TRASH folder which has separate entries from all email addresses.  Before incoming emails were opened they were in bold text and when they were opened the details changed to normal text. When they are deleted they move to the TRASH folder in normal text. </p>,john1059,False,0,0
