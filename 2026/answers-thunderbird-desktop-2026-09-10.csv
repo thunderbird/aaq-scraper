@@ -34,3 +34,7 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1846655,1603343,2026-09-10T20:54:54.179887Z,2026-09-10T20:54:54.179898Z,<p>Please update to 155.0.1 and post your results. </p>,wsmwk,False,0,0
 1846658,1603242,2026-09-10T20:57:55.213304Z,2026-09-10T20:57:55.213308Z,<p>Please post a screen shot of this error and <strong>exact</strong> text. </p>,wsmwk,False,0,0
 1846659,1603299,2026-09-10T20:58:07.081409Z,2026-09-10T20:58:07.081416Z,"<em><p>nickatherton1 <a href=""#answer-1846605"" rel=""nofollow"">said</a></p></em> <blockquote>To clarify this is happening in the android app </blockquote> <p>Yes, I understood that this happens in the Thunderbird mobile app, yet I still cannot help you since I cannot install the mobile app on my iPhone to try to reproduce your problem. </p>",Mapenzi,False,0,0
+1846665,1603345,2026-09-10T21:19:06.426028Z,2026-09-10T21:19:06.426039Z,"<p>By NEW MAIL, I meant Inbox. </p>",hmbhmichaelb,False,0,0
+1846666,1603345,2026-09-10T21:21:30.654418Z,2026-09-10T21:21:30.654426Z,<p>In which folder do new messages arrive?  Which Thunderbird version are you using? </p>,Mapenzi,False,0,0
+1846668,1603285,2026-09-10T21:22:53.394578Z,2026-09-10T21:22:53.394583Z,<p>Di ambil orang </p>,prodavi99,False,0,0
+1846671,1603297,2026-09-10T21:30:28.085789Z,2026-09-10T21:30:28.085797Z,"<p>- Start your new message in a new window. </p><p>- Display the message with the attachment in the message display pane, tab, or window. </p><p>- Drag and drop the attachment from the old message to the new one. </p>",rednoise,False,0,0
