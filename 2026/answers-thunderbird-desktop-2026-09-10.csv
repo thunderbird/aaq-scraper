@@ -47,4 +47,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1846715,1603380,2026-09-11T03:32:19.666117Z,2026-09-11T03:32:19.666125Z,<p>Your version number is found at Help &gt; About </p>,wsmwk,False,0,0
 1846716,1603340,2026-09-11T03:39:36.309607Z,2026-09-11T03:39:36.309616Z,"<p>Victoria, </p><p>Please let us know exactly what you find </p>",wsmwk,False,0,0
 1846738,1603227,2026-09-11T07:32:04.042541Z,2026-09-11T07:32:04.042550Z,"<p>That's a known bug - <a href=""https://bugzilla.mozilla.org/show_bug.cgi?id=2069949"" rel=""nofollow"">https://bugzilla.mozilla.org/show_bug.cgi?id=2069949</a>. There's no workaround for it. </p>",siffemoz,False,0,0
-1846741,1603295,2026-09-11T07:56:57.460585Z,2026-09-11T07:56:57.460596Z,"<p>Thanks christ1, that seems to have worked. Such an easy solution too. </p>",astridfreuler,False,0,0
+1846741,1603295,2026-09-11T07:56:57.460585Z,2026-09-11T07:56:57.460596Z,"<p>Thanks christ1, that seems to have worked. Such an easy solution too. </p>",eveasti,False,0,0
