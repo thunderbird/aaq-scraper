@@ -1,3 +1,4 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1847122,1603749,2026-09-13T00:25:11.454154Z,2026-09-13T00:25:11.454161Z,"<p>And that report to Microsoft goes in the bin. </p><p>You could try starting in troubleshooting mode.  Hold the shift key while starting Thunderbird.  Otherwise you are largely left with this <a href=""https://wiki.mozilla.org/Thunderbird:Testing:Memory_Usage_Problems"" rel=""nofollow"">https://wiki.mozilla.org/Thunderbird:Testing:Memory_Usage_Problems</a> </p>",MattAuSupport,False,0,0
 1847152,1603769,2026-09-13T05:14:06.756849Z,2026-09-13T05:14:06.756855Z,"<p>If you're using Thunderbird version 155.0, there's a bug in Message Filters that causes similar symptoms. The bug is fixed in 155.0.1. </p>",rednoise,False,1,0
+1847168,1603769,2026-09-13T08:01:52.815424Z,2026-09-13T08:01:52.815430Z,<p>Please let us know if 155.0.1 didn't fix it. </p>,siffemoz,False,0,0
