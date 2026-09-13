@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1847122,1603749,2026-09-13T00:25:11.454154Z,2026-09-13T00:25:11.454161Z,"<p>And that report to Microsoft goes in the bin. </p><p>You could try starting in troubleshooting mode.  Hold the shift key while starting Thunderbird.  Otherwise you are largely left with this <a href=""https://wiki.mozilla.org/Thunderbird:Testing:Memory_Usage_Problems"" rel=""nofollow"">https://wiki.mozilla.org/Thunderbird:Testing:Memory_Usage_Problems</a> </p>",MattAuSupport,False,0,0
