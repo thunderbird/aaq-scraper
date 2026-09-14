@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1847518,1603950,2026-09-14T16:45:34.805715Z,2026-09-14T16:45:34.805721Z,"<p>This is a user supported community. While crash logs can he helpful, for your case this really need to be posted in a bug report on Github to allow developers to investigate. Please consider creating an account there. </p><p><a href=""https://github.com/thunderbird/thunderbird-android/issues"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues</a> </p>",platform34,False,0,0
