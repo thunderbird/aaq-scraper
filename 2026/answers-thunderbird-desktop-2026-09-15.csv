@@ -13,3 +13,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1847809,1604362,2026-09-15T16:14:24.265247Z,2026-09-15T16:14:24.265259Z,"<p>A bug has been filed for this issue <a href=""https://bugzilla.mozilla.org/show_bug.cgi?id=2068468"" rel=""nofollow"">https://bugzilla.mozilla.org/show_bug.cgi?id=2068468</a> </p>",Mapenzi,False,0,0
 1847813,1604362,2026-09-15T16:28:58.498661Z,2026-09-15T16:28:58.498672Z,"<p>Ah, I see, thanks. </p><p>But the original question still stands: can I get rid of those dashes so that no message count is shown for folders with no messages? </p>",blue.chip,False,0,0
 1847815,1604438,2026-09-15T16:56:49.533989Z,2026-09-15T16:56:49.533994Z,<p>image </p>,agent_smiths,False,0,0
+1847844,1604480,2026-09-15T19:36:11.729711Z,2026-09-15T19:38:48.005055Z,<p>..... </p>,christoph.brueck,False,0,0
