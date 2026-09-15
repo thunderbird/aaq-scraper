@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1847658,1604162,2026-09-15T00:34:02.180626Z,2026-09-15T00:34:02.180635Z,"<p>if you check the thunderbird blog, I don't think it's available yet. You will always see all options at <a href=""http://thunderbird.net"" rel=""nofollow"">thunderbird.net</a> </p>",davidsk,False,0,0
+1847672,1604162,2026-09-15T01:56:45.063141Z,2026-09-15T01:56:45.063149Z,"<p>The Thunderbird email client is currently available for desktop Windows, macOS, Linux and as a mobile version for Android.  </p><p>There is currently no version for iOS/iPadOS. </p>",James,False,0,0
