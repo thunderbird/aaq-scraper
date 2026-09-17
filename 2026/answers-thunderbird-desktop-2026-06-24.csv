@@ -122,3 +122,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1847416,1589353,2026-09-14T10:33:02.899371Z,2026-09-14T10:33:02.899379Z,"<p>Thanks. Let me read up on that and I'll jump in when T'bird updates. </p><p>It's a POP server, not IMAP. </p>",AlBridger,False,0,0
 1847428,1589353,2026-09-14T11:20:32.298343Z,2026-09-14T11:20:32.298348Z,<p>Is the slowness only seen for messages moving to or from your Inbox? </p>,wsmwk,False,0,0
 1847445,1589353,2026-09-14T12:54:48.000492Z,2026-09-14T12:54:48.000501Z,"<p>No, from anywhere to the four mailboxes or from them to anywhere. </p>",AlBridger,False,0,0
+1848303,1589353,2026-09-17T17:33:44.145865Z,2026-09-17T17:33:44.145873Z,"<p>Ok, I managed to get as far as Capture Recording (see the screenshot with the later time stamp). </p><p>It wound up as in the earlier screenshot, waiting for something apparently forever. </p><p>I await foida woid. </p>",AlBridger,False,0,0
