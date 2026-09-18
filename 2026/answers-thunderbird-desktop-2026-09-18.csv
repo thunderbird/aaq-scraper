@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1848393,1605512,2026-09-18T01:15:32.301915Z,2026-09-18T01:15:32.301921Z,"<p>I don't have this problem, and you can check Thunderbird troubleshooting mode or your config editor. </p><p>Reference: <a href=""https://support.mozilla.org/en-US/kb/hyperlinks-in-messages-not-working"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/hyperlinks-in-messages-not-working</a> </p>",wxie2016,False,0,0
+1848426,1605528,2026-09-18T04:49:35.163623Z,2026-09-18T04:49:35.163630Z,"<p>Ignoring the update,  do you have a third party antivirus product installed?  What is it? </p><p>what error messages to you see in the windows notifications area? </p>",MattAuSupport,False,0,0
