@@ -1,2 +1,213 @@
 id,created,updated,locale,product,title,is_solved,solution,solved_by,is_spam,last_answer,answers,topic,tags,creator,content,involved,is_archived,is_locked,is_taken,metadata,num_answers,num_votes_past_week,num_votes,taken_until,taken_by,updated_by,operating_system,thunderbird_version,firefox_version
 1605828,2026-09-19T00:53:15.046846Z,2026-09-19T02:34:55.888625Z,en-US,thunderbird,password,False,,,False,1848675,1848675;,reset-passwords,thunderbird;reset-passwords;,wforting,<p>hello Help I have forgotten my Thunderbird email PW.  can I set a new one? </p>,wforting;rednoise;,False,False,False,;useragent:Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:155.0) Gecko/20100101 Firefox/155.0;tb_version:Mozilla/5.0 (X11;sanitized_product_version:,1,0,0,,,,,Mozilla/5.0 (X11,
+1605855,2026-09-19T03:20:22.824731Z,2026-09-19T03:59:31.186233Z,en-US,thunderbird,"""When Thunderbird is minimized, move it to the tray"" in setting for 156.0.0.0 has gone.",False,,,False,1848678,1848678;,customization,thunderbird;customization;windows-11;,foxy_dude,"<p>""When Thunderbird is minimized, move it to the tray"" in setting for 156.0.0.0 has gone. Why? How to get this feature back? </p><p>I want &amp; need this setting. </p>",foxy_dude;Agentvirtuel;,False,False,True,;sanitized_product_version:;useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:156.0) Gecko/20100101 Firefox/156.0;tb_version:156.0.0.0;os:Windows 11,1,0,0,2026-09-18T21:09:21.336430-07:00,Agentvirtuel,,Windows 11,156.0.0.0,
+1605867,2026-09-19T03:57:55.330329Z,2026-09-19T03:57:55.330335Z,en-US,thunderbird,Thunderbird is not picking up emails from sympatico server,False,,,False,,,send-and-receive-email,thunderbird;windows-11;send-and-receive-email;firefox-1530;firefox-15304;,wilddoc,"<p>Thunderbird has been receiving emails on my PC from Bell Sympatico for years, then suddenly stopped in July 2026 without my changing any settings, and I have to go to the Bell server instead. </p>",wilddoc;,False,False,False,";useragent:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0;ff_version:153.0.4;os:Windows 11;troubleshooting:""type"": ""extension"",
+      ""version"": ""1.0.0"",
+      ""isActive"": true,
+      ""id"": ""pictureinpicture@mozilla.org"",
+      ""locationName"": ""app-builtin-addons""
+    },
+    {
+      ""name"": ""Web Compatibility Interventions"",
+      ""type"": ""extension"",
+      ""version"": ""153.10.0"",
+      ""isActive"": true,
+      ""id"": ""webcompat@mozilla.org"",
+      ""locationName"": ""app-builtin-addons""
+    },
+    {
+      ""name"": ""Zoom Extension"",
+      ""type"": ""extension"",
+      ""version"": ""2.2.13"",
+      ""isActive"": true,
+      ""id"": ""{bf855ead-d7c3-4c7b-9f88-9a7e75c0efdf}"",
+      ""locationName"": ""app-profile""
+    },
+    {
+      ""name"": ""System theme — auto"",
+      ""type"": ""theme"",
+      ""version"": ""1.4.2"",
+      ""isActive"": true,
+      ""id"": ""default-theme@mozilla.org"",
+      ""locationName"": ""app-builtin""
+    },
+    {
+      ""name"": ""Dark"",
+      ""type"": ""theme"",
+      ""version"": ""1.3.4"",
+      ""isActive"": false,
+      ""id"": ""firefox-compact-dark@mozilla.org"",
+      ""locationName"": ""app-builtin""
+    },
+    {
+      ""name"": ""Firefox Alpenglow"",
+      ""type"": ""theme"",
+      ""version"": ""1.5.3"",
+      ""isActive"": false,
+      ""id"": ""firefox-alpenglow@mozilla.org"",
+      ""locationName"": ""app-builtin""
+    },
+    {
+      ""name"": ""Light"",
+      ""type"": ""theme"",
+      ""version"": ""1.3.4"",
+      ""isActive"": false,
+      ""id"": ""firefox-compact-light@mozilla.org"",
+      ""locationName"": ""app-builtin""
+    }
+  ],
+  ""application"": {
+    ""name"": ""Firefox"",
+    ""osVersion"": ""Windows_NT 10.0 26200"",
+    ""version"": ""153.0.4"",
+    ""buildID"": ""20260810162159"",
+    ""distributionID"": """",
+    ""userAgent"": ""Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0"",
+    ""safeMode"": false,
+    ""memorySizeBytes"": 17009438720,
+    ""diskAvailableBytes"": 364394389504,
+    ""updateChannel"": ""release"",
+    ""supportURL"": ""https://support.mozilla.org/1/firefox/153.0.4/WINNT/en-US/"",
+    ""osTheme"": """",
+    ""pointingDevices"": [
+      ""pointing-device-mouse""
+    ],
+    ""numTotalWindows"": 1,
+    ""numFissionWindows"": 1,
+    ""numRemoteWindows"": 1,
+    ""launcherProcessState"": 0,
+    ""fissionAutoStart"": true,
+    ""fissionDecisionStatus"": ""enabledByDefault"",
+    ""remoteAutoStart"": true,
+    ""policiesStatus"": 0,
+    ""keyLocationServiceGoogleFound"": true,
+    ""keySafebrowsingGoogleFound"": true,
+    ""keyMozillaFound"": true
+  },
+  ""processes"": {
+    ""remoteTypes"": {
+      ""webIsolated"": 5,
+      ""socket"": 1,
+      ""prealloc"": 2,
+      ""gpu"": 1,
+      ""rdd"": 1,
+      ""webServiceWorker"": 1,
+      ""extension"": 1,
+      ""privilegedabout"": 1,
+      ""utility_jSOracle"": 1,
+      ""utility_audioDecoder_Generic"": 1,
+      ""utility_audioDecoder_WMF"": 1
+    },
+    ""maxWebContentProcesses"": 8
+  },
+  ""legacyUserStylesheets"": {
+    ""active"": false,
+    ""types"": []
+  },
+  ""normandy"": {
+    ""addonStudies"": [],
+    ""prefRollouts"": [],
+    ""prefStudies"": [],
+    ""nimbusExperiments"": [],
+    ""nimbusRollouts"": [
+      {
+        ""slug"": ""tab-notes-firefox-labs-149"",
+        ""lastSeen"": ""2026-05-11T15:56:36.860Z"",
+        ""source"": ""rs-loader"",
+        ""active"": true,
+        ""prefs"": [
+          {
+            ""name"": ""browser.tabs.notes.enabled"",
+            ""branch"": ""default"",
+            ""featureId"": ""tabNotes"",
+            ""variable"": ""enabled"",
+            ""originalValue"": false
+          }
+        ],
+        ""prefFlips"": [
+          {
+            ""name"": ""browser.tabs.notes.enabled"",
+            ""branch"": ""default"",
+            ""featureId"": ""tabNotes"",
+            ""variable"": ""enabled"",
+            ""originalValue"": false
+          }
+        ],
+        ""branch"": {
+          ""slug"": ""control"",
+          ""ratio"": 1,
+          ""feature"": {
+            ""value"": {},
+            ""enabled"": false,
+            ""featureId"": ""this-is-included-for-desktop-pre-95-support""
+          },
+          ""features"": [
+            {
+              ""value"": {
+                ""enabled"": true
+              },
+              ""enabled"": true,
+              ""featureId"": ""tabNotes""
+            }
+          ],
+          ""firefoxLabsTitle"": null
+        },
+        ""userFacingName"": ""Tab Notes - Firefox Labs 149"",
+        ""userFacingDescription"": ""This rollout makes Tab Notes feature available for all users to try out in Firefox Labs."",
+        ""featureIds"": [
+          ""tabNotes""
+        ],
+        ""isRollout"": true,
+        ""localizations"": null,
+        ""isFirefoxLabsOptIn"": true,
+        ""firefoxLabsTitle"": ""experimental-features-tab-notes"",
+        ""firefoxLabsDescription"": ""experimental-features-tab-notes-description"",
+        ""firefoxLabsDescriptionLinks"": {
+          ""connect"": ""https://connect.mozilla.org/t5/discussions/tab-notes-going-live-in-firefox-labs-please-share-your-feedback/td-p/118317""
+        },
+        ""firefoxLabsGroup"": ""experimental-features-group-productivity"",
+        ""requiresRestart"": false
+      }
+    ]
+  },
+  ""remoteSettings"": {
+    ""serverURL"": ""https://firefox.settings.services.mozilla.com/v2"",
+    ""pollingEndpoint"": ""https://firefox.settings.services.mozilla.com/v2/buckets/monitor/collections/changes/changeset"",
+    ""serverTimestamp"": null,
+    ""localTimestamp"": ""1789786622473"",
+    ""lastCheck"": ""2026-09-19T03:22:34.000Z"",
+    ""mainBucket"": ""main"",
+    ""defaultSigner"": ""remote-settings.content-signature.mozilla.org"",
+    ""previewMode"": false,
+    ""collections"": [],
+    ""history"": {
+      ""settings-sync"": [
+        {
+          ""timestamp"": 1789786622473,
+          ""status"": ""success"",
+          ""infos"": {},
+          ""datetime"": ""2026-09-19T02:57:02.473Z""
+        },
+        {
+          ""timestamp"": 1789778256339,
+          ""status"": ""success"",
+          ""infos"": {},
+          ""datetime"": ""2026-09-19T00:37:36.339Z""
+        },
+        {
+          ""timestamp"": 1789777294560,
+          ""status"": ""success"",
+          ""infos"": {},
+          ""datetime"": ""2026-09-19T00:21:34.560Z""
+        },
+        {
+          ""timestamp"": 1789765697552,
+          ""status"": ""success"",
+          ""infos"": {},
+          ""datetime"": ""2026-09-18T21:08:17.552Z""
+        },
+        {
+          ""timestamp"": 1789762209077,
+          ""status"": ""success"",
+          ""infos"": {},
+          ""datetime"": ""2026-09-18T20:10:09.077Z"";sanitized_product_version:153.0.4",0,0,0,,,,Windows 11,,153.0.4
