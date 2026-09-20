@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1849080,1606033,2026-09-20T21:41:58.620945Z,2026-09-20T21:41:58.620952Z,<p>The app will download any new emails arriving in your gmail inbox. It doesn't care how the were sent. </p>,platform34,False,0,0
+1849084,1606033,2026-09-20T22:05:11.730707Z,2026-09-20T22:05:11.730715Z,"<p>Unfortunately not. E mails sent directly to the Gmail address display in Thunderbird. But ones forwarded from the <a href=""http://duck.com"" rel=""nofollow"">duck.com</a> address to Gmail are not showing in Thunderbird </p>",richards1052,False,0,0
