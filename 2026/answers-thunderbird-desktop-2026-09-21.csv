@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1849102,1606312,2026-09-21T00:43:52.089545Z,2026-09-21T00:43:52.089554Z,"<p>It's difficult for us to diagnose Mailwasher (although I use it daily and like it).Part of what you are experiencing is that mailwasher reads from the server, while thunderbird reads from whatever the server decides is not spam. Subtle difference but important. You might check the server's website to see if you can find the missing messages. </p>",davidsk,False,0,0
