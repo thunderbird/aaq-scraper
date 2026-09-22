@@ -28,3 +28,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1849591,1606826,2026-09-22T21:45:22.826500Z,2026-09-22T21:45:22.826507Z,<p>all accounts must be IMAP .  But I know nothing of Apple. </p>,davidsk,False,0,0
 1849593,1606824,2026-09-22T21:46:26.481350Z,2026-09-22T21:46:26.481358Z,<ol><li> click 'account settings' </li><li> click the account name in left sidebar </li><li> locate the button in lower right to edit SMTP server </li></ol>,davidsk,False,0,0
 1849595,1606834,2026-09-22T21:57:20.405454Z,2026-09-22T21:57:20.405462Z,<p>...and I suppose I should point out that I do have Javascript enabled for my Chrome browser. </p>,david.pratt14,False,0,0
+1849599,1606834,2026-09-22T22:29:23.065008Z,2026-09-22T22:29:23.065015Z,<p>Goodness!  I didn't notice that in the right panel on this page were the instructions for doing this! Problem solved! </p>,david.pratt14,False,0,0
+1849608,1606826,2026-09-22T22:57:07.059305Z,2026-09-22T22:57:07.059313Z,"<p>David, All three are IMAP so not that but thanks </p>",phcalc,False,0,0
