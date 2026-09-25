@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1850242,1607383,2026-09-25T06:10:37.948206Z,2026-09-25T06:10:37.948212Z,<p>Is TB Android using imap or pop to connect to the server? </p><p>Can you check the following setting has not been disabled. Settings &gt; account name &gt; fetching mail &gt; Sync Server Deletions </p><p>This is applicable only for imap. Pop doesn't support synchronisation. </p>,platform34,False,0,0
