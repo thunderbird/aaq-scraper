@@ -33,3 +33,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1851037,1608142,2026-09-29T03:38:41.389574Z,2026-09-29T03:38:41.389581Z,<p>Sounds like bug 2069041. </p>,wsmwk,False,0,0
 1851038,1608128,2026-09-29T03:44:55.281537Z,2026-09-29T03:44:55.281545Z,"<p>Are you referring to the issue you describe at <a href=""https://support.mozilla.org/en-US/questions/1601433"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1601433</a> ? </p>",wsmwk,False,0,0
 1851041,1608131,2026-09-29T04:40:59.861285Z,2026-09-29T04:40:59.861291Z,<p>Any activity in  status bar (at bottom) or Tools &gt; activity manager? Same in Help &gt; Troubleshoot Mode? </p>,wsmwk,False,0,0
+1851128,1607967,2026-09-29T15:38:01.171901Z,2026-09-29T15:38:01.171912Z,<p>manythanks for all the help and assurance: email was finally restored (with thousands of old messages) but up and running again :) </p>,bbrace,False,0,0
