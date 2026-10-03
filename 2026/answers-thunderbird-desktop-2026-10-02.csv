@@ -52,3 +52,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1852451,1609191,2026-10-03T11:38:25.308084Z,2026-10-03T11:57:46.090883Z,<p>Note  - I am moving my replies to the above thread/bug report started by Legacy to avoid confusion. </p>,telebruce2,False,0,0
 1852452,1609311,2026-10-03T11:40:08.500098Z,2026-10-03T11:40:08.500108Z,<p>Try right-click Inbox &gt; Properties &gt; click 'Repair folder' button. </p>,christ1,False,0,0
 1852455,1609289,2026-10-03T11:44:26.881196Z,2026-10-03T11:44:26.881203Z,<p>What is your anti-virus software? </p>,christ1,False,0,0
+1852464,1609189,2026-10-03T12:22:57.748657Z,2026-10-03T12:22:57.748669Z,<p>Ho risolto ricreando la cartella ove era previsto il download di firefox che probabilmente è stata cancellata o spostata </p>,taddei.mario,False,0,0
