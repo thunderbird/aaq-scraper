@@ -53,3 +53,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1852452,1609311,2026-10-03T11:40:08.500098Z,2026-10-03T11:40:08.500108Z,<p>Try right-click Inbox &gt; Properties &gt; click 'Repair folder' button. </p>,christ1,False,0,0
 1852455,1609289,2026-10-03T11:44:26.881196Z,2026-10-03T11:44:26.881203Z,<p>What is your anti-virus software? </p>,christ1,False,0,0
 1852464,1609189,2026-10-03T12:22:57.748657Z,2026-10-03T12:22:57.748669Z,<p>Ho risolto ricreando la cartella ove era previsto il download di firefox che probabilmente è stata cancellata o spostata </p>,taddei.mario,False,0,0
+1852480,1609108,2026-10-03T13:42:28.155219Z,2026-10-03T13:42:28.155229Z,<p>Do you still have a copy of the profile folder of your Thunderbird installation on the old partition? </p>,Mapenzi,False,0,0
