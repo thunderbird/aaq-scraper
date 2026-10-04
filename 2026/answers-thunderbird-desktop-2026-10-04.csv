@@ -1,3 +1,5 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1852705,1609558,2026-10-04T00:56:32.161208Z,2026-10-04T00:56:32.161214Z,<p>It is unsafe to post your personal email here. </p><p>There are various reasons that your email is unavailable. </p><p>Could you please check if you can use it via your webmail? </p>,wxie2016,False,0,0
 1852753,1609555,2026-10-04T07:53:01.995510Z,2026-10-04T07:53:01.995517Z,<p>L'errore indica un problema sul server. Se non si risolve devi segnalare al gestore. </p>,'@next,False,0,0
+1852758,1609601,2026-10-04T08:09:22.550259Z,2026-10-04T08:09:22.550266Z,<p>Go to TB menu &gt; Settings &gt; General &gt; Files &amp; Attachments. </p><p>Scroll down to the png file entry &gt; click the down-arrow to the right &gt; choose 'Always ask'.  </p><p>Open an attachment with a png file. You should then be presented with an option to open it with Photos. </p>,siffemoz,False,1,0
+1852769,1609601,2026-10-04T08:52:34.772677Z,2026-10-04T08:52:34.772687Z,<p>That was it Ed. Thanks for helping. </p>,john391,False,0,0

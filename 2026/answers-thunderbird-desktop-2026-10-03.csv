@@ -47,3 +47,6 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1852751,1609492,2026-10-04T07:43:28.152280Z,2026-10-04T07:43:28.152286Z,<p>I was trying to use the messaging with Facebook. </p>,davidf4,False,0,0
 1852754,1609517,2026-10-04T07:55:02.746946Z,2026-10-04T07:55:02.746954Z,"<p>Fai un backup del profilo: <a href=""https://support.mozilla.org/it/kb/profili-thunderbird"" rel=""nofollow"">https://support.mozilla.org/it/kb/profili-thunderbird</a> </p><p>Poi installa l'estensione <a href=""https://addons.thunderbird.net/it/thunderbird/addon/removedupes/?src=ss"" rel=""nofollow"">https://addons.thunderbird.net/it/thunderbird/addon/removedupes/?src=ss</a> che serve proprio a trovare ed eliminare messaggi duplicati </p>",'@next,False,0,0
 1852757,1609517,2026-10-04T08:01:54.605526Z,2026-10-04T08:01:54.605533Z,<p>l'estensione non è compatibile con la versione 157 </p>,conam09,False,0,0
+1852761,1609517,2026-10-04T08:23:24.974370Z,2026-10-04T08:23:24.974376Z,"<p>allora non saprei, ne ne conosco altre. </p>",'@next,False,0,0
+1852765,1609463,2026-10-04T08:45:22.701695Z,2026-10-04T08:45:22.701703Z,<p>No funciona!. </p>,jaimejruizherrero,False,0,0
+1852767,1609461,2026-10-04T08:51:44.821847Z,2026-10-04T08:51:44.821854Z,<p>Funciona!. Resuelto. Muchas gracias </p>,jaimejruizherrero,False,0,0
