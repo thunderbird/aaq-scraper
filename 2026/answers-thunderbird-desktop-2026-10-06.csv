@@ -1,0 +1,4 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1853295,1610053,2026-10-06T01:47:30.631987Z,2026-10-06T01:47:30.631999Z,<p>They sent you two spams. </p>,rednoise,False,0,0
+1853297,1610053,2026-10-06T01:59:30.263170Z,2026-10-06T01:59:30.263182Z,<p>My fault. I meant my email address appears twice. Only under spam. </p>,donh1390,False,0,0
+1853299,1610053,2026-10-06T02:02:22.691898Z,2026-10-06T02:02:22.691904Z,"<p>I will guess they sent you two spams, falsely using your name and address in the To: field. </p>",rednoise,False,0,0
