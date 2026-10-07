@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1853608,1610325,2026-10-07T01:25:56.169954Z,2026-10-07T01:25:56.169959Z,"<p>Most toolbars can be customized by adding/removing/rearranging the buttons. Here's an article that describes how to do it: </p><p><a href=""https://support.mozilla.org/en-US/kb/unified-toolbar"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/unified-toolbar</a> </p><p>By the way, you can always Send a message with the keyboard shortcut &lt;Ctrl + Enter&gt;. </p>",rednoise,False,0,0
