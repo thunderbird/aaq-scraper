@@ -1,0 +1,2 @@
+id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1853881,1610561,2026-10-08T00:31:13.233031Z,2026-10-08T00:31:13.233039Z,"<p>My guess is that message appeared because you were  copying while thunderbird was still running. If so, I wouldn't trust it </p>",davidsk,False,0,0
