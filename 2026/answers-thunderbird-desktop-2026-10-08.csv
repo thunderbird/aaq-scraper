@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1853881,1610561,2026-10-08T00:31:13.233031Z,2026-10-08T00:31:13.233039Z,"<p>My guess is that message appeared because you were  copying while thunderbird was still running. If so, I wouldn't trust it </p>",davidsk,False,0,0
+1853891,1610561,2026-10-08T01:50:58.445878Z,2026-10-08T01:50:58.445883Z,"<p>Thanks, yea that solved the message thing. Oddly according to Thunderbird the file is ""deleted on closing"" except it isn't. C/p doesn't create the message but the lock file is still there. I also tried to import on an old tablet </p>",jeffkrol1,False,0,0
