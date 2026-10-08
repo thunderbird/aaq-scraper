@@ -89,3 +89,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1854033,1609108,2026-10-08T15:24:16.757981Z,2026-10-08T15:24:16.758030Z,"<p>Good luck, Luke! </p>",Mapenzi,False,0,0
 1854041,1609196,2026-10-08T15:43:41.400748Z,2026-10-08T15:43:41.400753Z,"<p>buonasera, premesso che non sono per nulla un esperto.... sono entrato nell'editor di configurazione ho cercato la voce ""mail.compose.attach.dir"" nel mio caso riportava la cartella degli ultimi allegati inviati ho cancellato con simbolo del cestino la riga di cui sopra ora funziona </p><p>non so perchè.... </p>",cristiano.scarpi,False,0,0
 1854045,1609196,2026-10-08T16:06:09.995462Z,2026-10-08T16:06:09.995469Z,<p>Ottima soluzione! </p>,'@next,False,0,0
+1854097,1609202,2026-10-08T19:09:58.823093Z,2026-10-08T19:09:58.823099Z,"<p>Can use workaround, but its not very intuitive. When is a proper fix likely Mozilla? </p>",db9,False,0,0
