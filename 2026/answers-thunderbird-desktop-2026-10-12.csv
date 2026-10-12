@@ -5,3 +5,6 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1854897,1611418,2026-10-12T07:09:32.922215Z,2026-10-12T07:09:32.922222Z,"<p>Segui questa guida: <a href=""https://support.mozilla.org/it/kb/versione-release-thunderbird#w_ritornare-da-una-versione-release-a-una-versione-esr"" rel=""nofollow"">https://support.mozilla.org/it/kb/versione-release-thunderbird#w_ritornare-da-una-versione-release-a-una-versione-esr</a> </p>",'@next,False,0,0
 1854899,1611418,2026-10-12T07:21:49.843890Z,2026-10-12T07:21:49.843896Z,<p>Grazie! Cesare C. </p>,mne.webmaster,False,0,0
 1854911,1611418,2026-10-12T08:39:03.243200Z,2026-10-12T08:39:03.243214Z,<p>Di nulla! </p>,'@next,False,0,0
+1854944,1611415,2026-10-12T10:06:33.489899Z,2026-10-12T10:06:33.489910Z,"<p>We do not have phone support, but if you describe your issue, I believe someone here may be able to assist you. Thank you. </p>",davidsk,False,0,0
+1854945,1611417,2026-10-12T10:09:46.328504Z,2026-10-12T10:09:46.328511Z,"<p>To assist you, it is important that you describe your situation, such as PC crash, reinstalling Thunderbird, etc. Thank you. </p>",davidsk,False,0,0
+1854946,1611443,2026-10-12T10:11:32.354618Z,2026-10-12T10:11:32.354629Z,<p>I believe the fix will be out in a couple of days. </p>,davidsk,False,0,0
