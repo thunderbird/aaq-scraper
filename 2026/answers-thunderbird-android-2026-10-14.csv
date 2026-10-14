@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1855508,1611869,2026-10-14T14:47:10.721661Z,2026-10-14T14:47:10.721673Z,"<p>Hi Laci </p><p>Could you please raise your bug report by opening a new issue ticket on github, linked below. </p><p><a href=""https://github.com/thunderbird/thunderbird-android/issues"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues</a> </p>",platform34,False,0,0
