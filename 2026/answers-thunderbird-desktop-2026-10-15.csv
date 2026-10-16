@@ -38,3 +38,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1855824,1612050,2026-10-16T01:14:16.771697Z,2026-10-16T01:14:16.771704Z,"<p>Hola, A que se refiere con enviar correos desde planillas o templete? </p>",pcp04,False,0,0
 1855825,1612104,2026-10-16T01:16:32.388489Z,2026-10-16T01:16:32.388495Z,"<p>Hola, Quien es el proveedor de su servicio de correo, tiene los datos de configuración del servidor y sus puertos? Funciona el modo de configuración automática del Thunderbird? Saludos </p>",pcp04,False,0,0
 1855826,1612156,2026-10-16T01:18:54.097549Z,2026-10-16T01:21:10.467552Z,"<p>Hola, El perfil totalmente nuevo eran con los 17Gigas de Correo? Probo desactivando temporalmente el Antivirus? Porque usa Thunderbird 32bit en un equipo y sistema que seguramente es 64bits? Saludos </p>",pcp04,False,0,0
+1855835,1612170,2026-10-16T03:28:15.004995Z,2026-10-16T03:28:15.005007Z,"<p>That method will work. Just follow the directions very carefully, and make sure to have a backup copy of the profile. </p>",rednoise,False,0,0
+1855837,1612052,2026-10-16T03:45:38.673061Z,2026-10-16T03:45:38.673074Z,<p>Msf file is useless.  So no </p>,wsmwk,False,0,0
