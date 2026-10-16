@@ -22,3 +22,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1855969,1612322,2026-10-16T17:48:36.458386Z,2026-10-16T17:48:36.458410Z,"<p>Per quanto ne so la chiave di recupero non viene mai inviata via mail. In ogni caso questo è solo un forum di utenti, non possiamo inviare nulla. </p>",'@next,False,0,0
 1855970,1612324,2026-10-16T17:50:45.602516Z,2026-10-16T17:50:45.602521Z,<p>Per quel che ho capito non mi pare un problema di Thunderbird. In ogni caso non puoi imporre al server o al client del destinatario di considerare sicuro il tuo indirizzo. </p>,'@next,False,0,0
 1855971,1612342,2026-10-16T17:52:34.631721Z,2026-10-16T17:52:34.631726Z,"<p>Se il server è lento dovresti segnalare a Google,  non credo possa dipendere da Thunderbird. </p>",'@next,False,0,0
+1855980,1612286,2026-10-16T18:49:17.955380Z,2026-10-16T18:49:17.955386Z,<p>Fatto </p>,'@next,False,0,0
