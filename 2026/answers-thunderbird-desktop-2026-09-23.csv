@@ -86,3 +86,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1852497,1606966,2026-10-03T14:27:33.994204Z,2026-10-03T14:27:33.994211Z,"<p>FYI <a href=""https://support.mozilla.org/en-US/kb/getting-started-thunderbird-main-window-supernova"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/getting-started-thunderbird-main-window-supernova</a> is a good reference for learning about the layout </p>",wsmwk,False,0,0
 1852549,1607041,2026-10-03T16:26:36.257001Z,2026-10-03T16:26:36.257006Z,<p>Better now in version 157? </p>,wsmwk,False,1,0
 1852594,1607041,2026-10-03T19:03:54.542031Z,2026-10-03T19:56:04.614394Z,"<p>I think that what solve the problem is closing open tabs. V. 153.4 Thanks, </p><p>Nir </p>",nirle,False,0,0
+1856008,1607127,2026-10-16T22:12:50.624823Z,2026-10-16T22:12:50.624834Z,<p>I solved this issue. Delete this post </p>,8skie8,False,0,0
