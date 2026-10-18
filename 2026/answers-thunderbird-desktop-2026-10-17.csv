@@ -22,3 +22,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1856217,1612486,2026-10-18T10:52:40.614465Z,2026-10-18T10:52:40.614470Z,"<p>Nothing written down, I am at a loss to know what to do now! </p>",raykay2,False,0,0
 1856221,1612486,2026-10-18T11:15:42.512831Z,2026-10-18T11:15:42.512842Z,"<p>If you don't remember the password, I suggest contacting the email provider. </p>",davidsk,False,0,0
 1856224,1612465,2026-10-18T12:02:55.907153Z,2026-10-18T12:02:55.907160Z,"<p>si, non si avvia proprio </p>",brunetti.luigino,False,0,0
+1856232,1612573,2026-10-18T13:33:06.565785Z,2026-10-18T13:33:06.565796Z,"<p>My guess is the old profile uses IMAP. That indicates to me that the folder structure you want is on the server. POP accounts cannot access the server, but only the inbox. To access the folder structure, you need to set up an IMAP account, which can be alongside the POP account. </p>",davidsk,False,0,0
