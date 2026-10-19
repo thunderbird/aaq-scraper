@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1856290,1612594,2026-10-19T02:19:16.185179Z,2026-10-19T02:19:16.185187Z,"<p>You can file a bug report by opening a new issue ticket on github, linked below. </p><p><a href=""https://github.com/thunderbird/thunderbird-android/issues"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues</a> </p>",platform34,False,0,0
