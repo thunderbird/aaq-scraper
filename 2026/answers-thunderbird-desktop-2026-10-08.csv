@@ -100,3 +100,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1856394,1610661,2026-10-19T12:54:36.481474Z,2026-10-19T12:54:36.481485Z,<p><strong>Welche Antivirensoftware benutzt Ihr auf dem PC?</strong> </p>,Mapenzi,False,0,0
 1856427,1610661,2026-10-19T14:05:18.470936Z,2026-10-19T14:05:18.470948Z,<p>Avast One. </p>,lucy.postier,False,0,0
 1856450,1610661,2026-10-19T15:07:23.718481Z,2026-10-19T15:07:23.718490Z,"<p>Bitte überprüfe ob Avast One das Senden und Empfangen von Nachrichten in Thunderbird kontrolliert. Gegebenenfalls eine solche Kontrolle abstellen. Wie ich sehe, bringt Avast One auch einen VPN mit. Bitte letzteren probeweise deaktivieren. </p>",Mapenzi,False,0,0
+1856963,1610661,2026-10-21T13:08:02.015602Z,2026-10-21T13:08:02.015613Z,"<p>Hallo , habe in Avast die Kontrolle von E-Mail Nachrichten deaktiviert, VPN ist nicht aktiev. Trotzdem immer noch das Problem. </p>",lucy.postier,False,0,0
