@@ -38,3 +38,6 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1856891,1612986,2026-10-21T06:24:16.540746Z,2026-10-21T06:24:16.540753Z,<p>Thanks for that.  Is there an actual solution that you can offer? </p>,troy_s,False,0,0
 1856900,1613156,2026-10-21T07:26:32.276674Z,2026-10-21T07:26:32.276686Z,"<p>Hai seguito la specifica configurazione richiesta da Gmail? -&gt; <a href=""https://support.mozilla.org/it/kb/thunderbird-gmail"" rel=""nofollow"">https://support.mozilla.org/it/kb/thunderbird-gmail</a> </p>",'@next,False,0,0
 1856908,1613089,2026-10-21T08:24:06.775311Z,2026-10-21T08:24:06.775319Z,<p>Graph?? Where - what is it?  The Outlook email address is set up and functions via webmail but I can't get Thunderbird to add the account. </p>,Isobelt,False,0,0
+1856922,1613108,2026-10-21T09:16:22.414191Z,2026-10-21T09:16:22.414204Z,<p>Thanks David </p><p>I'm not sure what exactly made the difference as I tried a couple of the suggested solutions at the same time but one or more of them worked </p>,SafeTex,False,0,0
+1856923,1613108,2026-10-21T09:21:27.913732Z,2026-10-21T09:21:27.913743Z,<p>Thanks for the feedback. :) </p>,davidsk,False,0,0
+1856927,1613067,2026-10-21T09:30:27.782846Z,2026-10-21T09:30:27.782856Z,<p>I have removed your PII.   </p><p>Can you post your workaround? </p>,wsmwk,False,0,0
