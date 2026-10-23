@@ -64,3 +64,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1857524,1613320,2026-10-23T15:26:08.638021Z,2026-10-23T15:26:08.638027Z,<p>Should a menu bar that allows sorting in various useful ways be added to the system? </p>,2025,False,0,0
 1857525,1613320,2026-10-23T15:31:03.404447Z,2026-10-23T15:31:03.404455Z,<p>He indicates he cannot get a menu bar in thunderbird. pressing the alt key does not work. </p>,davidsk,False,0,0
 1857528,1613320,2026-10-23T15:33:39.221784Z,2026-10-23T15:33:39.221790Z,<p>I am asking about the My Questions list in Mozilla Support (not about Thunderbird). </p>,2025,False,0,0
+1857566,1613320,2026-10-23T18:03:37.903966Z,2026-10-23T18:03:37.903976Z,<p>My error. My focus is on thunderbird. sorry </p>,davidsk,False,0,0
