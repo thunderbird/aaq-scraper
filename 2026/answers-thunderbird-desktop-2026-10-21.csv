@@ -56,3 +56,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1857385,1613162,2026-10-23T00:41:33.907403Z,2026-10-23T00:41:33.907410Z,<p>Do you have a paid proton account?  Did you follow the instructions for the use of the proton bridge software? </p>,MattAuSupport,False,0,0
 1857408,1613320,2026-10-23T05:06:23.873948Z,2026-10-23T05:06:23.873955Z,<p>I pressed my Alt key and nothing happened? </p>,2025,False,0,0
 1857442,1613320,2026-10-23T09:02:29.691868Z,2026-10-23T09:02:29.691874Z,"<p>Puzzling. the menu bar should appear at the top of screen. Try the F10 key, but the alt has always worked. </p>",davidsk,False,0,0
+1857506,1613320,2026-10-23T14:05:22.896756Z,2026-10-23T14:05:22.896761Z,"<p>Sadly, F10 did not work either. </p>",2025,False,0,0
