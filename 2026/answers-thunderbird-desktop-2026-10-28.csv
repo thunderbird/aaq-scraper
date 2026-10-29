@@ -42,3 +42,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1858873,1614655,2026-10-29T05:13:44.860380Z,2026-10-29T05:13:44.860391Z,<p>Sure it's not your distro? </p>,wsmwk,False,0,0
 1858874,1614655,2026-10-29T05:14:56.799442Z,2026-10-29T05:14:56.799448Z,"<p>Also, does it reproduce with Help &gt; Troubleshoot Mode? </p>",wsmwk,False,0,0
 1858890,1614684,2026-10-29T07:35:49.259790Z,2026-10-29T07:35:49.259798Z,"<p>It looks like an OS issue. Drag &amp; drop doesn't work at nemo filemanager, too. And there are a few other unsual behavior problems. Locking session/workstation doesn't work as well (function and suspend mode...) </p>",herzi-linners,False,0,0
+1858899,1614707,2026-10-29T09:18:01.420348Z,2026-10-29T09:18:01.420355Z,"<p>This action is from your email provider, not Thunderbird. My guess is that sending to that many is an indicator of spam, and you are being asked to reverify to the email provider. </p>",davidsk,False,0,0
