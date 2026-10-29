@@ -84,3 +84,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1850632,1599228,2026-09-27T05:51:39.034660Z,2026-09-27T05:51:39.034667Z,<p>Bumping this. </p>,cortexreboot,False,0,0
 1850655,1599228,2026-09-27T09:37:58.447992Z,2026-09-27T09:37:58.447999Z,"<p>See <a href=""https://support.mozilla.org/gu-IN/questions/1427003"" rel=""nofollow"">https://support.mozilla.org/gu-IN/questions/1427003</a> </p><p>I got this link off the page you are bumping.  it is years later, but the question is still the most likely reason.  You have not removed a calendar or address book when your removed the email account. </p>",MattAuSupport,False,1,0
 1854876,1599228,2026-10-12T05:37:41.654170Z,2026-10-12T05:37:41.654181Z,"<p>Thanks Matt, I will give this a go. </p>",cortexreboot,False,0,0
+1858889,1599345,2026-10-29T07:29:13.222163Z,2026-10-29T07:29:13.222174Z,<p>it helps me a lot. </p>,singhhvaibhav888,False,0,0
