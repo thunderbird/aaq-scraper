@@ -100,3 +100,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1857928,1603792,2026-10-25T11:00:29.876756Z,2026-10-25T11:00:29.876764Z,"<p>If you have enabled to display <strong>Show Total Message Count</strong> you will always see when there are messages in the ""Spam"" folder, whether they are read or unread! </p>",Mapenzi,False,0,0
 1857931,1603792,2026-10-25T11:18:11.469394Z,2026-10-25T11:18:11.469402Z,<p>Show Total Message Count is Enabled but if I get a Spam Message it is not shown under Unread Folders until entering Email Folder </p>,phil_plisgyn,False,0,0
 1857935,1603792,2026-10-25T11:33:42.052038Z,2026-10-25T11:33:42.052045Z,"<p>if you use ""All Folders"" you'll see the numbers, unread and total. </p>",Mapenzi,False,0,0
+1858906,1603792,2026-10-29T10:10:13.256653Z,2026-10-29T10:10:13.256667Z,<p>All Folders is Used but Spam still only shows when entering Email Folder </p>,phil_plisgyn,False,0,0
