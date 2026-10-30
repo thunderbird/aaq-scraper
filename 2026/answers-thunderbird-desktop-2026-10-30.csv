@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1859083,1614926,2026-10-30T05:13:25.792736Z,2026-10-30T05:13:25.792744Z,"<p>If the folder only contains messages that will match non-date criterion, and you want to delete messages older than X days, you can set folder retentions. </p>",wsmwk,False,0,0
+1859092,1614927,2026-10-30T06:02:09.879171Z,2026-10-30T06:02:09.879179Z,"<p>This is the Thunderbird for desktop computers forum. You would be best off asking your question in the Thunderbird for Android forum where its experts can be found: </p><p><a href=""https://support.mozilla.org/en-US/questions/mobile"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/mobile</a> </p>",rednoise,False,0,0
