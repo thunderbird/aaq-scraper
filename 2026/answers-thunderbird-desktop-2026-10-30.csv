@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1859083,1614926,2026-10-30T05:13:25.792736Z,2026-10-30T05:13:25.792744Z,"<p>If the folder only contains messages that will match non-date criterion, and you want to delete messages older than X days, you can set folder retentions. </p>",wsmwk,False,0,0
