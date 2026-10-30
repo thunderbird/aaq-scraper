@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1859139,1614980,2026-10-30T11:54:53.705931Z,2026-10-30T11:54:53.705939Z,<p>I meant to write b-tag or a-tag I didnt mean to write in bold of course </p>,6eorgeLucas,False,0,0
+1859217,1614980,2026-10-30T17:53:30.571422Z,2026-10-30T17:53:30.571432Z,"<p>Hi George </p><p>I'd recommend you open a new issue ticket on Github to report the bug. <a href=""https://github.com/thunderbird/thunderbird-android/issues"" rel=""nofollow"">https://github.com/thunderbird/thunderbird-android/issues</a> </p>",platform34,False,0,0
