@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1859376,1615136,2026-10-31T09:50:15.697260Z,2026-10-31T09:50:15.697267Z,"<p>Try right-click Inbox &gt; Properties &gt; click 'Repair folder' button. </p> <blockquote> Then I delete the same email in Thunderbird ... </blockquote> <p>Note, this would also delete the message on the server when Thunderbird is online. With IMAP there is no concept of deleting messages locally only, and keep them on the server, unless Thunderbird is offline. </p>",christ1,False,0,0
