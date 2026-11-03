@@ -1,3 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1859898,1615655,2026-11-03T02:46:52.449458Z,2026-11-03T02:46:52.449463Z,"<p>- Who is your email provider? </p><p>- Are the messages visible in the webmail Deleted/Trash folder? </p><p>See &lt;Account Settings | Server Settings | Server Settings | ""When I delete a message""&gt; and make sure the setting is appropriate; </p>",rednoise,False,0,0
-1859899,1615655,2026-11-03T02:55:16.631525Z,2026-11-03T02:55:16.631540Z,<p>Thank you SO much I had the wrong setting for some reason. Put it down to age and stupidity🙄 </p>,teeshcoulton,False,0,0
+1859899,1615655,2026-11-03T02:55:16.631525Z,2026-11-03T02:55:16.631540Z,<p>Thank you SO much I had the wrong setting for some reason. Put it down to age and stupidity🙄 </p>,teeshcoulton,False,1,0
