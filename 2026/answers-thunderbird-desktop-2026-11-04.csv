@@ -1,2 +1,4 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1860167,1615874,2026-11-04T06:41:51.428064Z,2026-11-04T06:41:51.428070Z,"<p>Select the ones you want to delete, then press the &lt;Delete&gt; key to send them to the Trash folder, or press &lt;Shift+Delete&gt; to delete them immediately, bypassing Trash. </p><p>You can use any of Thunderbird's search features to refine your selection. </p>",rednoise,False,0,0
+1860171,1615881,2026-11-04T07:28:49.079242Z,2026-11-04T07:28:49.079249Z,"<p>Sorry to hear that. </p><p>If you have your father's password, you can just add his email account to your Thunderbird. </p><p>If not, but you can still access your father's Thunderbird, you can copy his emails to a shared local folder and open the local folder from your Thunderbird. </p>",wxie2016,False,0,0
+1860174,1615855,2026-11-04T07:38:18.163099Z,2026-11-04T07:38:18.163110Z,<p>Use keyboard shortcust: </p><p>Ctrl + = Ctrl + - </p>,wxie2016,False,0,0
