@@ -55,3 +55,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1860348,1615821,2026-11-04T19:50:44.648489Z,2026-11-04T19:50:44.648495Z,<p>Thanks for the feedback. I'm glad all is well. :) </p>,davidsk,False,0,0
 1860370,1615801,2026-11-04T21:58:13.611585Z,2026-11-04T21:58:13.611594Z,"<p>My problem has been solved by <a href=""http://dca.net"" rel=""nofollow"">dca.net</a>. They restricted my IP address due to my trying to set up Thunderbird on a different computer. </p>",nlm2,False,0,0
 1860372,1615801,2026-11-04T22:40:58.605813Z,2026-11-04T22:40:58.605823Z,"<p>Somehow I think there's more to the story than what they're telling you, but in the end they got it working for you and that's the main thing. </p>",rednoise,False,0,0
+1860383,1615696,2026-11-05T01:15:48.515064Z,2026-11-05T01:15:48.515071Z,"<p>Yes, it appears that the release notes are misleading.  I'm hoping for an answer too. </p>",lyle.beaman,False,0,0
