@@ -11,8 +11,9 @@ sits behind a JavaScript challenge that blocks headless HTTP (issue
 thunderbird/github-action-thunderbird-aaq#34); a real-browser (Playwright/
 Chromium) workaround passed the challenge for a while but is now itself
 fingerprinted and blocked (issue #28), so the scraper instead calls the API
-over a plain **`httpx`** HTTP client, and is moving to a Kubernetes CronJob
-deployment with a stable, allowlistable egress IP (issue #27).
+over a plain **`httpx`** HTTP client. **Since 2026-07-29 it runs as a Kubernetes
+CronJob** on the workloads EKS cluster, whose egress IP Mozilla has allowlisted,
+and commits the tracked CSVs itself (issues #27, #28, #60).
 
 ## Core architecture & crucial decisions
 
@@ -214,7 +215,7 @@ jitter when running from a non-allowlisted network.
   `run_refresh` instead.
 - Actions are pinned to Node-24 versions: `actions/checkout@v5`,
   `astral-sh/setup-uv@v8.2.0`.
-- **k8s CronJob deployment (manifests merged-pending; job ships suspended):**
+- **k8s CronJob deployment — LIVE since 2026-07-29:**
   the scraper is moving off GitHub Actions onto an ArgoCD-managed **Kubernetes
   CronJob** on the workloads EKS cluster, because that cluster's NAT egress IPs
   are **already allowlisted** by Mozilla while Actions runners (shared, rotating
@@ -240,14 +241,22 @@ jitter when running from a non-allowlisted network.
   its commits authenticated with a **fine-grained GitHub PAT** sourced from AWS
   Secrets Manager (synced in by External Secrets Operator) via a **git
   credential helper** — the token is read from the environment at call time and
-  never appears in argv or a URL. The CronJob ships **suspended** with a
-  placeholder image tag — the only remaining gate is mechanical (`pulumi up` for
-  the ECR repo + OIDC role, create the Secrets Manager PAT, merge so the image
-  builds, then pin the tag and unsuspend). Full design:
+  never appears in argv or a URL. **Cutover completed 2026-07-29** (issue #60):
+  the job ran two days in a shakedown mode writing a parallel `cronjob-test/`
+  tree, that output was reconciled into `20*/`, the shakedown directory was
+  deleted, and the high-water mark was **promoted rather than reset** so the
+  first live run resumed from `2026-07-29T19:00:05Z` instead of a 26h lookback.
+  Verified live: consecutive hourly runs chaining the mark, ~2 pairs in ~3 min,
+  0 deferred, committing real `20*/` paths. The shakedown caught three things
+  worth knowing: the #58 starvation bug, the `--random-delay` cost (#59), and
+  the permanent `is_archived` drift (#55, still open). Full design:
   `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
   and `docs/superpowers/plans/2026-07-13-k8s-argocd-scraper-deployment.md`.
-- **What is actually producing data right now: the browser extension**, not any
-  GitHub workflow. As of 2026-07-27 **all three workflows are `disabled_manually`**
+- **What produces the data: the k8s CronJob** (since 2026-07-29). The browser
+  extension under `extension/` is kept as a **deliberate manual fallback** at its
+  author's request — for a broken PAT, a de-allowlisted IP, a cluster outage, or
+  an old-day backfill (runbook: `docs/manual-refresh-runbook.md`). Historical
+  note, still true of the workflows: As of 2026-07-27 **all three workflows are `disabled_manually`**
   (`scrape.yml` last ran 2026-07-10) — do not describe `scrape.yml` as the live
   refresh. The `extension/` add-on runs a scheduled auto-fetch from a real
   browser and its JSON bundles are imported by `import_json.py`, which reuses the
