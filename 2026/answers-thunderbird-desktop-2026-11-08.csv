@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1860961,1616602,2026-11-08T00:42:24.341788Z,2026-11-08T00:42:24.341796Z,"<p>Right-click on the calendar name in the calendars list. or click the little 3-dot context menu indicator, then choose ""Export Calendar"". See the attached image. </p>",rednoise,False,0,0
+1860968,1616617,2026-11-08T03:33:47.276524Z,2026-11-08T03:33:47.276531Z,"<p>The answer is ""Yes"" under two circumstances: </p><p>1 - If the folder went to the Trash folder, which it should do by default, or </p><p>2 - If you have a backup copy, say, from when you last backed up your entire profile. </p><p>Otherwise, no, they're gone. </p>",rednoise,False,0,0
