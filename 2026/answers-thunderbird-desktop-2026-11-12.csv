@@ -5,3 +5,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1861961,1617600,2026-11-12T10:02:50.278797Z,2026-11-12T10:02:50.278804Z,"<p>That is normally a corrupt install. I suggest download again from <a href=""http://thunderbird.net"" rel=""nofollow"">thunderbird.net</a> and install over the top of the current install. </p>",davidsk,False,0,0
 1861962,1617575,2026-11-12T10:05:19.056137Z,2026-11-12T10:05:19.056142Z,"<p>You also have the option of 153.7, the ESR version. For the password, try looking at settings&gt;privacy&amp;securiy  and the savedpasswords button </p>",davidsk,False,0,0
 1861974,1617637,2026-11-12T11:08:14.402345Z,2026-11-12T11:08:14.402357Z,<p>mi dice anche che l'indirizzo del mittente non esiste </p>,commerciale22,False,0,0
+1861996,1617656,2026-11-12T13:34:43.724662Z,2026-11-12T13:34:43.724673Z,<p>If you lost your password you'll have to check with your email provider about password reset options. </p>,christ1,False,0,0
