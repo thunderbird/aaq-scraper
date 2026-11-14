@@ -24,3 +24,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1862486,1618089,2026-11-14T18:24:45.924667Z,2026-11-14T18:24:45.924676Z,"<p>What I was asking is are there several entries in the ""Subscribe"" window folder list for deleted messages, such as Trash, Deleted Messages or Deleted Items? (see picture) </p>",Mapenzi,False,0,0
 1862490,1618078,2026-11-14T18:29:54.783224Z,2026-11-14T18:29:54.783231Z,<p>It may help to post a screenshot of the compose screen so we can all see the problem. thanks </p>,davidsk,False,0,0
 1862491,1618089,2026-11-14T18:37:06.022894Z,2026-11-14T18:37:06.022902Z,<p>There's a Trash but no Deleted Messages or Items. </p>,brec,False,0,0
+1862496,1618090,2026-11-14T19:25:30.281112Z,2026-11-14T19:25:30.281123Z,<p>did these steps and verified change no help </p>,diamondcleric,False,0,0
