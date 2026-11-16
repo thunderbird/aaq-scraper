@@ -20,3 +20,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1862933,1618403,2026-11-16T12:39:43.598636Z,2026-11-16T12:39:43.598646Z,"<p>Thanks for that, I got a little further this time, but here is the latest error message </p>",DiaryDan,False,0,0
 1862934,1618403,2026-11-16T12:48:45.181647Z,2026-11-16T12:48:45.181657Z,<p>What happens when you click 'Continue'? </p>,christ1,False,0,0
 1862935,1618411,2026-11-16T12:50:33.102479Z,2026-11-16T12:50:33.102492Z,"<p>Duplicate topic. Continue at <a href=""https://support.mozilla.org/en-US/questions/1618410"" rel=""nofollow"">https://support.mozilla.org/en-US/questions/1618410</a> </p>",christ1,False,0,0
+1862939,1618403,2026-11-16T13:33:20.473568Z,2026-11-16T13:33:20.473597Z,"<p>Nothing!  I can only get as far as error msg 2 now, and 'continue' returns to the same message </p>",DiaryDan,False,0,0
