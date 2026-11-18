@@ -25,3 +25,9 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1863339,1618790,2026-11-18T14:27:05.389363Z,2026-11-18T14:27:05.389371Z,<p>My apologies. It should appear as an option on connection security in the 'server settings' pane for the account. </p>,davidsk,False,0,0
 1863349,1618790,2026-11-18T14:40:40.859125Z,2026-11-18T14:40:40.859133Z,<p>Un grand merci. J'ai utilisé SSL/TLS avec mon mot de passe et la messagerie fonctionne de nouveau. Merci pour vos conseils. Jean-Yves ANDRIEUX </p>,j.andrieux,False,0,0
 1863352,1618750,2026-11-18T14:48:59.421871Z,2026-11-18T14:48:59.421883Z,<p>I suggest checking the account online to verify messages on the server. </p>,davidsk,False,0,0
+1863357,1618805,2026-11-18T15:08:50.082042Z,2026-11-18T15:08:50.082049Z,<p>Thanks David. That did it. </p>,r101gtx,False,0,0
+1863358,1618790,2026-11-18T15:19:13.192606Z,2026-11-18T15:19:13.192616Z,<p>You are most welcome. I was glad to assist. </p>,davidsk,False,0,0
+1863359,1618805,2026-11-18T15:19:54.352438Z,2026-11-18T15:19:54.352449Z,<p>You are very welcome. </p>,davidsk,False,0,0
+1863365,1618825,2026-11-18T15:55:23.401041Z,2026-11-18T15:55:23.401046Z,"<p>Please post a screenshot, as I am unsure of your issue. thank you </p>",davidsk,False,0,0
+1863366,1618827,2026-11-18T15:56:34.664531Z,2026-11-18T15:56:34.664538Z,"<p>maybe if you post a screenshot, someone may have suggestions, The issue might be in the settings displaye prior to clicking continue </p>",davidsk,False,0,0
+1863367,1618828,2026-11-18T15:58:20.349920Z,2026-11-18T15:58:20.349929Z,<p>It may help to post the screen settings pane for the account so users can see the account settings. thank you </p>,davidsk,False,0,0
