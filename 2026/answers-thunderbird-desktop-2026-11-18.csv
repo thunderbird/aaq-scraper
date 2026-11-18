@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1863274,1618759,2026-11-18T05:34:58.181856Z,2026-11-18T05:34:58.181863Z,"<p>It is true that the Address Book window doesn't scale very well to small screens, like on some laptops. </p><p>Try changing the view from Cards layout to Table layout, which gives the buttons more room. See the attached image. </p>",rednoise,False,0,0
