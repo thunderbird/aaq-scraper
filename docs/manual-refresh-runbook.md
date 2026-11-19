@@ -4,15 +4,29 @@
 
 # Manual refresh runbook — a week of AAQ data via the browser extension
 
-While the Playwright scraper is blocked by Fastly's automated-browser
-fingerprinting (issue #26; the hourly `scrape.yml` is disabled), keep the tracked
-data current by fetching from a **genuine browser** with the extension (or the
-page-console fallback) and importing to the usual per-day CSVs. See
-[`../extension/README.md`](../extension/README.md) for install/signing details;
-this is the repeatable weekly procedure.
+> **STATUS (2026-07-29): this is now the FALLBACK, not the primary path.**
+> The durable fix landed — the scraper runs hourly as a Kubernetes CronJob on the
+> workloads cluster, whose egress IP Mozilla has allowlisted, and it commits the
+> tracked CSVs itself. See `docs/superpowers/specs/2026-07-13-k8s-argocd-scraper-deployment-design.md`
+> and issue #60 for the cutover.
+>
+> Keep this procedure for when the CronJob **can't** run: a revoked/expired PAT,
+> the egress IP being de-allowlisted, a cluster outage, or a backfill of older
+> days than the refresh window covers. It is deliberately not retired (#60).
 
-**It's attended and manual** — it does not restore the hourly automation. The
-durable fix is still moving the scraper to an allowlisted constant-IP server.
+**How you'd know you need it:** the CronJob fails loudly rather than silently —
+it stops committing, so the CSVs simply stop updating. If the newest day-CSV is
+hours stale, or `.refresh-hwm` is not advancing, fall back to the procedure below.
+
+Fetch from a **genuine browser** with the extension (or the page-console
+fallback) and import to the usual per-day CSVs. See
+[`../extension/README.md`](../extension/README.md) for install/signing details.
+
+**It's attended and manual** — it does not restore the hourly automation, and
+while you're using it the CronJob may also be running. If both write the same
+day, the second push rebases onto the first; the scrape is deterministic, so
+identical data produces no diff. Still, prefer to fix the CronJob rather than run
+both indefinitely.
 
 > **Less clicking (Chrome):** the extension has an opt-in **background auto-fetch**
 > that runs this fetch on a schedule (default: every 24h, trailing 7-day window)

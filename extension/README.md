@@ -5,7 +5,13 @@
      (This MPL notice also covers manifest.json, which as strict JSON cannot
      carry an inline comment.) -->
 
-# SUMO AAQ fetcher — browser-extension stopgap
+# SUMO AAQ fetcher — browser-extension fallback
+
+> **STATUS (2026-07-29):** the primary path is now the hourly Kubernetes
+> CronJob (issue #60), which commits the tracked CSVs itself from an
+> allowlisted egress IP. This extension is **kept as a deliberate manual
+> fallback** — at its author's request — for a broken PAT, a de-allowlisted
+> IP, a cluster outage, or an old-day backfill. Nothing here is disabled.
 
 A tiny WebExtension that fetches the Thunderbird "Ask a Question" data from
 `support.mozilla.org` **from inside a genuine browser**, then downloads a
