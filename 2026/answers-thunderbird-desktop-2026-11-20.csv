@@ -1,1 +1,2 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
+1863663,1619099,2026-11-20T02:37:42.885331Z,2026-11-20T02:37:42.885338Z,"<p>You are right to use the local folder to backup your emails. They are saved in your machine and are not bound to the account. </p><p>You should have the remove account option: <a href=""https://support.mozilla.org/en-US/kb/configuration-options-accounts"" rel=""nofollow"">https://support.mozilla.org/en-US/kb/configuration-options-accounts</a> </p>",wxie2016,False,0,0
