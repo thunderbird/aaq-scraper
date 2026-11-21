@@ -1,2 +1,4 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1863868,1619310,2026-11-21T15:43:06.996078Z,2026-11-21T15:43:06.996088Z,"<p>Since it works some of the time, that implies that the settings are correct. The error message generally means what it says - service unavailable. that happens when the juno server is overworked or there is heavy internet traffic. </p>",davidsk,False,0,0
+1863902,1619329,2026-11-21T17:50:35.596211Z,2026-11-21T17:50:35.596217Z,"<p>Possibly a typo, but check smtp server name </p>",davidsk,False,0,0
+1863903,1619329,2026-11-21T17:50:53.390428Z,2026-11-21T17:50:53.390441Z,"<p>Well, I see one glaring error: you have ""<a href=""http://smtp.cogeco.ca"" rel=""nofollow"">smtp.cogeco.ca</a>"" misspelled as ""<a href=""http://stmp.cogeco.ca"" rel=""nofollow"">stmp.cogeco.ca</a>"". Typo? </p><p>Not to say that there might not be some other problem, but does that fix it? </p>",rednoise,False,0,0
