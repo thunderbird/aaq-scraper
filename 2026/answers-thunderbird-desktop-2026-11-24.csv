@@ -26,3 +26,4 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1864453,1619771,2026-11-24T18:51:37.456561Z,2026-11-24T18:51:37.456569Z,<p>You are quite welcome. :) </p>,davidsk,False,0,0
 1864455,1619831,2026-11-24T18:56:48.303537Z,2026-11-24T18:56:48.303544Z,<p>You need to provide more info. How are you doing the import?  A screenshot of the folder contents you are attempting to import will help. </p>,davidsk,False,0,0
 1864465,1619816,2026-11-24T19:33:13.225972Z,2026-11-24T19:33:13.225984Z,"<p>I wish I could say my issue was fixed as well, but no, it still has the same issue. Thanks for the reply, though. </p><p>J. Ribera </p>",john.ribera,False,0,0
+1864473,1619855,2026-11-24T20:11:03.109985Z,2026-11-24T20:11:03.109997Z,"<p>The annoying part? The reminders, which I could not turn off. I tried. </p>",DebraBk,False,0,0
