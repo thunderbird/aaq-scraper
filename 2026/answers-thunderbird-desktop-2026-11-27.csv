@@ -11,3 +11,5 @@ id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1865136,1620349,2026-11-27T14:27:03.163870Z,2026-11-27T14:27:03.163881Z,"<p>Hai lo stesso comportamento in Modalità risoluzione dei problemi? <a href=""https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird"" rel=""nofollow"">https://support.mozilla.org/it/kb/modalita-risoluzione-problemi-thunderbird</a> </p>",'@next,False,0,0
 1865137,1620353,2026-11-27T14:30:25.549567Z,2026-11-27T14:30:25.549574Z,"<p>When you get a response notice in email, the link back to the topic is in that email. I see no response to your prior question. </p>",davidsk,False,0,0
 1865138,1620349,2026-11-27T14:34:01.353800Z,2026-11-27T14:34:01.353812Z,"<p>Si, non cambia nulla. Non viene neanche visualizzata la clip degli allegati presenti (su Gmail). </p>",paianostefano,False,0,0
+1865139,1620349,2026-11-27T15:03:17.073054Z,2026-11-27T15:03:17.073061Z,<p>Allora non saprei. </p>,'@next,False,0,0
+1865141,1620349,2026-11-27T15:18:26.458199Z,2026-11-27T15:18:26.458211Z,<p>E' possibile segnalare la problematica agli sviluppatori? </p>,paianostefano,False,0,0
