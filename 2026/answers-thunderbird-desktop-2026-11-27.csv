@@ -1,2 +1,3 @@
 id,question_id,created,updated,content,creator,is_spam,num_helpful,num_unhelpful
 1865029,1620283,2026-11-27T03:37:11.471221Z,2026-11-27T03:37:11.471227Z,<p>See &lt;Settings | General | Reading &amp; Display | Close message window/tab on move or delete&gt;. </p>,rednoise,False,0,0
+1865117,1620323,2026-11-27T12:45:16.271431Z,2026-11-27T12:45:16.271449Z,"<p>Il calendario di Thunderbird non è online, è consultabile solo sul PC. Puoi esportarne una copia per leggerla sullo smartphone. Ma non sarebbero sincronizzate. </p><p>Il team di Thunderbird sta preparando un servizio online email+calendario+rubrica ma non è ancora disponibile per tutti. Se ti interessa puoi metterti in lista: <a href=""https://tb.pro/it/"" rel=""nofollow"">https://tb.pro/it/</a> </p>",'@next,False,0,0
